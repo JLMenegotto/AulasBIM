@@ -1,0 +1,812 @@
+{
+  "Uuid": "ef95505a-4bab-451f-8227-603cf45bb9af",
+  "IsCustomNode": true,
+  "Category": "Prédios",
+  "Description": "Predio para estudos preliminares",
+  "Name": "Predio_Estudo",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Line": {
+        "Key": "Autodesk.DesignScript.Geometry.Line",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      },
+      "Surface": {
+        "Key": "Autodesk.DesignScript.Geometry.Surface",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      },
+      "Dictionary": {
+        "Key": "DesignScript.Builtin.Dictionary",
+        "Value": "DesignScriptBuiltin.dll"
+      },
+      "Geometry": {
+        "Key": "Autodesk.DesignScript.Geometry.Geometry",
+        "Value": "ProtoGeometry.dll"
+      },
+      "PolyCurve": {
+        "Key": "Autodesk.DesignScript.Geometry.PolyCurve",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Solid": {
+        "Key": "Autodesk.DesignScript.Geometry.Solid",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Dic_Lote;\nDic_Pavt;\nTAXA;\nPROP;\nG;\n\nAPRO  = (AreaL * TAXA) / 100;\nT     = Dic_Lote[\"T\"    ];\nO     = Dic_Lote[\"O\"    ];\nN     = Dic_Lote[\"N\"    ];\nOLOC  = Dic_Lote[\"OLOC\" ];\nPtsO  = Dic_Lote[\"PtsO\" ];\nAngu  = Dic_Lote[\"Angu\" ];\nAreaL = Dic_Lote[\"AreaL\"];\nAndar = Dic_Pavt[\"Andar\"];\nCotas = Dic_Pavt[\"Cota\" ];\nQAE   = Dic_Pavt[\"QAE\"  ];\n\nVz    = Vector.ZAxis  (         );\nmg    = List.Count    (  Angu@L1   )+1;\nQAT   = List.Count    (  Cotas  );\nGirar = List.SetUnion ( [0, 90] , List.Flatten( Angu , 1));\n//-------------------------------------------------------\n// Definição do Embasamento a partir dos pontos PtsO\n//-------------------------------------------------------\n\nGuiaE = Line.ByStartPointDirectionLength( OLOC , Vz , Cotas[QAE]       );\nPoliE = PolyCurve.ByPoints   ( PtsO  , true                            );\nSurfE = Surface.ByPatch      ( PoliE                                   );\nSoliE = Solid.BySweep        ( PoliE , GuiaE                           );\nEMBAS = Geometry.Translate   ([PoliE , SurfE] , 0, 0, Cotas[0..QAE]<1> );\n\n//-------------------------------------------------------\n// Definição da torre do prédio a partir da Origem OLOC\n//-------------------------------------------------------\n\nGuiaT = Line.ByStartPointDirectionLength( OLOC , Vz , Cotas[QAT-1]);\nl1    = Math.Sqrt( APRO / PROP);\nl2    =              l1 * PROP;\ncx    = [ l1 ,  l1, -l1, -l1] * 0.5;\ncy    = [ l2 , -l2, -l2,  l2] * 0.5;\nx     = T<1>.Scale            (  cx                                     );\ny     = N<1>.Scale            (  cy                                     );\nxy    = x.Add                 (   y                                     );\nPQ    = OLOC.Add              (  xy                                     );\nPQR   = Point.Rotate          (  PQ    , OLOC , Vz , Girar[G%mg]        );\nPoliT = PolyCurve.ByPoints    (  PQR   , true                           );\nSurfT = Surface.ByPatch       (  PoliT                                  );\nSoliT = Solid.BySweep         (  PoliT , GuiaT                          );\nTORRE = Geometry.Translate    ( [PoliT , SurfT] , 0, 0, Cotas[0..QAT]<1>);\nAreaT = SurfT.Area;\nSoliF = Solid.Difference      ( SoliE  , SoliT                          );\n//-------------------------------------------------------\n// Extração dos resultados utilizando um Dicionário\n//-------------------------------------------------------\n\nKey  = [\"GuiaT\",\"GuiaE\",\"EMBAS\",\"TORRE\",\"SurfE\",\"SurfT\",\"PoliE\",\"PoliT\",\"AreaT\",\"APRO\",\"SoliE\",\"SoliT\",\"SoliF\"];\nVal  = [ GuiaT , GuiaE , EMBAS , TORRE , SurfE , SurfT , PoliE , PoliT , AreaT , APRO , SoliE , SoliT , SoliF ];\nDIC  = Dictionary.ByKeysValues ( Key , Val );",
+      "Id": "2431cf9b1b7c44dcae01ec4d7e289dd2",
+      "Inputs": [
+        {
+          "Id": "0157dccdb4424b569b999934d0f8bd05",
+          "Name": "Dic_Lote",
+          "Description": "Dic_Lote",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fb9319b2c7ed44eba1e2c783a2d12aeb",
+          "Name": "Dic_Pavt",
+          "Description": "Dic_Pavt",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cb7b4cd520d84d79adf495fa47bd4594",
+          "Name": "TAXA",
+          "Description": "TAXA",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "818014b2e2b54b00853f058debfe9567",
+          "Name": "PROP",
+          "Description": "PROP",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dd86cac963ad43118e22dc5b96ccedc0",
+          "Name": "G",
+          "Description": "G",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "343a767f5dfe4b89ab6b502d38276dfa",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "62a96376a6e64805b4847560c351179c",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b1f7b98433f6445e949f090e79601765",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1e1a484650964a739ee6b0614bbdb4b5",
+          "Name": "",
+          "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d9ffaf0fa4f04db49afcaba04f20c074",
+          "Name": "",
+          "Description": "Value of expression at line 5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4da63bb416d14cbb8d4b410a50e67d94",
+          "Name": "",
+          "Description": "APRO",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "364b500692034efc9f4c9ffffae5d01b",
+          "Name": "",
+          "Description": "T",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8724583195af40c1b8156d1f59717b05",
+          "Name": "",
+          "Description": "O",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "89de57d5a25541359677fe3faee3df25",
+          "Name": "",
+          "Description": "N",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "df30278f5fdf46538926f2a37e90e081",
+          "Name": "",
+          "Description": "OLOC",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2c9edbc2ff3043cca247a330629b8990",
+          "Name": "",
+          "Description": "PtsO",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fd9b50642b6d4826bf50fb9c308b7606",
+          "Name": "",
+          "Description": "Angu",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5b11339cff88498289473114a6125ad4",
+          "Name": "",
+          "Description": "AreaL",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d8a0212b8c7d4484b7f183b1d121d826",
+          "Name": "",
+          "Description": "Andar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "21e84b29ccdf41bd805433dc04744056",
+          "Name": "",
+          "Description": "Cotas",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8a4a0502b3fb4960b0125249af5ae0e2",
+          "Name": "",
+          "Description": "QAE",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "78b979fffc7346698a0baa1960353c33",
+          "Name": "",
+          "Description": "Vz",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "424ef084a6c34275a7c4e9e6c575984f",
+          "Name": "",
+          "Description": "mg",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "403e5574f79848bd81cc456d9adac131",
+          "Name": "",
+          "Description": "QAT",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6d95fe8248d54d08a7baa65f22d73694",
+          "Name": "",
+          "Description": "Girar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "51a202f31e6848c7a070015b17068449",
+          "Name": "",
+          "Description": "GuiaE",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "870ee246979d4e5aa4a857fbacf416f4",
+          "Name": "",
+          "Description": "PoliE",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3a8a920693104834a5bcfd6c3b8cb9cb",
+          "Name": "",
+          "Description": "SurfE",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ad7a8d8b14ea4f2d9e56ff10803d1618",
+          "Name": "",
+          "Description": "SoliE",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ec92bf0ffb3c4adc962eef60d417d97b",
+          "Name": "",
+          "Description": "EMBAS",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7f433af3fdaf4a20af980000ebc682fe",
+          "Name": "",
+          "Description": "GuiaT",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "45d417e2f36f4bdfba0538dcec3c71ab",
+          "Name": "",
+          "Description": "l1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5756111f18dd40a68a6f19a5ebe72894",
+          "Name": "",
+          "Description": "l2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1274cde9ffdf4092836fafad40f85cbf",
+          "Name": "",
+          "Description": "cx",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "33ac9f1917674b91acf9c0f9bbcba6af",
+          "Name": "",
+          "Description": "cy",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f17d57b9f61c45f384cf2758b6ff2fbd",
+          "Name": "",
+          "Description": "x",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b804d8a6315f487fa1ec8fff8dda427d",
+          "Name": "",
+          "Description": "y",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "95701e82b3a8445ebefbf4a15f213742",
+          "Name": "",
+          "Description": "xy",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2b3b424be3bb47cb90a72bf5f91b19c3",
+          "Name": "",
+          "Description": "PQ",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "971023b2de6349eab19910f7ad8017db",
+          "Name": "",
+          "Description": "PQR",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "49893d117e344af3bf55f68aac699556",
+          "Name": "",
+          "Description": "PoliT",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6a2a7e9d2e9e48499e1b5214cb266c67",
+          "Name": "",
+          "Description": "SurfT",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a93dda490d504568846c1c962c51a65f",
+          "Name": "",
+          "Description": "SoliT",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "007c8f56c7c74d4d946e8848494c762b",
+          "Name": "",
+          "Description": "TORRE",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "34c94a39723545d1bdc138eab4f8fb4a",
+          "Name": "",
+          "Description": "AreaT",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3487351263d7420c8ea2af6c09deffb7",
+          "Name": "",
+          "Description": "SoliF",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "93f11bb590b3456b944883c04901c7fe",
+          "Name": "",
+          "Description": "Key",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2f3413ae1f7f4a0e95e4601bbbbdb996",
+          "Name": "",
+          "Description": "Val",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "aa6e17fe728a430895d50d5fc4d65c46",
+          "Name": "",
+          "Description": "DIC",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "Dados",
+      "Id": "9210fe23f6064a588eabdc879177553c",
+      "Inputs": [
+        {
+          "Id": "0a2a072a8d154a9cb46642e42bc59397",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "Dic_Lote",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "6b26248f7d3643ed973176a38eda5af7",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "17d2f0b3abb24cef8f011371b8ba1c01",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "Dic_Andares",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "8a6ea25ec5664527b56b11f0b99fda47",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9c56b65f49964dde98acd223f4ac1993",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "Taxa_Ocupacao",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "5edeca6205974bf79155fe0317753d08",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "596a1e2ccaae472f8b142c3302b03e03",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "Razao_Area_Lado",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "f100fac2fe1c4936aae78c08e69c9f85",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2d74cfa3b779459cac9bc5d1265ce270",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "Girar",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": "0",
+        "Description": ""
+      },
+      "Id": "ab4797cd9d394ac4b72630c0cdd7c1ea",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5fbf76b5875d446c9b453e5c6cc6827d",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "//Definição do Embasamento com segmentação em dir N T o nula\n//FOR  = (SEG==0 ? SUC : SEG==1 ? SUL : SEG==2 ? SUT : SUA);\n//SUL  = List.Flatten (Surface.Split ( SUC   , ExoL         ) , 2);\n//SUT  = List.Flatten (Surface.Split ( SUC   , ExoT         ) , 2);\n//SUA  = List.Flatten (Surface.Split ( SUC<1>,[ExoL , ExoT] ) , 2);\n//Emba = Geometry.Translate          ( FOR , 0 , 0 , PAV[\"Cota\"] );",
+      "Id": "756c9c7a90264da090ac00f29660b403",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "aa6e17fe728a430895d50d5fc4d65c46",
+      "End": "0a2a072a8d154a9cb46642e42bc59397",
+      "Id": "d53c843d9f1440cd9594e7ef13e7af40"
+    },
+    {
+      "Start": "17d2f0b3abb24cef8f011371b8ba1c01",
+      "End": "0157dccdb4424b569b999934d0f8bd05",
+      "Id": "1219f6708aeb4cdbb32be3c05ea2ad45"
+    },
+    {
+      "Start": "9c56b65f49964dde98acd223f4ac1993",
+      "End": "fb9319b2c7ed44eba1e2c783a2d12aeb",
+      "Id": "3d7048a0200b4dd7bc7d3a1c235270e0"
+    },
+    {
+      "Start": "596a1e2ccaae472f8b142c3302b03e03",
+      "End": "cb7b4cd520d84d79adf495fa47bd4594",
+      "Id": "fb72c986c35b4c29a864b09f657a316d"
+    },
+    {
+      "Start": "2d74cfa3b779459cac9bc5d1265ce270",
+      "End": "818014b2e2b54b00853f058debfe9567",
+      "Id": "f9a56978c62e44fb92ee7217107cee0c"
+    },
+    {
+      "Start": "5fbf76b5875d446c9b453e5c6cc6827d",
+      "End": "dd86cac963ad43118e22dc5b96ccedc0",
+      "Id": "c3232912ab2441209c16ea73cb00e54b"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.3.0.5885",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -56.541439992218912,
+      "EyeY": 12.991378882856985,
+      "EyeZ": 136.04218271038189,
+      "LookX": 56.836920438641705,
+      "LookY": -33.880235980048646,
+      "LookZ": -59.498537725459158,
+      "UpX": 0.11994717618857877,
+      "UpY": 0.98480775301221657,
+      "UpZ": -0.12556418490728904
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Posicionamento de projeto no lote",
+        "Id": "2431cf9b1b7c44dcae01ec4d7e289dd2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1177.3545295550878,
+        "Y": 563.049074484757
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "9210fe23f6064a588eabdc879177553c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1980.9170376755731,
+        "Y": 1595.0360478603141
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "6b26248f7d3643ed973176a38eda5af7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 865.43740015902267,
+        "Y": 462.26599000096638
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "8a6ea25ec5664527b56b11f0b99fda47",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 841.43740015902267,
+        "Y": 518.215188761959
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "5edeca6205974bf79155fe0317753d08",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 824.43740015902267,
+        "Y": 574.16438752295153
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "f100fac2fe1c4936aae78c08e69c9f85",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 808.43740015902267,
+        "Y": 630.11358628394407
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "ab4797cd9d394ac4b72630c0cdd7c1ea",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 857.43740015902267,
+        "Y": 690.434440243195
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "756c9c7a90264da090ac00f29660b403",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1425.253200817795,
+        "Y": 474.00665387581307
+      }
+    ],
+    "Annotations": [],
+    "X": -437.5885080056529,
+    "Y": -250.31494171228508,
+    "Zoom": 0.6398133319370255
+  }
+}
