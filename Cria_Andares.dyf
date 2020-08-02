@@ -168,11 +168,11 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
       "NodeType": "CodeBlockNode",
-      "Code": "EVI;\nEXI;\ntxt = \"° Pavto\";\nQAT;\nQAE;\ntxt;\nNOM;\nCRI = Level.ByElevation          ( 0..#QAT+1..APP );\nNOM = Math.Floor                 ( 0..QAT         );\nAPA = List.SetDifference         ( EXI , CRI      );\nElement.Delete                   ( APA            );\nNOV = Element.Delete             ( APA            );\nFamilyInstance.SetParameterByName( CRI      , \"Name\", (NOM)+txt  );\nFamilyInstance.SetParameterByName( CRI[0]   , \"Name\", \"Térreo\"   );\nFamilyInstance.SetParameterByName( CRI[QAT] , \"Name\", \"Cobertura\");\n\nKey = [\"Andar\", \"Nome\"    , \"Cota\"         , \"QAE\"];\nVal = [ CRI   , CRI.Name  ,  CRI.Elevation ,  QAE ];\nDIC = Dictionary.ByKeysValues ( Key , Val );",
+      "Code": "EVI;\nEXI;\ntxt = \"° Pavto\";\nQAT;\n\ntxt;\nNOM;\nCRI = Level.ByElevation          ( 0..#QAT+1..APP );\nNOM = Math.Floor                 ( 0..QAT         );\nAPA = List.SetDifference         ( EXI , CRI      );\nElement.Delete                   ( APA            );\nNOV = Element.Delete             ( APA            );\nFamilyInstance.SetParameterByName( CRI      , \"Name\", (NOM)+txt  );\nFamilyInstance.SetParameterByName( CRI[0]   , \"Name\", \"Térreo\"   );\nFamilyInstance.SetParameterByName( CRI[QAT] , \"Name\", \"Cobertura\");\n\nKey = [\"Andar\", \"Nome\"   , \"Cota\"         ];\nVal = [ CRI   , CRI.Name ,  CRI.Elevation ];\nDIC = Dictionary.ByKeysValues ( Key , Val );",
       "Id": "b7c6323f11ad459ea6d09cf3d1f26bb8",
       "Inputs": [
         {
-          "Id": "93712baca83049d4ac87e304c5746509",
+          "Id": "7f5c4a5cf05b43459714696c127cda15",
           "Name": "EVI",
           "Description": "EVI",
           "UsingDefaultValue": false,
@@ -181,7 +181,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "3c3870eb486f447981b7ebf31cb012e2",
+          "Id": "06388b25260d4466a5720ce2da017d5b",
           "Name": "EXI",
           "Description": "EXI",
           "UsingDefaultValue": false,
@@ -190,7 +190,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "c733fd43f8df4e10ba4c8e6bda73798f",
+          "Id": "2a51e955ce724b29b35a8bce737a8b3b",
           "Name": "QAT",
           "Description": "QAT",
           "UsingDefaultValue": false,
@@ -199,16 +199,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "a4012986750f426cbca02c57a4a0e214",
-          "Name": "QAE",
-          "Description": "QAE",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "efab44398b914a09a065284105a831d6",
+          "Id": "edb8fc975d9645b985e5a667fbac5d79",
           "Name": "APP",
           "Description": "APP",
           "UsingDefaultValue": false,
@@ -219,7 +210,7 @@
       ],
       "Outputs": [
         {
-          "Id": "539b3363da3b4582bb566898ffe0525d",
+          "Id": "cfdf582937354061a2b50eda2f65bb51",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -228,7 +219,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "b78c05d54e0042799922fb2dba49611a",
+          "Id": "0901dcdd079e45b1a863a20a7802e54b",
           "Name": "",
           "Description": "Value of expression at line 2",
           "UsingDefaultValue": false,
@@ -237,7 +228,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "7d60d7c17a264b8197df185d0dc97538",
+          "Id": "72cb888349c04f6e846c78d8b9cbcdbe",
           "Name": "",
           "Description": "txt",
           "UsingDefaultValue": false,
@@ -246,7 +237,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "fb6f590588db4a28887b5375f11c48d2",
+          "Id": "606b0da02f25416eaba9cb3ec47bff23",
           "Name": "",
           "Description": "Value of expression at line 4",
           "UsingDefaultValue": false,
@@ -255,16 +246,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "ab52a37c660b4a7b88911deb88b19365",
-          "Name": "",
-          "Description": "Value of expression at line 5",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "49580a37b5804f79849f96f723f61d0f",
+          "Id": "96ddecfb5c5d4085b877e1d05c4aff0f",
           "Name": "",
           "Description": "Value of expression at line 6",
           "UsingDefaultValue": false,
@@ -273,7 +255,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "7cd0b55564e64c1d9e8f43ac7f6d5cb2",
+          "Id": "29392fd58bb54f35961b33404c90e170",
           "Name": "",
           "Description": "Value of expression at line 7",
           "UsingDefaultValue": false,
@@ -282,7 +264,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "a250ebe6db3f45dc86959b2f09f54dca",
+          "Id": "8061843e153e46ba8ca64c11c4b2560d",
           "Name": "",
           "Description": "CRI",
           "UsingDefaultValue": false,
@@ -291,7 +273,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "3967c09981c0484bb2064f003a79a110",
+          "Id": "61adef217a014704811ee7f398430cfb",
           "Name": "",
           "Description": "NOM",
           "UsingDefaultValue": false,
@@ -300,7 +282,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "59d74b06c2a34a7d8193790a8adcf0d6",
+          "Id": "e6db32888f6c4ad2b576f8ffbfb08753",
           "Name": "",
           "Description": "APA",
           "UsingDefaultValue": false,
@@ -309,7 +291,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "a8bf1068153842ffa90c2c36473440b4",
+          "Id": "fcbfa09b30824d5d9f36f2bff6cdfe34",
           "Name": "",
           "Description": "Value of expression at line 11",
           "UsingDefaultValue": false,
@@ -318,7 +300,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "af003f3262a1476eb59702ee725cf147",
+          "Id": "1875927412404dfeae5bc6249153c7fd",
           "Name": "",
           "Description": "NOV",
           "UsingDefaultValue": false,
@@ -327,7 +309,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "03516eef55f4415eac2466b583ed721c",
+          "Id": "cf21a85ba03340e69d1418eeb1a1e390",
           "Name": "",
           "Description": "Value of expression at line 13",
           "UsingDefaultValue": false,
@@ -336,7 +318,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "b87e77e89d794976b159b693b1c5a1ea",
+          "Id": "18b4c50b417b4bd28ef806dc0186e1dc",
           "Name": "",
           "Description": "Value of expression at line 14",
           "UsingDefaultValue": false,
@@ -345,7 +327,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "27528451c72e48748de69579ab350f14",
+          "Id": "71ef4bad153c45b5aa110a373453abe9",
           "Name": "",
           "Description": "Value of expression at line 15",
           "UsingDefaultValue": false,
@@ -354,7 +336,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "3af667637a614282b59a43a6769cac99",
+          "Id": "9f10b459176843d1a4e7e0b9ef13e648",
           "Name": "",
           "Description": "Key",
           "UsingDefaultValue": false,
@@ -363,7 +345,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "fd67b9eb20b540bf9c7ed43450f9ba73",
+          "Id": "39e1d364b737488ab731fddb1b54c620",
           "Name": "",
           "Description": "Val",
           "UsingDefaultValue": false,
@@ -372,7 +354,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "cb268829c9a346f1aad9db9964c23a7b",
+          "Id": "dbb9822e5edb4b07a9122308835dc0d1",
           "Name": "",
           "Description": "DIC",
           "UsingDefaultValue": false,
@@ -454,44 +436,18 @@
       ],
       "Replication": "Disabled",
       "Description": "All element subtypes."
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
-      "NodeType": "InputNode",
-      "Parameter": {
-        "Name": "Quant_Andares_Embas",
-        "TypeName": "var",
-        "TypeRank": -1,
-        "DefaultValue": "1",
-        "Description": ""
-      },
-      "Id": "dac51807ad1d4c119f1a10e3dbbfffb1",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "8fedef1e867a4c3fa9beeb864e6464b2",
-          "Name": "",
-          "Description": "Symbol",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
     }
   ],
   "Connectors": [
     {
       "Start": "79a3cbcf6f624be5b6c09a1bebb8bdb4",
-      "End": "c733fd43f8df4e10ba4c8e6bda73798f",
-      "Id": "cf590ecaa6514974af940ab81479c4ab"
+      "End": "2a51e955ce724b29b35a8bce737a8b3b",
+      "Id": "f56be47b2e9448308a3c2be900ef4851"
     },
     {
       "Start": "1cfb47b8f274469fbe60890b5605a6a8",
-      "End": "efab44398b914a09a065284105a831d6",
-      "Id": "51256b6199104e088082ada525c97311"
+      "End": "edb8fc975d9645b985e5a667fbac5d79",
+      "Id": "e586144974d7444c92cd54bd326b1b6b"
     },
     {
       "Start": "15b289f62c7347d7859848f9bb74b673",
@@ -500,28 +456,23 @@
     },
     {
       "Start": "d9a459e8d6454d6188db29806c84f8ac",
-      "End": "3c3870eb486f447981b7ebf31cb012e2",
-      "Id": "76e8bccae05543bf966d524d962e9801"
+      "End": "06388b25260d4466a5720ce2da017d5b",
+      "Id": "9ac9981959e84c24aec684cd88b847d7"
     },
     {
-      "Start": "cb268829c9a346f1aad9db9964c23a7b",
+      "Start": "dbb9822e5edb4b07a9122308835dc0d1",
       "End": "971ec6fdb4ed498c88c1df77fb9681fe",
-      "Id": "cdfe38b627cc47c78053344a6821e783"
+      "Id": "e12b47c483974626a5ac8433006a338d"
     },
     {
       "Start": "a494ed9a305b486da2cce82f851fac2d",
-      "End": "93712baca83049d4ac87e304c5746509",
-      "Id": "4df73d0e740b44148f8791258ba78f3f"
+      "End": "7f5c4a5cf05b43459714696c127cda15",
+      "Id": "dfcd207b34fd49a3b0734aa93421c91b"
     },
     {
       "Start": "fb17f111b99345d99c46e71a29b56065",
       "End": "b15c6d5f6ed14dc4a311f1194e8be47e",
       "Id": "3098cf49c95e4e3486fc5bbf67c7be5d"
-    },
-    {
-      "Start": "8fedef1e867a4c3fa9beeb864e6464b2",
-      "End": "a4012986750f426cbca02c57a4a0e214",
-      "Id": "bc036772a59c42aa9fa62634aac0f359"
     }
   ],
   "Dependencies": [],
@@ -538,12 +489,12 @@
     },
     "Camera": {
       "Name": "Background Preview",
-      "EyeX": -56.541439992218912,
-      "EyeY": 12.991378882856985,
-      "EyeZ": 136.04218271038189,
-      "LookX": 56.836920438641705,
-      "LookY": -33.880235980048646,
-      "LookZ": -59.498537725459158,
+      "EyeX": -97.373772017842384,
+      "EyeY": 47.958122673591241,
+      "EyeZ": 150.43681737074115,
+      "LookX": 88.14614514969152,
+      "LookY": -52.5435258517771,
+      "LookZ": -92.273942748261547,
       "UpX": 0.11994717618857877,
       "UpY": 0.98480775301221657,
       "UpZ": -0.12556418490728904
@@ -556,7 +507,7 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 150.69948804626586,
+        "X": 157.65115245610031,
         "Y": 203.66603692380491
       },
       {
@@ -566,8 +517,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 171.57535790585268,
-        "Y": 316.85668973510451
+        "X": 181.65115245610031,
+        "Y": 263.68018959581389
       },
       {
         "ShowGeometry": true,
@@ -586,7 +537,7 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 286.69948804626586,
+        "X": 293.65115245610031,
         "Y": 137.44200585466427
       },
       {
@@ -596,8 +547,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 550.6759518789986,
-        "Y": 124.49717460109986
+        "X": 551.91261467293555,
+        "Y": 172.72702356464242
       },
       {
         "ShowGeometry": true,
@@ -606,8 +557,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1208.7791057432426,
-        "Y": 436.967203916331
+        "X": 1212.2953020881839,
+        "Y": 485.0218872971999
       },
       {
         "ShowGeometry": true,
@@ -616,7 +567,7 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 260.69948804626586,
+        "X": 267.65115245610031,
         "Y": 75.7204273134609
       },
       {
@@ -628,21 +579,11 @@
         "Excluded": false,
         "X": 91.874475428643791,
         "Y": 75.544016735719879
-      },
-      {
-        "ShowGeometry": true,
-        "Name": "Quant_Andares_do_Embasamento",
-        "Id": "dac51807ad1d4c119f1a10e3dbbfffb1",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 157.65115245610031,
-        "Y": 260.10516452890369
       }
     ],
     "Annotations": [],
-    "X": 30.372978684810278,
-    "Y": -74.313777233770168,
-    "Zoom": 0.96026729526806032
+    "X": -239.96957023508361,
+    "Y": 0.072695242774273083,
+    "Zoom": 0.6015395629862279
   }
 }

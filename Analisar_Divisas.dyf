@@ -175,11 +175,11 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
       "NodeType": "CodeBlockNode",
-      "Code": "DadosLote;\nLOTE  = DadosLote[\"Lote\"];\nAreaL = DadosLote[\"Area\"];\nDAF;\nt;\nDesT;\nLdi   = [ 1 , -1 ];\n//----------------------------------------------------------------------------\n// Captura Linhas da divisa\n//----------------------------------------------------------------------------\nOCUP  = LOTE.Offset  ( -DAF  ,  false  );\nLinO  = OCUP.Explode (                 );\n//----------------------------------------------------------------------------\n// Orienta os vetores Normais da divisa\n//----------------------------------------------------------------------------\nvx    = Vector.XAxis();\nvz    = Vector.ZAxis();\nvt    = Line.TangentAtParameter(LinO[0..2] , 0);\nZvt   = Vector.Cross( vt[0] , vt[1] ).Z;\nCW    = Zvt > 0 ?  1 : -1;\nCCW   = Zvt < 0 ?  1 : -1;\n//----------------------------------------------------------------------------\n//Captura os pontos e Normais da divisa\n//----------------------------------------------------------------------------\nPtsO  = Line.PointAtParameter               ( LinO , 0                 );\nPtsM  = Line.PointAtParameter               ( LinO , 0.5               );\nNoFo  = Line.NormalAtParameter              ( LinO , 0.5).Scale (  CW  );\nNoDe  = Line.NormalAtParameter              ( LinO , 0.5).Scale (  CCW );\n//----------------------------------------------------------------------------\n//Define Eixo significativo do Lote, Origem, Dir Normais e Tang\n//----------------------------------------------------------------------------\nEixS  = Line.ByBestFitThroughPoints         ( PtsO                     );\nPtsS  = Geometry.Intersect                  ( EixS    , OCUP           );\nLinS  = Line.ByStartPointEndPoint           ( PtsS[0] , PtsS[1]        );\nO     = Line.PointAtParameter               ( LinS    , t              );\nT     = Line.TangentAtParameter             ( LinS    , t ).Scale( Ldi );\nN     = Line.NormalAtParameter              ( LinS    , t ).Scale( Ldi );\n//----------------------------------------------------------------------------\n//Define Linhas de Penetração ao Terreno no Ponto médio e Normal\n//----------------------------------------------------------------------------\nPtsT  = Point.Project                       ( O       , OCUP   , N     );\nLinP  = Line.ByStartPointDirectionLength    ( PtsM    , NoDe   , DAF+1 );\nLinT  = Line.ByStartPointEndPoint           ( PtsT[0] , PtsT[1]        );\n//----------------------------------------------------------------------------\n//Define Eixo Longitudinal da implantação do projeto\n//----------------------------------------------------------------------------\nDime  = DesT * LinT.Length;\nOLOC  = Line.PointAtSegmentLength           ( LinT    , Dime          );\nPtsL  = Point.Project                       ( OLOC    , OCUP , T<1>   );\nPtsC  = Point.Project                       ( OLOC    , OCUP , NoFo<1>);\nLinC  = Line.ByStartPointEndPoint           ( OLOC    , PtsC <1>      );\nCoin  = List.Equals                         ( PtsL[0] , PtsL[1]       );\nLinL  = Coin?null:Line.ByStartPointEndPoint ( PtsL[0] , PtsL[1]       );\nCirc  = Circle.ByCenterPointRadius          ( OLOC    , 0.5           );\nAngu  = Vector.AngleAboutAxis               ( N<1>    , NoDe ,  vz    );\n//----------------------------------------------------------------------------\n//Extração de resultados utilizando Dicionário\n//----------------------------------------------------------------------------\nKey   = [\"LOTE\",\"OCUP\", \"PtsM\",\"PtsL\",\"PtsT\",\"PtsO\",\"T\",\"N\",\"O\",\"OLOC\",\"NoDe\",\"NoFo\",\"LinO\",\"LinS\",\"LinT\",\"LinL\",\"LinP\",\"Circ\",\"Angu\",\"AreaL\",\"PtsC\",\"LinC\"];\nVal   = [ LOTE , OCUP ,  PtsM , PtsL , PtsT , PtsO , T , N , O , OLOC , NoDe , NoFo , LinO , LinS , LinT , LinL , LinP , Circ , Angu , AreaL , PtsC , LinC ];\nDIC   = Dictionary.ByKeysValues ( Key , Val );",
+      "Code": "DadosLote;\nDAF;\nt;\nDesT;\n//--------------------------------------------------------------------------\n// Captura Linhas da divisa\n//--------------------------------------------------------------------------\nLOTE  = DadosLote[\"Lote\"];\nOCUP  = LOTE.Offset  ( -DAF  ,  false  );\nLinO  = OCUP.Explode (                 );\n//--------------------------------------------------------------------------\n// Orienta os vetores Normais da divisa\n//--------------------------------------------------------------------------\nqs    = List.Count              ( LinO            )-1;\nvt    = Line.TangentAtParameter ( LinO [0..qs] , 0);\nZvt   = Vector.Cross            ( vt[0] , vt[1]   ).Z;\nFo    = Zvt > 0 ?  1 : -1;\nDe    = Zvt < 0 ?  1 : -1;\n//--------------------------------------------------------------------------\n//Captura os pontos e Normais da divisa\n//--------------------------------------------------------------------------\nPtsO  = Line.PointAtParameter               ( LinO , 0                 );\nPtsM  = Line.PointAtParameter               ( LinO , 0.5               );\nNoFo  = Line.NormalAtParameter              ( LinO , 0.5).Scale (  Fo  );\nNoDe  = Line.NormalAtParameter              ( LinO , 0.5).Scale (  De  );\n//--------------------------------------------------------------------------\n//Define Eixo significativo do Lote, Origem, Dir Normais e Tang\n//--------------------------------------------------------------------------\nLdi   = [ 1 , -1 ];\nEixS  = Line.ByBestFitThroughPoints         ( PtsO                     );\nPtsS  = Geometry.Intersect                  ( EixS    , OCUP           );\nLinS  = Line.ByStartPointEndPoint           ( PtsS[0] , PtsS[1]        );\nO     = Line.PointAtParameter               ( LinS    , t              );\nT     = Line.TangentAtParameter             ( LinS    , t ).Scale( Ldi );\nN     = Line.NormalAtParameter              ( LinS    , t ).Scale( Ldi );\n//--------------------------------------------------------------------------\n//Define Linhas de Penetração ao Terreno no Ponto médio e Normal\n//--------------------------------------------------------------------------\nPtsT  = Point.Project                       ( O       , OCUP   , N     );\nLinP  = Line.ByStartPointDirectionLength    ( PtsM    , NoDe   , DAF+1 );\nLinT  = Line.ByStartPointEndPoint           ( PtsT[0] , PtsT[1]        );\n//--------------------------------------------------------------------------\n//Define Eixo Longitudinal da implantação do projeto\n//--------------------------------------------------------------------------\nVz    = Vector.ZAxis();\nDime  = DesT * LinT.Length;\nOLOC  = Line.PointAtSegmentLength           ( LinT    , Dime          );\nPtsL  = Point.Project                       ( OLOC    , OCUP , T<1>   );\nPtsC  = Point.Project                       ( OLOC    , OCUP , NoFo<1>);\nLinC  = Line.ByStartPointEndPoint           ( OLOC    , PtsC <1>      );\nCoin  = List.Equals                         ( PtsL[0] , PtsL[1]       );\nLinL  = Coin?null:Line.ByStartPointEndPoint ( PtsL[0] , PtsL[1]       );\nCirc  = Circle.ByCenterPointRadius          ( OLOC    , 0.5           );\nAngu  = Vector.AngleAboutAxis               ( N<1>    , NoDe ,  Vz    );\n//--------------------------------------------------------------------------\n//Extração de resultados utilizando Dicionário\n//--------------------------------------------------------------------------\nAreaL = DadosLote[\"Area\"];\nKey   = [\n          \"LOTE\" , \"OCUP\", \"PtsO\", \"PtsM\", \"NoDe\", \"NoFo\", \"PtsL\", \"PtsT\",\n          \"OLOC\" , \"Circ\", \"LinO\", \"LinS\", \"LinT\", \"LinL\", \"LinP\", \"Angu\",\n          \"AreaL\", \"PtsC\", \"LinC\", \"T\"   , \"N\"   , \"O\"\n        ];\nVal   = [\n           LOTE  , OCUP  , PtsO  , PtsM  , NoDe  ,  NoFo , PtsL  , PtsT  ,\n           OLOC  , Circ  , LinO  , LinS  , LinT  ,  LinL , LinP  , Angu  ,\n           AreaL , PtsC  , LinC  , T     , N     ,  O\n        ];\nDIC   = Dictionary.ByKeysValues ( Key , Val );",
       "Id": "aec44cb61ce04ad98102fab1fc3b3dd8",
       "Inputs": [
         {
-          "Id": "21fee217ddd046fcaec0d21ba7704fb2",
+          "Id": "bc6b585a630347c48be1cec0c4d3e656",
           "Name": "DadosLote",
           "Description": "DadosLote",
           "UsingDefaultValue": false,
@@ -188,7 +188,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "fe9504871a1a4b58a3511aa469cf3caf",
+          "Id": "4867266ffe3341aa9fb1dc42537c176b",
           "Name": "DAF",
           "Description": "DAF",
           "UsingDefaultValue": false,
@@ -197,7 +197,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "5a141993e45f4584a37491c46ad44a0d",
+          "Id": "38024f8deca3456e9e3863eb939c47f5",
           "Name": "t",
           "Description": "t",
           "UsingDefaultValue": false,
@@ -206,7 +206,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "097cbd2421ff4a5285f64e28a6955b00",
+          "Id": "f4e7f53a90ff46e88e831ddf4a944d0f",
           "Name": "DesT",
           "Description": "DesT",
           "UsingDefaultValue": false,
@@ -217,7 +217,7 @@
       ],
       "Outputs": [
         {
-          "Id": "f7b82453941149cfba4e0f61b0dee55f",
+          "Id": "3896eac4bb0a431ba86861b397304ece",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -226,25 +226,25 @@
           "KeepListStructure": false
         },
         {
-          "Id": "2dc2e5788fef4ae19668a873a556688a",
+          "Id": "90bf36e0f9e54a3c953ebc1272867668",
           "Name": "",
-          "Description": "LOTE",
+          "Description": "Value of expression at line 2",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
         },
         {
-          "Id": "f1d9dcbba14b497487fb77c1cff97b89",
+          "Id": "8092cf21de504699b7b89d51bd8a77a6",
           "Name": "",
-          "Description": "AreaL",
+          "Description": "Value of expression at line 3",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
         },
         {
-          "Id": "5665012bbfbf41e38e252e1e5e090135",
+          "Id": "1d753761d779474898c02de513aaddd8",
           "Name": "",
           "Description": "Value of expression at line 4",
           "UsingDefaultValue": false,
@@ -253,34 +253,16 @@
           "KeepListStructure": false
         },
         {
-          "Id": "c5111b9456e742299cd4047b98b7ac42",
+          "Id": "fadbdd493bf344289530b591d4f79025",
           "Name": "",
-          "Description": "Value of expression at line 5",
+          "Description": "LOTE",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
         },
         {
-          "Id": "78bf84bcb79342d78c05ed878a583413",
-          "Name": "",
-          "Description": "Value of expression at line 6",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "4eaa4199299b4e7b99326da612478b3c",
-          "Name": "",
-          "Description": "Ldi",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "10f2196990944d7ba62c45e7d6f5aa4d",
+          "Id": "900307f341064b77b3e3b8f19f3b1d71",
           "Name": "",
           "Description": "OCUP",
           "UsingDefaultValue": false,
@@ -289,7 +271,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "70fc420bf1754f5fa84b796c11fafd14",
+          "Id": "0cf4879fdf784881a09ea3c3d6f3a795",
           "Name": "",
           "Description": "LinO",
           "UsingDefaultValue": false,
@@ -298,25 +280,16 @@
           "KeepListStructure": false
         },
         {
-          "Id": "9008e16205184df398795cd012690922",
+          "Id": "19c07bb266c740798648fbd3ed81afce",
           "Name": "",
-          "Description": "vx",
+          "Description": "qs",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
         },
         {
-          "Id": "5b683d69d04d49bab7edffd57590b603",
-          "Name": "",
-          "Description": "vz",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "4681a2bf5f7c4651b6aedaf378fdbe69",
+          "Id": "b683b9b1dff0470595eebd3426f491b7",
           "Name": "",
           "Description": "vt",
           "UsingDefaultValue": false,
@@ -325,7 +298,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "71b66c9d8881401d90e81dc159c9a31b",
+          "Id": "1951189efd574414b05abce4d871c2f9",
           "Name": "",
           "Description": "Zvt",
           "UsingDefaultValue": false,
@@ -334,25 +307,25 @@
           "KeepListStructure": false
         },
         {
-          "Id": "866ef5e7846e4bfb8429a1e2cffc7713",
+          "Id": "885dba620fd44bc8a77e71ca06380cd0",
           "Name": "",
-          "Description": "CW",
+          "Description": "Fo",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
         },
         {
-          "Id": "8a3ae9a28dee41a7b7fa7973acf50656",
+          "Id": "9e410f10c67b4242a2f98cb4d8981135",
           "Name": "",
-          "Description": "CCW",
+          "Description": "De",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
         },
         {
-          "Id": "5a250852711447a8a8061c7bc88dd9c3",
+          "Id": "b29e5bc04575412b8b42a29e3f16c14b",
           "Name": "",
           "Description": "PtsO",
           "UsingDefaultValue": false,
@@ -361,7 +334,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "343e7c04731b4ca0b7a8462bf7c3f9f4",
+          "Id": "64fc5b98952f487e945a89431d199833",
           "Name": "",
           "Description": "PtsM",
           "UsingDefaultValue": false,
@@ -370,7 +343,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "38051a9bb688400fba0155a0f3e07d27",
+          "Id": "1cd485daf93b424bacf1d4296328e2fb",
           "Name": "",
           "Description": "NoFo",
           "UsingDefaultValue": false,
@@ -379,7 +352,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "93a70865942042dfae97dc4f1b095011",
+          "Id": "18699e88a9294151a518a652a5f0f150",
           "Name": "",
           "Description": "NoDe",
           "UsingDefaultValue": false,
@@ -388,7 +361,16 @@
           "KeepListStructure": false
         },
         {
-          "Id": "55efb1161d364c7e824cb81c31666c85",
+          "Id": "ce795178a50a41d8b58bd2c3f6dea25d",
+          "Name": "",
+          "Description": "Ldi",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2c8d228e575742dbac78117198be9776",
           "Name": "",
           "Description": "EixS",
           "UsingDefaultValue": false,
@@ -397,7 +379,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "e75c8b4bd2bf4c6d81082e5fefb02fd2",
+          "Id": "abb0cb76ff324271ae42b910718d0674",
           "Name": "",
           "Description": "PtsS",
           "UsingDefaultValue": false,
@@ -406,7 +388,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "45f40e9dfc8c42149b26c1f7139f7670",
+          "Id": "56dd7a6879a2473684856fb9d4bbea11",
           "Name": "",
           "Description": "LinS",
           "UsingDefaultValue": false,
@@ -415,7 +397,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "3277be3a0d7b4a05bc08915b87fb0721",
+          "Id": "76b15eefce0e45e8a12f2213a8eaff09",
           "Name": "",
           "Description": "O",
           "UsingDefaultValue": false,
@@ -424,7 +406,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "3066b8a4a14f4338a4e07c5de038bccb",
+          "Id": "1ba863ca2093495e98908bcbe49cab72",
           "Name": "",
           "Description": "T",
           "UsingDefaultValue": false,
@@ -433,7 +415,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "f52ed410dbb541098d6db823d1aa142a",
+          "Id": "1dc476af9fbb4975a2369609a22fd740",
           "Name": "",
           "Description": "N",
           "UsingDefaultValue": false,
@@ -442,7 +424,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "e58ad35e59a046f8ac251c6cfab1899f",
+          "Id": "5d05a1d38ab442ec9883b39c7847a1c4",
           "Name": "",
           "Description": "PtsT",
           "UsingDefaultValue": false,
@@ -451,7 +433,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "cbd0a557ca9843edada54d56538fc378",
+          "Id": "89ae1ee11120491ebbc913120ffa6101",
           "Name": "",
           "Description": "LinP",
           "UsingDefaultValue": false,
@@ -460,7 +442,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "6fc6ff5599e04aa1bb5a94487a7ef027",
+          "Id": "6bdd7de1bb0e4139b220df81af28f512",
           "Name": "",
           "Description": "LinT",
           "UsingDefaultValue": false,
@@ -469,7 +451,16 @@
           "KeepListStructure": false
         },
         {
-          "Id": "a594ce2752394eb396bc017d58fbaa2c",
+          "Id": "d543a7bd5e9b4294961887ee6d5009a0",
+          "Name": "",
+          "Description": "Vz",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8520d2c6f714425d9780a7c0371044c4",
           "Name": "",
           "Description": "Dime",
           "UsingDefaultValue": false,
@@ -478,7 +469,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "67dec92fd960458eb3a7527b6af50fb9",
+          "Id": "16a4d6c4fd61452bb6c0ea53b081c7e4",
           "Name": "",
           "Description": "OLOC",
           "UsingDefaultValue": false,
@@ -487,7 +478,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "52e45160d24a42838d9e82ad6782247f",
+          "Id": "02c7b3a378b0465dacf767f5c03ab6cb",
           "Name": "",
           "Description": "PtsL",
           "UsingDefaultValue": false,
@@ -496,7 +487,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "df8b4656322a499a86788e33b0c53c3d",
+          "Id": "8976ee635eb14bb2bcf6844a0be3a3da",
           "Name": "",
           "Description": "PtsC",
           "UsingDefaultValue": false,
@@ -505,7 +496,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "7cd1a5f099a842f5a36c0d4f0370ca0a",
+          "Id": "ab1e38ff9b4843e9b8b71bb5192a2446",
           "Name": "",
           "Description": "LinC",
           "UsingDefaultValue": false,
@@ -514,7 +505,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "f089ed0f13d4402a8affd6a2a046efb3",
+          "Id": "9c988ff4f4f041a78086ed7d52c9090e",
           "Name": "",
           "Description": "Coin",
           "UsingDefaultValue": false,
@@ -523,7 +514,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "d0d422af7206488292069e36893eb7b9",
+          "Id": "a9186d9dba544a1a9d18c4b10f51ca3a",
           "Name": "",
           "Description": "LinL",
           "UsingDefaultValue": false,
@@ -532,7 +523,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "0c052786ae6d4f31b78efcbdf40b1f09",
+          "Id": "7ae12fb8608c406899e5853b87d24874",
           "Name": "",
           "Description": "Circ",
           "UsingDefaultValue": false,
@@ -541,7 +532,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "4f136bba0e1a4418a0561a33cf0bccd4",
+          "Id": "a58a95d2d44945b4ab759ed0602bef41",
           "Name": "",
           "Description": "Angu",
           "UsingDefaultValue": false,
@@ -550,7 +541,16 @@
           "KeepListStructure": false
         },
         {
-          "Id": "133dede024d6461b971fe536f958d5f5",
+          "Id": "b90c74e99e6743b180a556d1f22aed7b",
+          "Name": "",
+          "Description": "AreaL",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3a734b652f1d4d0a9f82b11e753b4910",
           "Name": "",
           "Description": "Key",
           "UsingDefaultValue": false,
@@ -559,7 +559,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "61758a6adbd74110a3f6567b791de7cf",
+          "Id": "bb289b6ddede400e9b65b98925a12de7",
           "Name": "",
           "Description": "Val",
           "UsingDefaultValue": false,
@@ -568,7 +568,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "500daac2f83440a498d9ec249cc4c29f",
+          "Id": "07f05f0cb6cd4030aed31409499ac6e2",
           "Name": "",
           "Description": "DIC",
           "UsingDefaultValue": false,
@@ -584,28 +584,28 @@
   "Connectors": [
     {
       "Start": "ad0d3709dd5f4ff99800267642256b6b",
-      "End": "21fee217ddd046fcaec0d21ba7704fb2",
-      "Id": "b6be483299694259a807492487abfa0c"
+      "End": "bc6b585a630347c48be1cec0c4d3e656",
+      "Id": "a672c1bef7d04da9b46a7aabaa17fe4c"
     },
     {
       "Start": "1587ae5d4a1545d68d13da7d89dcab39",
-      "End": "fe9504871a1a4b58a3511aa469cf3caf",
-      "Id": "6949969bb4494c4ba8ec1c2db839e628"
+      "End": "4867266ffe3341aa9fb1dc42537c176b",
+      "Id": "743685ff6a6a47b4865b95b515af8653"
     },
     {
       "Start": "11422c6bd82a49ed92f5b5b847388ff1",
-      "End": "5a141993e45f4584a37491c46ad44a0d",
-      "Id": "5eebefcd88894bd58d8c7425b9cfb8d8"
+      "End": "38024f8deca3456e9e3863eb939c47f5",
+      "Id": "5b53c9abe513486f998dd223229b3760"
     },
     {
       "Start": "d0549dea537a49da9dd688508ffca64e",
-      "End": "097cbd2421ff4a5285f64e28a6955b00",
-      "Id": "72ca8e6147ed4755b33973a97c256542"
+      "End": "f4e7f53a90ff46e88e831ddf4a944d0f",
+      "Id": "4b6c9261258e4638b675a19ed954daf1"
     },
     {
-      "Start": "500daac2f83440a498d9ec249cc4c29f",
+      "Start": "07f05f0cb6cd4030aed31409499ac6e2",
       "End": "3a38a43c47c24fc395e875c6d7298360",
-      "Id": "f372fd7b10d54dae9e76491b4de91f1b"
+      "Id": "88117b89446344688bcad9087d5ab09d"
     }
   ],
   "Dependencies": [],
@@ -622,12 +622,12 @@
     },
     "Camera": {
       "Name": "Background Preview",
-      "EyeX": -56.541439992218912,
-      "EyeY": 12.991378882856985,
-      "EyeZ": 136.04218271038189,
-      "LookX": 56.836920438641705,
-      "LookY": -33.880235980048646,
-      "LookZ": -59.498537725459158,
+      "EyeX": -97.373772017842384,
+      "EyeY": 47.958122673591241,
+      "EyeZ": 150.43681737074115,
+      "LookX": 88.14614514969152,
+      "LookY": -52.5435258517771,
+      "LookZ": -92.273942748261547,
       "UpX": 0.11994717618857877,
       "UpY": 0.98480775301221657,
       "UpZ": -0.12556418490728904
@@ -641,7 +641,7 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "X": 97.464721742104985,
-        "Y": 277.69951764107452
+        "Y": 282.32292451958466
       },
       {
         "ShowGeometry": true,
@@ -651,7 +651,7 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "X": 40.464721742104985,
-        "Y": 336.25438550696776
+        "Y": 341.06982206108609
       },
       {
         "ShowGeometry": true,
@@ -660,8 +660,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -24.589765989132275,
-        "Y": 395.14778535618763
+        "X": -17.535278257895015,
+        "Y": 399.81671960258751
       },
       {
         "ShowGeometry": true,
@@ -670,8 +670,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -12.740441437429809,
-        "Y": 453.94021026557874
+        "X": -9.5352782578950155,
+        "Y": 458.56361714408894
       },
       {
         "ShowGeometry": true,
@@ -680,8 +680,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1199.6665590575319,
-        "Y": 1454.7441208114535
+        "X": 1120.5018968913494,
+        "Y": 1515.3698400267424
       },
       {
         "ShowGeometry": true,
@@ -690,13 +690,13 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 381.685053210478,
-        "Y": 333.877747614438
+        "X": 352.88231576665345,
+        "Y": 341.50200164368567
       }
     ],
     "Annotations": [],
-    "X": -208.99116648759798,
-    "Y": -497.65278540905422,
-    "Zoom": 0.70522818154491085
+    "X": -254.56664998623137,
+    "Y": -433.67531767158766,
+    "Zoom": 0.7544090503825519
   }
 }
