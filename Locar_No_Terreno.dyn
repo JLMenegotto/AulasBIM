@@ -109,10 +109,10 @@
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
       "NodeType": "NumberInputNode",
       "NumberType": "Double",
-      "MaximumValue": 5.0,
+      "MaximumValue": 4.0,
       "MinimumValue": 0.0,
       "StepValue": 1.0,
-      "InputValue": 0.0,
+      "InputValue": 1.0,
       "Id": "457d40cd1044460d868444de6f2b96fa",
       "Inputs": [],
       "Outputs": [
@@ -136,7 +136,7 @@
       "MaximumValue": 10.0,
       "MinimumValue": 0.1,
       "StepValue": 0.001,
-      "InputValue": 1.284,
+      "InputValue": 3.2230000000000003,
       "Id": "ca9461850d4e4bd7a5a27d15b580c178",
       "Inputs": [],
       "Outputs": [
@@ -160,7 +160,7 @@
       "MaximumValue": 4.0,
       "MinimumValue": 0.0,
       "StepValue": 0.1,
-      "InputValue": 1.0,
+      "InputValue": 0.0,
       "Id": "1baef9a272c44ed6acad87d14a451ec1",
       "Inputs": [],
       "Outputs": [
@@ -184,7 +184,7 @@
       "MaximumValue": 25.0,
       "MinimumValue": 0.0,
       "StepValue": 1.0,
-      "InputValue": 8.0,
+      "InputValue": 7.0,
       "Id": "29e5d4a4b193475081cebe3ac38708c0",
       "Inputs": [],
       "Outputs": [
@@ -208,7 +208,7 @@
       "MaximumValue": 0.99,
       "MinimumValue": 0.01,
       "StepValue": 0.005,
-      "InputValue": 0.59,
+      "InputValue": 0.38,
       "Id": "a8856bb276cd4d70bad1a868c105ebff",
       "Inputs": [],
       "Outputs": [
@@ -232,7 +232,7 @@
       "MaximumValue": 100.0,
       "MinimumValue": 10.0,
       "StepValue": 5.0,
-      "InputValue": 10.0,
+      "InputValue": 20.0,
       "Id": "38ab3aba90c745dcbf1c5a7f69227814",
       "Inputs": [],
       "Outputs": [
@@ -256,7 +256,7 @@
       "MaximumValue": 1.0,
       "MinimumValue": 0.0,
       "StepValue": 0.005,
-      "InputValue": 0.46,
+      "InputValue": 0.51,
       "Id": "d6860a081354429cac4f11043c4dd4cc",
       "Inputs": [],
       "Outputs": [
@@ -300,7 +300,7 @@
         },
         {
           "Id": "e89d80d31a404bfb88f74b3bd06e5132",
-          "Name": "Taxa_Ocupacao",
+          "Name": "Indice_Ocupacao",
           "Description": "var[]..[]",
           "UsingDefaultValue": true,
           "Level": 2,
@@ -321,6 +321,15 @@
           "Name": "Girar",
           "Description": "var[]..[]\nDefault value : 0",
           "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "46778ebf9086416aaed459ea984fc075",
+          "Name": "Razao_Andares_Embasamento",
+          "Description": "var[]..[]\nDefault value : 10 (disabled)",
+          "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
@@ -401,11 +410,11 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
       "NodeType": "CodeBlockNode",
-      "Code": "Dic_Pre;\n//Dic_Pre[\"EMBAS\"];\n//Dic_Pre[\"TORRE\"];\nDic_Pre[\"TORRE\"];\nDic_Pre[\"SoliT\"];\n//Dic_Pre[\"SoliE\"];\nDic_Pre[\"AreaT\"];\nDic_Pre[\"GuiaT\"];\nDic_Pre[\"GuiaE\"];\nDic_Pre[\"SoliF\"];",
+      "Code": "Dic_Pre;\nDic_Pre[\"EMBAS\"];\nDic_Pre[\"TORRE\"];\nDic_Pre[\"PoliT\"];\nDic_Pre[\"SoliT\"];\nDic_Pre[\"SoliE\"];\nDic_Pre[\"SoliF\"];",
       "Id": "b83de877199545cd87633f6458629176",
       "Inputs": [
         {
-          "Id": "6465f1f1dad94b7b9e7185aed36a532b",
+          "Id": "8ce43ad3bb0b4546b95b2084b02cd0ec",
           "Name": "Dic_Pre",
           "Description": "Dic_Pre",
           "UsingDefaultValue": false,
@@ -416,7 +425,7 @@
       ],
       "Outputs": [
         {
-          "Id": "695cf52419d04fd595d1d4b3a0bad41e",
+          "Id": "bda73d0b40184ab6b87ce0b98b5d7387",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -425,7 +434,25 @@
           "KeepListStructure": false
         },
         {
-          "Id": "c908c80eee6d499db1935f5e02119925",
+          "Id": "1052867ad2b248a982effd79fb249bc9",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "56786737fe624934a18468fa71145af7",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6ca108dcd76345ef81db4223f6d03fd9",
           "Name": "",
           "Description": "Value of expression at line 4",
           "UsingDefaultValue": false,
@@ -434,7 +461,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "0beb4cada282435f856e009c7d53568b",
+          "Id": "e5df42c6856c4cb5adf4eaf903cebe1f",
           "Name": "",
           "Description": "Value of expression at line 5",
           "UsingDefaultValue": false,
@@ -443,36 +470,18 @@
           "KeepListStructure": false
         },
         {
-          "Id": "f90d7253b3ef4001bcfaa705a56f5656",
+          "Id": "169fb09d0f2b4cb1849b18cd83f28e49",
+          "Name": "",
+          "Description": "Value of expression at line 6",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bd133d8deffe44a8a61c5a36a9a19a5b",
           "Name": "",
           "Description": "Value of expression at line 7",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "83ca6e82ff5d41cf9a6ed0d9971ebfa3",
-          "Name": "",
-          "Description": "Value of expression at line 8",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "43d139e442704912a647414bcaddb3b3",
-          "Name": "",
-          "Description": "Value of expression at line 9",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "30dc5ae89b6e4046836cdb4c00b75a30",
-          "Name": "",
-          "Description": "Value of expression at line 10",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -506,15 +515,6 @@
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
-        },
-        {
-          "Id": "f82bfe13b7874b40ada7d704995c2b97",
-          "Name": "Quant_Andares_Embas",
-          "Description": "var[]..[]\nDefault value : 1 (disabled)",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
         }
       ],
       "Outputs": [
@@ -530,30 +530,6 @@
       ],
       "Replication": "Auto",
       "Description": "Criar andares"
-    },
-    {
-      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
-      "NodeType": "NumberInputNode",
-      "NumberType": "Double",
-      "MaximumValue": 10.0,
-      "MinimumValue": 1.0,
-      "StepValue": 1.0,
-      "InputValue": 3.0,
-      "Id": "fa5020fd881d4f469d8cdacad3066e6e",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "ff1dad37f5524b20a7d471e7b64680b7",
-          "Name": "",
-          "Description": "Double",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "A slider that produces numeric values."
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -586,7 +562,7 @@
       "MaximumValue": 25.0,
       "MinimumValue": 1.0,
       "StepValue": 1.0,
-      "InputValue": 6.0,
+      "InputValue": 8.0,
       "Id": "5ebdf6bde55e4a6f921819b7ae99d447",
       "Inputs": [],
       "Outputs": [
@@ -606,11 +582,11 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
       "NodeType": "CodeBlockNode",
-      "Code": "D;\nD[\"PtsP\"];\nD[\"OCUP\"];\nD[\"PtsC\"];\nD[\"LinC\"];\nD[\"LinL\"];\nD[\"LinT\"];\nD[\"LinP\"];\nD[\"NoDe\"];\nD[\"NoFo\"];\nM = D[\"PtsM\"];\nV = D[\"PtsP\"];",
+      "Code": "D;\nD[\"PtsM\"];\nD[\"NoFo\"];\nD[\"NoDe\"];\nD[\"LinP\"];\nD[\"PtsC\"];\nD[\"LinC\"];\nD[\"LinL\"];\nD[\"LinT\"];\nD[\"Circ\"];",
       "Id": "8ac3ef615b09435eb749e0ed4a29be7f",
       "Inputs": [
         {
-          "Id": "9b415b3f449f4486ad282bcfdb46c1e4",
+          "Id": "ec8e6f656f1e44698388a1381f242454",
           "Name": "D",
           "Description": "D",
           "UsingDefaultValue": false,
@@ -621,7 +597,7 @@
       ],
       "Outputs": [
         {
-          "Id": "b7bd80fc8158412cb685bc3a95435827",
+          "Id": "02e8abc079cb473eadc1d7b9a731c029",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -630,7 +606,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "4b86138b78fc45e991758fa18b6a376e",
+          "Id": "ecd63eba580b4191934eef08a62d33f5",
           "Name": "",
           "Description": "Value of expression at line 2",
           "UsingDefaultValue": false,
@@ -639,7 +615,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "0fc104efa36f48b0b2e0d9f0534be7b8",
+          "Id": "fe7ca8fd197c457db1e3aec44f272357",
           "Name": "",
           "Description": "Value of expression at line 3",
           "UsingDefaultValue": false,
@@ -648,7 +624,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "c510623aa241450d84448f18e2e8a4d2",
+          "Id": "20e87896a54343c0b2cebf4fbfef212b",
           "Name": "",
           "Description": "Value of expression at line 4",
           "UsingDefaultValue": false,
@@ -657,7 +633,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "9df6e9ef78034d7982be7131fd70b725",
+          "Id": "e140b4e5b9fc48c3a1e5d82cd760e913",
           "Name": "",
           "Description": "Value of expression at line 5",
           "UsingDefaultValue": false,
@@ -666,7 +642,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "f7eda39a0a6946b9b76e4e2ac4d9c3e3",
+          "Id": "27a458f2efde4898afd24849b9210e1a",
           "Name": "",
           "Description": "Value of expression at line 6",
           "UsingDefaultValue": false,
@@ -675,7 +651,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "0e045e1082d241fcb90f7b79464f26cd",
+          "Id": "fcf9288131634b72867407f6460f41bb",
           "Name": "",
           "Description": "Value of expression at line 7",
           "UsingDefaultValue": false,
@@ -684,7 +660,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "74a02e23971a40b7b8481a8b7565d727",
+          "Id": "915900206db4457dad63024f620d1488",
           "Name": "",
           "Description": "Value of expression at line 8",
           "UsingDefaultValue": false,
@@ -693,7 +669,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "f9b54cfddbc544e1bca8651a230dce26",
+          "Id": "de4be1a07f4946b5bbf5b47985fa370f",
           "Name": "",
           "Description": "Value of expression at line 9",
           "UsingDefaultValue": false,
@@ -702,27 +678,9 @@
           "KeepListStructure": false
         },
         {
-          "Id": "881ac6f9c4ac4bdcbde1c19596743e1e",
+          "Id": "194ff6883b0a4998bb9f7e0e0e58c29e",
           "Name": "",
           "Description": "Value of expression at line 10",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "e68cf17deb8b46aead14db48f012ea03",
-          "Name": "",
-          "Description": "M",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "35e7154019ad417da6a6ca5044876158",
-          "Name": "",
-          "Description": "V",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -733,12 +691,36 @@
       "Description": "Allows for DesignScript code to be authored directly"
     },
     {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 15.0,
+      "MinimumValue": 1.0,
+      "StepValue": 1.0,
+      "InputValue": 7.0,
+      "Id": "7658dff7ae404a68bfa87dbe1399e5a8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8fce897994864854bfc2ea88e510b67f",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
       "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
       "NodeType": "ExtensionNode",
-      "Id": "231162b13f9746dc9416a906b513db06",
+      "Id": "e317da39e6044714b5f2c02e778ae835",
       "Inputs": [
         {
-          "Id": "48d6194d2f66435c9409d41ef1feb452",
+          "Id": "2b81459c00cc470b968af1acfa295bbe",
           "Name": "",
           "Description": "Node to evaluate.",
           "UsingDefaultValue": false,
@@ -749,7 +731,7 @@
       ],
       "Outputs": [
         {
-          "Id": "5d24701d784b4948a2e08c3f37fd07a6",
+          "Id": "1bd28ba1850d4009a71e87d812fa72b5",
           "Name": "",
           "Description": "Watch contents.",
           "UsingDefaultValue": false,
@@ -764,10 +746,10 @@
     {
       "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
       "NodeType": "ExtensionNode",
-      "Id": "3e8ac0ed34054112821bed0178939b85",
+      "Id": "329d40feafb04b0394a69be6ddaa52cc",
       "Inputs": [
         {
-          "Id": "00d48fe7525d4c238d6f3cae444cbcf5",
+          "Id": "062e90c5e23e451082e660262c9bb1d3",
           "Name": "",
           "Description": "Node to evaluate.",
           "UsingDefaultValue": false,
@@ -778,7 +760,7 @@
       ],
       "Outputs": [
         {
-          "Id": "180c5d33237c4f41b4a04dec5634651f",
+          "Id": "68f4a0d7b7e4405f8b71d9cbda326b50",
           "Name": "",
           "Description": "Watch contents.",
           "UsingDefaultValue": false,
@@ -834,8 +816,8 @@
     },
     {
       "Start": "b8515c6a3c3a4ebab05ea35850d35b55",
-      "End": "6465f1f1dad94b7b9e7185aed36a532b",
-      "Id": "ed76f83171b8418c98c7bfe8d6ebee63"
+      "End": "8ce43ad3bb0b4546b95b2084b02cd0ec",
+      "Id": "b6e696c68e11401084f3375dbfcd1690"
     },
     {
       "Start": "d857288e312446b9b1ac08cd8e63c248",
@@ -844,18 +826,23 @@
     },
     {
       "Start": "d857288e312446b9b1ac08cd8e63c248",
-      "End": "9b415b3f449f4486ad282bcfdb46c1e4",
-      "Id": "bb40d022cd7f4ef9be2b478af0a8563c"
+      "End": "ec8e6f656f1e44698388a1381f242454",
+      "Id": "8bf330bfe1ed4648857c1b486d21e74d"
+    },
+    {
+      "Start": "6ca108dcd76345ef81db4223f6d03fd9",
+      "End": "2b81459c00cc470b968af1acfa295bbe",
+      "Id": "be752728c81440f19637120af28aeb2f"
+    },
+    {
+      "Start": "e5df42c6856c4cb5adf4eaf903cebe1f",
+      "End": "062e90c5e23e451082e660262c9bb1d3",
+      "Id": "a9cfac36b6f84ddaa38e33cab566ea99"
     },
     {
       "Start": "7f2ba2cff59c48b6ac25bc4740a4b165",
       "End": "dd3eafd060e7491181a764e136e7215d",
       "Id": "256c3181b5f64283a6c58161ce7798cb"
-    },
-    {
-      "Start": "ff1dad37f5524b20a7d471e7b64680b7",
-      "End": "f82bfe13b7874b40ada7d704995c2b97",
-      "Id": "5fac59eabe5243c3aec3826e031cf3ed"
     },
     {
       "Start": "952f43cd662442ca8f8288f0d054f5d2",
@@ -868,14 +855,9 @@
       "Id": "0410fb6a73fb44c8982bd1d247d39c28"
     },
     {
-      "Start": "4b86138b78fc45e991758fa18b6a376e",
-      "End": "48d6194d2f66435c9409d41ef1feb452",
-      "Id": "4a639fd287ce43a9a6564680d40e2899"
-    },
-    {
-      "Start": "0fc104efa36f48b0b2e0d9f0534be7b8",
-      "End": "00d48fe7525d4c238d6f3cae444cbcf5",
-      "Id": "b0c9322bf19f477b9c5eebe649b7f181"
+      "Start": "8fce897994864854bfc2ea88e510b67f",
+      "End": "46778ebf9086416aaed459ea984fc075",
+      "Id": "08e29f6e5aea4fa78e17e24e396725d7"
     }
   ],
   "Dependencies": [
@@ -889,7 +871,7 @@
     {
       "NodeId": "e4c1f944-5625-4ce7-a86d-da63fbadecb9",
       "Binding": {
-        "__func_7fa1540585ca482fa5a2549abed419b1_InClassDecl-1_InFunctionScope-1_Instance0_e4c1f944-5625-4ce7-a86d-da63fbadecb9;ByElevation_InClassDecl-1_InFunctionScope110_Instance2_b7c6323f-11ad-459e-a6d0-9cf3d1f26bb8": "PFNPQVAtRU5WOkVudmVsb3BlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOlNPQVAtRU5DPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyIgeG1sbnM6U09BUC1FTlY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpjbHI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vc29hcC9lbmNvZGluZy9jbHIvMS4wIiBTT0FQLUVOVjplbmNvZGluZ1N0eWxlPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyI+DQo8U09BUC1FTlY6Qm9keT4NCjxhMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXIgaWQ9InJlZi0xIiB4bWxuczphMT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9jbHIvbnNhc3NlbS9Qcm90b0NvcmUvUHJvdG9Db3JlJTJDJTIwVmVyc2lvbiUzRDIuMy4wLjU4ODUlMkMlMjBDdWx0dXJlJTNEbmV1dHJhbCUyQyUyMFB1YmxpY0tleVRva2VuJTNEbnVsbCI+DQo8TnVtYmVyT2ZFbGVtZW50cz4xPC9OdW1iZXJPZkVsZW1lbnRzPg0KPEJhc2UtMF9IYXNEYXRhPmZhbHNlPC9CYXNlLTBfSGFzRGF0YT4NCjxCYXNlLTBfSGFzTmVzdGVkRGF0YT50cnVlPC9CYXNlLTBfSGFzTmVzdGVkRGF0YT4NCjxCYXNlLTBfTmVzdGVkRGF0YUNvdW50Pjc8L0Jhc2UtMF9OZXN0ZWREYXRhQ291bnQ+DQo8QmFzZS0wLTBfSGFzRGF0YT50cnVlPC9CYXNlLTAtMF9IYXNEYXRhPg0KPEJhc2UtMC0wX0RhdGEgaWQ9InJlZi0zIj5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBNWlhabGJGUnlZV05sUkdGMFlTQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwTGtWc1pXMWxiblJ6TDFKbGRtbDBUbTlrWlhNbE1rTWxNakJXWlhKemFXOXVKVE5FTWk0ekxqQXVPRE0xTWlVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqVTNObVV4WkRRMUxUaG1NbUV0TkRReU5TMWhNMkZqTFRNMU16azVObVl5TUdFeFppMHdNREExWVdWak9Ed3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNemN5TkRJMFBDOXBiblJKUkQ0TkNqeHBibkIxZEU1aGJXVWdlSE5wT201MWJHdzlJakVpTHo0TkNqd3ZZVEU2VEdWMlpXeFVjbUZqWlVSaGRHRStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTBfRGF0YT4NCjxCYXNlLTAtMF9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMF9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0xX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTFfSGFzRGF0YT4NCjxCYXNlLTAtMV9EYXRhIGlkPSJyZWYtNCI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwTVpYWmxiRlJ5WVdObFJHRjBZU0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMExrVnNaVzFsYm5SekwxSmxkbWwwVG05a1pYTWxNa01sTWpCV1pYSnphVzl1SlRORU1pNHpMakF1T0RNMU1pVXlReVV5TUVOMWJIUjFjbVVsTTBSdVpYVjBjbUZzSlRKREpUSXdVSFZpYkdsalMyVjVWRzlyWlc0bE0wUnVkV3hzSWo0TkNqeHpkSEpwYm1kSlJDQnBaRDBpY21WbUxUTWlQalUzTm1VeFpEUTFMVGhtTW1FdE5EUXlOUzFoTTJGakxUTTFNems1Tm1ZeU1HRXhaaTB3TURBMVlXVmpPVHd2YzNSeWFXNW5TVVErRFFvOGFXNTBTVVErTXpjeU5ESTFQQzlwYm5SSlJENE5DanhwYm5CMWRFNWhiV1VnZUhOcE9tNTFiR3c5SWpFaUx6NE5Dand2WVRFNlRHVjJaV3hVY21GalpVUmhkR0UrRFFvOEwxTlBRVkF0UlU1V09rSnZaSGsrRFFvOEwxTlBRVkF0UlU1V09rVnVkbVZzYjNCbFBnMEs8L0Jhc2UtMC0xX0RhdGE+DQo8QmFzZS0wLTFfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTFfSGFzTmVzdGVkRGF0YT4NCjxCYXNlLTAtMl9IYXNEYXRhPnRydWU8L0Jhc2UtMC0yX0hhc0RhdGE+DQo8QmFzZS0wLTJfRGF0YSBpZD0icmVmLTUiPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcE1aWFpsYkZSeVlXTmxSR0YwWVNCcFpEMGljbVZtTFRFaUlIaHRiRzV6T21FeFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1dGFXTnliM052Wm5RdVkyOXRMMk5zY2k5dWMyRnpjMlZ0TDFKbGRtbDBMa1ZzWlcxbGJuUnpMMUpsZG1sMFRtOWtaWE1sTWtNbE1qQldaWEp6YVc5dUpUTkVNaTR6TGpBdU9ETTFNaVV5UXlVeU1FTjFiSFIxY21VbE0wUnVaWFYwY21Gc0pUSkRKVEl3VUhWaWJHbGpTMlY1Vkc5clpXNGxNMFJ1ZFd4c0lqNE5Danh6ZEhKcGJtZEpSQ0JwWkQwaWNtVm1MVE1pUG1aaVpEbG1ZVEEzTFRKaU16RXROR1ZtT0MwNVpHRTRMVEE0TnpnM1pUZGxNalV3T1Mwd01EQTFZV1ppTnp3dmMzUnlhVzVuU1VRK0RRbzhhVzUwU1VRK016Y3lOall6UEM5cGJuUkpSRDROQ2p4cGJuQjFkRTVoYldVZ2VITnBPbTUxYkd3OUlqRWlMejROQ2p3dllURTZUR1YyWld4VWNtRmpaVVJoZEdFK0RRbzhMMU5QUVZBdFJVNVdPa0p2WkhrK0RRbzhMMU5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxQZzBLPC9CYXNlLTAtMl9EYXRhPg0KPEJhc2UtMC0yX0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC0yX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTNfSGFzRGF0YT50cnVlPC9CYXNlLTAtM19IYXNEYXRhPg0KPEJhc2UtMC0zX0RhdGEgaWQ9InJlZi02Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBNWlhabGJGUnlZV05sUkdGMFlTQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwTGtWc1pXMWxiblJ6TDFKbGRtbDBUbTlrWlhNbE1rTWxNakJXWlhKemFXOXVKVE5FTWk0ekxqQXVPRE0xTWlVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBtWmlaRGxtWVRBM0xUSmlNekV0TkdWbU9DMDVaR0U0TFRBNE56ZzNaVGRsTWpVd09TMHdNREExWVdaaVlqd3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNemN5TmpZM1BDOXBiblJKUkQ0TkNqeHBibkIxZEU1aGJXVWdlSE5wT201MWJHdzlJakVpTHo0TkNqd3ZZVEU2VEdWMlpXeFVjbUZqWlVSaGRHRStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTNfRGF0YT4NCjxCYXNlLTAtM19IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtM19IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC00X0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTRfSGFzRGF0YT4NCjxCYXNlLTAtNF9EYXRhIGlkPSJyZWYtNyI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwTVpYWmxiRlJ5WVdObFJHRjBZU0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMExrVnNaVzFsYm5SekwxSmxkbWwwVG05a1pYTWxNa01sTWpCV1pYSnphVzl1SlRORU1pNHpMakF1T0RNMU1pVXlReVV5TUVOMWJIUjFjbVVsTTBSdVpYVjBjbUZzSlRKREpUSXdVSFZpYkdsalMyVjVWRzlyWlc0bE0wUnVkV3hzSWo0TkNqeHpkSEpwYm1kSlJDQnBaRDBpY21WbUxUTWlQbVppWkRsbVlUQTNMVEppTXpFdE5HVm1PQzA1WkdFNExUQTROemczWlRkbE1qVXdPUzB3TURBMVlXWmlZend2YzNSeWFXNW5TVVErRFFvOGFXNTBTVVErTXpjeU5qWTRQQzlwYm5SSlJENE5DanhwYm5CMWRFNWhiV1VnZUhOcE9tNTFiR3c5SWpFaUx6NE5Dand2WVRFNlRHVjJaV3hVY21GalpVUmhkR0UrRFFvOEwxTlBRVkF0UlU1V09rSnZaSGsrRFFvOEwxTlBRVkF0UlU1V09rVnVkbVZzYjNCbFBnMEs8L0Jhc2UtMC00X0RhdGE+DQo8QmFzZS0wLTRfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTRfSGFzTmVzdGVkRGF0YT4NCjxCYXNlLTAtNV9IYXNEYXRhPnRydWU8L0Jhc2UtMC01X0hhc0RhdGE+DQo8QmFzZS0wLTVfRGF0YSBpZD0icmVmLTgiPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcE1aWFpsYkZSeVlXTmxSR0YwWVNCcFpEMGljbVZtTFRFaUlIaHRiRzV6T21FeFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1dGFXTnliM052Wm5RdVkyOXRMMk5zY2k5dWMyRnpjMlZ0TDFKbGRtbDBMa1ZzWlcxbGJuUnpMMUpsZG1sMFRtOWtaWE1sTWtNbE1qQldaWEp6YVc5dUpUTkVNaTR6TGpBdU9ETTFNaVV5UXlVeU1FTjFiSFIxY21VbE0wUnVaWFYwY21Gc0pUSkRKVEl3VUhWaWJHbGpTMlY1Vkc5clpXNGxNMFJ1ZFd4c0lqNE5Danh6ZEhKcGJtZEpSQ0JwWkQwaWNtVm1MVE1pUG1aaVpEbG1ZVEEzTFRKaU16RXROR1ZtT0MwNVpHRTRMVEE0TnpnM1pUZGxNalV3T1Mwd01EQTFZV1ppWkR3dmMzUnlhVzVuU1VRK0RRbzhhVzUwU1VRK016Y3lOalk1UEM5cGJuUkpSRDROQ2p4cGJuQjFkRTVoYldVZ2VITnBPbTUxYkd3OUlqRWlMejROQ2p3dllURTZUR1YyWld4VWNtRmpaVVJoZEdFK0RRbzhMMU5QUVZBdFJVNVdPa0p2WkhrK0RRbzhMMU5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxQZzBLPC9CYXNlLTAtNV9EYXRhPg0KPEJhc2UtMC01X0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC01X0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTZfSGFzRGF0YT50cnVlPC9CYXNlLTAtNl9IYXNEYXRhPg0KPEJhc2UtMC02X0RhdGEgaWQ9InJlZi05Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBNWlhabGJGUnlZV05sUkdGMFlTQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwTGtWc1pXMWxiblJ6TDFKbGRtbDBUbTlrWlhNbE1rTWxNakJXWlhKemFXOXVKVE5FTWk0ekxqQXVPRE0xTWlVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqWmhZVFkyTXpWa0xXSm1Oemd0TkRjMU9TMWlOamM1TFRVMk1UazRaV1JpT0RNelppMHdNREExWWpJME1Ud3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNemN6TXpFelBDOXBiblJKUkQ0TkNqeHBibkIxZEU1aGJXVWdlSE5wT201MWJHdzlJakVpTHo0TkNqd3ZZVEU2VEdWMlpXeFVjbUZqWlVSaGRHRStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTZfRGF0YT4NCjxCYXNlLTAtNl9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtNl9IYXNOZXN0ZWREYXRhPg0KPC9hMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXI+DQo8L1NPQVAtRU5WOkJvZHk+DQo8L1NPQVAtRU5WOkVudmVsb3BlPg0K"
+        "__func_7fa1540585ca482fa5a2549abed419b1_InClassDecl-1_InFunctionScope-1_Instance0_e4c1f944-5625-4ce7-a86d-da63fbadecb9;ByElevation_InClassDecl-1_InFunctionScope110_Instance2_b7c6323f-11ad-459e-a6d0-9cf3d1f26bb8": "PFNPQVAtRU5WOkVudmVsb3BlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOlNPQVAtRU5DPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyIgeG1sbnM6U09BUC1FTlY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpjbHI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vc29hcC9lbmNvZGluZy9jbHIvMS4wIiBTT0FQLUVOVjplbmNvZGluZ1N0eWxlPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyI+DQo8U09BUC1FTlY6Qm9keT4NCjxhMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXIgaWQ9InJlZi0xIiB4bWxuczphMT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9jbHIvbnNhc3NlbS9Qcm90b0NvcmUvUHJvdG9Db3JlJTJDJTIwVmVyc2lvbiUzRDIuMy4wLjU4ODUlMkMlMjBDdWx0dXJlJTNEbmV1dHJhbCUyQyUyMFB1YmxpY0tleVRva2VuJTNEbnVsbCI+DQo8TnVtYmVyT2ZFbGVtZW50cz4xPC9OdW1iZXJPZkVsZW1lbnRzPg0KPEJhc2UtMF9IYXNEYXRhPmZhbHNlPC9CYXNlLTBfSGFzRGF0YT4NCjxCYXNlLTBfSGFzTmVzdGVkRGF0YT50cnVlPC9CYXNlLTBfSGFzTmVzdGVkRGF0YT4NCjxCYXNlLTBfTmVzdGVkRGF0YUNvdW50Pjk8L0Jhc2UtMF9OZXN0ZWREYXRhQ291bnQ+DQo8QmFzZS0wLTBfSGFzRGF0YT50cnVlPC9CYXNlLTAtMF9IYXNEYXRhPg0KPEJhc2UtMC0wX0RhdGEgaWQ9InJlZi0zIj5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBNWlhabGJGUnlZV05sUkdGMFlTQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwTGtWc1pXMWxiblJ6TDFKbGRtbDBUbTlrWlhNbE1rTWxNakJXWlhKemFXOXVKVE5FTWk0ekxqQXVPRE0xTWlVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqUmpOR1k0WldGaUxUQmtZV0V0TkRaa01TMWhaR1UzTFRSaE5XSTNaVGhtTkRkaE1pMHdNREExWWpWallqd3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNemMwTWpFNVBDOXBiblJKUkQ0TkNqeHBibkIxZEU1aGJXVWdlSE5wT201MWJHdzlJakVpTHo0TkNqd3ZZVEU2VEdWMlpXeFVjbUZqWlVSaGRHRStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTBfRGF0YT4NCjxCYXNlLTAtMF9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMF9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0xX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTFfSGFzRGF0YT4NCjxCYXNlLTAtMV9EYXRhIGlkPSJyZWYtNCI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwTVpYWmxiRlJ5WVdObFJHRjBZU0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMExrVnNaVzFsYm5SekwxSmxkbWwwVG05a1pYTWxNa01sTWpCV1pYSnphVzl1SlRORU1pNHpMakF1T0RNMU1pVXlReVV5TUVOMWJIUjFjbVVsTTBSdVpYVjBjbUZzSlRKREpUSXdVSFZpYkdsalMyVjVWRzlyWlc0bE0wUnVkV3hzSWo0TkNqeHpkSEpwYm1kSlJDQnBaRDBpY21WbUxUTWlQalJqTkdZNFpXRmlMVEJrWVdFdE5EWmtNUzFoWkdVM0xUUmhOV0kzWlRobU5EZGhNaTB3TURBMVlqVmpZend2YzNSeWFXNW5TVVErRFFvOGFXNTBTVVErTXpjME1qSXdQQzlwYm5SSlJENE5DanhwYm5CMWRFNWhiV1VnZUhOcE9tNTFiR3c5SWpFaUx6NE5Dand2WVRFNlRHVjJaV3hVY21GalpVUmhkR0UrRFFvOEwxTlBRVkF0UlU1V09rSnZaSGsrRFFvOEwxTlBRVkF0UlU1V09rVnVkbVZzYjNCbFBnMEs8L0Jhc2UtMC0xX0RhdGE+DQo8QmFzZS0wLTFfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTFfSGFzTmVzdGVkRGF0YT4NCjxCYXNlLTAtMl9IYXNEYXRhPnRydWU8L0Jhc2UtMC0yX0hhc0RhdGE+DQo8QmFzZS0wLTJfRGF0YSBpZD0icmVmLTUiPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcE1aWFpsYkZSeVlXTmxSR0YwWVNCcFpEMGljbVZtTFRFaUlIaHRiRzV6T21FeFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1dGFXTnliM052Wm5RdVkyOXRMMk5zY2k5dWMyRnpjMlZ0TDFKbGRtbDBMa1ZzWlcxbGJuUnpMMUpsZG1sMFRtOWtaWE1sTWtNbE1qQldaWEp6YVc5dUpUTkVNaTR6TGpBdU9ETTFNaVV5UXlVeU1FTjFiSFIxY21VbE0wUnVaWFYwY21Gc0pUSkRKVEl3VUhWaWJHbGpTMlY1Vkc5clpXNGxNMFJ1ZFd4c0lqNE5Danh6ZEhKcGJtZEpSQ0JwWkQwaWNtVm1MVE1pUGpSak5HWTRaV0ZpTFRCa1lXRXRORFprTVMxaFpHVTNMVFJoTldJM1pUaG1ORGRoTWkwd01EQTFZalZqWkR3dmMzUnlhVzVuU1VRK0RRbzhhVzUwU1VRK016YzBNakl4UEM5cGJuUkpSRDROQ2p4cGJuQjFkRTVoYldVZ2VITnBPbTUxYkd3OUlqRWlMejROQ2p3dllURTZUR1YyWld4VWNtRmpaVVJoZEdFK0RRbzhMMU5QUVZBdFJVNVdPa0p2WkhrK0RRbzhMMU5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxQZzBLPC9CYXNlLTAtMl9EYXRhPg0KPEJhc2UtMC0yX0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC0yX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTNfSGFzRGF0YT50cnVlPC9CYXNlLTAtM19IYXNEYXRhPg0KPEJhc2UtMC0zX0RhdGEgaWQ9InJlZi02Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBNWlhabGJGUnlZV05sUkdGMFlTQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwTGtWc1pXMWxiblJ6TDFKbGRtbDBUbTlrWlhNbE1rTWxNakJXWlhKemFXOXVKVE5FTWk0ekxqQXVPRE0xTWlVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqUmpOR1k0WldGaUxUQmtZV0V0TkRaa01TMWhaR1UzTFRSaE5XSTNaVGhtTkRkaE1pMHdNREExWWpWalpUd3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNemMwTWpJeVBDOXBiblJKUkQ0TkNqeHBibkIxZEU1aGJXVWdlSE5wT201MWJHdzlJakVpTHo0TkNqd3ZZVEU2VEdWMlpXeFVjbUZqWlVSaGRHRStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTNfRGF0YT4NCjxCYXNlLTAtM19IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtM19IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC00X0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTRfSGFzRGF0YT4NCjxCYXNlLTAtNF9EYXRhIGlkPSJyZWYtNyI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwTVpYWmxiRlJ5WVdObFJHRjBZU0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMExrVnNaVzFsYm5SekwxSmxkbWwwVG05a1pYTWxNa01sTWpCV1pYSnphVzl1SlRORU1pNHpMakF1T0RNMU1pVXlReVV5TUVOMWJIUjFjbVVsTTBSdVpYVjBjbUZzSlRKREpUSXdVSFZpYkdsalMyVjVWRzlyWlc0bE0wUnVkV3hzSWo0TkNqeHpkSEpwYm1kSlJDQnBaRDBpY21WbUxUTWlQalJqTkdZNFpXRmlMVEJrWVdFdE5EWmtNUzFoWkdVM0xUUmhOV0kzWlRobU5EZGhNaTB3TURBMVlqVmpaand2YzNSeWFXNW5TVVErRFFvOGFXNTBTVVErTXpjME1qSXpQQzlwYm5SSlJENE5DanhwYm5CMWRFNWhiV1VnZUhOcE9tNTFiR3c5SWpFaUx6NE5Dand2WVRFNlRHVjJaV3hVY21GalpVUmhkR0UrRFFvOEwxTlBRVkF0UlU1V09rSnZaSGsrRFFvOEwxTlBRVkF0UlU1V09rVnVkbVZzYjNCbFBnMEs8L0Jhc2UtMC00X0RhdGE+DQo8QmFzZS0wLTRfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTRfSGFzTmVzdGVkRGF0YT4NCjxCYXNlLTAtNV9IYXNEYXRhPnRydWU8L0Jhc2UtMC01X0hhc0RhdGE+DQo8QmFzZS0wLTVfRGF0YSBpZD0icmVmLTgiPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcE1aWFpsYkZSeVlXTmxSR0YwWVNCcFpEMGljbVZtTFRFaUlIaHRiRzV6T21FeFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1dGFXTnliM052Wm5RdVkyOXRMMk5zY2k5dWMyRnpjMlZ0TDFKbGRtbDBMa1ZzWlcxbGJuUnpMMUpsZG1sMFRtOWtaWE1sTWtNbE1qQldaWEp6YVc5dUpUTkVNaTR6TGpBdU9ETTFNaVV5UXlVeU1FTjFiSFIxY21VbE0wUnVaWFYwY21Gc0pUSkRKVEl3VUhWaWJHbGpTMlY1Vkc5clpXNGxNMFJ1ZFd4c0lqNE5Danh6ZEhKcGJtZEpSQ0JwWkQwaWNtVm1MVE1pUGpSak5HWTRaV0ZpTFRCa1lXRXRORFprTVMxaFpHVTNMVFJoTldJM1pUaG1ORGRoTWkwd01EQTFZalZrTUR3dmMzUnlhVzVuU1VRK0RRbzhhVzUwU1VRK016YzBNakkwUEM5cGJuUkpSRDROQ2p4cGJuQjFkRTVoYldVZ2VITnBPbTUxYkd3OUlqRWlMejROQ2p3dllURTZUR1YyWld4VWNtRmpaVVJoZEdFK0RRbzhMMU5QUVZBdFJVNVdPa0p2WkhrK0RRbzhMMU5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxQZzBLPC9CYXNlLTAtNV9EYXRhPg0KPEJhc2UtMC01X0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC01X0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTZfSGFzRGF0YT50cnVlPC9CYXNlLTAtNl9IYXNEYXRhPg0KPEJhc2UtMC02X0RhdGEgaWQ9InJlZi05Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBNWlhabGJGUnlZV05sUkdGMFlTQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwTGtWc1pXMWxiblJ6TDFKbGRtbDBUbTlrWlhNbE1rTWxNakJXWlhKemFXOXVKVE5FTWk0ekxqQXVPRE0xTWlVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqUmpOR1k0WldGaUxUQmtZV0V0TkRaa01TMWhaR1UzTFRSaE5XSTNaVGhtTkRkaE1pMHdNREExWWpWa01Ud3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNemMwTWpJMVBDOXBiblJKUkQ0TkNqeHBibkIxZEU1aGJXVWdlSE5wT201MWJHdzlJakVpTHo0TkNqd3ZZVEU2VEdWMlpXeFVjbUZqWlVSaGRHRStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTZfRGF0YT4NCjxCYXNlLTAtNl9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtNl9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC03X0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTdfSGFzRGF0YT4NCjxCYXNlLTAtN19EYXRhIGlkPSJyZWYtMTAiPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcE1aWFpsYkZSeVlXTmxSR0YwWVNCcFpEMGljbVZtTFRFaUlIaHRiRzV6T21FeFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1dGFXTnliM052Wm5RdVkyOXRMMk5zY2k5dWMyRnpjMlZ0TDFKbGRtbDBMa1ZzWlcxbGJuUnpMMUpsZG1sMFRtOWtaWE1sTWtNbE1qQldaWEp6YVc5dUpUTkVNaTR6TGpBdU9ETTFNaVV5UXlVeU1FTjFiSFIxY21VbE0wUnVaWFYwY21Gc0pUSkRKVEl3VUhWaWJHbGpTMlY1Vkc5clpXNGxNMFJ1ZFd4c0lqNE5Danh6ZEhKcGJtZEpSQ0JwWkQwaWNtVm1MVE1pUGpSak5HWTRaV0ZpTFRCa1lXRXRORFprTVMxaFpHVTNMVFJoTldJM1pUaG1ORGRoTWkwd01EQTFZalZrTWp3dmMzUnlhVzVuU1VRK0RRbzhhVzUwU1VRK016YzBNakkyUEM5cGJuUkpSRDROQ2p4cGJuQjFkRTVoYldVZ2VITnBPbTUxYkd3OUlqRWlMejROQ2p3dllURTZUR1YyWld4VWNtRmpaVVJoZEdFK0RRbzhMMU5QUVZBdFJVNVdPa0p2WkhrK0RRbzhMMU5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxQZzBLPC9CYXNlLTAtN19EYXRhPg0KPEJhc2UtMC03X0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC03X0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLThfSGFzRGF0YT50cnVlPC9CYXNlLTAtOF9IYXNEYXRhPg0KPEJhc2UtMC04X0RhdGEgaWQ9InJlZi0xMSI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwTVpYWmxiRlJ5WVdObFJHRjBZU0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMExrVnNaVzFsYm5SekwxSmxkbWwwVG05a1pYTWxNa01sTWpCV1pYSnphVzl1SlRORU1pNHpMakF1T0RNMU1pVXlReVV5TUVOMWJIUjFjbVVsTTBSdVpYVjBjbUZzSlRKREpUSXdVSFZpYkdsalMyVjVWRzlyWlc0bE0wUnVkV3hzSWo0TkNqeHpkSEpwYm1kSlJDQnBaRDBpY21WbUxUTWlQalJqTkdZNFpXRmlMVEJrWVdFdE5EWmtNUzFoWkdVM0xUUmhOV0kzWlRobU5EZGhNaTB3TURBMVlqVmtNend2YzNSeWFXNW5TVVErRFFvOGFXNTBTVVErTXpjME1qSTNQQzlwYm5SSlJENE5DanhwYm5CMWRFNWhiV1VnZUhOcE9tNTFiR3c5SWpFaUx6NE5Dand2WVRFNlRHVjJaV3hVY21GalpVUmhkR0UrRFFvOEwxTlBRVkF0UlU1V09rSnZaSGsrRFFvOEwxTlBRVkF0UlU1V09rVnVkbVZzYjNCbFBnMEs8L0Jhc2UtMC04X0RhdGE+DQo8QmFzZS0wLThfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLThfSGFzTmVzdGVkRGF0YT4NCjwvYTE6Q2FsbFNpdGVfeDAwMkJfVHJhY2VTZXJpYWxpc2VySGVscGVyPg0KPC9TT0FQLUVOVjpCb2R5Pg0KPC9TT0FQLUVOVjpFbnZlbG9wZT4NCg=="
       }
     }
   ],
@@ -904,15 +886,15 @@
     },
     "Camera": {
       "Name": "Background Preview",
-      "EyeX": -56.541439992218912,
-      "EyeY": 12.991378882856985,
-      "EyeZ": 136.04218271038189,
-      "LookX": 56.836920438641705,
-      "LookY": -33.880235980048646,
-      "LookZ": -59.498537725459158,
-      "UpX": 0.11994717618857877,
-      "UpY": 0.98480775301221657,
-      "UpZ": -0.12556418490728904
+      "EyeX": -130.31022366464498,
+      "EyeY": 33.174542533624248,
+      "EyeZ": 3.77319934439889,
+      "LookX": 121.0825967964941,
+      "LookY": -37.759945711810104,
+      "LookZ": 54.389675278080716,
+      "UpX": 0.055688243262589004,
+      "UpY": 0.99813479842187669,
+      "UpZ": 0.0250148704107298
     },
     "NodeViews": [
       {
@@ -923,7 +905,7 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "X": 48.171567432311804,
-        "Y": -40.603530915327696
+        "Y": -25.559893932833376
       },
       {
         "ShowGeometry": true,
@@ -932,8 +914,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -409.24562495323596,
-        "Y": -40.582351164252117
+        "X": -406.8499817242872,
+        "Y": -25.538714181757797
       },
       {
         "ShowGeometry": true,
@@ -942,8 +924,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -408.22261766714416,
-        "Y": 608.55937762722488
+        "X": -409.40615904298778,
+        "Y": 575.06335329970568
       },
       {
         "ShowGeometry": true,
@@ -952,8 +934,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -409.98700766417187,
-        "Y": 90.959147601737129
+        "X": -408.67645851243594,
+        "Y": 109.76369382985507
       },
       {
         "ShowGeometry": true,
@@ -962,8 +944,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -407.05002391858511,
-        "Y": 665.35602500297307
+        "X": -409.40615904298778,
+        "Y": 631.6809330160886
       },
       {
         "ShowGeometry": true,
@@ -972,8 +954,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -409.98700766417187,
-        "Y": 145.86103639340567
+        "X": -408.67645851243594,
+        "Y": 164.66558262152361
       },
       {
         "ShowGeometry": true,
@@ -982,8 +964,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -408.22261766714416,
-        "Y": 554.36399147105135
+        "X": -409.40615904298778,
+        "Y": 518.44577358332276
       },
       {
         "ShowGeometry": true,
@@ -992,8 +974,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -409.98700766417187,
-        "Y": 200.76292518507421
+        "X": -408.67645851243594,
+        "Y": 219.56747141319215
       },
       {
         "ShowGeometry": true,
@@ -1002,8 +984,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 38.592763751361986,
-        "Y": 530.611433188875
+        "X": -47.586782844183347,
+        "Y": 518.02556521275721
       },
       {
         "ShowGeometry": true,
@@ -1012,8 +994,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -8.262023808812387,
-        "Y": 95.0221289839233
+        "X": -11.792277245056198,
+        "Y": 113.82667521204124
       },
       {
         "ShowGeometry": true,
@@ -1022,8 +1004,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 363.02068702055612,
-        "Y": 506.24786976542725
+        "X": 335.40448069255848,
+        "Y": 532.28659576000621
       },
       {
         "ShowGeometry": true,
@@ -1033,17 +1015,7 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "X": -2.9845497127283238,
-        "Y": 336.03581988104429
-      },
-      {
-        "ShowGeometry": true,
-        "Name": "Proporção do embasamento",
-        "Id": "fa5020fd881d4f469d8cdacad3066e6e",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": -406.8499817242872,
-        "Y": 424.32869177637889
+        "Y": 356.7204433584439
       },
       {
         "ShowGeometry": true,
@@ -1052,8 +1024,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -409.62570391995621,
-        "Y": 365.70678739856078
+        "X": -406.8499817242872,
+        "Y": 386.39141087596039
       },
       {
         "ShowGeometry": true,
@@ -1062,8 +1034,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -409.106819723028,
-        "Y": 308.329649457655
+        "X": -406.8499817242872,
+        "Y": 329.01427293505463
       },
       {
         "ShowGeometry": true,
@@ -1072,28 +1044,38 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 363.02068702055612,
-        "Y": 98.324898972738453
+        "X": 359.01475346787839,
+        "Y": 98.040150069067749
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Razão do embasamento",
+        "Id": "7658dff7ae404a68bfa87dbe1399e5a8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -409.40615904298778,
+        "Y": 688.29851273247152
       },
       {
         "ShowGeometry": true,
         "Name": "Watch",
-        "Id": "231162b13f9746dc9416a906b513db06",
+        "Id": "e317da39e6044714b5f2c02e778ae835",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 953.27920900492722,
-        "Y": 142.0462796512229
+        "X": 591.08678515698125,
+        "Y": 574.55827666980383
       },
       {
         "ShowGeometry": true,
         "Name": "Watch",
-        "Id": "3e8ac0ed34054112821bed0178939b85",
+        "Id": "329d40feafb04b0394a69be6ddaa52cc",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 569.55019712584658,
-        "Y": 198.48750209994188
+        "X": 977.62766014958936,
+        "Y": 544.510445963087
       }
     ],
     "Annotations": [
@@ -1104,12 +1086,12 @@
           "9c2fc08250bf45f89db4842f2772fe57",
           "457d40cd1044460d868444de6f2b96fa"
         ],
-        "Left": -419.24562495323596,
-        "Top": -72.6035309153277,
-        "Width": 736.41719238554776,
+        "Left": -416.8499817242872,
+        "Top": -57.559893932833376,
+        "Width": 734.021549156599,
         "Height": 125.0,
         "FontSize": 18.0,
-        "InitialTop": -40.603530915327696,
+        "InitialTop": -25.559893932833376,
         "InitialHeight": 145.02117975107558,
         "TextblockHeight": 22.0,
         "Background": "#FFD8D8D8"
@@ -1123,57 +1105,57 @@
           "d6860a081354429cac4f11043c4dd4cc",
           "b2b3276fb42c4580973d6d89b74e5101"
         ],
-        "Left": -419.98700766417187,
-        "Top": 58.959147601737129,
-        "Width": 736.72498385535948,
+        "Left": -418.67645851243594,
+        "Top": 77.763693829855072,
+        "Width": 731.88418126737974,
         "Height": 209.80377758333708,
         "FontSize": 18.0,
-        "InitialTop": 90.959147601737129,
+        "InitialTop": 109.76369382985507,
         "InitialHeight": 254.80377758333708,
         "TextblockHeight": 22.0,
         "Background": "#FFA4E1FF"
-      },
-      {
-        "Id": "f2461a19ac0146999c22f4774d9c1561",
-        "Title": "Formalização da massa do prédio",
-        "Nodes": [
-          "ca9461850d4e4bd7a5a27d15b580c178",
-          "29e5d4a4b193475081cebe3ac38708c0",
-          "38ab3aba90c745dcbf1c5a7f69227814",
-          "0876dd5c43ae4109986dae7a7583335b"
-        ],
-        "Left": -418.22261766714416,
-        "Top": 498.611433188875,
-        "Width": 730.81538141850615,
-        "Height": 234.74459181409804,
-        "FontSize": 18.0,
-        "InitialTop": 530.611433188875,
-        "InitialHeight": 279.74459181409804,
-        "TextblockHeight": 22.0,
-        "Background": "#FFB5B5B5"
       },
       {
         "Id": "ed47d5829184418084e033bcefd4862e",
         "Title": "Definição dos Pavimentos",
         "Nodes": [
           "e4c1f94456254ce7a86dda63fbadecb9",
-          "fa5020fd881d4f469d8cdacad3066e6e",
           "79b18cae06834e368e674cd5d9314009",
           "5ebdf6bde55e4a6f921819b7ae99d447"
         ],
-        "Left": -419.62570391995621,
-        "Top": 276.329649457655,
-        "Width": 735.64115420722783,
-        "Height": 215.99904231872387,
+        "Left": -416.8499817242872,
+        "Top": 297.01427293505463,
+        "Width": 725.86543201155882,
+        "Height": 178.70617042338927,
         "FontSize": 18.0,
-        "InitialTop": 308.329649457655,
-        "InitialHeight": 260.99904231872387,
+        "InitialTop": 329.01427293505463,
+        "InitialHeight": 202.37713794090575,
         "TextblockHeight": 22.0,
         "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "4cd70852290e45358182d5c7c96e2c02",
+        "Title": "Formalização da massa do prédio",
+        "Nodes": [
+          "ca9461850d4e4bd7a5a27d15b580c178",
+          "29e5d4a4b193475081cebe3ac38708c0",
+          "38ab3aba90c745dcbf1c5a7f69227814",
+          "0876dd5c43ae4109986dae7a7583335b",
+          "7658dff7ae404a68bfa87dbe1399e5a8"
+        ],
+        "Left": -419.40615904298778,
+        "Top": 486.02556521275721,
+        "Width": 725.81937619880443,
+        "Height": 270.27294751971431,
+        "FontSize": 18.0,
+        "InitialTop": 518.02556521275721,
+        "InitialHeight": 315.27294751971431,
+        "TextblockHeight": 22.0,
+        "Background": "#FFD8D8D8"
       }
     ],
-    "X": 149.48096427676671,
-    "Y": 115.17385232702503,
-    "Zoom": 0.82534883809762949
+    "X": 269.43783744457915,
+    "Y": 48.186867418318172,
+    "Zoom": 0.620224775476993
   }
 }
