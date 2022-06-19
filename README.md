@@ -1,6 +1,8 @@
 # AulasBIM
-Macros Dynamo -Revit desenvolvidas pelo Prof. José Luis Menegotto para as aulas 
-BIM I- Modelagem Digital da Edificação. 
+Macros em Dynamo e AutoLISP para Revit e Advance Steel
+Desenvolvidas pelo Prof. José Luis Menegotto para as aulas 
+BIM I- Modelagem Digital da Edificação
+e para o Curso de Especialização em Estruturas de Aço 
 --------------------------------------------------------------------------------
  DEG/POLI/UFRJ - Departamento de Expressão Gráfica da Escola Politécnica da UFRJ
 --------------------------------------------------------------------------------
