@@ -1,10 +1,10 @@
 ;;;;;                                                                                       
 ;;;;;                                                                                       
 ;;;;;                                                                                       
-;;;;; FUN«√O PARA GERA«√O AUTOM¡TICA DE SE«OES CUSTOMIZADAS EM ADVANCE STEEL                
-;;;;; AUTOR: PROF. JOS… LUIS MENEGOTTO - ESCOLA POLIT…CNICA DA UFRJ                          
-;;;;; CURSO:      ESPECIALIZA«√O EM ESTRUTURAS MET¡LICAS                                    
-;;;;; DISCIPLINA: DESENHO, MONTAGEM E FABRICA«√O (CAD/CAM/BIM) APLICADAS A PROJETOS DE A«O  
+;;;;; FUN√á√ÉO PARA GERA√á√ÉO AUTOM√ÅTICA DE SE√áOES CUSTOMIZADAS EM ADVANCE STEEL                
+;;;;; AUTOR: PROF. JOS√â LUIS MENEGOTTO - ESCOLA POLIT√âCNICA DA UFRJ                          
+;;;;; CURSO:      ESPECIALIZA√á√ÉO EM ESTRUTURAS MET√ÅLICAS                                    
+;;;;; DISCIPLINA: DESENHO, MONTAGEM E FABRICA√á√ÉO (CAD/CAM/BIM) APLICADAS A PROJETOS DE A√áO  
 ;;;;;                                                                                       
 ;;;;;                                                                                       
 ;;;;;                                                                                       
@@ -134,9 +134,9 @@
 				                con                                                      ;contador                
 				                fab                                                      ;fabricante              
                                                 cla                                                      ;classe                  
-				                cod                                                      ;cÛdigo perfil           
+				                cod                                                      ;c√≥digo perfil           
 				                (list   m n o p                                        ) ;frame                   
-				                (list   a  b  c  d  e  f  g  h  i  j  k  l             ) ;contorno b·sico         
+				                (list   a  b  c  d  e  f  g  h  i  j  k  l             ) ;contorno b√°sico         
 				                (list  ea eb ec ed ee ef eg eh ei ej ek el em en eo ep ) ;contorno exato          
 				                 nox                                                     ;blocos de posicionamento
 				                 pox                                                     ;pts bloco posicionamento
@@ -147,7 +147,7 @@
              (setvar "cmdecho" 1)
 )
 
-;; FunÁ„o principal de geraÁ„o dos quadros                                                                                                     
+;; Fun√ß√£o principal de gera√ß√£o dos quadros                                                                                                     
 (defun dibuja_perfil_I (#n #fab #cla #cod LF LP LPE LAX LPX)
 
                      (setq
