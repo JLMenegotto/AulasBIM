@@ -1,10 +1,10 @@
 ;;;;;                                                                                       
 ;;;;;                                                                                       
 ;;;;;                                                                                       
-;;;;; FUN«√O PARA GERA«√O AUTOM¡TICA DE SE«OES CUSTOMIZADAS EM ADVANCE STEEL                
-;;;;; AUTOR: PROF. JOS… LUIS MENEGOTTO - ESCOLA POLIT…CNICA DA UFRJ                         
-;;;;; CURSO:      ESPECIALIZA«√O EM ESTRUTURAS MET¡LICAS                                    
-;;;;; DISCIPLINA: DESENHO, MONTAGEM E FABRICA«√O (CAD/CAM/BIM) APLICADAS A PROJETOS DE A«O  
+;;;;; FUN√á√ÉO PARA GERA√á√ÉO AUTOM√ÅTICA DE SE√áOES CUSTOMIZADAS EM ADVANCE STEEL                
+;;;;; AUTOR: PROF. JOS√â LUIS MENEGOTTO - ESCOLA POLIT√âCNICA DA UFRJ                         
+;;;;; CURSO:      ESPECIALIZA√á√ÉO EM ESTRUTURAS MET√ÅLICAS                                    
+;;;;; DISCIPLINA: DESENHO, MONTAGEM E FABRICA√á√ÉO (CAD/CAM/BIM) APLICADAS A PROJETOS DE A√áO  
 ;;;;;                                                                                       
 ;;;;;                                                                                       
 ;;;;;                                                                                       
@@ -98,7 +98,7 @@
              (setvar "cmdecho" 1)
 )
 
-;; FunÁ„o principal de geraÁ„o dos quadros                                                                                                     
+;; Fun√ß√£o principal de gera√ß√£o dos quadros                                                                                                     
 (defun dibuja_perfil_R (#n #fab #cla #cod LF LR LAX LPX)
 
                      (setq
@@ -109,22 +109,19 @@
                      (polilinha   LF               "Hype_Frame"             )    (setq grupo (ssadd (entlast) grupo))
                      (texto       (list 0 -1055 0) "Hype_TypeName"     #fab )    (setq grupo (ssadd (entlast) grupo))
                      (texto       (list 0 -1025 0) "Hype_SectionName"  #cod )    (setq grupo (ssadd (entlast) grupo))
- 
                      (circulo     orig (nth 0 LR) "Hype_OuterSection"       )    (setq grupo (ssadd (entlast) grupo))
                      (circulo     orig (nth 1 LR) "Hype_InnerSection"       )    (setq grupo (ssadd (entlast) grupo))
                       
                      (command  "._insert"  "HYPE_COORDINATESYS" orig 25  25  0)  (setq grupo (ssadd (entlast) grupo))
                      
                      (met_copia (nth 4 LAX) (nth 4 LPX) orig      )              (setq grupo (ssadd (entlast) grupo))
-                     
                      (circulo     orig (nth 0 LR)  "Hype_ExactOuterSection")     (setq grupo (ssadd (entlast) grupo))
-  
                      (command "._move" grupo "" vetorT "")
              (gc)
 )
 
 (defun met_copia (ob p1 p2) (command "._copy" ob "" p1 p2))
-;; Desenha polylinha BASICA do perfil                                                                                                       
+;; Desenha polylinha                                                                                                        
 (defun polilinha ( pts  layer)
        (entmake
             (append
@@ -138,39 +135,6 @@
                     )
                     (mapcar '(lambda (p) (cons 10 p) ) pts)
 	   ))
-)
-
-;; Desenha polylinha EXATA do perfil                                                                                                          
-(defun polilinhaEx (#cla pts  layer)
-       (setq bulge (if (= #cla "W")
-		       -0.414214
-		        0.0
-		   ))
-       (entmake
-                (list
-                     (cons 0    "LWPOLYLINE")
-                     (cons 100  "AcDbEntity")
-                     (cons 100  "AcDbPolyline")
-		     (cons 8    layer)
-                     (cons 90   (length pts))
-                     (cons 70       1)
-                     (cons 10 (nth  0 pts)) (cons 42  bulge)       
-                     (cons 10 (nth  1 pts)) (cons 42  0.0)       
-                     (cons 10 (nth  2 pts)) (cons 42  0.0)       
-                     (cons 10 (nth  3 pts)) (cons 42  0.0)       
-                     (cons 10 (nth  4 pts)) (cons 42  0.0)       
-                     (cons 10 (nth  5 pts)) (cons 42  0.0)  
-                     (cons 10 (nth  6 pts)) (cons 42  bulge)       
-                     (cons 10 (nth  7 pts)) (cons 42  0.0)  
-                     (cons 10 (nth  8 pts)) (cons 42  bulge)       
-                     (cons 10 (nth  9 pts)) (cons 42  0.0)       
-                     (cons 10 (nth 10 pts)) (cons 42  0.0)       
-                     (cons 10 (nth 11 pts)) (cons 42  0.0)       
-                     (cons 10 (nth 12 pts)) (cons 42  0.0)       
-                     (cons 10 (nth 13 pts)) (cons 42  0.0)  
-		     (cons 10 (nth 14 pts)) (cons 42  bulge)      
-                     (cons 10 (nth 15 pts)) (cons 42  0.0) 
-             ))
 )
 ;; Desenha circulo                                                                                                           
 (defun circulo (cen rai layer)
