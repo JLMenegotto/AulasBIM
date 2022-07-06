@@ -11,4 +11,5 @@ As explicações dos conteúdos e metodologias das funções estão em vídeos
 no Canal YouTube.
 
 https://www.youtube.com/channel/UCCN58u2BP38F09aswlJrILA
+
 ![ImagemGitHub](https://user-images.githubusercontent.com/9437020/177049848-57bfaae6-9411-4095-af6b-12efc9f28616.PNG)
