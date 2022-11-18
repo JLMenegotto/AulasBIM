@@ -1,0 +1,835 @@
+{
+  "Uuid": "cf4adfab-b1ba-45c0-8a07-1a070133e0e7",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Viaduto_Millau_2023",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Arc.Length": {
+        "Key": "Autodesk.DesignScript.Geometry.Arc",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Arc": {
+        "Key": "Autodesk.DesignScript.Geometry.Arc",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Line": {
+        "Key": "Autodesk.DesignScript.Geometry.Line",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Vector.ZAxis": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Geometry": {
+        "Key": "Autodesk.DesignScript.Geometry.Geometry",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Line.ByStartPointDirectionLength": {
+        "Key": "Autodesk.DesignScript.Geometry.Line",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "x1 = 0;\ny1 = 0;\nz1;\nlongi;\ncorda;\nAltMastro;\nAltPist = AltPilone + AltCaix;\nAltCaix =  4.50;\nLargura = 32.04;\nAltPilone;\nn;\nei;\nes;\np1      = Point.ByCoordinates(x1,y1,z1);\np2      = Point.ByCoordinates(x1+longi/2 ,y1+corda ,z1);\np3      = Point.ByCoordinates(x1+longi   ,y1       ,z1);\nEixo    = Arc.ByThreePoints(p1, p2, p3);\nPista   = Eixo.Translate( 0, 0, AltPist);\nModulos = 8;\nDivisor = Modulos - 1;\nComprim = Arc.Length(Eixo);\nCaixaoL = Comprim / 280;\nPtoPilo = Arc.PointsAtEqualSegmentLength  (Eixo , Modulos);\nPtoMast = PtoPilo.Translate ( 0 , 0 , AltPist );\nPilones = Line.ByStartPointDirectionLength ( PtoPilo , Vector.ZAxis(), AltPilone);\nMastros = Line.ByStartPointDirectionLength ( PtoMast , Vector.ZAxis(), AltMastro);\n\nCabos_m = Line.PointAtParameter( Mastros<1> , ei..es..((es-ei)/n) );\nPini    = Mastros[0].StartPoint;\nCaix    = Line.PointsAtSegmentLengthFromPoint ( Pista , Pini , CaixaoL);\nNorm    = Line.NormalAtParameter              ( Pista , Line.ParameterAtPoint(Pista, Caix));\nPtt1    = Line.ByStartPointDirectionLength    ( Caix  , Norm ,  Largura/2);\nPtt2    = Line.ByStartPointDirectionLength    ( Caix  , Norm , -Largura/2);",
+      "Id": "ad66fbd74d1d48ab86e04a229419f92e",
+      "Inputs": [
+        {
+          "Id": "92d446a2ecc947cb8bb78c95c27eb64d",
+          "Name": "z1",
+          "Description": "z1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b63de0e9a6ae49f2beeeb8c3e5edacdf",
+          "Name": "longi",
+          "Description": "longi",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8714ddde68f94c769dd81d59adf396ad",
+          "Name": "corda",
+          "Description": "corda",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e867a7078a4540afb9cf61cc42ddd67e",
+          "Name": "AltMastro",
+          "Description": "AltMastro",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "edaec29c97f04bc086a41d4948f91bea",
+          "Name": "AltPilone",
+          "Description": "AltPilone",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fee30592983b423495cd465c9a4bc16b",
+          "Name": "n",
+          "Description": "n",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b6f233a10daa4935b175e194fd8a717e",
+          "Name": "ei",
+          "Description": "ei",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "879c22a9365c4ebfb8347b36a701c2d7",
+          "Name": "es",
+          "Description": "es",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8ee96d6b8aaf45d5bd452f39294c1130",
+          "Name": "",
+          "Description": "x1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e906b4c6ba454fb5982dc14f64542b45",
+          "Name": "",
+          "Description": "y1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1d0dfe8412374fe3b0f2a41134dafac7",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8ad95dbaa06042a0ac6118b061767381",
+          "Name": "",
+          "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ab8972a4491a4121b4f1c758e90fed1b",
+          "Name": "",
+          "Description": "Value of expression at line 5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9f2744e4543d47a49e055a2455206518",
+          "Name": "",
+          "Description": "Value of expression at line 6",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "13a7fe9ed2e94fedb3d790bf912a6b7c",
+          "Name": "",
+          "Description": "AltPist",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ab26d979041d40849d5fb7fefe59c657",
+          "Name": "",
+          "Description": "AltCaix",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9046babcc2974d1689f22d5b891a0bde",
+          "Name": "",
+          "Description": "Largura",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f7807b897351434b94ea1e05abbe8d3a",
+          "Name": "",
+          "Description": "Value of expression at line 10",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b849ced0c13f495999ccbd3cf03486f8",
+          "Name": "",
+          "Description": "Value of expression at line 11",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "313963efe655446cbeb8039699b3f3fa",
+          "Name": "",
+          "Description": "Value of expression at line 12",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "885a496f7b124e7a87f289311d1f1ff8",
+          "Name": "",
+          "Description": "Value of expression at line 13",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5731a8363391491b86681e83c76087b3",
+          "Name": "",
+          "Description": "p1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c3510f9b19194b58bbbf59ee2e46098f",
+          "Name": "",
+          "Description": "p2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "644ee562858443e8b6d847a0bd34e814",
+          "Name": "",
+          "Description": "p3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2c7227ad17544320985824a24b1afb4b",
+          "Name": "",
+          "Description": "Eixo",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1154c8a7e0544fd885c5653aeba2703c",
+          "Name": "",
+          "Description": "Pista",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "066921b1c055423a9acd82987dcfab15",
+          "Name": "",
+          "Description": "Modulos",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d3b72219ec854cb39eccf7ddcec90915",
+          "Name": "",
+          "Description": "Divisor",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ec1b1bdd66cc4806b64b3f9c408053f8",
+          "Name": "",
+          "Description": "Comprim",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9fae69a91c0f4ad8afeb8e50b4e5cb72",
+          "Name": "",
+          "Description": "CaixaoL",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "acfcfd6368124e3e8f91bc48963a2b10",
+          "Name": "",
+          "Description": "PtoPilo",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b8a5cfed34234badb60a7bd36e87b774",
+          "Name": "",
+          "Description": "PtoMast",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "576a2a7b2e3d4c04b3e11f27478f511e",
+          "Name": "",
+          "Description": "Pilones",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "93213c1ce46b419d80ae327a7666bed0",
+          "Name": "",
+          "Description": "Mastros",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3a3a2b84d5f14eeab331e90a7b2a6fb9",
+          "Name": "",
+          "Description": "Cabos_m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4322a72b0f59478dac594475978a2b9c",
+          "Name": "",
+          "Description": "Pini",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c4c30bb2466f4aa89a360a21f800d168",
+          "Name": "",
+          "Description": "Caix",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8e4fcb994a0d447c8bb06d0aafbe8102",
+          "Name": "",
+          "Description": "Norm",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "db13d4c7bb594a129f3fb7574881191e",
+          "Name": "",
+          "Description": "Ptt1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f2e91a8d4cc446d6ad536436cfa092b9",
+          "Name": "",
+          "Description": "Ptt2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 998830454922681.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 0.0,
+      "Id": "b10a22b45b984168962303a64fb6cf42",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b06bab3ffd834289af2f603ac1b1a40d",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 2500.0,
+      "MinimumValue": 1000.0,
+      "StepValue": 50.0,
+      "InputValue": 2500.0,
+      "Id": "d09f0af883094a528ca0458b93f67d9e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9e250c7b04554f8e8935452eb1ba701f",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 150.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 150.0,
+      "Id": "3dc0b94cc7464e3aabe38199484bb7f9",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "724f610422704cc79b3b2e242f46a318",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 260.0,
+      "MinimumValue": 100.0,
+      "StepValue": 5.0,
+      "InputValue": 235.0,
+      "Id": "dc4af08979034d1d96a4c605df2a34db",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "78491f24260a4b779d5a529599ac9036",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 200.0,
+      "MinimumValue": 100.0,
+      "StepValue": 5.0,
+      "InputValue": 145.0,
+      "Id": "6b24b45ceae44bf0ac75d80e02fcafaf",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "58002578a84c483fa501b2141973be30",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 15.0,
+      "MinimumValue": 2.0,
+      "StepValue": 1.0,
+      "InputValue": 2.0,
+      "Id": "4f5c408951414f80a0e2d5d332f3d364",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "85c7817dd6824eb0be1dcb3cf4f2bb55",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 0.6,
+      "MinimumValue": 0.5,
+      "StepValue": 0.01,
+      "InputValue": 0.55,
+      "Id": "ed1ee717ff994bf89811239e2ce979e9",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "28cf8d86a9ab4986b1f3073037ffa682",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 0.9,
+      "MinimumValue": 0.6,
+      "StepValue": 0.01,
+      "InputValue": 0.8899999999999999,
+      "Id": "00fa1f269aac43ee9d77c579dfaa85b8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "afd56de1adf5469eb32481f2b94ee65f",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "b06bab3ffd834289af2f603ac1b1a40d",
+      "End": "92d446a2ecc947cb8bb78c95c27eb64d",
+      "Id": "0d5ffd9c81b44449bdb7dfa2f9983a9f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9e250c7b04554f8e8935452eb1ba701f",
+      "End": "b63de0e9a6ae49f2beeeb8c3e5edacdf",
+      "Id": "1dcf9cdae45843ad85b6f5630b10b4bc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "724f610422704cc79b3b2e242f46a318",
+      "End": "8714ddde68f94c769dd81d59adf396ad",
+      "Id": "3848bfc11cb4497b95e67104cdd38752",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "78491f24260a4b779d5a529599ac9036",
+      "End": "edaec29c97f04bc086a41d4948f91bea",
+      "Id": "874ee73fe78649dea17eca2b5f67cb82",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "58002578a84c483fa501b2141973be30",
+      "End": "e867a7078a4540afb9cf61cc42ddd67e",
+      "Id": "344abf443ec6401fb47c7b7de7544838",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "85c7817dd6824eb0be1dcb3cf4f2bb55",
+      "End": "fee30592983b423495cd465c9a4bc16b",
+      "Id": "938820f774484548ad593419769967eb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "28cf8d86a9ab4986b1f3073037ffa682",
+      "End": "b6f233a10daa4935b175e194fd8a717e",
+      "Id": "e9a2bbb2a19647869cac17155014f4e9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "afd56de1adf5469eb32481f2b94ee65f",
+      "End": "879c22a9365c4ebfb8347b36a701c2d7",
+      "Id": "3474ad04fe3d49ab970100d38b12ffdb",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.13",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "2.0",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.16.1.2727",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "ad66fbd74d1d48ab86e04a229419f92e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -866.47558385193611,
+        "Y": 1795.1251291948931
+      },
+      {
+        "Name": "Z1",
+        "ShowGeometry": true,
+        "Id": "b10a22b45b984168962303a64fb6cf42",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1467.01511000291,
+        "Y": 1544.20606075634
+      },
+      {
+        "Name": "L",
+        "ShowGeometry": true,
+        "Id": "d09f0af883094a528ca0458b93f67d9e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1467.01511000291,
+        "Y": 1663.4874688795667
+      },
+      {
+        "Name": "Corda",
+        "ShowGeometry": true,
+        "Id": "3dc0b94cc7464e3aabe38199484bb7f9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1467.01511000291,
+        "Y": 1782.7688770027933
+      },
+      {
+        "Name": "Altura Pilone",
+        "ShowGeometry": true,
+        "Id": "dc4af08979034d1d96a4c605df2a34db",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1463.9096640938869,
+        "Y": 2027.3032701232819
+      },
+      {
+        "Name": "Altura Mastro",
+        "ShowGeometry": true,
+        "Id": "6b24b45ceae44bf0ac75d80e02fcafaf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1461.8040766158429,
+        "Y": 1902.4616647126943
+      },
+      {
+        "Name": "Quantidade de estais",
+        "ShowGeometry": true,
+        "Id": "4f5c408951414f80a0e2d5d332f3d364",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1466.2097536699264,
+        "Y": 2147.1066319542315
+      },
+      {
+        "Name": "Parametro Cabo inferior",
+        "ShowGeometry": true,
+        "Id": "ed1ee717ff994bf89811239e2ce979e9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1468.2877280659884,
+        "Y": 2262.9840653327656
+      },
+      {
+        "Name": "Parametro Cabo Superior",
+        "ShowGeometry": true,
+        "Id": "00fa1f269aac43ee9d77c579dfaa85b8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1468.6853835246588,
+        "Y": 2384.4180364649428
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "4dabbcc7b34e4e89a2c13c7b36f76ef4",
+        "Title": "Definição básica do traçado geral do viaduto Millau",
+        "DescriptionText": "Escola Politécnica da UFRJ. Departamento de Expressão Gráfica\r\nAutor: Prof. José Luis Menegotto.\r\nDisciplina: Desenho Computacional ",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "ad66fbd74d1d48ab86e04a229419f92e",
+          "b10a22b45b984168962303a64fb6cf42",
+          "d09f0af883094a528ca0458b93f67d9e",
+          "3dc0b94cc7464e3aabe38199484bb7f9",
+          "dc4af08979034d1d96a4c605df2a34db",
+          "6b24b45ceae44bf0ac75d80e02fcafaf",
+          "4f5c408951414f80a0e2d5d332f3d364",
+          "ed1ee717ff994bf89811239e2ce979e9",
+          "00fa1f269aac43ee9d77c579dfaa85b8"
+        ],
+        "HasNestedGroups": false,
+        "Left": -1478.6853835246588,
+        "Top": 1454.20606075634,
+        "Width": 1438.2097996727227,
+        "Height": 1062.0119757086029,
+        "FontSize": 30.0,
+        "InitialTop": 1544.20606075634,
+        "InitialHeight": 985.21197570860272,
+        "TextblockHeight": 80.0,
+        "Background": "#FFFFAA45"
+      }
+    ],
+    "X": 578.40907470772493,
+    "Y": -11.001849159967378,
+    "Zoom": 0.20010943076618481
+  }
+}
