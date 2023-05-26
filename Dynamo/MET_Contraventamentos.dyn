@@ -1,0 +1,1145 @@
+{
+  "Uuid": "e2944485-912b-4a92-9d6d-48c1d4f6a50a",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "MET_Contraventamentos",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Grid": {
+        "Key": "Revit.Elements.Grid",
+        "Value": "RevitNodes.dll"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      },
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      },
+      "Dictionary": {
+        "Key": "DesignScript.Builtin.Dictionary",
+        "Value": "DesignScriptBuiltin.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "qx;\nqy;\ndx;\ndy;\n//------------------------------------------\n// Centraliza as coordenadas\n//------------------------------------------\ncx  = (qx-1)*dx*0.5;\ncy  = (qy-1)*dy*0.5;\nx   = (0..#qx..dx)-cx;\ny   = (0..#qy..dy)-cy;\nic  =  0..qx-2;\nir  =  0..qy-2;\n//------------------------------------------\n// Forma as listas de pontos\n//------------------------------------------\nPtY = Point.ByCoordinates ( x   , y<1>, 0 );\nPtC = List.Flatten        (PtY  , 1       );\n//------------------------------------------\n// Indices das Diagonais\n//------------------------------------------\ni   = List.Flatten(ic + (qx*ir)<1>, 1);\nj   = i+qx+1;\nk   = i+1;\nl   = j-1;\n//------------------------------------------\n// Coloca as linhas\n//------------------------------------------\nDi1 = Line.ByStartPointEndPoint(PtC[i] , PtC[j]);\nDi2 = Line.ByStartPointEndPoint(PtC[k] , PtC[l]);\n//------------------------------------------\n// Definição semântica\n//------------------------------------------\nllave = [\"Diagonais1\", \"Diagonais2\" ];\nvalor = [ Di1        ,  Di2         ];\nDicio = Dictionary.ByKeysValues( llave, valor );",
+      "Id": "9e681d70c38d4f9c9fec8907c6509163",
+      "Inputs": [
+        {
+          "Id": "d73bc282e4e44efb8bd82354b155f703",
+          "Name": "qx",
+          "Description": "qx",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4d50b70c51164518b75e227637a0c6d4",
+          "Name": "qy",
+          "Description": "qy",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d1aea3f63788486580c08bf6be187354",
+          "Name": "dx",
+          "Description": "dx",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d411f99b986a40a1a674523a4e9bbd14",
+          "Name": "dy",
+          "Description": "dy",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d3b520a98d354a68951ec904033a006e",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b9ae3b71370149dea76aadc6e82b17c4",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c8ec7cc6134a46d8a70d2becdaae1973",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fafb6ad31bef4b06873d5411ba22fcd5",
+          "Name": "",
+          "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b01271f54598431ea2eba15fd59d1d0a",
+          "Name": "",
+          "Description": "cx",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "aca27f21710b46bd86e22c706480aede",
+          "Name": "",
+          "Description": "cy",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8f6ac8b91c46488090ca3083eb4beadf",
+          "Name": "",
+          "Description": "x",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9b3b01bbaaca4abaa93f8fd901dad1a2",
+          "Name": "",
+          "Description": "y",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ec04bd7aac43416ca478fc0073e90bce",
+          "Name": "",
+          "Description": "ic",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1c1206bec0fe45eaaf0c1658a8036bb8",
+          "Name": "",
+          "Description": "ir",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b930ebd2421c4c85801158a8d368c325",
+          "Name": "",
+          "Description": "PtY",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "50f89eb20edd4fecbd25061a0a3a8fee",
+          "Name": "",
+          "Description": "PtC",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "189a18a2bb904bef9a493a29a2b9c77b",
+          "Name": "",
+          "Description": "i",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f6e3235afa8b4ee4b68e3de65923a10a",
+          "Name": "",
+          "Description": "j",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "672e2a0a57c846458e6b74e7a1fc8af8",
+          "Name": "",
+          "Description": "k",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "08cedc58cf584066817ee1d063d46905",
+          "Name": "",
+          "Description": "l",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "57426d7cdc164991947565500e40a770",
+          "Name": "",
+          "Description": "Di1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "791538acf49442a2955062248a7f499d",
+          "Name": "",
+          "Description": "Di2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c9ff11ebef744319aa28880eb768d825",
+          "Name": "",
+          "Description": "llave",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4bea200d412c443b9033b4d282ce6006",
+          "Name": "",
+          "Description": "valor",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "15068826b9e343f89b1fe5c54d080712",
+          "Name": "",
+          "Description": "Dicio",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 20.0,
+      "MinimumValue": 1.0,
+      "StepValue": 1.0,
+      "InputValue": 7.0,
+      "Id": "6a953024cbf54485b5b245076c1ceecb",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e4fffe7123934f78af3c086e16e175e0",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 6000.0,
+      "MinimumValue": 2000.0,
+      "StepValue": 500.0,
+      "InputValue": 2500.0,
+      "Id": "cc6f20bb9871448082151cb76dd3ad7b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c0c177ba6ddb43bdbc6e9ebef692ada1",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 20000.0,
+      "MinimumValue": 2000.0,
+      "StepValue": 500.0,
+      "InputValue": 5000.0,
+      "Id": "834cd713ac454ad39e82af303f5b2bf0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a78406ad2558435e9630be3aad98892a",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 26.0,
+      "MinimumValue": 1.0,
+      "StepValue": 1.0,
+      "InputValue": 4.0,
+      "Id": "31e67800203842d1a7d2caccc8880488",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "78353409c682491f83020d5df0e9e973",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "202667be1e8d4a258ee025def37d3781",
+      "Inputs": [
+        {
+          "Id": "48599c4a52dd443596902fd009732c6a",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c235467e8d09493c870541b205e202f5",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the node's output"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "85878e11bc4c4ce9ae42c6e383726dba",
+      "Inputs": [
+        {
+          "Id": "3e5a4be6942e4a6d8cfedd825e3e7dac",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "aaa8e27357ff4703b917186b2b7dd308",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the node's output"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "05d091713c534e2095208f650f04db75",
+      "Inputs": [
+        {
+          "Id": "29309b3cddee49649684954d6e36a689",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d0ed8caf48ff4c9d9d5dcd55b25be35e",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the node's output"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "dcdf3a1e50cf41cba55bfeb12ade035a",
+      "Inputs": [
+        {
+          "Id": "55b505ecc89740f5833f4688c72e9f1d",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3b3f8983f5854c56be5eeec3e7501aaf",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the node's output"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.WatchImageCore, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "bdf58ac5eefb451891a3ea6dd541f909",
+      "Inputs": [
+        {
+          "Id": "2be5d02d18dc4656aacf8d3d674f7edd",
+          "Name": "image",
+          "Description": "Image for visualization",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9488ce59d45f4376b6ae6444dfaee459",
+          "Name": "image",
+          "Description": "Image for visualization",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Previews an image"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.Image.ReadFromFile@var",
+      "Id": "371b2e732ef9444ca97ffff9193dba73",
+      "Inputs": [
+        {
+          "Id": "65f39ca95cf442d89eca1b44f916056d",
+          "Name": "file",
+          "Description": "File object to load image from\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "abbd56b5ca07497f8fc7f4273dcdc224",
+          "Name": "image",
+          "Description": "Image object from file",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Loads the file as a bitmap.\n\nImage.ReadFromFile (file: var): var"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "D:\\JLMenegotto\\Academia\\00_Aulas_2022_1\\Curso_MET\\Dynamo\\MET_Contraventamentos1.png",
+      "InputValue": ".\\MET_Contraventamentos1.png",
+      "NodeType": "ExtensionNode",
+      "Id": "801c3fd176a14210bc7edd12ad5031e9",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cc711963809148069e95e5c43912c25c",
+          "Name": "",
+          "Description": "File Path",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its file path."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.FileObject, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "2dd503f81fef49e7845391174f12cdb8",
+      "Inputs": [
+        {
+          "Id": "93ee241c93444cb98e5d27024cde7f52",
+          "Name": "path",
+          "Description": "Path to the file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "faac438a98f14b098896fed3cef187fb",
+          "Name": "file",
+          "Description": "File object",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a file object from a path."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.WatchImageCore, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "8e460152b683478b891408bb7afaf0a9",
+      "Inputs": [
+        {
+          "Id": "9fd5f0c08b6e413b973279acbf066152",
+          "Name": "image",
+          "Description": "Image for visualization",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5008d8953ecb49bcad053c945861796c",
+          "Name": "image",
+          "Description": "Image for visualization",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Previews an image"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.Image.ReadFromFile@var",
+      "Id": "051206a663884c3a902234f68aedf9e4",
+      "Inputs": [
+        {
+          "Id": "fac01ec4273f472fad795088eeb99c1d",
+          "Name": "file",
+          "Description": "File object to load image from\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "44871b4187fa48ecb226a0e5e8db1e92",
+          "Name": "image",
+          "Description": "Image object from file",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Loads the file as a bitmap.\n\nImage.ReadFromFile (file: var): var"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "D:\\JLMenegotto\\Academia\\00_Aulas_2022_1\\Curso_MET\\Dynamo\\MET_Contraventamentos2.png",
+      "InputValue": ".\\MET_Contraventamentos2.png",
+      "NodeType": "ExtensionNode",
+      "Id": "dd63b3cdbf64455fa6799cc01742a72f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c41ddfc3d7b041ac9937e533f8e2b6a1",
+          "Name": "",
+          "Description": "File Path",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its file path."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.FileObject, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "c3c358e1e04a41d1984a3596fca061e3",
+      "Inputs": [
+        {
+          "Id": "b5a1d4714e6e4f8eaee86f3d3211972d",
+          "Name": "path",
+          "Description": "Path to the file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b59b1a9da4004b71930ef4fef50a96da",
+          "Name": "file",
+          "Description": "File object",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a file object from a path."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "189a18a2bb904bef9a493a29a2b9c77b",
+      "End": "48599c4a52dd443596902fd009732c6a",
+      "Id": "e095098a27ec44f497954c0616a3beaa",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f6e3235afa8b4ee4b68e3de65923a10a",
+      "End": "3e5a4be6942e4a6d8cfedd825e3e7dac",
+      "Id": "7a8375653e4b4351af3ba97ff8b1d1a0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "672e2a0a57c846458e6b74e7a1fc8af8",
+      "End": "55b505ecc89740f5833f4688c72e9f1d",
+      "Id": "838394735ecb483aadd15c2592344c9e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "08cedc58cf584066817ee1d063d46905",
+      "End": "29309b3cddee49649684954d6e36a689",
+      "Id": "bae6303b4d134a498932e2657bc48f15",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e4fffe7123934f78af3c086e16e175e0",
+      "End": "d73bc282e4e44efb8bd82354b155f703",
+      "Id": "e5c5a605c0d9400f9c80bcd5bfd76b68",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c0c177ba6ddb43bdbc6e9ebef692ada1",
+      "End": "d1aea3f63788486580c08bf6be187354",
+      "Id": "7aa294b648ab4d11bfc89149dec5c71d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a78406ad2558435e9630be3aad98892a",
+      "End": "d411f99b986a40a1a674523a4e9bbd14",
+      "Id": "6868097b72594b1e820edaae35bf75da",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "78353409c682491f83020d5df0e9e973",
+      "End": "4d50b70c51164518b75e227637a0c6d4",
+      "Id": "c8304fdd8f484b2f9857a4ff7ed70061",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "abbd56b5ca07497f8fc7f4273dcdc224",
+      "End": "2be5d02d18dc4656aacf8d3d674f7edd",
+      "Id": "9701b457ed434c798b9cde5953f1a0ff",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cc711963809148069e95e5c43912c25c",
+      "End": "93ee241c93444cb98e5d27024cde7f52",
+      "Id": "a4b49a82624045ea9499fee9687cb509",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "faac438a98f14b098896fed3cef187fb",
+      "End": "65f39ca95cf442d89eca1b44f916056d",
+      "Id": "9917c516db1c4058985848695e0dc981",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "44871b4187fa48ecb226a0e5e8db1e92",
+      "End": "9fd5f0c08b6e413b973279acbf066152",
+      "Id": "930bbec2507245fc8c65fb4eeccd933b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c41ddfc3d7b041ac9937e533f8e2b6a1",
+      "End": "b5a1d4714e6e4f8eaee86f3d3211972d",
+      "Id": "ada8c5467ec94acca0ebf48ada2049ba",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b59b1a9da4004b71930ef4fef50a96da",
+      "End": "fac01ec4273f472fad795088eeb99c1d",
+      "Id": "3ce359e830514286a33b380352ee107b",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "MET_Contraventamentos1.png",
+      "ReferenceType": "External",
+      "Nodes": [
+        "801c3fd176a14210bc7edd12ad5031e9"
+      ]
+    },
+    {
+      "Name": "MET_Contraventamentos2.png",
+      "ReferenceType": "External",
+      "Nodes": [
+        "dd63b3cdbf64455fa6799cc01742a72f"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.13",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "2.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.13.1.3887",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Cria linhas de contraventamento X horizontal",
+        "ShowGeometry": true,
+        "Id": "9e681d70c38d4f9c9fec8907c6509163",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -268.11574932468636,
+        "Y": 389.173537428596
+      },
+      {
+        "Name": "Quantidade Eixos em X (qx)",
+        "ShowGeometry": true,
+        "Id": "6a953024cbf54485b5b245076c1ceecb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -723.12365324630355,
+        "Y": 253.08113752099706
+      },
+      {
+        "Name": "Dimensão entre eixos em X (dx)",
+        "ShowGeometry": true,
+        "Id": "cc6f20bb9871448082151cb76dd3ad7b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -719.58336381856986,
+        "Y": 494.45085603703296
+      },
+      {
+        "Name": "Dimensão entre eixos em Y (dy)",
+        "ShowGeometry": true,
+        "Id": "834cd713ac454ad39e82af303f5b2bf0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -722.07455336361522,
+        "Y": 616.19615275285037
+      },
+      {
+        "Name": "Quantidade de Eixos em Y (qy)",
+        "ShowGeometry": true,
+        "Id": "31e67800203842d1a7d2caccc8880488",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -723.12365324630355,
+        "Y": 374.54606289759175
+      },
+      {
+        "Name": "Indices i",
+        "ShowGeometry": true,
+        "Id": "202667be1e8d4a258ee025def37d3781",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 411.54348596965053,
+        "Y": 550.34279542508318
+      },
+      {
+        "Name": "Indices j",
+        "ShowGeometry": true,
+        "Id": "85878e11bc4c4ce9ae42c6e383726dba",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 711.98533780371054,
+        "Y": 548.5068016128414
+      },
+      {
+        "Name": "Indices l",
+        "ShowGeometry": true,
+        "Id": "05d091713c534e2095208f650f04db75",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 713.560540573447,
+        "Y": 932.82174470445523
+      },
+      {
+        "Name": "Indices k",
+        "ShowGeometry": true,
+        "Id": "dcdf3a1e50cf41cba55bfeb12ade035a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 405.32816249243342,
+        "Y": 928.542239461876
+      },
+      {
+        "Name": "Watch Image",
+        "ShowGeometry": true,
+        "Id": "bdf58ac5eefb451891a3ea6dd541f909",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 152.95572103629343,
+        "Y": -643.50401315710042
+      },
+      {
+        "Name": "Image.ReadFromFile",
+        "ShowGeometry": true,
+        "Id": "371b2e732ef9444ca97ffff9193dba73",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -118.46069961045941,
+        "Y": -643.50401315710042
+      },
+      {
+        "Name": "File Path",
+        "ShowGeometry": true,
+        "Id": "801c3fd176a14210bc7edd12ad5031e9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -732.38431797951944,
+        "Y": -643.50401315710042
+      },
+      {
+        "Name": "File From Path",
+        "ShowGeometry": true,
+        "Id": "2dd503f81fef49e7845391174f12cdb8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -317.13669927039439,
+        "Y": -643.50401315710042
+      },
+      {
+        "Name": "Watch Image",
+        "ShowGeometry": true,
+        "Id": "8e460152b683478b891408bb7afaf0a9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 159.13262454176481,
+        "Y": -215.92777412286273
+      },
+      {
+        "Name": "Image.ReadFromFile",
+        "ShowGeometry": true,
+        "Id": "051206a663884c3a902234f68aedf9e4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -112.28379610498712,
+        "Y": -215.92777412286273
+      },
+      {
+        "Name": "File Path",
+        "ShowGeometry": true,
+        "Id": "dd63b3cdbf64455fa6799cc01742a72f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -726.20741447404714,
+        "Y": -215.92777412286273
+      },
+      {
+        "Name": "File From Path",
+        "ShowGeometry": true,
+        "Id": "c3c358e1e04a41d1984a3596fca061e3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -310.95979576492215,
+        "Y": -215.92777412286273
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "c8dfb97dbfab435cb9a7d5e61df2b3a7",
+        "Title": "Cria linhas de contraventamento X horizontal ",
+        "DescriptionText": "Algoritmo para geração de Malha estrututural: Curso de Especialização de Estruturas de Aço - Escola Politécnica - UFRJ. \r\nDisciplina:  ETM602 - Desenho, Montagem e Fabricação (CAD/CAM/BIM).\r\nProf. José Luis Menegotto.",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "9e681d70c38d4f9c9fec8907c6509163",
+          "6a953024cbf54485b5b245076c1ceecb",
+          "cc6f20bb9871448082151cb76dd3ad7b",
+          "834cd713ac454ad39e82af303f5b2bf0",
+          "31e67800203842d1a7d2caccc8880488"
+        ],
+        "HasNestedGroups": false,
+        "Left": -733.12365324630355,
+        "Top": 157.08113752099706,
+        "Width": 972.00790392161719,
+        "Height": 929.09239990759875,
+        "FontSize": 36.0,
+        "InitialTop": 253.08113752099706,
+        "InitialHeight": 508.11501523185331,
+        "TextblockHeight": 86.0,
+        "Background": "#FFFFAA45"
+      },
+      {
+        "Id": "88cbb0736deb4fabb4353d2c899beab3",
+        "Title": "Indices para a Diagonal 1",
+        "DescriptionText": "Aplicados na Lista   PtC = List.Flatten  (PtY  , 1  );",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "202667be1e8d4a258ee025def37d3781",
+          "85878e11bc4c4ce9ae42c6e383726dba"
+        ],
+        "HasNestedGroups": false,
+        "Left": 401.54348596965053,
+        "Top": 489.5068016128414,
+        "Width": 592.44185183406,
+        "Height": 358.83599381224178,
+        "FontSize": 24.0,
+        "InitialTop": 548.5068016128414,
+        "InitialHeight": 146.83599381224178,
+        "TextblockHeight": 49.0,
+        "Background": "#FF48B9FF"
+      },
+      {
+        "Id": "86adda65ded5411aa47e682d589bbf9b",
+        "Title": "Indices para a Diagonal 2",
+        "DescriptionText": "Aplicados na Lista   PtC = List.Flatten  (PtY  , 1  );",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "05d091713c534e2095208f650f04db75",
+          "dcdf3a1e50cf41cba55bfeb12ade035a"
+        ],
+        "HasNestedGroups": false,
+        "Left": 395.32816249243342,
+        "Top": 869.542239461876,
+        "Width": 600.23237808101362,
+        "Height": 361.27950524257938,
+        "FontSize": 24.0,
+        "InitialTop": 928.542239461876,
+        "InitialHeight": 149.27950524257926,
+        "TextblockHeight": 49.0,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "11e40d20dd774127b99dd9687337e6d7",
+        "Title": "Esquema dos pontos e dos Indices para Diagonais 1",
+        "DescriptionText": "Curso de Especialização de Estruturas de Aço - Escola Politécnica - UFRJ. \r\nDisciplina:  ETM602 - Desenho, Montagem e Fabricação (CAD/CAM/BIM).\r\nProf. José Luis Menegotto.",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "bdf58ac5eefb451891a3ea6dd541f909",
+          "371b2e732ef9444ca97ffff9193dba73",
+          "801c3fd176a14210bc7edd12ad5031e9",
+          "2dd503f81fef49e7845391174f12cdb8"
+        ],
+        "HasNestedGroups": false,
+        "Left": -742.38431797951944,
+        "Top": -725.50401315710042,
+        "Width": 1433.3400390158129,
+        "Height": 415.0,
+        "FontSize": 24.0,
+        "InitialTop": -643.50401315710042,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 72.0,
+        "Background": "#FFD8D8D8"
+      },
+      {
+        "Id": "960570d63ce54777b72571a1a34da238",
+        "Title": "Esquema dos pontos e dos Indices para Diagonais 2",
+        "DescriptionText": "Curso de Especialização de Estruturas de Aço - Escola Politécnica - UFRJ. \r\nDisciplina:  ETM602 - Desenho, Montagem e Fabricação (CAD/CAM/BIM).\r\nProf. José Luis Menegotto.",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "8e460152b683478b891408bb7afaf0a9",
+          "051206a663884c3a902234f68aedf9e4",
+          "dd63b3cdbf64455fa6799cc01742a72f",
+          "c3c358e1e04a41d1984a3596fca061e3"
+        ],
+        "HasNestedGroups": false,
+        "Left": -736.20741447404714,
+        "Top": -297.92777412286273,
+        "Width": 1433.340039015812,
+        "Height": 415.0,
+        "FontSize": 24.0,
+        "InitialTop": -215.92777412286273,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 72.0,
+        "Background": "#FFD8D8D8"
+      }
+    ],
+    "X": 578.55464016617475,
+    "Y": 269.65051195224044,
+    "Zoom": 0.33595568407337434
+  }
+}
