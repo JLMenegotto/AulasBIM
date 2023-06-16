@@ -1,21 +1,27 @@
-;;;;;                                                                                       
-;;;;;                                                                                       
-;;;;;                                                                                       
-;;;;; FUNÃ‡ÃƒO PARA GERAÃ‡ÃƒO AUTOMÃTICA DE SEÃ‡OES CUSTOMIZADAS EM ADVANCE STEEL                
-;;;;; AUTOR: PROF. JOSÃ‰ LUIS MENEGOTTO - ESCOLA POLITÃ‰CNICA DA UFRJ                          
-;;;;; CURSO:      ESPECIALIZAÃ‡ÃƒO EM ESTRUTURAS METÃLICAS                                    
-;;;;; DISCIPLINA: DESENHO, MONTAGEM E FABRICAÃ‡ÃƒO (CAD/CAM/BIM) APLICADAS A PROJETOS DE AÃ‡O  
-;;;;;                                                                                       
-;;;;;                                                                                       
-;;;;;                                                                                       
+;;;;;                                                                                                 
+;;;;;                                                                                                 
+;;;;; MACRO PARA GERAR SEÇÕES CUSTOMIZADAS EM ADVANCE STEEL                                           
+;;;;; AUTOR: PROF. JOSÉ LUIS MENEGOTTO - ESCOLA POLITÃ‰CNICA DA UFRJ                                  
+;;;;; CURSO:      ESPECIALIZAÇÃO EM ESTRUTURAS METÁLICAS                                              
+;;;;; DISCIPLINA: DESENHO, MONTAGEM E FABRICAÇÃO (CAD/CAM/BIM) APLICADAS A PROJETOS DE AÇO            
+;;;;;                                                                                                 
+;;;;; NOTA IMPORTANTE: Rodar a função dentro do arquivo Perfis_customizados.DWG utilizado como base   
+;;;;;                                                                                                 
+;;;;;                                                                                                 
+
+
+(defun met_multiplo? (#p #n)     (zerop (met_congrueM? #p #n)))
+(defun met_congrueM? (#p #n)     (rem                  #p #n))
 (defun met_dxf       (#a #b)     (cdr (assoc #a (if (listp  #b)  #b (entget #b)))))
 (defun met_pmedio    (#a #b)     (mapcar '/ (mapcar '+ #a #b)    (list 2.0  2.0  2.0)))
 (defun met_bcentro   (#a #b #c)  (mapcar '/ (mapcar '+ #a #b #c) (list 3.0  3.0  3.0)))
-(defun met_parte (l / li lin lis dado)
-                           (setq lin   (strcat  (vl-string-trim " "  l) " - - -")
-                                 li    (vl-string->list   lin) 
-				 dado  t 
-                                 lis  '()
+
+(defun met_parte     (l / li lin lis dado)
+  
+                           (setq lin    (strcat  (vl-string-trim " "  l) " - - -")
+                                 li     (vl-string->list   lin) 
+				 dado   t 
+                                 lis   '()
 	                   )
                            (while (/= dado "")
 			                       (setq dado  (substr lin 1 (vl-position 32 li)))
@@ -29,44 +35,45 @@
                            (if (cdr lis) (reverse (cdr lis)))
 )
 
-
 (defun met_Ler_Dados ()
-                      (setq
-			    bitolas  '()
-			    arq       (getfiled "SELECIONE A TABELA COM OS DADOS DOS PERFIS"  "TXT"  ""  0)
-			    arquivo   (open (strcat arq) "r")
-		      )
-                      (while (setq lin (read-line arquivo))
-                             (if (not (null lin))
-                                 (progn
-                                     (setq palav   (met_parte (vl-list->string (subst 32 9 (vl-string->list lin))))
-                                           bitolas (cons palav bitolas))
-			         )
-                             ) 
-                      ) 
-                      (close arquivo)
+                          (setq
+			        bitolas  '()
+			        arq       (getfiled "SELECIONE A TABELA COM OS DADOS DOS PERFIS"  "TXT"  ""  0)
+			        arquivo   (open (strcat arq) "r")
+		          )
+                          (while (setq lin (read-line arquivo))
+                                 (if (not (null lin))
+                                     (progn
+                                        (setq palav   (met_parte (vl-list->string (subst 32 9 (vl-string->list lin))))
+                                              bitolas (cons palav bitolas))
+			             )
+                                 ) 
+                          ) 
+                          (close arquivo)
                       bitolas
-)
-(defun met_Translada (#pts  #vet)
-                       (mapcar '(lambda (p) (mapcar '+ p #vet) ) #pts)
 )
 
 (defun c:Perfil ()
   
-            (setvar "osmode"  0)
-            (setvar "cmdecho" 0)
+                    (setvar "osmode"  0)
+                    (setvar "cmdecho" 0)
   
-            (setq bitolas  (met_Ler_Dados)
-                  BitolasI (cdr (reverse (cdr bitolas)))
-	          qua      (length BitolasI) 
-		  con      0
-		  fox       (mapcar '(lambda (lst) (ssget "_X" (list (cons 0 "INSERT") (cons 2 lst))) ) '("HYPE_REFAXIS0" "HYPE_REFAXIS1" "HYPE_REFAXIS2"
-												          "HYPE_REFAXIS3" "HYPE_REFAXIS4" "HYPE_REFAXIS5"
-												          "HYPE_REFAXIS6" "HYPE_REFAXIS7" "HYPE_REFAXIS8"))
-		  nox       (mapcar '(lambda (lst)             (ssname lst 0) ) fox)
-	          pox       (mapcar '(lambda (lst) (met_dxf 10 (entget lst )) ) nox)
-            )
-            (while (< con qua)  
+                    (setq bitolas   (met_Ler_Dados)
+                          BitolasI  (cdr (reverse (cdr bitolas)))
+	                  qua       (length BitolasI) 
+                          con       0
+	                  col       1
+                          fil       0		  
+		          fox       (mapcar '(lambda (lst) (ssget "_X" (list (cons 0 "INSERT") (cons 2 lst))) ) '("HYPE_REFAXIS0" "HYPE_REFAXIS1" "HYPE_REFAXIS2"
+			   									                  "HYPE_REFAXIS3" "HYPE_REFAXIS4" "HYPE_REFAXIS5"
+												                  "HYPE_REFAXIS6" "HYPE_REFAXIS7" "HYPE_REFAXIS8"))
+  		          nox       (mapcar '(lambda (lst)             (ssname lst 0) ) fox)
+	                  pox       (mapcar '(lambda (lst) (met_dxf 10 (entget lst )) ) nox)
+
+			  mod       40
+                    )
+
+                    (while (< con qua)  
                                 (setq perfil  (nth con BitolasI)
 				      
                                       fab              (nth 0   perfil )
@@ -131,61 +138,78 @@
 				)
 	      
 	                        (dibuja_perfil_I
+				                mod
+				                col
+				                fil
 				                con                                                      ;contador                
 				                fab                                                      ;fabricante              
                                                 cla                                                      ;classe                  
-				                cod                                                      ;cÃ³digo perfil           
+				                cod                                                      ;código perfil           
 				                (list   m n o p                                        ) ;frame                   
-				                (list   a  b  c  d  e  f  g  h  i  j  k  l             ) ;contorno bÃ¡sico         
+				                (list   a  b  c  d  e  f  g  h  i  j  k  l             ) ;contorno básico         
 				                (list  ea eb ec ed ee ef eg eh ei ej ek el em en eo ep ) ;contorno exato          
 				                 nox                                                     ;blocos de posicionamento
 				                 pox                                                     ;pts bloco posicionamento
 				)
-				(setq con  (1+ con))      
-	     )
-             (setvar "osmode" 0)
-             (setvar "cmdecho" 1)
+				(setq
+				       con  (1+ con)
+	      	                       fil  (if (met_multiplo?  con  mod ) ( 1+ fil )  fil)
+				)
+		                (prompt ".")
+	              )
+                      (setvar "osmode"   0)
+                      (setvar "cmdecho"  1)
+                      (princ)
 )
 
-;; FunÃ§Ã£o principal de geraÃ§Ã£o dos quadros                                                                                                     
-(defun dibuja_perfil_I (#n #fab #cla #cod LF LP LPE LAX LPX)
+;;                                                                                                                                             
+;; Funçao principal de geração dos quadros e das seções                                                                                        
+;;                                                                                                                                             
+(defun dibuja_perfil_I ( #m #c #f #n #fab #cla #cod LF LP LPE LAX LPX )
 
-                     (setq
-   		           vetorT (list (* #n 1100) 0 0)
-                           grupo  (ssadd)
-		           topo   (met_pmedio (nth 2 LP) (nth 3 LP))  
-			   base   (met_pmedio (nth 8 LP) (nth 9 LP))
-			   esq    (met_pmedio (nth 3 LP) (nth 8 LP))
-			   dir    (met_pmedio (nth 2 LP) (nth 9 LP))  
-			   orig   (list 0 0 0)
-	             )
-                     (polilinha   #cla LF          "Hype_Frame"                         ) (setq grupo (ssadd (entlast) grupo))
-                     (texto       (list 0 -1055 0) "Hype_TypeName"            #fab      ) (setq grupo (ssadd (entlast) grupo))
-                     (texto       (list 0 -1025 0) "Hype_SectionName" (strcat #cla #cod)) (setq grupo (ssadd (entlast) grupo))
+                        (setq
+			     fila     #f
+			     colu    (met_congrueM?   #n   #m)
+			     vetorT  (list (* colu 1100) (* fila -2300) 0)
+			     
+                             grupo   (ssadd)
+			     
+		             topo    (met_pmedio (nth 2 LP) (nth 3 LP))  
+			     base    (met_pmedio (nth 8 LP) (nth 9 LP))
+			     esq     (met_pmedio (nth 3 LP) (nth 8 LP))
+			     dir     (met_pmedio (nth 2 LP) (nth 9 LP))  
+			     orig    (list 0  0  0 )
+	                )
+                        (polilinha    #cla LF          "Hype_Frame"                          ) (setq grupo (ssadd (entlast) grupo))
+                        (texto        (list 0 -1060 0) "Hype_SectionName" (strcat #cla #cod) ) (setq grupo (ssadd (entlast) grupo))
+                        (texto        (list 0 -1090 0) "Hype_TypeName"            #fab       ) (setq grupo (ssadd (entlast) grupo))  
 
-                     (polilinha    #cla LP         "Hype_OuterSection"     )              (setq grupo (ssadd (entlast) grupo))
+                        (polilinha    #cla LP         "Hype_OuterSection"     )                (setq grupo (ssadd (entlast) grupo))
                      
-                     (command  "._insert"  "HYPE_COORDINATESYS" orig 25  25    0)         (setq grupo (ssadd (entlast) grupo))
-                     (command  "._insert"  "HYPE_COORDINATESYS" topo 25  25    0)         (setq grupo (ssadd (entlast) grupo))
-                     (command  "._insert"  "HYPE_COORDINATESYS" base 25  25  180)         (setq grupo (ssadd (entlast) grupo))
+                        (command  "._insert"  "HYPE_COORDINATESYS" orig 25  25    0)           (setq grupo (ssadd (entlast) grupo))
+                        (command  "._insert"  "HYPE_COORDINATESYS" topo 25  25    0)           (setq grupo (ssadd (entlast) grupo))
+                        (command  "._insert"  "HYPE_COORDINATESYS" base 25  25  180)           (setq grupo (ssadd (entlast) grupo))
 
-                     (met_copia (nth 0 LAX) (nth 0 LPX) (nth 3 LP))                       (setq grupo (ssadd (entlast) grupo))
-                     (met_copia (nth 1 LAX) (nth 1 LPX) topo      )                       (setq grupo (ssadd (entlast) grupo))
-                     (met_copia (nth 2 LAX) (nth 2 LPX) (nth 2 LP))                       (setq grupo (ssadd (entlast) grupo))
-                     (met_copia (nth 3 LAX) (nth 3 LPX) esq       )                       (setq grupo (ssadd (entlast) grupo))
-                     (met_copia (nth 4 LAX) (nth 4 LPX) orig      )                       (setq grupo (ssadd (entlast) grupo))
-                     (met_copia (nth 5 LAX) (nth 5 LPX) dir       )                       (setq grupo (ssadd (entlast) grupo))
-                     (met_copia (nth 6 LAX) (nth 6 LPX) (nth 8 LP))                       (setq grupo (ssadd (entlast) grupo))
-                     (met_copia (nth 7 LAX) (nth 7 LPX) base      )                       (setq grupo (ssadd (entlast) grupo))
-                     (met_copia (nth 8 LAX) (nth 8 LPX) (nth 9 LP))                       (setq grupo (ssadd (entlast) grupo))
+                        (met_vlacopia  (nth 0 LAX)   (nth 0 LPX)   (nth 3 LP))                 (setq grupo (ssadd (entlast) grupo))
+                        (met_vlacopia  (nth 1 LAX)   (nth 1 LPX)    topo      )                (setq grupo (ssadd (entlast) grupo))
+                        (met_vlacopia  (nth 2 LAX)   (nth 2 LPX)   (nth 2 LP))                 (setq grupo (ssadd (entlast) grupo))
+                        (met_vlacopia  (nth 3 LAX)   (nth 3 LPX)    esq       )                (setq grupo (ssadd (entlast) grupo))
+                        (met_vlacopia  (nth 4 LAX)   (nth 4 LPX)    orig      )                (setq grupo (ssadd (entlast) grupo))
+                        (met_vlacopia  (nth 5 LAX)   (nth 5 LPX)    dir       )                (setq grupo (ssadd (entlast) grupo))
+                        (met_vlacopia  (nth 6 LAX)   (nth 6 LPX)   (nth 8 LP))                 (setq grupo (ssadd (entlast) grupo))
+                        (met_vlacopia  (nth 7 LAX)   (nth 7 LPX)    base      )                (setq grupo (ssadd (entlast) grupo))
+                        (met_vlacopia  (nth 8 LAX)   (nth 8 LPX)   (nth 9 LP))                 (setq grupo (ssadd (entlast) grupo))
 
-                     (polilinhaEx  #cla LPE  "Hype_ExactOuterSection")                    (setq grupo (ssadd (entlast) grupo))
-                     (command "._move" grupo "" vetorT "")
-             (gc)
+                        (polilinhaEx  #cla LPE  "Hype_ExactOuterSection")                      (setq grupo (ssadd (entlast) grupo))
+  
+                        (command "._move" grupo "" vetorT "")            
+                       (gc)
 )
 
-(defun met_copia (ob p1 p2) (command "._copy" ob "" p1 p2))
+(defun met_vlacopia (ob p1 p2) (vla-move (vla-copy (vlax-ename->vla-object ob)) (vlax-3d-point p1) (vlax-3d-point p2)))
+
 ;; Desenha polylinha BASICA do perfil                                                                                                       
+
 (defun polilinha (#cla pts  layer)
        (entmake
             (append
@@ -203,6 +227,7 @@
 
 ;; Desenha polylinha EXATA do perfil                                                                                                          
 (defun polilinhaEx (#cla pts  layer)
+  
        (setq bulge (if (= #cla "W")
 		       -0.414214
 		        0.0
@@ -236,18 +261,18 @@
 
 ;; Coloca os textos                                                                                                                             
 (defun texto     (pt layer texto )
-       (entmake
-                  (list
-                     (cons   0  "TEXT"       )
-                     (cons 100  "AcDbEntity" )
-                     (cons 100  "AcDbText"   )
-                     (cons  1    texto       )
-                     (cons  8    layer       )
-	             (cons 10   (list 0 0 0) )
-	             (cons 40    25          )
-    	             (cons 71     0          )
-	             (cons 72     1          )
-                  )
-        )
-        (command "._move" (entlast) "" pt "") 
+                 (entmake
+                       (list
+                           (cons   0  "TEXT"       )
+                           (cons 100  "AcDbEntity" )
+                           (cons 100  "AcDbText"   )
+                           (cons  1    texto       )
+                           (cons  8    layer       )
+	                   (cons 10    (list 0 0 0))
+	                   (cons 40    25          )
+    	                   (cons 71     0          )
+	                   (cons 72     1          )
+                    )
+                )
+                (command "._move" (entlast) "" pt "") 
 )
