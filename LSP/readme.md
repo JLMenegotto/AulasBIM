@@ -12,12 +12,12 @@ O úsuario pode criar os seus próprios arquivos TXT para gerar os perfis custom
 
 Os perfis serão criados numa matriz de 40 colunas contendo: 
 
-  o frame 
-  o contorno básicos 
-  o contorno exato 
-  os 9 elementos de controle de alinhamento
-  o nome do fabricante 
-  o nome do tipo de perfil
+  1. **o frame 
+  2. **o contorno básicos 
+  3. **o contorno exato 
+  4. **os 9 elementos de controle de alinhamento
+  5. **o nome do fabricante 
+  6. **o nome do tipo de perfil
 
 ![Perfis_criados](https://github.com/JLMenegotto/AulasBIM/assets/9437020/7bcc816d-9b52-44bd-902d-df1451759dcc)
 
