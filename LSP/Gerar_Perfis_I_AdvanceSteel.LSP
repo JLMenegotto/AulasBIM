@@ -202,7 +202,8 @@
 
                         (polilinhaEx  #cla LPE  "Hype_ExactOuterSection")                      (setq grupo (ssadd (entlast) grupo))
   
-                        (command "._move" grupo "" vetorT "")            
+                        (command "._move" grupo "" vetorT "")
+                        (command "._HYPE_ADDSELECTEDPROFILES" grupo "")
                        (gc)
 )
 
