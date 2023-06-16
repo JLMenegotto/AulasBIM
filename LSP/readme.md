@@ -1,5 +1,6 @@
 ## Macro Gerar_Perfis_I_AdvanceSteel.LSP 
 
+Para gerar os prefis customizados abrir o arquivo **Perfis_Customizados.dwg** , carregar e rodar a função **Gerar_Perfis_I_AdvanceSteel.lsp** 
 Faz a leitura dos arquivos TXT que devem conter as dimensões dos perfis de acordo com a sequinte estrutura:
 
 Fabricante	Classe	Perfil	    d	   tw	    h	    tf	    bf	  R/ec  	Mate	 Grau
