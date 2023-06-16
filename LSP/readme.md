@@ -10,7 +10,14 @@ A função solicita a escolha do arquivo TXT que devem conter as dimensões dos 
 
 O úsuario pode criar os seus próprios arquivos TXT para gerar os perfis customizados em Advance Steel
 
-Os perfis serão criados numa matriz com os frames e os dados necessários para controlar os alinhamentos.
+Os perfis serão criados numa matriz de 40 colunas contendo: 
+
+  o frame 
+  o contorno básicos 
+  o contorno exato 
+  os 9 elementos de controle de alinhamento
+  o nome do fabricante 
+  o nome do tipo de perfil
 
 ![Perfis_criados](https://github.com/JLMenegotto/AulasBIM/assets/9437020/7bcc816d-9b52-44bd-902d-df1451759dcc)
 
