@@ -1,4 +1,4 @@
-## Macro Gerar_Perfis_I_AdvanceSteel.LSP 
+## Geração de Perfis estruturais customizados em Advance Steel.
 
 Para gerar os prefis customizados abrir o arquivo **Perfis_Customizados.dwg** , carregar e rodar a função **Gerar_Perfis_I_AdvanceSteel.lsp**.
 A função solicita a escolha do arquivo TXT que devem conter as dimensões dos perfis de acordo com a sequinte estrutura:
