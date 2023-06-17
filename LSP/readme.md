@@ -8,10 +8,9 @@ Para perfis I ou W os dados dimensionais devem estar ordenados de acordo a este 
 
 ![Dados](https://github.com/JLMenegotto/AulasBIM/assets/9437020/91f4e98f-6b04-498f-9baa-fddf7ba9eeb6)
 
-O valor H deve ser 0.
+Obs: O valor H deve ser 0. Os valores das colunas de material e grau não são utilizados para a geração do perfil.
 
 ![Perfis](https://github.com/JLMenegotto/AulasBIM/assets/9437020/7d3b8544-b4d3-4ac7-9e7f-d729d9d43ab8)
-
 
 Os perfis serão criados numa matriz de 40 colunas: 
 
