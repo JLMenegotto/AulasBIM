@@ -9,8 +9,7 @@ Para gerar os prefis customizados abrir o arquivo **AS_Perfis_Base.dwg**.
 
 1. Carregar e rodar a função **AS_Perfis_I-W_Gerar.LSP** ou **AS_Perfis_Tub_Gerar.LSP** conforme a necessidade. 
 2. Na linha de comandos de Advance Steel executar a função **PERFIL** (gera perfis I ou W) ou a função **TUBOS** (gera os tubulares).
-3. Indicar a fonte dos dados que será um arquivo TXT com as dimensões registradas.
-Pode utilizar os arquivos **AS_Perfis_I-W_Dados_Laminados.TXT** **AS_Perfis_I-W_Dados_Soldados.TXT** ou 
+3. Indicar a fonte dos dados que será um arquivo TXT com as dimensões registradas. \nPode utilizar os arquivos **AS_Perfis_I-W_Dados_Laminados.TXT** **AS_Perfis_I-W_Dados_Soldados.TXT** ou 
 **AS_Perfis_Tub_Dados.TXT** como exemplo ou criar os seus próprios arquivos TXT.
 Para os perfis W ou I siga a sequinte estrutura. 
 
