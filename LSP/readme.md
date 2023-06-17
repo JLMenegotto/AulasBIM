@@ -3,7 +3,7 @@
 Para gerar os prefis customizados abrir o arquivo **AS_Perfis_Base.dwg**.
 
 1. Carregar e rodar a função **AS_Perfis_I-W_Gerar.LSP** ou **AS_Perfis_Tub_Gerar.LSP** conforme a necessidade.
-2. Executar a função **PERFIL** para gerar os perfis I ou W ou a função **TUBOS** para gerar os tubulares.
+2. Na linha de comandos de Advance Steel executar a função **PERFIL** (gera perfis I ou W) ou a função **TUBOS** (gera os tubulares).
 3. Indicar a fonte dos dados que será um arquivo TXT com as dimensões registradas. Pode utilizar os arquivos
 **AS_Perfis_I-W_Dados_Laminados.TXT** **AS_Perfis_I-W_Dados_Soldados.TXT** ou **AS_Perfis_Tub_Dados.TXT** como exemplo ou criar os seus 
 próprios arquivos TXT. Para os perfis W ou I siga a sequinte estrutura. 
@@ -15,24 +15,25 @@ Obs: O valor H deve ser 0. Os valores das colunas de material e grau não são u
 ![Perfis](https://github.com/JLMenegotto/AulasBIM/assets/9437020/7d3b8544-b4d3-4ac7-9e7f-d729d9d43ab8)
 
 
-
-Todos os perfis cadastrados no arquivo TXT serão criados organizados numa matriz de 40 colunas: 
+Todos os perfis cadastrados nos arquivos TXT serão criados organizados numa matriz de 40 colunas: 
 
 ![Perfis_criados](https://github.com/JLMenegotto/AulasBIM/assets/9437020/7bcc816d-9b52-44bd-902d-df1451759dcc)
 
 Cada Frame dessa matriz contem:
 
  1. O frame retangular
- 2. O contorno básico do perfil
- 3. O contorno exato do perfil
- 4. Os elementos de controle de alinhamento (9 para I W, 1 para tubulares)
- 5. O nome do tipo de perfil
- 6. O nome do fabricante 
+ 2. O contorno externo básico do perfil
+ 3. O contorno externo exato do perfil
+ 4. O contorno interno básico do perfil para tubulares
+ 5. O contorno interno exato do perfil para tubulares
+ 6. Os elementos de controle de alinhamento (9 para I W, 1 para tubulares)
+ 7. O nome do tipo de perfil
+ 8. O nome do fabricante 
 
 ![Perfil_Matriz](https://github.com/JLMenegotto/AulasBIM/assets/9437020/9c0ad315-5e22-4dad-a140-c2cc8c423778)
 
-Despois de serem criados, eles ficarão disponíveis na base de dados de perfis. Para selecioná-los deve ser acessada
-a classe **Other profiles** na interface de controle de Advance Steel.
+Despois de serem criados, eles ficarão disponíveis na base de dados de perfis. 
+Para selecioná-los na interface de controle de Advance Steel deve ser acessada a classe **Other profiles**.
 
 ![Customizado_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/e560c753-6c1b-49bd-84cc-c17f1eb77144)
 
