@@ -187,7 +187,7 @@
                      
                         (command  "._insert"  "HYPE_COORDINATESYS" orig 25  25    0)           (setq grupo (ssadd (entlast) grupo))
                         (command  "._insert"  "HYPE_COORDINATESYS" topo 25  25    0)           (setq grupo (ssadd (entlast) grupo))
-                        (command  "._insert"  "HYPE_COORDINATESYS" base 25  25  180)           (setq grupo (ssadd (entlast) grupo))
+                        (command  "._insert"  "HYPE_COORDINATESYS" base 25  25    0)           (setq grupo (ssadd (entlast) grupo))
 
                         (met_vlacopia  (nth 0 LAX)   (nth 0 LPX)   (nth 3 LP))                 (setq grupo (ssadd (entlast) grupo))
                         (met_vlacopia  (nth 1 LAX)   (nth 1 LPX)    topo      )                (setq grupo (ssadd (entlast) grupo))
