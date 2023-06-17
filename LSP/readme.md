@@ -7,14 +7,19 @@ No momento foram criadas funções de geração para formas I W e tubos circular
 
 Para gerar os prefis customizados abrir o arquivo **AS_Perfis_Base.dwg**.
 
-1. Carregar e rodar a função **AS_Perfis_I-W_Gerar.LSP** ou **AS_Perfis_Tub_Gerar.LSP** conforme a necessidade.
-![Carregar](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b7c966ee-48e0-47d7-b918-06884b0bc44a)
+1. Baixar e carregar a função **AS_Perfis_I-W_Gerar.LSP** ou **AS_Perfis_Tub_Gerar.LSP** conforme a necessidade.
+   
+![Carregar](https://github.com/JLMenegotto/AulasBIM/assets/9437020/5a170cb6-c2dd-4cd8-abb6-b250c5c887bd)
 
  
-1. Na linha de comandos de Advance Steel executar a função **PERFIL** (gera perfis I ou W) ou a função **TUBOS** (gera os tubulares).
-2. Indicar a fonte dos dados que será um arquivo TXT com as dimensões registradas.
-   Pode utilizar os arquivos **AS_Perfis_I-W_Dados_Laminados.TXT** **AS_Perfis_I-W_Dados_Soldados.TXT** ou
-   **AS_Perfis_Tub_Dados.TXT** como exemplo ou criar os seus próprios arquivos TXT.
+1. Para executar digite **PERFIL** (gera perfis I ou W) ou a função **TUBOS** (gera os tubulares) na linha de comandos de Advance Steel.
+   
+3. Indicar a fonte dos dados que será um arquivo TXT com as dimensões registradas.
+
+   Pode utilizar os arquivos
+     1. **AS_Perfis_I-W_Dados_Laminados.TXT**
+     2. **AS_Perfis_I-W_Dados_Soldados.TXT** ou
+     3. **AS_Perfis_Tub_Dados.TXT** como exemplo ou criar os seus próprios arquivos TXT.
    
 Para os perfis W ou I siga a sequinte estrutura. 
 
