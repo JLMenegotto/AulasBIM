@@ -1,4 +1,4 @@
-## Geração de Perfis estruturais customizados em Advance Steel.
+## Geração de Perfis estruturais customizados para Advance Steel.
 
 Para gerar os prefis customizados abrir o arquivo **AS_Perfis_Base.dwg**.
 1. Carregar e rodar a função **AS_Perfis_I-W_Gerar.LSP** ou **AS_Perfis_Tub_Gerar.LSP** conforme a necessidade.
