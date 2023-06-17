@@ -16,8 +16,7 @@ Para gerar os perfis customizados:
       1. **PERFIL** (perfis I ou W) ou
       2. **TUBOS** (gera os tubulares).
    
-5. Indicar a fonte dos dados que será um arquivo TXT com as dimensões registradas.
-
+5. A função solicitará a fonte de dados> Indique qual será o arquivo TXT das dimensões registradas.
    Pode utilizar os arquivos
      1. **AS_Perfis_I-W_Dados_Laminados.TXT**
      2. **AS_Perfis_I-W_Dados_Soldados.TXT** 
