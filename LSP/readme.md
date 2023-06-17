@@ -3,7 +3,7 @@
 Advance Steel é uma aplicação integrada a AutoCAD que tem como finalidade o projeto de estruturas metálicas.
 Embora ela conte com uma grande base de dados de perfis de aço utilizados na indústria, fabricantes e projetistas podem 
 adicionar novos perfis. Para isso, programei duas funções em AutoLISP que ajudam a gerar e ordenar esses novos perfis.
-No momento foram criadas funções de geração para formas I W e tubos circulares vazados, mas ampliarei para outras formas. 
+No momento foram criadas funções de geração para formas I W e tubos de seção circular vazados, mas ampliarei para outras formas. 
 
 Para gerar os perfis customizados:
 
@@ -12,9 +12,11 @@ Para gerar os perfis customizados:
    
 ![Carregar](https://github.com/JLMenegotto/AulasBIM/assets/9437020/5a170cb6-c2dd-4cd8-abb6-b250c5c887bd)
 
-3. Para executar digite **PERFIL** (gera perfis I ou W) ou a função **TUBOS** (gera os tubulares) na linha de comandos de Advance Steel.
+3. Para executar desde a linha de comandos de Advance Steel, digite:
+      1. **PERFIL** (perfis I ou W) ou
+      2. **TUBOS** (gera os tubulares).
    
-4. Indicar a fonte dos dados que será um arquivo TXT com as dimensões registradas.
+5. Indicar a fonte dos dados que será um arquivo TXT com as dimensões registradas.
 
    Pode utilizar os arquivos
      1. **AS_Perfis_I-W_Dados_Laminados.TXT**
