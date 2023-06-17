@@ -6,8 +6,7 @@ A função solicita a escolha de um arquivo TXT onde devem estar registradas as 
 
 ![dadoscustomizados](https://github.com/JLMenegotto/AulasBIM/assets/9437020/5ee9a745-ba64-4357-8c05-7a393a85852a)
 
-
-![Dimensoes_lsp](https://github.com/JLMenegotto/AulasBIM/assets/9437020/e67ecfdd-03db-41a4-9ecc-3984e8dc15c9)
+![Perfis](https://github.com/JLMenegotto/AulasBIM/assets/9437020/7d3b8544-b4d3-4ac7-9e7f-d729d9d43ab8)
 
 O úsuario pode criar os seus próprios arquivos TXT para gerar os perfis customizados em Advance Steel
 
