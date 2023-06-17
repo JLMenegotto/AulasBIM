@@ -5,16 +5,16 @@ Embora ela conte com uma grande base de dados de perfis de aço utilizados na in
 adicionar novos perfis. Para isso, programei duas funções em AutoLISP que ajudam a gerar e ordenar esses novos perfis.
 No momento foram criadas funções de geração para formas I W e tubos circulares vazados, mas ampliarei para outras formas. 
 
-Para gerar os prefis customizados abrir o arquivo **AS_Perfis_Base.dwg**.
+Para gerar os perfis customizados:
 
-1. Baixar e carregar a função **AS_Perfis_I-W_Gerar.LSP** ou **AS_Perfis_Tub_Gerar.LSP** conforme a necessidade.
+1. Baixar e abrir o arquivo **AS_Perfis_Base.dwg**.
+2. Baixar e carregar a função **AS_Perfis_I-W_Gerar.LSP** ou **AS_Perfis_Tub_Gerar.LSP** conforme a necessidade.
    
 ![Carregar](https://github.com/JLMenegotto/AulasBIM/assets/9437020/5a170cb6-c2dd-4cd8-abb6-b250c5c887bd)
 
- 
-1. Para executar digite **PERFIL** (gera perfis I ou W) ou a função **TUBOS** (gera os tubulares) na linha de comandos de Advance Steel.
+3. Para executar digite **PERFIL** (gera perfis I ou W) ou a função **TUBOS** (gera os tubulares) na linha de comandos de Advance Steel.
    
-3. Indicar a fonte dos dados que será um arquivo TXT com as dimensões registradas.
+4. Indicar a fonte dos dados que será um arquivo TXT com as dimensões registradas.
 
    Pode utilizar os arquivos
      1. **AS_Perfis_I-W_Dados_Laminados.TXT**
