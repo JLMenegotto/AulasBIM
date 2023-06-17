@@ -44,7 +44,8 @@ Cada Frame dessa matriz contem:
  7. O nome do tipo de perfil
  8. O nome do fabricante 
 
-![Perfil_Matriz](https://github.com/JLMenegotto/AulasBIM/assets/9437020/9c0ad315-5e22-4dad-a140-c2cc8c423778)
+![Perfil_Matriz](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b36e6026-9368-4e61-86e4-510b3b2aaf49)
+
 
 Despois de serem criados, eles ficarão disponíveis na base de dados de perfis. 
 Para selecioná-los na interface de controle de Advance Steel deve ser acessada a classe **Other profiles**.
