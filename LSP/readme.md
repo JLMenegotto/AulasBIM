@@ -5,7 +5,8 @@ Para gerar os prefis customizados abrir o arquivo **AS_Perfis_Base.dwg**.
 2. Indicar a fonte dos dados que será um arquivo TXT com as dimensões registradas. O úsuario pode criar os seus 
 próprios arquivos TXT para gerar perfis customizados em Advance Steel. Para os perfis W ou I siga a sequinte estrutura:
 Para perfis I ou W os dados dimensionais devem estar ordenados de acordo a este exemplo. 
-![dadoscustomizados](https://github.com/JLMenegotto/AulasBIM/assets/9437020/5ee9a745-ba64-4357-8c05-7a393a85852a)
+
+![Dados](https://github.com/JLMenegotto/AulasBIM/assets/9437020/91f4e98f-6b04-498f-9baa-fddf7ba9eeb6)
 
 O valor H deve ser 0.
 
