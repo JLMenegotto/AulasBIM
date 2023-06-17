@@ -17,11 +17,13 @@ Os perfis serão criados numa matriz de 40 colunas:
 
 Cada Frame da matriz contem:
 
- **1. o frame
+ **
+ 1. o frame
  2. o contorno básicos 
  3. o contorno exato 
  4. os 9 elementos de controle de alinhamento
  5. o nome do fabricante 
- 6. o nome do tipo de perfil**
+ 6. o nome do tipo de perfil
+ **
  
 ![Perfil_Customizado](https://github.com/JLMenegotto/AulasBIM/assets/9437020/3671c88d-0b31-4c2b-a207-952e8580df02)
