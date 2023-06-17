@@ -18,7 +18,7 @@ Para gerar os prefis customizados abrir o arquivo **AS_Perfis_Base.dwg**.
 
    Pode utilizar os arquivos
      1. **AS_Perfis_I-W_Dados_Laminados.TXT**
-     2. **AS_Perfis_I-W_Dados_Soldados.TXT** ou
+     2. **AS_Perfis_I-W_Dados_Soldados.TXT** 
      3. **AS_Perfis_Tub_Dados.TXT**
      4. Também pode criar os seus próprios arquivos TXT. Para isso, siga a estrutura dos arquivos de exemplo. 
 
