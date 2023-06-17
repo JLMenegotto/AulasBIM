@@ -1,8 +1,13 @@
 ## Geração de Perfis estruturais customizados para Advance Steel.
 
+Advance Steel é uma aplicação integrada a AutoCAD que tem como finalidade o projeto de estruturas metálicas.
+Embora ela conte com uma grande base de dados de perfis de aço utilizados na indústria, fabricantes e projetistas podem 
+adicionar novos perfis. Para isso programei duas funções em AutoLISP que ajudam a gerar e ordenar esses novos perfis.
+No momento foram criadas funções de geração para formas I W e tubos circulares vazados. 
+
 Para gerar os prefis customizados abrir o arquivo **AS_Perfis_Base.dwg**.
 
-1. Carregar e rodar a função **AS_Perfis_I-W_Gerar.LSP** ou **AS_Perfis_Tub_Gerar.LSP** conforme a necessidade.
+1. Carregar e rodar a função **AS_Perfis_I-W_Gerar.LSP** ou **AS_Perfis_Tub_Gerar.LSP** conforme a necessidade. 
 2. Na linha de comandos de Advance Steel executar a função **PERFIL** (gera perfis I ou W) ou a função **TUBOS** (gera os tubulares).
 3. Indicar a fonte dos dados que será um arquivo TXT com as dimensões registradas. Pode utilizar os arquivos
 **AS_Perfis_I-W_Dados_Laminados.TXT** **AS_Perfis_I-W_Dados_Soldados.TXT** ou **AS_Perfis_Tub_Dados.TXT** como exemplo ou criar os seus 
@@ -13,7 +18,6 @@ próprios arquivos TXT. Para os perfis W ou I siga a sequinte estrutura.
 Obs: O valor H deve ser 0. Os valores das colunas de material e grau não são utilizados para a geração do perfil.
 
 ![Perfis](https://github.com/JLMenegotto/AulasBIM/assets/9437020/7d3b8544-b4d3-4ac7-9e7f-d729d9d43ab8)
-
 
 Todos os perfis cadastrados nos arquivos TXT serão criados organizados numa matriz de 40 colunas: 
 
