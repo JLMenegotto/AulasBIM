@@ -1,9 +1,9 @@
 ## Geração de Perfis estruturais customizados para Advance Steel.
 
 Advance Steel é uma aplicação integrada a AutoCAD que tem como finalidade o projeto de estruturas metálicas.
-Embora ela conte com uma grande base de dados de perfis de aço utilizados na indústria, fabricantes e projetistas podem 
-adicionar novos perfis. Para isso, programei duas funções em AutoLISP que ajudam a gerar e ordenar esses novos perfis.
-No momento foram criadas funções de geração para formas I W e tubos de seção circular vazados, mas ampliarei para outras formas. 
+Embora ela conte com uma grande base de dados de perfis de aço utilizados na indústria, os fabricantes e os projetistas podem 
+adicionar novos perfis. Para isso, programei duas funções em AutoLISP que ajudam a gerar e ordenar esses os perfis customizados.
+No momento foram criadas funções de geração para formas I e Tubos de seção circular vazados, mas ampliarei para outras formas. 
 
 Para gerar os perfis customizados:
 
@@ -12,11 +12,11 @@ Para gerar os perfis customizados:
    
 ![Carregar](https://github.com/JLMenegotto/AulasBIM/assets/9437020/eca90b1a-1cb8-46f2-9723-9bd8363a8ccd)
 
-4. Para executar desde a linha de comandos de Advance Steel, digite:
+3. Para executar desde a linha de comandos de Advance Steel, digite:
       1. **PERFIL**
          
-5. A função solicitará ingressar o tipo de perfil (W I ou T)
-6. Indique a fonte de dados => qual será o arquivo TXT das dimensões registradas.
+4. A função solicitará ingressar o tipo de perfil (W I ou T)
+5. Indique a fonte de dados => qual será o arquivo TXT das dimensões registradas.
    Pode utilizar os arquivos
      1. **AS_Perfis_Dados_I-W.TXT** de perfis laminados
      2. **AS_Perfis_Dados_CS.TXT**  de perfis soldados para colunas
@@ -56,4 +56,3 @@ Para selecioná-los na interface de controle de Advance Steel deve ser acessada 
 Exemplos de manipulação: 
 ![Posicionamento](https://github.com/JLMenegotto/AulasBIM/assets/9437020/952b3069-d0cd-41d7-b8a7-a0c3dc976a03)
 ![Display](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b1892d25-b9e8-4653-850e-af123a5e5e37)
-
