@@ -18,10 +18,12 @@ Para gerar os perfis customizados:
 4. A função solicitará ingressar o tipo de perfil (W I ou T)
 5. Indique a fonte de dados => qual será o arquivo TXT das dimensões registradas.
    Pode utilizar os arquivos
-     1. **AS_Perfis_I-W_Dados_Laminados.TXT**
-     2. **AS_Perfis_I-W_Dados_Soldados.TXT** 
-     3. **AS_Perfis_Tub_Dados.TXT**
-     4. Também pode criar os seus próprios arquivos TXT. Para isso, siga a estrutura dos arquivos de exemplo. 
+     1. **AS_Perfis_Dados_I-W.TXT** de perfis laminados
+     2. **AS_Perfis_Dados_CS.TXT**  de perfis soldados para colunas
+     3. **AS_Perfis_Dados_VS.TXT**  de perfis soldados para vigas
+     4. **AS_Perfis_Dados_CVS.TXT** de perfis soldados para vigas e colunas 
+     5. **AS_Perfis_Dados_Tub.TXT** de perfis tubulares de seção circular
+     6. O usuário também pode criar os seus próprios arquivos TXT. Para isso, siga a estrutura dos arquivos de exemplo. 
 
 ![Dados](https://github.com/JLMenegotto/AulasBIM/assets/9437020/91f4e98f-6b04-498f-9baa-fddf7ba9eeb6)
 
