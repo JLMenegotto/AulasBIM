@@ -8,15 +8,15 @@ No momento foram criadas funções de geração para formas I W e tubos de seç�
 Para gerar os perfis customizados:
 
 1. Baixar e abrir o arquivo **AS_Perfis_Base.dwg**.
-2. Baixar e carregar a função **AS_Perfis_I-W_Gerar.LSP** ou **AS_Perfis_Tub_Gerar.LSP** conforme a necessidade.
+2. Baixar e carregar a função **AS_Perfis_Gerar.LSP**.
    
 ![Carregar](https://github.com/JLMenegotto/AulasBIM/assets/9437020/5a170cb6-c2dd-4cd8-abb6-b250c5c887bd)
 
 3. Para executar desde a linha de comandos de Advance Steel, digite:
-      1. **PERFIL** (perfis I ou W) ou
-      2. **TUBOS** (gera os tubulares).
-   
-5. A função solicitará a fonte de dados> Indique qual será o arquivo TXT das dimensões registradas.
+      1. **PERFIL**
+         
+4. A função solicitará ingressar o tipo de perfil (W I ou T)
+5. Indique a fonte de dados => qual será o arquivo TXT das dimensões registradas.
    Pode utilizar os arquivos
      1. **AS_Perfis_I-W_Dados_Laminados.TXT**
      2. **AS_Perfis_I-W_Dados_Soldados.TXT** 
@@ -45,7 +45,6 @@ Cada Frame dessa matriz contem:
  8. O nome do fabricante 
 
 ![Perfil_Matriz](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b36e6026-9368-4e61-86e4-510b3b2aaf49)
-
 
 Despois de serem criados, eles ficarão disponíveis na base de dados de perfis. 
 Para selecioná-los na interface de controle de Advance Steel deve ser acessada a classe **Other profiles**.
