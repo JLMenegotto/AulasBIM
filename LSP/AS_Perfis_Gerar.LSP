@@ -54,6 +54,7 @@
 )
 
 (defun C:Perfil ()
+                          (gc)
                           (initget 1 "I W T")
                           (setq tipo  (strcase (getkword "\nDefina o Tipo de Perfil (Perfil I / Perfil W / Tubular seção Circular (I W ou T): ")))
                           (c:DesenhaPerfil   tipo)
@@ -71,9 +72,11 @@
 	                   col         1
                            fil         0
    			   mod        40
-		           fox       (mapcar '(lambda (lst) (ssget "_X" (list (cons 0 "INSERT") (cons 2 lst))) ) '("HYPE_REFAXIS0" "HYPE_REFAXIS1" "HYPE_REFAXIS2"
-			    									                   "HYPE_REFAXIS3" "HYPE_REFAXIS4" "HYPE_REFAXIS5"
-												                   "HYPE_REFAXIS6" "HYPE_REFAXIS7" "HYPE_REFAXIS8"))
+		           fox       (mapcar '(lambda (lst) (ssget "_X" (list (cons 0 "INSERT") (cons 2 lst))) ) '(
+														     "HYPE_REFAXIS0"  "HYPE_REFAXIS1"  "HYPE_REFAXIS2"
+			    									                     "HYPE_REFAXIS3"  "HYPE_REFAXIS4"  "HYPE_REFAXIS5"
+												                     "HYPE_REFAXIS6"  "HYPE_REFAXIS7"  "HYPE_REFAXIS8"
+														  ))
 			   
   		           nox       (mapcar '(lambda (lst)             (ssname lst 0) ) fox)
 	                   pox       (mapcar '(lambda (lst) (met_dxf 10 (entget lst )) ) nox)
@@ -82,7 +85,7 @@
                            frame2    (list  -500    1100   0 )
                            frame3    (list  -500   -1100   0 )
 		           frame4    (list   500   -1100   0 )
-			   L_frame   (list frame1  frame2  frame3  frame4 )
+			   L_frame   (list frame1  frame2  frame3  frame4 )			   
 		    )
   
                     (while (< con qua)
@@ -169,18 +172,24 @@
 					  L_conX (list  ea eb ec ed ee ef eg eh ei ej ek el em en eo ep )
 			   	     )
 				)
-		      
-                                (cond
-				       ((equal  #t  "T")  (dibuja_perfil_TC   mod  col  fil  con  fab  cla  cod  nox  pox  L_frame  L_conS         ))
-				       ((equal  #t  "I")  (dibuja_perfil_I    mod  col  fil  con  fab  cla  cod  nox  pox  L_frame  L_conS  L_conX ))
-				       ((equal  #t  "W")  (dibuja_perfil_I    mod  col  fil  con  fab  cla  cod  nox  pox  L_frame  L_conS  L_conX ))
-				)
-		                		      
-				(setq
+
+		                (setq Grupo
+                                            (cond
+				                 ((equal  #t  "T")  (dibuja_perfil_TC   mod  col  fil  con  fab  cla  cod  nox  pox  L_frame  L_conS         ))
+				                 ((equal  #t  "I")  (dibuja_perfil_I    mod  col  fil  con  fab  cla  cod  nox  pox  L_frame  L_conS  L_conX ))
+				                 ((equal  #t  "W")  (dibuja_perfil_I    mod  col  fil  con  fab  cla  cod  nox  pox  L_frame  L_conS  L_conX ))
+						 (t   nil)
+				            )
+			       	)
+		                (if (/= Grupo nil)
+		                    (command "._HYPE_ADDSELECTEDPROFILES" Grupo "") 
+                                )
+		                (setq
 				       con  (1+ con)
 	      	                       fil  (if (met_multiplo?  con  mod ) ( 1+ fil )  fil)
 				)
-		                (prompt ".")
+     		                (prompt ".")
+		                (gc)
 	              )
                       (setvar "cmdecho"  1)
                       (prin1)
@@ -213,8 +222,7 @@
                         (circulo     orig (nth 0 LR ) "Hype_ExactOuterSection"  )     (setq grupo (ssadd (entlast) grupo))
 
                         (command "._move" grupo "" vetorT "")
-                        (command "._HYPE_ADDSELECTEDPROFILES" grupo "")
-                        (gc)
+                   grupo
 )
 ;;                                                                                                                                             
 ;; Funçao principal de desenho dos quadros e das seções I W                                                                                    
@@ -241,25 +249,24 @@
 
                         (polilinha    #cla LP  "Hype_OuterSection"                   ) (setq grupo (ssadd (entlast) grupo))
                      
-                        (command  "._insert"  "HYPE_COORDINATESYS" orig 25  25    0)           (setq grupo (ssadd (entlast) grupo))
-                        (command  "._insert"  "HYPE_COORDINATESYS" topo 25  25    0)           (setq grupo (ssadd (entlast) grupo))
-                        (command  "._insert"  "HYPE_COORDINATESYS" base 25  25    0)           (setq grupo (ssadd (entlast) grupo))
+                        (command  "._insert"  "HYPE_COORDINATESYS" orig 25  25    0)   (setq grupo (ssadd (entlast) grupo))
+                        (command  "._insert"  "HYPE_COORDINATESYS" topo 25  25    0)   (setq grupo (ssadd (entlast) grupo))
+                        (command  "._insert"  "HYPE_COORDINATESYS" base 25  25    0)   (setq grupo (ssadd (entlast) grupo))
 
-                        (met_vlacopia  (nth 0 nox)   (nth 0 pox)   (nth 3 LP))                 (setq grupo (ssadd (entlast) grupo))
-                        (met_vlacopia  (nth 1 nox)   (nth 1 pox)    topo      )                (setq grupo (ssadd (entlast) grupo))
-                        (met_vlacopia  (nth 2 nox)   (nth 2 pox)   (nth 2 LP))                 (setq grupo (ssadd (entlast) grupo))
-                        (met_vlacopia  (nth 3 nox)   (nth 3 pox)    esq       )                (setq grupo (ssadd (entlast) grupo))
-                        (met_vlacopia  (nth 4 nox)   (nth 4 pox)    orig      )                (setq grupo (ssadd (entlast) grupo))
-                        (met_vlacopia  (nth 5 nox)   (nth 5 pox)    dir       )                (setq grupo (ssadd (entlast) grupo))
-                        (met_vlacopia  (nth 6 nox)   (nth 6 pox)   (nth 8 LP))                 (setq grupo (ssadd (entlast) grupo))
-                        (met_vlacopia  (nth 7 nox)   (nth 7 pox)    base      )                (setq grupo (ssadd (entlast) grupo))
-                        (met_vlacopia  (nth 8 nox)   (nth 8 pox)   (nth 9 LP))                 (setq grupo (ssadd (entlast) grupo))
+                        (met_vlacopia  (nth 0 nox)   (nth 0 pox)   (nth 3 LP))         (setq grupo (ssadd (entlast) grupo))
+                        (met_vlacopia  (nth 1 nox)   (nth 1 pox)    topo      )        (setq grupo (ssadd (entlast) grupo))
+                        (met_vlacopia  (nth 2 nox)   (nth 2 pox)   (nth 2 LP))         (setq grupo (ssadd (entlast) grupo))
+                        (met_vlacopia  (nth 3 nox)   (nth 3 pox)    esq       )        (setq grupo (ssadd (entlast) grupo))
+                        (met_vlacopia  (nth 4 nox)   (nth 4 pox)    orig      )        (setq grupo (ssadd (entlast) grupo))
+                        (met_vlacopia  (nth 5 nox)   (nth 5 pox)    dir       )        (setq grupo (ssadd (entlast) grupo))
+                        (met_vlacopia  (nth 6 nox)   (nth 6 pox)   (nth 8 LP))         (setq grupo (ssadd (entlast) grupo))
+                        (met_vlacopia  (nth 7 nox)   (nth 7 pox)    base      )        (setq grupo (ssadd (entlast) grupo))
+                        (met_vlacopia  (nth 8 nox)   (nth 8 pox)   (nth 9 LP))         (setq grupo (ssadd (entlast) grupo))
 
-                        (polilinhaEx  #cla LPE  "Hype_ExactOuterSection")                      (setq grupo (ssadd (entlast) grupo))
+                        (polilinhaEx  #cla LPE  "Hype_ExactOuterSection")              (setq grupo (ssadd (entlast) grupo))
   
                         (command "._move" grupo "" vetorT "")
-                        (command "._HYPE_ADDSELECTEDPROFILES" grupo "")
-                       (gc)
+                   grupo
 )
 
 (defun met_vlacopia (ob p1 p2) (vla-move (vla-copy (vlax-ename->vla-object ob)) (vlax-3d-point p1) (vlax-3d-point p2)))
@@ -290,7 +297,8 @@
 			        ((= #cla "HP" ) -0.414214 )
 				((= #cla "VS" )  0.0      )
 			        ((= #cla "CS" )  0.0      )
-			        ((= #cla "VCS")  0.0      )))
+			        ((= #cla "CVS")  0.0      )
+				(t               0.0      )))
              (entmake
                      (list
                          (cons 0    "LWPOLYLINE")
