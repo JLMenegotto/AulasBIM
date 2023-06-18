@@ -10,13 +10,13 @@ Para gerar os perfis customizados:
 1. Baixar e abrir o arquivo **AS_Perfis_Base.dwg**.
 2. Baixar e carregar a função **AS_Perfis_Gerar.LSP**.
    
-![Carregar](https://github.com/JLMenegotto/AulasBIM/assets/9437020/5a170cb6-c2dd-4cd8-abb6-b250c5c887bd)
+![Carregar](https://github.com/JLMenegotto/AulasBIM/assets/9437020/eca90b1a-1cb8-46f2-9723-9bd8363a8ccd)
 
-3. Para executar desde a linha de comandos de Advance Steel, digite:
+4. Para executar desde a linha de comandos de Advance Steel, digite:
       1. **PERFIL**
          
-4. A função solicitará ingressar o tipo de perfil (W I ou T)
-5. Indique a fonte de dados => qual será o arquivo TXT das dimensões registradas.
+5. A função solicitará ingressar o tipo de perfil (W I ou T)
+6. Indique a fonte de dados => qual será o arquivo TXT das dimensões registradas.
    Pode utilizar os arquivos
      1. **AS_Perfis_Dados_I-W.TXT** de perfis laminados
      2. **AS_Perfis_Dados_CS.TXT**  de perfis soldados para colunas
