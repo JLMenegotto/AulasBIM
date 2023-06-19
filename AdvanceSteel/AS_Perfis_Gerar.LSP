@@ -55,8 +55,8 @@
 
 (defun C:Perfil ()
                           (gc)
-                          (initget 1 "I W T")
-                          (setq tipo  (strcase (getkword "\nDefina o Tipo de Perfil (Perfil I / Perfil W / Tubular seção Circular (I W ou T): ")))
+                          (initget 1 "W T")
+                          (setq tipo  (strcase (getkword "\nDefina o Tipo de Perfil (Perfil W / Tubular seção Circular (W ou T): ")))
                           (c:DesenhaPerfil   tipo)
 )
 
@@ -100,7 +100,7 @@
                                       dad6       ( nth  6  Dados     )				      
 				)
 		      
-		                (if (or (equal #t "I") (equal #t "W") (equal #t "H") (equal #t "HP")) 
+		                (if (or (equal #t "W") (equal #t "H") (equal #t "HP")) 
 		                    (setq				            
 				          dad7   ( nth  7  Dados     )    
                                           dad8   ( nth  8  Dados     )				       
@@ -176,7 +176,6 @@
 		                (setq Grupo
                                             (cond
 				                 ((equal  #t  "T")  (dibuja_perfil_TC   mod  col  fil  con  fab  cla  cod  nox  pox  L_frame  L_conS         ))
-				                 ((equal  #t  "I")  (dibuja_perfil_I    mod  col  fil  con  fab  cla  cod  nox  pox  L_frame  L_conS  L_conX ))
 				                 ((equal  #t  "W")  (dibuja_perfil_I    mod  col  fil  con  fab  cla  cod  nox  pox  L_frame  L_conS  L_conX ))
 						 (t   nil)
 				            )
