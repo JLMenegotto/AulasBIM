@@ -32,7 +32,7 @@ Para gerar os perfis customizados:
 ## Observações:
       1. O valor H na tabela de perfis laminados deve ser 0. 
       2. Os valores das colunas de material e grau não são utilizados para a geração do perfil.
-      3. A nomenclatura dos perfis W e Soldados concatena a coluna Classe com a coluna perfil que indica a Altura x Peso Nominal/m.
+      3. A nomenclatura dos perfis W e Soldados concatena a coluna **Classe** com a coluna **Perfil** que indica a Altura x Peso Nominal/m.
 
 ![Perfis](https://github.com/JLMenegotto/AulasBIM/assets/9437020/7d3b8544-b4d3-4ac7-9e7f-d729d9d43ab8)
 
