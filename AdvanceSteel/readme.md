@@ -29,7 +29,9 @@ Para gerar os perfis customizados:
 
 ![Dados](https://github.com/JLMenegotto/AulasBIM/assets/9437020/91f4e98f-6b04-498f-9baa-fddf7ba9eeb6)
 
-Obs: O valor H deve ser 0. Os valores das colunas de material e grau não são utilizados para a geração do perfil.
+## Observações:
+      1. O valor H na tabela de perfis laminados deve ser 0. 
+      2. Os valores das colunas de material e grau não são utilizados para a geração do perfil.
 
 ![Perfis](https://github.com/JLMenegotto/AulasBIM/assets/9437020/7d3b8544-b4d3-4ac7-9e7f-d729d9d43ab8)
 
