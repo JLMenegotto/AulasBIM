@@ -2,8 +2,9 @@
 
 As funções de Dynamo podem ser executadas de modo Manual, Automático ou Periódico.
 A função Relógio.dyn exemplifica o uso de execução periódica em Dynamo. Foram criados 3 ponteiros e uma marcação circular de horas e minutos.
-Para que os ponteiros se movam angularmente 
-Os módulos angulares devem ser:
+
+
+Para que os ponteiros se movam angularmente, os módulos angulares devem ser:
 
  1. Para as horas = 12 => (360 / 12 = 30) 
  2. Para os minutos e segundos = 6 => (360 / 6 = 60) 
