@@ -1,0 +1,1161 @@
+{
+  "Uuid": "307ddc2b-e523-4d2f-abc5-21b9811b19e6",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Locar_No_Terreno",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      },
+      "Floor": {
+        "Key": "Revit.Elements.Floor",
+        "Value": "RevitNodes.dll"
+      },
+      "FamilyInstance": {
+        "Key": "Revit.Elements.FamilyInstance",
+        "Value": "RevitNodes.dll"
+      },
+      "FloorPlanView": {
+        "Key": "Revit.Elements.Views.FloorPlanView",
+        "Value": "RevitNodes.dll"
+      },
+      "PolyCurve": {
+        "Key": "Autodesk.DesignScript.Geometry.PolyCurve",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Surface": {
+        "Key": "Autodesk.DesignScript.Geometry.Surface",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Solid": {
+        "Key": "Autodesk.DesignScript.Geometry.Solid",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Line": {
+        "Key": "Autodesk.DesignScript.Geometry.Line",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      },
+      "Dictionary": {
+        "Key": "DesignScript.Builtin.Dictionary",
+        "Value": "DesignScriptBuiltin.dll"
+      },
+      "Geometry": {
+        "Key": "Autodesk.DesignScript.Geometry.Geometry",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Curve": {
+        "Key": "Autodesk.DesignScript.Geometry.Curve",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Plane": {
+        "Key": "Autodesk.DesignScript.Geometry.Plane",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Circle": {
+        "Key": "Autodesk.DesignScript.Geometry.Circle",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "af8c36ad-c988-4110-acb6-ef2dca003985",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "9c2fc08250bf45f89db4842f2772fe57",
+      "Inputs": [
+        {
+          "Id": "28833678df6e49298f4b97462c4dbf26",
+          "Name": "Indice_Lote",
+          "Description": "var[]..[]\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e48661c9e77e453cb9d6df9e1ed4db23",
+          "Name": "Dados_Lote",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Seleciona lotes para processamento"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 4.0,
+      "MinimumValue": 0.0,
+      "StepValue": 1.0,
+      "InputValue": 1.0,
+      "Id": "457d40cd1044460d868444de6f2b96fa",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "bb7279a711ec40cb9f82f1d45d304029",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 10.0,
+      "MinimumValue": 0.1,
+      "StepValue": 0.001,
+      "InputValue": 3.2230000000000003,
+      "Id": "ca9461850d4e4bd7a5a27d15b580c178",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d80944b2a9894903ba7a04f7f36962ce",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 4.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 0.0,
+      "Id": "1baef9a272c44ed6acad87d14a451ec1",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8d9bdc58e7d04a2696724c8a212e1e8b",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 25.0,
+      "MinimumValue": 0.0,
+      "StepValue": 1.0,
+      "InputValue": 7.0,
+      "Id": "29e5d4a4b193475081cebe3ac38708c0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "bc189c40f1a64092be9bee9ecb36dd40",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 0.99,
+      "MinimumValue": 0.01,
+      "StepValue": 0.005,
+      "InputValue": 0.38,
+      "Id": "a8856bb276cd4d70bad1a868c105ebff",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "21774caef82549a6afcfef4199d420b0",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 100.0,
+      "MinimumValue": 10.0,
+      "StepValue": 5.0,
+      "InputValue": 20.0,
+      "Id": "38ab3aba90c745dcbf1c5a7f69227814",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b5bd00acc77f4e59a05add4d169bbd21",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 1.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.005,
+      "InputValue": 0.51,
+      "Id": "d6860a081354429cac4f11043c4dd4cc",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "61ee3617c0884111906832a35b4ec488",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "ef95505a-4bab-451f-8227-603cf45bb9af",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "0876dd5c43ae4109986dae7a7583335b",
+      "Inputs": [
+        {
+          "Id": "e947e1458c434794b065b32b81aeec3a",
+          "Name": "Dic_Lote",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dd3eafd060e7491181a764e136e7215d",
+          "Name": "Dic_Andares",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e89d80d31a404bfb88f74b3bd06e5132",
+          "Name": "Indice_Ocupacao",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "197d1cdd3a154f64a6d1f8e46f94e89f",
+          "Name": "Razao_Area_Lado",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d4e4355ede9e4d2189bb14f0f353b8e1",
+          "Name": "Girar",
+          "Description": "var[]..[]\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "46778ebf9086416aaed459ea984fc075",
+          "Name": "Razao_Andares_Embasamento",
+          "Description": "var[]..[]\nDefault value : 10 (disabled)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b8515c6a3c3a4ebab05ea35850d35b55",
+          "Name": "Dados",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Predio para estudos preliminares"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "b93db7f6-ffe3-4e51-bff2-b7948cfe7fa0",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "b2b3276fb42c4580973d6d89b74e5101",
+      "Inputs": [
+        {
+          "Id": "54d05dbaf178405480f621185c6e18b6",
+          "Name": "Lote",
+          "Description": "var[]..[]\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "11508e33e22f4e13bb65981993fa4e55",
+          "Name": "Afastamento",
+          "Description": "var[]..[]\nDefault value : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "15d3e0415ca5482f9c79abc643f3c516",
+          "Name": "Pos_Longitudinal",
+          "Description": "var[]..[]\nDefault value : 0.5",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d2f3310abf674281a1d2732d873917c5",
+          "Name": "Pos_Transversal",
+          "Description": "var[]..[]\nDefault value : 0.5",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d857288e312446b9b1ac08cd8e63c248",
+          "Name": "Dados_do_Lote",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Analisa linhas de força do terreno"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Dic_Pre;\nDic_Pre[\"EMBAS\"];\nDic_Pre[\"TORRE\"];\nDic_Pre[\"PoliT\"];\nDic_Pre[\"SoliT\"];\nDic_Pre[\"SoliE\"];\nDic_Pre[\"SoliF\"];",
+      "Id": "b83de877199545cd87633f6458629176",
+      "Inputs": [
+        {
+          "Id": "8ce43ad3bb0b4546b95b2084b02cd0ec",
+          "Name": "Dic_Pre",
+          "Description": "Dic_Pre",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bda73d0b40184ab6b87ce0b98b5d7387",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1052867ad2b248a982effd79fb249bc9",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "56786737fe624934a18468fa71145af7",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6ca108dcd76345ef81db4223f6d03fd9",
+          "Name": "",
+          "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e5df42c6856c4cb5adf4eaf903cebe1f",
+          "Name": "",
+          "Description": "Value of expression at line 5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "169fb09d0f2b4cb1849b18cd83f28e49",
+          "Name": "",
+          "Description": "Value of expression at line 6",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bd133d8deffe44a8a61c5a36a9a19a5b",
+          "Name": "",
+          "Description": "Value of expression at line 7",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "7fa15405-85ca-482f-a5a2-549abed419b1",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "e4c1f94456254ce7a86dda63fbadecb9",
+      "Inputs": [
+        {
+          "Id": "0e90724347f94a29b2a1ac03d3907286",
+          "Name": "Quant_Andares_Torre",
+          "Description": "var[]..[]\nDefault value : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1d6c8d004bf44439945cbebc45c3fc36",
+          "Name": "Altura_Piso_Piso",
+          "Description": "var[]..[]\nDefault value : 3",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7f2ba2cff59c48b6ac25bc4740a4b165",
+          "Name": "Andares",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Criar andares"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 4.0,
+      "MinimumValue": 3.0,
+      "StepValue": 0.25,
+      "InputValue": 3.25,
+      "Id": "79b18cae06834e368e674cd5d9314009",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "952f43cd662442ca8f8288f0d054f5d2",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 25.0,
+      "MinimumValue": 1.0,
+      "StepValue": 1.0,
+      "InputValue": 8.0,
+      "Id": "5ebdf6bde55e4a6f921819b7ae99d447",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2fe83a59e6f845cb98765bfef8947435",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "D;\nD[\"PtsM\"];\nD[\"NoFo\"];\nD[\"NoDe\"];\nD[\"LinP\"];\nD[\"PtsC\"];\nD[\"LinC\"];\nD[\"LinL\"];\nD[\"LinT\"];\nD[\"Circ\"];",
+      "Id": "8ac3ef615b09435eb749e0ed4a29be7f",
+      "Inputs": [
+        {
+          "Id": "ec8e6f656f1e44698388a1381f242454",
+          "Name": "D",
+          "Description": "D",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "02e8abc079cb473eadc1d7b9a731c029",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ecd63eba580b4191934eef08a62d33f5",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fe7ca8fd197c457db1e3aec44f272357",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "20e87896a54343c0b2cebf4fbfef212b",
+          "Name": "",
+          "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e140b4e5b9fc48c3a1e5d82cd760e913",
+          "Name": "",
+          "Description": "Value of expression at line 5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "27a458f2efde4898afd24849b9210e1a",
+          "Name": "",
+          "Description": "Value of expression at line 6",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fcf9288131634b72867407f6460f41bb",
+          "Name": "",
+          "Description": "Value of expression at line 7",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "915900206db4457dad63024f620d1488",
+          "Name": "",
+          "Description": "Value of expression at line 8",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "de4be1a07f4946b5bbf5b47985fa370f",
+          "Name": "",
+          "Description": "Value of expression at line 9",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "194ff6883b0a4998bb9f7e0e0e58c29e",
+          "Name": "",
+          "Description": "Value of expression at line 10",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 15.0,
+      "MinimumValue": 1.0,
+      "StepValue": 1.0,
+      "InputValue": 7.0,
+      "Id": "7658dff7ae404a68bfa87dbe1399e5a8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8fce897994864854bfc2ea88e510b67f",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "e317da39e6044714b5f2c02e778ae835",
+      "Inputs": [
+        {
+          "Id": "2b81459c00cc470b968af1acfa295bbe",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1bd28ba1850d4009a71e87d812fa72b5",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "329d40feafb04b0394a69be6ddaa52cc",
+      "Inputs": [
+        {
+          "Id": "062e90c5e23e451082e660262c9bb1d3",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "68f4a0d7b7e4405f8b71d9cbda326b50",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "e48661c9e77e453cb9d6df9e1ed4db23",
+      "End": "54d05dbaf178405480f621185c6e18b6",
+      "Id": "eabc3051170240458c63178ab07d735f"
+    },
+    {
+      "Start": "bb7279a711ec40cb9f82f1d45d304029",
+      "End": "28833678df6e49298f4b97462c4dbf26",
+      "Id": "78aacab5623a408dbf41d302bd80d90f"
+    },
+    {
+      "Start": "d80944b2a9894903ba7a04f7f36962ce",
+      "End": "197d1cdd3a154f64a6d1f8e46f94e89f",
+      "Id": "443bed8c2fee4041bc11db7a2c31e98e"
+    },
+    {
+      "Start": "8d9bdc58e7d04a2696724c8a212e1e8b",
+      "End": "11508e33e22f4e13bb65981993fa4e55",
+      "Id": "80db56d85a274ac4a4d29b43175a7263"
+    },
+    {
+      "Start": "bc189c40f1a64092be9bee9ecb36dd40",
+      "End": "d4e4355ede9e4d2189bb14f0f353b8e1",
+      "Id": "ab2e5384e98d4712972c90ef2447bc2b"
+    },
+    {
+      "Start": "21774caef82549a6afcfef4199d420b0",
+      "End": "15d3e0415ca5482f9c79abc643f3c516",
+      "Id": "5dd88009c9694b409779384045c62639"
+    },
+    {
+      "Start": "b5bd00acc77f4e59a05add4d169bbd21",
+      "End": "e89d80d31a404bfb88f74b3bd06e5132",
+      "Id": "e906caa9f993434983c685541663ab18"
+    },
+    {
+      "Start": "61ee3617c0884111906832a35b4ec488",
+      "End": "d2f3310abf674281a1d2732d873917c5",
+      "Id": "0ef931a69cba49808f1805caf3dc0059"
+    },
+    {
+      "Start": "b8515c6a3c3a4ebab05ea35850d35b55",
+      "End": "8ce43ad3bb0b4546b95b2084b02cd0ec",
+      "Id": "b6e696c68e11401084f3375dbfcd1690"
+    },
+    {
+      "Start": "d857288e312446b9b1ac08cd8e63c248",
+      "End": "e947e1458c434794b065b32b81aeec3a",
+      "Id": "f20093aa595a4ce9beaeb63ce1f5eb7d"
+    },
+    {
+      "Start": "d857288e312446b9b1ac08cd8e63c248",
+      "End": "ec8e6f656f1e44698388a1381f242454",
+      "Id": "8bf330bfe1ed4648857c1b486d21e74d"
+    },
+    {
+      "Start": "6ca108dcd76345ef81db4223f6d03fd9",
+      "End": "2b81459c00cc470b968af1acfa295bbe",
+      "Id": "be752728c81440f19637120af28aeb2f"
+    },
+    {
+      "Start": "e5df42c6856c4cb5adf4eaf903cebe1f",
+      "End": "062e90c5e23e451082e660262c9bb1d3",
+      "Id": "a9cfac36b6f84ddaa38e33cab566ea99"
+    },
+    {
+      "Start": "7f2ba2cff59c48b6ac25bc4740a4b165",
+      "End": "dd3eafd060e7491181a764e136e7215d",
+      "Id": "256c3181b5f64283a6c58161ce7798cb"
+    },
+    {
+      "Start": "952f43cd662442ca8f8288f0d054f5d2",
+      "End": "1d6c8d004bf44439945cbebc45c3fc36",
+      "Id": "ac662b15514d41499b8f3e536e50c9f6"
+    },
+    {
+      "Start": "2fe83a59e6f845cb98765bfef8947435",
+      "End": "0e90724347f94a29b2a1ac03d3907286",
+      "Id": "0410fb6a73fb44c8982bd1d247d39c28"
+    },
+    {
+      "Start": "8fce897994864854bfc2ea88e510b67f",
+      "End": "46778ebf9086416aaed459ea984fc075",
+      "Id": "08e29f6e5aea4fa78e17e24e396725d7"
+    }
+  ],
+  "Dependencies": [
+    "af8c36ad-c988-4110-acb6-ef2dca003985",
+    "ef95505a-4bab-451f-8227-603cf45bb9af",
+    "b93db7f6-ffe3-4e51-bff2-b7948cfe7fa0",
+    "7fa15405-85ca-482f-a5a2-549abed419b1"
+  ],
+  "NodeLibraryDependencies": [],
+  "Bindings": [
+    {
+      "NodeId": "e4c1f944-5625-4ce7-a86d-da63fbadecb9",
+      "Binding": {
+        "__func_7fa1540585ca482fa5a2549abed419b1_InClassDecl-1_InFunctionScope-1_Instance0_e4c1f944-5625-4ce7-a86d-da63fbadecb9;ByElevation_InClassDecl-1_InFunctionScope110_Instance2_b7c6323f-11ad-459e-a6d0-9cf3d1f26bb8": "PFNPQVAtRU5WOkVudmVsb3BlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOlNPQVAtRU5DPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyIgeG1sbnM6U09BUC1FTlY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpjbHI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vc29hcC9lbmNvZGluZy9jbHIvMS4wIiBTT0FQLUVOVjplbmNvZGluZ1N0eWxlPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyI+DQo8U09BUC1FTlY6Qm9keT4NCjxhMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXIgaWQ9InJlZi0xIiB4bWxuczphMT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9jbHIvbnNhc3NlbS9Qcm90b0NvcmUvUHJvdG9Db3JlJTJDJTIwVmVyc2lvbiUzRDIuMy4wLjU4ODUlMkMlMjBDdWx0dXJlJTNEbmV1dHJhbCUyQyUyMFB1YmxpY0tleVRva2VuJTNEbnVsbCI+DQo8TnVtYmVyT2ZFbGVtZW50cz4xPC9OdW1iZXJPZkVsZW1lbnRzPg0KPEJhc2UtMF9IYXNEYXRhPmZhbHNlPC9CYXNlLTBfSGFzRGF0YT4NCjxCYXNlLTBfSGFzTmVzdGVkRGF0YT50cnVlPC9CYXNlLTBfSGFzTmVzdGVkRGF0YT4NCjxCYXNlLTBfTmVzdGVkRGF0YUNvdW50Pjk8L0Jhc2UtMF9OZXN0ZWREYXRhQ291bnQ+DQo8QmFzZS0wLTBfSGFzRGF0YT50cnVlPC9CYXNlLTAtMF9IYXNEYXRhPg0KPEJhc2UtMC0wX0RhdGEgaWQ9InJlZi0zIj5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBNWlhabGJGUnlZV05sUkdGMFlTQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwTGtWc1pXMWxiblJ6TDFKbGRtbDBUbTlrWlhNbE1rTWxNakJXWlhKemFXOXVKVE5FTWk0ekxqQXVPRE0xTWlVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqUmpOR1k0WldGaUxUQmtZV0V0TkRaa01TMWhaR1UzTFRSaE5XSTNaVGhtTkRkaE1pMHdNREExWWpWallqd3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNemMwTWpFNVBDOXBiblJKUkQ0TkNqeHBibkIxZEU1aGJXVWdlSE5wT201MWJHdzlJakVpTHo0TkNqd3ZZVEU2VEdWMlpXeFVjbUZqWlVSaGRHRStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTBfRGF0YT4NCjxCYXNlLTAtMF9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMF9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0xX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTFfSGFzRGF0YT4NCjxCYXNlLTAtMV9EYXRhIGlkPSJyZWYtNCI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwTVpYWmxiRlJ5WVdObFJHRjBZU0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMExrVnNaVzFsYm5SekwxSmxkbWwwVG05a1pYTWxNa01sTWpCV1pYSnphVzl1SlRORU1pNHpMakF1T0RNMU1pVXlReVV5TUVOMWJIUjFjbVVsTTBSdVpYVjBjbUZzSlRKREpUSXdVSFZpYkdsalMyVjVWRzlyWlc0bE0wUnVkV3hzSWo0TkNqeHpkSEpwYm1kSlJDQnBaRDBpY21WbUxUTWlQalJqTkdZNFpXRmlMVEJrWVdFdE5EWmtNUzFoWkdVM0xUUmhOV0kzWlRobU5EZGhNaTB3TURBMVlqVmpZend2YzNSeWFXNW5TVVErRFFvOGFXNTBTVVErTXpjME1qSXdQQzlwYm5SSlJENE5DanhwYm5CMWRFNWhiV1VnZUhOcE9tNTFiR3c5SWpFaUx6NE5Dand2WVRFNlRHVjJaV3hVY21GalpVUmhkR0UrRFFvOEwxTlBRVkF0UlU1V09rSnZaSGsrRFFvOEwxTlBRVkF0UlU1V09rVnVkbVZzYjNCbFBnMEs8L0Jhc2UtMC0xX0RhdGE+DQo8QmFzZS0wLTFfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTFfSGFzTmVzdGVkRGF0YT4NCjxCYXNlLTAtMl9IYXNEYXRhPnRydWU8L0Jhc2UtMC0yX0hhc0RhdGE+DQo8QmFzZS0wLTJfRGF0YSBpZD0icmVmLTUiPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcE1aWFpsYkZSeVlXTmxSR0YwWVNCcFpEMGljbVZtTFRFaUlIaHRiRzV6T21FeFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1dGFXTnliM052Wm5RdVkyOXRMMk5zY2k5dWMyRnpjMlZ0TDFKbGRtbDBMa1ZzWlcxbGJuUnpMMUpsZG1sMFRtOWtaWE1sTWtNbE1qQldaWEp6YVc5dUpUTkVNaTR6TGpBdU9ETTFNaVV5UXlVeU1FTjFiSFIxY21VbE0wUnVaWFYwY21Gc0pUSkRKVEl3VUhWaWJHbGpTMlY1Vkc5clpXNGxNMFJ1ZFd4c0lqNE5Danh6ZEhKcGJtZEpSQ0JwWkQwaWNtVm1MVE1pUGpSak5HWTRaV0ZpTFRCa1lXRXRORFprTVMxaFpHVTNMVFJoTldJM1pUaG1ORGRoTWkwd01EQTFZalZqWkR3dmMzUnlhVzVuU1VRK0RRbzhhVzUwU1VRK016YzBNakl4UEM5cGJuUkpSRDROQ2p4cGJuQjFkRTVoYldVZ2VITnBPbTUxYkd3OUlqRWlMejROQ2p3dllURTZUR1YyWld4VWNtRmpaVVJoZEdFK0RRbzhMMU5QUVZBdFJVNVdPa0p2WkhrK0RRbzhMMU5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxQZzBLPC9CYXNlLTAtMl9EYXRhPg0KPEJhc2UtMC0yX0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC0yX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTNfSGFzRGF0YT50cnVlPC9CYXNlLTAtM19IYXNEYXRhPg0KPEJhc2UtMC0zX0RhdGEgaWQ9InJlZi02Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBNWlhabGJGUnlZV05sUkdGMFlTQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwTGtWc1pXMWxiblJ6TDFKbGRtbDBUbTlrWlhNbE1rTWxNakJXWlhKemFXOXVKVE5FTWk0ekxqQXVPRE0xTWlVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqUmpOR1k0WldGaUxUQmtZV0V0TkRaa01TMWhaR1UzTFRSaE5XSTNaVGhtTkRkaE1pMHdNREExWWpWalpUd3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNemMwTWpJeVBDOXBiblJKUkQ0TkNqeHBibkIxZEU1aGJXVWdlSE5wT201MWJHdzlJakVpTHo0TkNqd3ZZVEU2VEdWMlpXeFVjbUZqWlVSaGRHRStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTNfRGF0YT4NCjxCYXNlLTAtM19IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtM19IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC00X0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTRfSGFzRGF0YT4NCjxCYXNlLTAtNF9EYXRhIGlkPSJyZWYtNyI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwTVpYWmxiRlJ5WVdObFJHRjBZU0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMExrVnNaVzFsYm5SekwxSmxkbWwwVG05a1pYTWxNa01sTWpCV1pYSnphVzl1SlRORU1pNHpMakF1T0RNMU1pVXlReVV5TUVOMWJIUjFjbVVsTTBSdVpYVjBjbUZzSlRKREpUSXdVSFZpYkdsalMyVjVWRzlyWlc0bE0wUnVkV3hzSWo0TkNqeHpkSEpwYm1kSlJDQnBaRDBpY21WbUxUTWlQalJqTkdZNFpXRmlMVEJrWVdFdE5EWmtNUzFoWkdVM0xUUmhOV0kzWlRobU5EZGhNaTB3TURBMVlqVmpaand2YzNSeWFXNW5TVVErRFFvOGFXNTBTVVErTXpjME1qSXpQQzlwYm5SSlJENE5DanhwYm5CMWRFNWhiV1VnZUhOcE9tNTFiR3c5SWpFaUx6NE5Dand2WVRFNlRHVjJaV3hVY21GalpVUmhkR0UrRFFvOEwxTlBRVkF0UlU1V09rSnZaSGsrRFFvOEwxTlBRVkF0UlU1V09rVnVkbVZzYjNCbFBnMEs8L0Jhc2UtMC00X0RhdGE+DQo8QmFzZS0wLTRfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTRfSGFzTmVzdGVkRGF0YT4NCjxCYXNlLTAtNV9IYXNEYXRhPnRydWU8L0Jhc2UtMC01X0hhc0RhdGE+DQo8QmFzZS0wLTVfRGF0YSBpZD0icmVmLTgiPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcE1aWFpsYkZSeVlXTmxSR0YwWVNCcFpEMGljbVZtTFRFaUlIaHRiRzV6T21FeFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1dGFXTnliM052Wm5RdVkyOXRMMk5zY2k5dWMyRnpjMlZ0TDFKbGRtbDBMa1ZzWlcxbGJuUnpMMUpsZG1sMFRtOWtaWE1sTWtNbE1qQldaWEp6YVc5dUpUTkVNaTR6TGpBdU9ETTFNaVV5UXlVeU1FTjFiSFIxY21VbE0wUnVaWFYwY21Gc0pUSkRKVEl3VUhWaWJHbGpTMlY1Vkc5clpXNGxNMFJ1ZFd4c0lqNE5Danh6ZEhKcGJtZEpSQ0JwWkQwaWNtVm1MVE1pUGpSak5HWTRaV0ZpTFRCa1lXRXRORFprTVMxaFpHVTNMVFJoTldJM1pUaG1ORGRoTWkwd01EQTFZalZrTUR3dmMzUnlhVzVuU1VRK0RRbzhhVzUwU1VRK016YzBNakkwUEM5cGJuUkpSRDROQ2p4cGJuQjFkRTVoYldVZ2VITnBPbTUxYkd3OUlqRWlMejROQ2p3dllURTZUR1YyWld4VWNtRmpaVVJoZEdFK0RRbzhMMU5QUVZBdFJVNVdPa0p2WkhrK0RRbzhMMU5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxQZzBLPC9CYXNlLTAtNV9EYXRhPg0KPEJhc2UtMC01X0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC01X0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTZfSGFzRGF0YT50cnVlPC9CYXNlLTAtNl9IYXNEYXRhPg0KPEJhc2UtMC02X0RhdGEgaWQ9InJlZi05Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBNWlhabGJGUnlZV05sUkdGMFlTQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwTGtWc1pXMWxiblJ6TDFKbGRtbDBUbTlrWlhNbE1rTWxNakJXWlhKemFXOXVKVE5FTWk0ekxqQXVPRE0xTWlVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqUmpOR1k0WldGaUxUQmtZV0V0TkRaa01TMWhaR1UzTFRSaE5XSTNaVGhtTkRkaE1pMHdNREExWWpWa01Ud3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNemMwTWpJMVBDOXBiblJKUkQ0TkNqeHBibkIxZEU1aGJXVWdlSE5wT201MWJHdzlJakVpTHo0TkNqd3ZZVEU2VEdWMlpXeFVjbUZqWlVSaGRHRStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTZfRGF0YT4NCjxCYXNlLTAtNl9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtNl9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC03X0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTdfSGFzRGF0YT4NCjxCYXNlLTAtN19EYXRhIGlkPSJyZWYtMTAiPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcE1aWFpsYkZSeVlXTmxSR0YwWVNCcFpEMGljbVZtTFRFaUlIaHRiRzV6T21FeFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1dGFXTnliM052Wm5RdVkyOXRMMk5zY2k5dWMyRnpjMlZ0TDFKbGRtbDBMa1ZzWlcxbGJuUnpMMUpsZG1sMFRtOWtaWE1sTWtNbE1qQldaWEp6YVc5dUpUTkVNaTR6TGpBdU9ETTFNaVV5UXlVeU1FTjFiSFIxY21VbE0wUnVaWFYwY21Gc0pUSkRKVEl3VUhWaWJHbGpTMlY1Vkc5clpXNGxNMFJ1ZFd4c0lqNE5Danh6ZEhKcGJtZEpSQ0JwWkQwaWNtVm1MVE1pUGpSak5HWTRaV0ZpTFRCa1lXRXRORFprTVMxaFpHVTNMVFJoTldJM1pUaG1ORGRoTWkwd01EQTFZalZrTWp3dmMzUnlhVzVuU1VRK0RRbzhhVzUwU1VRK016YzBNakkyUEM5cGJuUkpSRDROQ2p4cGJuQjFkRTVoYldVZ2VITnBPbTUxYkd3OUlqRWlMejROQ2p3dllURTZUR1YyWld4VWNtRmpaVVJoZEdFK0RRbzhMMU5QUVZBdFJVNVdPa0p2WkhrK0RRbzhMMU5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxQZzBLPC9CYXNlLTAtN19EYXRhPg0KPEJhc2UtMC03X0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC03X0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLThfSGFzRGF0YT50cnVlPC9CYXNlLTAtOF9IYXNEYXRhPg0KPEJhc2UtMC04X0RhdGEgaWQ9InJlZi0xMSI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwTVpYWmxiRlJ5WVdObFJHRjBZU0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMExrVnNaVzFsYm5SekwxSmxkbWwwVG05a1pYTWxNa01sTWpCV1pYSnphVzl1SlRORU1pNHpMakF1T0RNMU1pVXlReVV5TUVOMWJIUjFjbVVsTTBSdVpYVjBjbUZzSlRKREpUSXdVSFZpYkdsalMyVjVWRzlyWlc0bE0wUnVkV3hzSWo0TkNqeHpkSEpwYm1kSlJDQnBaRDBpY21WbUxUTWlQalJqTkdZNFpXRmlMVEJrWVdFdE5EWmtNUzFoWkdVM0xUUmhOV0kzWlRobU5EZGhNaTB3TURBMVlqVmtNend2YzNSeWFXNW5TVVErRFFvOGFXNTBTVVErTXpjME1qSTNQQzlwYm5SSlJENE5DanhwYm5CMWRFNWhiV1VnZUhOcE9tNTFiR3c5SWpFaUx6NE5Dand2WVRFNlRHVjJaV3hVY21GalpVUmhkR0UrRFFvOEwxTlBRVkF0UlU1V09rSnZaSGsrRFFvOEwxTlBRVkF0UlU1V09rVnVkbVZzYjNCbFBnMEs8L0Jhc2UtMC04X0RhdGE+DQo8QmFzZS0wLThfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLThfSGFzTmVzdGVkRGF0YT4NCjwvYTE6Q2FsbFNpdGVfeDAwMkJfVHJhY2VTZXJpYWxpc2VySGVscGVyPg0KPC9TT0FQLUVOVjpCb2R5Pg0KPC9TT0FQLUVOVjpFbnZlbG9wZT4NCg=="
+      }
+    }
+  ],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.3.0.5885",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -130.31022366464498,
+      "EyeY": 33.174542533624248,
+      "EyeZ": 3.77319934439889,
+      "LookX": 121.0825967964941,
+      "LookY": -37.759945711810104,
+      "LookZ": 54.389675278080716,
+      "UpX": 0.055688243262589004,
+      "UpY": 0.99813479842187669,
+      "UpZ": 0.0250148704107298
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Seleção_de_Lotes",
+        "Id": "9c2fc08250bf45f89db4842f2772fe57",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 48.171567432311804,
+        "Y": -25.559893932833376
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Numero do Lote",
+        "Id": "457d40cd1044460d868444de6f2b96fa",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -406.8499817242872,
+        "Y": -25.538714181757797
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Proporção Area Lado",
+        "Id": "ca9461850d4e4bd7a5a27d15b580c178",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -409.40615904298778,
+        "Y": 575.06335329970568
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Afastamento",
+        "Id": "1baef9a272c44ed6acad87d14a451ec1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -408.67645851243594,
+        "Y": 109.76369382985507
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Posicionamento Rotacional",
+        "Id": "29e5d4a4b193475081cebe3ac38708c0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -409.40615904298778,
+        "Y": 631.6809330160886
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Posição Longitudinal",
+        "Id": "a8856bb276cd4d70bad1a868c105ebff",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -408.67645851243594,
+        "Y": 164.66558262152361
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "% Ocupação da Torre",
+        "Id": "38ab3aba90c745dcbf1c5a7f69227814",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -409.40615904298778,
+        "Y": 518.44577358332276
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Posição Transversal",
+        "Id": "d6860a081354429cac4f11043c4dd4cc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -408.67645851243594,
+        "Y": 219.56747141319215
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Predio_Estudo",
+        "Id": "0876dd5c43ae4109986dae7a7583335b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -47.586782844183347,
+        "Y": 518.02556521275721
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Analisar_Divisas",
+        "Id": "b2b3276fb42c4580973d6d89b74e5101",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -11.792277245056198,
+        "Y": 113.82667521204124
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "b83de877199545cd87633f6458629176",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 335.40448069255848,
+        "Y": 532.28659576000621
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Cria_Andares",
+        "Id": "e4c1f94456254ce7a86dda63fbadecb9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -2.9845497127283238,
+        "Y": 356.7204433584439
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Altura Piso a Piso",
+        "Id": "79b18cae06834e368e674cd5d9314009",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -406.8499817242872,
+        "Y": 386.39141087596039
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Quantidade de Andares Torre",
+        "Id": "5ebdf6bde55e4a6f921819b7ae99d447",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -406.8499817242872,
+        "Y": 329.01427293505463
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "8ac3ef615b09435eb749e0ed4a29be7f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 359.01475346787839,
+        "Y": 98.040150069067749
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Razão do embasamento",
+        "Id": "7658dff7ae404a68bfa87dbe1399e5a8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -409.40615904298778,
+        "Y": 688.29851273247152
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "e317da39e6044714b5f2c02e778ae835",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 591.08678515698125,
+        "Y": 574.55827666980383
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "329d40feafb04b0394a69be6ddaa52cc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 977.62766014958936,
+        "Y": 544.510445963087
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "552c418cc8ed4134a1bb90dff1c801a3",
+        "Title": "Seleção do Lote",
+        "Nodes": [
+          "9c2fc08250bf45f89db4842f2772fe57",
+          "457d40cd1044460d868444de6f2b96fa"
+        ],
+        "Left": -416.8499817242872,
+        "Top": -57.559893932833376,
+        "Width": 734.021549156599,
+        "Height": 125.0,
+        "FontSize": 18.0,
+        "InitialTop": -25.559893932833376,
+        "InitialHeight": 145.02117975107558,
+        "TextblockHeight": 22.0,
+        "Background": "#FFD8D8D8"
+      },
+      {
+        "Id": "25d86a94aa804609a19552110b240603",
+        "Title": "Análise do Lote",
+        "Nodes": [
+          "1baef9a272c44ed6acad87d14a451ec1",
+          "a8856bb276cd4d70bad1a868c105ebff",
+          "d6860a081354429cac4f11043c4dd4cc",
+          "b2b3276fb42c4580973d6d89b74e5101"
+        ],
+        "Left": -418.67645851243594,
+        "Top": 77.763693829855072,
+        "Width": 731.88418126737974,
+        "Height": 209.80377758333708,
+        "FontSize": 18.0,
+        "InitialTop": 109.76369382985507,
+        "InitialHeight": 254.80377758333708,
+        "TextblockHeight": 22.0,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "ed47d5829184418084e033bcefd4862e",
+        "Title": "Definição dos Pavimentos",
+        "Nodes": [
+          "e4c1f94456254ce7a86dda63fbadecb9",
+          "79b18cae06834e368e674cd5d9314009",
+          "5ebdf6bde55e4a6f921819b7ae99d447"
+        ],
+        "Left": -416.8499817242872,
+        "Top": 297.01427293505463,
+        "Width": 725.86543201155882,
+        "Height": 178.70617042338927,
+        "FontSize": 18.0,
+        "InitialTop": 329.01427293505463,
+        "InitialHeight": 202.37713794090575,
+        "TextblockHeight": 22.0,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "4cd70852290e45358182d5c7c96e2c02",
+        "Title": "Formalização da massa do prédio",
+        "Nodes": [
+          "ca9461850d4e4bd7a5a27d15b580c178",
+          "29e5d4a4b193475081cebe3ac38708c0",
+          "38ab3aba90c745dcbf1c5a7f69227814",
+          "0876dd5c43ae4109986dae7a7583335b",
+          "7658dff7ae404a68bfa87dbe1399e5a8"
+        ],
+        "Left": -419.40615904298778,
+        "Top": 486.02556521275721,
+        "Width": 725.81937619880443,
+        "Height": 270.27294751971431,
+        "FontSize": 18.0,
+        "InitialTop": 518.02556521275721,
+        "InitialHeight": 315.27294751971431,
+        "TextblockHeight": 22.0,
+        "Background": "#FFD8D8D8"
+      }
+    ],
+    "X": 269.43783744457915,
+    "Y": 48.186867418318172,
+    "Zoom": 0.620224775476993
+  }
+}
