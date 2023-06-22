@@ -1254,8 +1254,8 @@
     },
     {
       "ConcreteType": "DSRevitNodesUI.Levels, DSRevitNodesUI",
-      "SelectedIndex": 1,
-      "SelectedString": "Level 2",
+      "SelectedIndex": -1,
+      "SelectedString": "",
       "NodeType": "ExtensionNode",
       "Id": "3718acb1decc425f8207c0abf0d2651b",
       "Inputs": [],
@@ -1602,8 +1602,8 @@
         "Background": "#FF48B9FF"
       }
     ],
-    "X": 185.6470316838124,
-    "Y": 158.62015882573371,
-    "Zoom": 0.17255285980534149
+    "X": 139.28777262428855,
+    "Y": 200.26957972922878,
+    "Zoom": 0.10687886931890571
   }
 }
