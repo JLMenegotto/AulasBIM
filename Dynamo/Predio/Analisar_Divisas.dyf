@@ -1,0 +1,702 @@
+{
+  "Uuid": "b93db7f6-ffe3-4e51-bff2-b7948cfe7fa0",
+  "IsCustomNode": true,
+  "Category": "Lote",
+  "Description": "Analisa linhas de força do terreno",
+  "Name": "Analisar_Divisas",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Line": {
+        "Key": "Autodesk.DesignScript.Geometry.Line",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      },
+      "Surface": {
+        "Key": "Autodesk.DesignScript.Geometry.Surface",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      },
+      "Dictionary": {
+        "Key": "DesignScript.Builtin.Dictionary",
+        "Value": "DesignScriptBuiltin.dll"
+      },
+      "Geometry": {
+        "Key": "Autodesk.DesignScript.Geometry.Geometry",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Circle": {
+        "Key": "Autodesk.DesignScript.Geometry.Circle",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "Lote",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": "0",
+        "Description": ""
+      },
+      "Id": "013797def1134a0ab4a4b9c46028caee",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ad0d3709dd5f4ff99800267642256b6b",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "Afastamento",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": "1",
+        "Description": ""
+      },
+      "Id": "3d46c1e7743f475ead6faaae49c3f15d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1587ae5d4a1545d68d13da7d89dcab39",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "Pos_Longitudinal",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": "0.5",
+        "Description": ""
+      },
+      "Id": "6e102b9090f447e99987f8006d0677f2",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "11422c6bd82a49ed92f5b5b847388ff1",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "Pos_Transversal",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": "0.5",
+        "Description": ""
+      },
+      "Id": "d375f6d40b04460fa71378811ca4297c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d0549dea537a49da9dd688508ffca64e",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "Dados_do_Lote",
+      "Id": "5033e88b82c445068652efa04fe3ce28",
+      "Inputs": [
+        {
+          "Id": "3a38a43c47c24fc395e875c6d7298360",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "DadosLote;\nDAF;\nt;\nDesT;\n//--------------------------------------------------------------------------\n// Captura Linhas da divisa\n//--------------------------------------------------------------------------\nLOTE  = DadosLote[\"Lote\"];\nOCUP  = LOTE.Offset  ( -DAF  ,  false  );\nLinO  = OCUP.Explode (                 );\n//--------------------------------------------------------------------------\n// Orienta os vetores Normais da divisa\n//--------------------------------------------------------------------------\nqs    = List.Count              ( LinO            )-1;\nvt    = Line.TangentAtParameter ( LinO [0..qs] , 0);\nZvt   = Vector.Cross            ( vt[0] , vt[1]   ).Z;\nFo    = Zvt > 0 ?  1 : -1;\nDe    = Zvt < 0 ?  1 : -1;\n//--------------------------------------------------------------------------\n//Captura os pontos e Normais da divisa\n//--------------------------------------------------------------------------\nPtsO  = Line.PointAtParameter               ( LinO , 0                 );\nPtsM  = Line.PointAtParameter               ( LinO , 0.5               );\nNoFo  = Line.NormalAtParameter              ( LinO , 0.5).Scale (  Fo  );\nNoDe  = Line.NormalAtParameter              ( LinO , 0.5).Scale (  De  );\n//--------------------------------------------------------------------------\n//Define Eixo significativo do Lote, Origem, Dir Normais e Tang\n//--------------------------------------------------------------------------\nLdi   = [ 1 , -1 ];\nEixS  = Line.ByBestFitThroughPoints         ( PtsO                     );\nPtsS  = Geometry.Intersect                  ( EixS    , OCUP           );\nLinS  = Line.ByStartPointEndPoint           ( PtsS[0] , PtsS[1]        );\nO     = Line.PointAtParameter               ( LinS    , t              );\nT     = Line.TangentAtParameter             ( LinS    , t ).Scale( Ldi );\nN     = Line.NormalAtParameter              ( LinS    , t ).Scale( Ldi );\n//--------------------------------------------------------------------------\n//Define Linhas de Penetração ao Terreno no Ponto médio e Normal\n//--------------------------------------------------------------------------\nPtsT  = Point.Project                       ( O       , OCUP   , N     );\nLinP  = Line.ByStartPointDirectionLength    ( PtsM    , NoDe   , DAF+1 );\nLinT  = Line.ByStartPointEndPoint           ( PtsT[0] , PtsT[1]        );\n//--------------------------------------------------------------------------\n//Define Eixo Longitudinal da implantação do projeto\n//--------------------------------------------------------------------------\nVz    = Vector.ZAxis();\nDime  = DesT * LinT.Length;\nOLOC  = Line.PointAtSegmentLength           ( LinT    , Dime          );\nPtsL  = Point.Project                       ( OLOC    , OCUP , T<1>   );\nPtsC  = Point.Project                       ( OLOC    , OCUP , NoFo<1>);\nLinC  = Line.ByStartPointEndPoint           ( OLOC    , PtsC <1>      );\nCoin  = List.Equals                         ( PtsL[0] , PtsL[1]       );\nLinL  = Coin?null:Line.ByStartPointEndPoint ( PtsL[0] , PtsL[1]       );\nCirc  = Circle.ByCenterPointRadius          ( OLOC    , 0.5           );\nAngu  = Vector.AngleAboutAxis               ( N<1>    , NoDe ,  Vz    );\n//--------------------------------------------------------------------------\n//Extração de resultados utilizando Dicionário\n//--------------------------------------------------------------------------\nAreaL = DadosLote[\"Area\"];\nKey   = [\n          \"LOTE\" , \"OCUP\", \"PtsO\", \"PtsM\", \"NoDe\", \"NoFo\", \"PtsL\", \"PtsT\",\n          \"OLOC\" , \"Circ\", \"LinO\", \"LinS\", \"LinT\", \"LinL\", \"LinP\", \"Angu\",\n          \"AreaL\", \"PtsC\", \"LinC\", \"T\"   , \"N\"   , \"O\"\n        ];\nVal   = [\n           LOTE  , OCUP  , PtsO  , PtsM  , NoDe  ,  NoFo , PtsL  , PtsT  ,\n           OLOC  , Circ  , LinO  , LinS  , LinT  ,  LinL , LinP  , Angu  ,\n           AreaL , PtsC  , LinC  , T     , N     ,  O\n        ];\nDIC   = Dictionary.ByKeysValues ( Key , Val );",
+      "Id": "aec44cb61ce04ad98102fab1fc3b3dd8",
+      "Inputs": [
+        {
+          "Id": "bc6b585a630347c48be1cec0c4d3e656",
+          "Name": "DadosLote",
+          "Description": "DadosLote",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4867266ffe3341aa9fb1dc42537c176b",
+          "Name": "DAF",
+          "Description": "DAF",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "38024f8deca3456e9e3863eb939c47f5",
+          "Name": "t",
+          "Description": "t",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f4e7f53a90ff46e88e831ddf4a944d0f",
+          "Name": "DesT",
+          "Description": "DesT",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3896eac4bb0a431ba86861b397304ece",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "90bf36e0f9e54a3c953ebc1272867668",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8092cf21de504699b7b89d51bd8a77a6",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1d753761d779474898c02de513aaddd8",
+          "Name": "",
+          "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fadbdd493bf344289530b591d4f79025",
+          "Name": "",
+          "Description": "LOTE",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "900307f341064b77b3e3b8f19f3b1d71",
+          "Name": "",
+          "Description": "OCUP",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0cf4879fdf784881a09ea3c3d6f3a795",
+          "Name": "",
+          "Description": "LinO",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "19c07bb266c740798648fbd3ed81afce",
+          "Name": "",
+          "Description": "qs",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b683b9b1dff0470595eebd3426f491b7",
+          "Name": "",
+          "Description": "vt",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1951189efd574414b05abce4d871c2f9",
+          "Name": "",
+          "Description": "Zvt",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "885dba620fd44bc8a77e71ca06380cd0",
+          "Name": "",
+          "Description": "Fo",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9e410f10c67b4242a2f98cb4d8981135",
+          "Name": "",
+          "Description": "De",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b29e5bc04575412b8b42a29e3f16c14b",
+          "Name": "",
+          "Description": "PtsO",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "64fc5b98952f487e945a89431d199833",
+          "Name": "",
+          "Description": "PtsM",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1cd485daf93b424bacf1d4296328e2fb",
+          "Name": "",
+          "Description": "NoFo",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "18699e88a9294151a518a652a5f0f150",
+          "Name": "",
+          "Description": "NoDe",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ce795178a50a41d8b58bd2c3f6dea25d",
+          "Name": "",
+          "Description": "Ldi",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2c8d228e575742dbac78117198be9776",
+          "Name": "",
+          "Description": "EixS",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "abb0cb76ff324271ae42b910718d0674",
+          "Name": "",
+          "Description": "PtsS",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "56dd7a6879a2473684856fb9d4bbea11",
+          "Name": "",
+          "Description": "LinS",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "76b15eefce0e45e8a12f2213a8eaff09",
+          "Name": "",
+          "Description": "O",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1ba863ca2093495e98908bcbe49cab72",
+          "Name": "",
+          "Description": "T",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1dc476af9fbb4975a2369609a22fd740",
+          "Name": "",
+          "Description": "N",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5d05a1d38ab442ec9883b39c7847a1c4",
+          "Name": "",
+          "Description": "PtsT",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "89ae1ee11120491ebbc913120ffa6101",
+          "Name": "",
+          "Description": "LinP",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6bdd7de1bb0e4139b220df81af28f512",
+          "Name": "",
+          "Description": "LinT",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d543a7bd5e9b4294961887ee6d5009a0",
+          "Name": "",
+          "Description": "Vz",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8520d2c6f714425d9780a7c0371044c4",
+          "Name": "",
+          "Description": "Dime",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "16a4d6c4fd61452bb6c0ea53b081c7e4",
+          "Name": "",
+          "Description": "OLOC",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "02c7b3a378b0465dacf767f5c03ab6cb",
+          "Name": "",
+          "Description": "PtsL",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8976ee635eb14bb2bcf6844a0be3a3da",
+          "Name": "",
+          "Description": "PtsC",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ab1e38ff9b4843e9b8b71bb5192a2446",
+          "Name": "",
+          "Description": "LinC",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9c988ff4f4f041a78086ed7d52c9090e",
+          "Name": "",
+          "Description": "Coin",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a9186d9dba544a1a9d18c4b10f51ca3a",
+          "Name": "",
+          "Description": "LinL",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7ae12fb8608c406899e5853b87d24874",
+          "Name": "",
+          "Description": "Circ",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a58a95d2d44945b4ab759ed0602bef41",
+          "Name": "",
+          "Description": "Angu",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b90c74e99e6743b180a556d1f22aed7b",
+          "Name": "",
+          "Description": "AreaL",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3a734b652f1d4d0a9f82b11e753b4910",
+          "Name": "",
+          "Description": "Key",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bb289b6ddede400e9b65b98925a12de7",
+          "Name": "",
+          "Description": "Val",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "07f05f0cb6cd4030aed31409499ac6e2",
+          "Name": "",
+          "Description": "DIC",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "ad0d3709dd5f4ff99800267642256b6b",
+      "End": "bc6b585a630347c48be1cec0c4d3e656",
+      "Id": "a672c1bef7d04da9b46a7aabaa17fe4c"
+    },
+    {
+      "Start": "1587ae5d4a1545d68d13da7d89dcab39",
+      "End": "4867266ffe3341aa9fb1dc42537c176b",
+      "Id": "743685ff6a6a47b4865b95b515af8653"
+    },
+    {
+      "Start": "11422c6bd82a49ed92f5b5b847388ff1",
+      "End": "38024f8deca3456e9e3863eb939c47f5",
+      "Id": "5b53c9abe513486f998dd223229b3760"
+    },
+    {
+      "Start": "d0549dea537a49da9dd688508ffca64e",
+      "End": "f4e7f53a90ff46e88e831ddf4a944d0f",
+      "Id": "4b6c9261258e4638b675a19ed954daf1"
+    },
+    {
+      "Start": "07f05f0cb6cd4030aed31409499ac6e2",
+      "End": "3a38a43c47c24fc395e875c6d7298360",
+      "Id": "88117b89446344688bcad9087d5ab09d"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.3.0.5885",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -97.373772017842384,
+      "EyeY": 47.958122673591241,
+      "EyeZ": 150.43681737074115,
+      "LookX": 88.14614514969152,
+      "LookY": -52.5435258517771,
+      "LookZ": -92.273942748261547,
+      "UpX": 0.11994717618857877,
+      "UpY": 0.98480775301221657,
+      "UpZ": -0.12556418490728904
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "013797def1134a0ab4a4b9c46028caee",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 97.464721742104985,
+        "Y": 282.32292451958466
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "3d46c1e7743f475ead6faaae49c3f15d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 40.464721742104985,
+        "Y": 341.06982206108609
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "P_Long",
+        "Id": "6e102b9090f447e99987f8006d0677f2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -17.535278257895015,
+        "Y": 399.81671960258751
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "P_Trans",
+        "Id": "d375f6d40b04460fa71378811ca4297c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -9.5352782578950155,
+        "Y": 458.56361714408894
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "5033e88b82c445068652efa04fe3ce28",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1120.5018968913494,
+        "Y": 1515.3698400267424
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Análise da geometria do lote",
+        "Id": "aec44cb61ce04ad98102fab1fc3b3dd8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 352.88231576665345,
+        "Y": 341.50200164368567
+      }
+    ],
+    "Annotations": [],
+    "X": -254.56664998623137,
+    "Y": -433.67531767158766,
+    "Zoom": 0.7544090503825519
+  }
+}
