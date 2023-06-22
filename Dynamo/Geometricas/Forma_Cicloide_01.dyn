@@ -2,7 +2,7 @@
   "Uuid": "4ad7851b-6999-4367-88bb-ffea53376750",
   "IsCustomNode": false,
   "Description": null,
-  "Name": "Forma_Cicloide_2",
+  "Name": "Forma_Cicloide_01",
   "ElementResolver": {
     "ResolutionMap": {
       "Vector": {
@@ -68,7 +68,7 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "A slider that produces numeric values."
+      "Description": "Produces numeric values"
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -92,7 +92,7 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "A slider that produces numeric values."
+      "Description": "Produces numeric values"
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -101,7 +101,7 @@
       "MaximumValue": 100.0,
       "MinimumValue": 6.0,
       "StepValue": 1.0,
-      "InputValue": 20.0,
+      "InputValue": 12.0,
       "Id": "1c111cc742cb497eacc6dc8b80556ae8",
       "Inputs": [],
       "Outputs": [
@@ -116,7 +116,7 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "A slider that produces numeric values."
+      "Description": "Produces numeric values"
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -140,7 +140,7 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "A slider that produces numeric values."
+      "Description": "Produces numeric values"
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -164,7 +164,7 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "A slider that produces numeric values."
+      "Description": "Produces numeric values"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -465,138 +465,77 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
-      "NodeType": "FunctionNode",
-      "FunctionSignature": "DSCore.List.IndexOf@var[]..[],var",
-      "Id": "889b935205dc47d38b363ea3bfacfeba",
-      "Inputs": [
-        {
-          "Id": "ae4e33bed29b41e9868d54c48c238f3f",
-          "Name": "list",
-          "Description": "The list to find the element in.\n\nvar[]..[]",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "c4a16ab336094479ab0d66879517b529",
-          "Name": "element",
-          "Description": "The element whose index is to be returned.\n\nvar",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "2850ce9e8f28474e8bd367dec431f5f2",
-          "Name": "int",
-          "Description": "The index of the element in the list.",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Auto",
-      "Description": "Returns the index of the element in the given list.\n\nList.IndexOf (list: var[]..[], element: var): int"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
-      "NodeType": "CodeBlockNode",
-      "Code": "0..20..#45;",
-      "Id": "578cc9431c9c446c9998ecce80967ce7",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "e75965c1658f4cdf86e94074a14d271b",
-          "Name": "",
-          "Description": "Value of expression at line 1",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Allows for DesignScript code to be authored directly"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
-      "NodeType": "CodeBlockNode",
-      "Code": "5;",
-      "Id": "eea26f8c51a34f378882232a4b412992",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "5e2be514ad2446fcaea143ecd187daf9",
-          "Name": "",
-          "Description": "Value of expression at line 1",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Allows for DesignScript code to be authored directly"
     }
   ],
   "Connectors": [
     {
       "Start": "53f4e581756b42219b79d998d058784c",
       "End": "e964a54621494e7592791d48511764a9",
-      "Id": "cd6feb47952d442b97f6d7940fc27afe"
+      "Id": "cd6feb47952d442b97f6d7940fc27afe",
+      "IsHidden": "False"
     },
     {
       "Start": "2399d5bdb9f84e11899069039b5dd283",
       "End": "a01c85da17294226af546b2b1ac00f5a",
-      "Id": "20ad757adf004ef79ca216df1b602f60"
+      "Id": "20ad757adf004ef79ca216df1b602f60",
+      "IsHidden": "False"
     },
     {
       "Start": "22d99dab9b444769b4347590ab85600c",
       "End": "c4446ca6f4274ba38b96d013af4654b6",
-      "Id": "2ea499f2db0e4e0cb1a7ce4448c20609"
+      "Id": "2ea499f2db0e4e0cb1a7ce4448c20609",
+      "IsHidden": "False"
     },
     {
       "Start": "66eca55fef8a4e39ab503774bcbebf67",
       "End": "ae862241fd194a8581ef032ce8a62ec7",
-      "Id": "81e14aa7dcf6499bb549997d8a874817"
+      "Id": "81e14aa7dcf6499bb549997d8a874817",
+      "IsHidden": "False"
     },
     {
       "Start": "8232b73ac8fc4bf1a83d9f66a8ff36ae",
       "End": "695ddcb50ff84853a1f4a5b1e983e2f0",
-      "Id": "b7cc9cae879e42709219b693e40341f1"
-    },
-    {
-      "Start": "e75965c1658f4cdf86e94074a14d271b",
-      "End": "ae4e33bed29b41e9868d54c48c238f3f",
-      "Id": "d254f1b5cc6e4908b5e1cd384d010ac1"
-    },
-    {
-      "Start": "e75965c1658f4cdf86e94074a14d271b",
-      "End": "c4a16ab336094479ab0d66879517b529",
-      "Id": "064812f0d6a74f3480ffbf445a6459a4"
+      "Id": "b7cc9cae879e42709219b693e40341f1",
+      "IsHidden": "False"
     }
   ],
   "Dependencies": [],
   "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.17",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "4.0",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
   "Bindings": [],
   "View": {
     "Dynamo": {
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.3.0.5885",
+      "Version": "2.17.1.4055",
       "RunType": "Automatic",
       "RunPeriod": "1000"
     },
     "Camera": {
-      "Name": "Background Preview",
+      "Name": "_Background Preview",
       "EyeX": -17.0,
       "EyeY": 24.0,
       "EyeZ": 50.0,
@@ -607,101 +546,100 @@
       "UpY": 1.0,
       "UpZ": 0.0
     },
+    "ConnectorPins": [],
     "NodeViews": [
       {
-        "ShowGeometry": true,
         "Name": "Fator de Variação Modular",
+        "ShowGeometry": true,
         "Id": "8022e18b879a42fe8b3b2518219a0f31",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -667.28904897140183,
-        "Y": 486.92553908443335
+        "X": -793.18369953348792,
+        "Y": 717.40012860120282
       },
       {
-        "ShowGeometry": true,
         "Name": "Separação central",
+        "ShowGeometry": true,
         "Id": "74d74c6b7f5e49fcbb2d49e1b49dd1a2",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -667.28904897140183,
-        "Y": 426.16960780353236
+        "X": -793.18369953348792,
+        "Y": 570.40012860120282
       },
       {
-        "ShowGeometry": true,
         "Name": "Quantidade de Divisões por ciclo",
+        "ShowGeometry": true,
         "Id": "1c111cc742cb497eacc6dc8b80556ae8",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -667.28904897140183,
-        "Y": 365.41367652263034
+        "X": -793.18369953348792,
+        "Y": 423.40012860120282
       },
       {
-        "ShowGeometry": true,
         "Name": "Quantidade de Ciclos",
+        "ShowGeometry": true,
         "Id": "735a56b13f6d45759f24f64807d3a2c0",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -667.28904897140183,
-        "Y": 304.65774524172832
+        "X": -793.18369953348792,
+        "Y": 276.40012860120282
       },
       {
-        "ShowGeometry": true,
         "Name": "Distância do percurso",
+        "ShowGeometry": true,
         "Id": "4456819e89fc4c94a9ef96477f12361e",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -667.28904897140183,
-        "Y": 243.9018139608273
+        "X": -793.18369953348792,
+        "Y": 129.40012860120282
       },
       {
-        "ShowGeometry": true,
         "Name": "Definição de forma baseada em curva Cicloide",
+        "ShowGeometry": true,
         "Id": "d3166fced5ae4d35bea228b1e2223918",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -268.17505081880228,
-        "Y": 332.29547667247505
-      },
-      {
-        "ShowGeometry": true,
-        "Name": "List.IndexOf",
-        "Id": "889b935205dc47d38b363ea3bfacfeba",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 598.93251533167142,
-        "Y": 214.26080710596815
-      },
-      {
-        "ShowGeometry": true,
-        "Name": "Code Block",
-        "Id": "578cc9431c9c446c9998ecce80967ce7",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 396.49065524133789,
-        "Y": 203.17816725329877
-      },
-      {
-        "ShowGeometry": true,
-        "Name": "Code Block",
-        "Id": "eea26f8c51a34f378882232a4b412992",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 437.273532360046,
-        "Y": 314.95178917367173
+        "X": -275.354138769725,
+        "Y": 338.44549964168209
       }
     ],
-    "Annotations": [],
-    "X": 554.8965169975736,
-    "Y": -224.70851954501131,
-    "Zoom": 0.815081968239512
+    "Annotations": [
+      {
+        "Id": "8b4ae97d363d42fc993ff70fe2673f7a",
+        "Title": "Construção e uso da Cicloide",
+        "DescriptionText": "Disciplina:              BIM I Modelagem Digital da Edificação\r\nDesenvolvido por: Prof. José Luis Menegotto\r\nDepartamento de Expressão Gráfica / Escola Politécnica da UFRJ",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "8022e18b879a42fe8b3b2518219a0f31",
+          "74d74c6b7f5e49fcbb2d49e1b49dd1a2",
+          "1c111cc742cb497eacc6dc8b80556ae8",
+          "735a56b13f6d45759f24f64807d3a2c0",
+          "4456819e89fc4c94a9ef96477f12361e",
+          "d3166fced5ae4d35bea228b1e2223918"
+        ],
+        "HasNestedGroups": false,
+        "Left": -803.18369953348792,
+        "Top": 53.800128601202829,
+        "Width": 1075.429560763763,
+        "Height": 1259.6453710404792,
+        "FontSize": 18.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 129.40012860120282,
+        "InitialHeight": 733.0,
+        "TextblockHeight": 65.6,
+        "Background": "#FF48B9FF"
+      }
+    ],
+    "X": 456.18275423148464,
+    "Y": -11.61895642317851,
+    "Zoom": 0.32162994637697484
   }
 }
