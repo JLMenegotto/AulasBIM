@@ -17,11 +17,15 @@ permitirão encontrar os quatro centros dos 4 arcos que cumprem as condições d
 ![o4c](https://github.com/JLMenegotto/AulasBIM/assets/9437020/fb9f37b6-173e-4d5b-82f1-bb098d3571df)
 
 ## Cicloide
-Esta função exemplifica o uso formal de uma Ciclóide para iniciar o processo de busca formal de um projeto. 
+Esta função exemplifica a construção e o uso formal de uma Ciclóide. 
 
 ![Cicloide](https://github.com/JLMenegotto/AulasBIM/assets/9437020/15731552-3b55-41f7-a398-ac2d0ad7974c)
 
 ![Cicloide2](https://github.com/JLMenegotto/AulasBIM/assets/9437020/1c0a0aaa-993f-4e48-ac13-f4947621b362)
 
+## Espirais de n Centros
+Esta função exemplifica a construção e o uso formal de Espirais de n Centros.
+
+![Espirais](https://github.com/JLMenegotto/AulasBIM/assets/9437020/346a6f3f-c9a6-43d9-8b2e-4bc60edf4db9)
 
 
