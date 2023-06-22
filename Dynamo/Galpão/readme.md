@@ -2,7 +2,7 @@
 
 ## Galpão_Tipo1_Modulo.dyn
 
-
+![Galpão_Tipo1_Modulo](https://github.com/JLMenegotto/AulasBIM/assets/9437020/acbfe248-8fab-4c12-a7f0-f08c25185cbe)
 
 ## Galpão_Tipo1.dyn
 
