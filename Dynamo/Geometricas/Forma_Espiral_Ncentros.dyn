@@ -1,0 +1,427 @@
+{
+  "Uuid": "4ad7851b-6999-4367-88bb-ffea53376750",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Forma_Espiral_Ncentros",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Line": {
+        "Key": "Autodesk.DesignScript.Geometry.Line",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Math.PiTimes2": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      },
+      "PolyCurve": {
+        "Key": "Autodesk.DesignScript.Geometry.PolyCurve",
+        "Value": "ProtoGeometry.dll"
+      },
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      },
+      "NurbsCurve": {
+        "Key": "Autodesk.DesignScript.Geometry.NurbsCurve",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Surface": {
+        "Key": "Autodesk.DesignScript.Geometry.Surface",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Arc": {
+        "Key": "Autodesk.DesignScript.Geometry.Arc",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 1.0,
+      "MinimumValue": 0.05,
+      "StepValue": 0.01,
+      "InputValue": 0.27,
+      "Id": "74d74c6b7f5e49fcbb2d49e1b49dd1a2",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2399d5bdb9f84e11899069039b5dd283",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 20.0,
+      "MinimumValue": 1.0,
+      "StepValue": 1.0,
+      "InputValue": 8.0,
+      "Id": "4456819e89fc4c94a9ef96477f12361e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8232b73ac8fc4bf1a83d9f66a8ff36ae",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "q;\nr;\nm   = 360/q;\nvz  = Vector.ZAxis();\nan  = 0..360..m;\nx   = Math.Cos( an ) * r;\ny   = Math.Sin( an ) * r;\ncen = Point.ByCoordinates( x,y,0);\nlad = Point.DistanceTo (cen[0], cen[1]);\ni   = 0..q-1;\nj   = List.ShiftIndices(i, 1);\ndt  = lad + (lad * i);\nVe  = Vector.ByTwoPoints (cen[i] , cen[j]);\nsp  = Point.Translate ( cen[i] , Ve , dt);\ncp  =  List.DropItems(cen,1);\npol = PolyCurve.ByPoints( cp, true);\narc = Arc.ByCenterPointStartPointSweepAngle(cen, sp, m, vz);\nepa = Arc.PointAtParameter(arc, 1);\nrad = Line.ByStartPointEndPoint(cen, epa);",
+      "Id": "d3166fced5ae4d35bea228b1e2223918",
+      "Inputs": [
+        {
+          "Id": "b8d78119edce45e4926252a86db11890",
+          "Name": "q",
+          "Description": "q",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0542ddadc78d4f76b5e3194aebcc9b5b",
+          "Name": "r",
+          "Description": "r",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ea218d8a3e704042831b433320ed0071",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e37be6ab55cf453eb2116658771a3b24",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ac39376965e84bd6b448b1a9f369631a",
+          "Name": "",
+          "Description": "m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "256f5af052144ec9a0d5fd5d565d8694",
+          "Name": "",
+          "Description": "vz",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fd32c39b53c54042b88dd17fcb802095",
+          "Name": "",
+          "Description": "an",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3ed0201884f445fca91972491dc36b66",
+          "Name": "",
+          "Description": "x",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3bb7869803b34f30944612c981f31feb",
+          "Name": "",
+          "Description": "y",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "da979697af3b44daa19a80e555aeb355",
+          "Name": "",
+          "Description": "cen",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9340b02bd1b54b83aa754a8458b8b7c3",
+          "Name": "",
+          "Description": "lad",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2bfac55f552545bbb9202610a1d27bf3",
+          "Name": "",
+          "Description": "i",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4da37de3f83246f7a0d44605c87fb50e",
+          "Name": "",
+          "Description": "j",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1555f877816c44ee9b28f79975fc6532",
+          "Name": "",
+          "Description": "dt",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ff95db3d6d1b4b37804a97f67ed1c9b6",
+          "Name": "",
+          "Description": "Ve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a9688d6387e54bb3a213afd7d658d3de",
+          "Name": "",
+          "Description": "sp",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4f400ffb59224b37974434a64c3d6245",
+          "Name": "",
+          "Description": "cp",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "25f51b03abc84c9790593f24b37dd305",
+          "Name": "",
+          "Description": "pol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3bc047f1a6374a65840f6f54507df496",
+          "Name": "",
+          "Description": "arc",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a6a3fce4d73741efa8bb54cf6b568597",
+          "Name": "",
+          "Description": "epa",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6f9bd9fd8292420a844b70c8cac389bd",
+          "Name": "",
+          "Description": "rad",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "2399d5bdb9f84e11899069039b5dd283",
+      "End": "0542ddadc78d4f76b5e3194aebcc9b5b",
+      "Id": "71b940d20c1c43a4ada8df6574349d7d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8232b73ac8fc4bf1a83d9f66a8ff36ae",
+      "End": "b8d78119edce45e4926252a86db11890",
+      "Id": "b3c2de6efbb14d86bd00a709fac4de8f",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.17",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "4.0",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.17.1.4055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Raio do Polígono Gerador",
+        "ShowGeometry": true,
+        "Id": "74d74c6b7f5e49fcbb2d49e1b49dd1a2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -789.43316968218744,
+        "Y": 270.233629106377
+      },
+      {
+        "Name": "Quantidade de Centros",
+        "ShowGeometry": true,
+        "Id": "4456819e89fc4c94a9ef96477f12361e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -795.673505885209,
+        "Y": 131.88993495292397
+      },
+      {
+        "Name": "Definição de forma baseada em Espirais de n centros",
+        "ShowGeometry": true,
+        "Id": "d3166fced5ae4d35bea228b1e2223918",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -277.84394512144615,
+        "Y": 340.93530599340323
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "8b4ae97d363d42fc993ff70fe2673f7a",
+        "Title": "Construção e uso da Espiral de n Centros",
+        "DescriptionText": "Disciplina:              BIM I Modelagem Digital da Edificação\r\nDesenvolvido por: Prof. José Luis Menegotto\r\nDepartamento de Expressão Gráfica / Escola Politécnica da UFRJ",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "74d74c6b7f5e49fcbb2d49e1b49dd1a2",
+          "4456819e89fc4c94a9ef96477f12361e",
+          "d3166fced5ae4d35bea228b1e2223918"
+        ],
+        "HasNestedGroups": false,
+        "Left": -805.673505885209,
+        "Top": 56.289934952923971,
+        "Width": 1120.2295607637629,
+        "Height": 704.44537104047924,
+        "FontSize": 18.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 131.88993495292397,
+        "InitialHeight": 733.0,
+        "TextblockHeight": 65.6,
+        "Background": "#FF48B9FF"
+      }
+    ],
+    "X": 387.32431090607736,
+    "Y": -189.784314587141,
+    "Zoom": 0.58226349560889079
+  }
+}
