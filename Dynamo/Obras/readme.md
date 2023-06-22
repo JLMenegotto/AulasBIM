@@ -4,7 +4,13 @@ Esta pasta tem funções com a parametrização de diversas obras existentes.
 
 ## Catedral_Brasilia.dyn
 A forma da Catedral de Brasilia. Para rodar a função utilizar o arquivo Catedral_Brasilia.rvt
+A técnica utilizada para modelar as colunas da catedra, consiste em realizar a leitura das linhas que representam as seções transversais de acordo à marcação do arquivo 
 
+![CatedralBrasilia_03](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b7e68e1a-02c1-4436-b5d3-4991547c987b)
+
+![CatedralBrasilia_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/ac4698a0-f8a5-482d-a890-a9bbf2c4f0ea)
+
+![CatedralBrasilia_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/4a55d09c-9fad-4390-b4a6-9f0744708c22)
 
 
 ## Viaduto_Millau_2023.dyn
