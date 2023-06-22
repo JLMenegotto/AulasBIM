@@ -11,3 +11,12 @@ permitirão encontrar os quatro centros dos 4 arcos que cumprem as condições d
 
 ![o4c](https://github.com/JLMenegotto/AulasBIM/assets/9437020/fb9f37b6-173e-4d5b-82f1-bb098d3571df)
 
+## Cicloide
+Esta função exemplifica o uso formal de uma Ciclóide para iniciar o processo de busca formal de um projeto. 
+
+![Cicloide](https://github.com/JLMenegotto/AulasBIM/assets/9437020/15731552-3b55-41f7-a398-ac2d0ad7974c)
+
+![Cicloide2](https://github.com/JLMenegotto/AulasBIM/assets/9437020/1c0a0aaa-993f-4e48-ac13-f4947621b362)
+
+
+
