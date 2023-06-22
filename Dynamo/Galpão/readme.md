@@ -15,3 +15,4 @@ que deviam ser incorporados nas famílias de componentes estrururais (Structural
 ganhou independencia devendo ser lançado de modo independente para logo mais ser associado aos elementos físicos de colunas, vigas e lajes.
 A função Galpao_Analitico_2023.dyn exemplifica o lançamento e uso das categorias desses elementos analíticos.
 
+![Galpão_analitico_2023](https://github.com/JLMenegotto/AulasBIM/assets/9437020/f479b408-6cd8-4a7d-89e5-2ae98294d5d1)
