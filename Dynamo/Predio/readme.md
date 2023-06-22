@@ -23,3 +23,13 @@ com Watch Image para compreender os índices i j utilizados. Podem ser utilizado
 Define uma matriz tridimensional XYZ com a quantidade de módulos estruturais em direções XY e quantidade de Andares
 A função cria os andares e os Eixos estruturais.
 
+## Cria_Eixos.dyn
+
+Função de criação de Eixos estruturais (Grids)
+
+## Cria_Andares.dyf
+
+Função de criação de Andares (Levels). Repare que a função tem extensão **dyf**. Isso sifnifica que se trata de um Custom Node que deve ser qualificado com um nome, uma descrição e pertencer a uma biblioteca de nodos. Os custom nodes serão inseridos em funções **dyn** como subrotinas.
+
+
+
