@@ -8,19 +8,16 @@
 
 ![Galpão_Tipo1](https://github.com/JLMenegotto/AulasBIM/assets/9437020/f3c9def8-91ff-434a-a64a-5a3d4ffd6a14)
 
-## Galpao_Analitico_2023.dyn
+## Estrutura_Analitica_2023_A.dyn
 
-Na versão de Revit 2023 foi modificada a forma de realizar o modelo estrutural analítico do projeto. Até a versão 2022, os eixos e nodos analíticos eram elementos 
-que deviam ser incorporados nas famílias de componentes estrururais (Structural_Columns, Structural_Framming, etc.). A partir da versão 2023, o modelo analítico
-pode ser lançado de modo independente para logo depois ser associado aos elementos físicos de colunas, vigas e lajes, ou, de modo inverso, ser lançado aproveitando 
-os elementos físicos já modelados.  
+Na versão 2023 de Revit foi modificada a forma de realizar o modelo estrutural analítico do projeto. Até a versão 2022, os eixos e nodos analíticos eram elementos que estavam integrados às familias  de componentes estrururais (Structural_Columns, Structural_Framming, etc.) e que deviam ser incorporados ao criar as famílias. A partir da versão 2023, o modelo analítico pode ser lançado de modo **independente** dos elementos estruturais físicos, para logo depois ser associados a esses elementos, ou, de modo inverso, ser lançado aproveitando os elementos físicos já modelados. As duas funções a seguir ilustram esses processos.  
 
-A função **Galpao_Analitico_2023.dyn** exemplifica o lançamento e uso das categorias desses elementos analíticos.
+A função **Galpao_Analitico_2023.dyn** exemplifica o lançamento e uso das categorias dos elementos analíticos.
 
 ![Galpão_analitico_2023](https://github.com/JLMenegotto/AulasBIM/assets/9437020/f479b408-6cd8-4a7d-89e5-2ae98294d5d1)
 
-## Galpao_Analitico_2024.dyn
+## Estrutura_Analitica_2023_B.dyn
 
-A função **Galpao_Analitico_2024.dyn** exemplifica o process inverso, ou seja, o lançamento dos elementos estruturais analíticos a partir dos elementos do modelo físico.
+A função **Estrutura_Analitica_2023_B.dyn** exemplifica o process inverso, ou seja, o lançamento dos elementos estruturais analíticos a partir dos elementos estruturais do modelo físico.
 
 ![Galpão_analitico_2024](https://github.com/JLMenegotto/AulasBIM/assets/9437020/d8f022d8-0749-46c5-b6a4-aeb42409efeb)
