@@ -24,9 +24,6 @@ Esta função exemplifica a construção e o uso formal de uma Ciclóide.
 ![Cicloide2](https://github.com/JLMenegotto/AulasBIM/assets/9437020/1c0a0aaa-993f-4e48-ac13-f4947621b362)
 
 ## Forma_Espiral_NCentros.dyn
-Esta função exemplifica a construção e o uso formal de Espirais de n Centros.
+Esta função exemplifica a construção e o uso formal de Espirais de n Centros. Embaixo, duas espirais, com 6 e 8 centros.
 
-![Espirais](https://github.com/JLMenegotto/AulasBIM/assets/9437020/346a6f3f-c9a6-43d9-8b2e-4bc60edf4db9)
-
-![Espirais](https://github.com/JLMenegotto/AulasBIM/assets/9437020/772f47bc-e156-4fa8-b9c6-1f9b65becb30)
-
+![Espirais](https://github.com/JLMenegotto/AulasBIM/assets/9437020/604a1d98-30c1-4c88-a420-4e3480b25063)
