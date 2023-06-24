@@ -18,15 +18,15 @@ permitirão encontrar os quatro centros dos 4 arcos que cumprem as condições d
 
 ## Code Block 1:
 
-      1. Dx;
-      2. Dy;
-      3. p1 = Point.ByCoordinates(Dx , 0  , 0);
-      4. p2 = Point.ByCoordinates(0  , Dy , 0);
-      5. p3 = Point.ByCoordinates(-Dx, 0  , 0);
-      6. p4 = Point.ByCoordinates(0  , -Dy, 0);
-      7. LP = [p1,p2,p3,p4];
-      8. LPS = List.ShiftIndices(LP, 3);
-      9. Lad = Line.ByStartPointEndPoint(LP, LPS);
+      1.  Dx;
+      2.  Dy;
+      3.  p1 = Point.ByCoordinates(Dx , 0  , 0);
+      4.  p2 = Point.ByCoordinates(0  , Dy , 0);
+      5.  p3 = Point.ByCoordinates(-Dx, 0  , 0);
+      6.  p4 = Point.ByCoordinates(0  , -Dy, 0);
+      7.  LP = [p1,p2,p3,p4];
+      8.  LPS = List.ShiftIndices(LP, 3);
+      9.  Lad = Line.ByStartPointEndPoint(LP, LPS);
       10. Pme = Line.PointAtParameter  (Lad , 0.5);
       11. Nor = Line.NormalAtParameter (Lad , 0.5);
       12. Tng = Line.TangentAtParameter(Lad , 0.5);
