@@ -6,11 +6,11 @@ As explicações dos conteúdos e metodologias das funções estão em vídeos n
 
 Consulte por mais informação em:
 
-  a. **Bibliografia e Material Complementar:**  https://jlmenegotto.wixsite.com/jlmenegotto-bim
-  b. **OntologiaBIM:** https://github.com/JLMenegotto/OntologiaBIM
-  c. **Acustica2024 e Projeto Parla:** https://github.com/JLMenegotto/Acustica_2024
-  d. **Projeto RIO** 
-  e. **Projeto Promenade**
+  1. **Bibliografia e Material Complementar:**  https://jlmenegotto.wixsite.com/jlmenegotto-bim
+  2. **OntologiaBIM:** https://github.com/JLMenegotto/OntologiaBIM
+  3. **Acustica2024 e Projeto Parla:** https://github.com/JLMenegotto/Acustica_2024
+  4. **Projeto RIO** 
+  5. **Projeto Promenade**
 
 ![capa](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b6f1b49d-24e5-4588-b52f-d93869d3784b)
 
