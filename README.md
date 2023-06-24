@@ -12,6 +12,8 @@ Consulte por mais informação em:
   4. **Projeto RIO** https://github.com/JLMenegotto/Rio
   5. **Projeto Promenade** https://github.com/JLMenegotto/Promenade
   6. **Sistemas Projetivos** https://github.com/JLMenegotto/SistemasProjetivos
+  7. **Projeto Atratores** https://github.com/JLMenegotto/Atratores
+  8. **Projeto EGC** https://github.com/JLMenegotto/EGC
 
 ![capa](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b6f1b49d-24e5-4588-b52f-d93869d3784b)
 
