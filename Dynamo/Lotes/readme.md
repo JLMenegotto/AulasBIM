@@ -45,7 +45,7 @@ Exemplifica o aproveitamento das Property_Lines (divisas) de Revit.
     31.  TxOcup  = Math.Ceiling (FaceO.Area / FaceL.Area *100) + " %";
 
 ## Lote_Linhas_Forca.dyn 
-Exemplifica o aproveitamento das Property_Lines (divisas) de Revit utilizando a ideia de linhas de força de um lote, ou seja, as direções que são geometricamente significativas (Eixos principais, transversais, direções normais a cada linha da divisa, etc.). A função precisa dos seguintes nodos customizados complementasres.
+Exemplifica o aproveitamento das Property_Lines (divisas) de Revit utilizando a ideia de linhas de força de um lote, ou seja, as direções que são geometricamente significativas (Eixos principais, transversais, direções normais a cada linha da divisa, etc.). A função precisa dos seguintes nodos customizados complementares.
 
      1. Analisar_Divisas.dyf
      2. Cria_Andares.dyf
