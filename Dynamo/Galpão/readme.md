@@ -18,6 +18,6 @@ A função **Galpao_Analitico_2023.dyn** exemplifica o lançamento e uso das cat
 
 ## Estrutura_Analitica_2023_B.dyn
 
-A função **Estrutura_Analitica_2023_B.dyn** exemplifica o process inverso, ou seja, o lançamento dos elementos estruturais analíticos a partir dos elementos estruturais do modelo físico.
+A função **Estrutura_Analitica_2023_B.dyn** exemplifica o process inverso, ou seja, o lançamento dos elementos estruturais analíticos a partir dos elementos estruturais do modelo físico. Repare que neste exemplo, as colunas estão sem eixo analítico. Isto se deve a que as colunas do modelo físico ainda são colunas arquitetônicas (categoria Columns) ao invés de colunas estruturais (categoria Structural_Columns). 
 
 ![Galpão_analitico_2024](https://github.com/JLMenegotto/AulasBIM/assets/9437020/d8f022d8-0749-46c5-b6a4-aeb42409efeb)
