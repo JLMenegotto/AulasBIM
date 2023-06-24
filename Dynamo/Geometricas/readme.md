@@ -1,8 +1,8 @@
 
 # Geométricas
 
-As funções geométricas exemplificam usos de traçados geométricos para o projeto.
-As explicações dos códigos e das formas podem ser vistas nestes vídeos.
+As funções geométricas exemplificam usos de traçados geométricos para o projeto. As explicações dos códigos e das formas podem ser vistas nestes vídeos.
+Sugere-se que os alunos modifiquem as funções incorporando-lhes novas possibilidades.  
 
   1. Oval de 4 Centros:       https://youtu.be/h-NVtklN2mU
   2. Uso da Ciclóide:         https://youtu.be/7UbUaqYFVvs
