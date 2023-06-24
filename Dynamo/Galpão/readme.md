@@ -27,15 +27,20 @@ A função **Estrutura_Analitica_2023_B.dyn** exemplifica o process inverso, ou 
       1.   Colunas;
       2.   Vigas;
       3.   Lajes;
-      4.   //--------------------------------------------------------------
-      5.   //Cria os Elementos analíticos
-      6.   //--------------------------------------------------------------
-      7.   AnaC = AnalyticalMember.ByElement (Colunas , true, true );
-      8.   AnaV = AnalyticalMember.ByElement (Colunas , true, true );
-      9.   AnaP = AnalyticalPanel.ByElement  (Lajes   , true, true, true);
-      10.  //--------------------------------------------------------------
-      11.  //Define o Rol estrutural de cada elemento analítico
-      12.  //--------------------------------------------------------------
-      13.  RolC = AnalyticalMember.SetStructuralRole ( AnaC , RoleCol );
-      14.  RolV = AnalyticalMember.SetStructuralRole ( AnaV , RoleVig );
-      15.  RolP = AnalyticalPanel.SetStructuralRole  ( AnaP , RoleLaj );
+      4.   RoleCol;
+      5.   RoleVig;
+      6.   RoleLaj;
+      7.   //--------------------------------------------------------------
+      8.   //Cria os Elementos analíticos
+      9.   //--------------------------------------------------------------
+      10.  AnaC = AnalyticalMember.ByElement (Colunas , true, true );
+      11.  AnaV = AnalyticalMember.ByElement (Colunas , true, true );
+      12.  AnaP = AnalyticalPanel.ByElement  (Lajes   , true, true, true);
+      13.  //--------------------------------------------------------------
+      14.  //Define o Rol estrutural de cada elemento analítico
+      15.  //--------------------------------------------------------------
+      16.  RolC = AnalyticalMember.SetStructuralRole ( AnaC , RoleCol );
+      17.  RolV = AnalyticalMember.SetStructuralRole ( AnaV , RoleVig );
+      18.  RolP = AnalyticalPanel.SetStructuralRole  ( AnaP , RoleLaj );
+
+      **Nota:** As variáveis RoleCol, RoleVig e RoleLaj se referem às funções estruturais. Há um nodo Dynamo específico para selecionar essa função (Structural Role)]
