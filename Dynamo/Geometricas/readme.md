@@ -59,6 +59,62 @@ Esta função exemplifica a construção e o uso formal de uma Ciclóide, utiliz
 
 ![Cicloide2](https://github.com/JLMenegotto/AulasBIM/assets/9437020/1c0a0aaa-993f-4e48-ac13-f4947621b362)
 
+## Code Block 1:
+       1.    Dis;
+       2.    cic;
+       3.    q;
+       4.    s;
+       5.    m;
+       6.    r  = Dis / Math.PiTimes2;
+       7.    qt = q*cic;
+       8.    //------------------------------------------------
+       9.    //Mecanismo Cicloide Paramétrica
+       10.   //------------------------------------------------
+       11.   c   = Math.PiTimes2;
+       12.   t   = (0..c..#qt) * cic;
+       13.   a   = Math.RadiansToDegrees ( t );
+       14.   x   = r * (  t - Math.Sin   ( a ));
+       15.   y   = r * (  1 - Math.Cos   ( a ));
+       16.   //------------------------------------------------
+       17.   //Variação modular
+       18.   //------------------------------------------------
+       19.   mod = List.IndexOf( x , x ) % m ? 1.25 : 0.95; 
+       20.   //------------------------------------------------
+       21.   //Listas da Estrutura Formal
+       22.   //------------------------------------------------
+       23.   //Ordenadas
+       24.   y1  = s + 0.1 +( y  * mod     );
+       25.   y0  =          ( y  * mod     );
+       26.   YC  =          ( y  * 0       );
+       27.   //alturas
+       28.   h1  = Math.Abs (     y1 * 0.0 );
+       29.   h2  = Math.Abs (     y1 * 0.2 );
+       30.   HC  = Math.Abs ( s*0.5 + y0 * 0.8 );
+       31.   //------------------------------------------------
+       32.   Ly  = [ y1 , y1 , YC , -y1 , -y1 ];
+       33.   Lz  = [ h1 , h2 , HC ,  h2 ,  h1 ];
+       34.   //------------------------------------------------
+       35.   //Lançamento dos Pontos
+       36.   //------------------------------------------------
+       37.   PO  = Point.ByCoordinates ( x , Ly<1> , Lz<1> );
+       38.   //------------------------------------------------
+       39.   //Lançamento das Curvas
+       40.   //------------------------------------------------
+       41.   POL = PolyCurve.ByPoints  ( PO              , false);
+       42.   POT = PolyCurve.ByPoints  ( Transpose( PO ) , false);
+       43.   //NCT = NurbsCurve.ByPoints ( Transpose( PO ), 1);
+       44.   //------------------------------------------------
+       45.   //Lançamento das Superficies
+       46.   //------------------------------------------------
+       47.   //SUT = Surface.ByLoft      ( POT                );
+       48.   //------------------------------------------------
+       49.   //Definição do plano do Piso
+       50.   //------------------------------------------------
+       51.   LPI = List.SetUnion       ( PO[0] , Reverse(PO[-1]));
+       52.   POP = PolyCurve.ByPoints  ( LPI   , true           );
+       53.   SUP = Surface.ByPatch     ( POP                    );
+
+
 ## Forma_Espiral_NCentros.dyn
 Esta função exemplifica a construção e o uso formal de Espirais de n Centros. Embaixo, duas espirais, com 6 e 8 centros.
 
