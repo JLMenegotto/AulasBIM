@@ -4,16 +4,17 @@ Macros em Dynamo e AutoLISP para Revit e Advance Steel. Desenvolvidas pelo Prof.
 
 As explicações dos conteúdos e metodologias das funções estão em vídeos no Canal YouTube. https://www.youtube.com/channel/UCCN58u2BP38F09aswlJrILA
 
-Consulte por mais informação em:
-
-  1. **Bibliografia e Material Complementar:**  https://jlmenegotto.wixsite.com/jlmenegotto-bim
-  2. **OntologiaBIM:** https://github.com/JLMenegotto/OntologiaBIM
-  3. **Acustica2024 e Projeto Parla:** https://github.com/JLMenegotto/Acustica_2024
-  4. **Projeto RIO** https://github.com/JLMenegotto/Rio
-  5. **Projeto Promenade** https://github.com/JLMenegotto/Promenade
-  6. **Sistemas Projetivos** https://github.com/JLMenegotto/SistemasProjetivos
-  7. **Projeto Atratores** https://github.com/JLMenegotto/Atratores
-  8. **Projeto EGC** https://github.com/JLMenegotto/EGC
+Consulte outros projetos em:
+  
+  1. **OntologiaBIM:**         https://github.com/JLMenegotto/OntologiaBIM
+  2. **Acustica2024 e Parla:** https://github.com/JLMenegotto/Acustica_2024
+  3. **RIO**                   https://github.com/JLMenegotto/Rio
+  4. **Promenade**             https://github.com/JLMenegotto/Promenade
+  5. **Sistemas Projetivos**   https://github.com/JLMenegotto/SistemasProjetivos
+  6. **Atratores**             https://github.com/JLMenegotto/Atratores
+  7. **EGC**                   https://github.com/JLMenegotto/EGC
+     
+  9. **Bibliografia e Material Complementar:**  https://jlmenegotto.wixsite.com/jlmenegotto-bim
 
 ![capa](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b6f1b49d-24e5-4588-b52f-d93869d3784b)
 
