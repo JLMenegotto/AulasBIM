@@ -17,7 +17,7 @@ permitirão encontrar os quatro centros dos 4 arcos que cumprem as condições d
 ![o4c](https://github.com/JLMenegotto/AulasBIM/assets/9437020/fb9f37b6-173e-4d5b-82f1-bb098d3571df)
 
 ## Forma_Cicloide_01.dyn
-Esta função exemplifica a construção e o uso formal de uma Ciclóide. 
+Esta função exemplifica a construção e o uso formal de uma Ciclóide, utilizada como lei formal de uma estrutura cíclica.  
 
 ![Cicloide](https://github.com/JLMenegotto/AulasBIM/assets/9437020/15731552-3b55-41f7-a398-ac2d0ad7974c)
 
