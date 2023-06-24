@@ -1,0 +1,810 @@
+{
+  "Uuid": "307ddc2b-e523-4d2f-abc5-21b9811b19e6",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Lote_Perimetral",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      },
+      "Floor": {
+        "Key": "Revit.Elements.Floor",
+        "Value": "RevitNodes.dll"
+      },
+      "FamilyInstance": {
+        "Key": "Revit.Elements.FamilyInstance",
+        "Value": "RevitNodes.dll"
+      },
+      "FloorPlanView": {
+        "Key": "Revit.Elements.Views.FloorPlanView",
+        "Value": "RevitNodes.dll"
+      },
+      "PolyCurve": {
+        "Key": "Autodesk.DesignScript.Geometry.PolyCurve",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Surface": {
+        "Key": "Autodesk.DesignScript.Geometry.Surface",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Solid": {
+        "Key": "Autodesk.DesignScript.Geometry.Solid",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Line": {
+        "Key": "Autodesk.DesignScript.Geometry.Line",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      },
+      "Dictionary": {
+        "Key": "DesignScript.Builtin.Dictionary",
+        "Value": "DesignScriptBuiltin.dll"
+      },
+      "Geometry": {
+        "Key": "Autodesk.DesignScript.Geometry.Geometry",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Curve": {
+        "Key": "Autodesk.DesignScript.Geometry.Curve",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Plane": {
+        "Key": "Autodesk.DesignScript.Geometry.Plane",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Circle": {
+        "Key": "Autodesk.DesignScript.Geometry.Circle",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 4.0,
+      "MinimumValue": 0.0,
+      "StepValue": 1.0,
+      "InputValue": 0.0,
+      "Id": "457d40cd1044460d868444de6f2b96fa",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "bb7279a711ec40cb9f82f1d45d304029",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Pol_L;\nDAF;\nPRP;\nDMP;\ninv;\n// -------------------------------------------------------------------\n// Inverte valor numérico da profundidade caso a normal seja invertida\n// -------------------------------------------------------------------\nDPR     = inv ? -PRP : PRP;\n// -------------------------------------------------------------------\n// Define as poligonais de ocupação e interna\n// -------------------------------------------------------------------\nPol_O   = Pol_L.Offset( -DAF );\nPol_I   = Pol_L.Offset( -DAF - PRP);\nCurv_O  = Pol_O.Explode();\nCurv_I  = Pol_I.Explode();\n// -------------------------------------------------------------------\n// Calcula os pontos\n// -------------------------------------------------------------------\nNormais = Curv_I.NormalAtParameter( 0.5 );\nPnts_PR = Curv_I.PointAtParameter ( 0.5 );\nPnts_PT = Curve.PointsAtSegmentLengthFromPoint( Curv_I , Pnts_PR, DMP);\nDivi_PT = Line.ByStartPointDirectionLength    ( Pnts_PT, Normais, DPR);\n// -------------------------------------------------------------------\n//Define superfices usando as poligonais do Lote e de Ocupação\nFaceL   = Surface.ByPatch( Pol_L );\nFaceO   = Surface.ByPatch( Pol_O );\n// -------------------------------------------------------------------\n// Calcula taxa de ocupação\n// -------------------------------------------------------------------\nTxOcup  = Math.Ceiling (FaceO.Area / FaceL.Area *100) + \" %\";",
+      "Id": "23ef66b8663749228414bf222f624916",
+      "Inputs": [
+        {
+          "Id": "dcbca76bc06b4a5b97413a22e556bad9",
+          "Name": "Pol_L",
+          "Description": "Pol_L",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c1f8532fc5ee4be08c0cabcc64fe2533",
+          "Name": "DAF",
+          "Description": "DAF",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9afad61c5dd64a5ea6c99c8aa336a7fd",
+          "Name": "PRP",
+          "Description": "PRP",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2e26b839fbe940609eb0eb8c0d6ffc84",
+          "Name": "DMP",
+          "Description": "DMP",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a8a412d381e34d7cade6d5ffb2592adc",
+          "Name": "inv",
+          "Description": "inv",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a9d207915ce84b0890d2403d13b64172",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0a6c1f3dcb5f4186b747d53cb516cce2",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b57ad81c90424c19adc7d2d2847c303a",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "12e98ccbfb994e7ab7b19b2f5677a3d7",
+          "Name": "",
+          "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "013544c537d14f31b9e432ee26a79148",
+          "Name": "",
+          "Description": "Value of expression at line 5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "73d1c343f56140f7b471ef4a90cbb5d4",
+          "Name": "",
+          "Description": "DPR",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "eee8b9a4bd1046aeadc2ab3174c65ee2",
+          "Name": "",
+          "Description": "Pol_O",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "df7a8055c378435c996de7e21b6f5a8c",
+          "Name": "",
+          "Description": "Pol_I",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fb45fde5cad343c6aa75bef47cabf4e3",
+          "Name": "",
+          "Description": "Curv_O",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ab0a6e9294a34560b8c4295ccaa0de8d",
+          "Name": "",
+          "Description": "Curv_I",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ae0e6e022811477c9b097e8aa1815dd8",
+          "Name": "",
+          "Description": "Normais",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7ecec1b3e59f4493a8a71eddf913500a",
+          "Name": "",
+          "Description": "Pnts_PR",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "56c027e8ee7d440988f623da79e97b1c",
+          "Name": "",
+          "Description": "Pnts_PT",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "344cd6af33b045b8a7efd7ad9d27bfcd",
+          "Name": "",
+          "Description": "Divi_PT",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "92392412e29c4c5687e2a9b1203bcaa2",
+          "Name": "",
+          "Description": "FaceL",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "973e1243c8d34b8b98672d916559ea3a",
+          "Name": "",
+          "Description": "FaceO",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ac9d73db00fc40a6b5db45ded9666640",
+          "Name": "",
+          "Description": "TxOcup",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "88d59d3a59354b94ac8b3eea1baaf0b6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "994f82db4efc491ebbde50abefb5d4c1",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Enables selection between True and False"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 5.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 3.0,
+      "Id": "e35b770f065e4b69bdd55bdfaa5fe07f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8aaf4902947940199a44621744dddb6c",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 7.0,
+      "MinimumValue": 1.0,
+      "StepValue": 0.1,
+      "InputValue": 3.1,
+      "Id": "b8f97661d0714e47851fb097f7fae80d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "aec2f3c655c4460a95c08b6906d4fb20",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 10.0,
+      "MinimumValue": 1.0,
+      "StepValue": 0.1,
+      "InputValue": 2.7,
+      "Id": "d636b99eb90949828a4c0699d8bf1908",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "15cd28b8737547b4919ef961b3837f24",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "7a3947728d66408e9f892a96109048f2",
+      "Inputs": [
+        {
+          "Id": "b40a5b1322fb4e7ebfbdfdde7b87710d",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2fb9a274b4eb4eb39c38ee636a126d7a",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualizes a node's output"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "divisas;\nQdiv = List.Count(divisas);\nn;\n\nLote  = divisas[n %Qdiv];\nLot_E = Lote.Geometry         (  );\nPol_L = PolyCurve.ByJoinedCurves ( Lot_E , 0 );",
+      "Id": "fdd37f942cc04e7dab649d3b7483bb5b",
+      "Inputs": [
+        {
+          "Id": "4bf7579592c540c488985c8922be6b09",
+          "Name": "divisas",
+          "Description": "divisas",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c6392d8e172f41ee9727971b2b3459c6",
+          "Name": "n",
+          "Description": "n",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5a5f2d56fc944896bebd3b6978ceb697",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d32a5227a2c443388547755475e8838d",
+          "Name": "",
+          "Description": "Qdiv",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "48fe952086c6470ca657ed68789e7387",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "23566556c0ba4fed884236d02dc09fc1",
+          "Name": "",
+          "Description": "Lote",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e6e402d99b554adeb54729f180cd5a01",
+          "Name": "",
+          "Description": "Lot_E",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ca7680b670cb42a1bb5405f7ec88e177",
+          "Name": "",
+          "Description": "Pol_L",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "581025e010494adf927ee32d2d7d100a",
+      "Inputs": [
+        {
+          "Id": "6366ac33162e49bcabbb5fb1afd4b40f",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2958cd72cc8f4ab6a1fdbfe2999ad243",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 536,
+      "SelectedString": "OST_SiteProperty",
+      "NodeType": "ExtensionNode",
+      "Id": "39f2fca5f1c4486380eebdf792c36c9e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "151f7434181d4e95b07696b9e909457a",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "bb7279a711ec40cb9f82f1d45d304029",
+      "End": "c6392d8e172f41ee9727971b2b3459c6",
+      "Id": "f5313883ecaf412faaaf6e2661825d4c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ac9d73db00fc40a6b5db45ded9666640",
+      "End": "b40a5b1322fb4e7ebfbdfdde7b87710d",
+      "Id": "42c16978d64141d0a15243215f1fe271",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "994f82db4efc491ebbde50abefb5d4c1",
+      "End": "a8a412d381e34d7cade6d5ffb2592adc",
+      "Id": "610d44ea9da94da0bac8dfd0737a350a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8aaf4902947940199a44621744dddb6c",
+      "End": "c1f8532fc5ee4be08c0cabcc64fe2533",
+      "Id": "7a4b4507028545698bb5e6f187099f0b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "aec2f3c655c4460a95c08b6906d4fb20",
+      "End": "9afad61c5dd64a5ea6c99c8aa336a7fd",
+      "Id": "98a53ddc6a834dbd8b38744fd172dc17",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "15cd28b8737547b4919ef961b3837f24",
+      "End": "2e26b839fbe940609eb0eb8c0d6ffc84",
+      "Id": "16dbf21ab4b04277b9df708c63b9b1a8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca7680b670cb42a1bb5405f7ec88e177",
+      "End": "dcbca76bc06b4a5b97413a22e556bad9",
+      "Id": "5ada982ad4ca4e32b189e73b44107319",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2958cd72cc8f4ab6a1fdbfe2999ad243",
+      "End": "4bf7579592c540c488985c8922be6b09",
+      "Id": "1c5a6a540ccc47aa9ddbe588f9aaa4be",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "151f7434181d4e95b07696b9e909457a",
+      "End": "6366ac33162e49bcabbb5fb1afd4b40f",
+      "Id": "300f243133f54cf8bbf715bb1c1a2785",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.17",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "4.0",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.17.0.3472",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -130.31022366464498,
+      "EyeY": 33.174542533624248,
+      "EyeZ": 3.77319934439889,
+      "LookX": 121.0825967964941,
+      "LookY": -37.759945711810104,
+      "LookZ": 54.389675278080716,
+      "UpX": 0.055688243262589004,
+      "UpY": 0.99813479842187669,
+      "UpZ": 0.0250148704107298
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Numero do Lote",
+        "ShowGeometry": true,
+        "Id": "457d40cd1044460d868444de6f2b96fa",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -141.1804466454164,
+        "Y": -306.93091482202794
+      },
+      {
+        "Name": "Ocupação Perimetral do Lote",
+        "ShowGeometry": true,
+        "Id": "23ef66b8663749228414bf222f624916",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 313.11646252612843,
+        "Y": -151.28824161591228
+      },
+      {
+        "Name": "Boolean",
+        "ShowGeometry": true,
+        "Id": "88d59d3a59354b94ac8b3eea1baaf0b6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3.8577609938458863,
+        "Y": 219.8144652373536
+      },
+      {
+        "Name": "Afastamento",
+        "ShowGeometry": true,
+        "Id": "e35b770f065e4b69bdd55bdfaa5fe07f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -144.01104545428791,
+        "Y": -148.57325102406293
+      },
+      {
+        "Name": "Profundidade das unidades",
+        "ShowGeometry": true,
+        "Id": "b8f97661d0714e47851fb097f7fae80d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -144.05178059213222,
+        "Y": -24.992924368501974
+      },
+      {
+        "Name": "Dim. Frontal das unidades",
+        "ShowGeometry": true,
+        "Id": "d636b99eb90949828a4c0699d8bf1908",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -146.21361778541461,
+        "Y": 96.466300231620949
+      },
+      {
+        "Name": "Taxa de Ocupação",
+        "ShowGeometry": true,
+        "Id": "7a3947728d66408e9f892a96109048f2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -6.9540703809420847,
+        "Y": 347.03866273670758
+      },
+      {
+        "Name": "Seleção da divisa e extração da poligonal",
+        "ShowGeometry": true,
+        "Id": "fdd37f942cc04e7dab649d3b7483bb5b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 321.95774085200787,
+        "Y": -382.00263256413473
+      },
+      {
+        "Name": "All Elements of Category",
+        "ShowGeometry": true,
+        "Id": "581025e010494adf927ee32d2d7d100a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -53.425667835079935,
+        "Y": -432.88006677184984
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "39f2fca5f1c4486380eebdf792c36c9e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -381.61125639387876,
+        "Y": -432.50924182859717
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "20945ba2ffcd40da94d7782d96cff370",
+        "Title": "Análise Perimetral de Lotes",
+        "DescriptionText": "Disciplina:              BIM I Modelagem Digital da Edificação\r\nDesenvolvido por: Prof. José Luis Menegotto\r\nDepartamento de Expressão Gráfica / Escola Politécnica da UFRJ",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "457d40cd1044460d868444de6f2b96fa",
+          "23ef66b8663749228414bf222f624916",
+          "88d59d3a59354b94ac8b3eea1baaf0b6",
+          "e35b770f065e4b69bdd55bdfaa5fe07f",
+          "b8f97661d0714e47851fb097f7fae80d",
+          "d636b99eb90949828a4c0699d8bf1908",
+          "7a3947728d66408e9f892a96109048f2",
+          "fdd37f942cc04e7dab649d3b7483bb5b",
+          "581025e010494adf927ee32d2d7d100a",
+          "39f2fca5f1c4486380eebdf792c36c9e"
+        ],
+        "HasNestedGroups": false,
+        "Left": -391.61125639387876,
+        "Top": -507.88006677184984,
+        "Width": 1406.7277189200072,
+        "Height": 990.91872950855736,
+        "FontSize": 18.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": -432.88006677184984,
+        "InitialHeight": 945.91872950855736,
+        "TextblockHeight": 65.0,
+        "Background": "#FF48B9FF"
+      }
+    ],
+    "X": 73.362032117601075,
+    "Y": 289.12644056425989,
+    "Zoom": 0.5799197863040062
+  }
+}
