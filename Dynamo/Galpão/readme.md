@@ -55,28 +55,28 @@ A função **Galpao_Analitico_2023.dyn** exemplifica o lançamento e uso das cat
        14.    i     = 0..Qm;
        15.    j     = 0..Qm-1;
        16.    k     = 1..Qm-0;
-       17.    p00   = PT[0][i];
-       18.    p01   = PT[1][i];
-       19.    p02   = PT[2][i];
-       20.    p03   = PT[3][i];
-       21.    p04   = PT[4][i];
+       17.    p00   = PT[ 0][i];
+       18.    p01   = PT[ 1][i];
+       19.    p02   = PT[ 2][i];
+       20.    p03   = PT[ 3][i];
+       21.    p04   = PT[ 4][i];
        22.    p05   = Point.ByCoordinates(p02.X, p02.Y, p01.Z);
-       23.    Pf11  = PT[0][j];
-       24.    Pf12  = PT[1][k];
-       25.    Pf13  = PT[1][j];
-       26.    Pf14  = PT[0][k];
+       23.    Pf11  = PT[ 0][j];
+       24.    Pf12  = PT[ 1][k];
+       25.    Pf13  = PT[ 1][j];
+       26.    Pf14  = PT[ 0][k];
        27.    pp01  = PT[ 0][j];
        28.    pp02  = PT[-1][j];
        29.    pp11  = PT[-1][k];
        30.    pp12  = PT[ 0][k];
        31.    ptlaj = List.Transpose([pp01, pp02, pp11, pp12]);
        32.    LAJE  = Autodesk.Surface.ByPerimeterPoints(ptlaj);
-       33.    pc1   = PT[2][j];
-       34.    pc2   = PT[2][k];
-       35.    Pf21  = PT[3][j];
-       36.    Pf22  = PT[4][k];
-       37.    Pf23  = PT[4][j];
-       38.    Pf24  = PT[3][k];
+       33.    pc1   = PT[ 2][j];
+       34.    pc2   = PT[ 2][k];
+       35.    Pf21  = PT[ 3][j];
+       36.    Pf22  = PT[ 4][k];
+       37.    Pf23  = PT[ 4][j];
+       38.    Pf24  = PT[ 3][k];
        39.    //----------------------------------------------------------------
        40.    //Colunas
        41.    //----------------------------------------------------------------
@@ -96,10 +96,10 @@ A função **Galpao_Analitico_2023.dyn** exemplifica o lançamento e uso das cat
        55.    //----------------------------------------------------------------
        56.    //Contraventamentos
        57.    //----------------------------------------------------------------
-       58.    CXF11 = i%mo==0? Line.ByStartPointEndPoint( Pf11 , Pf12 ) : null;
-       59.    CXF12 = i%mo==0? Line.ByStartPointEndPoint( Pf13 , Pf14 ) : null;
-       60.    CXF21 = i%mo==0? Line.ByStartPointEndPoint( Pf21 , Pf22 ) : null;
-       61.    CXF22 = i%mo==0? Line.ByStartPointEndPoint( Pf23 , Pf24 ) : null;
+       58.    CXF11 = i%mo == 0 ? Line.ByStartPointEndPoint( Pf11 , Pf12 ) : null;
+       59.    CXF12 = i%mo == 0 ? Line.ByStartPointEndPoint( Pf13 , Pf14 ) : null;
+       60.    CXF21 = i%mo == 0 ? Line.ByStartPointEndPoint( Pf21 , Pf22 ) : null;
+       61.    CXF22 = i%mo == 0 ? Line.ByStartPointEndPoint( Pf23 , Pf24 ) : null;
        62.    //----------------------------------------------------------------
        63.    //Travessas longitudinais
        64.    //----------------------------------------------------------------
