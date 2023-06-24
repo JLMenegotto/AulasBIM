@@ -4,7 +4,12 @@ Macros em Dynamo e AutoLISP para Revit e Advance Steel. Desenvolvidas pelo Prof.
 
 As explicações dos conteúdos e metodologias das funções estão em vídeos no Canal YouTube. https://www.youtube.com/channel/UCCN58u2BP38F09aswlJrILA
 
-Consulte por mais informação em: https://jlmenegotto.wixsite.com/jlmenegotto-bim
+Consulte por mais informação em:
+
+**Bibliografia e Material Complementar:**  https://jlmenegotto.wixsite.com/jlmenegotto-bim
+
+**OntologiaBIM:** https://github.com/JLMenegotto/OntologiaBIM
+**Acustica2024:** 
 
 ![capa](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b6f1b49d-24e5-4588-b52f-d93869d3784b)
 
