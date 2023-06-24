@@ -174,7 +174,7 @@ A função **Estrutura_Analitica_2023_B.dyn** exemplifica o process inverso, ou 
 
 ## Modulador Z 
 
-A função **Modulador_Z.dyn** exemplifica o uso de aritmética modular para definir diversas distribuições de telhados.
+A função **Modulador_Z.dyn** exemplifica o uso de aritmética modular  **(9. z = (xm % m) *dz;)** para definir diversas distribuições de telhados.
 
 
 
