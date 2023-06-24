@@ -171,3 +171,27 @@ A função **Estrutura_Analitica_2023_B.dyn** exemplifica o process inverso, ou 
       18.  RolP = AnalyticalPanel.SetStructuralRole  ( AnaP , RoleLaj );
 
       **Nota:** As variáveis RoleCol, RoleVig e RoleLaj se referem às funções estruturais. Há um nodo Dynamo específico para selecionar essa função (Structural Role)]
+
+## Modulador Z 
+
+A função **Modulador_Z.dyn** exemplifica o uso de aritmética modular para definir diversas distribuições de telhados.
+
+
+
+       1.   n;
+       2.   m;
+       3.   dx;
+       4.   dy;
+       5.   dz;
+       6.   xm = (0..n);
+       7.   xc = (0..n)   *dx;
+       8.   y  = [-1, 1]  *dy;
+       9.   z  = (xm % m) *dz;
+      10.   qx = List.Count( xc);
+      11.   qy = List.Count(  y);
+      12.   i  = 0..qx-2;
+      13.   j  = i+1;
+      14.   PtsO = Point.ByCoordinates      ( xc         ,  y<1>,    z );
+      15.   LinT = Line.ByStartPointEndPoint( PtsO[0]    ,  PtsO[1]    );
+      16.   LiL1 = Line.ByStartPointEndPoint( PtsO[0][i] ,  PtsO[0][j] );
+      17.   LiL2 = Line.ByStartPointEndPoint( PtsO[1][i] ,  PtsO[1][j] );
