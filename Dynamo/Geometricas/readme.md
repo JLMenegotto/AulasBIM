@@ -35,6 +35,23 @@ permitirão encontrar os quatro centros dos 4 arcos que cumprem as condições d
       15. Cen = O4C.CenterPoint;
       16. Lin = Line.ByStartPointEndPoint(Cen, Pme);
 
+## Code Block 2:
+       1. o4c;
+       2. dx;
+       3. dy;
+       4. i1  = [0, 2];
+       5. i2  = i1+1;
+       6. A1  = Arc.Offset(o4c[i1], dy);
+       7. A2  = Arc.Offset(o4c[i2], dx);
+       8. LP1 = [A1[0].EndPoint  , A1[0].StartPoint, A1[1].EndPoint  , A1[1].StartPoint];
+       9. LP2 = [A2[0].StartPoint, A2[1].EndPoint  , A2[1].StartPoint, A2[0].EndPoint  ];
+      10. Lin = Line.ByStartPointEndPoint(LP1 , LP2);
+      11. Con = [A1[0], Lin[0], A2[0], Lin[1], A1[1], Lin[2], A2[1], Lin[3]];
+      12. Bor = PolyCurve.ByJoinedCurves(Con, 0.0);
+      13. Sup = Autodesk.Surface.ByPatch( Bor );
+      14. Are = Sup.Area;
+
+
 ## Forma_Cicloide_01.dyn
 Esta função exemplifica a construção e o uso formal de uma Ciclóide, utilizada como lei formal de uma estrutura cíclica.  
 
