@@ -21,3 +21,21 @@ A função **Galpao_Analitico_2023.dyn** exemplifica o lançamento e uso das cat
 A função **Estrutura_Analitica_2023_B.dyn** exemplifica o process inverso, ou seja, o lançamento dos elementos estruturais analíticos a partir dos elementos estruturais do modelo físico. Repare que neste exemplo, as colunas estão sem eixo analítico. Isto se deve a que as colunas do modelo físico ainda são colunas arquitetônicas (categoria Columns) ao invés de colunas estruturais (categoria Structural_Columns). 
 
 ![Galpão_analitico_2024](https://github.com/JLMenegotto/AulasBIM/assets/9437020/d8f022d8-0749-46c5-b6a4-aeb42409efeb)
+
+
+## Code Block:
+      1.   Colunas;
+      2.   Vigas;
+      3.   Lajes;
+      4.   //--------------------------------------------------------------
+      5.   //Cria os Elementos analíticos
+      6.   //--------------------------------------------------------------
+      7.   AnaC = AnalyticalMember.ByElement (Colunas , true, true );
+      8.   AnaV = AnalyticalMember.ByElement (Colunas , true, true );
+      9.   AnaP = AnalyticalPanel.ByElement  (Lajes   , true, true, true);
+      10.  //--------------------------------------------------------------
+      11.  //Define o Rol estrutural de cada elemento analítico
+      12.  //--------------------------------------------------------------
+      13.  RolC = AnalyticalMember.SetStructuralRole ( AnaC , RoleCol );
+      14.  RolV = AnalyticalMember.SetStructuralRole ( AnaV , RoleVig );
+      15.  RolP = AnalyticalPanel.SetStructuralRole  ( AnaP , RoleLaj );
