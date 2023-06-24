@@ -8,6 +8,9 @@ As funções de Dynamo programadas nesta seção definem métodos para analisar 
   4. Parte 4: https://www.youtube.com/watch?v=GEHhLgOuIKw
 
 ## Lote_Perimetral.dyn
+Exemplifica o aproveitamento das Property_Lines (divisas) de Revit. 
+
+![lote](https://github.com/JLMenegotto/AulasBIM/assets/9437020/cd6b1ff1-e25d-4491-88b6-4c22260cc911)
 
     1.  Pol_L;
     2.  DAF;
