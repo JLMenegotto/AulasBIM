@@ -119,3 +119,31 @@ Esta função exemplifica a construção e o uso formal de uma Ciclóide, utiliz
 Esta função exemplifica a construção e o uso formal de Espirais de n Centros. Embaixo, duas espirais, com 6 e 8 centros.
 
 ![Espirais](https://github.com/JLMenegotto/AulasBIM/assets/9437020/604a1d98-30c1-4c88-a420-4e3480b25063)
+
+## Code Block 1:
+      1.  q; 
+      2.  r; 
+      3.  g;
+      4.  vz  = Vector.ZAxis();
+      5.  // Calcula o módulo angular (ma) e o angulo de giro (g) ----
+      6.  ma  = 360/q;
+      7.  ra  = ma/2 + g;
+      8.  // Indices dos vértices ------------------------------------
+      9.  i   = 0..q-1;
+      10. j   = List.ShiftIndices ( i , 1 );
+      11. // Calcula os angulos aplicando o giro ---------------------
+      12. an  = (0..#q..ma) + ra;
+      13. // Calcula coordenadas XY dos pontos do polígono gerador ---
+      14. x   = Math.Cos ( an ) * r;
+      15. y   = Math.Sin ( an ) * r;
+      16. cen = Point.ByCoordinates ( x , y , 0 );
+      17. // Dimensão do Lado e Acumulada do Lado --------------------
+      18. lad = Point.DistanceTo    ( cen[0] , cen[1] );
+      19. da  = lad + (lad * i);
+      20. Vij = Vector.ByTwoPoints ( cen[i] , cen[j]   );
+      21. sp  = Point.Translate    ( cen[i] , Vij , da );
+      22. //Desenha a espiral  ---------------------------------------
+      23. pol = PolyCurve.ByPoints ( cen    , true );
+      24. arc = Arc.ByCenterPointStartPointSweepAngle(cen, sp, ma, vz);
+      25. epa = Arc.PointAtParameter      (arc , 1);
+      26. rad = Line.ByStartPointEndPoint (cen , epa);
