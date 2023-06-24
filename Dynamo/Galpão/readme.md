@@ -176,6 +176,8 @@ A função **Estrutura_Analitica_2023_B.dyn** exemplifica o process inverso, ou 
 
 A função **Modulador_Z.dyn** exemplifica o uso de aritmética modular para definir diversas distribuições de telhados.
 
+![Telhado_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/11cfb09d-b5e5-474c-ba3c-3fcc87296baa)
+
        1.   n;
        2.   m;
        3.   dx;
