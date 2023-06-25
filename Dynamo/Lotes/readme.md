@@ -13,15 +13,15 @@ Exemplifica o aproveitamento das Property_Lines (divisas) de Revit.
 ![lote](https://github.com/JLMenegotto/AulasBIM/assets/9437020/cd6b1ff1-e25d-4491-88b6-4c22260cc911)
 
 ## Code Block
-    1.  Pol_L;
-    2.  DAF;
-    3.  PRP;
-    4.  DMP;
-    5.  inv;
-    6.  // -------------------------------------------------------------------
-    7.  // Inverte valor numérico da profundidade caso a normal seja invertida
-    8.  // -------------------------------------------------------------------
-    9.  DPR     = inv ? -PRP : PRP;
+     1.  Pol_L;
+     2.  DAF;
+     3.  PRP;
+     4.  DMP;
+     5.  inv;
+     6.  // -------------------------------------------------------------------
+     7.  // Inverte valor numérico da profundidade caso a normal seja invertida
+     8.  // -------------------------------------------------------------------
+     9.  DPR     = inv ? -PRP : PRP;
     10.  // -------------------------------------------------------------------
     11.  // Define as poligonais de ocupação e interna
     12.  // -------------------------------------------------------------------
