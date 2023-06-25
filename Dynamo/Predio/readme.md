@@ -83,10 +83,32 @@ A função cria os andares e os Eixos estruturais.
        22.    k  = 0..Count(pz)-2;
 
 ## Code Block 2
+        1.    alt;
+        2.    vx;
+        3.    vy;
+        4.    cz;
+        5.    //Coloca Andares -------------------------------------------------
+        6.    pav  = 0..List.Count( alt )-1;
+        7.    max  = pav[-1];
+        8.    nome = pav==0 ? "Térreo" : pav==max ? "Cobertura" : pav+"° Andar";
+        9.    Pavto = Level.ByElevationAndName  ( alt , nome );
+       10.    //Coloca Eixos ---------------------------------------------------
+       11.    e    = 2;
+       12.    ex1  = vx[  0][0].StartPoint.Translate ( -e ,  0 ,  0 );
+       13.    ex2  = vx[ -1][0].EndPoint  .Translate (  e ,  0 ,  0 );
+       14.    ey1  = vy[  0][0].StartPoint.Translate (  0 , -e ,  0 );
+       15.    ey2  = vy[ -1][0].EndPoint  .Translate (  0 ,  e ,  0 );
+       16.    Let  = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+       17.    Num   = 1..List.Count(EixoY);
+       18.    EixoX = Grid.ByStartPointEndPoint ( ex1 , ex2  );
+       19.    EixoY = Grid.ByStartPointEndPoint ( ey1 , ey2  );
+       20.    EixoX.SetParameterByName( "Name" , Let      );
+       21.    EixoY.SetParameterByName( "Name" , Num + "" );
 
 ## Cria_Eixos.dyn
 Função de criação de Eixos estruturais (Grids).
 
+## Code Block
         1.    qx;
         2.    qy;
         3.    ds;
@@ -124,6 +146,7 @@ Função de criação de Eixos estruturais (Grids).
 ## Cria_Andares.dyf
 Função de criação de Andares (Levels). Repare que a função tem extensão **dyf**. Isso sifnifica que se trata de um Custom Node que deve ser qualificado com um nome, uma descrição e pertencer a uma biblioteca de nodos. Os custom nodes serão inseridos em funções **dyn** como subrotinas.
 
+## Code Block
         1.    EVI;
         2.    EXI;
         3.    txt = "° Pavto";
