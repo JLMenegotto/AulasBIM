@@ -3,7 +3,6 @@
 Nesta pasta as funções definem elementos predias.
 
 ## Matriz_XY.dyn
-
 Define uma matriz bidimensional XY com a quantidade de módulos estruturais em direções XY. Na função há duas macros
 com Watch Image para compreender os índices i j utilizados. Podem ser utilizados os arquivos de imagem 
 
@@ -17,6 +16,42 @@ com Watch Image para compreender os índices i j utilizados. Podem ser utilizado
 ![Matriz_XY_Contraventamentos1](https://github.com/JLMenegotto/AulasBIM/assets/9437020/f4eb49cd-2d9e-4bec-ad97-bfbefea578e9)
 ![Matriz_XY_Contraventamentos2](https://github.com/JLMenegotto/AulasBIM/assets/9437020/88261b0d-08b6-4b09-8b84-14d5d4afb9fc)
 
+## Code Block
+        1.    qx;
+        2.    qy;
+        3.    dx;
+        4.    dy;
+        5.    //------------------------------------------
+        6.    // Centralizar as coordenadas
+        7.    //------------------------------------------
+        8.    cx  = (qx-1)*dx*0.5;
+        9.    cy  = (qy-1)*dy*0.5;
+       10.    x   = (0..#qx..dx)-cx;
+       11.    y   = (0..#qy..dy)-cy;
+       12.    //------------------------------------------
+       13.    // Forma as listas de pontos
+       14.    //------------------------------------------
+       15.    PtX = Point.ByCoordinates ( x<1>, y   , 0 );
+       16.    PtY = Point.ByCoordinates ( x   , y<1>, 0 );
+       17.    // PtY = Transpose(PtX) pode ser usada;
+       18.    //------------------------------------------
+       19.    // Indices das Diagonais
+       20.    //------------------------------------------
+       21.    i   = 0..qx-2;
+       22.    j   = i+1;
+       23.    k   = 0..qy-2;
+       24.    l   = k+1;
+       25.    //------------------------------------------
+       26.    // Coloca as linhas
+       27.    //------------------------------------------
+       28.    ViH = Line.ByStartPointEndPoint(PtX[i] , PtX[j]);
+       29.    ViV = Line.ByStartPointEndPoint(PtY[k] , PtY[l]);
+       30.    //------------------------------------------
+       31.    // Definição semântica
+       32.    //------------------------------------------
+       33.    llave = ["Vigas_H" , "Vigas_V" ];
+       34.    valor = [ ViH      ,  ViV      ];
+       35.    Dicio = Dictionary.ByKeysValues( llave, valor );
 
 ## Matriz_XYZ.dyn
 
