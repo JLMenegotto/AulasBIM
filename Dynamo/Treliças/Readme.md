@@ -55,35 +55,35 @@
        47.    //------------------------------------------------------------
        48.    // Linhas das Diagonais e Montantes só no caso Tipo 2
        49.    //------------------------------------------------------------
-       50.    LiDIA1 =        Line.ByStartPointEndPoint( PtBS[i] , PtBI[j] );
-       51.    LiDIA2 =        Line.ByStartPointEndPoint( PtBI[j] , PtBS[k] );
-       52.    LiMONT = Tipo2? Line.ByStartPointEndPoint( PtBS[m] , PtBI[m] ):null;
+       50.    LiDIA1  =        Line.ByStartPointEndPoint( PtBS[i] , PtBI[j] );
+       51.    LiDIA2  =        Line.ByStartPointEndPoint( PtBI[j] , PtBS[k] );
+       52.    LiMONT  = Tipo2? Line.ByStartPointEndPoint( PtBS[m] , PtBI[m] ):null;
        53.    //------------------------------------------------------------
        54.    // Pontos e Linhas dos pilares
        55.    //------------------------------------------------------------
-       56.    Pt1   = LiBZSE1.StartPoint;
-       57.    Pt2   = LiBZSE2.EndPoint;
-       58.    Pt01  = Point.ByCoordinates ( Pt1.X , Pt1.Y , 0 );
-       59.    Pt02  = Point.ByCoordinates ( Pt2.X , Pt2.Y , 0 );
-       60.    LiPIE = Line.ByStartPointEndPoint( Pt01, Pt1 );
-       61.    LiPID = Line.ByStartPointEndPoint( Pt02, Pt2 );
+       56.    Pt1     = LiBZSE1.StartPoint;
+       57.    Pt2     = LiBZSE2.EndPoint;
+       58.    Pt01    = Point.ByCoordinates ( Pt1.X , Pt1.Y , 0 );
+       59.    Pt02    = Point.ByCoordinates ( Pt2.X , Pt2.Y , 0 );
+       60.    LiPIE   = Line.ByStartPointEndPoint( Pt01, Pt1 );
+       61.    LiPID   = Line.ByStartPointEndPoint( Pt02, Pt2 );
        62.    //------------------------------------------------------------
        63.    chaves  = [ "Diag1"       , "Diag2"       , "Mont" ];
        64.    valores = [ LiDIA1.Length , LiDIA2.Length , LiMONT.Length ]; 
        65.    Dictionary.ByKeysValues(chaves, valores);
 
 ## Code Block 2
-        1.   Dados;
-        2.   arqE;
-        3.   Vdia1 = Dados["Diag1"];
-        4.  Vdia2 = Dados["Diag2"];
-        5.  Vmont = Dados["Mont"];
-        6.  //------------------------------------------------------------------------
-        7.  //Escrever dados no Excel
-        8.  //------------------------------------------------------------------------
-        9.  dadosD1 = DSOffice.Data.ExportToExcel (arqE  , "Treliça", 0 , 0, Vdia1, false , false );
-       10.  dadosD2 = DSOffice.Data.ExportToExcel (arqE  , "Treliça", 0 , 1, Vdia2, false , false );
-       11.  Montant = DSOffice.Data.ExportToExcel (arqE  , "Treliça", 0 , 2, Vmont, false , false );
+        1.    Dados;
+        2.    arqE;
+        3.    Vdia1  =  Dados["Diag1"];
+        4.    Vdia2  =  Dados["Diag2"];
+        5.    Vmont  =  Dados["Mont"];
+        6.    //------- -----------------------------------------------------------------
+        7.    //Escrever dados no Excel
+        8.    //------------------------------------------------------------------------
+        9.    dadosD1 = DSOffice.Data.ExportToExcel (arqE  , "Treliça", 0 , 0, Vdia1, false , false );
+       10.    dadosD2 = DSOffice.Data.ExportToExcel (arqE  , "Treliça", 0 , 1, Vdia2, false , false );
+       11.    Montant = DSOffice.Data.ExportToExcel (arqE  , "Treliça", 0 , 2, Vmont, false , false );
 
 ![Treliça_CBCA_Tipos1-2](https://github.com/JLMenegotto/AulasBIM/assets/9437020/058aefb0-afff-4141-8efb-ef47f43713dd)
 
