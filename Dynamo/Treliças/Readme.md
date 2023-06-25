@@ -72,6 +72,18 @@
        64.    valores = [ LiDIA1.Length , LiDIA2.Length , LiMONT.Length ]; 
        65.    Dictionary.ByKeysValues(chaves, valores);
 
+## Code Block 2
+        1.   Dados;
+        2.   arqE;
+        3.   Vdia1 = Dados["Diag1"];
+        4.  Vdia2 = Dados["Diag2"];
+        5.  Vmont = Dados["Mont"];
+        6.  //------------------------------------------------------------------------
+        7.  //Escrever dados no Excel
+        8.  //------------------------------------------------------------------------
+        9.  dadosD1 = DSOffice.Data.ExportToExcel (arqE  , "Treliça", 0 , 0, Vdia1, false , false );
+       10.  dadosD2 = DSOffice.Data.ExportToExcel (arqE  , "Treliça", 0 , 1, Vdia2, false , false );
+       11.  Montant = DSOffice.Data.ExportToExcel (arqE  , "Treliça", 0 , 2, Vmont, false , false );
 
 ![Treliça_CBCA_Tipos1-2](https://github.com/JLMenegotto/AulasBIM/assets/9437020/058aefb0-afff-4141-8efb-ef47f43713dd)
 
