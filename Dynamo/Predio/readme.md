@@ -58,6 +58,32 @@ com Watch Image para compreender os índices i j utilizados. Podem ser utilizado
 Define uma matriz tridimensional XYZ com a quantidade de módulos estruturais em direções XY e quantidade de Andares
 A função cria os andares e os Eixos estruturais.
 
+## Code Block 1
+        1.    dx;
+        2.    dy;
+        3.    dz;
+        4.    qx;
+        5.    qy;
+        6.    qz;
+        7.    cotaRN;
+        8.    a  = 0..qx;
+        9.    b  = 0..qy;
+       10.    c  = 0..qz;
+       11.    x  = (a * dx);
+       12.    y  = (b * dy);
+       13.    z  = (c * dz) + cotaRN;
+       14.    px = Point.ByCoordinates( x<1> , y    , z<2> );
+       15.    py = Point.ByCoordinates( x    , y<1> , z<2> );
+       16.    pz = Point.ByCoordinates( x<2> , y    , z<1> );
+       17.    vx = Line.ByStartPointEndPoint( px[i] , px[i+1] );
+       18.    vy = Line.ByStartPointEndPoint( py[j] , py[j+1] );
+       19.    co = Line.ByStartPointEndPoint( pz[k] , pz[k+1] );
+       20.    i  = 0..Count(px)-2;
+       21.    j  = 0..Count(py)-2;
+       22.    k  = 0..Count(pz)-2;
+
+## Code Block 2
+
 ## Cria_Eixos.dyn
 Função de criação de Eixos estruturais (Grids).
 
