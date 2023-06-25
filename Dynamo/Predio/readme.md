@@ -24,7 +24,6 @@ Define uma matriz tridimensional XYZ com a quantidade de módulos estruturais em
 A função cria os andares e os Eixos estruturais.
 
 ## Cria_Eixos.dyn
-
 Função de criação de Eixos estruturais (Grids).
 
         1.    qx;
@@ -62,8 +61,23 @@ Função de criação de Eixos estruturais (Grids).
        33.    Grid.SetParameterByName ([EiH , EiV], "Name" , [let , num]);
 
 ## Cria_Andares.dyf
-
 Função de criação de Andares (Levels). Repare que a função tem extensão **dyf**. Isso sifnifica que se trata de um Custom Node que deve ser qualificado com um nome, uma descrição e pertencer a uma biblioteca de nodos. Os custom nodes serão inseridos em funções **dyn** como subrotinas.
 
-
+        1.    EVI;
+        2.    EXI;
+        3.    txt = "° Pavto";
+        4.    QAT;
+        5.    txt;
+        6.    NOM;
+        7.    CRI = Level.ByElevation          ( 0..#QAT+1..APP );
+        8.    NOM = Math.Floor                 ( 0..QAT         );
+        9.    APA = List.SetDifference         ( EXI , CRI      );
+       10.    Element.Delete                   ( APA            );
+       11.    NOV = Element.Delete             ( APA            );
+       12.    FamilyInstance.SetParameterByName( CRI      , "Name", (NOM)+txt  );
+       13.    FamilyInstance.SetParameterByName( CRI[0]   , "Name", "Térreo"   );
+       14.    FamilyInstance.SetParameterByName( CRI[QAT] , "Name", "Cobertura");
+       15.    Key = ["Andar", "Nome"   , "Cota"         ];
+       16.    Val = [ CRI   , CRI.Name ,  CRI.Elevation ];
+       17.    DIC = Dictionary.ByKeysValues ( Key , Val );
 
