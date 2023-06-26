@@ -44,6 +44,7 @@ Para que os ponteiros se movam angularmente, os módulos angulares devem ser:
 
 ## Crono_Obra.dyn
 Esta função exemplifica o uso de funções temporais para extrair uma planilha excel de uma sequência construtiva (com distribuição lineal do tempo associado ao componente) 
+Cada rubro da obra pode ser extraído para folhas independentes da mesma planilha. Neste exemplo, na planilha **Modelo_04_4D_Crono.xlsx** cria-se uma folha  **Partes_Crono** onde são armazenadas as datas do planejamento construtivo para a estrutura transformada em categoria Parts (Partes). 
 
 ## Code Block
         1.    ELE;
