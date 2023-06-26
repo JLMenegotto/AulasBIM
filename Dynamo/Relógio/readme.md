@@ -43,6 +43,7 @@ Para que os ponteiros se movam angularmente, os módulos angulares devem ser:
 **Nota:** A variável tempo deve receber a informação passada por um nodo que retorne um **timeSpan** p.ex o nodo **DateTime.TimeOfDay**
 
 ## Crono_Obra.dyn
+Esta função exemplifica o uso de funções temporais para extrair uma planilha excel de uma sequência construtiva (com distribuição lineal do tempo associado ao componente) 
 
 ## Code Block
         1.    ELE;
