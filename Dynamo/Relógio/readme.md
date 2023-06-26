@@ -13,32 +13,32 @@ Para que os ponteiros se movam angularmente, os módulos angulares devem ser:
 
      1.    tempo;
      2.    ra;
-     3.    mh    = 30;
-     4.    ms    =  6;
-     5.    angHO = 0..360..mh;
-     6.    angMS = 0..360..ms;
-     7.    p0    = Point.ByCoordinates       ( 0, 0, 0);
-     8.    cs    = CoordinateSystem.ByOrigin ( p0 );
+     3.    mh     = 30;
+     4.    ms     =  6;
+     5.    angHO  = 0..360..mh;
+     6.    angMS  = 0..360..ms;
+     7.    p0     = Point.ByCoordinates       ( 0, 0, 0);
+     8.    cs     = CoordinateSystem.ByOrigin ( p0 );
      9.    //Converte em string o Tempo Atual e separa Hora, Min e Seg ------
-    10.    hora  = String.Substring( tempo+"" , 0 , 2);
-    11.    minu  = String.Substring( tempo+"" , 3 , 2);
-    12.    segu  = String.Substring( tempo+"" , 6 , 2);
+    10.    hora   = String.Substring( tempo+"" , 0 , 2);
+    11.    minu   = String.Substring( tempo+"" , 3 , 2);
+    12.    segu   = String.Substring( tempo+"" , 6 , 2);
     13.    //Angulo do Tempo Atual de Hora, minuto e segundo ----------------
-    14.    hoa   = String.ToNumber(hora) %12 * -mh+90;
-    15.    mia   = String.ToNumber(minu)     * -ms+90;
-    16.    sea   = String.ToNumber(segu)     * -ms+90;
+    14.    hoa    = String.ToNumber(hora) %12 * -mh+90;
+    15.    mia    = String.ToNumber(minu)     * -ms+90;
+    16.    sea    = String.ToNumber(segu)     * -ms+90;
     17.    //Marcas de Horas e minutos --------------------------------------
-    18.    marh1 = Point.ByCylindricalCoordinates ( cs, angHO , 0 , ra*1.6);
-    19.    marh2 = Point.ByCylindricalCoordinates ( cs, angHO , 0 , ra*1.9);
-    20.    marm1 = Point.ByCylindricalCoordinates ( cs, angMS , 0 , ra*1.8);
-    21.    marm2 = Point.ByCylindricalCoordinates ( cs, angMS , 0 , ra*1.9);
+    18.    marh1  = Point.ByCylindricalCoordinates ( cs, angHO , 0 , ra*1.6);
+    19.    marh2  = Point.ByCylindricalCoordinates ( cs, angHO , 0 , ra*1.9);
+    20.    marm1  = Point.ByCylindricalCoordinates ( cs, angMS , 0 , ra*1.8);
+    21.    marm2  = Point.ByCylindricalCoordinates ( cs, angMS , 0 , ra*1.9);
     22.    //Ponteiros de Horas Minutos e Segundos --------------------------
-    23.    ph    = Point.ByCylindricalCoordinates ( cs, hoa   , 0 , ra*1.1);
-    24.    pm    = Point.ByCylindricalCoordinates ( cs, mia   , 0 , ra*1.4);
-    25.    ps    = Point.ByCylindricalCoordinates ( cs, sea   , 0 , ra*1.5);
-    26.    LmaH  = Line.ByStartPointEndPoint      ( marh1 , marh2 );
-    27.    LmaM  = Line.ByStartPointEndPoint      ( marm1 , marm2 );
-    28.    Lpon  = Line.ByStartPointEndPoint      ( p0 , [ph, pm, ps] );
+    23.    ph     = Point.ByCylindricalCoordinates ( cs, hoa   , 0 , ra*1.1);
+    24.    pm     = Point.ByCylindricalCoordinates ( cs, mia   , 0 , ra*1.4);
+    25.    ps     = Point.ByCylindricalCoordinates ( cs, sea   , 0 , ra*1.5);
+    26.    LmaH   = Line.ByStartPointEndPoint      ( marh1 , marh2 );
+    27.    LmaM   = Line.ByStartPointEndPoint      ( marm1 , marm2 );
+    28.    Lpon   = Line.ByStartPointEndPoint      ( p0 , [ph, pm, ps] );
 
 **Nota:** A variável tempo deve receber a informação passada por um nodo que retorne um **timeSpan** p.ex o nodo **DateTime.TimeOfDay**
 
@@ -54,12 +54,12 @@ A variável **TTO** significa **Tempo Total de Obra** e deve ser ingressado como
 ## Code Block
         1.    ELE;
         2.    TTO;
-        3.    Itens   = List.Count(ELE); 
-        4.    drive   = "C:\\";
-        5.    pasta   = "JLMenegotto\\Academia\\";
-        6.    arqui   = "Modelo_04_4D_Crono.xlsx";
-        7.    arquivo = drive + pasta + arqui;
-        8.    tabela  = "Partes_Crono";
+        3.    Itens     = List.Count(ELE); 
+        4.    drive     = "C:\\";
+        5.    pasta     = "JLMenegotto\\Academia\\";
+        6.    arqui     = "Modelo_04_4D_Crono.xlsx";
+        7.    arquivo   = drive + pasta + arqui;
+        8.    tabela    = "Partes_Crono";
         9.    //---------------------------------------------------------------------------
        10.    // Define os tempos e Formata o modo de escrita
        11.    //---------------------------------------------------------------------------
@@ -92,23 +92,23 @@ A variável **TTO** significa **Tempo Total de Obra** e deve ser ingressado como
        38.    //---------------------------------------------------------------------------
        39.    // Condicionais de filtragem
        40.    //---------------------------------------------------------------------------
-       41.    Vig    = String.Contains ( TIPO , "V" , true )==1 ? true : false;
-       42.    Laj    = String.Contains ( TIPO , "L" , true )==1 ? true : false;
-       43.    Pil    = String.Contains ( TIPO , "P" , true )==1 ? true : false;
-       44.    ELID   = ELE.Id;
-       45.    INXA   = List.IndexOf ( Cotas , COTA )+1;
-       46.    INXB   = Vig? 1 : Laj ? 2 : 3;
-       47.    DURI   = DPI;
-       48.    CATE   = FamilyInstance.GetParameterValueByName (ELE  , "Original Category" );
-       49.    TIPO   = FamilyInstance.GetParameterValueByName (ELE  , "Original Type"     );
-       50.    LEVL   = FamilyInstance.GetParameterValueByName (ELE  , "Base Level"        );
-       51.    NDA    = Level.GetParameterValueByName          (LEVL , "Name"              );
-       52.    COTA   = Level.GetParameterValueByName          (LEVL , "Elevation"         );
+       41.    Vig           = String.Contains ( TIPO , "V" , true )==1 ? true : false;
+       42.    Laj           = String.Contains ( TIPO , "L" , true )==1 ? true : false;
+       43.    Pil           = String.Contains ( TIPO , "P" , true )==1 ? true : false;
+       44.    ELID          = ELE.Id;
+       45.    INXA          = List.IndexOf ( Cotas , COTA )+1;
+       46.    INXB          = Vig? 1 : Laj ? 2 : 3;
+       47.    DURI          = DPI;
+       48.    CATE          = FamilyInstance.GetParameterValueByName (ELE  , "Original Category" );
+       49.    TIPO          = FamilyInstance.GetParameterValueByName (ELE  , "Original Type"     );
+       50.    LEVL          = FamilyInstance.GetParameterValueByName (ELE  , "Base Level"        );
+       51.    NDA           = Level.GetParameterValueByName          (LEVL , "Name"              );
+       52.    COTA          = Level.GetParameterValueByName          (LEVL , "Elevation"         );
        53.    //---------------------------------------------------------------------------
        54.    // Forma a lista com as culunas de dados que serão extraídos 
        55.    //---------------------------------------------------------------------------
-       56.    kob    = ["INXA","INXB","CATE","TIPO","ANDA","ELID","TARE","DataTI","DataTF"];
-       57.    vob    = [ INXA , INXB , CATE , TIPO , ANDA , ELID , TARE , DataTI , DataTF ];
+       56.    kob           = ["INXA","INXB","CATE","TIPO","ANDA","ELID","TARE","DataTI","DataTF"];
+       57.    vob           = [ INXA , INXB , CATE , TIPO , ANDA , ELID , TARE , DataTI , DataTF ];
        58.    //---------------------------------------------------------------------------
        59.    //Escreve os dados em Planilha Excel
        50.    //---------------------------------------------------------------------------
@@ -116,7 +116,7 @@ A variável **TTO** significa **Tempo Total de Obra** e deve ser ingressado como
        62.    DSOffice.Data.ExportExcel( arquivo , tabela, 1, 0, Transpose(vob) , false);  
 
 ## Crono_Obra_Metalica.dyn
-Este exemplo
+A função **Crono_Obra_Metalica.dyn** exemplifica o uso de funções temporais para extrair dados em formato CSV de uma sequência construtiva (com distribuição lineal do tempo associado ao componente) A filtragem dos elementos metálicos utiliza o parâmetro **UsoEstrutural** para discriminar a função dos elementos. Os dados em CSV podem ser utilizados em **Navisworks**, para criar a linha de tempo de tarefas automaticamente.
 
         1.     DRV;
         2.     FUN;
@@ -127,54 +127,54 @@ Este exemplo
         7.     //Define local de gravação do arquivo CSV
         8.     //------------------------------------------------------------------------
         9.     pasta   = DRV+":\\JLMenegotto\\Academia\\";
-       10.    arqcsv  = "Modelo_Galpao.csv";
-       11.    arquiv  = pasta + arqcsv;
+       10.    arqcsv   = "Modelo_Galpao.csv";
+       11.    arquiv   = pasta + arqcsv;
        12.    //------------------------------------------------------------------------
        13.    //Ordena Porticos pela coordenada Y
        14.    //------------------------------------------------------------------------
-       15.    FUNY    = List.SortByKey(FUN , FUN.Location.Y           )["sortedList"];
-       16.    COLY    = List.SortByKey(COL , COL.Location.StartPoint.Y)["sortedList"];
-       17.    VIGY    = List.SortByKey(VIG , VIG.Location.StartPoint.Y)["sortedList"];
+       15.    FUNY     = List.SortByKey(FUN , FUN.Location.Y           )["sortedList"];
+       16.    COLY     = List.SortByKey(COL , COL.Location.StartPoint.Y)["sortedList"];
+       17.    VIGY     = List.SortByKey(VIG , VIG.Location.StartPoint.Y)["sortedList"];
        18.    //------------------------------------------------------------------------
        19.    //Separa Vigas e Terças 
        20.    //------------------------------------------------------------------------
-       21.    USOE    = FamilyInstance.GetParameterValueByName (VIGY , "UsoEstrutural");
-       22.    VIGA    = List.Clean(USOE=="Viga"  ? VIGY : null, false);
-       23.    TERC    = List.Clean(USOE=="Terca" ? VIGY : null, false);
+       21.    USOE     = FamilyInstance.GetParameterValueByName (VIGY , "UsoEstrutural");
+       22.    VIGA     = List.Clean(USOE=="Viga"  ? VIGY : null, false);
+       23.    TERC     = List.Clean(USOE=="Terca" ? VIGY : null, false);
        24.    //------------------------------------------------------------------------
        25.    //Unifica as listas ordenadas em uma única lista de Elementos
        26.    //Prepara índices para sequenciar temporalmente e Extrai parâmetro Custo
        27.    //------------------------------------------------------------------------
-       28.    Elem    = List.Flatten ( [FUNY , COLY , VIGA , TERC ] , 1);
-       29.    IeleI   = List.IndexOf ( Elem , Elem )+1;
-       30.    IeleF   = IeleI + 1;
-       31.    Qelem   = List.Count   ( IeleI );
-       32.    TIPO    = FamilyInstance.GetParameterValueByName(Elem, "Type");
-       33.    CUST    = FamilyType.GetParameterValueByName    (TIPO, "Cost");
+       28.    Elem     = List.Flatten ( [FUNY , COLY , VIGA , TERC ] , 1);
+       29.    IeleI    = List.IndexOf ( Elem , Elem )+1;
+       30.    IeleF    = IeleI + 1;
+       31.    Qelem    = List.Count   ( IeleI );
+       32.    TIPO     = FamilyInstance.GetParameterValueByName(Elem, "Type");
+       33.    CUST     = FamilyType.GetParameterValueByName    (TIPO, "Cost");
        34.    //----------------------------------------------------------------------
        35.    // Prepara os tempos
        36.    //----------------------------------------------------------------------
-       37.    DltItm  = TTO / Qelem;
-       38.    diaIni  = IeleI * DltItm;
-       39.    diaFim  = IeleF * DltItm;
-       40.    Dia_1   = DSCore.DateTime.Today;
-       41.    IniTare = DSCore.TimeSpan.Create      ( diaIni , 0, 0, 0, 0 );
-       42.    FimTare = DSCore.TimeSpan.Create      ( diaFim , 0, 0, 0, 0 );
-       43.    Data_TI = DSCore.DateTime.AddTimeSpan ( Dia_1  , IniTare    );
-       44.    Data_TF = DSCore.DateTime.AddTimeSpan ( Dia_1  , FimTare    );
+       37.    DltItm   = TTO / Qelem;
+       38.    diaIni   = IeleI * DltItm;
+       39.    diaFim   = IeleF * DltItm;
+       40.    Dia_1    = DSCore.DateTime.Today;
+       41.    IniTare  = DSCore.TimeSpan.Create      ( diaIni , 0, 0, 0, 0 );
+       42.    FimTare  = DSCore.TimeSpan.Create      ( diaFim , 0, 0, 0, 0 );
+       43.    Data_TI  = DSCore.DateTime.AddTimeSpan ( Dia_1  , IniTare    );
+       44.    Data_TF  = DSCore.DateTime.AddTimeSpan ( Dia_1  , FimTare    );
        45.    //--------------------------------------------------------------------
        46.    // Prepara os dados a extrair
        47.    //--------------------------------------------------------------------
-       48.    INDC = FamilyInstance.GetParameterValueByName (Elem, "UsoEstrutural");
-       49.    NUME = FamilyInstance.GetParameterValueByName (Elem, "Mark");
-       50.    ID   = Elem.Id;
-       51.    TIPT = List.OfRepeatedItem    ( "Construct" , Qelem   );
-       52.    TARI = DSCore.DateTime.Format ( Data_TI , "dd/MM/yyyy");
-       53.    TARF = DSCore.DateTime.Format ( Data_TF , "dd/MM/yyyy");
+       48.    INDC     = FamilyInstance.GetParameterValueByName (Elem, "UsoEstrutural");
+       49.    NUME     = FamilyInstance.GetParameterValueByName (Elem, "Mark");
+       50.    ID       = Elem.Id;
+       51.    TIPT     = List.OfRepeatedItem    ( "Construct" , Qelem   );
+       52.    TARI     = DSCore.DateTime.Format ( Data_TI , "dd/MM/yyyy");
+       53.    TARF     = DSCore.DateTime.Format ( Data_TF , "dd/MM/yyyy");
        54.    //---------------------------------------------------------------------
        55.    //Ordena e Escreve os dados em Arquivo CSV
        56.    //---------------------------------------------------------------------
-       57.    cabe    = "TAREFA,ID,TIPOTAREFA,DATAI,DATAF,DATARI,DATARF,CUSTO";
-       58.    vals    = [INDC+"_"+NUME+","+ID+","+TIPT+","+TARI+","+TARF+","+TARI+","+TARF+","+CUST];
-       59.    dados   = List.AddItemToFront( cabe , List.Flatten( vals , 1));
+       57.    cabe     = "TAREFA,ID,TIPOTAREFA,DATAI,DATAF,DATARI,DATARF,CUSTO";
+       58.    vals     = [INDC+"_"+NUME+","+ID+","+TIPT+","+TARI+","+TARF+","+TARI+","+TARF+","+CUST];
+       59.    dados    = List.AddItemToFront( cabe , List.Flatten( vals , 1));
        60.    DSOffice.Data.ExportCSV( arquiv , dados);
