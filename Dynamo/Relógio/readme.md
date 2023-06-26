@@ -46,6 +46,8 @@ Para que os ponteiros se movam angularmente, os módulos angulares devem ser:
 Esta função exemplifica o uso de funções temporais para extrair uma planilha excel de uma sequência construtiva (com distribuição lineal do tempo associado ao componente) 
 Cada rubro da obra pode ser extraído para folhas independentes da mesma planilha. Neste exemplo, na planilha **Modelo_04_4D_Crono.xlsx** cria-se uma folha  **Partes_Crono** onde são armazenadas as datas do planejamento construtivo dos elementos estruturais (Vigas, Lajes e pilares), ordenados por andar e transformados em categoria Parts (Partes). Os dados da planilha podem ser extraídos posteriormente para um formato CSV e transportados para **Navisworks**, onde será criada a linha de tempo.
 Repare que a variável **COTA**, que aparece numa declaração na linha 20.  somente é definida na linha 52. Isso demonstra o processamento associativo da linguagem DesignScript.
+A variável **ELE** é a lista de elementos (de alguma categoria).
+A variável **TTO** significa **Tempo Total de Obra** e deve ser ingressado como um número inteiro. 
 
 ## Code Block
         1.    ELE;
