@@ -6,6 +6,8 @@ Esta função exemplifica o uso de coordenadas cilíndricas aplicadas para const
 
 **ra = e%2==0 ? r : r*1.5;**    O aluno pode variar esta declaração para incorporar valores modulares diferentes de 2. 
 
+![torre](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b451badd-5201-4e8e-b187-5553ffa24cd7)
+
 ## Code Block
         1.    r;
         2.    q;
@@ -28,5 +30,4 @@ Esta função exemplifica o uso de coordenadas cilíndricas aplicadas para const
        19.    Dia1 = Line.ByStartPointEndPoint( bav[j].StartPoint , bav[j+1].EndPoint   );
        20.    Dia2 = Line.ByStartPointEndPoint( bav[j].EndPoint   , bav[j+1].StartPoint );
 
-![torre](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b451badd-5201-4e8e-b187-5553ffa24cd7)
 
