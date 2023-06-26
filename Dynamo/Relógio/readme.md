@@ -44,7 +44,7 @@ Para que os ponteiros se movam angularmente, os módulos angulares devem ser:
 
 ## Crono_Obra.dyn
 Esta função exemplifica o uso de funções temporais para extrair uma planilha excel de uma sequência construtiva (com distribuição lineal do tempo associado ao componente) 
-Cada rubro da obra pode ser extraído para folhas independentes da mesma planilha. Neste exemplo, na planilha **Modelo_04_4D_Crono.xlsx** cria-se uma folha  **Partes_Crono** onde são armazenadas as datas do planejamento construtivo para a estrutura transformada em categoria Parts (Partes). 
+Cada rubro da obra pode ser extraído para folhas independentes da mesma planilha. Neste exemplo, na planilha **Modelo_04_4D_Crono.xlsx** cria-se uma folha  **Partes_Crono** onde são armazenadas as datas do planejamento construtivo para a estrutura transformada em categoria Parts (Partes). Os dados da planilha podem posteriormente ser extraídos para um formato CSV e transportados para **Navisworks** onde será criada a linha de tempo.
 
 ## Code Block
         1.    ELE;
@@ -87,22 +87,25 @@ Cada rubro da obra pode ser extraído para folhas independentes da mesma planilh
        38.    //---------------------------------------------------------------------------
        39.    // Condicionais de filtragem
        40.    //---------------------------------------------------------------------------
-       40.    Vig    = String.Contains ( TIPO , "V" , true )==1 ? true : false;
-       41.    Laj    = String.Contains ( TIPO , "L" , true )==1 ? true : false;
-       42.    Pil    = String.Contains ( TIPO , "P" , true )==1 ? true : false;
-       43.    ELID  = ELE.Id;
-       44.    INXA  = List.IndexOf ( Cotas , COTA )+1;
-       45.    INXB  = Vig? 1 : Laj ? 2 : 3;
-       46.    DURI  = DPI;
-       47.    CATE  = FamilyInstance.GetParameterValueByName (ELE  , "Original Category");
-       48.    TIPO  = FamilyInstance.GetParameterValueByName (ELE  , "Original Type"    );
-       49.    LEVL  = FamilyInstance.GetParameterValueByName (ELE  , "Base Level"       );
-       50.    NDA  = Level.GetParameterValueByName          (LEVL , "Name"             );
-       51.    COTA  = Level.GetParameterValueByName          (LEVL , "Elevation"        );
-       52.    kob = ["INXA","INXB","CATE","TIPO","ANDA","ELID","TARE","DataTI","DataTF"];
-       53.    vob = [ INXA , INXB , CATE , TIPO , ANDA , ELID , TARE , DataTI , DataTF ];
-       54.    //---------------------------------------------------------------------------
-       55.    //Escreve os dados em Planilha Excel
-       56.    //---------------------------------------------------------------------------
-       57.    DSOffice.Data.ExportExcel( arquivo , tabela, 0, 0, [kob]          , false);
-       58.    DSOffice.Data.ExportExcel( arquivo , tabela, 1, 0, Transpose(vob) , false);  
+       41.    Vig    = String.Contains ( TIPO , "V" , true )==1 ? true : false;
+       42.    Laj    = String.Contains ( TIPO , "L" , true )==1 ? true : false;
+       43.    Pil    = String.Contains ( TIPO , "P" , true )==1 ? true : false;
+       44.    ELID   = ELE.Id;
+       45.    INXA   = List.IndexOf ( Cotas , COTA )+1;
+       46.    INXB   = Vig? 1 : Laj ? 2 : 3;
+       47.    DURI   = DPI;
+       48.    CATE   = FamilyInstance.GetParameterValueByName (ELE  , "Original Category" );
+       49.    TIPO   = FamilyInstance.GetParameterValueByName (ELE  , "Original Type"     );
+       50.    LEVL   = FamilyInstance.GetParameterValueByName (ELE  , "Base Level"        );
+       51.    NDA    = Level.GetParameterValueByName          (LEVL , "Name"              );
+       52.    COTA   = Level.GetParameterValueByName          (LEVL , "Elevation"         );
+       53.    //---------------------------------------------------------------------------
+       54.    // Forma a lista com as culunas de dados que serão extraídos 
+       55.    //---------------------------------------------------------------------------
+       56.    kob    = ["INXA","INXB","CATE","TIPO","ANDA","ELID","TARE","DataTI","DataTF"];
+       57.    vob    = [ INXA , INXB , CATE , TIPO , ANDA , ELID , TARE , DataTI , DataTF ];
+       58.    //---------------------------------------------------------------------------
+       59.    //Escreve os dados em Planilha Excel
+       50.    //---------------------------------------------------------------------------
+       61.    DSOffice.Data.ExportExcel( arquivo , tabela, 0, 0, [kob]          , false);
+       62.    DSOffice.Data.ExportExcel( arquivo , tabela, 1, 0, Transpose(vob) , false);  
