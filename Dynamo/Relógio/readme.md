@@ -49,6 +49,8 @@ Repare que a variável **COTA**, que aparece numa declaração na linha 20.  som
 A variável **ELE** é a lista de elementos (de alguma categoria).
 A variável **TTO** significa **Tempo Total de Obra** e deve ser ingressado como um número inteiro. 
 
+![Excell_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/9dd45b96-e945-40bd-9d1d-99b3a62a6fe6)
+
 ## Code Block
         1.    ELE;
         2.    TTO;
