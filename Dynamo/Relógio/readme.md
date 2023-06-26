@@ -44,7 +44,8 @@ Para que os ponteiros se movam angularmente, os módulos angulares devem ser:
 
 ## Crono_Obra.dyn
 Esta função exemplifica o uso de funções temporais para extrair uma planilha excel de uma sequência construtiva (com distribuição lineal do tempo associado ao componente) 
-Cada rubro da obra pode ser extraído para folhas independentes da mesma planilha. Neste exemplo, na planilha **Modelo_04_4D_Crono.xlsx** cria-se uma folha  **Partes_Crono** onde são armazenadas as datas do planejamento construtivo para a estrutura transformada em categoria Parts (Partes). Os dados da planilha podem posteriormente ser extraídos para um formato CSV e transportados para **Navisworks** onde será criada a linha de tempo.
+Cada rubro da obra pode ser extraído para folhas independentes da mesma planilha. Neste exemplo, na planilha **Modelo_04_4D_Crono.xlsx** cria-se uma folha  **Partes_Crono** onde são armazenadas as datas do planejamento construtivo dos elementos estruturais (fundações, pilares, vigas e lajes), ordenados por andar e transformados em categoria Parts (Partes). Os dados da planilha podem ser extraídos posteriormente para um formato CSV e transportados para **Navisworks**, onde será criada a linha de tempo.
+Repare que a variável **COTA**, que aparece numa declaração na linha 20.  somente é definida na linha 52. Isso demonstra o processamento associativo da linguagem DesignScript.
 
 ## Code Block
         1.    ELE;
@@ -72,7 +73,7 @@ Cada rubro da obra pode ser extraído para folhas independentes da mesma planilh
        23.    L_EleNiv      = L_Niveis[qniv+1] - L_Niveis[qniv];
        24.    Qniveis       = List.UniqueItems( List.IndexOf ( COTA , COTA ))+1;
        25.    DTCota        = Math.Floor      ( List.IndexOf ( COTA , COTA )/100);
-       26.     DeltaT        = TPA * INXA;
+       26.    DeltaT        = TPA * INXA;
        27.    ItarefaI      = DTCota;
        28.    ItarefaF      = DTCota +2;
        29.    NumerTI       = ItarefaI + DeltaT;
