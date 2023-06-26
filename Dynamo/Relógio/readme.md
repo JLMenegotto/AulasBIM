@@ -118,6 +118,9 @@ A variável **TTO** significa **Tempo Total de Obra** e deve ser ingressado como
 ## Crono_Obra_Metalica.dyn
 A função **Crono_Obra_Metalica.dyn** exemplifica o uso de funções temporais para extrair dados em formato CSV de uma sequência construtiva (com distribuição lineal do tempo associado ao componente) A filtragem dos elementos metálicos utiliza o parâmetro **UsoEstrutural** para discriminar a função dos elementos. Os dados em CSV podem ser utilizados em **Navisworks**, para criar a linha de tempo de tarefas automaticamente.
 
+![CSV_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/bfa5eafe-f1c7-4f62-a0f8-738f1856f4d1)
+
+## Code Block
         1.     DRV;
         2.     FUN;
         3.     COL;
