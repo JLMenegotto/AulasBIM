@@ -144,7 +144,7 @@ Função de criação de Eixos estruturais (Grids).
        33.    Grid.SetParameterByName ([EiH , EiV], "Name" , [let , num]);
 
 ## Cria_Andares.dyf
-Função de criação de Andares (Levels). Repare que a função tem extensão **dyf**. Isso significa que trata-se de um **Custom Node** que deve ser qualificado com um nome, uma descrição e ser integrande de uma biblioteca de nodos. Custom Nodes são funções que executam tarefas nas funções **dyn** onde estão inseridos. Eles são subrotinas que contêm processos utilizados com frequência.
+Função de criação de Andares (Levels). Repare que a função tem extensão **dyf**. Isso significa que trata-se de um **Custom Node** que deve ser qualificado com um nome, uma descrição e ser integrante de uma biblioteca de funções. Custom Nodes são funções que executam tarefas quando inseridos em funções **dyn**. Eles são subrotinas que contêm processos utilizados com frequência.
 
 ## Code Block
         1.    EVI;
