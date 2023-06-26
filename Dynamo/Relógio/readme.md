@@ -41,3 +41,66 @@ Para que os ponteiros se movam angularmente, os módulos angulares devem ser:
     28.    Lpon  = Line.ByStartPointEndPoint      ( p0 , [ph, pm, ps] );
 
 **Nota:** A variável tempo deve receber a informação passada por um nodo que retorne um **timeSpan** p.ex o nodo **DateTime.TimeOfDay**
+
+## Crono_Obra.dyn
+
+## Code Block
+        1.    ELE;
+        2.    TTO;
+        3.    Itens   = List.Count(ELE); 
+        4.    drive   = "C:\\";
+        5.    pasta   = "JLMenegotto\\Academia\\";
+        6.    arqui   = "Modelo_04_4D_Crono.xlsx";
+        7.    arquivo = drive + pasta + arqui;
+        8.    tabela  = "Partes_Crono";
+        9.    //---------------------------------------------------------------------------
+       10.    // Define os tempos e Formata o modo de escrita
+       11.    //---------------------------------------------------------------------------
+       12.    CronoTotal    = DSCore.TimeSpan.Create      ( TTO , 0, 0, 0, 0   );
+       13.    CronoItem     = DSCore.TimeSpan.Create      ( DPI , 0, 0, 0, 0   );
+       14.    CronoAndae    = DSCore.TimeSpan.Create      ( TPA , 0, 0, 0, 0   );
+       15.    d_Iobra       = DSCore.DateTime.Today;
+       16.    d_Fobra       = DSCore.DateTime.AddTimeSpan ( d_Iobra , CronoTotal  );
+       17.    d_Iobra_txt   = DSCore.DateTime.Format      ( d_Iobra , "dd/MM/yyyy");
+       18.    DPI           = TTO / Itens;
+       19.    TPA           = TTO / QAndares;
+       20.    L_Niveis      = List.UniqueItems ( List.IndexOf ( COTA , COTA ));
+       21.    QAndares      = List.Count(L_Niveis);
+       22.    qniv          = 1..QAndares-2;
+       23.    L_EleNiv      = L_Niveis[qniv+1] - L_Niveis[qniv];
+       24.    Qniveis       = List.UniqueItems( List.IndexOf ( COTA , COTA ))+1;
+       25.    DTCota        = Math.Floor      ( List.IndexOf ( COTA , COTA )/100);
+       26.     DeltaT        = TPA * INXA;
+       27.    ItarefaI      = DTCota;
+       28.    ItarefaF      = DTCota +2;
+       29.    NumerTI       = ItarefaI + DeltaT;
+       30.    NumerTF       = ItarefaF + DeltaT;
+       31.    CronoTI       = DSCore.TimeSpan.Create      ( NumerTI , 0, 0, 0, 0 );
+       32.    CronoTF       = DSCore.TimeSpan.Create      ( NumerTF , 0, 0, 0, 0 );
+       33.    DataTI        = DSCore.DateTime.AddTimeSpan ( d_Iobra , CronoTI    );
+       34.    DataTF        = DSCore.DateTime.AddTimeSpan ( d_Iobra , CronoTF    );
+       35.    TARE          = List.OfRepeatedItem ( "Construct" , Itens);
+       36.    Cotas         = List.UniqueItems    ( List.Sort ( COTA ));
+       37.    QNIV          = List.Count(Cotas);
+       38.    //---------------------------------------------------------------------------
+       39.    // Condicionais de filtragem
+       40.    //---------------------------------------------------------------------------
+       40.    Vig    = String.Contains ( TIPO , "V" , true )==1 ? true : false;
+       41.    Laj    = String.Contains ( TIPO , "L" , true )==1 ? true : false;
+       42.    Pil    = String.Contains ( TIPO , "P" , true )==1 ? true : false;
+       43.    ELID  = ELE.Id;
+       44.    INXA  = List.IndexOf ( Cotas , COTA )+1;
+       45.    INXB  = Vig? 1 : Laj ? 2 : 3;
+       46.    DURI  = DPI;
+       47.    CATE  = FamilyInstance.GetParameterValueByName (ELE  , "Original Category");
+       48.    TIPO  = FamilyInstance.GetParameterValueByName (ELE  , "Original Type"    );
+       49.    LEVL  = FamilyInstance.GetParameterValueByName (ELE  , "Base Level"       );
+       50.    NDA  = Level.GetParameterValueByName          (LEVL , "Name"             );
+       51.    COTA  = Level.GetParameterValueByName          (LEVL , "Elevation"        );
+       52.    kob = ["INXA","INXB","CATE","TIPO","ANDA","ELID","TARE","DataTI","DataTF"];
+       53.    vob = [ INXA , INXB , CATE , TIPO , ANDA , ELID , TARE , DataTI , DataTF ];
+       54.    //---------------------------------------------------------------------------
+       55.    //Escreve os dados em Planilha Excel
+       56.    //---------------------------------------------------------------------------
+       57.    DSOffice.Data.ExportExcel( arquivo , tabela, 0, 0, [kob]          , false);
+       58.    DSOffice.Data.ExportExcel( arquivo , tabela, 1, 0, Transpose(vob) , false);  
