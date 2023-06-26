@@ -127,57 +127,57 @@ A função **Crono_Obra_Metalica.dyn** exemplifica o uso de funções temporais 
         4.     VIG;
         5.     TTO;
         6.     //------------------------------------------------------------------------
-        7.     //Define local de gravação do arquivo CSV
+        7.     // Define local de gravação do arquivo CSV
         8.     //------------------------------------------------------------------------
-        9.     pasta   = DRV+":\\JLMenegotto\\Academia\\";
-       10.    arqcsv   = "Modelo_Galpao.csv";
-       11.    arquiv   = pasta + arqcsv;
-       12.    //------------------------------------------------------------------------
-       13.    //Ordena Porticos pela coordenada Y
-       14.    //------------------------------------------------------------------------
-       15.    FUNY     = List.SortByKey(FUN , FUN.Location.Y           )["sortedList"];
-       16.    COLY     = List.SortByKey(COL , COL.Location.StartPoint.Y)["sortedList"];
-       17.    VIGY     = List.SortByKey(VIG , VIG.Location.StartPoint.Y)["sortedList"];
-       18.    //------------------------------------------------------------------------
-       19.    //Separa Vigas e Terças 
-       20.    //------------------------------------------------------------------------
-       21.    USOE     = FamilyInstance.GetParameterValueByName (VIGY , "UsoEstrutural");
-       22.    VIGA     = List.Clean(USOE=="Viga"  ? VIGY : null, false);
-       23.    TERC     = List.Clean(USOE=="Terca" ? VIGY : null, false);
-       24.    //------------------------------------------------------------------------
-       25.    //Unifica as listas ordenadas em uma única lista de Elementos
-       26.    //Prepara índices para sequenciar temporalmente e Extrai parâmetro Custo
-       27.    //------------------------------------------------------------------------
-       28.    Elem     = List.Flatten ( [FUNY , COLY , VIGA , TERC ] , 1);
-       29.    IeleI    = List.IndexOf ( Elem , Elem )+1;
-       30.    IeleF    = IeleI + 1;
-       31.    Qelem    = List.Count   ( IeleI );
-       32.    TIPO     = FamilyInstance.GetParameterValueByName(Elem, "Type");
-       33.    CUST     = FamilyType.GetParameterValueByName    (TIPO, "Cost");
-       34.    //----------------------------------------------------------------------
-       35.    // Prepara os tempos
-       36.    //----------------------------------------------------------------------
-       37.    DltItm   = TTO / Qelem;
-       38.    diaIni   = IeleI * DltItm;
-       39.    diaFim   = IeleF * DltItm;
-       40.    Dia_1    = DSCore.DateTime.Today;
-       41.    IniTare  = DSCore.TimeSpan.Create      ( diaIni , 0, 0, 0, 0 );
-       42.    FimTare  = DSCore.TimeSpan.Create      ( diaFim , 0, 0, 0, 0 );
-       43.    Data_TI  = DSCore.DateTime.AddTimeSpan ( Dia_1  , IniTare    );
-       44.    Data_TF  = DSCore.DateTime.AddTimeSpan ( Dia_1  , FimTare    );
-       45.    //--------------------------------------------------------------------
-       46.    // Prepara os dados a extrair
-       47.    //--------------------------------------------------------------------
-       48.    INDC     = FamilyInstance.GetParameterValueByName (Elem, "UsoEstrutural");
-       49.    NUME     = FamilyInstance.GetParameterValueByName (Elem, "Mark");
-       50.    ID       = Elem.Id;
-       51.    TIPT     = List.OfRepeatedItem    ( "Construct" , Qelem   );
-       52.    TARI     = DSCore.DateTime.Format ( Data_TI , "dd/MM/yyyy");
-       53.    TARF     = DSCore.DateTime.Format ( Data_TF , "dd/MM/yyyy");
-       54.    //---------------------------------------------------------------------
-       55.    //Ordena e Escreve os dados em Arquivo CSV
-       56.    //---------------------------------------------------------------------
-       57.    cabe     = "TAREFA,ID,TIPOTAREFA,DATAI,DATAF,DATARI,DATARF,CUSTO";
-       58.    vals     = [INDC+"_"+NUME+","+ID+","+TIPT+","+TARI+","+TARF+","+TARI+","+TARF+","+CUST];
-       59.    dados    = List.AddItemToFront( cabe , List.Flatten( vals , 1));
-       60.    DSOffice.Data.ExportCSV( arquiv , dados);
+        9.     pasta    = DRV+":\\JLMenegotto\\Academia\\";
+       10.     arqcsv   = "Modelo_Galpao.csv";
+       11.     arquiv   = pasta + arqcsv;
+       12.     //------------------------------------------------------------------------
+       13.     // Ordena Porticos pela coordenada Y
+       14.     //------------------------------------------------------------------------
+       15.     FUNY     = List.SortByKey(FUN , FUN.Location.Y           )["sortedList"];
+       16.     COLY     = List.SortByKey(COL , COL.Location.StartPoint.Y)["sortedList"];
+       17.     VIGY     = List.SortByKey(VIG , VIG.Location.StartPoint.Y)["sortedList"];
+       18.     //------------------------------------------------------------------------
+       19.     // Separa Vigas e Terças 
+       20.     //------------------------------------------------------------------------
+       21.     USOE     = FamilyInstance.GetParameterValueByName (VIGY , "UsoEstrutural");
+       22.     VIGA     = List.Clean(USOE=="Viga"  ? VIGY : null, false);
+       23.     TERC     = List.Clean(USOE=="Terca" ? VIGY : null, false);
+       24.     //------------------------------------------------------------------------
+       25.     // Unifica as listas ordenadas em uma única lista de Elementos
+       26.     // Prepara índices para sequenciar temporalmente e Extrai parâmetro Custo
+       27.     //------------------------------------------------------------------------
+       28.     Elem     = List.Flatten ( [FUNY , COLY , VIGA , TERC ] , 1);
+       29.     IeleI    = List.IndexOf ( Elem , Elem )+1;
+       30.     IeleF    = IeleI + 1;
+       31.     Qelem    = List.Count   ( IeleI );
+       32.     TIPO     = FamilyInstance.GetParameterValueByName(Elem, "Type");
+       33.     CUST     = FamilyType.GetParameterValueByName    (TIPO, "Cost");
+       34.     //----------------------------------------------------------------------
+       35.     // Prepara os tempos
+       36.     //----------------------------------------------------------------------
+       37.     DltItm   = TTO / Qelem;
+       38.     diaIni   = IeleI * DltItm;
+       39.     diaFim   = IeleF * DltItm;
+       40.     Dia_1    = DSCore.DateTime.Today;
+       41.     IniTare  = DSCore.TimeSpan.Create      ( diaIni , 0, 0, 0, 0 );
+       42.     FimTare  = DSCore.TimeSpan.Create      ( diaFim , 0, 0, 0, 0 );
+       43.     Data_TI  = DSCore.DateTime.AddTimeSpan ( Dia_1  , IniTare    );
+       44.     Data_TF  = DSCore.DateTime.AddTimeSpan ( Dia_1  , FimTare    );
+       45.     //--------------------------------------------------------------------
+       46.     // Prepara os dados a extrair
+       47.     //--------------------------------------------------------------------
+       48.     INDC     = FamilyInstance.GetParameterValueByName (Elem, "UsoEstrutural");
+       49.     NUME     = FamilyInstance.GetParameterValueByName (Elem, "Mark");
+       50.     ID       = Elem.Id;
+       51.     TIPT     = List.OfRepeatedItem    ( "Construct" , Qelem   );
+       52.     TARI     = DSCore.DateTime.Format ( Data_TI , "dd/MM/yyyy");
+       53.     TARF     = DSCore.DateTime.Format ( Data_TF , "dd/MM/yyyy");
+       54.     //---------------------------------------------------------------------
+       55.     // Ordena e Escreve os dados em Arquivo CSV
+       56.     //---------------------------------------------------------------------
+       57.     cabe     = "TAREFA,ID,TIPOTAREFA,DATAI,DATAF,DATARI,DATARF,CUSTO";
+       58.     vals     = [INDC+"_"+NUME+","+ID+","+TIPT+","+TARI+","+TARF+","+TARI+","+TARF+","+CUST];
+       59.     dados    = List.AddItemToFront( cabe , List.Flatten( vals , 1));
+       60.     DSOffice.Data.ExportCSV( arquiv , dados);
