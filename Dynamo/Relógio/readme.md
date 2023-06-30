@@ -202,11 +202,11 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
       14.  s1    = segs%  5==0? 0:  7;
       15.  s2    = segs% 10==0? 0: 11;
       16.  //Instrumento -----------------------
-      17.  i1    = segs% 3==0?  4:  11;
+      17.  i1    = segs% 3==0?  68:  11;
       18.  instr = MidiMessage.RawData(MidiMessage.ChangePatch ( i1 , 1));
       19.  MidiOut.Send ( mio , instr);
       20.  //Nota ------------------------------
-      21.  nota  = f0 + Math.Abs(segs/segs);
+      21.  nota  = f0;
       22.  //Tocar -----------------------------
       23.  toca2 = MidiMessage.RawData(MidiMessage.StartNote   ( nota + s1 , 30+segs , 1));
       24.  toca3 = MidiMessage.RawData(MidiMessage.StartNote   ( nota + s2 , 20+segs , 1));
