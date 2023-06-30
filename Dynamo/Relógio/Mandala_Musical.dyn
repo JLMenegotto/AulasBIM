@@ -1,0 +1,664 @@
+{
+  "Uuid": "65207c25-6baf-4f63-945f-759e7533c8cd",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Mandala_Musical",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "CoordinateSystem": {
+        "Key": "Autodesk.DesignScript.Geometry.CoordinateSystem",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Line": {
+        "Key": "Autodesk.DesignScript.Geometry.Line",
+        "Value": "ProtoGeometry.dll"
+      },
+      "String": {
+        "Key": "DSCore.String",
+        "Value": "DSCoreNodes.dll"
+      },
+      "Circle": {
+        "Key": "Autodesk.DesignScript.Geometry.Circle",
+        "Value": "ProtoGeometry.dll"
+      },
+      "MidiMessage": {
+        "Key": "NAudio.Midi.MidiMessage",
+        "Value": "NAudio.dll"
+      },
+      "MidiOut": {
+        "Key": "NAudio.Midi.MidiOut",
+        "Value": "NAudio.dll"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      },
+      "MidiEvent.toca": {
+        "Key": "NAudio.Midi.MidiEvent",
+        "Value": "NAudio.dll"
+      },
+      "MidiEvent": {
+        "Key": "NAudio.Midi.MidiEvent",
+        "Value": "NAudio.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 180.0,
+      "MinimumValue": 45.0,
+      "StepValue": 45.0,
+      "InputValue": 45.0,
+      "Id": "c939e606a5df4796aed3a907b7369df8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "14c45bc5187742698b8db31903f39151",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "bc312936dba4484faf7ccdc47640e434",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0e7d6480e1fd428b8f592852186842a0",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "NAudio.Midi.MidiOut.MidiOut@int",
+      "Id": "9904863cd8404a98a40b1dbc9594e84d",
+      "Inputs": [
+        {
+          "Id": "1bd2519df4f54dfaa59f0c673e652c92",
+          "Name": "deviceNo",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6b1ffc53cff041d58fefcb34655bd6f4",
+          "Name": "MidiOut",
+          "Description": "MidiOut",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "MidiOut.MidiOut (deviceNo: int): MidiOut"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.DateTime.Now",
+      "Id": "b8042d2597a84650ac404ce48bcf6e3d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e25f8198c2cf4392a19ebe34be0a5724",
+          "Name": "dateTime",
+          "Description": "DateTime representing the present time",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "The current system date and time.\n\nDateTime.Now: var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.DateTime.TimeOfDay@var",
+      "Id": "333216748c024b8aa9911353177a8b12",
+      "Inputs": [
+        {
+          "Id": "44f253793bf14d3aae40d58332537877",
+          "Name": "dateTime",
+          "Description": "A DateTime.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e054be614a4c4c5cb397759f0b838d10",
+          "Name": "timeSpan",
+          "Description": "TimeSpan since midnight",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Yields a new TimeSpan representing the amount of time passed since midnight of the given DateTime.\n\nDateTime.TimeOfDay (dateTime: var): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.TimeSpan.Add@var,var",
+      "Id": "b649a36546fd4d72bd1bf9a7d6172f1b",
+      "Inputs": [
+        {
+          "Id": "fefae587762048dca26637c6736aa807",
+          "Name": "timeSpan1",
+          "Description": "TimeSpan to add\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4f27db58e14e4dfc94974845b759b696",
+          "Name": "timeSpan2",
+          "Description": "Other TimeSpan to add\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "23097e28d2b443f29937ad3d19a35d08",
+          "Name": "timeSpan",
+          "Description": "Resulting TimeSpan from addition",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Adds two TimeSpans\n\nTimeSpan.Add (timeSpan1: var, timeSpan2: var): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.TimeSpan.Zero",
+      "Id": "6c7a8dd0ef2b44f7872b3aa36390d9fd",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "eb52a14699e94f3f9e8f6b4305780dbd",
+          "Name": "timeSpan",
+          "Description": "TimeSpan representing an elapsed time of zero",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "A TimeSpan representing an elapsed time of Zero.\n\nTimeSpan.Zero: var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "tempo;\nmio;\nfol;\n//Converte em string o Tempo Atual e separa os segundos ------\nsegu = String.Substring( tempo+\"\" , 6 , 2);\nsegs = 0..String.ToNumber(segu);\na   = 0..#fol..segs;\nx   = segs * Math.Cos( a );\ny   = segs * Math.Sin( a );\nPt  = Point.ByCoordinates( x , y , 0);\n//Fundamental -----------------------\nf0    = segs% 5==0? 67: 72;\n//Saltos ----------------------------\ns1    = segs%  5==0? 0:  7;\ns2    = segs% 10==0? 0: 11;\n//Instrumento -----------------------\ni1    = segs% 3==0?  4:  11;\ninstr = MidiMessage.RawData(MidiMessage.ChangePatch ( i1 , 1));\nMidiOut.Send ( mio , instr);\n//Nota ------------------------------\nnota  = f0 + Math.Abs(segs/segs);\n//Tocar -----------------------------\ntoca2 = MidiMessage.RawData(MidiMessage.StartNote   ( nota + s1 , 30+segs , 1));\ntoca3 = MidiMessage.RawData(MidiMessage.StartNote   ( nota + s2 , 20+segs , 1));\nMidiOut.Send ( mio , segs% 2==0? toca3 :  toca2);",
+      "Id": "2d57d081372e447c8cad1fd17a9a6a21",
+      "Inputs": [
+        {
+          "Id": "57b9dde86dd143c7b805d000598aabaf",
+          "Name": "tempo",
+          "Description": "tempo",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d7b8752abdf34b05a9ab2e39c14e997f",
+          "Name": "mio",
+          "Description": "mio",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c54ea120c69a46309c658d71968ca272",
+          "Name": "fol",
+          "Description": "fol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4bb93b5931004701994f238e84cea5c9",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "21dc4c963b2b4668a33e84ece463236c",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0fa575b28ea64cadbe9ef4955249e4b9",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ade395fefba142b29f1505c97c2a1a18",
+          "Name": "",
+          "Description": "segu",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e55d46de0ff04d4b84ea987697c0f965",
+          "Name": "",
+          "Description": "segs",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e05fcff01b8b4e329de16d6040d2eafe",
+          "Name": "",
+          "Description": "a",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0473a2903f81470081ee3fe510f68551",
+          "Name": "",
+          "Description": "x",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ee2fd71e35d342edac8b821fec3df0a1",
+          "Name": "",
+          "Description": "y",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b50a9ddc0b4144569b3d5986e52d3c1c",
+          "Name": "",
+          "Description": "Pt",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "10c098cf84384cbbaae7b088d7791c0e",
+          "Name": "",
+          "Description": "f0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "267393932afd4ec78b3fb9cacd442f83",
+          "Name": "",
+          "Description": "s1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2dc098b4bc6643d3afeef1b16021df4e",
+          "Name": "",
+          "Description": "s2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2f9a4044c12b487baeb39784d57e68e1",
+          "Name": "",
+          "Description": "i1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6926a7680d14422c86261f382b35c848",
+          "Name": "",
+          "Description": "instr",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5de7e5ee4e574b4cb93ebb216dc50d63",
+          "Name": "",
+          "Description": "Value of expression at line 19",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ecf63fe45bf64ec6aff7a11964ef9b4b",
+          "Name": "",
+          "Description": "nota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2d76a3e4cf2c42ceb58849e5b75cfa8a",
+          "Name": "",
+          "Description": "toca2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "63b8584eb9dd43988f130a50a617ed50",
+          "Name": "",
+          "Description": "toca3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d44e12a8184149bb8df1578bfa5737b9",
+          "Name": "",
+          "Description": "Value of expression at line 25",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "14c45bc5187742698b8db31903f39151",
+      "End": "c54ea120c69a46309c658d71968ca272",
+      "Id": "853c48cb9a074ed691d29b3d194c8844",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0e7d6480e1fd428b8f592852186842a0",
+      "End": "1bd2519df4f54dfaa59f0c673e652c92",
+      "Id": "99ab15eb41fc45389478cce8c32a9c0c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6b1ffc53cff041d58fefcb34655bd6f4",
+      "End": "d7b8752abdf34b05a9ab2e39c14e997f",
+      "Id": "7d0ecec636ca450e88b73c733c3580d8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e25f8198c2cf4392a19ebe34be0a5724",
+      "End": "44f253793bf14d3aae40d58332537877",
+      "Id": "db58ff4033294d2e8da31222dc206057",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e054be614a4c4c5cb397759f0b838d10",
+      "End": "4f27db58e14e4dfc94974845b759b696",
+      "Id": "1685da291ab4431e8382117bdbde2e25",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "23097e28d2b443f29937ad3d19a35d08",
+      "End": "57b9dde86dd143c7b805d000598aabaf",
+      "Id": "a88cb17cd8354f8fa7e0dc1b5be74ad9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "eb52a14699e94f3f9e8f6b4305780dbd",
+      "End": "fefae587762048dca26637c6736aa807",
+      "Id": "b79dc05c8a564ee4ac07daf3476bc60e",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "NAudio.dll",
+      "ReferenceType": "ZeroTouch",
+      "Nodes": [
+        "9904863cd8404a98a40b1dbc9594e84d"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.17",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "4.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 0.01,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.17.1.4055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -13.974707981571555,
+      "EyeY": 6.6933259963989258,
+      "EyeZ": 20.563701272010803,
+      "LookX": 0.0012540724128484726,
+      "LookY": -10.409002304077148,
+      "LookZ": -0.80466240644454956,
+      "UpX": 0.0014932057820260525,
+      "UpY": 0.2890315055847168,
+      "UpZ": -0.95731842517852783
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Folhas",
+        "ShowGeometry": true,
+        "Id": "c939e606a5df4796aed3a907b7369df8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1054.4619518254103,
+        "Y": 854.389909960079
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "bc312936dba4484faf7ccdc47640e434",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1133.1457349965353,
+        "Y": 725.69874522310829
+      },
+      {
+        "Name": "MidiOut.MidiOut",
+        "ShowGeometry": true,
+        "Id": "9904863cd8404a98a40b1dbc9594e84d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -944.05113053583693,
+        "Y": 725.30061122548068
+      },
+      {
+        "Name": "DateTime.Now",
+        "ShowGeometry": true,
+        "Id": "b8042d2597a84650ac404ce48bcf6e3d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1456.4484352515428,
+        "Y": 586.058173373416
+      },
+      {
+        "Name": "DateTime.TimeOfDay",
+        "ShowGeometry": true,
+        "Id": "333216748c024b8aa9911353177a8b12",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1230.4787997074261,
+        "Y": 586.858012897166
+      },
+      {
+        "Name": "TimeSpan.Add",
+        "ShowGeometry": true,
+        "Id": "b649a36546fd4d72bd1bf9a7d6172f1b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -957.02605958113918,
+        "Y": 552.80243335807654
+      },
+      {
+        "Name": "TimeSpan.Zero",
+        "ShowGeometry": true,
+        "Id": "6c7a8dd0ef2b44f7872b3aa36390d9fd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1178.9575185699532,
+        "Y": 459.75285135948576
+      },
+      {
+        "Name": "Mandala",
+        "ShowGeometry": true,
+        "Id": "2d57d081372e447c8cad1fd17a9a6a21",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -556.29131665630189,
+        "Y": 692.45502744916269
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "1f9025fb4c5f4bd6b0a2bbc74c58ad09",
+        "Title": "Definição de uma Mandala Sonora. Rodar em modo de Execução Periódico",
+        "DescriptionText": "Disciplina: BIM I Modelo Digital da Edificação - Escola Politécnica da UFRJ\r\nDesenvolvimento: Prof: José Luis Menegotto\r\nTema: Execução Periódica em Dynamo com interface MIDI de NAUDIO ",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "2d57d081372e447c8cad1fd17a9a6a21",
+          "6c7a8dd0ef2b44f7872b3aa36390d9fd",
+          "b649a36546fd4d72bd1bf9a7d6172f1b",
+          "333216748c024b8aa9911353177a8b12",
+          "b8042d2597a84650ac404ce48bcf6e3d",
+          "9904863cd8404a98a40b1dbc9594e84d",
+          "bc312936dba4484faf7ccdc47640e434",
+          "c939e606a5df4796aed3a907b7369df8"
+        ],
+        "HasNestedGroups": false,
+        "Left": -1466.4484352515428,
+        "Top": 377.75285135948576,
+        "Width": 1688.1571185952409,
+        "Height": 832.102176089677,
+        "FontSize": 24.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 459.75285135948576,
+        "InitialHeight": 676.312989434724,
+        "TextblockHeight": 72.0,
+        "Background": "#FFA4E1FF"
+      }
+    ],
+    "X": 861.18004587426185,
+    "Y": -206.53379455296806,
+    "Zoom": 0.57068964870748
+  }
+}
