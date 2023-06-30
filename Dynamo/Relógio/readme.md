@@ -181,3 +181,6 @@ A função **Crono_Obra_Metalica.dyn** exemplifica o uso de funções temporais 
        58.     vals     = [INDC+"_"+NUME+","+ID+","+TIPT+","+TARI+","+TARF+","+TARI+","+TARF+","+CUST];
        59.     dados    = List.AddItemToFront( cabe , List.Flatten( vals , 1));
        60.     DSOffice.Data.ExportCSV( arquiv , dados);
+
+
+## Mandala_Musical.dyn
