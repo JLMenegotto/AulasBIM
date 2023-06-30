@@ -183,7 +183,7 @@ A função **Crono_Obra_Metalica.dyn** exemplifica o uso de funções temporais 
        60.     DSOffice.Data.ExportCSV( arquiv , dados);
 
 ## Mandala_Musical.dyn
-Neste exemplo se utiliza a interface MIDI de NAUDIO para incorporar som à processo geométrico.
+Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para incorporar som musical ao processo geométrico. Precisa ser baixada a dll de NAUDIO e incorporada à biblioteca na configuração de Ambiente em Dynamo.
 
 ## Code Block
        1.  tempo;
