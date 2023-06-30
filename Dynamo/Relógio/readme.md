@@ -184,3 +184,36 @@ A função **Crono_Obra_Metalica.dyn** exemplifica o uso de funções temporais 
 
 
 ## Mandala_Musical.dyn
+Neste exemplo se utiliza a interface MIDI de NAUDIO para incorporar som à processo geométrico.
+
+## Code Block
+       1.  tempo;
+       2.  mio;
+       3.  fol;
+       4.  //Converte em string o Tempo Atual e separa os segundos ------
+       5.  segu = String.Substring( tempo+"" , 6 , 2);
+       6.  segs = 0..String.ToNumber(segu);
+       7.  a    = 0..#fol..segs;
+       8.  x    = segs * Math.Cos( a );
+       9.  y    = segs * Math.Sin( a );
+      10.  Pt  = Point.ByCoordinates( x , y , 0);
+      11.  //Fundamental -----------------------
+      12.  f0    = segs% 5==0? 67: 72;
+      13.  //Saltos ----------------------------
+      14.  s1    = segs%  5==0? 0:  7;
+      15.  s2    = segs% 10==0? 0: 11;
+      16.  //Instrumento -----------------------
+      17.  i1    = segs% 3==0?  4:  11;
+      18.  instr = MidiMessage.RawData(MidiMessage.ChangePatch ( i1 , 1));
+      19.  MidiOut.Send ( mio , instr);
+      20.  //Nota ------------------------------
+      21.  nota  = f0 + Math.Abs(segs/segs);
+      22.  //Tocar -----------------------------
+      23.  toca2 = MidiMessage.RawData(MidiMessage.StartNote   ( nota + s1 , 30+segs , 1));
+      24.  toca3 = MidiMessage.RawData(MidiMessage.StartNote   ( nota + s2 , 20+segs , 1));
+      25.  MidiOut.Send ( mio , segs% 2==0? toca3 :  toca2);
+
+![Mandala_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/faea2783-41ec-4bb7-b7eb-2db0b22e7c4c)
+
+![Mandala_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/3376e867-e1cb-41a5-b556-3f4560663d84)
+
