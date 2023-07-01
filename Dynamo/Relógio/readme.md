@@ -217,6 +217,13 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
 
 ![Mandala_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/3376e867-e1cb-41a5-b556-3f4560663d84)
 
+
+## MUSICA_2020.DLL
+A biblioteca contem algumas funções musicais que podem ser utilizadas em APIs. 
+
+![Waves_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/532ae639-a03b-429f-b809-5d4c3fd8eb7b)
+
+
 ## LISTA DE INSTRUMENTOS MIDI
 ## TECLADOS
      1.  Piano de cauda
