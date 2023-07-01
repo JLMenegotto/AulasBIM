@@ -218,6 +218,7 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
 ![Mandala_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/3376e867-e1cb-41a5-b556-3f4560663d84)
 
 ##Lista com a numeração de Instrumentos MIDI
+**TECLADOS**
   1. – Piano de cauda
   2. – Piano brilhante
   3. – Piano de cauda elétrico
@@ -241,7 +242,8 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
  21. – Harmônio
  22. – Acordeão
  23. – Gaita
- 24. – Bandoneon	
+ 24. – Bandoneon
+**VIOLÔES**	
  25. – Guitarra espanhola
  26. – Violão
  27. – Guitarra elétrica (jazz)
@@ -250,7 +252,7 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
  30. – Guitarra saturada
  31. – Guitarra com distorção
  32. – Harmônicos de guitarra
-BAIXOS	
+**BAIXOS**	
  33. – Baixo acústico
  34. – Baixo elétrico
  35. – Baixo elétrico (pick)
@@ -259,7 +261,7 @@ BAIXOS
  38. – Tapa Baixo 2
  39. – Baixo sintetizado 1
  40. – Baixo sintetizado 2	
-CONJUNTO CORDAS	
+**CONJUNTO CORDAS**
  41. – Violino
  42. – Viola
  43. – Violoncelo
@@ -273,11 +275,11 @@ CONJUNTO CORDAS
  51. – Cordas sintetizadas 1
  52. – Cordas sintetizadas 2
  53. – Coro Aahs
-VOZES
+**VOZES**
  54. – Oohs Vozes
  55. – Voz sintetizada
  56. – Golpe orquestral
-METAIS
+**METAIS**
  57. – Trompete
  58. – Trombone
  59. – Tuba
