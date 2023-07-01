@@ -266,8 +266,8 @@ A biblioteca contem algumas funções musicais que podem ser utilizadas em APIs.
     34.  Baixo elétrico
     35.  Baixo elétrico (pick)
     36.  Baixo Fretless
-    37.  Tapa Baixo 1
-    38.  Tapa Baixo 2
+    37.  Baixo 1
+    38.  Baixo 2
     39.  Baixo sintetizado 1
     40.  Baixo sintetizado 2
     
@@ -283,8 +283,7 @@ A biblioteca contem algumas funções musicais que podem ser utilizadas em APIs.
     49.  Cordas 1
     50.  Cordas 2
     51.  Cordas sintetizadas 1
-    52.  Cordas sintetizadas 2
-    
+    52.  Cordas sintetizadas 2   
 ## Vozes
     53.  Coro Aahs
     54.  Oohs Vozes
