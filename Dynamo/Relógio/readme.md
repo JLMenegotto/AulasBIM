@@ -218,76 +218,76 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
 ![Mandala_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/3376e867-e1cb-41a5-b556-3f4560663d84)
 
 ##Lista com a numeração de Instrumentos MIDI
-**TECLADOS**
-  1. – Piano de cauda
-  2. – Piano brilhante
-  3. – Piano de cauda elétrico
-  4. – Piano Honky-Tonk
-  5. – Piano elétrico 1
-  6. – Piano elétrico 2
-  7. – Chave
-  8. – Clavinet
-  9. – Celesta
- 10. – Glockenspiel
- 11. – Caixa de música
- 12. – Vibrafone
- 13. – Marimba
- 14. – Xilofone
- 15. – Sinos Tubulares
- 16. – Dulcimer	
- 17. – Órgão Hammond
- 18. – Órgão percussivo
- 19. – Órgão de rock
- 20. – Órgão da Igreja
- 21. – Harmônio
- 22. – Acordeão
- 23. – Gaita
- 24. – Bandoneon
-**VIOLÔES**	
- 25. – Guitarra espanhola
- 26. – Violão
- 27. – Guitarra elétrica (jazz)
- 28. – Guitarra elétrica
- 29. – Guitarra elétrica Mute
- 30. – Guitarra saturada
- 31. – Guitarra com distorção
- 32. – Harmônicos de guitarra
-**BAIXOS**	
- 33. – Baixo acústico
- 34. – Baixo elétrico
- 35. – Baixo elétrico (pick)
- 36. – Baixo Fretless
- 37. – Tapa Baixo 1
- 38. – Tapa Baixo 2
- 39. – Baixo sintetizado 1
- 40. – Baixo sintetizado 2	
-**CONJUNTO CORDAS**
- 41. – Violino
- 42. – Viola
- 43. – Violoncelo
- 44. – Contrabaixo
- 45. – Tremolo
- 46. – Pizzicato
- 47. – Harpa
- 48. – Timbales
- 49. – Cordas 1
- 50. – Cordas 2
- 51. – Cordas sintetizadas 1
- 52. – Cordas sintetizadas 2
- 53. – Coro Aahs
-**VOZES**
- 54. – Oohs Vozes
- 55. – Voz sintetizada
- 56. – Golpe orquestral
-**METAIS**
- 57. – Trompete
- 58. – Trombone
- 59. – Tuba
- 60. – Trompete com mudo
- 61. – Chifre
- 62. – Seção de Metais
- 63. – Metais sintetizados 1
- 64. – Metais sintetizados 2	
+  **TECLADOS**
+    1. – Piano de cauda
+    2. – Piano brilhante
+    3. – Piano de cauda elétrico
+    4. – Piano Honky-Tonk
+    5. – Piano elétrico 1
+    6. – Piano elétrico 2
+    7. – Chave
+    8. – Clavinet
+    9. – Celesta
+   10. – Glockenspiel
+   11. – Caixa de música
+   12. – Vibrafone
+   13. – Marimba
+   14. – Xilofone
+   15. – Sinos Tubulares
+   16. – Dulcimer	
+   17. – Órgão Hammond
+   18. – Órgão percussivo
+   19. – Órgão de rock
+   20. – Órgão da Igreja
+   21. – Harmônio
+   22. – Acordeão
+   23. – Gaita
+   24. – Bandoneon
+  **VIOLÔES**	
+   25. – Guitarra espanhola
+   26. – Violão
+   27. – Guitarra elétrica (jazz)
+   28. – Guitarra elétrica
+   29. – Guitarra elétrica Mute
+   30. – Guitarra saturada
+   31. – Guitarra com distorção
+   32. – Harmônicos de guitarra
+  **BAIXOS**	
+   33. – Baixo acústico
+   34. – Baixo elétrico
+   35. – Baixo elétrico (pick)
+   36. – Baixo Fretless
+   37. – Tapa Baixo 1
+   38. – Tapa Baixo 2
+   39. – Baixo sintetizado 1
+   40. – Baixo sintetizado 2	
+  **CORDAS E CONJUNTOS**
+   41. – Violino
+   42. – Viola
+   43. – Violoncelo
+   44. – Contrabaixo
+   45. – Tremolo
+   46. – Pizzicato
+   47. – Harpa
+   48. – Timbales
+   49. – Cordas 1
+   50. – Cordas 2
+   51. – Cordas sintetizadas 1
+   52. – Cordas sintetizadas 2
+ **VOZES**
+   53. – Coro Aahs
+   54. – Oohs Vozes
+   55. – Voz sintetizada
+   56. – Golpe orquestral
+ **METAIS**
+   57. – Trompete
+   58. – Trombone  
+   59. – Tuba
+   60. – Trompete com mudo
+   61. – Chifre
+   62. – Naipe de Metais  
+   63. – Metais sintetizados 1  
+   64. – Metais sintetizados 2	
 SOPRO 	
  65. – Saxofone Soprano 
  66. – Saxofone Contralto 
