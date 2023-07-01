@@ -226,7 +226,7 @@ Exemplos usando Sons Waves
 ![Waves_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/532ae639-a03b-429f-b809-5d4c3fd8eb7b)
 
 Exemplos usando MIDI
-![Waves_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/3a40a3cf-a071-4d57-bd35-b94cdc1ff717)
+![Waves_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/69f3706a-c1c9-4090-8934-4f6f9887c39e)
 
 ## LISTA DOS NÚMEROS CORRESPONDENTES AOS INSTRUMENTOS MIDI
 ## Teclados
