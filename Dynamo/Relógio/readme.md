@@ -219,142 +219,143 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
 
 ##Lista com a numeração de Instrumentos MIDI
   **TECLADOS**
-     1. – Piano de cauda
-     2. – Piano brilhante
-     3. – Piano de cauda elétrico
-     4. – Piano Honky-Tonk
-     5. – Piano elétrico 1
-     6. – Piano elétrico 2
-     7. – Chave
-     8. – Clavinet
-     9. – Celesta
-    10. – Glockenspiel
-    11. – Caixa de música
-    12. – Vibrafone
-    13. – Marimba
-    14. – Xilofone
-    15. – Sinos Tubulares
-    16. – Dulcimer	
-    17. – Órgão Hammond
-    18. – Órgão percussivo
-    19. – Órgão de rock
-    20. – Órgão da Igreja
-    21. – Harmônio
-    22. – Acordeão
-    23. – Gaita
-    24. – Bandoneon
+     1.  Piano de cauda
+     2.  Piano brilhante
+     3.  Piano de cauda elétrico
+     4.  Piano Honky-Tonk
+     5.  Piano elétrico 1
+     6.  Piano elétrico 2
+     7.  Chave
+     8.  Clavinet
+     9.  Celesta
+    10.  Glockenspiel
+    11.  Caixa de música
+    12.  Vibrafone
+    13.  Marimba
+    14.  Xilofone
+    15.  Sinos Tubulares
+    16.  Dulcimer	
+    17.  Órgão Hammond
+    18.  Órgão percussivo
+    19.  Órgão de rock
+    20.  Órgão da Igreja
+    21.  Harmônio
+    22.  Acordeão
+    23.  Gaita
+    24.  Bandoneon
   **VIOLÔES**	
-    25. – Guitarra espanhola
-    26. – Violão
-    27. – Guitarra elétrica (jazz)
-    28. – Guitarra elétrica
-    29. – Guitarra elétrica Mute
-    30. – Guitarra saturada
-    31. – Guitarra com distorção
-    32. – Harmônicos de guitarra
+    25.  Guitarra espanhola
+    26.  Violão
+    27.  Guitarra elétrica (jazz)
+    28.  Guitarra elétrica
+    29.  Guitarra elétrica Mute
+    30.  Guitarra saturada
+    31.  Guitarra com distorção
+    32.  Harmônicos de guitarra
   **BAIXOS**	
-    33. – Baixo acústico
-    34. – Baixo elétrico
-    35. – Baixo elétrico (pick)
-    36. – Baixo Fretless
-    37. – Tapa Baixo 1
-    38. – Tapa Baixo 2
-    39. – Baixo sintetizado 1
-    40. – Baixo sintetizado 2	
+    33.  Baixo acústico
+    34.  Baixo elétrico
+    35.  Baixo elétrico (pick)
+    36.  Baixo Fretless
+    37.  Tapa Baixo 1
+    38.  Tapa Baixo 2
+    39.  Baixo sintetizado 1
+    40.  Baixo sintetizado 2	
   **CORDAS E CONJUNTOS**
-    41. – Violino
-    42. – Viola
-    43. – Violoncelo
-    44. – Contrabaixo
-    45. – Tremolo
-    46. – Pizzicato
-    47. – Harpa
-    48. – Timbales
-    49. – Cordas 1
-    50. – Cordas 2
-    51. – Cordas sintetizadas 1
-    52. – Cordas sintetizadas 2
+    41.  Violino
+    42.  Viola
+    43.  Violoncelo
+    44.  Contrabaixo
+    45.  Tremolo
+    46.  Pizzicato
+    47.  Harpa
+    48.  Timbales
+    49.  Cordas 1
+    50.  Cordas 2
+    51.  Cordas sintetizadas 1
+    52.  Cordas sintetizadas 2
  **VOZES**
-    53. – Coro Aahs
-    54. – Oohs Vozes
-    55. – Voz sintetizada
-    56. – Golpe orquestral
+    53.  Coro Aahs
+    54.  Oohs Vozes
+    55.  Voz sintetizada
+    56.  Golpe orquestral
  **METAIS** 
-    57. – Trompete
-    58. – Trombone  
-    59. – Tuba
-    60. – Trompete com mudo
-    61. – Chifre
-    62. – Naipe de Metais  
-    63. – Metais sintetizados 1  
-    64. – Metais sintetizados 2	
+    57.  Trompete
+    58.  Trombone  
+    59.  Tuba
+    60.  Trompete com mudo
+    61.  Chifre
+    62.  Naipe de Metais  
+    63.  Metais sintetizados 1  
+    64.  Metais sintetizados 2	
  **SOPRO** 	
-    65. – Saxofone Soprano   
-    66. – Saxofone Contralto  
-    67. – Saxofone Tenor
-    68. – Saxofone Barítono
-    69. – Oboé 
-    70. – Chifre Inglês
-    71. – Fagote
-    72. – Clarinete	
-    73. – Piccolo
-    74. – Flauta transversal
-    75. – Gravador
-    76. – Flauta pan
-    77. – Garrafa
-    78. – Skakuhachi
-    79. – Apito 
-    80. – Ocarina	
+    65.  Saxofone Soprano   
+    66.  Saxofone Contralto  
+    67.  Saxofone Tenor
+    68.  Saxofone Barítono
+    69.  Oboé 
+    70.  Chifre Inglês
+    71.  Fagote
+    72.  Clarinete	
+    73.  Piccolo
+    74.  Flauta transversal
+    75.  Gravador
+    76.  Flauta pan
+    77.  Garrafa
+    78.  Skakuhachi
+    79.  Apito 
+    80.  Ocarina	
 **SINTETIZADORES**
-    81. – Onda quadrada
-    82. – Dente de serra
-    83. – Órgão a vapor
-    84. – Chiffer
-    85. – Charango
-    86. – Voz
-    87. – Quinta
-    88. – Baixo e chumbo	
-    89. – Fantasia / Nova Era
-    90. – Quente
-    91. – Polissintetizador
-    92. – Voz
-    93. – Arco de vidro
-    94. – Metálico
-    95. – Halo
-    96. - Varrer
+    81.  Onda quadrada
+    82.  Dente de serra
+    83.  Órgão a vapor
+    84.  Chiffer
+    85.  Charango
+    86.  Voz
+    87.  Quinta
+    88.  Baixo e chumbo	
+    89.  Fantasia / Nova Era
+    90.  Quente
+    91.  Polissintetizador
+    92.  Voz
+    93.  Arco de vidro
+    94.  Metálico
+    95.  Halo
+    96.  Varrer
 **EFEITOS**	
-    97. – Chuva 
-    98. – Trilha Sonora
-    99. – Cristal
-   100. – Atmosfera 
-   101. – Brilho 
-   102. – Duendes
-   103. – Ecos
-   104. - Tema Estrela
+    97.  Chuva 
+    98.  Trilha Sonora
+    99.  Cristal
+   100.  Atmosfera 
+   101.  Brilho 
+   102.  Duendes
+   103.  Ecos
+   104.  Tema Estrela
  **ÉTNICOS**	
-   105. – Sitar
-   106. – Banjo 
-   107. – Shamishen 
-   108. – Koto
-   109. – Kalimba
-   110. – Gaita
-   111. – Violín celta
-   112. – Shanai
-**PERCUÇÃO**
-   113. – Campainhas
-   114. – Agogó
-   115. – Caixa de Metal
-   116. – Caixa de Madeira
-   117. – Taiko
-   118. – Timbal
-   119. – Caixa sintetizada
-   120. – Prato (invertido)	
-   121. – Traste de guitarra
-**SONS**
-   122. – Respiração
-   123. – Praia
-   124. – Pássaro
-   125. – Telefone
-   126. – Helicóptero
-   127. – Aplauso
-   128. – Disparo
+   105.  Sitar
+   106.  Banjo 
+   107.  Shamishen 
+   108.  Koto
+   109.  Kalimba
+   110.  Gaita
+   111.  Violín celta
+   112.  Shanai
+##**PERCUÇÃO**
+   113.  Campainhas
+   114.  Agogó
+   115.  Caixa de Metal
+   116.  Caixa de Madeira
+   117.  Taiko
+   118.  Timbal
+   119.  Caixa sintetizada
+   120.  Prato (invertido)	
+   121.  Traste de guitarra
+
+##**SONS**
+   122.  Respiração
+   123.  Praia
+   124.  Pássaro
+   125.  Telefone
+   126.  Helicóptero
+   127.  Aplauso
+   128.  Disparo
