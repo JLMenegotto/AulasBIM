@@ -225,7 +225,7 @@ A biblioteca contem algumas funções musicais que podem ser utilizadas em APIs.
 
 
 ## LISTA DE INSTRUMENTOS MIDI
-## TECLADOS
+## Teclados
      1.  Piano de cauda
      2.  Piano brilhante
      3.  Piano de cauda elétrico
@@ -251,7 +251,7 @@ A biblioteca contem algumas funções musicais que podem ser utilizadas em APIs.
     23.  Gaita
     24.  Bandoneon
     
-## VIOLÔES	
+## Violões	
     25.  Guitarra espanhola
     26.  Violão
     27.  Guitarra elétrica (jazz)
@@ -261,7 +261,7 @@ A biblioteca contem algumas funções musicais que podem ser utilizadas em APIs.
     31.  Guitarra com distorção
     32.  Harmônicos de guitarra
     
-## BAIXOS	
+## Baixos	
     33.  Baixo acústico
     34.  Baixo elétrico
     35.  Baixo elétrico (pick)
@@ -285,13 +285,13 @@ A biblioteca contem algumas funções musicais que podem ser utilizadas em APIs.
     51.  Cordas sintetizadas 1
     52.  Cordas sintetizadas 2
     
-## VOZES
+## Vozes
     53.  Coro Aahs
     54.  Oohs Vozes
     55.  Voz sintetizada
     56.  Golpe orquestral
  
-## METAIS
+## Metais
     57.  Trompete
     58.  Trombone  
     59.  Tuba
@@ -300,12 +300,12 @@ A biblioteca contem algumas funções musicais que podem ser utilizadas em APIs.
     62.  Naipe de Metais  
     63.  Metais sintetizados 1  
     64.  Metais sintetizados 2
-    
-## SOPRO 	
     65.  Saxofone Soprano   
     66.  Saxofone Contralto  
     67.  Saxofone Tenor
     68.  Saxofone Barítono
+
+## Madeiras	
     69.  Oboé 
     70.  Chifre Inglês
     71.  Fagote
@@ -319,7 +319,7 @@ A biblioteca contem algumas funções musicais que podem ser utilizadas em APIs.
     79.  Apito 
     80.  Ocarina
     
-## SINTETIZADORES
+## Sintetizadores
     81.  Onda quadrada
     82.  Dente de serra
     83.  Órgão a vapor
@@ -337,7 +337,7 @@ A biblioteca contem algumas funções musicais que podem ser utilizadas em APIs.
     95.  Halo
     96.  Varrer
     
-## EFEITOS	
+## Efeitos	
     97.  Chuva 
     98.  Trilha Sonora
     99.  Cristal
@@ -347,7 +347,7 @@ A biblioteca contem algumas funções musicais que podem ser utilizadas em APIs.
     103.  Ecos
     104.  Tema Estrela
    
-## ÉTNICOS	
+## Étnicos	
     105.  Sitar
     106.  Banjo 
     107.  Shamishen 
@@ -357,7 +357,7 @@ A biblioteca contem algumas funções musicais que podem ser utilizadas em APIs.
     111.  Violín celta
     112.  Shanai
    
-## PERCUÇÃO
+## Percussivos
     113.  Campainhas
     114.  Agogó
     115.  Caixa de Metal
@@ -368,7 +368,7 @@ A biblioteca contem algumas funções musicais que podem ser utilizadas em APIs.
     120.  Prato (invertido)	
     121.  Traste de guitarra
 
-## SONS
+## Sons
     122.  Respiração
     123.  Praia
     124.  Pássaro
