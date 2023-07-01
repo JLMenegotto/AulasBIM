@@ -217,8 +217,9 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
 
 ![Mandala_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/3376e867-e1cb-41a5-b556-3f4560663d84)
 
-##Lista com a numeração de Instrumentos MIDI
-##TECLADOS
+## Lista com a numeração de Instrumentos MIDI
+
+## TECLADOS
      1.  Piano de cauda
      2.  Piano brilhante
      3.  Piano de cauda elétrico
@@ -244,7 +245,7 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
     23.  Gaita
     24.  Bandoneon
     
-##VIOLÔES	
+## VIOLÔES	
     25.  Guitarra espanhola
     26.  Violão
     27.  Guitarra elétrica (jazz)
@@ -254,7 +255,7 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
     31.  Guitarra com distorção
     32.  Harmônicos de guitarra
     
-##BAIXOS	
+## BAIXOS	
     33.  Baixo acústico
     34.  Baixo elétrico
     35.  Baixo elétrico (pick)
@@ -264,7 +265,7 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
     39.  Baixo sintetizado 1
     40.  Baixo sintetizado 2
     
-##CORDAS E CONJUNTOS
+## CORDAS E CONJUNTOS
     41.  Violino
     42.  Viola
     43.  Violoncelo
@@ -278,13 +279,13 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
     51.  Cordas sintetizadas 1
     52.  Cordas sintetizadas 2
     
- ##VOZES
+## VOZES
     53.  Coro Aahs
     54.  Oohs Vozes
     55.  Voz sintetizada
     56.  Golpe orquestral
  
- ##METAIS
+## METAIS
     57.  Trompete
     58.  Trombone  
     59.  Tuba
@@ -294,7 +295,7 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
     63.  Metais sintetizados 1  
     64.  Metais sintetizados 2
     
-##SOPRO 	
+## SOPRO 	
     65.  Saxofone Soprano   
     66.  Saxofone Contralto  
     67.  Saxofone Tenor
@@ -312,7 +313,7 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
     79.  Apito 
     80.  Ocarina
     
-##SINTETIZADORES
+## SINTETIZADORES
     81.  Onda quadrada
     82.  Dente de serra
     83.  Órgão a vapor
@@ -330,7 +331,7 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
     95.  Halo
     96.  Varrer
     
-##EFEITOS	
+## EFEITOS	
     97.  Chuva 
     98.  Trilha Sonora
     99.  Cristal
@@ -340,7 +341,7 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
    103.  Ecos
    104.  Tema Estrela
    
-##ÉTNICOS	
+## ÉTNICOS	
    105.  Sitar
    106.  Banjo 
    107.  Shamishen 
@@ -350,7 +351,7 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
    111.  Violín celta
    112.  Shanai
    
-##PERCUÇÃO
+## PERCUÇÃO
    113.  Campainhas
    114.  Agogó
    115.  Caixa de Metal
@@ -361,7 +362,7 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
    120.  Prato (invertido)	
    121.  Traste de guitarra
 
-##SONS
+## SONS
    122.  Respiração
    123.  Praia
    124.  Pássaro
