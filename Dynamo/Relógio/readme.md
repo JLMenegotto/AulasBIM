@@ -217,8 +217,7 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
 
 ![Mandala_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/3376e867-e1cb-41a5-b556-3f4560663d84)
 
-## Lista com a numeração de Instrumentos MIDI
-
+## LISTA DE INSTRUMENTOS MIDI
 ## TECLADOS
      1.  Piano de cauda
      2.  Piano brilhante
