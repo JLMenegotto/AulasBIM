@@ -1,0 +1,351 @@
+{
+  "Uuid": "65207c25-6baf-4f63-945f-759e7533c8cd",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Mandala_Midi",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "CoordinateSystem": {
+        "Key": "Autodesk.DesignScript.Geometry.CoordinateSystem",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Line": {
+        "Key": "Autodesk.DesignScript.Geometry.Line",
+        "Value": "ProtoGeometry.dll"
+      },
+      "String": {
+        "Key": "DSCore.String",
+        "Value": "DSCoreNodes.dll"
+      },
+      "Circle": {
+        "Key": "Autodesk.DesignScript.Geometry.Circle",
+        "Value": "ProtoGeometry.dll"
+      },
+      "MidiMessage": {
+        "Key": "NAudio.Midi.MidiMessage",
+        "Value": "NAudio.dll"
+      },
+      "MidiOut": {
+        "Key": "NAudio.Midi.MidiOut",
+        "Value": "NAudio.dll"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      },
+      "MidiEvent.toca": {
+        "Key": "NAudio.Midi.MidiEvent",
+        "Value": "NAudio.dll"
+      },
+      "MidiEvent": {
+        "Key": "NAudio.Midi.MidiEvent",
+        "Value": "NAudio.dll"
+      },
+      "WaveProvider16": {
+        "Key": "NAudio.Wave.WaveProvider16",
+        "Value": "NAudio.dll"
+      },
+      "NAudio.WaveProvider16": {
+        "Key": "NAudio.Wave.WaveProvider16",
+        "Value": "NAudio.dll"
+      },
+      "NAudio.Wave.WaveProvider16": {
+        "Key": "NAudio.Wave.WaveProvider16",
+        "Value": "NAudio.dll"
+      },
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      },
+      "Musica_2020": {
+        "Key": "Musica_2020.Musica_2020",
+        "Value": "Musica_2020.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "midi;\na   = 0..360..6;\nr1  = 30;\nr2  = r1/4;\nx   = r1<1> * Math.Cos ( a );\ny   = r2<1> * Math.Sin ( a );\nP   = Point.ByCoordinates( x , y , 0);\nnot = Math.Abs(Math.Floor( x ))+ 64;\ndur = not/not * not%3 ? 55 : not%5 ? 65 : 45;\ndin = not/not * not%2 ? 127 : 120;\nMusica_2020.Tocar_1Nota( midi , not , dur, din , 1, 9);",
+      "Id": "dbcc4bca16ca43768bcf4a5d07dac521",
+      "Inputs": [
+        {
+          "Id": "a979c4a391fb4e23a4cb93afff433ba3",
+          "Name": "midi",
+          "Description": "midi",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b2b3667c74ba4173b59319ec8e0d9264",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a55f397184e94727a931ab634a80152d",
+          "Name": "",
+          "Description": "a",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c4b570a1cd954e8cabd0252dc31a80cb",
+          "Name": "",
+          "Description": "r1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b8580d8c72d3418c8cc4ce380d949ea8",
+          "Name": "",
+          "Description": "r2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ed54a0adcced4c21bfa6795c0af09aba",
+          "Name": "",
+          "Description": "x",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "64354683c7494654b9c3e7c7942346df",
+          "Name": "",
+          "Description": "y",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b108da0616be4c868d438bf4dbe0ed19",
+          "Name": "",
+          "Description": "P",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "11dea17b279f4e9f8613c059281bb36e",
+          "Name": "",
+          "Description": "not",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "48d77ec0f8a4439dbce81db9c9c67bf1",
+          "Name": "",
+          "Description": "dur",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2c7d74a362cd498d86d1f3b16dee0935",
+          "Name": "",
+          "Description": "din",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f08a46643a5e42228c2d28d70b4ed43a",
+          "Name": "",
+          "Description": "Value of expression at line 11",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Musica_2020.Musica_2020.MIDI_MIDI@int",
+      "Id": "a5b2a33ed5104b6e85d9b4bb75affcce",
+      "Inputs": [
+        {
+          "Id": "7abf93052a304aa88565cd434c543a03",
+          "Name": "n",
+          "Description": "int\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9f2e492f2a184e5b9ceca2c4559cd0a3",
+          "Name": "var",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Musica_2020.MIDI_MIDI (n: int = 0): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "bdab9bb886d141c1be833f417b26957c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8004c18b93d146aeacfaa6d778e671c7",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "9f2e492f2a184e5b9ceca2c4559cd0a3",
+      "End": "a979c4a391fb4e23a4cb93afff433ba3",
+      "Id": "906045a4ee9248faa010bd92d714a97b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8004c18b93d146aeacfaa6d778e671c7",
+      "End": "7abf93052a304aa88565cd434c543a03",
+      "Id": "6aeeb260cf0b4048880a40c7818ae26a",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Musica_2020.dll",
+      "ReferenceType": "ZeroTouch",
+      "Nodes": [
+        "a5b2a33ed5104b6e85d9b4bb75affcce"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.17",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "4.0",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 0.01,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.17.0.3472",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -2.3214588165283203,
+      "EyeY": 80.899032592773438,
+      "EyeZ": 19.407705783843994,
+      "LookX": 0.010129928588867188,
+      "LookY": -84.083854675292969,
+      "LookZ": -6.5000705718994141,
+      "UpX": 0.0014932057820260525,
+      "UpY": 0.2890315055847168,
+      "UpZ": -0.95731842517852783
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Mandala Midi",
+        "ShowGeometry": true,
+        "Id": "dbcc4bca16ca43768bcf4a5d07dac521",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 573.45005306503026,
+        "Y": 1540.4765214509202
+      },
+      {
+        "Name": "Musica_2020.MIDI_MIDI",
+        "ShowGeometry": true,
+        "Id": "a5b2a33ed5104b6e85d9b4bb75affcce",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 257.61222575839861,
+        "Y": 1539.9795493513611
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "bdab9bb886d141c1be833f417b26957c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 64.635758842736323,
+        "Y": 1538.7346076140111
+      }
+    ],
+    "Annotations": [],
+    "X": 30.626519936959653,
+    "Y": -1080.2323801286652,
+    "Zoom": 0.74260827594401346
+  }
+}
