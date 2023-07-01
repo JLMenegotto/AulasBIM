@@ -335,38 +335,38 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
     97.  Chuva 
     98.  Trilha Sonora
     99.  Cristal
-   100.  Atmosfera 
-   101.  Brilho 
-   102.  Duendes
-   103.  Ecos
-   104.  Tema Estrela
+    100.  Atmosfera 
+    101.  Brilho 
+    102.  Duendes
+    103.  Ecos
+    104.  Tema Estrela
    
 ## ÉTNICOS	
-   105.  Sitar
-   106.  Banjo 
-   107.  Shamishen 
-   108.  Koto
-   109.  Kalimba
-   110.  Gaita
-   111.  Violín celta
-   112.  Shanai
+    105.  Sitar
+    106.  Banjo 
+    107.  Shamishen 
+    108.  Koto
+    109.  Kalimba
+    110.  Gaita
+    111.  Violín celta
+    112.  Shanai
    
 ## PERCUÇÃO
-   113.  Campainhas
-   114.  Agogó
-   115.  Caixa de Metal
-   116.  Caixa de Madeira
-   117.  Taiko
-   118.  Timbal
-   119.  Caixa sintetizada
-   120.  Prato (invertido)	
-   121.  Traste de guitarra
+    113.  Campainhas
+    114.  Agogó
+    115.  Caixa de Metal
+    116.  Caixa de Madeira
+    117.  Taiko
+    118.  Timbal
+    119.  Caixa sintetizada
+    120.  Prato (invertido)	
+    121.  Traste de guitarra
 
 ## SONS
-   122.  Respiração
-   123.  Praia
-   124.  Pássaro
-   125.  Telefone
-   126.  Helicóptero
-   127.  Aplauso
-   128.  Disparo
+    122.  Respiração
+    123.  Praia
+    124.  Pássaro
+    125.  Telefone
+    126.  Helicóptero
+    127.  Aplauso
+    128.  Disparo
