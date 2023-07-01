@@ -331,7 +331,7 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
    102.  Duendes
    103.  Ecos
    104.  Tema Estrela
- **ÉTNICOS**	
+ ##ÉTNICOS	
    105.  Sitar
    106.  Banjo 
    107.  Shamishen 
@@ -340,7 +340,7 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
    110.  Gaita
    111.  Violín celta
    112.  Shanai
-##**PERCUÇÃO**
+##PERCUÇÃO
    113.  Campainhas
    114.  Agogó
    115.  Caixa de Metal
@@ -351,7 +351,7 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
    120.  Prato (invertido)	
    121.  Traste de guitarra
 
-##**SONS**
+##SONS
    122.  Respiração
    123.  Praia
    124.  Pássaro
