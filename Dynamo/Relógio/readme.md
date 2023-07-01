@@ -219,7 +219,8 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
 
 
 ## MUSICA_2020.DLL
-A biblioteca contem algumas funções musicais que podem ser utilizadas em APIs. Deve ser carregada como **ADD-ONs* em Dynamo. 
+A biblioteca contem algumas funções musicais que podem ser utilizadas em APIs. 
+Deve ser carregada como **ADD-ONs** em Dynamo. 
 
 Exemplos usando Sons Waves
 ![Waves_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/532ae639-a03b-429f-b809-5d4c3fd8eb7b)
@@ -227,8 +228,7 @@ Exemplos usando Sons Waves
 Exemplos usando MIDI
 ![Waves_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/3a40a3cf-a071-4d57-bd35-b94cdc1ff717)
 
-
-## LISTA DE INSTRUMENTOS MIDI
+## LISTA DOS NÚMEROS CORRESPONDENTES AOS INSTRUMENTOS MIDI
 ## Teclados
      1.  Piano Acústico de cauda
      2.  Piano brilhante
