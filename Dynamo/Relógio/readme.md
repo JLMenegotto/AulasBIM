@@ -230,7 +230,7 @@ Exemplos usando MIDI
 
 ## LISTA DOS NÚMEROS CORRESPONDENTES AOS INSTRUMENTOS MIDI
 ## Teclados
-     1.  Piano Acústico de cauda
+     1.  Piano de cauda acústico
      2.  Piano brilhante
      3.  Piano de cauda elétrico
      4.  Piano Honky-Tonk
