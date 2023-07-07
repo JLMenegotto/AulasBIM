@@ -1,3 +1,7 @@
+
+
+https://github.com/JLMenegotto/AulasBIM/assets/9437020/0d01253b-8733-4e33-973e-dbef73226d8a
+
 # Relógio.dyn
 
 As funções de Dynamo podem ser executadas de modo **Manual, Automático ou Periódico**. A função **Relógio.dyn** exemplifica a execução periódica em Dynamo. Para que o modo de execução periódico fique habilitado, deve haver dentro da função a participação das funções de Tempo (Time, TimeSpan...). Para a função Relogio.dyn, foram criados 3 ponteiros (Horas, Minutos e Segundos) e uma marcação circular de Horas e Minutos com o desenho do tipo de relógio.
