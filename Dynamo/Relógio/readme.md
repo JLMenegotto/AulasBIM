@@ -184,6 +184,18 @@ A função **Crono_Obra_Metalica.dyn** exemplifica o uso de funções temporais 
        59.     dados    = List.AddItemToFront( cabe , List.Flatten( vals , 1));
        60.     DSOffice.Data.ExportCSV( arquiv , dados);
 
+## MUSICA_2020.DLL
+A biblioteca contem algumas funções musicais que podem ser utilizadas em APIs. 
+Deve ser carregada como **ADD-ONs** em Dynamo. 
+
+https://github.com/JLMenegotto/AulasBIM/assets/9437020/e24a8fb7-bc7d-48c8-9be0-5d50efa135e3
+
+Exemplos usando Sons Waves
+![Waves_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/532ae639-a03b-429f-b809-5d4c3fd8eb7b)
+
+Exemplos usando MIDI
+![Waves_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/69f3706a-c1c9-4090-8934-4f6f9887c39e)
+
 ## Mandala_Musical.dyn
 Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para incorporar som musical ao processo geométrico. Precisa ser baixada a dll de NAUDIO e incorporada à biblioteca na configuração de Ambiente em Dynamo.
 
@@ -218,17 +230,6 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
 ![Mandala_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/faea2783-41ec-4bb7-b7eb-2db0b22e7c4c)
 
 ![Mandala_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/3376e867-e1cb-41a5-b556-3f4560663d84)
-
-
-## MUSICA_2020.DLL
-A biblioteca contem algumas funções musicais que podem ser utilizadas em APIs. 
-Deve ser carregada como **ADD-ONs** em Dynamo. 
-
-Exemplos usando Sons Waves
-![Waves_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/532ae639-a03b-429f-b809-5d4c3fd8eb7b)
-
-Exemplos usando MIDI
-![Waves_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/69f3706a-c1c9-4090-8934-4f6f9887c39e)
 
 ## LISTA DOS NÚMEROS CORRESPONDENTES AOS INSTRUMENTOS MIDI
 ## Teclados
