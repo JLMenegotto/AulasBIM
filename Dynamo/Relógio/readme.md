@@ -8,8 +8,6 @@ Para que os ponteiros se movam angularmente, os módulos angulares devem ser:
  1. Para as horas = 12 => (360 / 12 = 30) 
  2. Para os minutos e segundos = 6 => (360 / 6 = 60)
 
-![Relogio](https://github.com/JLMenegotto/AulasBIM/assets/9437020/ae27a62a-6541-4627-aa92-0322273bf85a)
-
 https://github.com/JLMenegotto/AulasBIM/assets/9437020/78323b6e-4dca-4119-b439-0cdf0690c727
 
 ## Code Block
