@@ -186,7 +186,9 @@ A função **Crono_Obra_Metalica.dyn** exemplifica o uso de funções temporais 
 
 ## MUSICA_2020.DLL
 A biblioteca contem algumas funções musicais que podem ser integradas em APIs. Deve ser carregada como **ADD-ONs** em Dynamo. 
-Veja um exemplo. Ative o som do video embaixo para ouvir diversas configurações geométricas e sonoras.
+Veja um exemplo. Ative o som do video embaixo para ouvir diversas configurações geométricas e sonoras. 
+Há uma sutil correspondência visual e sonora que pode se sentir prestando atenção ao ordenamento dos pontos. 
+A maior dispersão, menor a coesão sonora.
 
 https://github.com/JLMenegotto/AulasBIM/assets/9437020/e24a8fb7-bc7d-48c8-9be0-5d50efa135e3
 
