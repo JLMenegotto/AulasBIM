@@ -185,8 +185,8 @@ A função **Crono_Obra_Metalica.dyn** exemplifica o uso de funções temporais 
        60.     DSOffice.Data.ExportCSV( arquiv , dados);
 
 ## MUSICA_2020.DLL
-A biblioteca contem algumas funções musicais que podem ser utilizadas em APIs. 
-Deve ser carregada como **ADD-ONs** em Dynamo. 
+A biblioteca contem algumas funções musicais que podem ser integradas em APIs. Deve ser carregada como **ADD-ONs** em Dynamo. 
+Veja um exemplo. Ative o som do video embaixo para ouvir diversas configurações geométricas e sonoras.
 
 https://github.com/JLMenegotto/AulasBIM/assets/9437020/e24a8fb7-bc7d-48c8-9be0-5d50efa135e3
 
