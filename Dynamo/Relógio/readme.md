@@ -25,18 +25,18 @@ Para que os ponteiros se movam angularmente, os módulos angulares devem ser:
     11.    minu   = String.Substring( tempo+"" , 3 , 2);
     12.    segu   = String.Substring( tempo+"" , 6 , 2);
     13.    //Angulo do Tempo Atual de Hora, minuto e segundo ----------------
-    14.    hoa    = String.ToNumber(hora) %12 * -mh+90;
-    15.    mia    = String.ToNumber(minu)     * -ms+90;
-    16.    sea    = String.ToNumber(segu)     * -ms+90;
+    14.    aho    = String.ToNumber(hora) %12 * -mh+90;
+    15.    ami    = String.ToNumber(minu)     * -ms+90;
+    16.    ase    = String.ToNumber(segu)     * -ms+90;
     17.    //Marcas de Horas e minutos --------------------------------------
     18.    marh1  = Point.ByCylindricalCoordinates ( cs, angHO , 0 , ra*1.6);
     19.    marh2  = Point.ByCylindricalCoordinates ( cs, angHO , 0 , ra*1.9);
     20.    marm1  = Point.ByCylindricalCoordinates ( cs, angMS , 0 , ra*1.8);
     21.    marm2  = Point.ByCylindricalCoordinates ( cs, angMS , 0 , ra*1.9);
     22.    //Ponteiros de Horas Minutos e Segundos --------------------------
-    23.    ph     = Point.ByCylindricalCoordinates ( cs, hoa   , 0 , ra*1.1);
-    24.    pm     = Point.ByCylindricalCoordinates ( cs, mia   , 0 , ra*1.4);
-    25.    ps     = Point.ByCylindricalCoordinates ( cs, sea   , 0 , ra*1.5);
+    23.    ph     = Point.ByCylindricalCoordinates ( cs, aho   , 0 , ra*1.1);
+    24.    pm     = Point.ByCylindricalCoordinates ( cs, ami   , 0 , ra*1.4);
+    25.    ps     = Point.ByCylindricalCoordinates ( cs, ase   , 0 , ra*1.5);
     26.    LmaH   = Line.ByStartPointEndPoint      ( marh1 , marh2 );
     27.    LmaM   = Line.ByStartPointEndPoint      ( marm1 , marm2 );
     28.    Lpon   = Line.ByStartPointEndPoint      ( p0 , [ph, pm, ps] );
