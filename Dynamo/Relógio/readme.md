@@ -190,6 +190,9 @@ Veja um exemplo. Ative o som do video embaixo para ouvir diversas configuraçõe
 Há uma sutil correspondência visual e sonora que pode se sentir prestando atenção ao ordenamento dos pontos. 
 A maior dispersão, menor a coesão sonora.
 
+Para desbloquear o arquivo **Musica_2020.dll** utilize o comando Unblock do Windows PowerShell. 
+**Unblock-File -Path C:\caminho onde o arquivo foi colocado\Musica_2020.dll**
+
 https://github.com/JLMenegotto/AulasBIM/assets/9437020/e24a8fb7-bc7d-48c8-9be0-5d50efa135e3
 
 Exemplos usando Sons Waves
