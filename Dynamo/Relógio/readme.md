@@ -194,6 +194,11 @@ Para desbloquear o arquivo **Musica_2020.dll** utilize o comando Unblock do Wind
 
 **Unblock-File -Path C:\caminho onde o arquivo foi colocado\Musica_2020.dll**
 
+
+
+https://github.com/JLMenegotto/AulasBIM/assets/9437020/94ff4867-be0d-4b02-8b95-caaac9e43f10
+
+
 https://github.com/JLMenegotto/AulasBIM/assets/9437020/e24a8fb7-bc7d-48c8-9be0-5d50efa135e3
 
 Exemplos usando Sons Waves
