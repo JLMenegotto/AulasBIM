@@ -146,6 +146,7 @@ namespace Musica_2020
                                   { 
                                            MidiMessage Instru1 = MidiMessage.ChangePatch ( instru ,                      canal + 0 );
                                            MidiMessage Instru2 = MidiMessage.ChangePatch ( instru ,                      canal + 1 );
+                                           MidiMessage Instru3 = MidiMessage.ChangePatch ( instru ,                      canal + 2 );
 
                                            MidiMessage Notaon1 = MidiMessage.StartNote   ( funda +     salto ,   dina   , canal + 0);
                                            MidiMessage Notaof1 = MidiMessage.StopNote    ( funda +     salto ,      0   , canal + 0);
@@ -153,16 +154,21 @@ namespace Musica_2020
                                            MidiMessage Notaon2 = MidiMessage.StartNote   ( funda + 4 - salto ,   dina/2 , canal + 1);
                                            MidiMessage Notaof2 = MidiMessage.StopNote    ( funda + 4 - salto ,      0   , canal + 1);
 
+                                           MidiMessage Notaon3 = MidiMessage.StartNote   ( funda + 7 - salto ,   dina/2 , canal + 2);
+                                           MidiMessage Notaof3 = MidiMessage.StopNote    ( funda + 7 - salto ,      0   , canal + 2);
+
                                            midi.Send ( Instru1.RawData );
                                            midi.Send ( Instru2.RawData );
 
                                            midi.Send ( Notaon1.RawData );                             
                                            midi.Send ( Notaon2.RawData );
-                
+                                           midi.Send ( Notaon3.RawData );                
+
                                            Thread.Sleep ( dura );
                                            
                                            midi.Send ( Notaof1.RawData );
                                            midi.Send ( Notaof2.RawData ); 
+                                           midi.Send ( Notaof3.RawData ); 
                 
 										   return Notaon1.RawData; 
                                   }
