@@ -24,12 +24,17 @@ using NAudio.Wave.SampleProviders;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 
+using DSG = Autodesk.DesignScript.Geometry;
+
 namespace Musica_2020
 {
     public class Musica_2020
     {
          private static UIApplication _app;  
          public  static UIApplication  Rev { get { return _app; } set { _app = value; } }
+
+         private static DirectShape _esf;
+         public static DirectShape   Esf  { get { return _esf; } set { _esf = value; } }
 
          public static void       Msj               ( string m                 ) 
          {
@@ -39,6 +44,7 @@ namespace Musica_2020
          {
                                     return a / 0.3048;
          } // Converte de polegada a métrico um doble
+         
          public static double     D10               ( double a                 ) 
          {
             return a / 3.048;
@@ -65,15 +71,15 @@ namespace Musica_2020
          }
          public static MidiOut    MIDI_MIDI         ( int n                    ) 
          {
-                                 return new MidiOut ( n );
+                                  return new MidiOut ( n );
          }
          public static async void MIDI_Testar       ( int n                    ) 
          {
-                                 try
-                                 { 
+                                  try
+                                  { 
                                       MidiOut midi  = MIDI_Ativar( n );
                                       midi.Volume   = 65535;
-                                 
+                                  
                                       int[] Croma   = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
                                       int[] Maior   = { 0, 2, 4, 5, 7, 9, 11                 };
                                       int[] Menor   = { 0, 2, 3, 5, 7, 8, 10                 };
@@ -81,23 +87,23 @@ namespace Musica_2020
                                       int[] Doric   = { 0, 2, 4, 6, 7, 9, 11                 };
                                       int[] TonsP   = { 0, 2, 4, 6, 8, 10                    };
                                       int[] TonsI   = { 1, 3, 5, 7, 9, 11                    };
-
+                                       
                                       await Tocar_Escala ( midi , 60 , 500 , 127 , 1 , 1 , 1 , Maior);
                                       MIDI_Desativar     ( midi );
-                                 }
-                                 catch  { }
-                                 finally{ }
+                                  }
+                                  catch  { }
+                                  finally{ }
          }
          public static MidiOut    MIDI_Ativar       ( int n                    ) 
          {
-                                 MidiOut midi = null;
-                                 try
-                                 {
+                                  MidiOut midi = null;
+                                  try
+                                  {
                                          midi = new MidiOut( n );
-                                 }
-                                 catch  { }
-                                 finally{ }
-                                 return midi;
+                                  }
+                                  catch  { }
+                                  finally{ }
+                                  return midi;
 
          } // 2 Teclado Casa - 1 Poli - 0 Windows
          public static string     MIDI_Desativar    ( MidiOut midi             ) 
@@ -114,12 +120,13 @@ namespace Musica_2020
                                  finally{ }
                                  return "MIDI desativado";
          }
-         public static int        Tocar_NotaRVT     ( UIApplication Rev , MidiOut midi , int funda = 60, int dura = 1000 , int dina = 127 , int canal = 1, int instru = 1 , int toca = 0, double x = 0, double y = 0, double z = 0 ) 
+         
+         public static void         Tocar_NotaRVT     ( UIApplication Rev, DirectShape esf, DSG.Point p, MidiOut midi, int funda = 60, int dura = 1000 , int dina = 127 , int canal = 1, int instru = 1 , int toca = 0) 
          {
                                        Document   doc  = Rev.ActiveUIDocument.Document;
 				                       UIDocument Uid  = Rev.ActiveUIDocument;
-		                               
-		                               if (toca == 1)
+                                       
+                                       if (toca == 1)
                                        { 
                                               MidiMessage Instru = MidiMessage.ChangePatch ( instru ,        canal );
                                               MidiMessage Notaon = MidiMessage.StartNote   ( funda  , dina , canal );
@@ -129,30 +136,39 @@ namespace Musica_2020
                                               midi.Send ( Notaon.RawData ); Thread.Sleep( dura);
                                               midi.Send ( Notaof.RawData );
 
-				                              XYZ p = new XYZ( Dec(x) , Dec(y) , Dec(z) );
-                                              Obj_Esfera ( Rev , p );
-
-                                              return Notaon.RawData;
+                                              Obj_Mover ( Rev , p , esf);
                                        }
-                                       else { return toca; }
+                                       else { }
          }
-         public static int        Tocar_Nota        (                     MidiOut midi , int funda = 60, int dura = 1000 , int dina = 127 , int canal = 1, int instru = 1 , int toca = 1                                           ) 
+         public static int          Tocar_Nota        (                     MidiOut midi , int funda = 60, int salto = 0 ,int dura = 1000 , int dina = 127 , int canal = 1, int instru = 1 , int toca = 1                                           ) 
          {                                
                                   if (toca == 1)
                                   { 
-                                           MidiMessage Instru = MidiMessage.ChangePatch ( instru ,        canal );
-                                           MidiMessage Notaon = MidiMessage.StartNote   ( funda  , dina , canal );
-                                           MidiMessage Notaof = MidiMessage.StopNote    ( funda  ,    0 , canal );
+                                           MidiMessage Instru1 = MidiMessage.ChangePatch ( instru ,                      canal + 0 );
+                                           MidiMessage Instru2 = MidiMessage.ChangePatch ( instru ,                      canal + 1 );
 
-                                           midi.Send ( Instru.RawData );
-                                           midi.Send ( Notaon.RawData ); Thread.Sleep( dura );
-                                           midi.Send ( Notaof.RawData );
-                                          			
-										   return Notaon.RawData; 
+                                           MidiMessage Notaon1 = MidiMessage.StartNote   ( funda +     salto ,   dina   , canal + 0);
+                                           MidiMessage Notaof1 = MidiMessage.StopNote    ( funda +     salto ,      0   , canal + 0);
+
+                                           MidiMessage Notaon2 = MidiMessage.StartNote   ( funda + 4 - salto ,   dina/2 , canal + 1);
+                                           MidiMessage Notaof2 = MidiMessage.StopNote    ( funda + 4 - salto ,      0   , canal + 1);
+
+                                           midi.Send ( Instru1.RawData );
+                                           midi.Send ( Instru2.RawData );
+
+                                           midi.Send ( Notaon1.RawData );                             
+                                           midi.Send ( Notaon2.RawData );
+                
+                                           Thread.Sleep ( dura );
+                                           
+                                           midi.Send ( Notaof1.RawData );
+                                           midi.Send ( Notaof2.RawData ); 
+                
+										   return Notaon1.RawData; 
                                   }
                                   else { return toca; }
          }
-         public static async Task Tocar_Escala      (                     MidiOut midi , int funda = 60, int dura = 1000 , int dina = 127 , int canal = 1, int instru = 1 , int inv = 1, int[] Escala = null                       ) 
+         public static async Task   Tocar_Escala      (                     MidiOut midi , int funda = 60, int dura = 1000 , int dina = 127 , int canal = 1, int instru = 1 , int inv = 1, int[] Escala = null                       ) 
          {
                                  TimeSpan d = new TimeSpan(0, 0, 0, 0, dura);
                                  midi.Send ( MidiMessage.ChangePatch ( instru , canal ).RawData );
@@ -162,35 +178,42 @@ namespace Musica_2020
                                           await Task.Delay(d).ConfigureAwait(false);
                                  }
          }
-         public static async Task Tocar_Acorde      (                     MidiOut midi , int funda = 60, int dura = 1000 , int dina = 127 , int canal = 1, int instru = 1                                                          ) 
+         public static async Task   Tocar_Acorde      (                     MidiOut midi , int funda = 60, int dura = 1000 , int dina = 127 , int canal = 1, int instru = 1                                                          ) 
          {
-                                 TimeSpan d = new TimeSpan(0, 0, 0, 0, dura);
-                                 midi.Send ( MidiMessage.ChangePatch (instru, canal).RawData);
-                                 midi.Send ( MidiMessage.StartNote ( funda +  0 , dina , canal ).RawData);
-                                 midi.Send ( MidiMessage.StartNote ( funda +  4 , dina , canal ).RawData);
-                                 midi.Send ( MidiMessage.StartNote ( funda +  7 , dina , canal ).RawData);
-                                 midi.Send ( MidiMessage.StartNote ( funda + 10 , dina , canal ).RawData); await Task.Delay ( d ).ConfigureAwait(false);
-                                 midi.Send ( MidiMessage.StopNote  ( funda +  0 , dina , canal ).RawData);
-                                 midi.Send ( MidiMessage.StopNote  ( funda +  4 , dina , canal ).RawData);
-                                 midi.Send ( MidiMessage.StopNote  ( funda +  7 , dina , canal ).RawData);
-                                 midi.Send ( MidiMessage.StopNote  ( funda + 10 , dina , canal ).RawData);
-         }
-         public static async Task Tocar_Arpejo      (                     MidiOut midi , int funda = 60, int dura = 1000 , int dina = 127 , int canal = 1, int instru = 1                                                          ) 
-         {
-                               TimeSpan d = new TimeSpan(0 , 0 , 0 , 0 , dura);
-                               midi.Send ( MidiMessage.ChangePatch ( instru , canal).RawData);
- 
-                               midi.Send ( MidiMessage.StartNote   ( funda +  0 , dina , canal ).RawData); await Task.Delay( d ).ConfigureAwait(false);
-                               midi.Send ( MidiMessage.StartNote   ( funda +  4 , dina , canal ).RawData); await Task.Delay( d ).ConfigureAwait(false);
-                               midi.Send ( MidiMessage.StartNote   ( funda +  7 , dina , canal ).RawData); await Task.Delay( d ).ConfigureAwait(false);
-                               midi.Send ( MidiMessage.StartNote   ( funda + 10 , dina , canal ).RawData); await Task.Delay( d ).ConfigureAwait(false);
+                                  midi.Send ( MidiMessage.ChangePatch (instru, canal).RawData);
 
-                               midi.Send ( MidiMessage.StopNote    ( funda +  0 , dina , canal ).RawData);
-                               midi.Send ( MidiMessage.StopNote    ( funda +  4 , dina , canal ).RawData);
-                               midi.Send ( MidiMessage.StopNote    ( funda +  7 , dina , canal ).RawData);
-                               midi.Send ( MidiMessage.StopNote    ( funda + 10 , dina , canal ).RawData);
+                                  midi.Send ( MidiMessage.StartNote ( funda +  0 , dina , canal ).RawData);
+                                  midi.Send ( MidiMessage.StartNote ( funda +  4 , dina , canal ).RawData);
+                                  midi.Send ( MidiMessage.StartNote ( funda +  7 , dina , canal ).RawData);
+                                  midi.Send ( MidiMessage.StartNote ( funda + 10 , dina , canal ).RawData);
+ 
+			                      TimeSpan d = new TimeSpan(0, 0, 0, 0, dura);
+                                  await Task.Delay ( d ).ConfigureAwait(false);
+                                  
+                                  midi.Send ( MidiMessage.StopNote  ( funda +  0 , dina , canal ).RawData);
+                                  midi.Send ( MidiMessage.StopNote  ( funda +  4 , dina , canal ).RawData);
+                                  midi.Send ( MidiMessage.StopNote  ( funda +  7 , dina , canal ).RawData);
+                                  midi.Send ( MidiMessage.StopNote  ( funda + 10 , dina , canal ).RawData);
+         }
+         public static async Task   Tocar_Arpejo      (                     MidiOut midi , int funda = 60, int dura = 1000 , int dina = 127 , int canal = 1, int instru = 1                                                          ) 
+         {
+                                  TimeSpan d1 = new TimeSpan(0 , 0 , 0 , 0 , dura  );
+                                  TimeSpan d2 = new TimeSpan(0 , 0 , 0 , 0 , dura/2);
+			                      TimeSpan d3 = new TimeSpan(0 , 0 , 0 , 0 , dura/3);
+		                          TimeSpan d4 = new TimeSpan(0 , 0 , 0 , 0 , dura/4);
+			                      midi.Send ( MidiMessage.ChangePatch ( instru , canal).RawData);
+ 
+                                  midi.Send ( MidiMessage.StartNote   ( funda +  0 , dina , canal ).RawData); await Task.Delay( d1 ).ConfigureAwait(false);
+                                  midi.Send ( MidiMessage.StartNote   ( funda +  4 , dina , canal ).RawData); await Task.Delay( d2 ).ConfigureAwait(false);
+                                  midi.Send ( MidiMessage.StartNote   ( funda +  7 , dina , canal ).RawData); await Task.Delay( d3 ).ConfigureAwait(false);
+                                  midi.Send ( MidiMessage.StartNote   ( funda + 10 , dina , canal ).RawData); await Task.Delay( d4 ).ConfigureAwait(false);
+
+                                  midi.Send ( MidiMessage.StopNote    ( funda +  0 , dina , canal ).RawData);
+                                  midi.Send ( MidiMessage.StopNote    ( funda +  4 , dina , canal ).RawData);
+                                  midi.Send ( MidiMessage.StopNote    ( funda +  7 , dina , canal ).RawData);
+                                  midi.Send ( MidiMessage.StopNote    ( funda + 10 , dina , canal ).RawData);
          } 
-         public static string     Tocar_OndaQuadr   ( int dura = 1 , int f1 = 440               ) 
+         public static string       Tocar_OndaQuadr   ( int dura = 1 , int f1 = 440                       ) 
          {
                                  TimeSpan d = new TimeSpan(0, 0, 0, dura, 0);
                                  var onda = new SignalGenerator(44100, 2)
@@ -206,7 +229,7 @@ namespace Musica_2020
                                  }
                                  return "ok";
          }
-         public static string     Tocar_Glissando   ( int dura = 1 , int f1 = 440, int f2 = 880 ) 
+         public static string       Tocar_Glissando   ( int dura = 1 , int f1 = 440 , int f2 = 880        ) 
          {
                                  TimeSpan d = new TimeSpan ( 0 , 0 , 0 , dura , 0);
                                  var onda   = new SignalGenerator ( 44100 , 2 )
@@ -224,40 +247,102 @@ namespace Musica_2020
                                  }
                                  return "ok";
          }
-		 public static void       Obj_Esfera        ( UIApplication app , XYZ p                 ) 
+
+		 public static DirectShape  Obj_Esfera        ( UIApplication app                                 ) 
 		 {
-                                  try
-                                  {
-                                       Document   doc  = app.ActiveUIDocument.Document;
-				                       UIDocument Uid  = app.ActiveUIDocument;
-                           
-				                       XYZ        p1   = p + new XYZ( 0 ,  3 , 0 );
-				                       XYZ        p2   = p + new XYZ( 0 , -3 , 0 );
-				                       XYZ        p3   = p + new XYZ( 3 ,  0 , 0 );
+                                    Document    doc  = app.ActiveUIDocument.Document;
+				                    UIDocument  Uid  = app.ActiveUIDocument;
+                                    DirectShape ds   = null;
+                                    XYZ         po   = new XYZ (Dec(0), Dec(0), Dec(0));
+                                    try
+                                    {
+                                            XYZ         p1   = po + new XYZ(  0      , Dec( 0.25)  , 0 );
+				                            XYZ         p2   = po + new XYZ(  0      , Dec(-0.25)  , 0 );
+				                            XYZ         p3   = po + new XYZ(Dec(0.25),       0     , 0 );
+                                            List<Curve> perfil = new List<Curve>();
+				                                        perfil.Add ( Line.CreateBound(p1, p2));
+				                                        perfil.Add ( Arc.Create( p2 , p1 , p3 ));
 
-				                       List<Curve> perfil = new List<Curve>();
-				                       perfil.Add ( Line.CreateBound(p1, p2));
-				                       perfil.Add ( Arc.Create( p2 , p1 , p3 ));
+				                            ElementId    mater = ElementId.InvalidElementId;
+                                            CurveLoop    curva = CurveLoop.Create(perfil);
+                                            CurveLoop[]  loopc = new CurveLoop[] { curva };
+                                            SolidOptions optio = new SolidOptions ( mater , ElementId.InvalidElementId );
+                                            Frame        forma = new Frame        ( po , XYZ.BasisX , -XYZ.BasisZ , XYZ.BasisY );
+                                            Solid        esfer = GeometryCreationUtilities.CreateRevolvedGeometry( forma , loopc , 0 , Math.PI * 2, optio );
+                                                           
+                                            using (Transaction t = new Transaction( doc , "Cria direct shape" ))
+                                            {
+                                                  t.Start();
+                                                     ds = DirectShape.CreateElement(doc, new ElementId(BuiltInCategory.OST_GenericModel));
+					                                 ds.ApplicationId = "Musica";
+                                                     ds.SetShape ( new GeometryObject[] { esfer } );
+                                                  t.Commit();
+				                            }
+                                            
+                                    }
+                                    catch (Exception error) { TaskDialog.Show( "Resultado" , "A Esfera falhou " + error.ToString()); }
+                                    finally { }
+                                    Uid.RefreshActiveView();
+                                 return ds;
+         }
+         public static DirectShape  Obj_Esfera        ( UIApplication app , DSG.Point p                   ) 
+		 {
+                                    Document    doc  = app.ActiveUIDocument.Document;
+				                    UIDocument  Uid  = app.ActiveUIDocument;
+                                    DirectShape ds   = null;
+                                    XYZ         po   = new XYZ (Dec(p.X) , Dec(p.Y) , Dec(p.Z) );
+                                    try
+                                    {
+                                            XYZ         p1   = po + new XYZ(  0      , Dec( 0.25)  , 0 );
+				                            XYZ         p2   = po + new XYZ(  0      , Dec(-0.25)  , 0 );
+				                            XYZ         p3   = po + new XYZ(Dec(0.25),       0     , 0 );
+                                            List<Curve> perfil = new List<Curve>();
+				                                        perfil.Add ( Line.CreateBound(p1, p2));
+				                                        perfil.Add ( Arc.Create( p2 , p1 , p3 ));
 
-				                       ElementId    mater = ElementId.InvalidElementId;
-                                       CurveLoop    curva = CurveLoop.Create(perfil);
-                                       CurveLoop[]  loopc = new CurveLoop[] { curva };
-                                       SolidOptions optio = new SolidOptions ( mater , ElementId.InvalidElementId );
-                                       Frame        forma = new Frame        ( p , XYZ.BasisX , -XYZ.BasisZ , XYZ.BasisY );
-                                       Solid        esfer = GeometryCreationUtilities.CreateRevolvedGeometry( forma , loopc , 0 , Math.PI * 2, optio );
+				                            ElementId    mater = ElementId.InvalidElementId;
+                                            CurveLoop    curva = CurveLoop.Create(perfil);
+                                            CurveLoop[]  loopc = new CurveLoop[] { curva };
+                                            SolidOptions optio = new SolidOptions ( mater , ElementId.InvalidElementId );
+                                            Frame        forma = new Frame        ( po , XYZ.BasisX , -XYZ.BasisZ , XYZ.BasisY );
+                                            Solid        esfer = GeometryCreationUtilities.CreateRevolvedGeometry( forma , loopc , 0 , Math.PI * 2, optio );
+                                                           
+                                            using (Transaction t = new Transaction( doc , "Cria direct shape" ))
+                                            {
+                                                  t.Start();
+                                                     ds = DirectShape.CreateElement(doc, new ElementId(BuiltInCategory.OST_GenericModel));
+					                                 ds.ApplicationId = "Musica";
+                                                     ds.SetShape ( new GeometryObject[] { esfer } );
+                                                  t.Commit();
+				                            }
+                                            
+                                    }
+                                    catch (Exception error) { TaskDialog.Show( "Resultado" , "A Esfera falhou " + error.ToString()); }
+                                    finally { }
+                                    Uid.RefreshActiveView();
+                                 return ds;
+         }
+         public static void         Obj_Mover         ( UIApplication app , DSG.Point p , DirectShape esf ) 
+		 {
+                                    Document   doc = app.ActiveUIDocument.Document;
+			                        UIDocument Uid = app.ActiveUIDocument;
+                                    XYZ        vn  = new XYZ ( Dec( p.X ) , Dec( p.Y ), Dec ( p.Z ));
+                                    try
+                                    {
+                                          using (Transaction t = new Transaction( doc , "Mover Esfera" ))
+                                          {
+                                               t.Start();
+                                                  BoundingBoxXYZ bb = esf.get_BoundingBox( Uid.ActiveView );
+                                                  XYZ            po = (bb.Max + bb.Min) * 0.5;
+                                                  XYZ            vo = new XYZ ( po.X , po.Y ,  po.Z );
 
-                                       using (Transaction t = new Transaction( doc , "Cria direct shape" ))
-                                       {
-                                                t.Start();
-                                                  DirectShape ds   = DirectShape.CreateElement(doc, new ElementId(BuiltInCategory.OST_GenericModel));
-					                              ds.ApplicationId = "Musica";
-                                                  ds.SetShape ( new GeometryObject[] { esfer } );
-                                                t.Commit();
-					                            Uid.RefreshActiveView();
-				                       }
-			                      }
-                                  catch (Exception error) { TaskDialog.Show( "Resultado" , "A Esfera falhou " + error.ToString()); }
-                                  finally { }
+                                                  ElementTransformUtils.MoveElement (doc , esf.Id , (vn - vo));
+                                               t.Commit();
+                                          }
+			                        }
+                                    catch (Exception error) { TaskDialog.Show( "Resultado" , "Mover " + error.ToString()); }
+                                    finally { }
+                                    Uid.RefreshActiveView();
          }
 	}
 }
