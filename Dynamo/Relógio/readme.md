@@ -206,7 +206,6 @@ https://github.com/JLMenegotto/AulasBIM/assets/9437020/9bfdeff1-83e3-43f1-8a0f-7
 https://github.com/JLMenegotto/AulasBIM/assets/9437020/d847eb7b-3068-4b7d-a488-49ca33c9e19e
 
 
-https://github.com/JLMenegotto/AulasBIM/assets/9437020/94ff4867-be0d-4b02-8b95-caaac9e43f10
 https://github.com/JLMenegotto/AulasBIM/assets/9437020/e24a8fb7-bc7d-48c8-9be0-5d50efa135e3
 
 Exemplos usando Sons Waves
