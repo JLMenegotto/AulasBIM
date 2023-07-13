@@ -196,7 +196,8 @@ Para desbloquear o arquivo **Musica_2020.dll** utilize o comando Unblock do Wind
 
 ## Parabolóides 
 A seguir algumas sequências sonoras geradas de um parabolóide hiperbólico construído com duas retas. Nos dois primeiros exemplos 
-as retas invertidas tem as mesmas alturas resultando em um parabolóide simétrico.
+as retas invertidas tem as mesmas alturas resultando em um parabolóide simétrico. Para cada interação é modificado o tamanho do 
+módulo dimensional e escala musical utilizada.
 
 https://github.com/JLMenegotto/AulasBIM/assets/9437020/2fe5071d-7dce-48df-af51-b935822f242c
 
