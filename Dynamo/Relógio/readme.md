@@ -194,17 +194,18 @@ Para desbloquear o arquivo **Musica_2020.dll** utilize o comando Unblock do Wind
 
 **Unblock-File -Path C:\caminho onde o arquivo foi colocado\Musica_2020.dll**
 
-## Paraboloides 
-
+## Parabolóides 
+A seguir algumas sequências sonoras geradas de um parabolóide hiperbólico construído com duas retas. Nos dois primeiros exemplos 
+as retas invertidas tem as mesmas alturas resultando em um parabolóide simétrico.
 
 https://github.com/JLMenegotto/AulasBIM/assets/9437020/2fe5071d-7dce-48df-af51-b935822f242c
 
-
 https://github.com/JLMenegotto/AulasBIM/assets/9437020/9bfdeff1-83e3-43f1-8a0f-7fdd4e808ffa
-
 
 https://github.com/JLMenegotto/AulasBIM/assets/9437020/d847eb7b-3068-4b7d-a488-49ca33c9e19e
 
+
+## Mandalas 
 
 https://github.com/JLMenegotto/AulasBIM/assets/9437020/e24a8fb7-bc7d-48c8-9be0-5d50efa135e3
 
