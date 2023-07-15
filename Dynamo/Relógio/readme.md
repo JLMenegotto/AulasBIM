@@ -197,6 +197,8 @@ A seguir algumas sequências sonoras geradas de um parabolóide hiperbólico con
 as retas invertidas tem as mesmas alturas resultando em um parabolóide simétrico. Para cada interação é modificado o tamanho do 
 módulo dimensional e escala musical utilizada.
 
+https://github.com/JLMenegotto/AulasBIM/assets/9437020/26f4bcbe-942d-45a1-a804-f2dea4b30175
+
 https://github.com/JLMenegotto/AulasBIM/assets/9437020/2fe5071d-7dce-48df-af51-b935822f242c
 
 https://github.com/JLMenegotto/AulasBIM/assets/9437020/9bfdeff1-83e3-43f1-8a0f-7fdd4e808ffa
