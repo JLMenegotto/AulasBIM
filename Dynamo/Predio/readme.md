@@ -1,4 +1,4 @@
-# Predio
+# Prédio
 
 Nesta pasta as funções definem elementos predias.
 
