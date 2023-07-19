@@ -134,7 +134,7 @@ namespace Musica_2020
         
         
 
-         public static void         Tocar_Esfera      ( UIApplication app , DirectShape esf, DSG.Point p, MidiOut midi , int funda = 60, int salto = 0 , int dura = 1000 , int dina = 127 , int canal = 1, int instru = 1, int toca = 1 , double azi = 0, double alt = 0 ) 
+         public static void         Tocar_Esfera      ( UIApplication app , DirectShape esf, DSG.Point p, MidiOut midi , int funda = 60, int salto = 0 ,                int dura = 1000 , int dina = 127 , int canal = 1, int instru = 1, int toca = 1 , double azi = 0, double alt = 0 ) 
          {                
                                         if ( toca > 0 )
                                         { 
@@ -157,37 +157,42 @@ namespace Musica_2020
 			                            }
                                         System.GC.Collect();
          }
-         public static void         Tocar_Cruza       ( UIApplication app ,                               MidiOut midi , int funda = 60, int saltx = 0 , int salty = 0, int dura = 1000 , int dina = 127 , int canal = 1, int instr1 = 1, int instr2 = 1, int toca = 1 , double azi = 0, double alt = 0) 
+         public static int          Tocar_Cruza       ( UIApplication app ,                               MidiOut midi , int funda = 60, int saltx = 0 , int salty = 0, int dura = 1000 , int dina = 127 , int canal = 1, int instr1 = 1, int instr2 = 1, int toca = 1 , double azi = 0, double alt = 0) 
          {
-                                        if ( toca == 1 )
-                                        { 
-                                             Vista_Girar ( app , azi, alt );
-                                             int dina2 = 90;
+                                         if (toca == 2)
+                                         {
+                                              Vista_Girar ( app , azi , alt );
+                                         }
 
-                           				     MidiMessage In1 = MidiMessage.ChangePatch ( instr1 , 1  );
-                                             MidiMessage In2 = MidiMessage.ChangePatch ( instr2 , 2  );
-			                                 
-                                             midi.Send(In1.RawData);
-		                                     midi.Send(In2.RawData);
+                                         MidiMessage Notaonx = null;
+                                         MidiMessage Notaofx = null;
+                                         MidiMessage Notaony = null;
+                                         MidiMessage Notaofy = null;
 
-				                             MidiMessage Notaonx = MidiMessage.StartNote   ( funda + saltx , dina   , 1  );
-                                             MidiMessage Notaofx = MidiMessage.StopNote    ( funda + saltx ,    0   , 1  );
+                                          
+                                               int dina2 = 90;
 
-			                                 MidiMessage Notaony = MidiMessage.StartNote   (funda + salty  , dina2  , 2  );
-				                             MidiMessage Notaofy = MidiMessage.StopNote    (funda + salty  , 0      , 2  );
+                           				       MidiMessage In1     = MidiMessage.ChangePatch ( instr1 , 1 );
+                                               MidiMessage In2     = MidiMessage.ChangePatch ( instr2 , 2 );
 
+                                               midi.Send( In1.RawData );
+		                                       midi.Send( In2.RawData );
 
-			                                 midi.Send ( Notaonx.RawData ); 
-											 midi.Send ( Notaony.RawData ); 
-                                                                            Thread.Sleep ( dura ); 
-                                             midi.Send ( Notaofx.RawData ); 
-                                             midi.Send ( Notaofy.RawData );
-                                        }
-                                        if (toca > 1)
-                                        { 
-                                             GC.Collect();
-                                        }
-		 }
+                                               Notaonx = MidiMessage.StartNote ( funda + saltx , dina  , 1 );
+                                               Notaofx = MidiMessage.StopNote  ( funda + saltx , 0     , 1 );
+			                                   Notaony = MidiMessage.StartNote ( funda + salty , dina2 , 2 );
+				                               Notaofy = MidiMessage.StopNote  ( funda + salty , 0     , 2 );
+
+			                                   midi.Send ( Notaonx.RawData ); 
+											   midi.Send ( Notaony.RawData );              
+                                            
+                                               Thread.Sleep ( dura ); 
+                                            
+                                               midi.Send ( Notaofx.RawData ); 
+                                               midi.Send ( Notaofy.RawData );
+                                        
+                                         return Notaonx.RawData;
+         }
          public static void         Tocar_Nota        ( UIApplication app ,                               MidiOut midi , int funda = 60, int salto = 0 ,                int dura = 1000 , int dina = 127 , int canal = 1, int instru = 1, int toca = 1 , double azi = 0, double alt = 0) 
          {
                                         if ( toca > 0 )
