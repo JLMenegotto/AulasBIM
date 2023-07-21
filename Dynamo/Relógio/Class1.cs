@@ -139,11 +139,11 @@ namespace Musica_2020
 
          public static void         Tocar_Esfera      ( UIApplication app,  MidiOut midi , DirectShape esf, DSG.Point p, int f0 = 64, int s1 = 0, int s2 = 0, int dur = 500 , int v1 = 1, int v2 = 1, int v3 = 1, int fdi = 20, double azi = 0, double alt = 0 ) 
          {
-                                                  Tocar_Voz   ( app, midi, f0, s1, s2, dur, v1, v2, v3);
-                                                  Esfera_Mover( app, p, esf   );
-                                                  Vista_Girar ( app, azi, alt );
-                                                  Vista_Focar ( app           );
-                                                  System.GC.Collect();
+                                                        Tocar_Voz   ( app, midi, f0, s1, s2, dur, v1, v2, v3);
+                                                        Esfera_Mover( app, p, esf   );
+                                                        Vista_Girar ( app, azi, alt );
+                                                        Vista_Focar ( app           );
+                                                        System.GC.Collect();
          }
          public static void         Tocar_Voz         ( UIApplication app , MidiOut midi ,                               int f0 = 64, int s1 = 0, int s2 = 0, int dur = 500 , int v1 = 1, int v2 = 1, int v3 = 1, int fdi = 20, double azi = 0, double alt = 0 ) 
          {
@@ -153,18 +153,18 @@ namespace Musica_2020
 
                                                         midi.Send ( Instru1.RawData );
                                                         midi.Send ( Notaon1.RawData );
-                                                         Thread.Sleep  ( dur ); 
+                                                        Thread.Sleep  ( dur ); 
                                                         midi.Send ( Notaof1.RawData );
 		 }
          public static void         Tocar_Vozes       ( UIApplication app , MidiOut midi ,                               int f0 = 64, int s1 = 0, int s2 = 0, int dur = 500 , int v1 = 1, int v2 = 1, int v3 = 1, int fdi = 20, double azi = 0, double alt = 0 ) 
          {                                         
-                           				                MidiMessage In1     = MidiMessage.ChangePatch ( v1 , 1 );
+                           				MidiMessage In1     = MidiMessage.ChangePatch ( v1 , 1 );
                                                         MidiMessage In2     = MidiMessage.ChangePatch ( v2 , 2 );
                                                         MidiMessage In3     = MidiMessage.ChangePatch ( v3 , 3 );
 
                                                         midi.Send( In1.RawData );
-		                                                midi.Send( In2.RawData );
-		                                                midi.Send( In3.RawData );
+		                                        midi.Send( In2.RawData );
+		                                        midi.Send( In3.RawData );
 
                                                         MidiMessage Nota1on = MidiMessage.StartNote ( f0 + s1 , 120       , 1 );
                                                         MidiMessage Nota1of = MidiMessage.StopNote  ( f0 + s1 , 0         , 1 );
@@ -174,16 +174,16 @@ namespace Musica_2020
                                                         MidiMessage Nota3of = MidiMessage.StopNote  ( f0 - s2 , 0         , 3 );
 
                                                         midi.Send ( Nota1on.RawData ); 
-									                    midi.Send ( Nota2on.RawData );               
-			                                            midi.Send ( Nota3on.RawData ); 
+						        midi.Send ( Nota2on.RawData );               
+			                                midi.Send ( Nota3on.RawData ); 
             
-                                                         Thread.Sleep (dur); 
+                                                        Thread.Sleep (dur); 
 
-                                                         midi.Send ( Nota1of.RawData ); 
-                                                         midi.Send ( Nota2of.RawData );
-                                                         midi.Send ( Nota3of.RawData );
+                                                        midi.Send ( Nota1of.RawData ); 
+                                                        midi.Send ( Nota2of.RawData );
+                                                        midi.Send ( Nota3of.RawData );
 
-                                                         Vista_Girar(app, azi, alt);
+                                                        Vista_Girar(app, azi, alt);
          }
          public static async Task   Tocar_Escala      (                     MidiOut midi , int f0 = 64, int dur = 500, int v1 = 1, int inv = 1, int[] Escala = null  ) 
          {
@@ -204,7 +204,7 @@ namespace Musica_2020
                                      midi.Send ( MidiMessage.StartNote ( f0 +  7 , 120 , 1 ).RawData);
                                      midi.Send ( MidiMessage.StartNote ( f0 + 10 , 120 , 1 ).RawData);
  
-			                         TimeSpan d = new TimeSpan(0, 0, 0, 0, dur);
+			             TimeSpan d = new TimeSpan(0, 0, 0, 0, dur);
                                      await Task.Delay ( d ).ConfigureAwait(false);
                                   
                                      midi.Send ( MidiMessage.StopNote  ( f0 +  0 , 120 , 1 ).RawData);
@@ -216,10 +216,10 @@ namespace Musica_2020
          {
                                     TimeSpan d1 = new TimeSpan(0 , 0 , 0 , 0 , dur  );
                                     TimeSpan d2 = new TimeSpan(0 , 0 , 0 , 0 , dur/2);
-			                        TimeSpan d3 = new TimeSpan(0 , 0 , 0 , 0 , dur/3);
-		                            TimeSpan d4 = new TimeSpan(0 , 0 , 0 , 0 , dur/4);
+			            TimeSpan d3 = new TimeSpan(0 , 0 , 0 , 0 , dur/3);
+		                    TimeSpan d4 = new TimeSpan(0 , 0 , 0 , 0 , dur/4);
 
-			                        midi.Send ( MidiMessage.ChangePatch ( v1 , 1 ).RawData);
+			            midi.Send ( MidiMessage.ChangePatch ( v1 , 1 ).RawData);
  
                                     midi.Send ( MidiMessage.StartNote   ( f0 +  0 , 120 , 1 ).RawData); await Task.Delay( d1 ).ConfigureAwait(false);
                                     midi.Send ( MidiMessage.StartNote   ( f0 +  4 , 120 , 1 ).RawData); await Task.Delay( d2 ).ConfigureAwait(false);
@@ -274,7 +274,7 @@ namespace Musica_2020
          public static void         Esfera_Apagar     ( UIApplication app                                 ) 
          {
                                     Document    doc = app.ActiveUIDocument.Document;
-				                    UIDocument  Uid = app.ActiveUIDocument;
+				    UIDocument  Uid = app.ActiveUIDocument;
                                     FilteredElementCollector col = new FilteredElementCollector(doc);
                                     ElementCategoryFilter    gen = new ElementCategoryFilter((BuiltInCategory)Enum.Parse(typeof(BuiltInCategory), "OST_GenericModel"));
                                     IList<Element>           ele = col.WherePasses(gen).WhereElementIsNotElementType().ToElements().ToList();
@@ -289,10 +289,10 @@ namespace Musica_2020
                                     }
                                     Uid.RefreshActiveView();
          }
-		 public static DirectShape  Esfera_Criar      ( UIApplication app                                 ) 
-		 {
+	 public static DirectShape  Esfera_Criar      ( UIApplication app                                 ) 
+	 {
                                     Document    doc  = app.ActiveUIDocument.Document;
-				                    UIDocument  Uid  = app.ActiveUIDocument;
+				    UIDocument  Uid  = app.ActiveUIDocument;
                                     DirectShape ds   = null;
                                     XYZ         po   = new XYZ (Dec(0), Dec(0), Dec(0));
                                     try
@@ -327,9 +327,9 @@ namespace Musica_2020
                                  return ds;
          }
          public static DirectShape  Esfera_Criar      ( UIApplication app , DSG.Point p                   ) 
-		 {
+	 {
                                     Document    doc  = app.ActiveUIDocument.Document;
-				                    UIDocument  Uid  = app.ActiveUIDocument;
+				    UIDocument  Uid  = app.ActiveUIDocument;
                                     DirectShape ds   = null;
                                     XYZ         po   = new XYZ (Dec(p.X) , Dec(p.Y) , Dec(p.Z) );
                                     try
@@ -364,7 +364,7 @@ namespace Musica_2020
                                  return ds;
          }
          public static void         Esfera_Mover      ( UIApplication app , DSG.Point p , DirectShape esf ) 
-		 {
+         {
                                     Document   doc = app.ActiveUIDocument.Document;
 			                        UIDocument Uid = app.ActiveUIDocument;
                                     XYZ        vn  = new XYZ ( Dec( p.X ) , Dec( p.Y ), Dec ( p.Z ));
@@ -386,12 +386,12 @@ namespace Musica_2020
                                     Uid.RefreshActiveView();
          }
 
-		 public static int[]        Maior ( ) { return new int[] { 0, 2, 4, 5, 7, 9, 11 }; }
-		 public static int[]        Menor ( ) { return new int[] { 0, 2, 3, 5, 7, 8, 10 }; }
-		 public static int[]        Penta ( ) { return new int[] { 0, 2, 5, 7, 9 };        }
-		 public static int[]        Dorio ( ) { return new int[] { 0, 2, 4, 6, 7, 9, 11 }; }
-		 public static int[]        TonsP ( ) { return new int[] { 0, 2, 4, 6, 8, 10 };    }
-		 public static int[]        TonsI ( ) { return new int[] { 1, 3, 5, 7, 9, 11 };    }
+	 public static int[]        Maior ( ) { return new int[] { 0, 2, 4, 5, 7, 9, 11 }; }
+	 public static int[]        Menor ( ) { return new int[] { 0, 2, 3, 5, 7, 8, 10 }; }
+	 public static int[]        Penta ( ) { return new int[] { 0, 2, 5, 7, 9 };        }
+	 public static int[]        Dorio ( ) { return new int[] { 0, 2, 4, 6, 7, 9, 11 }; }
+	 public static int[]        TonsP ( ) { return new int[] { 0, 2, 4, 6, 8, 10 };    }
+	 public static int[]        TonsI ( ) { return new int[] { 1, 3, 5, 7, 9, 11 };    }
 
          public static void   Vista_Redraw ( UIApplication app                                     ) 
          {
