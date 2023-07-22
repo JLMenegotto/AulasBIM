@@ -207,8 +207,8 @@ https://github.com/JLMenegotto/AulasBIM/assets/9437020/d847eb7b-3068-4b7d-a488-4
 
 
 ## Mandalas 
-Nos exemplos das Mandalas existe uma sutil correspondência visual e sonora que pode se sentir prestando atenção ao ordenamento dos pontos. 
-A maior dispersão dos pontos, há uma menor a coesão sonora e viceversa.
+Nos exemplos das Mandalas existe uma sutil correspondência visual e sonora que pode ser sentida prestando atenção ao ordenamento visual dos pontos. 
+A maior dispersão dos pontos, há menor coesão sonora e viceversa.
 
 https://github.com/JLMenegotto/AulasBIM/assets/9437020/e24a8fb7-bc7d-48c8-9be0-5d50efa135e3
 
