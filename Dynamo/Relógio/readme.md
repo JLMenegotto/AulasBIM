@@ -185,8 +185,8 @@ A função **Crono_Obra_Metalica.dyn** exemplifica o uso de funções temporais 
        60.     DSOffice.Data.ExportCSV( arquiv , dados);
 
 ## MUSICA_2020.DLL
-A biblioteca contem algumas funções musicais que podem ser integradas em APIs. Deve ser carregada como **ADD-ONs** em Dynamo. 
-Veja um exemplo. Ative o som do video embaixo para ouvir diversas configurações geométricas e sonoras. 
+A biblioteca contem algumas funções musicais que programei em C# utilizando a biblioteca NAUDIO. As funções podem ser integradas em APIs e em Dynamo. 
+Deve ser carregada como **ADD-ONs** em Dynamo. Veja um exemplo. Ative o som do video embaixo para ouvir diversas configurações geométricas e sonoras. 
 
 Para desbloquear o arquivo **Musica_2020.dll** utilize o comando Unblock do Windows PowerShell.
 
