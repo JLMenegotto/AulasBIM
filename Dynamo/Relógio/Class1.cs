@@ -1,4 +1,4 @@
-﻿//
+﻿﻿//
 // FUNÇÕES MUSICAIS PARA MIDI                                         
 // AUTOR: PROF.JOSÉ LUIS MENEGOTTO - ESCOLA POLITÉCNICA DA UFRJ                                  
 //                              
