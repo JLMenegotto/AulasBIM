@@ -137,14 +137,14 @@ namespace Musica_2020
                 return "MIDI desativado";
          }
 
-         public static void         Tocar_Esfera      ( UIApplication app,  MidiOut midi , DirectShape esf, DSG.Point p, int f0 = 64, int s1 = 0, int s2 = 0, int dur = 500 , int v1 = 1, int v2 = 1, int v3 = 1, int fdi = 20, double azi = 0, double alt = 0 ) 
+         public static void         Tocar_Esfera      ( UIApplication app,  MidiOut midi , DirectShape esf, DSG.Point p, int f0 = 64,                                        int s1 =  0, int s2 = 0,                         int dur = 500 , int v1 = 1, int v2 = 1, int v3 = 1, int fdi = 20, double azi = 0, double alt = 0 ) 
          {
                                                         Tocar_Voz   ( app, midi, f0, s1, s2, dur, v1, v2, v3);
                                                         Esfera_Mover( app, p  , esf );
                                                         Vista_Girar ( app, azi, alt );
                                                         Vista_Focar ( app           );
          }
-         public static void         Tocar_Voz         ( UIApplication app , MidiOut midi ,                               int f0 = 64, int s1 = 0, int s2 = 0, int dur = 500 , int v1 = 1, int v2 = 1, int v3 = 1, int fdi = 20, double azi = 0, double alt = 0 ) 
+         public static void         Tocar_Voz         ( UIApplication app , MidiOut midi ,                               int f0 = 64,                                        int s1 =  0, int s2 = 0,                         int dur = 500 , int v1 = 1, int v2 = 1, int v3 = 1, int fdi = 20, double azi = 0, double alt = 0 ) 
          {
                                                         MidiMessage Instru1 = MidiMessage.ChangePatch ( v1 ,             1 );
                                                         MidiMessage Notaon1 = MidiMessage.StartNote   ( f0 + s1 , 120  , 1 );
@@ -155,7 +155,7 @@ namespace Musica_2020
                                                          Thread.Sleep  ( dur ); 
                                                         midi.Send ( Notaof1.RawData );
 		 }
-         public static void         Tocar_Vozes       ( UIApplication app , MidiOut midi ,                               int f0 = 64, int s1 = 0, int s2 = 0, int dur = 500 , int v1 = 1, int v2 = 1, int v3 = 1, int fdi = 20, double azi = 0, double alt = 0 , int gir = 0) 
+         public static void         Tocar_Vozes       ( UIApplication app , MidiOut midi ,                               int f0 = 64,                                        int s1 =  0, int s2 = 0,                         int dur = 500 , int v1 = 1, int v2 = 1, int v3 = 1, int fdi = 20, double azi = 0, double alt = 0 , int gir = 0) 
          {                                         
                            				                MidiMessage In1     = MidiMessage.ChangePatch ( v1 , 1 );
                                                         MidiMessage In2     = MidiMessage.ChangePatch ( v2 , 2 );
@@ -184,58 +184,27 @@ namespace Musica_2020
 
                                                          if (gir == 1) Vista_Girar(app, azi, alt);
          }
-         public static void         Tocar_4Vozes      ( UIApplication app , MidiOut midi ,                               int f0 = 64, int s1 = 0, int s2 = 0, int dur = 500 , int v1 = 1, int v2 = 1, int v3 = 1, int fdi = 20, double azi = 0, double alt = 0 , int gir = 0) 
+         public static void         Tocar_4Vozes      ( UIApplication app , MidiOut midi ,                               int f1 = 64, int f2 = 64, int f3 = 64, int f4 = 64, int s1 =  0, int s2 = 0, int s3 = 0, int s4 = 0, int dur = 500 , int v1 = 1, int v2 = 1, int v3 = 1, int v4 = 1, int fdi = 20, int fdu = 2, double azi = 0, double alt = 0 , int gir = 0) 
          {
-
-                                                        int[] vozes = new int[] { v1, v2, v3, v3 };
-                                                        int[] salto = new int[] { s1, s2, s2, s1 };
-
-                                                        for (int v = 0; v < vozes.Length; v++)
+                                                        
+                                                        if (gir == 1)
                                                         {
-                                                             midi.Send( MidiMessage.ChangePatch(vozes[v] , v+1 ).RawData);
+			                                               UIView uiv = Vista_Ativa(app);
+				                                           Vista_Girar ( app , uiv , azi , alt); 
                                                         }
 
-                                                        for (int s = 0; s < salto.Length; s = s+2)
-                                                        {
-                                                             midi.Send ( MidiMessage.StartNote (f0 + salto[s] , 120 - (fdi * s) , s+1).RawData); 
-                                                             
-                                                        }
-                                                            Thread.Sleep ( dur    );
-                                                        for (int s = 1; s < salto.Length; s = s+2)
-                                                        {
-                                                             midi.Send ( MidiMessage.StartNote (f0 + salto[s] , 120 - (fdi * s) , s+1).RawData); 
-                                                        }
-                                                            Thread.Sleep ( dur / 2);
+                                                        int[] voz = new int[] { v1 , v2 , v3 , v4 };
+                                                        int[] fun = new int[] { f1 , f2 , f3 , f4 };
+                                                        int[] sal = new int[] { s1 , s2 , s3 , s4 };
+                                                        //Seta Instrumentos --------------------------------------------------------------------------------------------------------------------
+                                                        for (int v = 0; v < voz.Length;   v++) { midi.Send ( MidiMessage.ChangePatch ( voz[v] , v+1 ).RawData); }
+                                                        //Vozes 1 e 2 --------------------------------------------------------------------------------------------------------------------------
+                                                        for (int v = 0; v < sal.Length-2; v++) { midi.Send ( MidiMessage.StartNote   ( fun[v] + sal[v] , 120 - (fdi * v) , v+1).RawData); } Thread.Sleep ( dur    );
+                                                        //Vozes 3 e 4 --------------------------------------------------------------------------------------------------------------------------
+                                                        for (int v = 2; v < sal.Length-2; v++) { midi.Send ( MidiMessage.StartNote   ( fun[v] + sal[v] , 120 - (fdi * v) , v+1).RawData); } Thread.Sleep ( dur / fdu);
+                                                        //Finaliza todos os toques -------------------------------------------------------------------------------------------------------------
+                                                        for (int v = 0; v < sal.Length;   v++) { midi.Send ( MidiMessage.StopNote    ( fun[v] + sal[v] ,               0 , v+1).RawData); }
 
-                                                        for (int s = 0; s < salto.Length; s++)
-                                                        {
-                                                             midi.Send ( MidiMessage.StopNote  (f0 + salto[s] ,               0 , s+1).RawData);
-                                                        }
-                                                        if (gir == 1) Vista_Girar(app, azi, alt);
-         }
-         public static void         Tocar_6Vozes      ( UIApplication app , MidiOut midi ,                               int f0 = 64, int s1 = 0, int s2 = 0, int dur = 500 , int v1 = 1, int v2 = 1, int v3 = 1, int fdi = 20, double azi = 0, double alt = 0 , int gir = 0) 
-         {
-
-                                                        int[] vozes = new int[] { v1, v1, v2, v2, v3, v3 };
-                                                        int[] salto = new int[] { s1, s2, s2, s1, s1, s2 };
-
-                                                        for (int v = 0; v < vozes.Length; v++)
-                                                        {
-                                                             midi.Send( MidiMessage.ChangePatch(vozes[v] , v+1 ).RawData);
-                                                        }
-
-                                                        for (int s = 0; s < salto.Length; s++)
-                                                        {
-                                                             midi.Send ( MidiMessage.StartNote (f0 + salto[s] , 120 - (fdi * s) , s+1).RawData);
-                                                        }
-            
-                                                        Thread.Sleep ( dur ); 
-
-                                                        for (int s = 0; s < salto.Length; s++)
-                                                        {
-                                                             midi.Send ( MidiMessage.StopNote  (f0 + salto[s] ,               0 , s+1).RawData);
-                                                        }
-                                                        if (gir == 1) Vista_Girar(app, azi, alt);
          }
          public static async Task   Tocar_Escala      (                     MidiOut midi ,                               int f0 = 64,                         int dur = 500 , int v1 = 1,                         int inv = 1, int[] Escala = null  ) 
          {
@@ -491,6 +460,29 @@ namespace Musica_2020
                               View       vis = app.ActiveUIDocument.ActiveView;
                               UIView     uiv = Vista_Ativa(app);
 
+							  if (vis is View3D)
+                              {
+                                   View3D      v   = vis as View3D;
+			                      Transaction t = new Transaction(doc, "Posiciona em 3D");
+                                   using (t)
+                                   {
+                                          t.Start();
+                                              XYZ o = XYZ.Zero;
+                                              XYZ d = Vun( azi , alt + 90);
+                                              XYZ s = Vun( azi , alt).Negate();
+                                              ViewOrientation3D ptv = new ViewOrientation3D(o, d, s);
+                                              v.SetOrientation(ptv);
+                                              uiv.ZoomToFit();
+										  t.Commit();
+								   }
+                              }
+			                  app.ActiveUIDocument.RefreshActiveView();
+
+		 }
+         public static void   Vista_Girar ( UIApplication app , UIView uiv , double azi = 0.0 , double alt = 0 ) 
+         {
+                              Document   doc = app.ActiveUIDocument.Document;
+                              View       vis = app.ActiveUIDocument.ActiveView;
 							  if (vis is View3D)
                               {
                                    View3D      v   = vis as View3D;
