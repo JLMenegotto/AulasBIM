@@ -9,7 +9,6 @@ using System.Runtime.Remoting.Messaging;
 using System.Threading;
 using System.Threading.Tasks;
 
-
 using Autodesk.Revit;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.DB.Analysis;
@@ -185,12 +184,11 @@ namespace Musica_2020
                                                          if (gir == 1) Vista_Girar(app, azi, alt);
          }
          public static void         Tocar_4Vozes      ( UIApplication app , MidiOut midi ,                               int f1 = 64, int f2 = 64, int f3 = 64, int f4 = 64, int s1 =  0, int s2 = 0, int s3 = 0, int s4 = 0, int dur = 500 , int v1 = 1, int v2 = 1, int v3 = 1, int v4 = 1, int fdi = 20, int fdu = 2, double azi = 0, double alt = 0 , int gir = 0) 
-         {
-                                                        
+         { 
                                                         if (gir == 1)
                                                         {
 			                                               UIView uiv = Vista_Ativa(app);
-				                                           Vista_Girar ( app , uiv , azi , alt); 
+				                                       Vista_Girar ( app , uiv , azi , alt); 
                                                         }
 
                                                         int[] voz = new int[] { v1 , v2 , v3 , v4 };
@@ -235,12 +233,12 @@ namespace Musica_2020
          }
          public static async Task   Tocar_Arpejo      (                     MidiOut midi , int f0 = 64, int dur = 500, int v1 = 1                                    ) 
          {
-                                    TimeSpan d1 = new TimeSpan(0 , 0 , 0 , 0 , dur  );
-                                    TimeSpan d2 = new TimeSpan(0 , 0 , 0 , 0 , dur/2);
-			                        TimeSpan d3 = new TimeSpan(0 , 0 , 0 , 0 , dur/3);
-		                            TimeSpan d4 = new TimeSpan(0 , 0 , 0 , 0 , dur/4);
+                                    TimeSpan d1 = new TimeSpan (0 , 0 , 0 , 0 , dur  );
+                                    TimeSpan d2 = new TimeSpan (0 , 0 , 0 , 0 , dur/2);
+			            TimeSpan d3 = new TimeSpan (0 , 0 , 0 , 0 , dur/3);
+		                    TimeSpan d4 = new TimeSpan (0 , 0 , 0 , 0 , dur/4);
 
-			                        midi.Send ( MidiMessage.ChangePatch ( v1 , 1 ).RawData);
+			              Midi.Send ( MidiMessage.ChangePatch ( v1 , 1 ).RawData);
  
                                     midi.Send ( MidiMessage.StartNote   ( f0 +  0 , 120 , 1 ).RawData); await Task.Delay( d1 ).ConfigureAwait(false);
                                     midi.Send ( MidiMessage.StartNote   ( f0 +  4 , 120 , 1 ).RawData); await Task.Delay( d2 ).ConfigureAwait(false);
@@ -313,19 +311,19 @@ namespace Musica_2020
 		 public static DirectShape  Esfera_Criar      ( UIApplication app                                 ) 
 		 {
                                     Document    doc  = app.ActiveUIDocument.Document;
-				                    UIDocument  Uid  = app.ActiveUIDocument;
+				    UIDocument  Uid  = app.ActiveUIDocument;
                                     DirectShape ds   = null;
                                     XYZ         po   = new XYZ (Dec(0), Dec(0), Dec(0));
                                     try
                                     {
                                             XYZ         p1   = po + new XYZ(  0      , Dec( 0.25)  , 0 );
-				                            XYZ         p2   = po + new XYZ(  0      , Dec(-0.25)  , 0 );
-				                            XYZ         p3   = po + new XYZ(Dec(0.25),       0     , 0 );
+				            XYZ         p2   = po + new XYZ(  0      , Dec(-0.25)  , 0 );
+				            XYZ         p3   = po + new XYZ(Dec(0.25),       0     , 0 );
                                             List<Curve> perfil = new List<Curve>();
-				                                        perfil.Add ( Line.CreateBound(p1, p2));
-				                                        perfil.Add ( Arc.Create( p2 , p1 , p3 ));
+				            perfil.Add ( Line.CreateBound(p1, p2));
+				            perfil.Add ( Arc.Create( p2 , p1 , p3 ));
 
-				                            ElementId    mater = ElementId.InvalidElementId;
+				            ElementId    mater = ElementId.InvalidElementId;
                                             CurveLoop    curva = CurveLoop.Create(perfil);
                                             CurveLoop[]  loopc = new CurveLoop[] { curva };
                                             SolidOptions optio = new SolidOptions ( mater , ElementId.InvalidElementId );
@@ -336,10 +334,10 @@ namespace Musica_2020
                                             {
                                                   t.Start();
                                                      ds = DirectShape.CreateElement(doc, new ElementId(BuiltInCategory.OST_GenericModel));
-					                                 ds.ApplicationId = "Musica";
+					                ds.ApplicationId = "Musica";
                                                      ds.SetShape ( new GeometryObject[] { esfer } );
                                                   t.Commit();
-				                            }
+		                           }
                                             
                                     }
                                     catch (Exception error) { TaskDialog.Show( "Resultado" , "A Esfera falhou " + error.ToString()); }
@@ -350,19 +348,19 @@ namespace Musica_2020
          public static DirectShape  Esfera_Criar      ( UIApplication app , DSG.Point p                   ) 
 		 {
                                     Document    doc  = app.ActiveUIDocument.Document;
-				                    UIDocument  Uid  = app.ActiveUIDocument;
+			            UIDocument  Uid  = app.ActiveUIDocument;
                                     DirectShape ds   = null;
                                     XYZ         po   = new XYZ (Dec(p.X) , Dec(p.Y) , Dec(p.Z) );
                                     try
                                     {
                                             XYZ         p1   = po + new XYZ(  0      , Dec( 0.25)  , 0 );
-				                            XYZ         p2   = po + new XYZ(  0      , Dec(-0.25)  , 0 );
-				                            XYZ         p3   = po + new XYZ(Dec(0.25),       0     , 0 );
+			                    XYZ         p2   = po + new XYZ(  0      , Dec(-0.25)  , 0 );
+			                    XYZ         p3   = po + new XYZ(Dec(0.25),       0     , 0 );
                                             List<Curve> perfil = new List<Curve>();
 				                                        perfil.Add ( Line.CreateBound(p1, p2));
 				                                        perfil.Add ( Arc.Create( p2 , p1 , p3 ));
 
-				                            ElementId    mater = ElementId.InvalidElementId;
+			                    ElementId    mater = ElementId.InvalidElementId;
                                             CurveLoop    curva = CurveLoop.Create(perfil);
                                             CurveLoop[]  loopc = new CurveLoop[] { curva };
                                             SolidOptions optio = new SolidOptions ( mater , ElementId.InvalidElementId );
@@ -373,7 +371,7 @@ namespace Musica_2020
                                             {
                                                   t.Start();
                                                      ds = DirectShape.CreateElement(doc, new ElementId(BuiltInCategory.OST_GenericModel));
-					                                 ds.ApplicationId = "Musica";
+			                                ds.ApplicationId = "Musica";
                                                      ds.SetShape ( new GeometryObject[] { esfer } );
                                                   t.Commit();
 				                            }
@@ -385,9 +383,9 @@ namespace Musica_2020
                                  return ds;
          }
          public static void         Esfera_Mover      ( UIApplication app , DSG.Point p , DirectShape esf ) 
-		 {
+         {
                                     Document   doc = app.ActiveUIDocument.Document;
-			                        UIDocument Uid = app.ActiveUIDocument;
+	                           UIDocument Uid = app.ActiveUIDocument;
                                     XYZ        vn  = new XYZ ( Dec( p.X ) , Dec( p.Y ), Dec ( p.Z ));
                                     try
                                     {
@@ -401,10 +399,10 @@ namespace Musica_2020
                                                   ElementTransformUtils.MoveElement (doc , esf.Id , (vn - vo));
                                                t.Commit();
                                           }
-			                        }
-                                    catch (Exception error) { TaskDialog.Show( "Resultado" , "Mover " + error.ToString()); }
-                                    finally { }
-                                    Uid.RefreshActiveView();
+		                     }
+                                     catch (Exception error) { TaskDialog.Show( "Resultado" , "Mover " + error.ToString()); }
+                                     finally { }
+                                     Uid.RefreshActiveView();
          }
 
 		 public static int[]        Maior ( ) { return new int[] { 0, 2, 4, 5, 7, 9, 11 }; }
@@ -460,10 +458,10 @@ namespace Musica_2020
                               View       vis = app.ActiveUIDocument.ActiveView;
                               UIView     uiv = Vista_Ativa(app);
 
-							  if (vis is View3D)
+		              if (vis is View3D)
                               {
                                    View3D      v   = vis as View3D;
-			                      Transaction t = new Transaction(doc, "Posiciona em 3D");
+			           Transaction t = new Transaction(doc, "Posiciona em 3D");
                                    using (t)
                                    {
                                           t.Start();
@@ -473,21 +471,19 @@ namespace Musica_2020
                                               ViewOrientation3D ptv = new ViewOrientation3D(o, d, s);
                                               v.SetOrientation(ptv);
                                               uiv.ZoomToFit();
-										  t.Commit();
-								   }
+			      	         t.Commit();
+                                  }
                               }
-			                  app.ActiveUIDocument.RefreshActiveView();
-
-		 }
+			      app.ActiveUIDocument.RefreshActiveView();
+        }
          public static void   Vista_Girar ( UIApplication app , UIView uiv , double azi = 0.0 , double alt = 0 ) 
          {
                               Document   doc = app.ActiveUIDocument.Document;
                               View       vis = app.ActiveUIDocument.ActiveView;
-							  if (vis is View3D)
+	                      if (vis is View3D)
                               {
                                    View3D      v   = vis as View3D;
-
-			                      Transaction t = new Transaction(doc, "Posiciona em 3D");
+                                   Transaction t = new Transaction(doc, "Posiciona em 3D");
                                    using (t)
                                    {
                                           t.Start();
@@ -497,10 +493,10 @@ namespace Musica_2020
                                               ViewOrientation3D ptv = new ViewOrientation3D(o, d, s);
                                               v.SetOrientation(ptv);
                                               uiv.ZoomToFit();
-										  t.Commit();
-								   }
+					  t.Commit();
+				  }
                               }
-			                  app.ActiveUIDocument.RefreshActiveView();
+			      app.ActiveUIDocument.RefreshActiveView();
 
 		 }
     }
