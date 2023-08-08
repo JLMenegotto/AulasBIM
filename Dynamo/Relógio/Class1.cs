@@ -148,141 +148,54 @@ namespace Musica_2020
                 finally { }
                 return "MIDI desativado";
          }
-
-         public static void         Tocar_Esfera      ( UIApplication app,  MidiOut midi , DirectShape esf, DSG.Point p, int f0 = 64,                                        int s1 =  0, int s2 = 0,                         int dur = 500 , int v1 = 1, int v2 = 1, int v3 = 1, int fdi = 20, double azi = 0, double alt = 0 ) 
+         public static void         MIDI_Instr        ( MidiOut midi , int canal, int instr                   ) 
          {
-                                                        Tocar_Voz   ( app, midi, f0, s1, s2, dur, v1, v2, v3);
-                                                        Esfera_Mover( app, p  , esf );
-                                                        Vista_Girar ( app, azi, alt );
-                                                        Vista_Focar ( app           );
+                                                       midi.Send ( MidiMessage.ChangePatch ( instr , canal ).RawData);
          }
-         public static void         Tocar_Voz         ( UIApplication app , MidiOut midi , int f0 = 64,                                        int s1 =  0, int s2 = 0,                         int dur = 500 , int v1 = 1, int v2 = 1, int v3 = 1, int fdi = 20, double azi = 0, double alt = 0 ) 
-         {
-                                                        MidiMessage Instru1 = MidiMessage.ChangePatch ( v1 ,             1 );
-                                                        MidiMessage Notaon1 = MidiMessage.StartNote   ( f0 + s1 , 120  , 1 );
-                                                        MidiMessage Notaof1 = MidiMessage.StopNote    ( f0 + s1 ,   0  , 1 );  
-
-                                                        midi.Send ( Instru1.RawData );
-                                                        midi.Send ( Notaon1.RawData );
-                                                         Thread.Sleep  ( dur ); 
-                                                        midi.Send ( Notaof1.RawData );
-		 }
-        
-         public static void         Tocar_Vozes4      ( UIApplication app , MidiOut midi , int v1 = 1, int v2 = 1, int v3 = 1, int v4 = 1, int f1 = 64, int f2 = 64, int f3 = 64, int f4 = 64, int s1 =  0, int s2 = 0, int s3 = 0, int s4 = 0, int dur1 = 500, int dur2 = 500, int fdi = 20, double azi = 0, double alt = 0 , int gir = 0) 
+         public static void         MIDI_Toque        ( MidiOut midi , int canal, int nota, int din, int dura ) 
+         {                          
+                                       if ( din > 0)  { 
+                                                          midi.Send( MidiMessage.StartNote( nota , din , canal ).RawData);
+                                                          if (dura > 0) 
+                                                             Thread.Sleep( dura ); 
+                                                      }
+                                       else           { midi.Send( MidiMessage.StopNote ( nota , din , canal ).RawData);                                     }
+         }
+         public static void         Tocar_Vozes1      ( UIApplication app , MidiOut midi, double azi, double alt, int gir, int canal, int instr, int nota, int din, int dur ) 
          { 
-                                                        if (gir == 1)
-                                                        {
-				                                            Vista_Girar ( app , azi , alt ); 
-                                                        }
-
-                                                        int[] voz = new int[] { v1 , v2 , v3 , v4 };
-                                                        int[] fun = new int[] { f1 , f2 , f3 , f4 };
-                                                        int[] sal = new int[] { s1 , s2 , s3 , s4 };
-                                                        //Seta Instrumentos ---------------------------------------------------------------------------------------------------------------
-                                                        for (int v = 0; v < voz.Length;   v++) { midi.Send ( MidiMessage.ChangePatch ( voz[v] , v+1 ).RawData); }  
-                                                        // Ativa Todas as Vozes   ---------------------------------------------------------------------------------------------------------
-                                                        for (int v = 0; v < sal.Length;   v++) { midi.Send ( MidiMessage.StartNote   ( fun[v] + sal[v] , 120 - (fdi * v) , v+1).RawData); }
-                                                       
-                                                        Thread.Sleep ( dur1 + dur2 );
-                                                        //Finaliza Vozes 1 e 2 ------------------------------------------------------------------------------------------------------------
-                                                        for (int v = 0; v < sal.Length-2; v= v+1) { midi.Send ( MidiMessage.StopNote ( fun[v] + sal[v] ,               0 , v+1).RawData); }
-                                                        Thread.Sleep ( dur2    );
-                                                       
-                                                        //Finaliza o Resto das Vozes  -----------------------------------------------------------------------------------------------------
-                                                        for (int v = 0; v < sal.Length; v++)     { midi.Send ( MidiMessage.StopNote ( fun[v] + sal[v] ,                0 , v+1).RawData); }
+                                                      if ( gir == 1 )
+                                                      {
+				                                           Vista_Girar ( app , azi , alt ); 
+                                                      }
+                                                      MIDI_Instr  ( midi , canal , instr            );  
+                                                      MIDI_Toque  ( midi , canal , nota , din , dur );
+                                                      MIDI_Toque  ( midi , canal , nota ,   0 ,  0  );
 		 }
-
-         public static void         Tocar_VozesLC8    ( UIApplication app , MidiOut midi, int v1, int v2, int v3, int f1, int f2, int f3, int s1, int s2, int s3, int s4, int d1, int d2, double azi, double alt, int gir, int fade) 
+         public static void         Tocar_Vozes3      ( UIApplication app , MidiOut midi, double azi, double alt, int gir, int v1, int v2, int v3, int f1, int f2, int f3, int s1, int s2, int s3, int d1, int fade ) 
          { 
-                                                        if (gir == 1)
-                                                        {
-				                                            Vista_Girar ( app , azi , alt ); 
-                                                        }
-
-			                                            int[] voz = new int[] { v1 , v1 , v1 , v2 , v2 , v2 , v3 , v3 };
-                                                        int[] fun = new int[] { f1 , f1 , f1 , f2 , f2 , f2 , f3 , f3 };
-                                                        int[] sal = new int[] { s1 , s2 , s3 , s4 , s1 , s2 , s3 , s4 };
-                                                        int[] duc = new int[] { d1 };
-                                                        int[] dul = new int[] { d2 };
- 
-                                                        int   tcurto  = duc.Sum();
-                                                        int   tlongo  = dul.Sum();
-                                                        int   m   = sal.Length;
-
-							//Seta Instrumentos ---------------------------------------------------------------------------------------------------------------
-							        for (int v = 0; v < voz.Length;    v++) { midi.Send ( MidiMessage.ChangePatch ( voz[v] , v+1 ).RawData); }  
-
-                                                        // Ativa 1 a 4   ------------------------------------------------------------------------------------------------------------------
-		                                                for (int v = 0; v < sal.Length-4;  v++) { midi.Send  (MidiMessage.StartNote (fun[v] + sal[v % m], 120 - (v * fade), v+1).RawData); }
-			                                            Thread.Sleep( tcurto + tlongo );
-
-                                                        for (int v = 4; v < sal.Length;    v++) { midi.Send  (MidiMessage.StartNote (fun[v] + sal[v % m], 120 - (v * fade), v+1).RawData); }
-			                                            Thread.Sleep( tlongo );
-		
-                                                        //Diminui as Vozes  ---------------------------------------------------------------------------------------------------------------
-			                                            for (int v = 0; v < sal.Length;   v++)
-                                                                     {
-                                                                                                  midi.Send ( MidiMessage.StopNote ( fun[v] + sal[v] ,  10 , v+1).RawData);
-			                                            }
-                                                        Thread.Sleep (tlongo / 3);
-
-				                                        //Finaliza TODAS as vozes ---------------------------------------------------------------------------------------------------------
-				                                        for (int v = 0; v < sal.Length; v++) { midi.Send ( MidiMessage.StopNote ( fun[v] + sal[v%m] ,              0  , v+1).RawData); }
-		 }
-         public static void         Tocar_VozesCL8    ( UIApplication app , MidiOut midi, int v1, int v2, int v3, int f1, int f2, int f3, int s1, int s2, int s3, int s4, int d1, int d2, double azi, double alt, int gir, int fade) 
-         { 
-                                                        if (gir == 1)
-                                                        {
-				                                            Vista_Girar ( app , azi , alt ); 
-                                                        }
-
-			                                            int[] voz = new int[] { v1 , v1 , v1 , v2 , v2 , v2 , v3 , v3 };
-                                                        int[] fun = new int[] { f1 , f1 , f2 , f2 , f2 , f2 , f3 , f3 };
-                                                        int[] sal = new int[] { s1 , s2 , s3 , s4 , s1 , s2 , s3 , s4 };
-                                                        int[] duc = new int[] { d1 };
-                                                        int[] dul = new int[] { d2 };
- 
-                                                        int   tcurto  = duc.Sum();
-                                                        int   tlongo  = dul.Sum();
-                                                        int   m   = sal.Length;
-
-							//Seta Instrumentos ---------------------------------------------------------------------------------------------------------------
-							for (int v = 0; v < voz.Length;    v++) { midi.Send ( MidiMessage.ChangePatch ( voz[v] , v+1 ).RawData); }  
-                                                        // Ativa 0 a 3   ------------------------------------------------------------------------------------------------------------------
-		                                        for (int v = 0; v < sal.Length-4;  v++) { midi.Send  (MidiMessage.StartNote (fun[v] + sal[v % m], 120 - (v * fade), v+1).RawData); }
-			                                            Thread.Sleep( tcurto );
-                                                        // Ativa 4 a 7   ------------------------------------------------------------------------------------------------------------------
-                                                        for (int v = 4; v < sal.Length;    v++) { midi.Send  (MidiMessage.StartNote (fun[v] + sal[v % m], 120 - (v * fade), v+1).RawData); }
-			                                            Thread.Sleep( tcurto + tlongo );
-                                                        //Finaliza TODAS as vozes ---------------------------------------------------------------------------------------------------------
-				                        for (int v = 0; v < sal.Length;    v++) { midi.Send ( MidiMessage.StopNote ( fun[v] + sal[v%m] ,               0  , v+1).RawData); }
-		 }
-         public static void         Tocar_VozesLC3   ( UIApplication app , MidiOut midi, int v1, int v2, int v3, int f1, int f2, int f3, int s1, int s2, int s3, int d1, double azi, double alt, int gir, int fade, int fadu) 
-         { 
-                                                        if (gir == 1)
-                                                        {
-				                                            Vista_Girar ( app , azi , alt ); 
-                                                        }
-
-			                                            int[] voz = new int[] { v1 , v2 , v3 };
+                                                        int[] voz = new int[] { v1 , v2 , v3 };
                                                         int[] fun = new int[] { f1 , f2 , f3 };
                                                         int[] sal = new int[] { s1 , s2 , s3 };
 
-							//Seta Instrumentos -------------------------------------------------------------------------------------------------
-							for (int v = 0; v < voz.Length;    v++) { midi.Send ( MidiMessage.ChangePatch ( voz[v] , v+1 ).RawData); }  
+                                                        if (gir == 1) { Vista_Girar ( app , azi , alt ); }
 
-                                                        // Ativa 1 ----------------------------------------------------------------------------------------------------------
-		                                           midi.Send  (MidiMessage.StartNote (f1+s1 , (120 - (0 * fade)) , 1).RawData); Thread.Sleep( d1 );
-							// Ativa 2 ----------------------------------------------------------------------------------------------------------
-							   midi.Send  (MidiMessage.StartNote (f2+s2 , (120 - (1 * fade)) , 2).RawData);  
-                                                        // Ativa 3 ----------------------------------------------------------------------------------------------------------
-                                                           midi.Send  (MidiMessage.StartNote (f3+s3 , (120 - (2 * fade)) , 3).RawData); Thread.Sleep( d1 * fadu); 
-
-                                                        //Fim TODAS ---------------------------------------------------------------------------------------------------------
-				                        for (int v = 0; v < sal.Length; v++) { midi.Send ( MidiMessage.StopNote ( fun[v]+sal[v] ,  0  , v+1).RawData); }
+														//Seta Instrumentos ------------------------------------------------------------
+														for (int v = 0; v < voz.Length;    v++)
+                                                        {  
+                                                              MIDI_Instr ( midi , v+1 , voz[v] ); 
+                                                        }
+                                                        // Ativa 1 2 3 -----------------------------------------------------------------
+                                                              MIDI_Toque ( midi ,  1 , f1+s1 , 127 - (0 * fade) , d1 );
+                                                              MIDI_Toque ( midi ,  2 , f2+s2 , 127 - (1 * fade) , -1 );
+                                                              MIDI_Toque ( midi ,  3 , f3+s3 , 127 - (2 * fade) , d1 );
+														
+                                                        // Finaliza TODAS --------------------------------------------------------------
+                                                        for (int v = 0; v < sal.Length; v++)
+                                                        {
+                                                              MIDI_Toque ( midi , v+1 , fun[v]+sal[v] , 0 , 1 );  
+                                                        }
 		 }
-
-         public static async Task   Tocar_Escala      (                     MidiOut midi ,                               int f0 = 64,                         int dur = 500 , int v1 = 1,                         int inv = 1, int[] Escala = null  ) 
+         public static async Task   Tocar_Escala      ( MidiOut midi , int f0 =  64 , int dur = 500 , int v1 = 1, int inv = 1, int[] Escala = null) 
          {
                                     TimeSpan d = new TimeSpan(0, 0, 0, 0, dur);
                                     midi.Send ( MidiMessage.ChangePatch ( v1 , 1 ).RawData );
@@ -292,7 +205,7 @@ namespace Musica_2020
                                           await Task.Delay(d).ConfigureAwait(false);
                                     }
          }
-         public static async Task   Tocar_Acorde      (                     MidiOut midi , int f0 = 64, int dur = 500, int v1 = 1                                    ) 
+         public static async Task   Tocar_Acorde      ( MidiOut midi , int f0 =  64 , int dur = 500 , int v1 = 1                                  ) 
          {
                                      midi.Send ( MidiMessage.ChangePatch ( v1 , 1 ).RawData);
 
@@ -301,7 +214,7 @@ namespace Musica_2020
                                      midi.Send ( MidiMessage.StartNote ( f0 +  7 , 120 , 1 ).RawData);
                                      midi.Send ( MidiMessage.StartNote ( f0 + 11 , 120 , 1 ).RawData);
  
-			             TimeSpan d = new TimeSpan(0, 0, 0, 0, dur);
+			                         TimeSpan d = new TimeSpan(0, 0, 0, 0, dur);
                                      await Task.Delay ( d ).ConfigureAwait(false);
                                   
                                      midi.Send ( MidiMessage.StopNote  ( f0 +  0 , 120 , 1 ).RawData);
@@ -309,14 +222,14 @@ namespace Musica_2020
                                      midi.Send ( MidiMessage.StopNote  ( f0 +  7 , 120 , 1 ).RawData);
                                      midi.Send ( MidiMessage.StopNote  ( f0 + 11 , 120 , 1 ).RawData);
          }
-         public static async Task   Tocar_Arpejo      (                     MidiOut midi , int f0 = 64, int dur = 500, int v1 = 1                                    ) 
+         public static async Task   Tocar_Arpejo      ( MidiOut midi , int f0 =  64 , int dur = 500 , int v1 = 1                                  ) 
          {
                                     TimeSpan d1 = new TimeSpan(0 , 0 , 0 , 0 , dur  );
                                     TimeSpan d2 = new TimeSpan(0 , 0 , 0 , 0 , dur/2);
-			            TimeSpan d3 = new TimeSpan(0 , 0 , 0 , 0 , dur/3);
-		                    TimeSpan d4 = new TimeSpan(0 , 0 , 0 , 0 , dur/4);
+			                        TimeSpan d3 = new TimeSpan(0 , 0 , 0 , 0 , dur/3);
+		                            TimeSpan d4 = new TimeSpan(0 , 0 , 0 , 0 , dur/4);
 
-			            midi.Send ( MidiMessage.ChangePatch ( v1 , 1 ).RawData);
+			                        midi.Send ( MidiMessage.ChangePatch ( v1 , 1 ).RawData);
  
                                     midi.Send ( MidiMessage.StartNote   ( f0 +  0 , 120 , 1 ).RawData); await Task.Delay( d1 ).ConfigureAwait(false);
                                     midi.Send ( MidiMessage.StartNote   ( f0 +  4 , 120 , 1 ).RawData); await Task.Delay( d2 ).ConfigureAwait(false);
@@ -328,7 +241,7 @@ namespace Musica_2020
                                     midi.Send ( MidiMessage.StopNote    ( f0 +  7 , 120 , 1 ).RawData);
                                     midi.Send ( MidiMessage.StopNote    ( f0 + 11 , 120 , 1 ).RawData);
          } 
-         public static string       Tocar_Quadrada    ( int dur = 1 , int f0 = 440                        ) 
+         public static string       Tocar_Quadrada    ( int dur = 1  , int f0 = 440                     ) 
          {
                                     TimeSpan d = new TimeSpan(0, 0, 0, dur, 0);
                                     var onda = new SignalGenerator(44100, 2)
@@ -349,7 +262,7 @@ namespace Musica_2020
                                          }
                                    return "ok";
          }
-         public static string       Tocar_Glissando   ( int dur = 1    , int f0 = 440 , int f1 = 880      ) 
+         public static string       Tocar_Glissando   ( int dur = 1  , int f0 = 440 , int f1 = 880      ) 
          {
                                     TimeSpan d = new TimeSpan ( 0 , 0 , 0 , dur , 0);
                                     var onda   = new SignalGenerator ( 44100 , 2 )
@@ -368,7 +281,7 @@ namespace Musica_2020
                                     }
                                     return "ok";
          }
-         public static string       Glissar           ( int dur = 1000 , int f0 = 440 , int f1 = 880      ) 
+         public static string       Glissar           ( int dur = 1  , int f0 = 440 , int f1 = 880      ) 
          {
                                     TimeSpan d = new TimeSpan ( 0 , 0 , 0 , dur , 0);
                                     var onda   = new SignalGenerator ( 44100 , 2 )
@@ -383,14 +296,15 @@ namespace Musica_2020
                                     {
                                          w.Init( onda );
                                          w.Play(      );
-                                         while ( w.PlaybackState == PlaybackState.Playing )   { Thread.Sleep ( dur ); }
+                                         while ( w.PlaybackState == PlaybackState.Playing )   { Thread.Sleep ( dur * 1000 ); }
                                     }
                                     return "ok";
          }
-         public static void         Esfera_Apagar     ( UIApplication app                                 ) 
+
+         public static void         Esfera_Apagar    ( UIApplication app                                 ) 
          {
                                     Document    doc = app.ActiveUIDocument.Document;
-				    UIDocument  Uid = app.ActiveUIDocument;
+				                    UIDocument  Uid = app.ActiveUIDocument;
                                     FilteredElementCollector col = new FilteredElementCollector(doc);
                                     ElementCategoryFilter    gen = new ElementCategoryFilter((BuiltInCategory)Enum.Parse(typeof(BuiltInCategory), "OST_GenericModel"));
                                     IList<Element>           ele = col.WherePasses(gen).WhereElementIsNotElementType().ToElements().ToList();
@@ -405,7 +319,7 @@ namespace Musica_2020
                                     }
                                     Uid.RefreshActiveView();
          }
-		 public static DirectShape  Esfera_Criar      ( UIApplication app                                 ) 
+		 public static DirectShape  Esfera_Criar     ( UIApplication app                                 ) 
 		 {
                                     Document    doc  = app.ActiveUIDocument.Document;
 				                    UIDocument  Uid  = app.ActiveUIDocument;
@@ -414,13 +328,13 @@ namespace Musica_2020
                                     try
                                     {
                                             XYZ         p1   = po + new XYZ(  0      , Dec( 0.25)  , 0 );
-				            XYZ         p2   = po + new XYZ(  0      , Dec(-0.25)  , 0 );
-				            XYZ         p3   = po + new XYZ(Dec(0.25),       0     , 0 );
+				                            XYZ         p2   = po + new XYZ(  0      , Dec(-0.25)  , 0 );
+				                            XYZ         p3   = po + new XYZ(Dec(0.25),       0     , 0 );
                                             List<Curve> perfil = new List<Curve>();
-				            perfil.Add ( Line.CreateBound(p1, p2));
-				            perfil.Add ( Arc.Create( p2 , p1 , p3 ));
+				                                        perfil.Add ( Line.CreateBound(p1, p2));
+				                                        perfil.Add ( Arc.Create( p2 , p1 , p3 ));
 
-				            ElementId    mater = ElementId.InvalidElementId;
+				                            ElementId    mater = ElementId.InvalidElementId;
                                             CurveLoop    curva = CurveLoop.Create(perfil);
                                             CurveLoop[]  loopc = new CurveLoop[] { curva };
                                             SolidOptions optio = new SolidOptions ( mater , ElementId.InvalidElementId );
@@ -442,7 +356,7 @@ namespace Musica_2020
                                     Uid.RefreshActiveView();
                                  return ds;
          }
-         public static DirectShape  Esfera_Criar      ( UIApplication app , DSG.Point p                   ) 
+         public static DirectShape  Esfera_Criar     ( UIApplication app , DSG.Point p                   ) 
 		 {
                                     Document    doc  = app.ActiveUIDocument.Document;
 				                    UIDocument  Uid  = app.ActiveUIDocument;
@@ -451,13 +365,13 @@ namespace Musica_2020
                                     try
                                     {
                                             XYZ         p1   = po + new XYZ(  0      , Dec( 0.25)  , 0 );
-				            XYZ         p2   = po + new XYZ(  0      , Dec(-0.25)  , 0 );
-				            XYZ         p3   = po + new XYZ(Dec(0.25),       0     , 0 );
+				                            XYZ         p2   = po + new XYZ(  0      , Dec(-0.25)  , 0 );
+				                            XYZ         p3   = po + new XYZ(Dec(0.25),       0     , 0 );
                                             List<Curve> perfil = new List<Curve>();
-				            perfil.Add ( Line.CreateBound(p1, p2));
-				            perfil.Add ( Arc.Create( p2 , p1 , p3 ));
+				                                        perfil.Add ( Line.CreateBound(p1, p2));
+				                                        perfil.Add ( Arc.Create( p2 , p1 , p3 ));
 
-				            ElementId    mater = ElementId.InvalidElementId;
+				                            ElementId    mater = ElementId.InvalidElementId;
                                             CurveLoop    curva = CurveLoop.Create(perfil);
                                             CurveLoop[]  loopc = new CurveLoop[] { curva };
                                             SolidOptions optio = new SolidOptions ( mater , ElementId.InvalidElementId );
@@ -471,7 +385,7 @@ namespace Musica_2020
 					                                 ds.ApplicationId = "Musica";
                                                      ds.SetShape ( new GeometryObject[] { esfer } );
                                                   t.Commit();
-				            }
+				                            }
                                             
                                     }
                                     catch (Exception error) { TaskDialog.Show( "Resultado" , "A Esfera falhou " + error.ToString()); }
@@ -479,7 +393,7 @@ namespace Musica_2020
                                     Uid.RefreshActiveView();
                                  return ds;
          }
-         public static void         Esfera_Mover      ( UIApplication app , DSG.Point p , DirectShape esf ) 
+         public static void         Esfera_Mover     ( UIApplication app , DSG.Point p , DirectShape esf ) 
 		 {
                                     Document   doc = app.ActiveUIDocument.Document;
 			                        UIDocument Uid = app.ActiveUIDocument;
@@ -496,12 +410,17 @@ namespace Musica_2020
                                                   ElementTransformUtils.MoveElement (doc , esf.Id , (vn - vo));
                                                t.Commit();
                                           }
-			            }
+			                        }
                                     catch (Exception error) { TaskDialog.Show( "Resultado" , "Mover " + error.ToString()); }
                                     finally { }
                                     Uid.RefreshActiveView();
          }
-
+         public static void         Mover_Esfera     ( UIApplication app , DSG.Point p , DirectShape esf, double azi = 0, double alt = 0 ) 
+         {
+                                                      Esfera_Mover ( app, p  , esf );
+                                                      Vista_Girar  ( app, azi, alt );
+                                                      Vista_Focar  ( app           );
+         }
 		 public static int[]        Maior ( ) { return new int[] { 0, 2, 4, 5, 7, 9, 11 }; }
 		 public static int[]        Menor ( ) { return new int[] { 0, 2, 3, 5, 7, 8, 10 }; }
 		 public static int[]        Penta ( ) { return new int[] { 0, 2, 5, 7, 9 };        }
