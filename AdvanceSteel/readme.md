@@ -1,10 +1,10 @@
 # Geração de Perfis estruturais customizados para Advance Steel.
 
 ## O Advance Steel:
-Advance Steel é uma aplicação integrada a AutoCAD que tem por finalidade o projeto de estruturas metálicas em ambiente BIM.
+Advance Steel é uma aplicação integrada em AutoCAD cuja finalidade é o projeto de estruturas metálicas em ambiente BIM.
 Embora ela conte com uma grande base de dados dos perfis de aço utilizados pela indústria, os fabricantes e os projetistas podem 
 adicionar novos perfis customizados. Para isso, programei duas funções em AutoLISP que ajudam a gerar e ordenar a customização.
-Até o momento, escrevi funções de geração para formas de Perfis W e Tubos de Seção Circular, mas ampliarei para outras formas. 
+Até o momento, escrevi funções de geração para formas de Perfis W, U e Tubos de Seção Circular, mas ampliarei para outras formas. 
 
 ## Para usar a Função:
 Para gerar os perfis customizados:
