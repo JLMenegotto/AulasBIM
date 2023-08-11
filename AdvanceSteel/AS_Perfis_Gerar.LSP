@@ -1,11 +1,11 @@
 ;;;;;                                                                                                 
 ;;;;;                                                                                                 
-;;;;; MACRO PARA GERAR SE«’ES CUSTOMIZADAS EM ADVANCE STEEL                                           
-;;;;; AUTOR: PROF. JOS… LUIS MENEGOTTO - ESCOLA POLIT…CNICA DA UFRJ                                   
-;;;;; CURSO:      ESPECIALIZA«√O EM ESTRUTURAS MET¡ÅLICAS                                              
-;;;;; DISCIPLINA: DESENHO, MONTAGEM E FABRICA«√O (CAD/CAM/BIM) APLICADAS A PROJETOS DE A«O            
+;;;;; MACRO PARA GERAR SE√á√ïES CUSTOMIZADAS EM ADVANCE STEEL                                           
+;;;;; AUTOR: PROF. JOS√â LUIS MENEGOTTO - ESCOLA POLIT√âCNICA DA UFRJ                                   
+;;;;; CURSO:      ESPECIALIZA√á√ÉO EM ESTRUTURAS MET√ÅLICAS                                              
+;;;;; DISCIPLINA: DESENHO, MONTAGEM E FABRICA√á√ÉO (CAD/CAM/BIM) APLICADAS A PROJETOS DE A√áO            
 ;;;;;                                                                                                 
-;;;;; NOTA IMPORTANTE: Rodar a funÁ„o dentro do arquivo AS_Perfis_Base.DWG utilizado como base        
+;;;;; NOTA IMPORTANTE: Rodar a fun√ß√£o dentro do arquivo AS_Perfis_Base.DWG utilizado como base        
 ;;;;;                                                                                                 
 ;;;;;                                                                                                 
 
@@ -209,7 +209,7 @@
 )
 
 ;;                                                                                                                                             
-;; FunÁao principal de desenho dos quadros e das seÁıes Tubulares Circular                                                                     
+;; Fun√ßao principal de desenho dos quadros e das se√ß√µes Tubulares Circular                                                                     
 ;;                                                                                                                                             
 (defun dibuja_perfil_TC (#m #c #f #n #fab #cla #cod nox pox LF LR )
 
@@ -239,7 +239,7 @@
                    grupo
 )
 ;;                                                                                                                                             
-;; FunÁao principal de desenho dos quadros e das seÁıes I W                                                                                    
+;; Fun√ßao principal de desenho dos quadros e das se√ß√µes I W                                                                                    
 ;;                                                                                                                                             
 (defun dibuja_perfil_I  ( #m #c #f #n #fab #cla #cod nox pox LF LP LPE )
 
@@ -284,7 +284,7 @@
 )
 
 ;;                                                                                                                                             
-;; FunÁao principal de desenho dos quadros e das seÁıes C                                                                                      
+;; Fun√ßao principal de desenho dos quadros e das se√ß√µes C                                                                                      
 ;;                                                                                                                                             
 (defun dibuja_perfil_U  ( #m #c #f #n #fab #cla #cod nox pox LF LP LPE )
 
@@ -439,5 +439,5 @@
                 (command "._move" (entlast) "" pt "") 
 )
 
-(prompt "\nFunÁ„o carregada.... \nPara executar digite PERFIL")
+(prompt "\nFun√ß√£o carregada.... \nPara executar digite PERFIL")
 (princ)
