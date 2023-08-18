@@ -1,0 +1,444 @@
+{
+  "Uuid": "7cb24358-71f2-4002-bde1-27f35dbcce84",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "MET_VigaPredim",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Line": {
+        "Key": "Autodesk.DesignScript.Geometry.Line",
+        "Value": "ProtoGeometry.dll"
+      },
+      "DSOffice.Data": {
+        "Key": "DSOffice.Data",
+        "Value": "DSOffice.dll"
+      },
+      "TextElement": {
+        "Key": "Revit.Elements.TextElement",
+        "Value": "RevitNodes.dll"
+      },
+      "String": {
+        "Key": "DSCore.String",
+        "Value": "DSCoreNodes.dll"
+      },
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 14.0,
+      "MinimumValue": 1.0,
+      "StepValue": 0.1,
+      "InputValue": 6.8,
+      "Id": "7cac7ba6662f48b686775816bdc7d62a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "502bc625256349c288c81c08d12a3709",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "L;\nrazao = 1/20 * 1000;\n//------------------------------------------------------\n//Define pontos e eixo da viga e verifica o comprimento\n//------------------------------------------------------\np1    = Point.ByCoordinates       ( 0 , 0 , 0 );\np2    = Point.ByCoordinates       ( L , 0 , 0 );\nViga  = Line.ByStartPointEndPoint ( p1  ,  p2 );\nAltI  = Viga.Length * razao;",
+      "Id": "d99138552e344863b11214d3d6c65cf7",
+      "Inputs": [
+        {
+          "Id": "546d5e1dd46445788930cd020495a955",
+          "Name": "L",
+          "Description": "L",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2833481f914b4edaa71c54ad21b329d3",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "decf238b2f9842b1a0dd3334628bf1df",
+          "Name": "",
+          "Description": "razao",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "034bae0d42ad4004a5498db6874a96d4",
+          "Name": "",
+          "Description": "p1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "340c55e439e34e5db4e0f527634e25dd",
+          "Name": "",
+          "Description": "p2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0474dc8ecfa94e0fb1c55b816c0156b3",
+          "Name": "",
+          "Description": "Viga",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "df676efe57764431a0da6265a319c741",
+          "Name": "",
+          "Description": "AltI",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "16d91e0ad3b24959b18ea1d4f47b5461",
+      "Inputs": [
+        {
+          "Id": "dbae2f86afe6481dab56c163c74434b5",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6d6043bd3ae640afb85de0e48b418147",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualizes a node's output"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "//--------------------------------------------------------------------\n// Faz a leitura do arquivo TXT com os dados dos perfis\n//--------------------------------------------------------------------\npasta  = \"C:\\\\MET_2023\\\\5_Dynamo\\\\\";\narqcsv = \"Tabela_Perfis_W_Laminados_Gerdau.txt\";\narquiv = pasta + arqcsv;\nDados  = DSOffice.Data.ImportCSV      ( arquiv , true);\n//--------------------------------------------------------------------\n// Prepara os Dados\n//--------------------------------------------------------------------\nLdados = List.Flatten ( String.Split  ( Dados  , '\t'  ), 2);\nTabCla = List.Flatten ( List.Sublists ( Ldados , [1] , 11), 1);\nTabPer = List.Flatten ( List.Sublists ( Ldados , [2] , 11), 1);\nTabAlt = List.Flatten ( List.Sublists ( Ldados , [3] , 11), 1);\nValAlt = String.ToNumber ( TabAlt );\nAltura = AltI > ValAlt ? ValAlt : 0;\n//--------------------------------------------------------------------\n// Encontra o Indice do elemento e retorna Perfil selecionado\n//--------------------------------------------------------------------\ni      = List.IndexOf(ValAlt , List.Reverse( List.Sort( Altura  ))[0]);\nPerfil = [TabCla[i], TabPer[i] , TabAlt[i]];",
+      "Id": "3456bb6291a544f4a778a1566735e6e0",
+      "Inputs": [
+        {
+          "Id": "d1d7527313b54d438dcd880d0ff456c3",
+          "Name": "AltI",
+          "Description": "AltI",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3e17ca9aaebd48f4af6aa0b2abb6c25c",
+          "Name": "",
+          "Description": "pasta",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "43e6231550954791b42ad48b14df0ce8",
+          "Name": "",
+          "Description": "arqcsv",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b824aa0ec17f4470a8a6113cd9457601",
+          "Name": "",
+          "Description": "arquiv",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c6abe365ade44fa1a1a7af03a2b7a3a3",
+          "Name": "",
+          "Description": "Dados",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bee5879deef54b0b83e0aea25bc35e5d",
+          "Name": "",
+          "Description": "Ldados",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "04c3013409b648f2bfd830d088b2088b",
+          "Name": "",
+          "Description": "TabCla",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6cce415a0332480fb0390b9de085d4d7",
+          "Name": "",
+          "Description": "TabPer",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "69e72d4af59647d993c7a2482306c9d7",
+          "Name": "",
+          "Description": "TabAlt",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "555c599974da45798fe74cda0fcd7f0c",
+          "Name": "",
+          "Description": "ValAlt",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4dcb285f7f5242148b5ef278619e8878",
+          "Name": "",
+          "Description": "Altura",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0c35023c24c84656985845de231a9727",
+          "Name": "",
+          "Description": "i",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ccad10aa023647eca255b453c4da494a",
+          "Name": "",
+          "Description": "Perfil",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "502bc625256349c288c81c08d12a3709",
+      "End": "546d5e1dd46445788930cd020495a955",
+      "Id": "1ae3d43647134d14ad9690c460cac62e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "df676efe57764431a0da6265a319c741",
+      "End": "d1d7527313b54d438dcd880d0ff456c3",
+      "Id": "63a6da9926584ab6b2dde1fdcc668e52",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ccad10aa023647eca255b453c4da494a",
+      "End": "dbae2f86afe6481dab56c163c74434b5",
+      "Id": "2d393b343e344babba6b2c4731c4fc75",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Tabela_Perfis_W_Laminados_Gerdau.txt",
+      "ReferenceType": "External",
+      "Nodes": [
+        "3456bb6291a544f4a778a1566735e6e0"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.17",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "4.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.17.1.4055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Longitude Viga",
+        "ShowGeometry": true,
+        "Id": "7cac7ba6662f48b686775816bdc7d62a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -312.52421451771312,
+        "Y": 119.15494299951035
+      },
+      {
+        "Name": "Define o eixo da Viga e sua AlturaInicial",
+        "ShowGeometry": true,
+        "Id": "d99138552e344863b11214d3d6c65cf7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 166.29130729223277,
+        "Y": 116.20910261052273
+      },
+      {
+        "Name": "Perfil selecionado",
+        "ShowGeometry": true,
+        "Id": "16d91e0ad3b24959b18ea1d4f47b5461",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -242.97224597387731,
+        "Y": 254.05385599138282
+      },
+      {
+        "Name": "Determina o perfil de acordo com o vão livre",
+        "ShowGeometry": true,
+        "Id": "3456bb6291a544f4a778a1566735e6e0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 163.83367835152114,
+        "Y": 412.66529287042158
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "6be2c057aa4f45cab33bdc925f058047",
+        "Title": "Exemplo de procura de dados em arquivos TXT estruturados",
+        "DescriptionText": "Algoritmo para colocação de viga metálica predimensionada: Curso de Especialização de Estruturas de Aço - Escola Politécnica - UFRJ. \r\nDisciplina:  ETM602 - Desenho, Montagem e Fabricação ( CAD/CAM/BIM)\r\nProf: José Luis Menegotto",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "7cac7ba6662f48b686775816bdc7d62a",
+          "d99138552e344863b11214d3d6c65cf7",
+          "16d91e0ad3b24959b18ea1d4f47b5461",
+          "3456bb6291a544f4a778a1566735e6e0"
+        ],
+        "HasNestedGroups": false,
+        "Left": -322.52421451771312,
+        "Top": 34.209102610522734,
+        "Width": 1177.9578928692342,
+        "Height": 841.4561902598989,
+        "FontSize": 24.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 116.20910261052273,
+        "InitialHeight": 394.46111898473811,
+        "TextblockHeight": 72.0,
+        "Background": "#FF48B9FF"
+      }
+    ],
+    "X": 401.44349611422126,
+    "Y": 30.160183551874184,
+    "Zoom": 0.70456185999915744
+  }
+}
