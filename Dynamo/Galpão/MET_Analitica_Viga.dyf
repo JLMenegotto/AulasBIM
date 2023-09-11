@@ -1,0 +1,245 @@
+{
+  "Uuid": "b557b12f-e207-463d-a8d3-d86e741f4aad",
+  "IsCustomNode": true,
+  "Category": "MET",
+  "Description": "Cria uma viga analítica",
+  "Name": "MET_Analitica_Viga",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "AnalyticalMember": {
+        "Key": "AnalyticalAutomation.AnalyticalElements.AnalyticalMember",
+        "Value": "AnalyticalAutomation.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "f31aa65b3d1b4a2d84401069e4752c38",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [
+        {
+          "Id": "94e913fbe0d844bcb66961c53f3988a3",
+          "Name": "Curva",
+          "Description": "Curva",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "75321f3c7c234878964eb10439cfb46d",
+          "Name": "Role",
+          "Description": "Role",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8aded65934f146a2a25b34dd97e28be4",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f636f8016ea24def90b7f43e92fa6688",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "99c60d2128c3468d961a7c056315d395",
+          "Name": "",
+          "Description": "MA",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0badb61af861429fb7ffe73f9a4f7209",
+          "Name": "",
+          "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "Curva;\nRole;\nMA = AnalyticalMember.ByCurve ( Curva );\nAnalyticalMember.SetStructuralRole ( [ MA ] , Role );"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "ElementResolver": null,
+      "Symbol": "Viga_Analítica",
+      "Id": "c5039e7c014646a89d88bb1daba9c050",
+      "NodeType": "OutputNode",
+      "Inputs": [
+        {
+          "Id": "1832d330a5ea45e2b8f9cd820eb1ffd7",
+          "Name": "",
+          "Description": "Output Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "Parameter": {
+        "Name": "Curva_Viga",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "832c35f6f5104a76b40e114d9ebc245b",
+      "NodeType": "InputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8df9f6c64bd4411da98211f80dbccf72",
+          "Name": "",
+          "Description": "Input Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "AnalyticalAutomationGUI.ComboBox.StructuralRoleComboBox, AnalyticalAutomationGUI",
+      "SelectedIndex": 0,
+      "SelectedString": "Beam",
+      "Id": "a5358581b9aa45e791232fb15fd85a4c",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "675f3dfb7f5c4b0c9656e743ac53d310",
+          "Name": "Structural Role",
+          "Description": "The selected Structural Role",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select the Analytical Structural Role for an Analytical Element"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "0badb61af861429fb7ffe73f9a4f7209",
+      "End": "1832d330a5ea45e2b8f9cd820eb1ffd7",
+      "Id": "91533f05f9e94ee7b85859813cb9d613",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8df9f6c64bd4411da98211f80dbccf72",
+      "End": "94e913fbe0d844bcb66961c53f3988a3",
+      "Id": "87cdd656c8d84678afef960a08ca237c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "675f3dfb7f5c4b0c9656e743ac53d310",
+      "End": "75321f3c7c234878964eb10439cfb46d",
+      "Id": "7e2592c571f546dd839b9ee1e14e51b1",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Author": "None provided",
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.18.1.5096",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -119.05458831787109,
+      "EyeY": 60.8819580078125,
+      "EyeZ": 173.1329345703125,
+      "LookX": 109.82695770263672,
+      "LookY": -65.467361450195313,
+      "LookZ": -114.97006225585938,
+      "UpX": 0.11994717618857877,
+      "UpY": 0.98480775301221657,
+      "UpZ": -0.12556418490728904
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "f31aa65b3d1b4a2d84401069e4752c38",
+        "Name": "Define Viga Analítica",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 501.59700951039,
+        "Y": 219.92486585760298
+      },
+      {
+        "Id": "c5039e7c014646a89d88bb1daba9c050",
+        "Name": "Output",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1093.018488029732,
+        "Y": 265.839791953906
+      },
+      {
+        "Id": "832c35f6f5104a76b40e114d9ebc245b",
+        "Name": "Input",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 176.743993637649,
+        "Y": 161.59999999999997
+      },
+      {
+        "Id": "a5358581b9aa45e791232fb15fd85a4c",
+        "Name": "Structural Roles",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 175.99999999999983,
+        "Y": 292.768164899265
+      }
+    ],
+    "Annotations": [],
+    "X": -136.79999999999995,
+    "Y": 3.1999999999999886,
+    "Zoom": 1.0
+  }
+}

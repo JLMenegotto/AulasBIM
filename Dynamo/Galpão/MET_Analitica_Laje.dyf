@@ -1,0 +1,250 @@
+{
+  "Uuid": "1eda43cd-5443-4c06-bcae-19fc981691e4",
+  "IsCustomNode": true,
+  "Category": "MET",
+  "Description": "Cria Laje Analítica",
+  "Name": "MET_Analitica_Laje",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "AnalyticalMember": {
+        "Key": "AnalyticalAutomation.AnalyticalElements.AnalyticalMember",
+        "Value": "AnalyticalAutomation.dll"
+      },
+      "AnalyticalPanel": {
+        "Key": "AnalyticalAutomation.AnalyticalElements.AnalyticalPanel",
+        "Value": "AnalyticalAutomation.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "ElementResolver": null,
+      "Symbol": "Superficie_Analítica",
+      "Id": "24c6702152b54fb89b6a3a3b8fcda421",
+      "NodeType": "OutputNode",
+      "Inputs": [
+        {
+          "Id": "582d88c6174b4e868a52cd99e05295e3",
+          "Name": "",
+          "Description": "Output Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "AnalyticalAutomationGUI.ComboBox.StructuralRoleComboBox, AnalyticalAutomationGUI",
+      "SelectedIndex": 2,
+      "SelectedString": "Floor",
+      "Id": "686ad6b469354a688bef3bf1ee37fa9d",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "485a7e6579af4e788cb7bfb621bb2e72",
+          "Name": "Structural Role",
+          "Description": "The selected Structural Role",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select the Analytical Structural Role for an Analytical Element"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "Parameter": {
+        "Name": "Superficie",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "3d215c1047044efe819972c2fcbd1766",
+      "NodeType": "InputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "bffb5f7f5d214290aad980515829b29b",
+          "Name": "",
+          "Description": "Input Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "b5e0221c5dbd43f99897a14def4c4224",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [
+        {
+          "Id": "1ded2acb1a334af1be2bbe6cf848132e",
+          "Name": "Srf",
+          "Description": "Srf",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "703018a7ff0a49c98a7c35d64dc25466",
+          "Name": "Role",
+          "Description": "Role",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d2cf529652fa4d359c704faaebbd3694",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7274bcfc830347f08cd6eaafd2dd46bc",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ea2891c9e022477d8fca7d6af260e99d",
+          "Name": "",
+          "Description": "SA",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "00906c433cb04c50821008a18eb3315d",
+          "Name": "",
+          "Description": "Value of expression at line 7",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "Srf;\nRole;\n//------------------------------------------------\n//Cria Painel analítico\n//------------------------------------------------\nSA = AnalyticalPanel.BySurface   (  Srf         );\nAnalyticalPanel.SetStructuralRole( [ SA ], Role );"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "485a7e6579af4e788cb7bfb621bb2e72",
+      "End": "703018a7ff0a49c98a7c35d64dc25466",
+      "Id": "3eb9bb09e65d4e40b6b9c75731da1bde",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "bffb5f7f5d214290aad980515829b29b",
+      "End": "1ded2acb1a334af1be2bbe6cf848132e",
+      "Id": "e038690506fe4b9abaaef64f9192fb2b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "00906c433cb04c50821008a18eb3315d",
+      "End": "582d88c6174b4e868a52cd99e05295e3",
+      "Id": "312b7825c57d4addbee3cab243384149",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Author": "None provided",
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.18.1.5096",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -119.05458831787109,
+      "EyeY": 60.8819580078125,
+      "EyeZ": 173.1329345703125,
+      "LookX": 109.82695770263672,
+      "LookY": -65.467361450195313,
+      "LookZ": -114.97006225585938,
+      "UpX": 0.11994717618857877,
+      "UpY": 0.98480775301221657,
+      "UpZ": -0.12556418490728904
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "24c6702152b54fb89b6a3a3b8fcda421",
+        "Name": "Output",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1207.41848802973,
+        "Y": 390.63979195390596
+      },
+      {
+        "Id": "686ad6b469354a688bef3bf1ee37fa9d",
+        "Name": "Structural Roles",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 290.40000000000003,
+        "Y": 417.56816489926496
+      },
+      {
+        "Id": "3d215c1047044efe819972c2fcbd1766",
+        "Name": "Input",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 291.14399363764903,
+        "Y": 286.4
+      },
+      {
+        "Id": "b5e0221c5dbd43f99897a14def4c4224",
+        "Name": "Define Superfície Analítica",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 627.07655713028362,
+        "Y": 315.93473899760068
+      }
+    ],
+    "Annotations": [],
+    "X": -184.05457899722435,
+    "Y": 39.504848498904039,
+    "Zoom": 0.73710254475628212
+  }
+}

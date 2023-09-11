@@ -1,0 +1,246 @@
+{
+  "Uuid": "26afbfed-7632-4454-9c17-f168448deb6c",
+  "IsCustomNode": true,
+  "Category": "MET",
+  "Description": "Define uma coluna analítica",
+  "Name": "Coluna_Analitica",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "AnalyticalMember": {
+        "Key": "AnalyticalAutomation.AnalyticalElements.AnalyticalMember",
+        "Value": "AnalyticalAutomation.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "bfae09486b5c40b9923ba4ce57b47f83",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [
+        {
+          "Id": "6f57d8c72b2f48ebaee3bcdfabde6169",
+          "Name": "Curva",
+          "Description": "Curva",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f822afb19905421eb2c689266706681c",
+          "Name": "Role",
+          "Description": "Role",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b48643860ec84a07b7bb885fa3664fc2",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "29d956e5efc4467ca2d6fd3d1e106068",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7db342b2a45f4fd0aa40babffe2dc7f7",
+          "Name": "",
+          "Description": "MA",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0d327731eee448608f3502bb8200f720",
+          "Name": "",
+          "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "Curva;\nRole;\nMA = AnalyticalMember.ByCurve ( Curva );\nAnalyticalMember.SetStructuralRole ( [ MA ] , Role );"
+    },
+    {
+      "ConcreteType": "AnalyticalAutomationGUI.ComboBox.StructuralRoleComboBox, AnalyticalAutomationGUI",
+      "SelectedIndex": 1,
+      "SelectedString": "Column",
+      "Id": "db32d0961baf4225b321eae02042008f",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "290bdf85d44f4213bbdab36557580cfc",
+          "Name": "Structural Role",
+          "Description": "The selected Structural Role",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select the Analytical Structural Role for an Analytical Element"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "Parameter": {
+        "Name": "Curva_Coluna",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "303321f6dbcc4dcb94c1ab7f73dd8422",
+      "NodeType": "InputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "59cca2c89d544ed0a43fbc3f0146f694",
+          "Name": "",
+          "Description": "Input Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "ElementResolver": null,
+      "Symbol": "Coluna_Analítica",
+      "Id": "7cd4a8975d334d59b03cb5235784d3c0",
+      "NodeType": "OutputNode",
+      "Inputs": [
+        {
+          "Id": "68841a4094164aa9a825e2b8f447e129",
+          "Name": "",
+          "Description": "Output Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "0d327731eee448608f3502bb8200f720",
+      "End": "68841a4094164aa9a825e2b8f447e129",
+      "Id": "08716b18cd934bb1b9f9f0ad5f461d3d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "290bdf85d44f4213bbdab36557580cfc",
+      "End": "f822afb19905421eb2c689266706681c",
+      "Id": "45d7879e0b5949c29e8a444e9bab3732",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "59cca2c89d544ed0a43fbc3f0146f694",
+      "End": "6f57d8c72b2f48ebaee3bcdfabde6169",
+      "Id": "d253d56299d9400cb142ce3e4cb27ed0",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Author": "None provided",
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.18.1.5096",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -119.05458831787109,
+      "EyeY": 60.8819580078125,
+      "EyeZ": 173.1329345703125,
+      "LookX": 109.82695770263672,
+      "LookY": -65.467361450195313,
+      "LookZ": -114.97006225585938,
+      "UpX": 0.11994717618857877,
+      "UpY": 0.98480775301221657,
+      "UpZ": -0.12556418490728904
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "bfae09486b5c40b9923ba4ce57b47f83",
+        "Name": "Define Coluna Analítica",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 685.56286721698586,
+        "Y": 346.96953930607111
+      },
+      {
+        "Id": "db32d0961baf4225b321eae02042008f",
+        "Name": "Structural Roles",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 363.74495234867692,
+        "Y": 415.59193298981347
+      },
+      {
+        "Id": "303321f6dbcc4dcb94c1ab7f73dd8422",
+        "Name": "Input",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 359.8883147800567,
+        "Y": 290.506560838497
+      },
+      {
+        "Id": "7cd4a8975d334d59b03cb5235784d3c0",
+        "Name": "Output",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1271.7930251190971,
+        "Y": 395.99925777271511
+      }
+    ],
+    "Annotations": [],
+    "X": -258.53869654817731,
+    "Y": 47.023948418038742,
+    "Zoom": 0.77051684820224531
+  }
+}

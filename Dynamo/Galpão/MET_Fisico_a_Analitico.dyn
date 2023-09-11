@@ -1,0 +1,526 @@
+{
+  "Uuid": "c1119b23-a788-4a4b-adc9-5507adca943d",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "MET_Fisico_a_Analitico",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "7ed1c477cbae4b459b5c971354150e81",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "9d3d38c35c0a43ad8fd193ced1c5baf3",
+          "Name": "element",
+          "Description": "Instance of a StructuralFraming or a StructuralColumn.\n\nElement",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2e85ad6ffbdd468eb2c1f53543cb4584",
+          "Name": "updateGeometry",
+          "Description": "Specifies if the AnalyticalMember should inherit geometry and geometrical parameters of the creating element.\n\nbool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4f91055b820646c4b7d71df3ecd4d742",
+          "Name": "updateParameters",
+          "Description": "Specifies if the AnalyticalMember should inherit parameters' values of the creating element.\n\nbool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6b190361315649f59986539aa8529345",
+          "Name": "addAssociation",
+          "Description": "Specifies if the AnalyticalMember should be associated with the creating element. true: add the association; false: break the association (if exists); null: do nothing - the previous association remains.\n\nbool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "41ca1186198647cdaff14a324962c45a",
+          "Name": "AnalyticalMember",
+          "Description": "AnalyticalMember",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AnalyticalAutomation.AnalyticalElements.AnalyticalMember.ByElement@Revit.Elements.Element,bool,bool,bool",
+      "Replication": "Auto",
+      "Description": "Creates an AnalyticalMember based on a physical element: StructuralFraming or StructuralColumn. The AnalyticalMember may derive properties of the creating element and may be associated with it. [check this node Help to see examples and restrictions]\n\nAnalyticalMember.ByElement (element: Element, updateGeometry: bool = true, updateParameters: bool = true, addAssociation: bool = true): AnalyticalMember"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 618,
+      "SelectedString": "OST_StructuralFraming",
+      "Id": "935dde5c78cb444f822c1412982f8ef5",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "119c51b5636e44f985d3378687b25160",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "Id": "8b10a4292eaa4dbb9fbcd3a1a538f6ca",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "8579af94803d43e58f2df3971f145eb8",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d93fc1c283e6461db2905ffca8cbc657",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "e27edff9cb764a78ba5392ace59d7f49",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "540e18da01f240abac832973f98bc4b4",
+          "Name": "element",
+          "Description": "Instance of a StructuralFraming or a StructuralColumn.\n\nElement",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "61a2f5c1698d40b193d23fba432d3201",
+          "Name": "updateGeometry",
+          "Description": "Specifies if the AnalyticalMember should inherit geometry and geometrical parameters of the creating element.\n\nbool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "aeeb05a5c9dd4803a10d16bbeba3ee4c",
+          "Name": "updateParameters",
+          "Description": "Specifies if the AnalyticalMember should inherit parameters' values of the creating element.\n\nbool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4f1999e79f0d40eda47a41ac805d50c1",
+          "Name": "addAssociation",
+          "Description": "Specifies if the AnalyticalMember should be associated with the creating element. true: add the association; false: break the association (if exists); null: do nothing - the previous association remains.\n\nbool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "583e83ab988a4c66aa0996a7e007c19e",
+          "Name": "AnalyticalMember",
+          "Description": "AnalyticalMember",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AnalyticalAutomation.AnalyticalElements.AnalyticalMember.ByElement@Revit.Elements.Element,bool,bool,bool",
+      "Replication": "Auto",
+      "Description": "Creates an AnalyticalMember based on a physical element: StructuralFraming or StructuralColumn. The AnalyticalMember may derive properties of the creating element and may be associated with it. [check this node Help to see examples and restrictions]\n\nAnalyticalMember.ByElement (element: Element, updateGeometry: bool = true, updateParameters: bool = true, addAssociation: bool = true): AnalyticalMember"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "Id": "4bbeef1ca2e440c0869f7f7797ca0374",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "852c16a936c04e939b64bb5379b7c909",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a62a9d8b01bf4b4a8512a2b44ff74faf",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 590,
+      "SelectedString": "OST_StructuralColumns",
+      "Id": "be9af916a89e49e69fa87bfb0fa969e7",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "872da211aa8748b0a0cf8a7ef4f7f2e5",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "Id": "1982586825c040feb586a413127234ac",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "63491b4955614aa89ed09e2db499b256",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "77965d2047b14cb680bb096fbaae826a",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 240,
+      "SelectedString": "OST_Floors",
+      "Id": "fae1aa81cfe1430093b5be88da806e2b",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "dc5f7ddb8c7248179ce95c27a669f140",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "fcd09bc270014ef597ac99b207f4a214",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "8c9e75b821584d03bc005f6f92a3da3f",
+          "Name": "element",
+          "Description": "Instance of a Floor or a Wall.\n\nElement",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5ee4ca303b744e3e9e4e99aab49b7946",
+          "Name": "updateGeometry",
+          "Description": "Specifies if the AnalyticalPanel should inherit geometry and geometrical parameters of the creating element.\n\nbool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e526a00b7fe9427492c20ac01e74c4c6",
+          "Name": "updateParameters",
+          "Description": "Specifies if the AnalyticalPanel should inherit properties of the creating element.\n\nbool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "97e125421d2b4837afc976862d672b57",
+          "Name": "addAssociation",
+          "Description": "Specifies if the AnalyticalPanel should be associated with the creating element. true: add the association; false: break the association (if exists); null: do nothing - the previous association remains.\n\nbool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dd3c3a0b21ea47bd9fc805981aaef872",
+          "Name": "includeOpenings",
+          "Description": "Specifies if AnalyticalOpenings (based on openings in the creating element) should be created and attached to the AnalyticalPanel.\n\nbool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "942b46cdeabb4e889a2056f053b92569",
+          "Name": "AnalyticalPanel",
+          "Description": "AnalyticalPanel",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AnalyticalAutomation.AnalyticalElements.AnalyticalPanel.ByElement@Revit.Elements.Element,bool,bool,bool,bool",
+      "Replication": "Auto",
+      "Description": "Creates an AnalyticalPanel based on a physical element: Floor or Wall. The AnalyticalPanel may derive properties of the creating element and may be associated with it. If the creating physical element is based on multiple, independent geometries (e.g., Floor composed of multiple sketch loops), the method will create multiple AnalyticalPanels for one physical element. [check this node Help to see examples and restrictions]\n\nAnalyticalPanel.ByElement (element: Element, updateGeometry: bool = true, updateParameters: bool = true, addAssociation: bool = true, includeOpenings: bool = true): AnalyticalPanel"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "119c51b5636e44f985d3378687b25160",
+      "End": "8579af94803d43e58f2df3971f145eb8",
+      "Id": "aaca409df50548f4abc8364ead6e5393",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d93fc1c283e6461db2905ffca8cbc657",
+      "End": "9d3d38c35c0a43ad8fd193ced1c5baf3",
+      "Id": "70281c6620f543d18f0e16df9894bffd",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a62a9d8b01bf4b4a8512a2b44ff74faf",
+      "End": "540e18da01f240abac832973f98bc4b4",
+      "Id": "288820032a2c4d929e87931fac4690f8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "872da211aa8748b0a0cf8a7ef4f7f2e5",
+      "End": "852c16a936c04e939b64bb5379b7c909",
+      "Id": "5a373d720be04a1885c2dbd2623a8a0b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "77965d2047b14cb680bb096fbaae826a",
+      "End": "8c9e75b821584d03bc005f6f92a3da3f",
+      "Id": "717dea6cf12f4d1da80264cda428e190",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "dc5f7ddb8c7248179ce95c27a669f140",
+      "End": "63491b4955614aa89ed09e2db499b256",
+      "Id": "8f8bb750002b4e919513eae10384892e",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.13",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "2.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 100.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.18.1.5096",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "7ed1c477cbae4b459b5c971354150e81",
+        "Name": "AnalyticalMember.ByElement",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 809.74914918243815,
+        "Y": 260.67164098846945
+      },
+      {
+        "Id": "935dde5c78cb444f822c1412982f8ef5",
+        "Name": "Categories",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 205.74098222253315,
+        "Y": 260.67164098846945
+      },
+      {
+        "Id": "8b10a4292eaa4dbb9fbcd3a1a538f6ca",
+        "Name": "All Elements of Category",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 492.63005474718307,
+        "Y": 260.67164098846945
+      },
+      {
+        "Id": "e27edff9cb764a78ba5392ace59d7f49",
+        "Name": "AnalyticalMember.ByElement",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 802.17319201789519,
+        "Y": 533.63392200004284
+      },
+      {
+        "Id": "4bbeef1ca2e440c0869f7f7797ca0374",
+        "Name": "All Elements of Category",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 476.32355997482159,
+        "Y": 523.78428580923571
+      },
+      {
+        "Id": "be9af916a89e49e69fa87bfb0fa969e7",
+        "Name": "Categories",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 192.38111216025266,
+        "Y": 523.78428580923571
+      },
+      {
+        "Id": "1982586825c040feb586a413127234ac",
+        "Name": "All Elements of Category",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 486.51128109276453,
+        "Y": 788.57319364523119
+      },
+      {
+        "Id": "fae1aa81cfe1430093b5be88da806e2b",
+        "Name": "Categories",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 164.57415381600651,
+        "Y": 788.57319364523119
+      },
+      {
+        "Id": "fcd09bc270014ef597ac99b207f4a214",
+        "Name": "AnalyticalPanel.ByElement",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 817.54694854902755,
+        "Y": 783.64095979256092
+      }
+    ],
+    "Annotations": [],
+    "X": -254.78310694803139,
+    "Y": -1093.0688591739697,
+    "Zoom": 1.439791181669074
+  }
+}

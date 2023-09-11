@@ -1,0 +1,620 @@
+{
+  "Uuid": "a32709c6-a14a-4d77-8d70-87bfd95d0442",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "MET_Coloca_Conexao_ColVig",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "ConnectionNode": {
+        "Key": "AdvanceSteel.ConnectionAutomation.Nodes.ConnectionNode",
+        "Value": "AdvanceSteelConnAutoNodes.dll"
+      },
+      "Filter": {
+        "Key": "AdvanceSteel.ConnectionAutomation.Nodes.Filter",
+        "Value": "AdvanceSteelConnAutoNodes.dll"
+      },
+      "Dictionary": {
+        "Key": "DesignScript.Builtin.Dictionary",
+        "Value": "DesignScriptBuiltin.dll"
+      },
+      "Connection": {
+        "Key": "AdvanceSteel.ConnectionAutomation.Nodes.Connection",
+        "Value": "AdvanceSteelConnAutoNodes.dll"
+      },
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "AdvanceSteel.ConnectionAutomation.ConnectionTypes, AdvanceSteelConnAutoNodesUI",
+      "SelectedIndex": 3,
+      "SelectedString": "Knee of frame bolted, with haunch | MIS_01",
+      "Id": "4961a23ae46145f58ef931d95eaac7c3",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c2e6f8a8fa194a19838750c32407a77f",
+          "Name": "ConnectionType",
+          "Description": "Type of Connection",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select the Connection Type"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "3a93774d17e94495a22ce1b4938e1160",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [
+        {
+          "Id": "92de58f0d9a04b06a0f540a0d8e5e2cc",
+          "Name": "Elemn",
+          "Description": "Elemn",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4eaa2d366f5340859a117de52036f91d",
+          "Name": "TpVigas",
+          "Description": "TpVigas",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "eeaf6a5957574b4c9e03059cc15aff3e",
+          "Name": "TpPilar",
+          "Description": "TpPilar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "539310ab353c4c04beeb36d5ca90f088",
+          "Name": "Top",
+          "Description": "Top",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "faf4166e48fd4a6888530a18987c6577",
+          "Name": "Mis",
+          "Description": "Mis",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "545df96f40b9446bbe5515cd5d218638",
+          "Name": "Pla",
+          "Description": "Pla",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "eba35062052845928d0c4c172f1107ef",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "afe635085ae64b16aa15b2827ec913c0",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6bca37e4dafc49758247af1924257154",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fc8815b4c0f64fa485cd2642e8653333",
+          "Name": "",
+          "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b5b82bb606bb49e4be458358bb69dc6e",
+          "Name": "",
+          "Description": "Value of expression at line 5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e791c1d0eacf4e489175566e039b5a4a",
+          "Name": "",
+          "Description": "Value of expression at line 6",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7518cb586b07457dbe923c22405dac81",
+          "Name": "",
+          "Description": "Value of expression at line 7",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "be6e6b4ed8954eb09351309bad4194e3",
+          "Name": "",
+          "Description": "Nodos",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2eaba645c46d4971ba616c25dfcd1504",
+          "Name": "",
+          "Description": "Grup1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "58418c0ce0c544de9df9963e140af49f",
+          "Name": "",
+          "Description": "Grup2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8f4b461a278f4bd1906746008486b041",
+          "Name": "",
+          "Description": "F_T0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e68236325d674c618227bccc3d9c328a",
+          "Name": "",
+          "Description": "F_T1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a0b23ec24a4f464b967f05f2654c78e6",
+          "Name": "",
+          "Description": "F_T",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5f71aa9e31bc4ce6b5388f30f01aae03",
+          "Name": "",
+          "Description": "Topos",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "50781a14cefc4ffe91efcafa5aff60e2",
+          "Name": "",
+          "Description": "F_M0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1d43dfc460454d7c99adaa3eacbfb82a",
+          "Name": "",
+          "Description": "F_M1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "06400f6c7bde44018d240b691be3fef8",
+          "Name": "",
+          "Description": "F_M",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2712c6edfef740049c08bc429b8d43c1",
+          "Name": "",
+          "Description": "Misul",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9b010dda0dbb4549998095ab9242840d",
+          "Name": "",
+          "Description": "F_P",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1adad5a70a344cc9a015abb16d72c368",
+          "Name": "",
+          "Description": "Placa",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "Elemn;\nNodos;\nTpVigas;\nTpPilar;\nTop;\nMis;\nPla;\nNodos = ConnectionNode.FromStructure  ( Elemn     );\nGrup1 = ConnectionNode.SubNodesOfSize ( Nodos , 1 );\nGrup2 = ConnectionNode.SubNodesOfSize ( Nodos , 2 );\n//----------------------------------------------------------------\n// Cumeeiras\n//----------------------------------------------------------------\nF_T0  = Filter.BySectionType ( Grup2 , 0 , TpVigas )[\"accepted\"];\nF_T1  = Filter.BySectionType ( Grup2 , 1 , TpVigas )[\"accepted\"];\nF_T   = List.SetIntersection ( F_T0 , F_T1 );\nTopos = Connection.ByType    ( F_T  , [0 , 1] , Top);\n//----------------------------------------------------------------\n// Mísulas\n//----------------------------------------------------------------\nF_M0  = Filter.BySectionType ( Grup2 , 0 , TpPilar )[\"accepted\"];\nF_M1  = Filter.BySectionType ( Grup2 , 1 , TpVigas )[\"accepted\"];\nF_M   = List.SetIntersection ( F_M0  , F_M1 );\nMisul = Connection.ByType    ( F_M   , [0 , 1] , Mis);\n//----------------------------------------------------------------\n// Placa de Base\n//----------------------------------------------------------------\nF_P   = Filter.BySectionType ( Grup1 , 0 , TpPilar )[\"accepted\"];\nPlaca = Connection.ByType    ( F_P   , 0 , Pla );"
+    },
+    {
+      "ConcreteType": "AdvanceSteel.ConnectionAutomation.StructuralDataTypes, AdvanceSteelConnAutoNodesUI",
+      "SelectedIndex": 37,
+      "SelectedString": "Vigas W Gerdau | W250X32.7",
+      "Id": "b42432493ff44445ad589a14fe0cdb42",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b3fa0aad8163411e965a57b778fec01c",
+          "Name": "familyName",
+          "Description": "Family Name",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "295d587ebae947c9aefbda6dcca02a5b",
+          "Name": "typeName",
+          "Description": "Type Name",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select the Family and Type for filtering Fabrication Elements"
+    },
+    {
+      "ConcreteType": "AdvanceSteel.ConnectionAutomation.StructuralDataTypes, AdvanceSteelConnAutoNodesUI",
+      "SelectedIndex": 7,
+      "SelectedString": "Pilares HP Gerdau | HP310X79",
+      "Id": "a853849469b449a482394a0cb8409d53",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3b8aae0f132a4014965d69b7aeac3028",
+          "Name": "familyName",
+          "Description": "Family Name",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5147d9f45bc3437990fdc9f98a9ad737",
+          "Name": "typeName",
+          "Description": "Type Name",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select the Family and Type for filtering Fabrication Elements"
+    },
+    {
+      "ConcreteType": "AdvanceSteel.ConnectionAutomation.SelectStructureData, AdvanceSteelConnAutoNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "1595243",
+        "1595245",
+        "1600446",
+        "1600447"
+      ],
+      "Id": "c26a69f0260944ee894709b98d6f2bdf",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a4eb0e4eb80b498686538c891db44644",
+          "Name": "structureData",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select the structure data used for filtering Fabrication Elements"
+    },
+    {
+      "ConcreteType": "AdvanceSteel.ConnectionAutomation.ConnectionTypes, AdvanceSteelConnAutoNodesUI",
+      "SelectedIndex": 1,
+      "SelectedString": "Base plate cut | Base plate cut",
+      "Id": "3889c55f24a440378eab98ab3a3a2f5d",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "40b8de89c19c42b8922b4ba308504e28",
+          "Name": "ConnectionType",
+          "Description": "Type of Connection",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select the Connection Type"
+    },
+    {
+      "ConcreteType": "AdvanceSteel.ConnectionAutomation.ConnectionTypes, AdvanceSteelConnAutoNodesUI",
+      "SelectedIndex": 0,
+      "SelectedString": "Apex haunch | Apex haunch",
+      "Id": "35451053bb274947aca4903393f437a1",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ed1692e081644a3b860a5a2c9dff0539",
+          "Name": "ConnectionType",
+          "Description": "Type of Connection",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select the Connection Type"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "c2e6f8a8fa194a19838750c32407a77f",
+      "End": "faf4166e48fd4a6888530a18987c6577",
+      "Id": "b2834053314f442d9610cc893547c704",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "295d587ebae947c9aefbda6dcca02a5b",
+      "End": "4eaa2d366f5340859a117de52036f91d",
+      "Id": "8d6ddfc445824e6989938e7a2b653333",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5147d9f45bc3437990fdc9f98a9ad737",
+      "End": "eeaf6a5957574b4c9e03059cc15aff3e",
+      "Id": "5c6f31ecb93c4173ba47046dce63e090",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a4eb0e4eb80b498686538c891db44644",
+      "End": "92de58f0d9a04b06a0f540a0d8e5e2cc",
+      "Id": "91d5bc1a1fdb4ff49500c3ed0b8c6444",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "40b8de89c19c42b8922b4ba308504e28",
+      "End": "545df96f40b9446bbe5515cd5d218638",
+      "Id": "f8477239bb9446abb454d257fb7c5bc2",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ed1692e081644a3b860a5a2c9dff0539",
+      "End": "539310ab353c4c04beeb36d5ca90f088",
+      "Id": "ae323aac14014732a9a69a715cbedfe5",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 10000.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.18.1.5096",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -19674.673828125,
+      "EyeY": 18016.703125,
+      "EyeZ": 6397.001953125,
+      "LookX": 23366.748046875,
+      "LookY": -12235.712890625,
+      "LookZ": -23212.791015625,
+      "UpX": 0.098735079169273376,
+      "UpY": 0.99026811122894287,
+      "UpZ": -0.098084546625614166
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "4961a23ae46145f58ef931d95eaac7c3",
+        "Name": "Conexão Utilizada",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1105.5201999233759,
+        "Y": 664.74462484281889
+      },
+      {
+        "Id": "3a93774d17e94495a22ce1b4938e1160",
+        "Name": "Coloca Conexão Coluna_Viga ",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -392.63101537612374,
+        "Y": 348.11722321863681
+      },
+      {
+        "Id": "b42432493ff44445ad589a14fe0cdb42",
+        "Name": "StructuralDataTypes",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -966.320199923376,
+        "Y": 221.00493147472756
+      },
+      {
+        "Id": "a853849469b449a482394a0cb8409d53",
+        "Name": "StructuralDataTypes",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -977.520199923376,
+        "Y": 380.65149593075807
+      },
+      {
+        "Id": "c26a69f0260944ee894709b98d6f2bdf",
+        "Name": "SelectStructureData",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -935.12019992337594,
+        "Y": 61.358367018697194
+      },
+      {
+        "Id": "3889c55f24a440378eab98ab3a3a2f5d",
+        "Name": "Conexão Utilizada",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1003.1201999233759,
+        "Y": 789.19118929884917
+      },
+      {
+        "Id": "35451053bb274947aca4903393f437a1",
+        "Name": "Conexão Utilizada",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -983.920199923376,
+        "Y": 540.29806038678862
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "56e59f80a8a7414185374207363cc189",
+        "Title": "Coloca Placas de Base, Mísulas e Cumeeiras em Pórtico Tipo 1",
+        "DescriptionText": "Algoritmo para Colocação de Ligações de Aço em Pórticos de galpão metálica: Curso de Especialização de Estruturas de Aço - Escola Politécnica - UFRJ. \r\nDisciplina:  ETM602 - Desenho, Montagem e Fabricação (CAD/CAM/BIM). \r\nProf. José Luis Menegotto.",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "4961a23ae46145f58ef931d95eaac7c3",
+          "3a93774d17e94495a22ce1b4938e1160",
+          "b42432493ff44445ad589a14fe0cdb42",
+          "a853849469b449a482394a0cb8409d53",
+          "c26a69f0260944ee894709b98d6f2bdf",
+          "3889c55f24a440378eab98ab3a3a2f5d",
+          "35451053bb274947aca4903393f437a1"
+        ],
+        "HasNestedGroups": false,
+        "Left": -1115.5201999233759,
+        "Top": -14.2416329813028,
+        "Width": 1398.4891845472521,
+        "Height": 956.55885619993967,
+        "FontSize": 18.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 61.358367018697194,
+        "InitialHeight": 872.832822280152,
+        "TextblockHeight": 65.6,
+        "Background": "#FFFFAA45"
+      }
+    ],
+    "X": 1311.2929062270987,
+    "Y": 124.34643903972244,
+    "Zoom": 1.1802932904077699
+  }
+}

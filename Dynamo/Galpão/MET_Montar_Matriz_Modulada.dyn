@@ -1,0 +1,505 @@
+{
+  "Uuid": "ebf2d2da-c1a8-4e4f-bb5b-b0955de45675",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "MET_Montar_Matriz_Modulada",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "1fbaa726e782404faece7c6bffa91b1e",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [
+        {
+          "Id": "602b35874fde44969e41ba26c03dcbeb",
+          "Name": "qx",
+          "Description": "qx",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fed7fc99e53d4728b0b77cf9cd11cb9e",
+          "Name": "qy",
+          "Description": "qy",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "af815108da7f4189855c6d1099c95fa6",
+          "Name": "dx",
+          "Description": "dx",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a5fc6a5099034290a716463a58ca0c12",
+          "Name": "dy",
+          "Description": "dy",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dff2094efe864ef1b0ed83473268453f",
+          "Name": "m",
+          "Description": "m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f52b1dfab9d14f47905f491ad6b68d3f",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d5abdbb1d8a24cbda2724d343482039b",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "baa30c8277274fd780e4e876c484a2bd",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "364de2dd3b83433ea04c1fd383ae32cd",
+          "Name": "",
+          "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fc9d9efd9ee04402b6c68dc22d7d42c2",
+          "Name": "",
+          "Description": "x",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2e871636a0ea464c8d9a19c7f1bfcc24",
+          "Name": "",
+          "Description": "y",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "11d5a5c4e6c84adab947da29b567f629",
+          "Name": "",
+          "Description": "z",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cdedd44716c844f8a971a8297a94178d",
+          "Name": "",
+          "Description": "PX",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "63a194982cc54d898a0edaf0c1b5a9dd",
+          "Name": "",
+          "Description": "PY",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c47dde57d4084a7a9b38c66aa1939161",
+          "Name": "",
+          "Description": "i",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "12a450eb475546b497868828319b1865",
+          "Name": "",
+          "Description": "j",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e73d3ff2f8be43578e06acbb877e626e",
+          "Name": "",
+          "Description": "BX",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "45c7b6a5076442ce8a4f16979a57fec4",
+          "Name": "",
+          "Description": "k",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "41ca10d992cf4ab19cb32fb0e2bf811f",
+          "Name": "",
+          "Description": "l",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ae80937c457845af80bd66e027ee1f38",
+          "Name": "",
+          "Description": "BY",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "qx;\nqy;\ndx;\ndy;\n//-----------------------------------------------\n//Matriz de pontos modulada\n//-----------------------------------------------\nx  = ((0..qx) * dx) + (i%m==0 ? 0 : dx*0.5);\ny  = ((0..qy) * dy) + (k%m==0 ? 0 : dy*0.5);\nz  =  0;\nPX = Point.ByCoordinates ( x<1> , y    , z );\nPY = Point.ByCoordinates ( x    , y<1> , z );\n//-----------------------------------------------\n//Barras Na Direção X\n//-----------------------------------------------\ni  = 0..qx-1;\nj  = i+1;\nBX = Line.ByStartPointEndPoint( PX[i] , PX[j] );\n//-----------------------------------------------\n//Barras Na Direção Y\n//-----------------------------------------------\nk  = 0..qy-1;\nl  = k+1;\nBY = Line.ByStartPointEndPoint( PY[k] , PY[l] );"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
+      "NumberType": "Integer",
+      "MaximumValue": 20,
+      "MinimumValue": 2,
+      "StepValue": 1,
+      "Id": "4821589933784c398b644cd27646eea2",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "831743db5b024a8fa8d4c27df7b4d741",
+          "Name": "",
+          "Description": "Int64",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces integer values",
+      "InputValue": 4
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
+      "NumberType": "Integer",
+      "MaximumValue": 20,
+      "MinimumValue": 2,
+      "StepValue": 1,
+      "Id": "624d0e72359941528f0d3a3df93dedeb",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "98e9c6bc8ceb4a258a7827188377cf06",
+          "Name": "",
+          "Description": "Int64",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces integer values",
+      "InputValue": 4
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
+      "NumberType": "Integer",
+      "MaximumValue": 20,
+      "MinimumValue": 1,
+      "StepValue": 1,
+      "Id": "b0d3e98f759d46b7b683d6c39aa829c1",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "236ec753afc84ad4abdd11f752c3944d",
+          "Name": "",
+          "Description": "Int64",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces integer values",
+      "InputValue": 2
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 20.0,
+      "MinimumValue": 1.0,
+      "StepValue": 0.25,
+      "Id": "35758a5045874cca854b238ac56c29a3",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6fcc094fb6ff4c7f8d2c786c4d1a0780",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 3.5
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 20.0,
+      "MinimumValue": 1.0,
+      "StepValue": 0.25,
+      "Id": "988369a8efea4a48a4543d3024baca4a",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4894f5e19bd5476abdd68fac2142a619",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 4.75
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "831743db5b024a8fa8d4c27df7b4d741",
+      "End": "602b35874fde44969e41ba26c03dcbeb",
+      "Id": "5909c6b814c245f6a45268e6d9bdc3ff",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "98e9c6bc8ceb4a258a7827188377cf06",
+      "End": "fed7fc99e53d4728b0b77cf9cd11cb9e",
+      "Id": "03391248422049509148c3d4ab0c3727",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "236ec753afc84ad4abdd11f752c3944d",
+      "End": "dff2094efe864ef1b0ed83473268453f",
+      "Id": "04b1f5b6953e49e78a55769baa9b1af1",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6fcc094fb6ff4c7f8d2c786c4d1a0780",
+      "End": "af815108da7f4189855c6d1099c95fa6",
+      "Id": "47719c595e24460cbfda3d17f0eb5ed9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4894f5e19bd5476abdd68fac2142a619",
+      "End": "a5fc6a5099034290a716463a58ca0c12",
+      "Id": "b9729af23f6c49a98777edb88a819941",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.18",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "6.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.18.1.5096",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "1fbaa726e782404faece7c6bffa91b1e",
+        "Name": "Define Matriz de pontos e Barras",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 293.94312821329453,
+        "Y": 320.9604266020375
+      },
+      {
+        "Id": "4821589933784c398b644cd27646eea2",
+        "Name": "Quant. X",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -172.79877927672783,
+        "Y": 134.2112881179246
+      },
+      {
+        "Id": "624d0e72359941528f0d3a3df93dedeb",
+        "Name": "Quant. Y",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -175.01274353950225,
+        "Y": 261.90371059812753
+      },
+      {
+        "Id": "b0d3e98f759d46b7b683d6c39aa829c1",
+        "Name": "Modular",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -175.01274353950225,
+        "Y": 644.86909247443327
+      },
+      {
+        "Id": "35758a5045874cca854b238ac56c29a3",
+        "Name": "Dim X",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -175.01274353950225,
+        "Y": 389.55883789022948
+      },
+      {
+        "Id": "988369a8efea4a48a4543d3024baca4a",
+        "Name": "Dim Y",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -175.01274353950225,
+        "Y": 517.21396518233132
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "5b32a1e4c59948ce93ed8404cf697fc9",
+        "Title": "Cria Pontos e Barras ordenados numa matriz modulada",
+        "DescriptionText": "Algoritmo para montar uma matriz retangular com opções de modulação.\r\nCurso de Especialização de Estruturas de Aço - Escola Politécnica - UFRJ. \r\nDisciplina:  ETM602 - Desenho, Montagem e Fabricação (CAD/CAM/BIM). \r\nProf. José Luis Menegotto. ",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "1fbaa726e782404faece7c6bffa91b1e",
+          "4821589933784c398b644cd27646eea2",
+          "624d0e72359941528f0d3a3df93dedeb",
+          "b0d3e98f759d46b7b683d6c39aa829c1",
+          "35758a5045874cca854b238ac56c29a3",
+          "988369a8efea4a48a4543d3024baca4a"
+        ],
+        "HasNestedGroups": false,
+        "Left": -185.01274353950225,
+        "Top": 44.211288117924596,
+        "Width": 992.95587175279684,
+        "Height": 789.34913848411293,
+        "FontSize": 18.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 134.2112881179246,
+        "InitialHeight": 655.65780435650868,
+        "TextblockHeight": 80.0,
+        "Background": "#FFA4E1FF"
+      }
+    ],
+    "X": 215.68698286599931,
+    "Y": 31.149521072647662,
+    "Zoom": 0.54620501071013661
+  }
+}
