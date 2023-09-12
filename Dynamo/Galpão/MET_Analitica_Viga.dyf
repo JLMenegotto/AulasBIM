@@ -21,7 +21,7 @@
       "NodeType": "CodeBlockNode",
       "Inputs": [
         {
-          "Id": "94e913fbe0d844bcb66961c53f3988a3",
+          "Id": "d67cdeceec6b4a49a2747a6a5357422b",
           "Name": "Curva",
           "Description": "Curva",
           "UsingDefaultValue": false,
@@ -30,9 +30,18 @@
           "KeepListStructure": false
         },
         {
-          "Id": "75321f3c7c234878964eb10439cfb46d",
+          "Id": "fad3ee2d431941ef9f0cd36efc0c7258",
           "Name": "Role",
           "Description": "Role",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bd124deb74b64e38a9cbcac7d915e994",
+          "Name": "Sec",
+          "Description": "Sec",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -41,7 +50,7 @@
       ],
       "Outputs": [
         {
-          "Id": "8aded65934f146a2a25b34dd97e28be4",
+          "Id": "8d62f2187bf7406f8d786d4de723665d",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -50,7 +59,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "f636f8016ea24def90b7f43e92fa6688",
+          "Id": "1f72ab4783a747fc99e416f64d6e42e5",
           "Name": "",
           "Description": "Value of expression at line 2",
           "UsingDefaultValue": false,
@@ -59,7 +68,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "99c60d2128c3468d961a7c056315d395",
+          "Id": "a938041e04fc403393810b3ddcb2553e",
           "Name": "",
           "Description": "MA",
           "UsingDefaultValue": false,
@@ -68,9 +77,18 @@
           "KeepListStructure": false
         },
         {
-          "Id": "0badb61af861429fb7ffe73f9a4f7209",
+          "Id": "1ce7a0b829f0481aacb46add7d914a65",
           "Name": "",
           "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1da721c0f8f94bf9b28a92a6b62fb27c",
+          "Name": "",
+          "Description": "Value of expression at line 5",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -79,7 +97,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly",
-      "Code": "Curva;\nRole;\nMA = AnalyticalMember.ByCurve ( Curva );\nAnalyticalMember.SetStructuralRole ( [ MA ] , Role );"
+      "Code": "Curva;\nRole;\nMA = AnalyticalMember.ByCurve ( Curva );\nAnalyticalMember.SetStructuralRole ( [ MA ] , Role );\nMA.SetParameterByName( \"Section Type\", Sec);"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
@@ -148,31 +166,64 @@
       ],
       "Replication": "Disabled",
       "Description": "Select the Analytical Structural Role for an Analytical Element"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "Parameter": {
+        "Name": "Perfil",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "0a681f5731c24c58b00ef02e787e833a",
+      "NodeType": "InputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0d5e0a94cd9542508bf1b8210316cdd4",
+          "Name": "",
+          "Description": "Input Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
     }
   ],
   "Connectors": [
     {
-      "Start": "0badb61af861429fb7ffe73f9a4f7209",
+      "Start": "1ce7a0b829f0481aacb46add7d914a65",
       "End": "1832d330a5ea45e2b8f9cd820eb1ffd7",
-      "Id": "91533f05f9e94ee7b85859813cb9d613",
+      "Id": "21f8af5879ef4945a110414ef5dbd77b",
       "IsHidden": "False"
     },
     {
       "Start": "8df9f6c64bd4411da98211f80dbccf72",
-      "End": "94e913fbe0d844bcb66961c53f3988a3",
-      "Id": "87cdd656c8d84678afef960a08ca237c",
+      "End": "d67cdeceec6b4a49a2747a6a5357422b",
+      "Id": "c17ea528cbce4794a85660d1250e464b",
       "IsHidden": "False"
     },
     {
       "Start": "675f3dfb7f5c4b0c9656e743ac53d310",
-      "End": "75321f3c7c234878964eb10439cfb46d",
-      "Id": "7e2592c571f546dd839b9ee1e14e51b1",
+      "End": "fad3ee2d431941ef9f0cd36efc0c7258",
+      "Id": "10c4df2f9a1543588fffc344ecbf4e7e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0d5e0a94cd9542508bf1b8210316cdd4",
+      "End": "bd124deb74b64e38a9cbcac7d915e994",
+      "Id": "b2996ee15b2242d88dd0589b6b915ae7",
       "IsHidden": "False"
     }
   ],
   "Dependencies": [],
   "NodeLibraryDependencies": [],
   "Author": "None provided",
+  "Bindings": [],
   "View": {
     "Dynamo": {
       "ScaleFactor": 1.0,
@@ -203,18 +254,18 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 501.59700951039,
-        "Y": 219.92486585760298
+        "X": 513.59700951039008,
+        "Y": 253.52486585760295
       },
       {
         "Id": "c5039e7c014646a89d88bb1daba9c050",
-        "Name": "Output",
+        "Name": "Retorno",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1093.018488029732,
-        "Y": 265.839791953906
+        "X": 1112.2184880297323,
+        "Y": 302.05077193214225
       },
       {
         "Id": "832c35f6f5104a76b40e114d9ebc245b",
@@ -235,11 +286,21 @@
         "ShowGeometry": true,
         "X": 175.99999999999983,
         "Y": 292.768164899265
+      },
+      {
+        "Id": "0a681f5731c24c58b00ef02e787e833a",
+        "Name": "Seção do Perfil",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 263.59999999999991,
+        "Y": 422.40000000000003
       }
     ],
     "Annotations": [],
-    "X": -136.79999999999995,
-    "Y": 3.1999999999999886,
-    "Zoom": 1.0
+    "X": -106.82106835659314,
+    "Y": 29.601691180964281,
+    "Zoom": 0.77739243384428
   }
 }

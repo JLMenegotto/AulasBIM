@@ -9,6 +9,10 @@
       "AnalyticalMember": {
         "Key": "AnalyticalAutomation.AnalyticalElements.AnalyticalMember",
         "Value": "AnalyticalAutomation.dll"
+      },
+      "FamilyInstance": {
+        "Key": "Revit.Elements.FamilyInstance",
+        "Value": "RevitNodes.dll"
       }
     }
   },
@@ -21,7 +25,7 @@
       "NodeType": "CodeBlockNode",
       "Inputs": [
         {
-          "Id": "6f57d8c72b2f48ebaee3bcdfabde6169",
+          "Id": "27e792929ea44eae9c817ceae4a3b071",
           "Name": "Curva",
           "Description": "Curva",
           "UsingDefaultValue": false,
@@ -30,9 +34,18 @@
           "KeepListStructure": false
         },
         {
-          "Id": "f822afb19905421eb2c689266706681c",
+          "Id": "94aeb12720ea48ed90c58b1003a8446a",
           "Name": "Role",
           "Description": "Role",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "41c20d1ab14f473d8a70be6609df2051",
+          "Name": "Sec",
+          "Description": "Sec",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -41,7 +54,7 @@
       ],
       "Outputs": [
         {
-          "Id": "b48643860ec84a07b7bb885fa3664fc2",
+          "Id": "cf206d5746a44641983cd213f9dad9d7",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -50,7 +63,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "29d956e5efc4467ca2d6fd3d1e106068",
+          "Id": "694990cf210e480ba0adc2ef2c73cfba",
           "Name": "",
           "Description": "Value of expression at line 2",
           "UsingDefaultValue": false,
@@ -59,7 +72,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "7db342b2a45f4fd0aa40babffe2dc7f7",
+          "Id": "e5799e798706443db3853716cc09ff29",
           "Name": "",
           "Description": "MA",
           "UsingDefaultValue": false,
@@ -68,9 +81,18 @@
           "KeepListStructure": false
         },
         {
-          "Id": "0d327731eee448608f3502bb8200f720",
+          "Id": "606ecbc074a34427a37467cca00ace85",
           "Name": "",
           "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "500d6d6869534a96b609c54a095f35d1",
+          "Name": "",
+          "Description": "Value of expression at line 5",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -79,7 +101,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly",
-      "Code": "Curva;\nRole;\nMA = AnalyticalMember.ByCurve ( Curva );\nAnalyticalMember.SetStructuralRole ( [ MA ] , Role );"
+      "Code": "Curva;\nRole;\nMA = AnalyticalMember.ByCurve ( Curva );\nAnalyticalMember.SetStructuralRole ( [ MA ] , Role );\nMA.SetParameterByName( \"Section Type\", Sec);"
     },
     {
       "ConcreteType": "AnalyticalAutomationGUI.ComboBox.StructuralRoleComboBox, AnalyticalAutomationGUI",
@@ -148,25 +170,57 @@
       "Outputs": [],
       "Replication": "Disabled",
       "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "Parameter": {
+        "Name": "Perfil",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "9af1a2ba6f6f4c27a1e84269cbef4935",
+      "NodeType": "InputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "869af49650564b1f931cf5ca4a5fecf4",
+          "Name": "",
+          "Description": "Input Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
     }
   ],
   "Connectors": [
     {
-      "Start": "0d327731eee448608f3502bb8200f720",
+      "Start": "606ecbc074a34427a37467cca00ace85",
       "End": "68841a4094164aa9a825e2b8f447e129",
-      "Id": "08716b18cd934bb1b9f9f0ad5f461d3d",
+      "Id": "2dd7e13cb4024417982c4c4a3c26ebca",
       "IsHidden": "False"
     },
     {
       "Start": "290bdf85d44f4213bbdab36557580cfc",
-      "End": "f822afb19905421eb2c689266706681c",
-      "Id": "45d7879e0b5949c29e8a444e9bab3732",
+      "End": "94aeb12720ea48ed90c58b1003a8446a",
+      "Id": "8cbf285370e04c23ba76381300ef63ba",
       "IsHidden": "False"
     },
     {
       "Start": "59cca2c89d544ed0a43fbc3f0146f694",
-      "End": "6f57d8c72b2f48ebaee3bcdfabde6169",
-      "Id": "d253d56299d9400cb142ce3e4cb27ed0",
+      "End": "27e792929ea44eae9c817ceae4a3b071",
+      "Id": "373c349a55d14143ab1c6a7386b13539",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "869af49650564b1f931cf5ca4a5fecf4",
+      "End": "41c20d1ab14f473d8a70be6609df2051",
+      "Id": "3211f7bf350d48cbb2569cbb273a6c1e",
       "IsHidden": "False"
     }
   ],
@@ -204,8 +258,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 685.56286721698586,
-        "Y": 346.96953930607111
+        "X": 703.74392830771876,
+        "Y": 379.3792569025951
       },
       {
         "Id": "db32d0961baf4225b321eae02042008f",
@@ -229,18 +283,28 @@
       },
       {
         "Id": "7cd4a8975d334d59b03cb5235784d3c0",
-        "Name": "Output",
+        "Name": "Retorno",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1271.7930251190971,
-        "Y": 395.99925777271511
+        "X": 1290.3978779225076,
+        "Y": 427.48439328617889
+      },
+      {
+        "Id": "9af1a2ba6f6f4c27a1e84269cbef4935",
+        "Name": "Secão do Perfil",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 445.02054396544338,
+        "Y": 548.351021055971
       }
     ],
     "Annotations": [],
-    "X": -258.53869654817731,
-    "Y": 47.023948418038742,
-    "Zoom": 0.77051684820224531
+    "X": -262.6203154555285,
+    "Y": -162.11093654522944,
+    "Zoom": 0.79882542504955834
   }
 }
