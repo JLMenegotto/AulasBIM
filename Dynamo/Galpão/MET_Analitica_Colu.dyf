@@ -25,7 +25,7 @@
       "NodeType": "CodeBlockNode",
       "Inputs": [
         {
-          "Id": "27e792929ea44eae9c817ceae4a3b071",
+          "Id": "d7cb2097f72b447891a8e3ce378044be",
           "Name": "Curva",
           "Description": "Curva",
           "UsingDefaultValue": false,
@@ -34,7 +34,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "94aeb12720ea48ed90c58b1003a8446a",
+          "Id": "049dd70f280c4d608b6e0a8630cd3a6f",
           "Name": "Role",
           "Description": "Role",
           "UsingDefaultValue": false,
@@ -43,7 +43,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "41c20d1ab14f473d8a70be6609df2051",
+          "Id": "587baa3f07014eb19dce1664c618c05c",
           "Name": "Sec",
           "Description": "Sec",
           "UsingDefaultValue": false,
@@ -54,7 +54,7 @@
       ],
       "Outputs": [
         {
-          "Id": "cf206d5746a44641983cd213f9dad9d7",
+          "Id": "9ccd6b6eb9ef40fba71bab51183f1c32",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -63,7 +63,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "694990cf210e480ba0adc2ef2c73cfba",
+          "Id": "cdf4682d6c2747d5b735e312d3a6788b",
           "Name": "",
           "Description": "Value of expression at line 2",
           "UsingDefaultValue": false,
@@ -72,7 +72,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "e5799e798706443db3853716cc09ff29",
+          "Id": "f1cf852d855645d5a50f8795f4b17226",
           "Name": "",
           "Description": "MA",
           "UsingDefaultValue": false,
@@ -81,7 +81,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "606ecbc074a34427a37467cca00ace85",
+          "Id": "f7883993799a4480afa792940d803d80",
           "Name": "",
           "Description": "Value of expression at line 4",
           "UsingDefaultValue": false,
@@ -90,7 +90,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "500d6d6869534a96b609c54a095f35d1",
+          "Id": "2a9567a2b81e431fb134fd55e3d7e750",
           "Name": "",
           "Description": "Value of expression at line 5",
           "UsingDefaultValue": false,
@@ -101,7 +101,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly",
-      "Code": "Curva;\nRole;\nMA = AnalyticalMember.ByCurve ( Curva );\nAnalyticalMember.SetStructuralRole ( [ MA ] , Role );\nMA.SetParameterByName( \"Section Type\", Sec);"
+      "Code": "Curva;\nRole;\nMA = AnalyticalMember.ByCurve ( Curva );\nAnalyticalMember.SetStructuralRole ( [ MA ] , Role );\nMA.SetParameterByName( \"Section Type\" , Sec);"
     },
     {
       "ConcreteType": "AnalyticalAutomationGUI.ComboBox.StructuralRoleComboBox, AnalyticalAutomationGUI",
@@ -200,27 +200,27 @@
   ],
   "Connectors": [
     {
-      "Start": "606ecbc074a34427a37467cca00ace85",
+      "Start": "f7883993799a4480afa792940d803d80",
       "End": "68841a4094164aa9a825e2b8f447e129",
-      "Id": "2dd7e13cb4024417982c4c4a3c26ebca",
+      "Id": "68d72a9690434e718c1077423c982687",
       "IsHidden": "False"
     },
     {
       "Start": "290bdf85d44f4213bbdab36557580cfc",
-      "End": "94aeb12720ea48ed90c58b1003a8446a",
-      "Id": "8cbf285370e04c23ba76381300ef63ba",
+      "End": "049dd70f280c4d608b6e0a8630cd3a6f",
+      "Id": "f7450fe39a8f46f5a3c1f1c3d152f211",
       "IsHidden": "False"
     },
     {
       "Start": "59cca2c89d544ed0a43fbc3f0146f694",
-      "End": "27e792929ea44eae9c817ceae4a3b071",
-      "Id": "373c349a55d14143ab1c6a7386b13539",
+      "End": "d7cb2097f72b447891a8e3ce378044be",
+      "Id": "76684829679d4b8499b5d14ec2c6044f",
       "IsHidden": "False"
     },
     {
       "Start": "869af49650564b1f931cf5ca4a5fecf4",
-      "End": "41c20d1ab14f473d8a70be6609df2051",
-      "Id": "3211f7bf350d48cbb2569cbb273a6c1e",
+      "End": "587baa3f07014eb19dce1664c618c05c",
+      "Id": "6d9bdd865ae5495f92e65944f25c740c",
       "IsHidden": "False"
     }
   ],
@@ -298,13 +298,13 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 445.02054396544338,
-        "Y": 548.351021055971
+        "X": 404.96172886449085,
+        "Y": 540.33925803578052
       }
     ],
     "Annotations": [],
-    "X": -262.6203154555285,
-    "Y": -162.11093654522944,
-    "Zoom": 0.79882542504955834
+    "X": -126.93141065887278,
+    "Y": 61.04483303940242,
+    "Zoom": 0.52180647642493372
   }
 }
