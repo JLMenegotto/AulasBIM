@@ -299,8 +299,8 @@
     },
     {
       "ConcreteType": "AdvanceSteel.ConnectionAutomation.StructuralDataTypes, AdvanceSteelConnAutoNodesUI",
-      "SelectedIndex": 37,
-      "SelectedString": "Vigas W Gerdau | W250X32.7",
+      "SelectedIndex": 6,
+      "SelectedString": "Vigas W Gerdau | W150X29.8",
       "Id": "b42432493ff44445ad589a14fe0cdb42",
       "NodeType": "ExtensionNode",
       "Inputs": [],
@@ -329,8 +329,8 @@
     },
     {
       "ConcreteType": "AdvanceSteel.ConnectionAutomation.StructuralDataTypes, AdvanceSteelConnAutoNodesUI",
-      "SelectedIndex": 7,
-      "SelectedString": "Pilares HP Gerdau | HP310X79",
+      "SelectedIndex": 1,
+      "SelectedString": "Pilares HP Gerdau | HP250X62",
       "Id": "a853849469b449a482394a0cb8409d53",
       "NodeType": "ExtensionNode",
       "Inputs": [],
@@ -361,10 +361,10 @@
       "ConcreteType": "AdvanceSteel.ConnectionAutomation.SelectStructureData, AdvanceSteelConnAutoNodesUI",
       "NodeType": "ExtensionNode",
       "InstanceId": [
-        "1595243",
-        "1595245",
-        "1600446",
-        "1600447"
+        "1592386",
+        "1592387",
+        "1592388",
+        "1592389"
       ],
       "Id": "c26a69f0260944ee894709b98d6f2bdf",
       "Inputs": [],
@@ -385,7 +385,7 @@
     {
       "ConcreteType": "AdvanceSteel.ConnectionAutomation.ConnectionTypes, AdvanceSteelConnAutoNodesUI",
       "SelectedIndex": 1,
-      "SelectedString": "Base plate cut | Base plate cut",
+      "SelectedString": "Base plate | PBA_01",
       "Id": "3889c55f24a440378eab98ab3a3a2f5d",
       "NodeType": "ExtensionNode",
       "Inputs": [],
@@ -406,7 +406,7 @@
     {
       "ConcreteType": "AdvanceSteel.ConnectionAutomation.ConnectionTypes, AdvanceSteelConnAutoNodesUI",
       "SelectedIndex": 0,
-      "SelectedString": "Apex haunch | Apex haunch",
+      "SelectedString": "Apex haunch | TOP_01",
       "Id": "35451053bb274947aca4903393f437a1",
       "NodeType": "ExtensionNode",
       "Inputs": [],
@@ -519,8 +519,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -1105.5201999233759,
-        "Y": 664.74462484281889
+        "X": -715.81348502507421,
+        "Y": 535.92592573373236
       },
       {
         "Id": "3a93774d17e94495a22ce1b4938e1160",
@@ -529,8 +529,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -392.63101537612374,
-        "Y": 348.11722321863681
+        "X": 49.972257147015284,
+        "Y": 220.26453951415385
       },
       {
         "Id": "b42432493ff44445ad589a14fe0cdb42",
@@ -539,8 +539,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -966.320199923376,
-        "Y": 221.00493147472756
+        "X": -576.61348502507417,
+        "Y": 62.428826394909095
       },
       {
         "Id": "a853849469b449a482394a0cb8409d53",
@@ -549,8 +549,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -977.520199923376,
-        "Y": 380.65149593075807
+        "X": -589.41348502507424,
+        "Y": 231.99452617451686
       },
       {
         "Id": "c26a69f0260944ee894709b98d6f2bdf",
@@ -559,8 +559,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -935.12019992337594,
-        "Y": 61.358367018697194
+        "X": -546.21348502507431,
+        "Y": -107.13687338469867
       },
       {
         "Id": "3889c55f24a440378eab98ab3a3a2f5d",
@@ -569,8 +569,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -1003.1201999233759,
-        "Y": 789.19118929884917
+        "X": -536.61348502507417,
+        "Y": 670.29162551334014
       },
       {
         "Id": "35451053bb274947aca4903393f437a1",
@@ -579,8 +579,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -983.920199923376,
-        "Y": 540.29806038678862
+        "X": -551.01348502507426,
+        "Y": 401.56022595412463
       }
     ],
     "Annotations": [
@@ -598,23 +598,44 @@
           "a853849469b449a482394a0cb8409d53",
           "c26a69f0260944ee894709b98d6f2bdf",
           "3889c55f24a440378eab98ab3a3a2f5d",
-          "35451053bb274947aca4903393f437a1"
+          "35451053bb274947aca4903393f437a1",
+          "6ad88b5c28c0454d8d96c5bc9a2ae57c"
         ],
         "HasNestedGroups": false,
-        "Left": -1115.5201999233759,
-        "Top": -14.2416329813028,
-        "Width": 1398.4891845472521,
-        "Height": 956.55885619993967,
+        "Left": -725.81348502507421,
+        "Top": -200.50694137172431,
+        "Width": 1451.3857421720895,
+        "Height": 1014.9714808858782,
         "FontSize": 18.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": 61.358367018697194,
-        "InitialHeight": 872.832822280152,
+        "InitialTop": -124.90694137172432,
+        "InitialHeight": 940.19856688506445,
         "TextblockHeight": 65.6,
         "Background": "#FFFFAA45"
+      },
+      {
+        "Id": "6ad88b5c28c0454d8d96c5bc9a2ae57c",
+        "Title": "O nodo coloca automaticamente as seguintes conexões:\n\nMisula\nCumeeira\nPlacas de Base \n\nElas devem ter sido previamente carregadas no modelo.\nPara que a conexão seja colocada o tipo de viga e de coluna selecionada deve coincidir com as utilizadas no modelo.  Repare na filtragem feita no algoritmo (Filter.BySectionType).\n\nRecomendações:\nUtilizar no modo de execução (Run) Manual.\nA configuração dos parâmetros de cada conexão devem ser realizados alterando os parâmetros a partir da interface de propriedades em Edit Type.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 60.766784150232525,
+        "Top": -116.90694137172432,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
       }
     ],
-    "X": 1311.2929062270987,
-    "Y": 124.34643903972244,
-    "Zoom": 1.1802932904077699
+    "X": 473.216937380832,
+    "Y": 149.31686098250347,
+    "Zoom": 0.42279081012736835
   }
 }
