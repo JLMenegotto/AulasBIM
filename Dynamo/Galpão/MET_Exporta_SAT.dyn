@@ -1,0 +1,348 @@
+{
+  "Uuid": "a675681a-4ed3-4468-a275-e3cd78833693",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "MET_Exporta_SAT",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Geometry": {
+        "Key": "Autodesk.DesignScript.Geometry.Geometry",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Category": {
+        "Key": "Revit.Elements.Category",
+        "Value": "RevitNodes.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 616,
+      "SelectedString": "OST_StructuralFoundation",
+      "Id": "a5cc65baddd142e0a3cb4e355725843f",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4d8d0000a6554a94b2b1aba6e7a911f1",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "Id": "a349798b1b8741be890fc2f0d2f8e1c2",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "e3aec7a145bd4d2f9beb1d02c3a2c4ab",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "601d4e3850b848398a7cbaacee5d4bbc",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "13cc916d23504fb7aebb06799736c458",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [
+        {
+          "Id": "e81d94e621374ae9947086916719b649",
+          "Name": "Elem",
+          "Description": "Elem",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a1ad0bba5515429db231878d1cb9b2bd",
+          "Name": "Pasta",
+          "Description": "Pasta",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6912c20f05574db2a555c0411b0e997b",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a03ad86b101947c1b37d9aac01dba2fe",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e826e8b0f76b468ba05aef2ce6edd7c2",
+          "Name": "",
+          "Description": "Tipo",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "59d8437a14024cb9995e16a2276fc16e",
+          "Name": "",
+          "Description": "Iden",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e54384ab35614c6d9e1bd9156d7039de",
+          "Name": "",
+          "Description": "Geom",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "aec19fd0cb0e4952b344d0f4fb569e0c",
+          "Name": "",
+          "Description": "Arqui",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "13c3d31aefcd4596a8442b49f4b0c23c",
+          "Name": "",
+          "Description": "Value of expression at line 13",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "Elem;\nPasta;\n//-----------------------------------------------\n// Define o nome do Arquivo\n//-----------------------------------------------\nTipo  = Elem.Name;\nIden  = Elem.Id;\nGeom  = Elem.Geometry();\nArqui = Pasta+\"\\\\\"+Tipo+\"_\"+Iden+\".sat\";\n//-----------------------------------------------\n//Exporta\n//-----------------------------------------------\nGeometry.ExportToSAT ( Geom , Arqui );"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Directory, CoreNodeModels",
+      "Id": "24e784bd2c154b23958c73b4de42bd1b",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6703bf7fef8f49fe80f48f766a7e2b8d",
+          "Name": "",
+          "Description": "Directory path",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a directory on the system and returns its path",
+      "HintPath": "C:\\MET_2023",
+      "InputValue": "C:\\MET_2023"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "4d8d0000a6554a94b2b1aba6e7a911f1",
+      "End": "e3aec7a145bd4d2f9beb1d02c3a2c4ab",
+      "Id": "1e13027e21664fb98ad215fd4470c9fd",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "601d4e3850b848398a7cbaacee5d4bbc",
+      "End": "e81d94e621374ae9947086916719b649",
+      "Id": "f38c88187ce4455cb1d5fc3082524b74",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6703bf7fef8f49fe80f48f766a7e2b8d",
+      "End": "a1ad0bba5515429db231878d1cb9b2bd",
+      "Id": "035cfad8bf42429dbf649e7c4175520d",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.18",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "6.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.18.1.5096",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "a5cc65baddd142e0a3cb4e355725843f",
+        "Name": "Categories",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 106.40326631081444,
+        "Y": 99.077584696693862
+      },
+      {
+        "Id": "a349798b1b8741be890fc2f0d2f8e1c2",
+        "Name": "All Elements of Category",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 478.20358007258415,
+        "Y": 98.1383013306251
+      },
+      {
+        "Id": "13cc916d23504fb7aebb06799736c458",
+        "Name": "Exporta a geometria coletada para um arquivo SAT",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 795.17457722913855,
+        "Y": 141.63928188949922
+      },
+      {
+        "Id": "24e784bd2c154b23958c73b4de42bd1b",
+        "Name": "Selecionar a Pasta de Destino",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 438.12561345873485,
+        "Y": 222.71238695753695
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "74f0667cf4dd4d19b133cbab58ba09b6",
+        "Title": "Exporta geometria de elementos para formato SAT",
+        "DescriptionText": "Exporta geometria de elementos para formato SAT\r\nCurso de Especialização de Estruturas de Aço - Escola Politécnica - UFRJ. \r\nDisciplina:  ETM602 - Desenho, Montagem e Fabricação (CAD/CAM/BIM). \r\nProf. José Luis Menegotto.",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "a5cc65baddd142e0a3cb4e355725843f",
+          "a349798b1b8741be890fc2f0d2f8e1c2",
+          "13cc916d23504fb7aebb06799736c458",
+          "24e784bd2c154b23958c73b4de42bd1b",
+          "f16e0ce7983f4a65a9bcdf60346d234d"
+        ],
+        "HasNestedGroups": false,
+        "Left": 91.435589370797,
+        "Top": 8.1383013306250973,
+        "Width": 1235.3389878583416,
+        "Height": 500.157913242486,
+        "FontSize": 18.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 98.1383013306251,
+        "InitialHeight": 270.96910388295373,
+        "TextblockHeight": 80.0,
+        "Background": "#FF48B9FF"
+      },
+      {
+        "Id": "f16e0ce7983f4a65a9bcdf60346d234d",
+        "Title": "Criada para transportar as famílias das Fundações de concreto para os modelos de Advance Steel.\n\nQuando os modelos de Revit são exportados para Advance Steel via smlx, as fundações de concreto são simplificadas com um bloco prismático. Para transportar as geometrias exatas dessas famílias pode ser utilizada esta pequena rotina que salva a geometria de cada fundação em arquivos SAT independentes. O nome do arquivo é formado pelo nome do Tipo da fundação seguido pelo Número de ID do elemento, o que garante que cada arquivo SAT será o de uma instância.  Deve ser escolhida a pasta de destinos dos arquivos.\n ",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 101.435589370797,
+        "Top": 265.29621457311111,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": -64.680195181596844,
+    "Y": 62.243273014928477,
+    "Zoom": 0.93340213005017525
+  }
+}
