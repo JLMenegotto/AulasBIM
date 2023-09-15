@@ -290,7 +290,7 @@
         "Excluded": false,
         "ShowGeometry": true,
         "X": 438.12561345873485,
-        "Y": 222.71238695753695
+        "Y": 222.71238695753692
       }
     ],
     "Annotations": [
@@ -312,17 +312,17 @@
         "Left": 91.435589370797,
         "Top": 8.1383013306250973,
         "Width": 1235.3389878583416,
-        "Height": 500.157913242486,
+        "Height": 514.55791324248594,
         "FontSize": 18.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 98.1383013306251,
-        "InitialHeight": 270.96910388295373,
+        "InitialHeight": 304.157913242486,
         "TextblockHeight": 80.0,
         "Background": "#FF48B9FF"
       },
       {
         "Id": "f16e0ce7983f4a65a9bcdf60346d234d",
-        "Title": "Criada para transportar as famílias das Fundações de concreto para os modelos de Advance Steel.\n\nQuando os modelos de Revit são exportados para Advance Steel via smlx, as fundações de concreto são simplificadas com um bloco prismático. Para transportar as geometrias exatas dessas famílias pode ser utilizada esta pequena rotina que salva a geometria de cada fundação em arquivos SAT independentes. O nome do arquivo é formado pelo nome do Tipo da fundação seguido pelo Número de ID do elemento, o que garante que cada arquivo SAT será o de uma instância.  Deve ser escolhida a pasta de destinos dos arquivos.\n ",
+        "Title": "Criada para transportar as famílias das Fundações de concreto para os modelos de Advance Steel.\n\nQuando os modelos de Revit são exportados para Advance Steel via smlx, as fundações de concreto são simplificadas com um bloco prismático. Para transportar essas famílias pode ser utilizada esta pequena rotina que salva a geometria de cada fundação em arquivos SAT independentes. \nO nome do arquivo é formado pelo nome do Tipo  da fundação (que não pode ter caracteres especiais), seguido pelo Número ID do elemento. Isso garante que cada arquivo SAT será o de uma instância específica do modelo.  Deve ser escolhida a pasta de destinos dos arquivos.\n ",
         "DescriptionText": null,
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
@@ -341,8 +341,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": -64.680195181596844,
-    "Y": 62.243273014928477,
-    "Zoom": 0.93340213005017525
+    "X": -20.745379645989836,
+    "Y": 64.457906231107984,
+    "Zoom": 0.50027194558401489
   }
 }
