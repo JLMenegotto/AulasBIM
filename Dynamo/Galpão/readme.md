@@ -9,18 +9,22 @@
 ![MET_Montar_Portico](https://github.com/JLMenegotto/AulasBIM/assets/9437020/0820b8c7-9633-4c37-877f-2b9bb8e6e600)
 
 ## Met_Exporta_SAT.dyn
-Exporta a geometria de um modelo para arquivo SAT. Pode ser utilizada para transferir geometrias entre aplicações.
+       ** Exporta a geometria de um modelo para arquivo SAT. 
+       ** Pode ser utilizada para transferir geometrias entre aplicações.
 ![MET_Exporta_SAT](https://github.com/JLMenegotto/AulasBIM/assets/9437020/25c50ce3-4510-4176-a04e-d9fe4e5a5374)
 
 ## Met_Coloca_Conexão_ColVig.dyn
-Coloca automaticamente três tipos de conexões metálicas. Placas de base, mísulas e Conexão de cumeeiras. 
+       ** Coloca automaticamente três tipos de conexões metálicas. 
+       ** Placas de base, mísulas e Conexão de cumeeiras. 
 ![MET_Coloca_Conexao_ColVig](https://github.com/JLMenegotto/AulasBIM/assets/9437020/739cc00e-d1e6-40b1-822d-a3cd36dcee60)
 
 ## MET_Montar_Matriz_Modulada.dyn
-Monta uma matriz plana em XY com possibilidade de mudar a modulação com diversos padrões rítmicos (AB, AAB, AAAB....) 
+       ** Monta uma matriz plana em XY.
+       ** Permite definir a modulação de diversos padrões rítmicos (AB, AAB, AAAB....) 
 ![MET_Montar_Matriz_Modulada](https://github.com/JLMenegotto/AulasBIM/assets/9437020/db9f74cc-6468-438a-81a6-bda5ea086f78)
 
 ## Galpão_Tipo1_Modulo.dyn
+
 ![Galpão_Tipo1_Modulo](https://github.com/JLMenegotto/AulasBIM/assets/9437020/acbfe248-8fab-4c12-a7f0-f08c25185cbe)
 
 ## Galpão_Tipo1.dyn
