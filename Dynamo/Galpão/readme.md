@@ -6,6 +6,15 @@
         ** Marca a posição das terças e dos elementos de metálica secundária na fachada.
         ** Calcula o peso do pórtico.
         ** Coloca os membros estruturais analíticos.
+
+Para definir os parâmetros da classe de conexão (rígida ou flexível) nas instâncias de Vigas e Colunas, podem ser  
+incorporadas as seguintes linhas de código conforme o caso, por exemplo:
+
+LI.SetParameterByName ("Start Connection" , "Moment Frame");
+LI.SetParameterByName ("End Connection"   , "Moment Frame");
+
+Outros valores paramétricos podem ser colocados "Structural Usage", "Coating", ... etc.
+
 ![MET_Montar_Portico](https://github.com/JLMenegotto/AulasBIM/assets/9437020/0820b8c7-9633-4c37-877f-2b9bb8e6e600)
 
 ## Met_Exporta_SAT.dyn
