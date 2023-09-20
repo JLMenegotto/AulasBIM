@@ -5,6 +5,7 @@
         ** Define a geometria de um pórtico para galpão. 
         ** Marca a posição das terças e dos elementos de metálica secundária na fachada.
         ** Calcula o peso do pórtico.
+        ** Coloca os membros estruturais analíticos.
 ![MET_Montar_Portico](https://github.com/JLMenegotto/AulasBIM/assets/9437020/0820b8c7-9633-4c37-877f-2b9bb8e6e600)
 
 ## Met_Exporta_SAT.dyn
