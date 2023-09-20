@@ -19,6 +19,9 @@
 ## Met_Exporta_SAT.dyn
        ** Exporta a geometria de um modelo para arquivo SAT. 
        ** Pode ser utilizada para transferir geometrias entre aplicações.
+       O nome do arquivo SAT exportado será composto pelo Nome do tipo de elemento concatenado com o número ID da instância para garantir
+       que cada geometria SAT seja única. 
+       
 ![MET_Exporta_SAT](https://github.com/JLMenegotto/AulasBIM/assets/9437020/25c50ce3-4510-4176-a04e-d9fe4e5a5374)
 
 ## Met_Coloca_Conexão_ColVig.dyn
