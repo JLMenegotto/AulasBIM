@@ -15,16 +15,12 @@ Coloca automaticamente três tipos de conexões metálicas. Placas de base, mís
 
 ## MET_Montar_Matriz_Modulada.dyn
 Monta uma matriz plana em XY com possibilidade de mudar a modulação com diversos padrões rítmicos (AB, AAB, AAAB....) 
-
 ![MET_Montar_Matriz_Modulada](https://github.com/JLMenegotto/AulasBIM/assets/9437020/db9f74cc-6468-438a-81a6-bda5ea086f78)
 
-
 ## Galpão_Tipo1_Modulo.dyn
-
 ![Galpão_Tipo1_Modulo](https://github.com/JLMenegotto/AulasBIM/assets/9437020/acbfe248-8fab-4c12-a7f0-f08c25185cbe)
 
 ## Galpão_Tipo1.dyn
-
 ![Galpão_Tipo1](https://github.com/JLMenegotto/AulasBIM/assets/9437020/f3c9def8-91ff-434a-a64a-5a3d4ffd6a14)
 
 ## Estrutura_Analitica_2023_A.dyn
