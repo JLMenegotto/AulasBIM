@@ -29,7 +29,13 @@ Outros valores paramétricos podem ser colocados "Structural Usage", "Coating", 
 
 ## MET_Montar_Matriz_Modulada.dyn
        ** Monta uma matriz plana em XY.
-       ** Permite definir a modulação de diversos padrões rítmicos (AB, AAB, AAAB....) 
+       ** Permite definir a modulação de diversos padrões rítmicos
+       
+       ** AAA...  m=1
+       ** ABABAB...  m=2
+       ** AABAABAAB...  m=3
+       ** AAAB,AAAB,AAAB... m=4
+       
 ![MET_Montar_Matriz_Modulada](https://github.com/JLMenegotto/AulasBIM/assets/9437020/db9f74cc-6468-438a-81a6-bda5ea086f78)
 
 ## Galpão_Tipo1_Modulo.dyn
