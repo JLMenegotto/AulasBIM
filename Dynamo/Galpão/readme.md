@@ -17,11 +17,12 @@
 ![MET_Montar_Portico](https://github.com/JLMenegotto/AulasBIM/assets/9437020/0820b8c7-9633-4c37-877f-2b9bb8e6e600)
 
 ## Met_Exporta_SAT.dyn
+
        ** Exporta a geometria de um modelo para arquivo SAT. 
        ** Pode ser utilizada para transferir geometrias entre aplicações.
        
        O nome do arquivo SAT exportado será composto pela concatenação do Nome do Tipo do elemento e o número ID da instância.
-       Issa formação do nome vai garantir que cada geometria SAT seja única. 
+       Essa formação garante que cada arquivo SAT corresponda a cada elemento.
        
 ![MET_Exporta_SAT](https://github.com/JLMenegotto/AulasBIM/assets/9437020/25c50ce3-4510-4176-a04e-d9fe4e5a5374)
 
