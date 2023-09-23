@@ -5,8 +5,8 @@ Advance Steel é uma aplicação integrada em AutoCAD cuja finalidade é o proje
 Embora ela conte com uma grande base de dados dos perfis de aço utilizados pela indústria, os fabricantes e os projetistas podem 
 adicionar novos perfis customizados. Para isso, programei duas funções em AutoLISP que ajudam a gerar e ordenar a customização.
 Até o momento, escrevi funções de geração para formas de Perfis W, U e Tubos de Seção Circular, mas ampliarei para outras formas. 
-Esta é uma das formas de ampliar a base de dados de perfis do Advande. Outra forma de ampliar a base de dados de perfis é trabalhar 
-diretamente nas planilhas de perfis utilizando um editor de planilhas SQL. 
+Esta é uma das formas de ampliar a base de dados de perfis do Advance Steel. Outra forma, é adicionar diretamente os dados 
+nas planilhas de perfis utilizando um editor de planilhas SQL.
 
 ## Para usar a Função:
 Para gerar os perfis customizados:
