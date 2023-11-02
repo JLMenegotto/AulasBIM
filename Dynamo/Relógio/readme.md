@@ -253,122 +253,122 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
 ![Mandala_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/3376e867-e1cb-41a5-b556-3f4560663d84)
 
 ## LISTA DOS NÚMEROS CORRESPONDENTES AOS INSTRUMENTOS MIDI
-## Teclados
-     1.  Piano de cauda acústico
-     2.  Piano brilhante
-     3.  Piano de cauda elétrico
-     4.  Piano Honky-Tonk
-     5.  Piano elétrico 1
-     6.  Piano elétrico 2
-     7.  Cravo
-     8.  Clavinet
-## Percussão Cromática
-     9.  Celesta
-    10.  Glockenspiel
-    11.  Caixa de música
-    12.  Vibrafone
-    13.  Marimba
-    14.  Xilofone
- ## Órgãos
-    15.  Sinos Tubulares
-    16.  Dulcimer	
-    17.  Órgão Hammond
-    18.  Órgão percussivo
-    19.  Órgão de rock
-    20.  Órgão da Igreja
-    21.  Harmônio
-    22.  Acordeão
-    23.  Gaita
-    24.  Bandoneon  
-## Violões	
-    25.  Guitarra espanhola
-    26.  Violão
-    27.  Guitarra elétrica (jazz)
-    28.  Guitarra elétrica
-    29.  Guitarra elétrica Mute
-    30.  Guitarra saturada
-    31.  Guitarra com distorção
-    32.  Harmônicos de guitarra  
-## Baixos	
-    33.  Baixo acústico
-    34.  Baixo elétrico
-    35.  Baixo elétrico (pick)
-    36.  Baixo Fretless
-    37.  Baixo 1
-    38.  Baixo 2
-    39.  Baixo sintetizado 1
-    40.  Baixo sintetizado 2
-## Cordas e conjuntos
-    41.  Violino
-    42.  Viola
-    43.  Violoncelo
-    44.  Contrabaixo
-    45.  Tremolo
-    46.  Pizzicato
-    47.  Harpa
-    48.  Timbales
-    49.  Cordas 1
-    50.  Cordas 2
-    51.  Cordas sintetizadas 1
-    52.  Cordas sintetizadas 2   
-## Vozes
-    53.  Coro Aahs
-    54.  Oohs Vozes
-    55.  Voz sintetizada
-    56.  Golpe orquestral
-## Metais
-    57.  Trompete
-    58.  Trombone  
-    59.  Tuba
-    60.  Trompete com mudo
-    61.  Chifre
-    62.  Naipe de Metais  
-    63.  Metais sintetizados 1  
-    64.  Metais sintetizados 2
-    65.  Saxofone Soprano   
-    66.  Saxofone Contralto  
-    67.  Saxofone Tenor
-    68.  Saxofone Barítono
-## Madeiras	
-    69.  Oboé 
-    70.  Chifre Inglês
-    71.  Fagote
-    72.  Clarinete	
-    73.  Piccolo
-    74.  Flauta transversal
-    75.  Gravador
-    76.  Flauta pan
-    77.  Garrafa
-    78.  Skakuhachi
-    79.  Apito 
-    80.  Ocarina
-## Sintetizadores
-    81.  Onda quadrada
-    82.  Dente de serra
-    83.  Órgão a vapor
-    84.  Chiffer
-    85.  Charango
-    86.  Voz
-    87.  Quinta
-    88.  Baixo e chumbo	
-    89.  Fantasia / Nova Era
-    90.  Quente
-    91.  Polissintetizador
-    92.  Voz
-    93.  Arco de vidro
-    94.  Metálico
-    95.  Halo
-    96.  Varrer 
-## Efeitos	
-    97.  Chuva 
-    98.  Trilha Sonora
-    99.  Cristal
+### Teclados
+      1.  Piano de cauda acústico
+      2.  Piano brilhante
+      3.  Piano de cauda elétrico
+      4.  Piano Honky-Tonk
+      5.  Piano elétrico 1
+      6.  Piano elétrico 2
+      7.  Cravo
+      8.  Clavinet
+### Percussão Cromática
+      9.  Celesta
+     10.  Glockenspiel
+     11.  Caixa de música
+     12.  Vibrafone
+     13.  Marimba
+     14.  Xilofone
+ ### Órgãos
+     15.  Sinos Tubulares
+     16.  Dulcimer	
+     17.  Órgão Hammond
+     18.  Órgão percussivo
+     19.  Órgão de rock
+     20.  Órgão da Igreja
+     21.  Harmônio
+     22.  Acordeão
+     23.  Gaita
+     24.  Bandoneon  
+### Violões	
+     25.  Guitarra espanhola
+     26.  Violão
+     27.  Guitarra elétrica (jazz)
+     28.  Guitarra elétrica
+     29.  Guitarra elétrica Mute
+     30.  Guitarra saturada
+     31.  Guitarra com distorção
+     32.  Harmônicos de guitarra  
+### Baixos	
+     33.  Baixo acústico
+     34.  Baixo elétrico
+     35.  Baixo elétrico (pick)
+     36.  Baixo Fretless
+     37.  Baixo 1
+     38.  Baixo 2
+     39.  Baixo sintetizado 1
+     40.  Baixo sintetizado 2
+### Cordas e conjuntos
+     41.  Violino
+     42.  Viola
+     43.  Violoncelo
+     44.  Contrabaixo
+     45.  Tremolo
+     46.  Pizzicato
+     47.  Harpa
+     48.  Timbales
+     49.  Cordas 1
+     50.  Cordas 2
+     51.  Cordas sintetizadas 1
+     52.  Cordas sintetizadas 2   
+### Vozes
+     53.  Coro Aahs
+     54.  Oohs Vozes
+     55.  Voz sintetizada
+     56.  Golpe orquestral
+### Metais
+     57.  Trompete
+     58.  Trombone  
+     59.  Tuba
+     60.  Trompete com mudo
+     61.  Chifre
+     62.  Naipe de Metais  
+     63.  Metais sintetizados 1  
+     64.  Metais sintetizados 2
+     65.  Saxofone Soprano   
+     66.  Saxofone Contralto  
+     67.  Saxofone Tenor
+     68.  Saxofone Barítono
+### Madeiras	
+     69.  Oboé 
+     70.  Chifre Inglês
+     71.  Fagote
+     72.  Clarinete	
+     73.  Piccolo
+     74.  Flauta transversal
+     75.  Gravador
+     76.  Flauta pan
+     77.  Garrafa
+     78.  Skakuhachi
+     79.  Apito 
+     80.  Ocarina
+### Sintetizadores
+     81.  Onda quadrada
+     82.  Dente de serra
+     83.  Órgão a vapor
+     84.  Chiffer
+     85.  Charango
+     86.  Voz
+     87.  Quinta
+     88.  Baixo e chumbo	
+     89.  Fantasia / Nova Era
+     90.  Quente
+     91.  Polissintetizador
+     92.  Voz
+     93.  Arco de vidro
+     94.  Metálico
+     95.  Halo
+     96.  Varrer 
+### Efeitos	
+     97.  Chuva 
+     98.  Trilha Sonora
+     99.  Cristal
     100.  Atmosfera 
     101.  Brilho 
     102.  Duendes
     103.  Ecos
     104.  Tema Estrela
-## Étnicos	
+### Étnicos	
     105.  Sitar
     106.  Banjo 
     107.  Shamishen 
@@ -377,7 +377,7 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
     110.  Gaita
     111.  Violín celta
     112.  Shanai
-## Percussivos
+### Percussivos
     113.  Campainhas
     114.  Agogó
     115.  Caixa de Metal
@@ -387,7 +387,7 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
     119.  Caixa sintetizada
     120.  Prato (invertido)	
     121.  Traste de guitarra
-## Sons
+### Sons
     122.  Respiração
     123.  Praia
     124.  Pássaro
