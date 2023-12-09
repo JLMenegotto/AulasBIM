@@ -23,7 +23,7 @@ Consulte outros projetos em:
    8. **Funções Geométricas**          https://github.com/JLMenegotto/AulasBIM/tree/master/Dynamo/Geometricas
    9. **Funções de Análise de Lotes**  https://github.com/JLMenegotto/AulasBIM/tree/master/Dynamo/Lotes
   10. **Funções Obras Paradigmáticas** https://github.com/JLMenegotto/AulasBIM/tree/master/Dynamo/Obras
-  11. **Funções Gerais de Predios**    https://github.com/JLMenegotto/AulasBIM/tree/master/Dynamo/Predios
+  11. **Funções Gerais de Predios**    https://github.com/JLMenegotto/AulasBIM/tree/master/Dynamo/Predio
   12. **Funções Periódicas Temporais** https://github.com/JLMenegotto/AulasBIM/tree/master/Dynamo/Relógio
   13. **Funções para Galpões**         https://github.com/JLMenegotto/AulasBIM/tree/master/Dynamo/Galpão
   14. **Funções para Treliças**        https://github.com/JLMenegotto/AulasBIM/tree/master/Dynamo/Treliças
