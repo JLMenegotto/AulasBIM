@@ -1,6 +1,6 @@
 # Prédio
 
-Nesta pasta as funções definem elementos predias.
+Nesta pasta as funções definem elementos predias distribuidos em matrizes retangulares. É explicado o uso de **replicadores de DesignScript <n>** como forma alternativa à função de transposição **(Transpose)**.
 
 ## Matriz_XY.dyn
 Define uma matriz bidimensional XY com a quantidade de módulos estruturais em direções XY. Na função há duas macros
