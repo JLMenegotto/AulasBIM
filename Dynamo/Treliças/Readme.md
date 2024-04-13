@@ -1,7 +1,7 @@
 # Treliças
 
 ## Treliças_Joist_CBCA_Tipo1-2.dyn
-
+## Treliças tipo Steel Joist. Dalembert, Flávio Correa e Marcelo Brisola Pinheiro. IBS/BCBA, 2007. 
 ![Treliça_Tipo_1-2](https://github.com/JLMenegotto/AulasBIM/assets/9437020/128fb83a-f2a9-49ee-afdd-2f1fee1b008a)
 
 ## Code Block 1
