@@ -86,8 +86,8 @@
        11.    Montant = DSOffice.Data.ExportToExcel (arqE  , "Treliça", 0 , 2, Vmont, false , false );
 
 
-### Treliças tipo Steel Joist. Dalembert, Flávio Correa e Marcelo Brisola Pinheiro. IBS/BCBA, 2007. 
 
+### Treliças tipo Steel Joist. Dalembert, Flávio Correa e Marcelo Brisola Pinheiro. IBS/BCBA, 2007. 
 ![Treliça_CBCA_Tipos1-2](https://github.com/JLMenegotto/AulasBIM/assets/9437020/058aefb0-afff-4141-8efb-ef47f43713dd)
 
 
