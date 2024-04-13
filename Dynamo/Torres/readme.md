@@ -1,7 +1,7 @@
 # Torres
 
 ## Torre.dyn
-Esta função exemplifica o uso de **coordenadas cilíndricas** aplicadas para construir torres a partir de polígonos regulares de n lados (limitados entre 3 e 12).
+Esta função exemplifica o uso de **coordenadas cilíndricas** em Dynamo (função **Point.ByCylindricalCoordinates**) aplicadas para construir torres a partir de polígonos regulares de n lados (limitados entre 3 e 12).
 É utilizada a técnica de aritmética modular para criar variações da forma. 
 A função Remainder (%) e a condicional fazem esse trabalho.  
 
