@@ -1,6 +1,6 @@
 # Treliças
 As seguintes funções foram desenvolvidas para exemplificar o traçado de sistemas de treliças metálicas em projetos BIM utilizando uma aplicação como Dynamo.
-A bibliografia utilizada para verificar os parâmetros formais das treliças foi "Treliças tipo Steel Joist" de Flávio Correa D'alembert e Marcelo Brisola Pinheiro, Publicado pelo IBS/CBCA, 2007.
+A bibliografia utilizada para verificar os parâmetros formais das treliças foi **"Treliças tipo Steel Joist"** de Flávio Correa D'alembert e Marcelo Brisola Pinheiro, Publicado pelo IBS/CBCA, 2007.
 
 ## Treliças_Joist_CBCA_Tipo1-2.dyn
 
