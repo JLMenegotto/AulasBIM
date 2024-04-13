@@ -2,7 +2,7 @@
 
 ## Torre.dyn
 Esta função exemplifica o uso de **coordenadas cilíndricas** em Dynamo (função **Point.ByCylindricalCoordinates**) aplicadas para construir torres a partir de polígonos regulares de n lados (limitados entre 3 e 12).
-É utilizada a técnica de aritmética modular para criar variações da forma. 
+Também é recomendável prestar atenção à utilização da **aritmética modular** como técnica de criação de variações formal. 
 A função Remainder (%) e a condicional fazem esse trabalho.  
 
 **ra = e%2==0 ? r : r*1.5;**    O aluno pode variar esta declaração para incorporar valores modulares diferentes de 2. 
