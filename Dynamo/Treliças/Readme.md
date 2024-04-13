@@ -1,4 +1,5 @@
 # Treliças
+As seguintes funções foram desenvolvidas para exemplificar o traçado de sistemas de treliças metálicas em projetos BIM utilizando uma aplicação como Dynamo. 
 
 ## Treliças_Joist_CBCA_Tipo1-2.dyn
 
