@@ -4,7 +4,9 @@ No Code Block não foi utilizada uma Massa Inplace como predio. Para formar o pr
 Taxa de ocupação do terreno (linhas 48. a 54.). Os limites são utilizados para criar uma Surface (linha 51.) que será escalada (linha 52) e finalmente extrudada (linha 54.).
 Outro ponto de destaque para analisar da função são as linhas 21 e 25. A declaração da linha 21. permite processar um lote de cada vez, mas com uma pequena alteração, incorporada na linha 25., o processamento pode ser realizado
 en todos os lotes, já que a variável LOTE conterá uma lista numérica iniciada em 0 e finalizada com o valor da quantidade de lotes-1.
- 
+
+![Aula_PPE_04b](https://github.com/JLMenegotto/AulasBIM/assets/9437020/18c57c63-c3d4-4051-ad1d-32bf8ce0259e)
+
 ## Code Block 2: 
 
         1.  divisas;
@@ -72,4 +74,4 @@ en todos os lotes, já que a variável LOTE conterá uma lista numérica iniciad
        63.          VOED ];
        64.  DIC = Dictionary.ByKeysValues ( Key , Val );
 
-       ![Aula_PPE_04b](https://github.com/JLMenegotto/AulasBIM/assets/9437020/525bcdeb-e7db-4ea7-bf18-55a6c7b89d77)
+      
