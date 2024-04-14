@@ -1,6 +1,9 @@
 ## Aulas PPE 1° Semestre de 2024
 
 No Code Block não foi utilizada uma Massa Inplace como predio. Para formar o predio é criado o volume a partir da extrução de uma Surface (linhas 51 a 54).
+Veja as linhas 21 e 25.
+A declaração da linha 21 permite processar um lote de cada vez, mas com uma pequena alteração, incorporada na linha 25, o processamento dos lotes pode ser realizado
+en todos os lotes.
 
 ## Code Block 2: 
 
@@ -53,7 +56,7 @@ No Code Block não foi utilizada uma Massa Inplace como predio. Para formar o pr
        47.  //---------------------------------------------
        48.  BASE = EIXOM.PointAtParameter ( 0.5  );
        49.  Po1  = BASE.Add ( Vx );
-       50.  4Po2  = BASE.Add ( Vf );
+       50.  Po2  = BASE.Add ( Vf );
        51.  SULO = Autodesk.Surface.ByPatch ( DIVI );
        52.  SUED = Geometry.Scale  (SULO, BASE, Po1, Po2 );
        53.  ARED = SUED.Area;
