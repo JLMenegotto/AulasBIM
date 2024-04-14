@@ -3,7 +3,7 @@
 No Code Block não foi utilizada uma Massa Inplace como predio. Para formar o predio é criado o volume a partir da extrução de uma Surface (linhas 51 a 54).
 Veja as linhas 21 e 25.
 A declaração da linha 21 permite processar um lote de cada vez, mas com uma pequena alteração, incorporada na linha 25, o processamento dos lotes pode ser realizado
-en todos os lotes.
+en todos os lotes uma vez que a variável LOTE conterá uma lista numérica iniciada em 0 e finalizada com o valor da quantidade de lotes-1.
 
 ## Code Block 2: 
 
