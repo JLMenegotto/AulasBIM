@@ -65,12 +65,9 @@ en todos os lotes, já que a variável LOTE conterá uma lista numérica iniciad
        56.  //Extração de resultados utilizando Dicionário
        57.  //---------------------------------------------
        58.  Key = ["Divisa", "Area" ,"Limites" ,
-       59.  "AreaO" , "Lado" ,"EixoM"   ,
-       60.  "VoEd"
-       61.  ];
-       62.  Val = [ DIVI   , ALOT   , LIMI     ,
-       63.   AREO   , LADO   , EIXOM    ,
-       64.   VOED
-       65.  ];
-       66.  DIC = Dictionary.ByKeysValues ( Key , Val );
-       
+       59.         "AreaO" , "Lado" ,"EixoM"   ,
+       60.         "VoEd" ];
+       61.  Val = [ DIVI   , ALOT   , LIMI     ,
+       62.          AREO   , LADO   , EIXOM    ,
+       63.          VOED ];
+       64.  DIC = Dictionary.ByKeysValues ( Key , Val );
