@@ -71,3 +71,5 @@ en todos os lotes, já que a variável LOTE conterá uma lista numérica iniciad
        62.          AREO   , LADO   , EIXOM    ,
        63.          VOED ];
        64.  DIC = Dictionary.ByKeysValues ( Key , Val );
+
+       ![Aula_PPE_04b](https://github.com/JLMenegotto/AulasBIM/assets/9437020/525bcdeb-e7db-4ea7-bf18-55a6c7b89d77)
