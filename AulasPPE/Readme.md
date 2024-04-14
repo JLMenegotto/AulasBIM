@@ -1,6 +1,8 @@
 ## Aulas PPE 1° Semestre de 2024
 
-## Code Block 1: 
+No Code Block não foi utilizada uma Massa Inplace como predio. Para formar o predio é criado o volume a partir da extrução de uma Surface (linhas 51 a 54).
+
+## Code Block 2: 
 
         1.  divisas;
         2.  n;
@@ -26,7 +28,7 @@
        22.  //---------------------------------------------
        23.  // Para processar todos os lotes
        24.  //---------------------------------------------
-       25.  **LOTE = divisas[0..Qdiv-1];**
+       25.  LOTE = divisas[0..Qdiv-1];
        26.  //---------------------------------------------
        27.  // Processamento
        28.  //---------------------------------------------
