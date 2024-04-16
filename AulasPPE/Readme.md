@@ -80,5 +80,7 @@ en todos os lotes, já que a variável LOTE conterá uma lista numérica iniciad
         1.  COA;
         2.  AAN;
         3.  NUM = 0..COA;
-        4.  NOM = NUM==0?"Térreo":Math.Floor(NUM)+"° Pavto";
-        5.  CRI = Level.ByElevationAndName (NUM * AAN, NOM );
+        4.  NOM = NUM==0?"Térreo":Math.Floor( NUM )+"° Pavto";
+        5.  LEV = Level.ByElevationAndName  ( NUM * AAN, NOM );
+        6.  VIS = FloorPlanView.ByLevel     ( LEV );
+        
