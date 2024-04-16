@@ -7,7 +7,7 @@ en todos os lotes, já que a variável LOTE conterá uma lista numérica iniciad
 
 ![Aula_PPE_04b](https://github.com/JLMenegotto/AulasBIM/assets/9437020/310eeb73-fc90-4a57-a3f2-bbfa3ce7b741)
 
-## Code Block da função Aula_PPE_04b.dyn: 
+### Code Block da função Aula_PPE_04b.dyn: 
 
         1.  divisas;
         2.  n;
@@ -75,7 +75,7 @@ en todos os lotes, já que a variável LOTE conterá uma lista numérica iniciad
        64.  DIC = Dictionary.ByKeysValues ( Key , Val );
 
 
-## Code Block Complementar: Usar para incorporar os Andares: 
+#### Code Block Complementar: Usar para incorporar os Andares: 
 
         1.  COA;
         2.  AAN;
