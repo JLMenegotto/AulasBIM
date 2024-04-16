@@ -74,4 +74,11 @@ en todos os lotes, já que a variável LOTE conterá uma lista numérica iniciad
        63.          VOED ];
        64.  DIC = Dictionary.ByKeysValues ( Key , Val );
 
-      
+
+## Code Block Complementar: Usar para incorporar os Andares: 
+
+        1.  COA;
+        2.  AAN;
+        3.  NUM = 0..COA;
+        4.  NOM = NUM==0?"Térreo":Math.Floor(NUM)+"° Pavto";
+        5.  CRI = Level.ByElevationAndName (NUM * AAN, NOM );
