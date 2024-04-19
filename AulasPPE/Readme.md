@@ -76,6 +76,13 @@ en todos os lotes, já que a variável LOTE conterá uma lista numérica iniciad
        65.        ];
        66. DIC = Dictionary.ByKeysValues ( Key , Val );
 
+O seguinte código inicia a função com a recepção e extração dos dados do diccionário preparado no código anterior (linhas 1 a 6). 
+Além de diminuir a quantidade de ligações entre os code blocks envolvidos, os dados começam a ganhar significados semânticos 
+A função cria os andares nomeando-os linhas 17 a 19. A condicional seguinte **NOM = NUM==0 ? TER : NUM==NUM[-1]? COB : NUM+AND;** faz 
+a discriminação dod andares térreo e cobertura.
+A linha 24 extrai as elevações de todos os andares, **ALA = LEV[a].Elevation;** preparando os dados para criação das lajes.
+A linha 25 extrai a curva que será passada à função polycurva que será replicada para todos os andares. (linhas 25, 26 e 27). 
+
 ### Code Block complementar: Usar para incorporar os Andares: 
 
         1. Dados;
