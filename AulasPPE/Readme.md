@@ -81,7 +81,7 @@ Além de diminuir a quantidade de ligações entre os code blocks envolvidos, os
 A função cria os andares nomeando-os linhas 17 a 19. A condicional seguinte **NOM = NUM==0 ? TER : NUM==NUM[-1]? COB : NUM+AND;** faz 
 a discriminação dod andares térreo e cobertura.
 A linha 24 extrai as elevações de todos os andares, **ALA = LEV[a].Elevation;** preparando os dados para criação das lajes.
-A linha 25 extrai a curva que será passada à função polycurva que será replicada para todos os andares. (linhas 25, 26 e 27). 
+A linha 25 extrai a curva que será passada à função polycurva que será replicada para todos os andares (linhas 25 e 26 ). 
 
 ### Code Block complementar: Usar para incorporar os Andares: 
 
@@ -110,6 +110,5 @@ A linha 25 extrai a curva que será passada à função polycurva que será repl
        23. a   = 0..COA;
        24. ALA = LEV[a].Elevation;
        25. PER = LIM.PerimeterCurves     (  );
-       26. POL = PolyCurve.ByJoinedCurves( PER , 0.0, true, 0);
-       27. PCJ = POL.Translate ( Vz, ALA<1> );
+       26. PCJ = PER.Translate ( Vz, ALA<1> );
         
