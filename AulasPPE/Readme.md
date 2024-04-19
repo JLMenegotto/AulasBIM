@@ -60,20 +60,21 @@ en todos os lotes, já que a variável LOTE conterá uma lista numérica iniciad
        49.  Po1  = BASE.Add ( Vx );
        50.  Po2  = BASE.Add ( Vf );
        51.  SULO = Autodesk.Surface.ByPatch ( DIVI );
-       52.  SUED = Geometry.Scale  (SULO, BASE, Po1, Po2 );
-       53.  ARED = SUED.Area;
-       54.  VOED = Autodesk.Surface.Thicken(SUED, -ALT, false);
+       52.  EDSU = SULO.Scale  (BASE, Po1, Po2 );
+       53.  ARED = EDSU.Area;
+       54.  EDVO = EDSU.Thicken( -ALT , 0);
        55.  //---------------------------------------------
        56.  //Extração de resultados utilizando Dicionário
        57.  //---------------------------------------------
-       58.  Key = ["Divisa", "Area" ,"Limites" ,
-       59.         "AreaO" , "Lado" ,"EixoM"   ,
-       60.         "VoEd" ];
-       61.  Val = [ DIVI   , ALOT   , LIMI     ,
-       62.          AREO   , LADO   , EIXOM    ,
-       63.          VOED ];
-       64.  DIC = Dictionary.ByKeysValues ( Key , Val );
-
+       58.  Key = ["Divisa", "Area"  ,"Limites" ,"CoefApr",
+       59.         "AreaO" , "Lado"  ,"EixoM"   ,"AlAndar",
+       60.         "EdVolu", "EdPeri", "TipoLJ"
+       61.       ];
+       62.  Val = [ DIVI   , ALOT   , LIMI     , COA ,
+       63.          AREO   , LADO   , EIXOM    , AAN ,
+       64.          EDVO   , EDSU   , TIP
+       65.        ];
+       66. DIC = Dictionary.ByKeysValues ( Key , Val );
 
 ### Code Block complementar: Usar para incorporar os Andares: 
 
