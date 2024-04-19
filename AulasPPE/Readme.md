@@ -81,7 +81,10 @@ Além de diminuir a quantidade de ligações entre os code blocks envolvidos, os
 A função cria os andares nomeando-os linhas 17 a 19. A condicional seguinte **NOM = NUM==0 ? TER : NUM==NUM[-1]? COB : NUM+AND;** faz 
 a discriminação dod andares térreo e cobertura.
 A linha 24 extrai as elevações de todos os andares, **ALA = LEV[a].Elevation;** preparando os dados para criação das lajes.
-A linha 25 extrai a curva que será passada à função polycurva que será replicada para todos os andares (linhas 25 e 26 ). 
+A linha 25 extrai a curva que será passada à função **Translate** que copia o perímetro para todos os andares (linhas 25 e 26 ). 
+Finalmente, a linha 27 cria as lajes construtivas concretas.
+
+**Importante: Para executar com a linha 27 a função deve ser rodada em modo Manual.** 
 
 ### Code Block complementar: Usar para incorporar os Andares: 
 
@@ -109,6 +112,7 @@ A linha 25 extrai a curva que será passada à função polycurva que será repl
        22. //------------------------------------------------
        23. a   = 0..COA;
        24. ALA = LEV[a].Elevation;
-       25. PER = LIM.PerimeterCurves     (  );
-       26. PCJ = PER.Translate ( Vz, ALA<1> );
+       25. PER = LIM.PerimeterCurves (            );
+       26. PCJ = PER.Translate       ( Vz, ALA<1> );
+       27. LAJ = Revit.Floor.ByOutlineTypeAndLevel(PCJ, TIP, LEV);
         
