@@ -78,10 +78,31 @@ en todos os lotes, já que a variável LOTE conterá uma lista numérica iniciad
 
 ### Code Block complementar: Usar para incorporar os Andares: 
 
-        1.  COA;
-        2.  AAN;
-        3.  NUM = 0..COA;
-        4.  NOM = NUM==0?"Térreo":Math.Floor( NUM )+"° Pavto";
-        5.  LEV = Level.ByElevationAndName  ( NUM * AAN, NOM );
-        6.  VIS = FloorPlanView.ByLevel     ( LEV );
+        1. Dados;
+        2. COA = Dados["CoefApr"];
+        3. AAN = Dados["AlAndar"];
+        4. VOL = Dados["EdVolu"];
+        5. LIM = Dados["EdPeri"];
+        6. TIP = Dados["TipoLJ"];
+        7. //------------------------------------------------
+        8. // Constantes
+        9. //------------------------------------------------
+       10. COB = "Cobertura";
+       11. TER = "Térreo";
+       12. AND = "° Pavto";
+       13. Vz  = Vector.ZAxis();
+       14. //------------------------------------------------
+       15. // Define os Andares
+       16. //------------------------------------------------
+       17. NUM = Math.Floor( 0..COA );
+       18. NOM = NUM==0 ? TER : NUM==NUM[-1]? COB : NUM+AND;
+       19. LEV = Level.ByElevationAndName ( NUM*AAN , NOM);
+       20. //------------------------------------------------
+       21. // Coloca poligonais abstratas das Lajes
+       22. //------------------------------------------------
+       23. a   = 0..COA;
+       24. ALA = LEV[a].Elevation;
+       25. PER = LIM.PerimeterCurves     (  );
+       26. POL = PolyCurve.ByJoinedCurves( PER , 0.0, true, 0);
+       27. PCJ = POL.Translate ( Vz, ALA<1> );
         
