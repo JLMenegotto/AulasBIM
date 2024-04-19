@@ -7,7 +7,7 @@ en todos os lotes, já que a variável LOTE conterá uma lista numérica iniciad
 
 ![Aula_PPE_05_2024-04-19_05-51-36](https://github.com/JLMenegotto/AulasBIM/assets/9437020/fb49122a-3596-4410-bf8e-f1000241c0c6)
 
-### Code Block da função Aula_PPE_04b.dyn: 
+### Code Block da função Aula_PPE_05.dyn: 
 
         1.  divisas;
         2.  n;
@@ -86,7 +86,7 @@ Finalmente, a linha 27 cria as lajes construtivas concretas.
 
 **Importante: Para executar com a linha 27 a função deve ser rodada em modo Manual.** 
 
-### Code Block complementar: Usar para incorporar os Andares: 
+### Code Block complementar: Usar em modo Manual para incorporar os Andares: 
 
         1. Dados;
         2. COA = Dados["CoefApr"];
