@@ -5,7 +5,7 @@ Taxa de ocupação do terreno (linhas 48. a 54.). Os limites são utilizados par
 Outro ponto de destaque para analisar da função são as linhas 21 e 25. A declaração da linha 21. permite processar um lote de cada vez, mas com uma pequena alteração, incorporada na linha 25., o processamento pode ser realizado
 en todos os lotes, já que a variável LOTE conterá uma lista numérica iniciada em 0 e finalizada com o valor da quantidade de lotes-1.
 
-![Aula_PPE_04b](https://github.com/JLMenegotto/AulasBIM/assets/9437020/310eeb73-fc90-4a57-a3f2-bbfa3ce7b741)
+![Aula_PPE_05_2024-04-19_05-51-36](https://github.com/JLMenegotto/AulasBIM/assets/9437020/fb49122a-3596-4410-bf8e-f1000241c0c6)
 
 ### Code Block da função Aula_PPE_04b.dyn: 
 
