@@ -115,7 +115,7 @@ Finalmente, a linha 27 cria as lajes construtivas concretas.
        26. PCJ = PER.Translate       ( Vz, ALA<1> );
        27. LAJ = Revit.Floor.ByOutlineTypeAndLevel(PCJ, TIP, LEV);
 
-![PPE_Aula06b_2024-04-20_11-24-03](https://github.com/JLMenegotto/AulasBIM/assets/9437020/c23f36a9-4d5c-4b05-b2cd-d93363ccf4c0)
+![PPE_Aula06b_2024-04-20_11-24-03](https://github.com/JLMenegotto/AulasBIM/assets/9437020/9a24509e-5440-447f-ba22-656b429ddeb0)
 
 ### Code Block da função Aula_PPE_06b.dyn: 
         1. vao;
