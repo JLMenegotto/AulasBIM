@@ -116,7 +116,7 @@ Finalmente, a linha 27 cria as lajes construtivas concretas.
        27. LAJ = Revit.Floor.ByOutlineTypeAndLevel(PCJ, TIP, LEV);
 
 ![PPE_Aula06b_2024-04-20_11-24-03](https://github.com/JLMenegotto/AulasBIM/assets/9437020/9a24509e-5440-447f-ba22-656b429ddeb0)
-rgb(9, 105, 218)
+
 A função apresenta a treliça no plano XZ, caso prefira trabalhar no plano XY deve ser alterada a declaração da linha 20. 
 de **PTS = PTI.Translate ( 0 , 0 , altu);** para **PTS = PTI.Translate ( 0 , altu, 0 );**
 
