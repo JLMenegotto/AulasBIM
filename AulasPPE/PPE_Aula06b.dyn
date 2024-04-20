@@ -40,7 +40,7 @@
       "NodeType": "CodeBlockNode",
       "Inputs": [
         {
-          "Id": "d4d0e6d9f38d443cbd09f202070462ed",
+          "Id": "09dbc2f4156f45ecba08ca14f60d6b2a",
           "Name": "vao",
           "Description": "vao",
           "UsingDefaultValue": false,
@@ -49,7 +49,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "cebd37043d3b48459f21980b016fec38",
+          "Id": "643bf3b046d5479590c57211430ef1c5",
           "Name": "qmo",
           "Description": "qmo",
           "UsingDefaultValue": false,
@@ -58,7 +58,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "93ba4bac75484194a8c3cdf2960b20af",
+          "Id": "bc3150ef42054dfb9e85e51a1bee13cb",
           "Name": "ang",
           "Description": "ang",
           "UsingDefaultValue": false,
@@ -67,7 +67,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "e7048e1707d44924bddef12f1bff98ff",
+          "Id": "da2ca33348214cba8ea77110da10cd92",
           "Name": "sep",
           "Description": "sep",
           "UsingDefaultValue": false,
@@ -76,7 +76,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "0dc3ed0335c6470cba670932d408c369",
+          "Id": "a28127eb508643f78441fbdb8493cb3b",
           "Name": "ina",
           "Description": "ina",
           "UsingDefaultValue": false,
@@ -85,7 +85,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "035b01e4a1e147ba9ba0162fc24fb224",
+          "Id": "b969be255aa640a8924ed651ade2b54a",
           "Name": "tre",
           "Description": "tre",
           "UsingDefaultValue": false,
@@ -96,7 +96,7 @@
       ],
       "Outputs": [
         {
-          "Id": "b8eb81b525544b7a93be9b375e14181d",
+          "Id": "eed53265b3e54208978372b23a0c0c48",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -105,7 +105,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "dbbdc281ed954e58808fff5f1c476b93",
+          "Id": "a69619a44af44997aad83719b303bd06",
           "Name": "",
           "Description": "Value of expression at line 2",
           "UsingDefaultValue": false,
@@ -114,7 +114,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "378dc7f3ce1f4a0ca1301e79a7f5a615",
+          "Id": "12deb29ca0ba4d4394a1b57bc19cb978",
           "Name": "",
           "Description": "Value of expression at line 3",
           "UsingDefaultValue": false,
@@ -123,7 +123,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "b71a5bf984a14de28dda27b44320fbe2",
+          "Id": "8c30cce614274ea6b90ef208cf784a19",
           "Name": "",
           "Description": "Value of expression at line 4",
           "UsingDefaultValue": false,
@@ -132,7 +132,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "79a39da5a03c4f9186603834d1825b11",
+          "Id": "75769a999ed34a5985c217053726ec35",
           "Name": "",
           "Description": "Value of expression at line 5",
           "UsingDefaultValue": false,
@@ -141,7 +141,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "a9d641f6b17f4be3ba82d8c5d41b8ecd",
+          "Id": "e6a658afce03491f9f9becd3750756d1",
           "Name": "",
           "Description": "Value of expression at line 6",
           "UsingDefaultValue": false,
@@ -150,7 +150,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "d517db2f1bbc40b58377115d46ce640d",
+          "Id": "c145e69d2bbc4a329aa4bd6be4a61fd9",
           "Name": "",
           "Description": "vx",
           "UsingDefaultValue": false,
@@ -159,25 +159,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "285c6b9c3a8b4c6d8c2cd5740baf3268",
-          "Name": "",
-          "Description": "mx",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "e6649019098b4804885d4df7238c5832",
-          "Name": "",
-          "Description": "x1",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "1f6138ef21894080b1bbc1d821f003ca",
+          "Id": "d667de14f4c64e5c8a48d79de33febb0",
           "Name": "",
           "Description": "x",
           "UsingDefaultValue": false,
@@ -186,7 +168,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "09fd868c56964d5ebcc0fab96c8882c3",
+          "Id": "78dd0c126c684d49a0c501436d842e48",
           "Name": "",
           "Description": "inc",
           "UsingDefaultValue": false,
@@ -195,7 +177,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "f4af32570a2841a0b8518108f75a54ee",
+          "Id": "e04daa6469f54c2782d6cf8ebc9201f4",
           "Name": "",
           "Description": "amax",
           "UsingDefaultValue": false,
@@ -204,7 +186,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "0fc4e40ea5d444168f674d063b64e2d8",
+          "Id": "f26dd3d8af2f480d82449b7214e9b117",
           "Name": "",
           "Description": "alp",
           "UsingDefaultValue": false,
@@ -213,7 +195,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "3a99e9a26beb4589a2297a958356ec6b",
+          "Id": "d2d8a232131c4bc5ae46c1ae1b35c742",
           "Name": "",
           "Description": "altu",
           "UsingDefaultValue": false,
@@ -222,7 +204,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "11f2cc4fb3ab42b58791ab5825a2c3a4",
+          "Id": "4add640fd1ac4a15a8a249637ff4843e",
           "Name": "",
           "Description": "PTI",
           "UsingDefaultValue": false,
@@ -231,7 +213,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "114e86fdcd6c45b0b0e63527617f8b4f",
+          "Id": "768aced3b4074e06a217df306f6a853a",
           "Name": "",
           "Description": "PTS",
           "UsingDefaultValue": false,
@@ -240,7 +222,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "053ba51a2cd34e9b9ee9c5b9463565de",
+          "Id": "9a32c6be06a141899d39544333b4ad15",
           "Name": "",
           "Description": "ic",
           "UsingDefaultValue": false,
@@ -249,7 +231,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "c70284786eab4938ba5a7168735fa058",
+          "Id": "7b05b98dccbd4223b405c22b2f60bd2d",
           "Name": "",
           "Description": "i1",
           "UsingDefaultValue": false,
@@ -258,7 +240,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "28944b35a5504a7bab0cdf50a86ada36",
+          "Id": "8df8e52ca6574a7e926d7aae30f04d6f",
           "Name": "",
           "Description": "i2",
           "UsingDefaultValue": false,
@@ -267,7 +249,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "0a7381d2e37d40eeb23ffdc4e9dccac7",
+          "Id": "ef093d476890469d890b0f6d20bb464e",
           "Name": "",
           "Description": "j",
           "UsingDefaultValue": false,
@@ -276,7 +258,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "adf3efbc2800416397ff3edf9f089100",
+          "Id": "1db6529f0e6847dc94c262dab15c6c29",
           "Name": "",
           "Description": "k",
           "UsingDefaultValue": false,
@@ -285,7 +267,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "148a62a221094032b8cbf0fd846b763a",
+          "Id": "55c2920636e449678eb5a844bb98dd46",
           "Name": "",
           "Description": "BMO",
           "UsingDefaultValue": false,
@@ -294,7 +276,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "2a944433988a44b1b911c7e94955979d",
+          "Id": "63c37400c19e4841b9a9e9e1aeda7926",
           "Name": "",
           "Description": "BBI",
           "UsingDefaultValue": false,
@@ -303,7 +285,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "3b7b1a78a0fa4956af7f04a5e05cb43e",
+          "Id": "715f785f8035429b9281f0cc50c81141",
           "Name": "",
           "Description": "BBS",
           "UsingDefaultValue": false,
@@ -312,7 +294,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "6297d85a98034e479ab3dbef9061c803",
+          "Id": "5210b891e91347e8b015bc70011ddb16",
           "Name": "",
           "Description": "BDE",
           "UsingDefaultValue": false,
@@ -321,7 +303,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "0794a33837b6457f9ecee7cd957e3a06",
+          "Id": "3dd45f1fc53a486e946c2757bce86cd7",
           "Name": "",
           "Description": "BDD",
           "UsingDefaultValue": false,
@@ -332,7 +314,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly",
-      "Code": "vao;\nqmo;\nang;\nsep;\nina;\ntre;\n//-----------------------------------------------------\nvx   = vao/2;\nmx   = vao/qmo;\n//-----------------------------------------------------\nx1    = -vx..vx..mx;\nx    = -vx..vx..#qmo+1;\ninc  = Math.Tan( ang );\namax = sep + (vx * inc);\nalp  = ina== 0 ?  x * inc : x * -inc;\naltu = x  <  0 ? amax+alp : amax-alp;\n//-----------------------------------------------------\n// Pontos do Banzo inferior e superior\n//-----------------------------------------------------\nPTI  = Point.ByCoordinates( x , 0 , 0   );\nPTS  = PTI.Translate      ( 0 , 0 , altu);\n//-----------------------------------------------------\n// Indices completo ic e as duas metades i1 e 12\n//-----------------------------------------------------\nic   = 0     .. qmo   -1;\ni1   = 0     .. qmo/2 -1;\ni2   = qmo/2 .. qmo   -1;\n//-----------------------------------------------------\n// Os indices j e k são invertidos caso o sistema seja\n// Pratt ou Howe\n//-----------------------------------------------------\nj    = tre==0?  i1 : i2;\nk    = tre==0?  i2 : i1;\n//-----------------------------------------------------\n// Barras de Montantes, Banzo Inferior, Banzo Superior\n// Diagonais esquerdas e Diagonais direitas\n//-----------------------------------------------------\nBMO  = Line.ByStartPointEndPoint ( PTI     , PTS       );\nBBI  = Line.ByStartPointEndPoint ( PTI[ic] , PTI[ic+1] );\nBBS  = Line.ByStartPointEndPoint ( PTS[ic] , PTS[ic+1] );\nBDE  = Line.ByStartPointEndPoint ( PTS[j]  , PTI[j+1]  );\nBDD  = Line.ByStartPointEndPoint ( PTI[k]  , PTS[k+1]  );"
+      "Code": "vao;\nqmo;\nang;\nsep;\nina;\ntre;\n//-----------------------------------------------------\nvx   = vao/2;\n//-----------------------------------------------------\nx    = -vx..vx..#qmo+1;\ninc  = Math.Tan( ang );\namax = sep + (vx * inc);\nalp  = ina== 0 ?  x * inc : x * -inc;\naltu = x  <  0 ? amax+alp : amax-alp;\n//-----------------------------------------------------\n// Pontos do Banzo inferior e superior\n//-----------------------------------------------------\nPTI  = Point.ByCoordinates( x , 0 , 0   );\nPTS  = PTI.Translate      ( 0 , 0 , altu);\n//-----------------------------------------------------\n// Indices completo ic e as duas metades i1 e 12\n//-----------------------------------------------------\nic   = 0     .. qmo   -1;\ni1   = 0     .. qmo/2 -1;\ni2   = qmo/2 .. qmo   -1;\n//-----------------------------------------------------\n// Os indices j e k são invertidos caso o sistema seja\n// Pratt ou Howe\n//-----------------------------------------------------\nj    = tre==0?  i1 : i2;\nk    = tre==0?  i2 : i1;\n//-----------------------------------------------------\n// Barras de Montantes, Banzo Inferior, Banzo Superior\n// Diagonais esquerdas e Diagonais direitas\n//-----------------------------------------------------\nBMO  = Line.ByStartPointEndPoint ( PTI     , PTS       );\nBBI  = Line.ByStartPointEndPoint ( PTI[ic] , PTI[ic+1] );\nBBS  = Line.ByStartPointEndPoint ( PTS[ic] , PTS[ic+1] );\nBDE  = Line.ByStartPointEndPoint ( PTS[j]  , PTI[j+1]  );\nBDD  = Line.ByStartPointEndPoint ( PTI[k]  , PTS[k+1]  );"
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -380,7 +362,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces numeric values",
-      "InputValue": 12.0
+      "InputValue": 8.0
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -478,38 +460,38 @@
   "Connectors": [
     {
       "Start": "d97a3ae33e3b47d0899519d5708c27e2",
-      "End": "d4d0e6d9f38d443cbd09f202070462ed",
-      "Id": "3aeb9a80fb3444a1bd775f6784a73690",
+      "End": "09dbc2f4156f45ecba08ca14f60d6b2a",
+      "Id": "09fe0d88f77d4edfa547b8044bf36623",
       "IsHidden": "False"
     },
     {
       "Start": "a7cec275e579413d896eaa10d38ed7f2",
-      "End": "cebd37043d3b48459f21980b016fec38",
-      "Id": "737b8d2680e44b839884553d32e409d0",
+      "End": "643bf3b046d5479590c57211430ef1c5",
+      "Id": "ce128c912d0742bca509535bde24465f",
       "IsHidden": "False"
     },
     {
       "Start": "00cea9af88ad43e18dd6df0d2aedd40f",
-      "End": "93ba4bac75484194a8c3cdf2960b20af",
-      "Id": "3cf0e817daf14c0eb5b86e47703b73bd",
+      "End": "bc3150ef42054dfb9e85e51a1bee13cb",
+      "Id": "d57b79133db4422e9771823f8c87aca2",
       "IsHidden": "False"
     },
     {
       "Start": "544b8fdebbc24ca3a2251a56f5c8a5ab",
-      "End": "e7048e1707d44924bddef12f1bff98ff",
-      "Id": "203bd625f060472f81be9d6f5560bbda",
+      "End": "da2ca33348214cba8ea77110da10cd92",
+      "Id": "7c0b5bad6799425e99313acb28acbf0f",
       "IsHidden": "False"
     },
     {
       "Start": "b5e6b6697a36444d9e1072ffa3adc3f4",
-      "End": "0dc3ed0335c6470cba670932d408c369",
-      "Id": "f44a565ca51541a3b77b2473bc8df2d0",
+      "End": "a28127eb508643f78441fbdb8493cb3b",
+      "Id": "440c0f8909514d0e91612675111cbcef",
       "IsHidden": "False"
     },
     {
       "Start": "b6223483aee94518a9f359dd69347ff4",
-      "End": "035b01e4a1e147ba9ba0162fc24fb224",
-      "Id": "585be467348941f78a0f29c428209b36",
+      "End": "b969be255aa640a8924ed651ade2b54a",
+      "Id": "a0d0fa1d6c224a148ceea37915e8b192",
       "IsHidden": "False"
     }
   ],
@@ -579,7 +561,7 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -259.6706371826707,
+        "X": -259.67063718267065,
         "Y": 1134.3111545555196
       },
       {
@@ -589,7 +571,7 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -259.6706371826707,
+        "X": -259.67063718267065,
         "Y": 1253.7171690082123
       },
       {
@@ -599,7 +581,7 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -259.6706371826707,
+        "X": -259.67063718267065,
         "Y": 1373.123183460905
       },
       {
@@ -609,7 +591,7 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -259.6706371826707,
+        "X": -259.67063718267065,
         "Y": 1492.5291979135977
       },
       {
@@ -629,7 +611,7 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -257.72115915192774,
+        "X": -257.72115915192768,
         "Y": 1734.0251883875474
       }
     ],
@@ -651,10 +633,10 @@
           "0527cdf8095140faa45bd947197776af"
         ],
         "HasNestedGroups": false,
-        "Left": -269.6706371826707,
+        "Left": -269.67063718267065,
         "Top": 1052.3111545555196,
         "Width": 1128.5118701276951,
-        "Height": 1047.7440225653879,
+        "Height": 1015.7440225653879,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 1134.3111545555196,
@@ -663,8 +645,8 @@
         "Background": "#FF48B9FF"
       }
     ],
-    "X": -92.914073054593359,
-    "Y": -1412.9839270899179,
-    "Zoom": 1.0887180108292107
+    "X": 386.85904564857941,
+    "Y": -321.38415588297732,
+    "Zoom": 0.42243295220113691
   }
 }
