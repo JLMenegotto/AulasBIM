@@ -87,7 +87,6 @@ Finalmente, a linha 27 cria as lajes construtivas concretas.
 **Importante: Para executar com a linha 27 a função deve ser rodada em modo Manual.** 
 
 ### Code Block complementar: Usar em modo Manual para incorporar os Andares: 
-
         1. Dados;
         2. COA = Dados["CoefApr"];
         3. AAN = Dados["AlAndar"];
@@ -118,3 +117,45 @@ Finalmente, a linha 27 cria as lajes construtivas concretas.
 
 ![PPE_Aula06b_2024-04-20_11-24-03](https://github.com/JLMenegotto/AulasBIM/assets/9437020/c23f36a9-4d5c-4b05-b2cd-d93363ccf4c0)
 
+### Code Block da função Aula_PPE_06b.dyn: 
+        1. vao;
+        2. qmo;
+        3. ang;
+        4. sep;
+        5. ina;
+        6. tre;
+        7. //-----------------------------------------------------
+        8. vx   = vao/2;
+        9. mx   = vao/qmo;
+        10. //-----------------------------------------------------
+        11. x    = -vx..vx..#qmo+1;
+        12. inc  = Math.Tan( ang );
+        13. amax = sep + (vx * inc);
+        14. alp  = ina== 0 ?  x * inc : x * -inc;
+        15. altu = x  <  0 ? amax+alp : amax-alp;
+        16. //-----------------------------------------------------
+        17. // Pontos do Banzo inferior e superior
+        18. //-----------------------------------------------------
+        19. PTI  = Point.ByCoordinates( x , 0 , 0   );
+        20. PTS  = PTI.Translate      ( 0 , 0 , altu);
+        21. //-----------------------------------------------------
+        22. // Indices completo ic e as duas metades i1 e 12
+        23. //-----------------------------------------------------
+        24. ic   = 0     .. qmo   -1;
+        25. i1   = 0     .. qmo/2 -1;
+        26. i2   = qmo/2 .. qmo   -1;
+        27. //-----------------------------------------------------
+        28. // Os indices j e k são invertidos caso o sistema seja
+        29. // Pratt ou Howe
+        30. //-----------------------------------------------------
+        31. j    = tre==0?  i1 : i2;
+        32. k    = tre==0?  i2 : i1;
+        33. //-----------------------------------------------------
+        34. // Barras de Montantes, Banzo Inferior, Banzo Superior
+        35. // Diagonais esquerdas e Diagonais direitas
+        36. //-----------------------------------------------------
+        37. BMO  = Line.ByStartPointEndPoint ( PTI     , PTS       );
+        38. BBI  = Line.ByStartPointEndPoint ( PTI[ic] , PTI[ic+1] );
+        39. BBS  = Line.ByStartPointEndPoint ( PTS[ic] , PTS[ic+1] );
+        40. BDE  = Line.ByStartPointEndPoint ( PTS[j]  , PTI[j+1]  );
+        41. BDD  = Line.ByStartPointEndPoint ( PTI[k]  , PTS[k+1]  );
