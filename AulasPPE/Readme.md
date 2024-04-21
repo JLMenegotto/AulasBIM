@@ -121,50 +121,59 @@ Finalmente, a linha 27 cria as lajes construtivas concretas.
 ## Treliças
 ![PPE_Aula06b_2024-04-21_10-42-48](https://github.com/JLMenegotto/AulasBIM/assets/9437020/73120887-f960-4404-b421-f87e2d0f9c96)
 
-A função apresenta a marcação da treliça no plano XZ, caso prefira trabalhar sobre o plano XY deve ser alterada a declaração da linha 19. 
-de **PTS = PTI.Translate ( 0 , 0 , altu);** para **PTS = PTI.Translate ( 0 , altu, 0 );**
+A função apresenta a marcação da treliça no plano XZ, caso prefira trabalhar sobre o plano XY devem ser alteradas as declarações das linhas
+27. e 28. de **PTI = Point.ByCoordinates( x , 0 , albi );** para **PTI = Point.ByCoordinates( x , albi , 0 );** 
 
 ### Code Block da função Aula_PPE_06b.dyn: 
-         1. vao;
-         2. qmo;
-         3. ang;
-         4. sep;
-         5. ina;
-         6. tre;
-         7. //-----------------------------------------------------
-         8. vx   = vao/2;
-         9.  //-----------------------------------------------------
-        10. x    = -vx..vx..#qmo+1;
-        11. inc  = Math.Tan( ang );
-        12. amax = sep + (vx * inc);
-        13. alp  = ina== 0 ?  x * inc : x * -inc;
-        14. altu = x  <  0 ? amax+alp : amax-alp;
-        15. //-----------------------------------------------------
-        16. // Pontos do Banzo inferior e superior
-        17. //-----------------------------------------------------
-        18. PTI  = Point.ByCoordinates( x , 0 , 0   );
-        19. PTS  = PTI.Translate      ( 0 , 0 , altu);
-        20. //-----------------------------------------------------
-        21. // Indices completo ic e as duas metades i1 e 12
-        22. //-----------------------------------------------------
-        23. ic   = 0     .. qmo   -1;
-        24. i1   = 0     .. qmo/2 -1;
-        25. i2   = qmo/2 .. qmo   -1;
-        26. //-----------------------------------------------------
-        27. // Os indices j e k são invertidos caso o sistema seja
-        28. // Pratt ou Howe
-        29. //-----------------------------------------------------
-        30. j    = tre==0?  i1 : i2;
-        31. k    = tre==0?  i2 : i1;
-        32. //-----------------------------------------------------
-        33. // Barras de Montantes, Banzo Inferior, Banzo Superior
-        34. // Diagonais esquerdas e Diagonais direitas
-        35. //-----------------------------------------------------
-        36. BMO  = Line.ByStartPointEndPoint ( PTI     , PTS       );
-        37. BBI  = Line.ByStartPointEndPoint ( PTI[ic] , PTI[ic+1] );
-        38. BBS  = Line.ByStartPointEndPoint ( PTS[ic] , PTS[ic+1] );
-        39. BDE  = Line.ByStartPointEndPoint ( PTS[j]  , PTI[j+1]  );
-        40. BDD  = Line.ByStartPointEndPoint ( PTI[k]  , PTS[k+1]  );
+         1.  vao;
+         2.  qmo;
+         3.  ang;
+         4.  alt;
+         5.  inv;
+         6.  par;
+         7.  tre;
+         8.  //-----------------------------------------------------
+         9.  vx   = vao/2;
+        10.  qme  = qmo/2;
+        11.  inc  = Math.Tan( ang );
+        12.  //-----------------------------------------------------
+        13.  // Formação das listas de índices
+        14.  //-----------------------------------------------------
+        15.  x    = vx..-vx..#qmo+1;
+        16.  i    = List.Flatten([ qme..0   , 1..qme] ,1);
+        17.  j    = List.Flatten([ 0..qme-1 , qme..0] ,1);
+        18.  indi = inv== 0 ? i : j;
+        19.  vzi  = x   * inc;
+        20.  vzs  = vzi + alt;
+        21.  //-----------------------------------------------------
+        22.  albi = par== 0 ? 0         : vzi[indi];
+        23.  albs = par== 0 ? vzs[indi] : vzs[indi];
+        24.  //-----------------------------------------------------
+        25.  // Pontos do Banzo inferior e superior
+        26.  //-----------------------------------------------------
+        27.  PTI  = Point.ByCoordinates( x , 0 , albi );
+        28.  PTS  = Point.ByCoordinates( x , 0 , albs );
+        29.  //-----------------------------------------------------
+        30.  // Indices completo ic e as duas metades i1 e 12
+        31.  //-----------------------------------------------------
+        32.  ic   = 0  ..qmo-1;
+        33.  i1   = 0  ..qme-1;
+        34.  i2   = qme..qmo-1;
+        35.  //-----------------------------------------------------
+        36.  // Os indices j e k são invertidos caso o sistema seja
+        37.  // Pratt ou Howe
+        38.  //-----------------------------------------------------
+        39.  k    = tre==0?  i1 : i2;
+        40.  l    = tre==0?  i2 : i1;
+        41.  //-----------------------------------------------------
+        42.  // Barras de Montantes, Banzo Inferior, Banzo Superior
+        43.  // Diagonais esquerdas e Diagonais direitas
+        44.  //-----------------------------------------------------
+        45.  BMO  = Line.ByStartPointEndPoint ( PTI     , PTS       );
+        46.  BBI  = Line.ByStartPointEndPoint ( PTI[ic] , PTI[ic+1] );
+        47.  BBS  = Line.ByStartPointEndPoint ( PTS[ic] , PTS[ic+1] );
+        48.  BDE  = Line.ByStartPointEndPoint ( PTS[k ] , PTI[k +1] );
+        49.  BDD  = Line.ByStartPointEndPoint ( PTI[l ] , PTS[l +1] ); 
 
 ## Matrizes regulares para Vigamentos
 
