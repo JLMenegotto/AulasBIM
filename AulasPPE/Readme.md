@@ -171,37 +171,37 @@ de **PTS = PTI.Translate ( 0 , 0 , altu);** para **PTS = PTI.Translate ( 0 , alt
 
 ![PPE_Aula06a_2024-04-21_09-20-35](https://github.com/JLMenegotto/AulasBIM/assets/9437020/805b52b6-9214-4d02-be0d-91696f8617bb)
 
-        1.  qx;
-        2.  qy;
-        3.  qz = 0;
-        4.  dx;
-        5.  dy;
-        6.  ang;
-        7.  inc = Math.Tan ( ang );
-        8.  vic = Vector.ByCoordinates( 0 , cy , 0 );
-        9.  cx  = ( ( 0..qx ) * dx );
-        10.  cy  = ( ( 0..qy ) * dy );
-        11.  //--------------------------------------------------
-        12.  // Indices
-        13.  //--------------------------------------------------
-        14.  h   = 0..qx-1;
-        15.  v   = 0..qy-1;
-        16.  hh  = h+1;
-        17.  vv  = v+1;
-        18.  //--------------------------------------------------
-        19.  // Pontos da matriz
-        20.  //--------------------------------------------------
-        21.  LPI = Point.ByCoordinates ( cx, cx*inc , qz);
-        22.  LPH = Point.Add           ( LPI<1> ,   vic );
-        23.  LPV = List.Transpose      ( LPH            );
-        24.  //--------------------------------------------------
-        25.  // Linhas horizontais e verticais
-        26.  //--------------------------------------------------
-        27.  VIH = Line.ByStartPointEndPoint ( LPH[h], LPH[hh] );
-        28.  VIV = Line.ByStartPointEndPoint ( LPV[v], LPV[vv] );
-        29.  //--------------------------------------------------
-        30.  //Extração de resultados utilizando Dicionário
-        31.  //--------------------------------------------------
-        32.  Key = ["PontosH", "PontosV", "VigasH", "VigasV"];
-        33.  Val = [   LPH   ,    LPV   ,   VIH   ,    VIV  ];
-        34.  DIC = Dictionary.ByKeysValues ( Key , Val );
+         1.   qx;
+         2.   qy;
+         3.   qz = 0;
+         4.   dx;
+         5.   dy;
+         6.   ang;
+         7.   inc = Math.Tan ( ang );
+         8.   vic = Vector.ByCoordinates( 0 , cy , 0 );
+         9.   cx  = ( 0..qx ) * dx;
+        10.   cy  = ( 0..qy ) * dy;
+        11.   //--------------------------------------------------
+        12.   // Indices
+        13.   //--------------------------------------------------
+        14.   h   = 0..qx-1;
+        15.   v   = 0..qy-1;
+        16.   hh  = h+1;
+        17.   vv  = v+1;
+        18.   //--------------------------------------------------
+        19.   // Pontos da matriz
+        20.   //--------------------------------------------------
+        21.   LPI = Point.ByCoordinates ( cx, cx*inc , qz);
+        22.   LPH = Point.Add           ( LPI<1> ,   vic );
+        23.   LPV = List.Transpose      ( LPH            );
+        24.   //--------------------------------------------------
+        25.   // Linhas horizontais e verticais
+        26.   //--------------------------------------------------
+        27.   VIH = Line.ByStartPointEndPoint ( LPH[h], LPH[hh] );
+        28.   VIV = Line.ByStartPointEndPoint ( LPV[v], LPV[vv] );
+        29.   //--------------------------------------------------
+        30.   //Extração de resultados utilizando Dicionário
+        31.   //--------------------------------------------------
+        32.   Key = ["PontosH", "PontosV", "VigasH", "VigasV"];
+        33.   Val = [   LPH   ,    LPV   ,   VIH   ,    VIV  ];
+        34.   DIC = Dictionary.ByKeysValues ( Key , Val );
