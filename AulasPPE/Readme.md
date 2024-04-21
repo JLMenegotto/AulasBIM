@@ -169,5 +169,6 @@ de **PTS = PTI.Translate ( 0 , 0 , altu);** para **PTS = PTI.Translate ( 0 , alt
 
 ## Matrizes regulares para Vigamentos
 
-        ![PPE_Aula06a_2024-04-21_09-20-35](https://github.com/JLMenegotto/AulasBIM/assets/9437020/805b52b6-9214-4d02-be0d-91696f8617bb)
+![PPE_Aula06a_2024-04-21_09-20-35](https://github.com/JLMenegotto/AulasBIM/assets/9437020/805b52b6-9214-4d02-be0d-91696f8617bb)
+
 
