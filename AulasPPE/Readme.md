@@ -175,7 +175,7 @@ A função apresenta a marcação da treliça no plano XZ, caso prefira trabalha
         48.  BDE  = Line.ByStartPointEndPoint ( PTS[k ] , PTI[k +1] );
         49.  BDD  = Line.ByStartPointEndPoint ( PTI[l ] , PTS[l +1] ); 
 
-## Matrizes regulares para Vigamentos
+## Matrizes regulares para Vigamentos. Função PPE_Aula06a.dyn
 
 ![PPE_Aula06a_2024-04-21_09-20-35](https://github.com/JLMenegotto/AulasBIM/assets/9437020/805b52b6-9214-4d02-be0d-91696f8617bb)
 
