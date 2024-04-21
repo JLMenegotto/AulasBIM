@@ -166,3 +166,8 @@ de **PTS = PTI.Translate ( 0 , 0 , altu);** para **PTS = PTI.Translate ( 0 , alt
         38. BBS  = Line.ByStartPointEndPoint ( PTS[ic] , PTS[ic+1] );
         39. BDE  = Line.ByStartPointEndPoint ( PTS[j]  , PTI[j+1]  );
         40. BDD  = Line.ByStartPointEndPoint ( PTI[k]  , PTS[k+1]  );
+
+## Matrizes regulares para Vigamentos
+
+        ![PPE_Aula06a_2024-04-21_09-20-35](https://github.com/JLMenegotto/AulasBIM/assets/9437020/805b52b6-9214-4d02-be0d-91696f8617bb)
+
