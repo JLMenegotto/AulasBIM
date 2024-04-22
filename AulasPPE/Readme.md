@@ -221,7 +221,6 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
         34.   DIC = Dictionary.ByKeysValues ( Key , Val );
 
 ## Complemento para colocar contraventamentos em X. Função Função PPE_Aula06d.dyn
-![Contraventamento](https://github.com/JLMenegotto/AulasBIM/assets/9437020/a727c311-9961-40ce-986a-d7ca5ea6e8a2)
 
          1.  Dic;
          2.  qx  = Dic["Col"]+1;
