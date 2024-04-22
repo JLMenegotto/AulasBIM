@@ -215,3 +215,9 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
         32.   Key = ["PontosH", "PontosV", "VigasH", "VigasV"];
         33.   Val = [   LPH   ,    LPV   ,   VIH   ,    VIV  ];
         34.   DIC = Dictionary.ByKeysValues ( Key , Val );
+
+## Matrizes regulares para Treliças. Função PPE_Aula06c.dyn
+
+![PPE_Aula06c_2024-04-22_10-53-43](https://github.com/JLMenegotto/AulasBIM/assets/9437020/4a96e051-030b-4313-91bc-d7214dde236f)
+
+
