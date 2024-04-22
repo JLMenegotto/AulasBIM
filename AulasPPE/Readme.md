@@ -250,3 +250,24 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
         21.   VSH = Line.ByStartPointEndPoint ( LPS[i], LPS[i+1] );
         22.   VIH = Line.ByStartPointEndPoint ( LPI[i], LPI[i+1] );
         23.   DIA = Line.ByStartPointEndPoint ( LPI[i], LPS[i+1] );
+
+
+##Coloca contraventamentos em X
+         1.  Dic;
+         2.  qx  = Dic["Col"]+1;
+         3.  qy  = Dic["Fil"];
+         4.  PTV = Dic["PntV"];
+         5.  //---------------------------------------------------
+         6.  PtC = List.Flatten( PTV , 1);
+         7.  //---------------------------------------------------
+         8.  // Indices das Diagonais
+         9.  //---------------------------------------------------
+        10.  ic  =  0..qx-2;
+        11.  ir  =  0..qy-1;
+        12.  i   = List.Flatten(ic<1> + (qx*ir) , 1);
+        13.  j   = i+qx+1;
+        14.  //---------------------------------------------------
+        15.  // Coloca as linhas
+        16.  //---------------------------------------------------
+        17.  Di1 = Line.ByStartPointEndPoint(PtC[i  ] , PtC[j  ]);
+        18.  Di2 = Line.ByStartPointEndPoint(PtC[i+1] , PtC[j-1]);
