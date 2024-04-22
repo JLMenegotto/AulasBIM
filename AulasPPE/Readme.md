@@ -1,7 +1,7 @@
 ## Aulas PPE
 
 
-## Lotes
+## Lotes: Função Aula_PPE_05.dyn
 No código da função **Aula_PPE_04b.dyn** não foi utilizada a Massa Inplace como prédio. Nesta função, para formar o predio é criado o volume a partir da linha do limite do lote escalada com o fator correspondente à
 Taxa de ocupação do terreno (linhas 48. a 54.). Os limites são utilizados para criar uma Surface (linha 51.) que será escalada (linha 52) e finalmente extrudada (linha 54.).
 Outro ponto de destaque para analisar da função são as linhas 21 e 25. A declaração da linha 21. permite processar um lote de cada vez, mas com uma pequena alteração, incorporada na linha 25., o processamento pode ser realizado
@@ -9,7 +9,7 @@ en todos os lotes, já que a variável LOTE conterá uma lista numérica iniciad
 
 ![Aula_PPE_05_2024-04-19_05-51-36](https://github.com/JLMenegotto/AulasBIM/assets/9437020/fb49122a-3596-4410-bf8e-f1000241c0c6)
 
-### Lotes: Função Aula_PPE_05.dyn: 
+### Lotes: code block da função Aula_PPE_05.dyn 
 
         1.  divisas;
         2.  n;
@@ -181,6 +181,7 @@ A função apresenta a marcação da treliça no plano XZ, caso prefira trabalha
 
 Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tree/master/Dynamo/Treli%C3%A7as        
 
+
 ## Matrizes regulares para Vigamentos. Função PPE_Aula06d.dyn
 ![PPE_Aula06d_2024-04-22_02-42-35](https://github.com/JLMenegotto/AulasBIM/assets/9437020/660a59a9-cdd0-4d47-8773-98084810e79d)
 ![Matriz_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/7f3f7ca8-0741-4a60-9593-3c3a1a27c548)
@@ -220,7 +221,7 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
         33.   Val = [   LPH   ,    LPV   ,   VIH   ,    VIV  ];
         34.   DIC = Dictionary.ByKeysValues ( Key , Val );
 
-## Complemento para colocar contraventamentos em X. Função Função PPE_Aula06d.dyn
+### Complemento para colocar contraventamentos em X. Função Função PPE_Aula06d.dyn
 
          1.  Dic;
          2.  qx  = Dic["Col"]+1;
