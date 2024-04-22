@@ -184,7 +184,6 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
 ## Matrizes regulares para Vigamentos. Função PPE_Aula06a.dyn
 
 ![PPE_Aula06d_2024-04-22_02-42-35](https://github.com/JLMenegotto/AulasBIM/assets/9437020/660a59a9-cdd0-4d47-8773-98084810e79d)
-
 ![Matriz_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/0f7a35f4-d06b-4d52-8ebf-7db50c771f95)
 
          1.   qx;
@@ -223,7 +222,6 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
         34.   DIC = Dictionary.ByKeysValues ( Key , Val );
 
 ## Complemento para colocar contraventamentos em X. Função Função PPE_Aula06d.dyn
-
 ![Contraventamento](https://github.com/JLMenegotto/AulasBIM/assets/9437020/a727c311-9961-40ce-986a-d7ca5ea6e8a2)
 
          1.  Dic;
@@ -245,11 +243,8 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
         17.  Di1 = Line.ByStartPointEndPoint(PtC[i  ] , PtC[j  ]);
         18.  Di2 = Line.ByStartPointEndPoint(PtC[i+1] , PtC[j-1]);
 
-
 ## Matrizes regulares para Treliças. Função PPE_Aula06c.dyn
-
 ![PPE_Aula06c_2024-04-22_10-53-43](https://github.com/JLMenegotto/AulasBIM/assets/9437020/4a96e051-030b-4313-91bc-d7214dde236f)
-
 ![Shed_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/c57cd049-be32-4185-86e8-88e069c62381)
 
          1.   qx;
