@@ -219,6 +219,7 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
 ## Matrizes regulares para Treliças. Função PPE_Aula06c.dyn
 
 ![PPE_Aula06c_2024-04-22_10-53-43](https://github.com/JLMenegotto/AulasBIM/assets/9437020/4a96e051-030b-4313-91bc-d7214dde236f)
+![Shed_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/fefaf30a-58df-4036-a507-a86b4e1a3f4f)
 
          1.   qx;
          2.   dx;
