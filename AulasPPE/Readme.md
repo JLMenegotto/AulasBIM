@@ -183,7 +183,7 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
 
 ## Matrizes regulares para Vigamentos. Função PPE_Aula06a.dyn
 
-![PPE_Aula06a_2024-04-21_09-20-35](https://github.com/JLMenegotto/AulasBIM/assets/9437020/805b52b6-9214-4d02-be0d-91696f8617bb)
+![PPE_Aula06d_2024-04-22_02-42-35](https://github.com/JLMenegotto/AulasBIM/assets/9437020/c0731c20-0e54-43f2-858c-ad08531ff0e6)
 
 ![Matriz_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/0f7a35f4-d06b-4d52-8ebf-7db50c771f95)
 
@@ -222,7 +222,9 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
         33.   Val = [   LPH   ,    LPV   ,   VIH   ,    VIV  ];
         34.   DIC = Dictionary.ByKeysValues ( Key , Val );
 
-##Complemento para colocar contraventamentos em X. Função Função PPE_Aula06d.dyn
+## Complemento para colocar contraventamentos em X. Função Função PPE_Aula06d.dyn
+
+![Contraventamento](https://github.com/JLMenegotto/AulasBIM/assets/9437020/a727c311-9961-40ce-986a-d7ca5ea6e8a2)
 
          1.  Dic;
          2.  qx  = Dic["Col"]+1;
