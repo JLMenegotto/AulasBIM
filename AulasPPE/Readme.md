@@ -251,8 +251,7 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
         22.   VIH = Line.ByStartPointEndPoint ( LPI[i], LPI[i+1] );
         23.   DIA = Line.ByStartPointEndPoint ( LPI[i], LPS[i+1] );
 
-
-##Coloca contraventamentos em X
+##Complemento para colocar contraventamentos em X. Função Função PPE_Aula06d.dyn
          1.  Dic;
          2.  qx  = Dic["Col"]+1;
          3.  qy  = Dic["Fil"];
