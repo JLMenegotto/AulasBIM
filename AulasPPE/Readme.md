@@ -9,7 +9,7 @@ en todos os lotes, já que a variável LOTE conterá uma lista numérica iniciad
 
 ![Aula_PPE_05_2024-04-19_05-51-36](https://github.com/JLMenegotto/AulasBIM/assets/9437020/fb49122a-3596-4410-bf8e-f1000241c0c6)
 
-### Code Block da função Aula_PPE_05.dyn: 
+### Lotes: Função Aula_PPE_05.dyn: 
 
         1.  divisas;
         2.  n;
@@ -88,7 +88,7 @@ Finalmente, a linha 27 cria as lajes construtivas concretas.
 
 **Importante: Para executar com a linha 27 a função deve ser rodada em modo Manual.** 
 
-### Code Block complementar: Usar em modo Manual para incorporar os Andares: 
+### Lotes: função complementar para incorporar andares: Usar em modo Manual 
         1. Dados;
         2. COA = Dados["CoefApr"];
         3. AAN = Dados["AlAndar"];
@@ -118,7 +118,7 @@ Finalmente, a linha 27 cria as lajes construtivas concretas.
        27. LAJ = Revit.Floor.ByOutlineTypeAndLevel(PCJ, TIP, LEV);
 
 
-## Treliças
+## Treliças. Função Aula_PPE_06b.dyn
 ![PPE_Aula06b_2024-04-21_10-42-48](https://github.com/JLMenegotto/AulasBIM/assets/9437020/73120887-f960-4404-b421-f87e2d0f9c96)
 
 ![Treliça_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/42c81c28-1034-4e6f-93a7-7ea39010751a)
@@ -128,7 +128,7 @@ Finalmente, a linha 27 cria as lajes construtivas concretas.
 A função apresenta a marcação da treliça no plano XZ, caso prefira trabalhar sobre o plano XY devem ser alteradas as declarações das linhas
 27. e 28. de **PTI = Point.ByCoordinates( x , 0 , albi );** para **PTI = Point.ByCoordinates( x , albi , 0 );** 
 
-### Code Block da função Aula_PPE_06b.dyn: 
+### Treliças: code block da função Aula_PPE_06b.dyn: 
          1.  vao;
          2.  qmo;
          3.  ang;
