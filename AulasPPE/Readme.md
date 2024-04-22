@@ -184,7 +184,7 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
 ## Matrizes regulares para Vigamentos. Função PPE_Aula06a.dyn
 
 ![PPE_Aula06d_2024-04-22_02-42-35](https://github.com/JLMenegotto/AulasBIM/assets/9437020/660a59a9-cdd0-4d47-8773-98084810e79d)
-![Matriz_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/0f7a35f4-d06b-4d52-8ebf-7db50c771f95)
+![Matriz_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/cfdb1d14-5359-424f-8894-cfe67ec4755e)
 
          1.   qx;
          2.   qy;
