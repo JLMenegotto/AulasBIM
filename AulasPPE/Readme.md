@@ -220,4 +220,26 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
 
 ![PPE_Aula06c_2024-04-22_10-53-43](https://github.com/JLMenegotto/AulasBIM/assets/9437020/4a96e051-030b-4313-91bc-d7214dde236f)
 
-
+         1.   qx;
+         2.   dx;
+         3.   dy;
+         4.   al;
+         5.   m;
+         6.   //---------------------------------------------------
+         7.   // Listas e Indices
+         8.   //---------------------------------------------------
+         9.   x   =  0..qx;
+        10.   i   =  0..qx-1;
+        11.   cx  =  dx *  x;
+        12.   mo  =  x % m;
+        13.   cy  =  dy * mo + al - 2*mo;
+        14.   //---------------------------------------------------
+        15.   // Pontos e Linhas das barras
+        16.   //---------------------------------------------------
+        17.   LPS = Point.ByCoordinates ( cx , cy , 0 );
+        18.   LPI = Point.ByCoordinates ( cx , 0  , 0 );
+        19.   //---------------------------------------------------
+        20.   MON = Line.ByStartPointEndPoint ( LPI   , LPS      );
+        21.   VSH = Line.ByStartPointEndPoint ( LPS[i], LPS[i+1] );
+        22.   VIH = Line.ByStartPointEndPoint ( LPI[i], LPI[i+1] );
+        23.   DIA = Line.ByStartPointEndPoint ( LPI[i], LPS[i+1] );
