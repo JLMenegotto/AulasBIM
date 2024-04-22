@@ -121,6 +121,10 @@ Finalmente, a linha 27 cria as lajes construtivas concretas.
 ## Treliças
 ![PPE_Aula06b_2024-04-21_10-42-48](https://github.com/JLMenegotto/AulasBIM/assets/9437020/73120887-f960-4404-b421-f87e2d0f9c96)
 
+![Treliça_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/42c81c28-1034-4e6f-93a7-7ea39010751a)
+
+![Treliça_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/8ec317c5-1ab8-4094-9e30-262d7c7841ac)
+
 A função apresenta a marcação da treliça no plano XZ, caso prefira trabalhar sobre o plano XY devem ser alteradas as declarações das linhas
 27. e 28. de **PTI = Point.ByCoordinates( x , 0 , albi );** para **PTI = Point.ByCoordinates( x , albi , 0 );** 
 
@@ -181,6 +185,8 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
 
 ![PPE_Aula06a_2024-04-21_09-20-35](https://github.com/JLMenegotto/AulasBIM/assets/9437020/805b52b6-9214-4d02-be0d-91696f8617bb)
 
+![Matriz_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/0f7a35f4-d06b-4d52-8ebf-7db50c771f95)
+
          1.   qx;
          2.   qy;
          3.   qz = 0;
@@ -219,8 +225,7 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
 ## Matrizes regulares para Treliças. Função PPE_Aula06c.dyn
 
 ![PPE_Aula06c_2024-04-22_10-53-43](https://github.com/JLMenegotto/AulasBIM/assets/9437020/4a96e051-030b-4313-91bc-d7214dde236f)
-![Shed_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/fefaf30a-58df-4036-a507-a86b4e1a3f4f)
-
+![Shed_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/c57cd049-be32-4185-86e8-88e069c62381)
          1.   qx;
          2.   dx;
          3.   dy;
