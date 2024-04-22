@@ -222,9 +222,32 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
         33.   Val = [   LPH   ,    LPV   ,   VIH   ,    VIV  ];
         34.   DIC = Dictionary.ByKeysValues ( Key , Val );
 
+##Complemento para colocar contraventamentos em X. Função Função PPE_Aula06d.dyn
+
+         1.  Dic;
+         2.  qx  = Dic["Col"]+1;
+         3.  qy  = Dic["Fil"];
+         4.  PTV = Dic["PntV"];
+         5.  //---------------------------------------------------
+         6.  PtC = List.Flatten( PTV , 1);
+         7.  //---------------------------------------------------
+         8.  // Indices das Diagonais
+         9.  //---------------------------------------------------
+        10.  ic  =  0..qx-2;
+        11.  ir  =  0..qy-1;
+        12.  i   = List.Flatten(ic<1> + (qx*ir) , 1);
+        13.  j   = i+qx+1;
+        14.  //---------------------------------------------------
+        15.  // Coloca as linhas
+        16.  //---------------------------------------------------
+        17.  Di1 = Line.ByStartPointEndPoint(PtC[i  ] , PtC[j  ]);
+        18.  Di2 = Line.ByStartPointEndPoint(PtC[i+1] , PtC[j-1]);
+
+
 ## Matrizes regulares para Treliças. Função PPE_Aula06c.dyn
 
 ![PPE_Aula06c_2024-04-22_10-53-43](https://github.com/JLMenegotto/AulasBIM/assets/9437020/4a96e051-030b-4313-91bc-d7214dde236f)
+
 ![Shed_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/c57cd049-be32-4185-86e8-88e069c62381)
 
          1.   qx;
@@ -250,23 +273,3 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
         21.   VSH = Line.ByStartPointEndPoint ( LPS[i], LPS[i+1] );
         22.   VIH = Line.ByStartPointEndPoint ( LPI[i], LPI[i+1] );
         23.   DIA = Line.ByStartPointEndPoint ( LPI[i], LPS[i+1] );
-
-##Complemento para colocar contraventamentos em X. Função Função PPE_Aula06d.dyn
-         1.  Dic;
-         2.  qx  = Dic["Col"]+1;
-         3.  qy  = Dic["Fil"];
-         4.  PTV = Dic["PntV"];
-         5.  //---------------------------------------------------
-         6.  PtC = List.Flatten( PTV , 1);
-         7.  //---------------------------------------------------
-         8.  // Indices das Diagonais
-         9.  //---------------------------------------------------
-        10.  ic  =  0..qx-2;
-        11.  ir  =  0..qy-1;
-        12.  i   = List.Flatten(ic<1> + (qx*ir) , 1);
-        13.  j   = i+qx+1;
-        14.  //---------------------------------------------------
-        15.  // Coloca as linhas
-        16.  //---------------------------------------------------
-        17.  Di1 = Line.ByStartPointEndPoint(PtC[i  ] , PtC[j  ]);
-        18.  Di2 = Line.ByStartPointEndPoint(PtC[i+1] , PtC[j-1]);
