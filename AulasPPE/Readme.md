@@ -119,7 +119,7 @@ Finalmente, a linha 27 cria as lajes construtivas concretas.
 
 
 ## Treliças. Função Aula_PPE_06b.dyn
-![PPE_Aula06d_2024-04-22_02-42-35](https://github.com/JLMenegotto/AulasBIM/assets/9437020/42faad17-7932-47d9-8476-cb27a6c3f1ba)
+![PPE_Aula06b_2024-04-23_09-20-58](https://github.com/JLMenegotto/AulasBIM/assets/9437020/a325ed82-a450-4283-bb6a-056971726325)
 ![Treliça_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/42c81c28-1034-4e6f-93a7-7ea39010751a)
 ![Treliça_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/8ec317c5-1ab8-4094-9e30-262d7c7841ac)
 
@@ -127,58 +127,59 @@ A função apresenta a marcação da treliça no plano XZ, caso prefira trabalha
 27. e 28. de **PTI = Point.ByCoordinates( x , 0 , albi );** para **PTI = Point.ByCoordinates( x , albi , 0 );** 
 
 ### Treliças: code block da função Aula_PPE_06b.dyn: 
-         1.  vao;
-         2.  qmo;
-         3.  ang;
-         4.  alt;
-         5.  inv;
-         6.  par;
-         7.  tre;
-         8.  //-----------------------------------------------------
-         9.  vx   = vao/2;
-        10.  qme  = qmo/2;
-        11.  inc  = Math.Tan( ang );
-        12.  //-----------------------------------------------------
-        13.  // Formação das listas de índices
-        14.  //-----------------------------------------------------
-        15.  x    = vx..-vx..#qmo+1;
-        16.  i    = List.Flatten([ qme..0   , 1..qme] ,1);
-        17.  j    = List.Flatten([ 0..qme-1 , qme..0] ,1);
-        18.  indi = inv== 0 ? i : j;
-        19.  vzi  = x   * inc;
-        20.  vzs  = vzi + alt;
-        21.  //-----------------------------------------------------
-        22.  albi = par== 0 ? 0         : vzi[indi];
-        23.  albs = par== 0 ? vzs[indi] : vzs[indi];
-        24.  //-----------------------------------------------------
-        25.  // Pontos do Banzo inferior e superior
-        26.  //-----------------------------------------------------
-        27.  PTI  = Point.ByCoordinates( x , 0 , albi );
-        28.  PTS  = Point.ByCoordinates( x , 0 , albs );
-        29.  //-----------------------------------------------------
-        30.  // Indices completo ic e as duas metades i1 e 12
-        31.  //-----------------------------------------------------
-        32.  ic   = 0  ..qmo-1;
-        33.  i1   = 0  ..qme-1;
-        34.  i2   = qme..qmo-1;
-        35.  //-----------------------------------------------------
-        36.  // Os indices j e k são invertidos caso o sistema seja
-        37.  // Pratt ou Howe
-        38.  //-----------------------------------------------------
-        39.  k    = tre==0?  i1 : i2;
-        40.  l    = tre==0?  i2 : i1;
-        41.  //-----------------------------------------------------
-        42.  // Barras de Montantes, Banzo Inferior, Banzo Superior
-        43.  // Diagonais esquerdas e Diagonais direitas
-        44.  //-----------------------------------------------------
-        45.  BMO  = Line.ByStartPointEndPoint ( PTI     , PTS       );
-        46.  BBI  = Line.ByStartPointEndPoint ( PTI[ic] , PTI[ic+1] );
-        47.  BBS  = Line.ByStartPointEndPoint ( PTS[ic] , PTS[ic+1] );
-        48.  BDE  = Line.ByStartPointEndPoint ( PTS[k ] , PTI[k +1] );
-        49.  BDD  = Line.ByStartPointEndPoint ( PTI[l ] , PTS[l +1] ); 
+         1.   vao;
+         2.   qmo;
+         3.   ang;
+         4.   alt;
+         5.   agu;
+         6.   par;
+         7.   tre;
+         8.   //-----------------------------------------------------
+         9.   vx   = vao/2;
+        10.   qme  = qmo/2;
+        11.   inc  = Math.Tan( ang );
+        12.   //-----------------------------------------------------
+        13.   // Formação das listas de índices
+        14.   //-----------------------------------------------------
+        15.   x    = vx..-vx..#qmo+1;
+        16.   i    = List.Flatten([ qme..0   , 1..qme] , 1 );
+        17.   j    = List.Flatten([ 0..qme-1 , qme..0] , 1 );
+        18.   w    = List.Flatten([ qmo..0           ] , 1 );
+        19.   indi = agu== 1 ? w :  agu== 2 ? i : j;
+        20.   vzi  = x   * inc;
+        21.   vzs  = vzi + alt;
+        22.   //-----------------------------------------------------
+        23.   albi = par== 0 ? 0         : vzi[indi];
+        24.   albs = par== 0 ? vzs[indi] : vzs[indi];
+        25.   //-----------------------------------------------------
+        26.   // Pontos do Banzo inferior e superior
+        27.   //-----------------------------------------------------
+        28.   PTI = Point.ByCoordinates( x , 0 , albi );
+        29.   PTS = Point.ByCoordinates( x , 0 , albs );
+        30.   //-----------------------------------------------------
+        31.   // Indices das metades esquerda e direita
+        32.   //-----------------------------------------------------
+        33.   i1  = 0  ..qme-1;
+        34.   i2  = qme..qmo-1;
+        35.   //-----------------------------------------------------
+        36.   // Os indices k l são invertidos caso o sistema seja
+        37.   // Pratt ou Howe. Indice m usado em treliça de 1 água
+        38.   //-----------------------------------------------------
+        39.   k   = tre==0? i1 : i2;
+        40.   l   = tre==0? i2 : i1;
+        41.   m   = 0..qmo-1;
+        42.   //-----------------------------------------------------
+        43.   // Barras de Montantes, Banzo Inferior, Banzo Superior
+        44.   // Diagonais esquerdas e direitas ou todas
+        45.   //-----------------------------------------------------
+        46.   BMO =        Line.ByStartPointEndPoint ( PTI    , PTS      );
+        47.   BDE = agu>1? Line.ByStartPointEndPoint ( PTS[k] , PTI[k+1] ) : null;
+        48.   BDD = agu>1? Line.ByStartPointEndPoint ( PTI[l] , PTS[l+1] ) : null;
+        49.   BDA = agu<2? Line.ByStartPointEndPoint ( PTS[m] , PTI[m+1] ) : null;
+        50.   BBI =        Line.ByStartPointEndPoint ( PTI[m] , PTI[m+1] );
+        51.   BBS =        Line.ByStartPointEndPoint ( PTS[m] , PTS[m+1] );
 
 Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tree/master/Dynamo/Treli%C3%A7as        
-
 
 ## Matrizes regulares para Vigamentos. Função PPE_Aula06d.dyn
 ![PPE_Aula06d_2024-04-22_02-42-35](https://github.com/JLMenegotto/AulasBIM/assets/9437020/660a59a9-cdd0-4d47-8773-98084810e79d)
