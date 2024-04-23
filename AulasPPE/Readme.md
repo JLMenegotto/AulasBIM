@@ -120,8 +120,7 @@ Finalmente, a linha 27 cria as lajes construtivas concretas.
 
 ## Treliças. Função Aula_PPE_06b.dyn
 ![PPE_Aula06b_2024-04-23_09-20-58](https://github.com/JLMenegotto/AulasBIM/assets/9437020/a325ed82-a450-4283-bb6a-056971726325)
-![Treliça_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/42c81c28-1034-4e6f-93a7-7ea39010751a)
-![Treliça_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/8ec317c5-1ab8-4094-9e30-262d7c7841ac)
+![Treliças](https://github.com/JLMenegotto/AulasBIM/assets/9437020/368b7c16-3297-4a82-a4af-7f49f6be83ad)
 
 A função apresenta a marcação da treliça no plano XZ, caso prefira trabalhar sobre o plano XY devem ser alteradas as declarações das linhas
 27. e 28. de **PTI = Point.ByCoordinates( x , 0 , albi );** para **PTI = Point.ByCoordinates( x , albi , 0 );** 
