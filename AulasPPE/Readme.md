@@ -277,6 +277,7 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
 
 ## Treliça de triângulso equiláteros. Função PPE_Aula07.dyn
 ![PPE_Aula07_2024-04-23_04-51-55](https://github.com/JLMenegotto/AulasBIM/assets/9437020/6902a5d6-b9f8-452f-85f9-9f94b5b18b06)
+![Treliça_05](https://github.com/JLMenegotto/AulasBIM/assets/9437020/5d0851e1-ade3-4b87-a2af-efbac2507d89)
 
          1.   l;
          2.   q;
