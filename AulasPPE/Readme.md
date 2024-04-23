@@ -272,5 +272,5 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
         26.   MON = Line.ByStartPointEndPoint ( LPI    , LPS      );
         27.   VSH = Line.ByStartPointEndPoint ( LPS[i] , LPS[i+1] );
         28.   VIH = Line.ByStartPointEndPoint ( LPI[i] , LPI[i+1] );
-        29.   DI1 = Line.ByStartPointEndPoint ( LPI[k] , LPS[k+1] );
-        30.   DI2 = Line.ByStartPointEndPoint ( LPS[j] , LPI[j+1] );
+        29.   DI1 = Line.ByStartPointEndPoint ( LPI[inv?k:j] , LPS[(inv?k:j)+1] );
+        30.   DI2 = Line.ByStartPointEndPoint ( LPS[inv?j:k] , LPI[(inv?j:k)+1] );
