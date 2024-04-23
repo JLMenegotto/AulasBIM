@@ -241,7 +241,7 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
         18.  Di2 = Line.ByStartPointEndPoint(PtC[i+1] , PtC[j-1]);
 
 ## Matrizes regulares para Treliças. Função PPE_Aula06c.dyn
-![PPE_Aula06c_2024-04-23_10-54-08](https://github.com/JLMenegotto/AulasBIM/assets/9437020/020dafce-9d27-401c-8226-8ff7b8391060)
+![PPE_Aula06c_2024-04-23_11-09-55](https://github.com/JLMenegotto/AulasBIM/assets/9437020/ef966be4-8f0d-4ea7-886b-d5a5aade2181)
 ![Shed_03](https://github.com/JLMenegotto/AulasBIM/assets/9437020/cc917de6-93b8-4243-8a62-77a315817887)
 
          1.   qx;
