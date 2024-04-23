@@ -1,0 +1,378 @@
+{
+  "Uuid": "93e8aa0d-cca6-4a0d-ad6d-88c1f0f42d59",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "PPE_Aula07",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Circle": {
+        "Key": "Autodesk.DesignScript.Geometry.Circle",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Polygon": {
+        "Key": "Autodesk.DesignScript.Geometry.Polygon",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      },
+      "Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Line": {
+        "Key": "Autodesk.DesignScript.Geometry.Line",
+        "Value": "ProtoGeometry.dll"
+      },
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      }
+    }
+  },
+  "Inputs": [
+    {
+      "Id": "845f220fdfe34438a805777bd52b75d6",
+      "Name": "Dimensão do Lado",
+      "Type": "number",
+      "Type2": "number",
+      "Value": "1",
+      "MaximumValue": 20.0,
+      "MinimumValue": 1.0,
+      "StepValue": 1.0,
+      "NumberType": "Double",
+      "Description": "Produces numeric values"
+    },
+    {
+      "Id": "04fb6f6687f4431db37e38ff4338f437",
+      "Name": "Quant. de Módulos triangulares",
+      "Type": "number",
+      "Type2": "number",
+      "Value": "11",
+      "MaximumValue": 20.0,
+      "MinimumValue": 1.0,
+      "StepValue": 1.0,
+      "NumberType": "Double",
+      "Description": "Produces numeric values"
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "1ecb57c7ab79493f94e46931ca15b815",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [
+        {
+          "Id": "74f66658cc6c4f25b80839c6b0b8bbbd",
+          "Name": "l",
+          "Description": "l",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dbff2e123aad4c7bb7b58d8591d4f0ff",
+          "Name": "q",
+          "Description": "q",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "64a6a745e5bb42b7af39f7908cf4823d",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9254feba056844f6a2d5a0617b604c2e",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "43201a70e91b45db9478f473ada50077",
+          "Name": "",
+          "Description": "s30",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "67f06c8e1de243948601fc0737ab7711",
+          "Name": "",
+          "Description": "c30",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a5641e5623104902aeae80bbb100c5ad",
+          "Name": "",
+          "Description": "i",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6d8071ff83524a0abf3ad82b4489a6c1",
+          "Name": "",
+          "Description": "j",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "53a65562080648daafd51673b9fd6caf",
+          "Name": "",
+          "Description": "k",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0a60c01044f349f5806a88971ed22d19",
+          "Name": "",
+          "Description": "x",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "279a381dc24242c3844232b427359cb8",
+          "Name": "",
+          "Description": "y",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "edd8eb427c9442c482da61f77f9840e7",
+          "Name": "",
+          "Description": "PTI",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0e50190ab0f340498b62874ab9d1b73d",
+          "Name": "",
+          "Description": "BZO",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "aa086e7e250a43fcac21081aec362284",
+          "Name": "",
+          "Description": "DIA",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "l;\nq;\n//---------------------------------------------------\n// Constantes\n//---------------------------------------------------\ns30 = Math.Sin(30) * l;\nc30 = Math.Cos(30) * l;\n//---------------------------------------------------\n// Indices\n//---------------------------------------------------\ni   = 0..q+1;\nj   = 0..Count(PTI)-3;\nk   = 0..Count(PTI)-2;\n//---------------------------------------------------\n// Coordenadas X e Y\n//---------------------------------------------------\nx   = i   * s30;\ny   = i%2 * c30;\n//---------------------------------------------------\n// Pontos e Barras\n//---------------------------------------------------\nPTI = Point.ByCoordinates      ( x  ,   y  ,   0 );\nBZO = Line.ByStartPointEndPoint( PTI[j] , PTI[j+2] );\nDIA = Line.ByStartPointEndPoint( PTI[k] , PTI[k+1] );"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 20.0,
+      "MinimumValue": 1.0,
+      "StepValue": 1.0,
+      "Id": "845f220fdfe34438a805777bd52b75d6",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "87835a30be9b45bda84cb2dc1e387b78",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 1.0
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 20.0,
+      "MinimumValue": 1.0,
+      "StepValue": 1.0,
+      "Id": "04fb6f6687f4431db37e38ff4338f437",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ff7b6a46e7a342d5a3b820723f9be616",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 11.0
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "87835a30be9b45bda84cb2dc1e387b78",
+      "End": "74f66658cc6c4f25b80839c6b0b8bbbd",
+      "Id": "6aa61401dd314a89a1787fa51b68ec8d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ff7b6a46e7a342d5a3b820723f9be616",
+      "End": "dbff2e123aad4c7bb7b58d8591d4f0ff",
+      "Id": "0c285e1d6b0f45959263d39301f599c6",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": null,
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.0",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "7.1",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.0.3.7597",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "1ecb57c7ab79493f94e46931ca15b815",
+        "Name": "Treliça Isométrica",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 318.4590955750889,
+        "Y": 1248.093137301309
+      },
+      {
+        "Id": "845f220fdfe34438a805777bd52b75d6",
+        "Name": "Dimensão do Lado",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -102.17867961198567,
+        "Y": 1204.7861078083688
+      },
+      {
+        "Id": "04fb6f6687f4431db37e38ff4338f437",
+        "Name": "Quant. de Módulos triangulares",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -102.17867961198567,
+        "Y": 1324.4582301943842
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "86083435b428451c96d1c36b16e9b146",
+        "Title": "Constroi treliça de triângulos equiláteros",
+        "DescriptionText": "Prof. José Luis Menegotto\r\nEscola Politécnica da UFRJ",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "1ecb57c7ab79493f94e46931ca15b815",
+          "845f220fdfe34438a805777bd52b75d6",
+          "04fb6f6687f4431db37e38ff4338f437"
+        ],
+        "HasNestedGroups": false,
+        "Left": -112.17867961198567,
+        "Top": 1122.7861078083688,
+        "Width": 967.6377751870746,
+        "Height": 626.3070294929403,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 1204.7861078083688,
+        "InitialHeight": 574.3070294929403,
+        "TextblockHeight": 72.0,
+        "Background": "#FF48B9FF"
+      }
+    ],
+    "X": 110.97628692930971,
+    "Y": -863.5263469165006,
+    "Zoom": 0.7924969008878355
+  }
+}
