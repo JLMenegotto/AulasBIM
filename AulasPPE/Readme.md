@@ -266,11 +266,11 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
         20.   //---------------------------------------------------
         21.   // Pontos e Linhas das barras
         22.   //---------------------------------------------------
-        23.   LPS = Point.ByCoordinates ( cx , ys       , 0 );
-        24.   LPI = Point.ByCoordinates ( cx , pa?yi:ai , 0 );
+        23.   LPS = Point.ByCoordinates ( cx ,     ys    , 0 );
+        24.   LPI = Point.ByCoordinates ( cx , pa? yi:ai , 0 );
         25.   //---------------------------------------------------
-        26.   MON = Line.ByStartPointEndPoint ( LPI    , LPS      );
-        27.   VSH = Line.ByStartPointEndPoint ( LPS[i] , LPS[i+1] );
-        28.   VIH = Line.ByStartPointEndPoint ( LPI[i] , LPI[i+1] );
+        26.   MON = Line.ByStartPointEndPoint ( LPI          , LPS              );
+        27.   VSH = Line.ByStartPointEndPoint ( LPS[     i ] , LPS[      i+1  ] );
+        28.   VIH = Line.ByStartPointEndPoint ( LPI[     i ] , LPI[      i+1  ] );
         29.   DI1 = Line.ByStartPointEndPoint ( LPI[inv?k:j] , LPS[(inv?k:j)+1] );
         30.   DI2 = Line.ByStartPointEndPoint ( LPS[inv?j:k] , LPI[(inv?j:k)+1] );
