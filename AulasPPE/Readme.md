@@ -251,25 +251,26 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
          5.   az;
          6.   m;
          7.   pa;
-         8.   //---------------------------------------------------
-         9.   // Listas e Indices
-        10.   //---------------------------------------------------
-        11.   x   = 0..qx;
-        12.   i   = 0..qx-1;
-        13.   j   = 0..qx-1..2;
-        14.   k   = 1..qx-1..2;
-        15.   cx  = dx *  x;
-        16.   mo  = x % m;
-        17.   yi  = ai + (dy * mo);
-        18.   ys  = yi + az;
-        19.   //---------------------------------------------------
-        20.   // Pontos e Linhas das barras
-        21.   //---------------------------------------------------
-        22.   LPS = Point.ByCoordinates ( cx , ys       , 0 );
-        23.   LPI = Point.ByCoordinates ( cx , pa?yi:ai , 0 );
-        24.   //---------------------------------------------------
-        25.   MON = Line.ByStartPointEndPoint ( LPI    , LPS      );
-        26.   VSH = Line.ByStartPointEndPoint ( LPS[i] , LPS[i+1] );
-        27.   VIH = Line.ByStartPointEndPoint ( LPI[i] , LPI[i+1] );
-        28.   DI1 = Line.ByStartPointEndPoint ( LPI[k] , LPS[k+1] );
-        29.   DI2 = Line.ByStartPointEndPoint ( LPS[j] , LPI[j+1] );
+         8.   inv;
+         9.   //---------------------------------------------------
+        10.   // Listas e Indices
+        11.   //---------------------------------------------------
+        12.   x   = 0..qx;
+        13.   i   = 0..qx-1;
+        14.   j   = 0..qx-1..2;
+        15.   k   = 1..qx-1..2;
+        16.   cx  = dx *  x;
+        17.   mo  = x % m;
+        18.   yi  = ai + (dy * mo);
+        19.   ys  = yi + az;
+        20.   //---------------------------------------------------
+        21.   // Pontos e Linhas das barras
+        22.   //---------------------------------------------------
+        23.   LPS = Point.ByCoordinates ( cx , ys       , 0 );
+        24.   LPI = Point.ByCoordinates ( cx , pa?yi:ai , 0 );
+        25.   //---------------------------------------------------
+        26.   MON = Line.ByStartPointEndPoint ( LPI    , LPS      );
+        27.   VSH = Line.ByStartPointEndPoint ( LPS[i] , LPS[i+1] );
+        28.   VIH = Line.ByStartPointEndPoint ( LPI[i] , LPI[i+1] );
+        29.   DI1 = Line.ByStartPointEndPoint ( LPI[k] , LPS[k+1] );
+        30.   DI2 = Line.ByStartPointEndPoint ( LPS[j] , LPI[j+1] );
