@@ -274,3 +274,32 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
         28.   VIH = Line.ByStartPointEndPoint ( LPI[     i ] , LPI[      i+1  ] );
         29.   DI1 = Line.ByStartPointEndPoint ( LPI[inv?k:j] , LPS[(inv?k:j)+1] );
         30.   DI2 = Line.ByStartPointEndPoint ( LPS[inv?j:k] , LPI[(inv?j:k)+1] );
+
+## Treliça de triângulso equiláteros. Função PPE_Aula07.dyn
+![PPE_Aula07_2024-04-23_04-51-55](https://github.com/JLMenegotto/AulasBIM/assets/9437020/6902a5d6-b9f8-452f-85f9-9f94b5b18b06)
+
+         1.   l;
+         2.   q;
+         3.   //---------------------------------------------------
+         4.   // Constantes
+         5.   //---------------------------------------------------
+         6.   s30 = Math.Sin(30) * l;
+         7.   c30 = Math.Cos(30) * l;
+         8.   //---------------------------------------------------
+         9.   // Indices
+        10.   //---------------------------------------------------
+        11.   i   = 0..q+1;
+        12.   j   = 0..Count(PTI)-3;
+        13.   k   = 0..Count(PTI)-2;
+        14.   //---------------------------------------------------
+        15.   // Coordenadas X e Y
+        16.   //---------------------------------------------------
+        17.   x   = i   * s30;
+        18.   y   = i%2 * c30;
+        19.   //---------------------------------------------------
+        20.   // Pontos e Barras
+        21.   //---------------------------------------------------
+        22.   PTI = Point.ByCoordinates      ( x  ,   y  ,   0 );
+        23.   BZO = Line.ByStartPointEndPoint( PTI[j] , PTI[j+2] );
+        24.   DIA = Line.ByStartPointEndPoint( PTI[k] , PTI[k+1] );
+        
