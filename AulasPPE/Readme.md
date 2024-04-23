@@ -119,10 +119,8 @@ Finalmente, a linha 27 cria as lajes construtivas concretas.
 
 
 ## Treliças. Função Aula_PPE_06b.dyn
-![PPE_Aula06b_2024-04-21_10-42-48](https://github.com/JLMenegotto/AulasBIM/assets/9437020/73120887-f960-4404-b421-f87e2d0f9c96)
-
+![PPE_Aula06d_2024-04-22_02-42-35](https://github.com/JLMenegotto/AulasBIM/assets/9437020/42faad17-7932-47d9-8476-cb27a6c3f1ba)
 ![Treliça_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/42c81c28-1034-4e6f-93a7-7ea39010751a)
-
 ![Treliça_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/8ec317c5-1ab8-4094-9e30-262d7c7841ac)
 
 A função apresenta a marcação da treliça no plano XZ, caso prefira trabalhar sobre o plano XY devem ser alteradas as declarações das linhas
