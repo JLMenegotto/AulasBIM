@@ -65,7 +65,7 @@
       "Name": "Modular",
       "Type": "number",
       "Type2": "number",
-      "Value": "4",
+      "Value": "3",
       "MaximumValue": 5.0,
       "MinimumValue": 1.0,
       "StepValue": 1.0,
@@ -77,9 +77,9 @@
       "Name": "Proporção do módulo base",
       "Type": "number",
       "Type2": "number",
-      "Value": "0.5",
-      "MaximumValue": 1.0,
-      "MinimumValue": 0.1,
+      "Value": "0.35000000000000003",
+      "MaximumValue": 0.9,
+      "MinimumValue": 0.0,
       "StepValue": 0.05,
       "NumberType": "Double",
       "Description": "Produces numeric values"
@@ -93,7 +93,7 @@
       "NodeType": "CodeBlockNode",
       "Inputs": [
         {
-          "Id": "a2a23211b9114dfcb7525029cdef47d7",
+          "Id": "3369f0a93e964f7f83c8da6d4aeb5bd9",
           "Name": "d",
           "Description": "d",
           "UsingDefaultValue": false,
@@ -102,7 +102,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "26e70b499abf4d239611835ecdb7d7ca",
+          "Id": "dac316b8139a4991a187cbe86a990de5",
           "Name": "p",
           "Description": "p",
           "UsingDefaultValue": false,
@@ -111,7 +111,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "880d2ab6a7ea49209cf1e9fc4311e632",
+          "Id": "cde35525fff74801aa4ff66266433053",
           "Name": "q",
           "Description": "q",
           "UsingDefaultValue": false,
@@ -120,7 +120,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "dfcf82511efb41e59ac35b0c2ceb4290",
+          "Id": "30df8bbbbd7a44cab43c3d1a29945502",
           "Name": "mod",
           "Description": "mod",
           "UsingDefaultValue": false,
@@ -131,7 +131,7 @@
       ],
       "Outputs": [
         {
-          "Id": "a59a0028db984589a2dbe69d9c89a51b",
+          "Id": "8aaddae603c34703a0e4519613fc7ab7",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -140,7 +140,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "cd3cb8a4beaf498cb868a4aa8943fc04",
+          "Id": "96f5063c9f844a0680c80717e7dc9f06",
           "Name": "",
           "Description": "Value of expression at line 2",
           "UsingDefaultValue": false,
@@ -149,7 +149,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "a7bd2ebd62ec443daac4d22e57721acd",
+          "Id": "283cf01dc57241b488e68d57f8f6dbe2",
           "Name": "",
           "Description": "Value of expression at line 3",
           "UsingDefaultValue": false,
@@ -158,7 +158,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "84b802d2167648b78745aa7719b59ff8",
+          "Id": "7137f96a761b4534bcda110662fda863",
           "Name": "",
           "Description": "Value of expression at line 4",
           "UsingDefaultValue": false,
@@ -167,7 +167,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "524357789c474d8ea6ce7fb320483171",
+          "Id": "5a05c965008e4a21ad59dfb6ab58b6b4",
           "Name": "",
           "Description": "m",
           "UsingDefaultValue": false,
@@ -176,7 +176,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "80f58f7138a84c90ad11a3821bd7cb13",
+          "Id": "0e661e3f49414ccf9c352392d19f043d",
           "Name": "",
           "Description": "i",
           "UsingDefaultValue": false,
@@ -185,7 +185,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "b1667c732bbb467ba71ffb7e343c0d9e",
+          "Id": "03e4d4998da6466abb5a3f74c1316926",
           "Name": "",
           "Description": "x",
           "UsingDefaultValue": false,
@@ -194,7 +194,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "ad5739c212ec4291a1f0a332bb58985a",
+          "Id": "dc932eadd905473881690b40490ae38a",
           "Name": "",
           "Description": "y",
           "UsingDefaultValue": false,
@@ -203,18 +203,9 @@
           "KeepListStructure": false
         },
         {
-          "Id": "28f72ad5445c4bc1aa21f9b89eada0c7",
+          "Id": "0c6d3e9493e64cd0b52aad49b5ec6b15",
           "Name": "",
-          "Description": "P1",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "150439f28d9e428799b652472ce3751d",
-          "Name": "",
-          "Description": "P2",
+          "Description": "PT",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -223,7 +214,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly",
-      "Code": "d;\np;\nq;\nmod;\n///-----------------------------------\nm  = d * p;\ni  = 0..q-1;\nx  = i%mod ? (i * d+m) : (i * d);\ny  = i+1;\n//------------------------------------\nP1 = Point.ByCoordinates ( x<1> , 0 );\nP2 = Point.ByCoordinates ( x<1> , y );"
+      "Code": "d;\np;\nq;\nmod;\n///-----------------------------------\nm  = d * p;\ni  = 0..q-1;\nx  = i%mod ? (i * d+m) : (i * d);\ny  = i+1;\n//------------------------------------\nPT = Point.ByCoordinates ( x<1> , y );"
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -295,13 +286,13 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces numeric values",
-      "InputValue": 4.0
+      "InputValue": 3.0
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
       "NumberType": "Double",
-      "MaximumValue": 1.0,
-      "MinimumValue": 0.1,
+      "MaximumValue": 0.9,
+      "MinimumValue": 0.0,
       "StepValue": 0.05,
       "Id": "37d365e965894af3ba52ee3581e97a69",
       "NodeType": "NumberInputNode",
@@ -319,32 +310,32 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces numeric values",
-      "InputValue": 0.5
+      "InputValue": 0.35000000000000003
     }
   ],
   "Connectors": [
     {
       "Start": "87835a30be9b45bda84cb2dc1e387b78",
-      "End": "a2a23211b9114dfcb7525029cdef47d7",
-      "Id": "2952b03f3d194623adf0af64279650c6",
+      "End": "3369f0a93e964f7f83c8da6d4aeb5bd9",
+      "Id": "98902bfa2fdd4f28a4e0fbbf4acb9edf",
       "IsHidden": "False"
     },
     {
       "Start": "ff7b6a46e7a342d5a3b820723f9be616",
-      "End": "880d2ab6a7ea49209cf1e9fc4311e632",
-      "Id": "4f3e799bde9a49549c445f6660f43d1d",
+      "End": "cde35525fff74801aa4ff66266433053",
+      "Id": "35ab3b63b03742b5b48daee36425a522",
       "IsHidden": "False"
     },
     {
       "Start": "2516f3c4ada844bcbd0fa66abe96b907",
-      "End": "dfcf82511efb41e59ac35b0c2ceb4290",
-      "Id": "89ee8abbfb2f4269ab5a0443a63e6f53",
+      "End": "30df8bbbbd7a44cab43c3d1a29945502",
+      "Id": "3dee51b1f7e7400087bddc14331fa502",
       "IsHidden": "False"
     },
     {
       "Start": "9f8a05f0ef104a67bd40fd162297e4f1",
-      "End": "26e70b499abf4d239611835ecdb7d7ca",
-      "Id": "dd19ca37a36d40559dfe7edca91e3e90",
+      "End": "dac316b8139a4991a187cbe86a990de5",
+      "Id": "c2abaf6340524307991c4d34df052d42",
       "IsHidden": "False"
     }
   ],
@@ -477,8 +468,8 @@
         "Background": "#FF48B9FF"
       }
     ],
-    "X": 915.5349825233659,
-    "Y": -1542.5080148353711,
-    "Zoom": 1.224647830185058
+    "X": 740.1034437238937,
+    "Y": -507.89726070765875,
+    "Zoom": 0.550640032219494
   }
 }
