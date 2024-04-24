@@ -1,0 +1,484 @@
+{
+  "Uuid": "7463682a-f247-450f-bb6f-28e9a8bd93f3",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "PPE_Aula08",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Circle": {
+        "Key": "Autodesk.DesignScript.Geometry.Circle",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Polygon": {
+        "Key": "Autodesk.DesignScript.Geometry.Polygon",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      },
+      "Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Line": {
+        "Key": "Autodesk.DesignScript.Geometry.Line",
+        "Value": "ProtoGeometry.dll"
+      },
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      }
+    }
+  },
+  "Inputs": [
+    {
+      "Id": "845f220fdfe34438a805777bd52b75d6",
+      "Name": "Dimensão do módulo base",
+      "Type": "number",
+      "Type2": "number",
+      "Value": "1",
+      "MaximumValue": 20.0,
+      "MinimumValue": 1.0,
+      "StepValue": 1.0,
+      "NumberType": "Double",
+      "Description": "Produces numeric values"
+    },
+    {
+      "Id": "04fb6f6687f4431db37e38ff4338f437",
+      "Name": "Quantidade de pontos",
+      "Type": "number",
+      "Type2": "number",
+      "Value": "20",
+      "MaximumValue": 100.0,
+      "MinimumValue": 1.0,
+      "StepValue": 1.0,
+      "NumberType": "Double",
+      "Description": "Produces numeric values"
+    },
+    {
+      "Id": "9a97b1213080407dae30fec7ad534cf5",
+      "Name": "Modular",
+      "Type": "number",
+      "Type2": "number",
+      "Value": "4",
+      "MaximumValue": 5.0,
+      "MinimumValue": 1.0,
+      "StepValue": 1.0,
+      "NumberType": "Double",
+      "Description": "Produces numeric values"
+    },
+    {
+      "Id": "37d365e965894af3ba52ee3581e97a69",
+      "Name": "Proporção do módulo base",
+      "Type": "number",
+      "Type2": "number",
+      "Value": "0.5",
+      "MaximumValue": 1.0,
+      "MinimumValue": 0.1,
+      "StepValue": 0.05,
+      "NumberType": "Double",
+      "Description": "Produces numeric values"
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "1ecb57c7ab79493f94e46931ca15b815",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [
+        {
+          "Id": "a2a23211b9114dfcb7525029cdef47d7",
+          "Name": "d",
+          "Description": "d",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "26e70b499abf4d239611835ecdb7d7ca",
+          "Name": "p",
+          "Description": "p",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "880d2ab6a7ea49209cf1e9fc4311e632",
+          "Name": "q",
+          "Description": "q",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dfcf82511efb41e59ac35b0c2ceb4290",
+          "Name": "mod",
+          "Description": "mod",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a59a0028db984589a2dbe69d9c89a51b",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cd3cb8a4beaf498cb868a4aa8943fc04",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a7bd2ebd62ec443daac4d22e57721acd",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "84b802d2167648b78745aa7719b59ff8",
+          "Name": "",
+          "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "524357789c474d8ea6ce7fb320483171",
+          "Name": "",
+          "Description": "m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "80f58f7138a84c90ad11a3821bd7cb13",
+          "Name": "",
+          "Description": "i",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b1667c732bbb467ba71ffb7e343c0d9e",
+          "Name": "",
+          "Description": "x",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ad5739c212ec4291a1f0a332bb58985a",
+          "Name": "",
+          "Description": "y",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "28f72ad5445c4bc1aa21f9b89eada0c7",
+          "Name": "",
+          "Description": "P1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "150439f28d9e428799b652472ce3751d",
+          "Name": "",
+          "Description": "P2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "d;\np;\nq;\nmod;\n///-----------------------------------\nm  = d * p;\ni  = 0..q-1;\nx  = i%mod ? (i * d+m) : (i * d);\ny  = i+1;\n//------------------------------------\nP1 = Point.ByCoordinates ( x<1> , 0 );\nP2 = Point.ByCoordinates ( x<1> , y );"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 20.0,
+      "MinimumValue": 1.0,
+      "StepValue": 1.0,
+      "Id": "845f220fdfe34438a805777bd52b75d6",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "87835a30be9b45bda84cb2dc1e387b78",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 1.0
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 100.0,
+      "MinimumValue": 1.0,
+      "StepValue": 1.0,
+      "Id": "04fb6f6687f4431db37e38ff4338f437",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ff7b6a46e7a342d5a3b820723f9be616",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 20.0
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 5.0,
+      "MinimumValue": 1.0,
+      "StepValue": 1.0,
+      "Id": "9a97b1213080407dae30fec7ad534cf5",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2516f3c4ada844bcbd0fa66abe96b907",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 4.0
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 1.0,
+      "MinimumValue": 0.1,
+      "StepValue": 0.05,
+      "Id": "37d365e965894af3ba52ee3581e97a69",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9f8a05f0ef104a67bd40fd162297e4f1",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 0.5
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "87835a30be9b45bda84cb2dc1e387b78",
+      "End": "a2a23211b9114dfcb7525029cdef47d7",
+      "Id": "2952b03f3d194623adf0af64279650c6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ff7b6a46e7a342d5a3b820723f9be616",
+      "End": "880d2ab6a7ea49209cf1e9fc4311e632",
+      "Id": "4f3e799bde9a49549c445f6660f43d1d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2516f3c4ada844bcbd0fa66abe96b907",
+      "End": "dfcf82511efb41e59ac35b0c2ceb4290",
+      "Id": "89ee8abbfb2f4269ab5a0443a63e6f53",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9f8a05f0ef104a67bd40fd162297e4f1",
+      "End": "26e70b499abf4d239611835ecdb7d7ca",
+      "Id": "dd19ca37a36d40559dfe7edca91e3e90",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.0",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "7.1",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.0.3.7597",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "1ecb57c7ab79493f94e46931ca15b815",
+        "Name": "Trama modular",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -633.525274301289,
+        "Y": 1231.0617386867325
+      },
+      {
+        "Id": "845f220fdfe34438a805777bd52b75d6",
+        "Name": "Dimensão do módulo base",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1061.3934515062695,
+        "Y": 1095.193800497132
+      },
+      {
+        "Id": "04fb6f6687f4431db37e38ff4338f437",
+        "Name": "Quantidade de pontos",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1061.3934515062695,
+        "Y": 1347.3114957202374
+      },
+      {
+        "Id": "9a97b1213080407dae30fec7ad534cf5",
+        "Name": "Modular",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1061.3934515062695,
+        "Y": 1473.37034333179
+      },
+      {
+        "Id": "37d365e965894af3ba52ee3581e97a69",
+        "Name": "Proporção do módulo base",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1061.3934515062695,
+        "Y": 1221.2526481086848
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "86083435b428451c96d1c36b16e9b146",
+        "Title": "Tramas Moduladas",
+        "DescriptionText": "Prof. José Luis Menegotto\r\nEscola Politécnica da UFRJ",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "1ecb57c7ab79493f94e46931ca15b815",
+          "845f220fdfe34438a805777bd52b75d6",
+          "04fb6f6687f4431db37e38ff4338f437",
+          "9a97b1213080407dae30fec7ad534cf5",
+          "37d365e965894af3ba52ee3581e97a69"
+        ],
+        "HasNestedGroups": false,
+        "Left": -1071.3934515062695,
+        "Top": 1013.1938004971321,
+        "Width": 876.6681772049806,
+        "Height": 591.976542834658,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 1095.193800497132,
+        "InitialHeight": 264.6721223860154,
+        "TextblockHeight": 72.0,
+        "Background": "#FF48B9FF"
+      }
+    ],
+    "X": 915.5349825233659,
+    "Y": -1542.5080148353711,
+    "Zoom": 1.224647830185058
+  }
+}
