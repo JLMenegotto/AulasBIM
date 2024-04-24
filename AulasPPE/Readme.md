@@ -304,7 +304,7 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
         23.   BZO = Line.ByStartPointEndPoint( PTI[j] , PTI[j+2] );
         24.   DIA = Line.ByStartPointEndPoint( PTI[k] , PTI[k+1] );
         
-## Constroi Tramas Moduladas. Função PPE_Aula08.dyn
+## Matrizes e Tramas Moduladas. Função PPE_Aula08.dyn
 ![PPE_Aula08_2024-04-24_07-07-08](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b1c759b4-93b9-4854-acd7-3034911190d0)
 ![trama01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/368aef75-5ef7-4edf-875a-25bd0f22c092)
 
