@@ -305,7 +305,7 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
         24.   DIA = Line.ByStartPointEndPoint( PTI[k] , PTI[k+1] );
         
 ## Constroi Tramas Moduladas. Função PPE_Aula08.dyn
-![PPE_Aula08_2024-04-24_07-07-08](https://github.com/JLMenegotto/AulasBIM/assets/9437020/e1914c42-9b7b-42de-a7c1-12be8efca98c)
+![PPE_Aula08_2024-04-24_07-07-08](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b1c759b4-93b9-4854-acd7-3034911190d0)
 ![trama01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/368aef75-5ef7-4edf-875a-25bd0f22c092)
 
          1.   d;
@@ -318,5 +318,4 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
          8.   x  = i%mod ? (i * d+m) : (i * d);
          9.   y  = i+1;
         10.   //------------------------------------
-        11.   P1 = Point.ByCoordinates ( x<1> , 0 );
-        12.   P2 = Point.ByCoordinates ( x<1> , y );
+        11.   PT = Point.ByCoordinates ( x<1> , y );
