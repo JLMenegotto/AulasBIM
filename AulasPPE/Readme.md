@@ -118,7 +118,7 @@ Finalmente, a linha 27 cria as lajes construtivas concretas.
        27. LAJ = Revit.Floor.ByOutlineTypeAndLevel(PCJ, TIP, LEV);
 
 
-## Treliças. Função Aula_PPE_06b.dyn
+## Treliças Planas. Função Aula_PPE_06b.dyn
 ![PPE_Aula06b_2024-04-23_09-20-58](https://github.com/JLMenegotto/AulasBIM/assets/9437020/a325ed82-a450-4283-bb6a-056971726325)
 ![Treliças](https://github.com/JLMenegotto/AulasBIM/assets/9437020/368b7c16-3297-4a82-a4af-7f49f6be83ad)
 
@@ -240,7 +240,7 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
         17.  Di1 = Line.ByStartPointEndPoint(PtC[i  ] , PtC[j  ]);
         18.  Di2 = Line.ByStartPointEndPoint(PtC[i+1] , PtC[j-1]);
 
-## Treliçamentos. Função PPE_Aula06c.dyn
+## Treliças planas. Função PPE_Aula06c.dyn
 ![PPE_Aula06c_2024-04-23_11-09-55](https://github.com/JLMenegotto/AulasBIM/assets/9437020/ef966be4-8f0d-4ea7-886b-d5a5aade2181)
 ![Shed_03](https://github.com/JLMenegotto/AulasBIM/assets/9437020/cc917de6-93b8-4243-8a62-77a315817887)
 
@@ -275,7 +275,7 @@ Veja outros exemplos de treliças em: https://github.com/JLMenegotto/AulasBIM/tr
         29.   DI1 = Line.ByStartPointEndPoint ( LPI[inv?k:j] , LPS[(inv?k:j)+1] );
         30.   DI2 = Line.ByStartPointEndPoint ( LPS[inv?j:k] , LPI[(inv?j:k)+1] );
 
-## Treliça de triângulso equiláteros. Função PPE_Aula07.dyn
+## Treliça plana de triângulos equiláteros. Função PPE_Aula07.dyn
 ![PPE_Aula07_2024-04-23_04-51-55](https://github.com/JLMenegotto/AulasBIM/assets/9437020/6902a5d6-b9f8-452f-85f9-9f94b5b18b06)
 ![Treliça_05](https://github.com/JLMenegotto/AulasBIM/assets/9437020/5d0851e1-ade3-4b87-a2af-efbac2507d89)
 
