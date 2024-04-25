@@ -324,7 +324,7 @@ A declaração da linha 8. define o valor da coordenada X, regulando-o de acordo
 
 ![tramas_D](https://github.com/JLMenegotto/AulasBIM/assets/9437020/5f9dd7f5-2372-411a-8ebc-28b2b70e4712)
 
-Para produzir uma trama dupla se puede alterar a declaração da linhas 9. e 11 de acordo ao seguinte code block
+Para produzir uma trama dupla podem ser alteradas as declarações das linhas 9. e 11 de acordo ao seguinte code block
 
          1.   d;
          2.   p;
