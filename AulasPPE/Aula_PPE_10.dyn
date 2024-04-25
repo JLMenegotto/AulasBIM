@@ -1,5 +1,5 @@
 {
-  "Uuid": "198730cd-39ea-460f-b6b1-dc34c153ab23",
+  "Uuid": "50449286-582b-4069-9cac-ea38ea46e801",
   "IsCustomNode": false,
   "Description": null,
   "Name": "Aula_PPE_10",
@@ -28,6 +28,14 @@
       "Math": {
         "Key": "DSCore.Math",
         "Value": "DSCoreNodes.dll"
+      },
+      "Dictionary": {
+        "Key": "DesignScript.Builtin.Dictionary",
+        "Value": "DesignScriptBuiltin.dll"
+      },
+      "Circle": {
+        "Key": "Autodesk.DesignScript.Geometry.Circle",
+        "Value": "ProtoGeometry.dll"
       }
     }
   },
@@ -40,7 +48,7 @@
       "NodeType": "CodeBlockNode",
       "Inputs": [
         {
-          "Id": "d7cda4861e074c318b4d5be50811e073",
+          "Id": "dfbaae0666e946c3ae4a333f5827bc7a",
           "Name": "q",
           "Description": "q",
           "UsingDefaultValue": false,
@@ -49,9 +57,18 @@
           "KeepListStructure": false
         },
         {
-          "Id": "1d3ce0e2de61413aa8f7a0f3479dd640",
+          "Id": "80cd01a2bff64c0e837da4711c3d84da",
           "Name": "d1",
           "Description": "d1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8e95c595309a43ba841ff1cb4135ac06",
+          "Name": "ap",
+          "Description": "ap",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -60,7 +77,7 @@
       ],
       "Outputs": [
         {
-          "Id": "c3d4ed0db52649aeb676e72268f867b1",
+          "Id": "5f240c29ff8a42c1b804fbc2c9425e52",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -69,7 +86,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "e0bae564fa85451fa7159c0a160ef9c3",
+          "Id": "775bd961e67f4c02a3cb5be8cea53b8d",
           "Name": "",
           "Description": "Value of expression at line 2",
           "UsingDefaultValue": false,
@@ -78,7 +95,16 @@
           "KeepListStructure": false
         },
         {
-          "Id": "e93e88f5bf7e49048f1d5ca076397d22",
+          "Id": "b3f1b15850aa400f8f18da14fc6ddb15",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f1e34098c71b4c16b69ac128177a5887",
           "Name": "",
           "Description": "d2",
           "UsingDefaultValue": false,
@@ -87,7 +113,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "6efb54368e5e4182ba9bd6b18cfc1e24",
+          "Id": "b45b4bad96184e96b833d5905c75c4f4",
           "Name": "",
           "Description": "alt",
           "UsingDefaultValue": false,
@@ -96,7 +122,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "44e05177e5524c6daf803dd7dfacfe67",
+          "Id": "fa4bf9aa7c1140dca4aca3bec6734513",
           "Name": "",
           "Description": "i",
           "UsingDefaultValue": false,
@@ -105,7 +131,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "13cf9f1fbfb04a9cbca862bd6a8fa5b8",
+          "Id": "67f60666495640729696491f4c12a601",
           "Name": "",
           "Description": "k",
           "UsingDefaultValue": false,
@@ -114,7 +140,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "ed8053cc992a4b77a2685b50461de35f",
+          "Id": "5478d5abfaa34a1fa4c33549c084c7ed",
           "Name": "",
           "Description": "V1",
           "UsingDefaultValue": false,
@@ -123,7 +149,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "d3dced04ca2d4120bf3b7a86c695a4ef",
+          "Id": "b8f0a26e5775436ea1126d0cb89a0711",
           "Name": "",
           "Description": "V2",
           "UsingDefaultValue": false,
@@ -132,7 +158,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "b7ce805d850048bebb9430eaa7daa59a",
+          "Id": "cb89f552f97d48cda0aae7ed453083a8",
           "Name": "",
           "Description": "V3",
           "UsingDefaultValue": false,
@@ -141,7 +167,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "3f49361238414fc7badeda5a6fa5e6f9",
+          "Id": "4cb0833096e24daeadab2b348c1cdbeb",
           "Name": "",
           "Description": "V4",
           "UsingDefaultValue": false,
@@ -150,7 +176,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "25d131183a6f43fd8642919c915bb775",
+          "Id": "45f31c63a57a41a4a17740434e9b5bbc",
           "Name": "",
           "Description": "LVE",
           "UsingDefaultValue": false,
@@ -159,7 +185,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "d56b33a5823b492fb97458250a1a3033",
+          "Id": "71aab42e48b24da8b65dd2e185b8ed9e",
           "Name": "",
           "Description": "DVE",
           "UsingDefaultValue": false,
@@ -168,7 +194,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "b05c0255816240cfa891fdbfc9ced58b",
+          "Id": "4a691c1e3e924da18998bd6f9d0a42f0",
           "Name": "",
           "Description": "coi",
           "UsingDefaultValue": false,
@@ -177,7 +203,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "9b749eecda17432b8fa629991879e775",
+          "Id": "bcedc25de5714f5eba357fedd2665b70",
           "Name": "",
           "Description": "cos",
           "UsingDefaultValue": false,
@@ -186,7 +212,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "5a2e1b530dea4908a4afe0d5bb2464c4",
+          "Id": "865bdfa51b4f4ee8a16f5dea559a053f",
           "Name": "",
           "Description": "phi",
           "UsingDefaultValue": false,
@@ -195,7 +221,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "1c41100d108345f78a6ef7495c1bc282",
+          "Id": "ad0c9f74d41f4153bd51ff1d99ed7c55",
           "Name": "",
           "Description": "phs",
           "UsingDefaultValue": false,
@@ -204,7 +230,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "76d4d5abca5547629ada53988da2e784",
+          "Id": "8b4846bd546e4c968670be105fcde79a",
           "Name": "",
           "Description": "pvi",
           "UsingDefaultValue": false,
@@ -213,7 +239,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "bf86964fd4684a08bdb9de1b08be0cdb",
+          "Id": "9d79166cce2e4aaaae736ec7b73277c8",
           "Name": "",
           "Description": "pvs",
           "UsingDefaultValue": false,
@@ -222,7 +248,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "b6464e3b3cac45f997819cb4201977d9",
+          "Id": "8f558e823837459f8fc22398a0981663",
           "Name": "",
           "Description": "BHI",
           "UsingDefaultValue": false,
@@ -231,7 +257,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "187bdc024a1742b98e53a5f89e81252a",
+          "Id": "7496b45286eb4eebaea2774b4a3b591f",
           "Name": "",
           "Description": "BVI",
           "UsingDefaultValue": false,
@@ -240,7 +266,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "4c9c983dfe84455b97cbc4cc89590e26",
+          "Id": "06cc72fd62534218bc8cfe570415ca7a",
           "Name": "",
           "Description": "BHS",
           "UsingDefaultValue": false,
@@ -249,7 +275,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "c43e44437f33428683baf1fe5c63c87a",
+          "Id": "d53081c4d4eb49ee9897659b67bec42f",
           "Name": "",
           "Description": "BVS",
           "UsingDefaultValue": false,
@@ -258,9 +284,36 @@
           "KeepListStructure": false
         },
         {
-          "Id": "811b90dddf8f42e487d0b06461c1f7ce",
+          "Id": "18029c137f17410faf2ccefd7a5950c7",
           "Name": "",
           "Description": "DIA",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "01b23665d6f0424098fca99e5215d23f",
+          "Name": "",
+          "Description": "Key",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8f9f6c6d57104b21b7bd5719a31f6487",
+          "Name": "",
+          "Description": "Val",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "711dc98546ed4bfeb35cc1ce2cb0d920",
+          "Name": "",
+          "Description": "DIC",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -269,7 +322,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly",
-      "Code": "q;\nd1;\nd2  = d1/2;\n//-----------------------------------------------------\nalt = Math.Cos(60)*Math.Sqrt(2) * d1;\ni   = 0..q-1;\nk   = 0..q-2;\n//-----------------------------------------------------\n// Vetores das Diagonais\n//-----------------------------------------------------\nV1  = Vector.ByCoordinates( d2 ,  d2 , -alt);\nV2  = Vector.ByCoordinates(-d2 ,  d2 , -alt);\nV3  = Vector.ByCoordinates(-d2 , -d2 , -alt);\nV4  = Vector.ByCoordinates( d2 , -d2 , -alt);\nLVE = [V1,V2,V3,V4];\nDVE = V1.Length;\n//-----------------------------------------------------\n// Posicionamento dos Pontos\n//-----------------------------------------------------\ncoi = 0..( d1*q )..d1;\ncos = List.DropItems      ( coi , 1 ) - d2;\nphi = Point.ByCoordinates ( coi<1> , coi , 0   );\nphs = Point.ByCoordinates ( cos<1> , cos , alt );\npvi = List.Transpose      ( phi                );\npvs = List.Transpose      ( phs                );\n//-----------------------------------------------------\n// Barras do Banzo Inferior\n//-----------------------------------------------------\nBHI = Line.ByStartPointEndPoint(phi[i], phi[i+1]);\nBVI = Line.ByStartPointEndPoint(pvi[i], pvi[i+1]);\n//-----------------------------------------------------\n// Barras do Banzo Superior\n//-----------------------------------------------------\nBHS = Line.ByStartPointEndPoint(phs[k], phs[k+1]);\nBVS = Line.ByStartPointEndPoint(pvs[k], pvs[k+1]);\n//-----------------------------------------------------\n// Barras das Diagonais\n//-----------------------------------------------------\nDIA = Line.ByStartPointDirectionLength(phs,LVE<1>,DVE);"
+      "Code": "q;\nd1;\nap;\nd2  = d1/2;\n//-----------------------------------------------------\nalt = Math.Cos(60)*Math.Sqrt(2) * d1;\ni   = 0..q-1;\nk   = 0..q-2;\n//-----------------------------------------------------\n// Vetores das Diagonais\n//-----------------------------------------------------\nV1  = Vector.ByCoordinates( d2 ,  d2 , -alt);\nV2  = Vector.ByCoordinates(-d2 ,  d2 , -alt);\nV3  = Vector.ByCoordinates(-d2 , -d2 , -alt);\nV4  = Vector.ByCoordinates( d2 , -d2 , -alt);\nLVE = [V1,V2,V3,V4];\nDVE = V1.Length;\n//-----------------------------------------------------\n// Posicionamento dos Pontos\n//-----------------------------------------------------\ncoi = 0..( d1*q )..d1;\ncos = List.DropItems      ( coi , 1 ) - d2;\nphi = Point.ByCoordinates ( coi<1> , coi , 0   );\nphs = Point.ByCoordinates ( cos<1> , cos , alt );\npvi = List.Transpose      ( phi                );\npvs = List.Transpose      ( phs                );\n//-----------------------------------------------------\n// Barras do Banzo Inferior\n//-----------------------------------------------------\nBHI = Line.ByStartPointEndPoint(phi[i], phi[i+1]);\nBVI = Line.ByStartPointEndPoint(pvi[i], pvi[i+1]);\n//-----------------------------------------------------\n// Barras do Banzo Superior\n//-----------------------------------------------------\nBHS = Line.ByStartPointEndPoint(phs[k], phs[k+1]);\nBVS = Line.ByStartPointEndPoint(pvs[k], pvs[k+1]);\n//-----------------------------------------------------\n// Barras das Diagonais\n//-----------------------------------------------------\nDIA = Line.ByStartPointDirectionLength(phs,LVE<1>,DVE);\n//-----------------------------------------------------\n// Extração de resultados utilizando Dicionário\n//-----------------------------------------------------\nKey = [ \"Apoios\", \"QuaMod\" , \"PntosH\" ];\nVal = [  ap     ,  q       ,  phi     ];\nDIC = Dictionary.ByKeysValues ( Key , Val );"
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -318,19 +371,166 @@
       "Replication": "Disabled",
       "Description": "Produces numeric values",
       "InputValue": 6.0
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "861b46477c3a4577a8f20e8c0d41ea76",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [
+        {
+          "Id": "391c82e163904a76b2ebecead78153c8",
+          "Name": "Dados",
+          "Description": "Dados",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0bae1392a6b444999fb7fed12fb468d9",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d2b6049784174df7abd348dc943d8203",
+          "Name": "",
+          "Description": "q",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7e9b297499664c60b394fdd54a52ba46",
+          "Name": "",
+          "Description": "ap",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0565ecb4c5374d66bd986e50d3737886",
+          "Name": "",
+          "Description": "phi",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f3b04703e22f4b828b96b657ca03fb69",
+          "Name": "",
+          "Description": "r",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9b66f6772c82424d9ad1e305944d3860",
+          "Name": "",
+          "Description": "i",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "98849bb14a5c464298357a83f07711d8",
+          "Name": "",
+          "Description": "j",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "311a1bb65fb64d17985916a95aaafe98",
+          "Name": "",
+          "Description": "k",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "130b8a7163154fc08ebda72ea66aede2",
+          "Name": "",
+          "Description": "LAP",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9ff247ce27ac4f5bb62e47d64175275f",
+          "Name": "",
+          "Description": "AP1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "Dados;\nq   = Dados[\"QuaMod\"];\nap  = Dados[\"Apoios\"];\nphi = Dados[\"PntosH\"];\n//-----------------------------------------\n// Índices de marcação\n//-----------------------------------------\nr   = 0.25;\ni   =   ap;\nj   = -1-i;\nk   =  q-i;\n//-----------------------------------------\n// Pontos dos Apóios\n//-----------------------------------------\nLAP = [ phi[i][i], phi[j][i],\n        phi[i][k], phi[j][k] ];\nAP1 = Circle.ByCenterPointRadius( LAP , r );"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 2.0,
+      "MinimumValue": 0.0,
+      "StepValue": 1.0,
+      "Id": "a917248bbe824184a8835b98945bf2da",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "bff4333086bc4b71a89bec2f5ae2d0c3",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 0.0
     }
   ],
   "Connectors": [
     {
+      "Start": "711dc98546ed4bfeb35cc1ce2cb0d920",
+      "End": "391c82e163904a76b2ebecead78153c8",
+      "Id": "21c91f3ea60249d9b29f7fe40f730203",
+      "IsHidden": "False"
+    },
+    {
       "Start": "3b5ba754398f499b9e5f0d7fa9c98d50",
-      "End": "1d3ce0e2de61413aa8f7a0f3479dd640",
-      "Id": "68c0bdd5394f47998c24abfdfa08a7ab",
+      "End": "80cd01a2bff64c0e837da4711c3d84da",
+      "Id": "d2662564bd0b4036bb2d0ea6a6951d94",
       "IsHidden": "False"
     },
     {
       "Start": "0f89727bdd9647debe9638bb3c5e58f8",
-      "End": "d7cda4861e074c318b4d5be50811e073",
-      "Id": "f6ba7a9e582042129417cfedf5304222",
+      "End": "dfbaae0666e946c3ae4a333f5827bc7a",
+      "Id": "b33e4152fb2148399da1c454205a9eeb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "bff4333086bc4b71a89bec2f5ae2d0c3",
+      "End": "8e95c595309a43ba841ff1cb4135ac06",
+      "Id": "fa05edddebd74d7caf53b3afb7e88db8",
       "IsHidden": "False"
     }
   ],
@@ -391,8 +591,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -34.25758451236618,
-        "Y": -62.5527236860824
+        "X": -52.44532034302961,
+        "Y": 35.72867743270626
       },
       {
         "Id": "454153bb01d042689490231bca2acd0f",
@@ -401,8 +601,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -440.0656877120948,
-        "Y": 20.805663094188986
+        "X": -458.2534235427579,
+        "Y": 119.08706421297757
       },
       {
         "Id": "c7fa9d7956de4484a9371ce0ee670b1f",
@@ -411,8 +611,28 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -440.0656877120949,
-        "Y": -101.4567358594131
+        "X": -458.25342354275836,
+        "Y": -3.1753347406244075
+      },
+      {
+        "Id": "861b46477c3a4577a8f20e8c0d41ea76",
+        "Name": "Define a posição dos apóios",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 565.0725101318294,
+        "Y": 512.5907203775208
+      },
+      {
+        "Id": "a917248bbe824184a8835b98945bf2da",
+        "Name": "Apoios em",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -458.91817601091384,
+        "Y": 245.4903057789901
       }
     ],
     "Annotations": [
@@ -426,23 +646,25 @@
         "Nodes": [
           "1e111bd4cac74829aae6a00c04f0a36f",
           "454153bb01d042689490231bca2acd0f",
-          "c7fa9d7956de4484a9371ce0ee670b1f"
+          "c7fa9d7956de4484a9371ce0ee670b1f",
+          "861b46477c3a4577a8f20e8c0d41ea76",
+          "a917248bbe824184a8835b98945bf2da"
         ],
         "HasNestedGroups": false,
-        "Left": -450.0656877120949,
-        "Top": -183.4567358594131,
-        "Width": 974.8081031997287,
-        "Height": 866.9040121733308,
+        "Left": -468.91817601091384,
+        "Top": -85.17533474062441,
+        "Width": 1528.9906861427432,
+        "Height": 984.7660551181452,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": -101.4567358594131,
-        "InitialHeight": 814.9040121733308,
+        "InitialTop": -3.1753347406244075,
+        "InitialHeight": 660.7660551181452,
         "TextblockHeight": 72.0,
         "Background": "#FF48B9FF"
       }
     ],
-    "X": 346.61446648099354,
-    "Y": 190.96026799731897,
-    "Zoom": 0.5347303731993831
+    "X": -512.9396709499864,
+    "Y": -696.6102123421706,
+    "Zoom": 1.2657509084548644
   }
 }
