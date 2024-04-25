@@ -411,7 +411,7 @@ indicador visual da posição.
         12.  //-----------------------------------------
         13.  // Pontos dos Apóios
         14.  //-----------------------------------------
-        15.  LAP = [ phi[i][i], phi[j][i],
-        16.          phi[i][k], phi[j][k]];
+        15.  LAP = [ phi[i][k], phi[j][k],
+        16.          phi[i][i], phi[j][i]];
         17.  AP1 = Circle.ByCenterPointRadius( LAP , r );
 
