@@ -342,7 +342,6 @@ Para produzir uma trama dupla podem ser alteradas as declarações das linhas 9.
 ## Treliça Espacial Equilátera. Função PPE_Aula10.dyn
 ![Aula_PPE_10_2024-04-25_10-19-54](https://github.com/JLMenegotto/AulasBIM/assets/9437020/bc38c5d4-30aa-46ed-af2f-f2ebc2a003a3)
 ![Treli3d](https://github.com/JLMenegotto/AulasBIM/assets/9437020/266b1a7d-10b4-452f-9d41-210cd3ccfe47)
-![Trama_Apoio](https://github.com/JLMenegotto/AulasBIM/assets/9437020/65def562-1a8e-4b8f-8739-bbe36842abb3)
 
          1.   q;
          2.   d1;
@@ -390,6 +389,7 @@ Para produzir uma trama dupla podem ser alteradas as declarações das linhas 9.
         44.   Val = [  ap     ,  q       ,  phi     ];
         45.   DIC = Dictionary.ByKeysValues ( Key , Val );
 
+![Trama_Apoio](https://github.com/JLMenegotto/AulasBIM/assets/9437020/65def562-1a8e-4b8f-8739-bbe36842abb3)
 
          1.  Dados;
          2.  q   = Dados["QuaMod"];
