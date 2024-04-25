@@ -340,8 +340,9 @@ Para produzir uma trama dupla podem ser alteradas as declarações das linhas 9.
 
 
 ## Treliça Espacial Equilátera. Função PPE_Aula10.dyn
-![Aula_PPE_10_2024-04-25_10-19-54](https://github.com/JLMenegotto/AulasBIM/assets/9437020/d0ad8dc8-6d29-40b7-bf13-52366ce108f5)
+![Aula_PPE_10_2024-04-25_10-19-54](https://github.com/JLMenegotto/AulasBIM/assets/9437020/bc38c5d4-30aa-46ed-af2f-f2ebc2a003a3)
 ![Treli3d](https://github.com/JLMenegotto/AulasBIM/assets/9437020/266b1a7d-10b4-452f-9d41-210cd3ccfe47)
+![Trama_Apoio](https://github.com/JLMenegotto/AulasBIM/assets/9437020/65def562-1a8e-4b8f-8739-bbe36842abb3)
 
          1.   q;
          2.   d1;
@@ -382,4 +383,29 @@ Para produzir uma trama dupla podem ser alteradas as declarações das linhas 9.
         37.   // Barras das Diagonais
         38.   //-----------------------------------------------------
         39.   DIA = Line.ByStartPointDirectionLength(phs,LVE<1>,DVE);
+        40.   //-----------------------------------------------------
+        41.   // Extração de resultados utilizando Dicionário
+        42.   //-----------------------------------------------------
+        43.   Key = [ "Apoios", "QuaMod" , "PntosH" ];
+        44.   Val = [  ap     ,  q       ,  phi     ];
+        45.   DIC = Dictionary.ByKeysValues ( Key , Val );
+
+
+         1.  Dados;
+         2.  q   = Dados["QuaMod"];
+         3.  ap  = Dados["Apoios"];
+         4.  phi = Dados["PntosH"];
+         5.  //-----------------------------------------
+         6.  // Índices de marcação
+         7.  //-----------------------------------------
+         8.  r   = 0.25;
+         9.  i   =   ap;
+        10.  j   = -1-i;
+        11.  k   =  q-i;
+        12.  //-----------------------------------------
+        13.  // Pontos dos Apóios
+        14.  //-----------------------------------------
+        15.  LAP = [ phi[i][i], phi[j][i],
+        16.          phi[i][k], phi[j][k]];
+        17.  AP1 = Circle.ByCenterPointRadius( LAP , r );
 
