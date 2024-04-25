@@ -389,6 +389,12 @@ Para produzir uma trama dupla podem ser alteradas as declarações das linhas 9.
         44.   Val = [  ap     ,  q       ,  phi     ];
         45.   DIC = Dictionary.ByKeysValues ( Key , Val );
 
+
+O dicionário preparado por esta função é passado para o segundo Code Block, cuja função é localizar a posição 
+dos futuros apóios. O esquema de índices indicados na figura seguinte, são declarados nas declarações 15. e 16. 
+para formar a lista LAP que será processada pela última declaração onde se coloca um círculo apenas como 
+indicador visual da posição.
+
 ![Trama_Apoio](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b9fa06c1-179d-4ba1-abcb-121f5a38cfe2)
 
          1.  Dados;
