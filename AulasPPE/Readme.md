@@ -321,3 +321,19 @@ A declaração da linha 8. define o valor da coordenada X, regulando-o de acordo
          9.   y  = i+1;
         10.   //------------------------------------
         11.   PT = Point.ByCoordinates ( x<1> , y );
+
+![tramas_D](https://github.com/JLMenegotto/AulasBIM/assets/9437020/1efc1a12-22ac-43f3-9db6-980a46b9100b)
+
+Para produzir uma trama dupla se puede alterar a declaração da linhas 9. e 11 de acordo ao seguinte code block
+         1.   d;
+         2.   p;
+         3.   q;
+         4.   mod;
+         5.   ///-----------------------------------
+         6.   m  = d * p;
+         7.   i  = 0..q-1;
+         8.   x  = i%mod ? (i * d+m) : (i * d);
+         9.   y  = x;
+        10.   //------------------------------------
+        11.   PT = Point.ByCoordinates ( x<1> , y );
+
