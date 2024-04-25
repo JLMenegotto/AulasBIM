@@ -389,7 +389,7 @@ Para produzir uma trama dupla podem ser alteradas as declarações das linhas 9.
         44.   Val = [  ap     ,  q       ,  phi     ];
         45.   DIC = Dictionary.ByKeysValues ( Key , Val );
 
-![Trama_Apoio](https://github.com/JLMenegotto/AulasBIM/assets/9437020/c798f8c0-052f-4f4f-b1b4-ecd3592877f3)
+![Trama_Apoio](https://github.com/JLMenegotto/AulasBIM/assets/9437020/f263dc14-bf1a-4d8e-af1b-92fc13bb115c)
 
          1.  Dados;
          2.  q   = Dados["QuaMod"];
