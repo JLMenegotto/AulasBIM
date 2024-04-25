@@ -338,3 +338,48 @@ Para produzir uma trama dupla podem ser alteradas as declarações das linhas 9.
         10.   //------------------------------------
         11.   PT = Point.ByCoordinates ( x<1> , y );
 
+
+## Treliça Espacial Equilátera. Função PPE_Aula10.dyn
+![Aula_PPE_10_2024-04-25_10-19-54](https://github.com/JLMenegotto/AulasBIM/assets/9437020/d0ad8dc8-6d29-40b7-bf13-52366ce108f5)
+![Treli3d](https://github.com/JLMenegotto/AulasBIM/assets/9437020/266b1a7d-10b4-452f-9d41-210cd3ccfe47)
+
+         1.   q;
+         2.   d1;
+         3.   d2  = d1/2;
+         4.   //-----------------------------------------------------
+         5.   alt = Math.Cos(60)*Math.Sqrt(2) * d1;
+         6.   i   = 0..q-1;
+         7.   k   = 0..q-2;
+         8.   //-----------------------------------------------------
+         9.   // Vetores das Diagonais
+        10.   //-----------------------------------------------------
+        11.   V1  = Vector.ByCoordinates( d2 ,  d2 , -alt);
+        12.   V2  = Vector.ByCoordinates(-d2 ,  d2 , -alt);
+        13.   V3  = Vector.ByCoordinates(-d2 , -d2 , -alt);
+        14.   V4  = Vector.ByCoordinates( d2 , -d2 , -alt);
+        15.   LVE = [V1,V2,V3,V4];
+        16.   DVE = V1.Length;
+        17.   //-----------------------------------------------------
+        18.   // Posicionamento dos Pontos
+        19.   //-----------------------------------------------------
+        20.   coi = 0..( d1*q )..d1;
+        21.   cos = List.DropItems      ( coi , 1 ) - d2;
+        22.   phi = Point.ByCoordinates ( coi<1> , coi , 0   );
+        23.   phs = Point.ByCoordinates ( cos<1> , cos , alt );
+        24.   pvi = List.Transpose      ( phi                );
+        25.   pvs = List.Transpose      ( phs                );
+        26.   //-----------------------------------------------------
+        27.   // Barras do Banzo Inferior
+        28.   //-----------------------------------------------------
+        29.   BHI = Line.ByStartPointEndPoint(phi[i], phi[i+1]);
+        30.   BVI = Line.ByStartPointEndPoint(pvi[i], pvi[i+1]);
+        31.   //-----------------------------------------------------
+        32.   // Barras do Banzo Superior
+        33.   //-----------------------------------------------------
+        34.   BHS = Line.ByStartPointEndPoint(phs[k], phs[k+1]);
+        35.   BVS = Line.ByStartPointEndPoint(pvs[k], pvs[k+1]);
+        36.   //-----------------------------------------------------
+        37.   // Barras das Diagonais
+        38.   //-----------------------------------------------------
+        39.   DIA = Line.ByStartPointDirectionLength(phs,LVE<1>,DVE);
+
