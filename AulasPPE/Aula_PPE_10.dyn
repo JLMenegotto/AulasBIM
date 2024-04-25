@@ -1,0 +1,448 @@
+{
+  "Uuid": "198730cd-39ea-460f-b6b1-dc34c153ab23",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Aula_PPE_10",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Line": {
+        "Key": "Autodesk.DesignScript.Geometry.Line",
+        "Value": "ProtoGeometry.dll"
+      },
+      "PolyCurve": {
+        "Key": "Autodesk.DesignScript.Geometry.PolyCurve",
+        "Value": "ProtoGeometry.dll"
+      },
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      },
+      "Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "1e111bd4cac74829aae6a00c04f0a36f",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [
+        {
+          "Id": "d7cda4861e074c318b4d5be50811e073",
+          "Name": "q",
+          "Description": "q",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1d3ce0e2de61413aa8f7a0f3479dd640",
+          "Name": "d1",
+          "Description": "d1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c3d4ed0db52649aeb676e72268f867b1",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e0bae564fa85451fa7159c0a160ef9c3",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e93e88f5bf7e49048f1d5ca076397d22",
+          "Name": "",
+          "Description": "d2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6efb54368e5e4182ba9bd6b18cfc1e24",
+          "Name": "",
+          "Description": "alt",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "44e05177e5524c6daf803dd7dfacfe67",
+          "Name": "",
+          "Description": "i",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "13cf9f1fbfb04a9cbca862bd6a8fa5b8",
+          "Name": "",
+          "Description": "k",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ed8053cc992a4b77a2685b50461de35f",
+          "Name": "",
+          "Description": "V1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d3dced04ca2d4120bf3b7a86c695a4ef",
+          "Name": "",
+          "Description": "V2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b7ce805d850048bebb9430eaa7daa59a",
+          "Name": "",
+          "Description": "V3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3f49361238414fc7badeda5a6fa5e6f9",
+          "Name": "",
+          "Description": "V4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "25d131183a6f43fd8642919c915bb775",
+          "Name": "",
+          "Description": "LVE",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d56b33a5823b492fb97458250a1a3033",
+          "Name": "",
+          "Description": "DVE",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b05c0255816240cfa891fdbfc9ced58b",
+          "Name": "",
+          "Description": "coi",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9b749eecda17432b8fa629991879e775",
+          "Name": "",
+          "Description": "cos",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5a2e1b530dea4908a4afe0d5bb2464c4",
+          "Name": "",
+          "Description": "phi",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1c41100d108345f78a6ef7495c1bc282",
+          "Name": "",
+          "Description": "phs",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "76d4d5abca5547629ada53988da2e784",
+          "Name": "",
+          "Description": "pvi",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bf86964fd4684a08bdb9de1b08be0cdb",
+          "Name": "",
+          "Description": "pvs",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b6464e3b3cac45f997819cb4201977d9",
+          "Name": "",
+          "Description": "BHI",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "187bdc024a1742b98e53a5f89e81252a",
+          "Name": "",
+          "Description": "BVI",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4c9c983dfe84455b97cbc4cc89590e26",
+          "Name": "",
+          "Description": "BHS",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c43e44437f33428683baf1fe5c63c87a",
+          "Name": "",
+          "Description": "BVS",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "811b90dddf8f42e487d0b06461c1f7ce",
+          "Name": "",
+          "Description": "DIA",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "q;\nd1;\nd2  = d1/2;\n//-----------------------------------------------------\nalt = Math.Cos(60)*Math.Sqrt(2) * d1;\ni   = 0..q-1;\nk   = 0..q-2;\n//-----------------------------------------------------\n// Vetores das Diagonais\n//-----------------------------------------------------\nV1  = Vector.ByCoordinates( d2 ,  d2 , -alt);\nV2  = Vector.ByCoordinates(-d2 ,  d2 , -alt);\nV3  = Vector.ByCoordinates(-d2 , -d2 , -alt);\nV4  = Vector.ByCoordinates( d2 , -d2 , -alt);\nLVE = [V1,V2,V3,V4];\nDVE = V1.Length;\n//-----------------------------------------------------\n// Posicionamento dos Pontos\n//-----------------------------------------------------\ncoi = 0..( d1*q )..d1;\ncos = List.DropItems      ( coi , 1 ) - d2;\nphi = Point.ByCoordinates ( coi<1> , coi , 0   );\nphs = Point.ByCoordinates ( cos<1> , cos , alt );\npvi = List.Transpose      ( phi                );\npvs = List.Transpose      ( phs                );\n//-----------------------------------------------------\n// Barras do Banzo Inferior\n//-----------------------------------------------------\nBHI = Line.ByStartPointEndPoint(phi[i], phi[i+1]);\nBVI = Line.ByStartPointEndPoint(pvi[i], pvi[i+1]);\n//-----------------------------------------------------\n// Barras do Banzo Superior\n//-----------------------------------------------------\nBHS = Line.ByStartPointEndPoint(phs[k], phs[k+1]);\nBVS = Line.ByStartPointEndPoint(pvs[k], pvs[k+1]);\n//-----------------------------------------------------\n// Barras das Diagonais\n//-----------------------------------------------------\nDIA = Line.ByStartPointDirectionLength(phs,LVE<1>,DVE);"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 10.0,
+      "MinimumValue": 1.0,
+      "StepValue": 1.0,
+      "Id": "454153bb01d042689490231bca2acd0f",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3b5ba754398f499b9e5f0d7fa9c98d50",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 1.0
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 10.0,
+      "MinimumValue": 1.0,
+      "StepValue": 1.0,
+      "Id": "c7fa9d7956de4484a9371ce0ee670b1f",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0f89727bdd9647debe9638bb3c5e58f8",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 6.0
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "3b5ba754398f499b9e5f0d7fa9c98d50",
+      "End": "1d3ce0e2de61413aa8f7a0f3479dd640",
+      "Id": "68c0bdd5394f47998c24abfdfa08a7ab",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0f89727bdd9647debe9638bb3c5e58f8",
+      "End": "d7cda4861e074c318b4d5be50811e073",
+      "Id": "f6ba7a9e582042129417cfedf5304222",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.0",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "7.1",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.0.3.7597",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "1e111bd4cac74829aae6a00c04f0a36f",
+        "Name": "Treliça Espacial Equilátera ",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -34.25758451236618,
+        "Y": -62.5527236860824
+      },
+      {
+        "Id": "454153bb01d042689490231bca2acd0f",
+        "Name": "Dimensão do Módulo",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -440.0656877120948,
+        "Y": 20.805663094188986
+      },
+      {
+        "Id": "c7fa9d7956de4484a9371ce0ee670b1f",
+        "Name": "Quantidade de Módulos",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -440.0656877120949,
+        "Y": -101.4567358594131
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "5b9e450d8fae44919134dea680ff126c",
+        "Title": "Treliça Espacial Equilátera ",
+        "DescriptionText": "Prof. José Luis Menegotto\r\nEscola Politécnica da UFRJ",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "1e111bd4cac74829aae6a00c04f0a36f",
+          "454153bb01d042689490231bca2acd0f",
+          "c7fa9d7956de4484a9371ce0ee670b1f"
+        ],
+        "HasNestedGroups": false,
+        "Left": -450.0656877120949,
+        "Top": -183.4567358594131,
+        "Width": 974.8081031997287,
+        "Height": 866.9040121733308,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": -101.4567358594131,
+        "InitialHeight": 814.9040121733308,
+        "TextblockHeight": 72.0,
+        "Background": "#FF48B9FF"
+      }
+    ],
+    "X": 346.61446648099354,
+    "Y": 190.96026799731897,
+    "Zoom": 0.5347303731993831
+  }
+}
