@@ -345,7 +345,8 @@ Para produzir uma trama dupla podem ser alteradas as declarações das linhas 9.
 
 
 ## Treliça Espacial Equilátera. Função PPE_Aula10.dyn
-![Aula_PPE_10_2024-04-25_10-19-54](https://github.com/JLMenegotto/AulasBIM/assets/9437020/bc38c5d4-30aa-46ed-af2f-f2ebc2a003a3)
+![Aula_PPE_10_2024-04-26_08-32-50](https://github.com/JLMenegotto/AulasBIM/assets/9437020/98335c61-ed74-43d2-b387-2c72f2e65d8d)
+
 ![Treli3d](https://github.com/JLMenegotto/AulasBIM/assets/9437020/266b1a7d-10b4-452f-9d41-210cd3ccfe47)
 
          1.   qx;
