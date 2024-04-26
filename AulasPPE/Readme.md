@@ -413,7 +413,7 @@ dos futuros apóios. O esquema de índices indicados na figura, são declarados 
 a posição. Os apóios foram programados para ser posicionados desde as quatro quinas da treliça modimentando-se 
 diagonalmente para dentro. 
 
-![Trama_Apoio](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b9fa06c1-179d-4ba1-abcb-121f5a38cfe2)
+![trama](https://github.com/JLMenegotto/AulasBIM/assets/9437020/183a5d0c-aff0-4433-8311-afc7411a3a8f)
 
          1.  Dados;
          2.  ap  = Dados[ "Apoios" ];
