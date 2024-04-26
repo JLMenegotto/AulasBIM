@@ -410,7 +410,8 @@ Para produzir uma trama dupla podem ser alteradas as declarações das linhas 9.
 O dicionário preparado por esta função é passado para o segundo Code Block, cuja função é localizar a posição 
 dos futuros apóios. O esquema de índices indicados na figura, são declarados nas declarações 16. e 17. Com eles
 é formada a lista LAP que será processada na última declaração que coloca um círculo apenas para visualizar 
-a posição.
+a posição. Os apóios foram programados para ser posicionados desde as quatro quinas da treliça modimentando-se 
+diagonalmente para dentro. 
 
 ![Trama_Apoio](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b9fa06c1-179d-4ba1-abcb-121f5a38cfe2)
 
