@@ -348,75 +348,87 @@ Para produzir uma trama dupla podem ser alteradas as declarações das linhas 9.
 ![Aula_PPE_10_2024-04-25_10-19-54](https://github.com/JLMenegotto/AulasBIM/assets/9437020/bc38c5d4-30aa-46ed-af2f-f2ebc2a003a3)
 ![Treli3d](https://github.com/JLMenegotto/AulasBIM/assets/9437020/266b1a7d-10b4-452f-9d41-210cd3ccfe47)
 
-         1.   q;
-         2.   d1;
-         3.   d2  = d1/2;
-         4.   //-----------------------------------------------------
-         5.   alt = Math.Cos(60)*Math.Sqrt(2) * d1;
-         6.   i   = 0..q-1;
-         7.   k   = 0..q-2;
-         8.   //-----------------------------------------------------
-         9.   // Vetores das Diagonais
+         1.   qx;
+         2.   qy;
+         3.   di;
+         4.   ap;
+         5.   dm  = di/2;
+         6.   qi  = qy<=qx ? qx-1 : qy-1;
+         7.   qj  = qy<=qx ? qx-1 : qy-1;
+         8.   qk  = qy<=qx ? qx-1 : qy-1;
+         9.   ql  = qy<=qx ? qx-2 : qy-2;
         10.   //-----------------------------------------------------
-        11.   V1  = Vector.ByCoordinates( d2 ,  d2 , -alt);
-        12.   V2  = Vector.ByCoordinates(-d2 ,  d2 , -alt);
-        13.   V3  = Vector.ByCoordinates(-d2 , -d2 , -alt);
-        14.   V4  = Vector.ByCoordinates( d2 , -d2 , -alt);
-        15.   LVE = [V1,V2,V3,V4];
-        16.   DVE = V1.Length;
-        17.   //-----------------------------------------------------
-        18.   // Posicionamento dos Pontos
-        19.   //-----------------------------------------------------
-        20.   coi = 0..( d1*q )..d1;
-        21.   cos = List.DropItems      ( coi , 1 ) - d2;
-        22.   phi = Point.ByCoordinates ( coi<1> , coi , 0   );
-        23.   phs = Point.ByCoordinates ( cos<1> , cos , alt );
-        24.   pvi = List.Transpose      ( phi                );
-        25.   pvs = List.Transpose      ( phs                );
-        26.   //-----------------------------------------------------
-        27.   // Barras do Banzo Inferior
-        28.   //-----------------------------------------------------
-        29.   BHI = Line.ByStartPointEndPoint(phi[i], phi[i+1]);
-        30.   BVI = Line.ByStartPointEndPoint(pvi[i], pvi[i+1]);
-        31.   //-----------------------------------------------------
-        32.   // Barras do Banzo Superior
-        33.   //-----------------------------------------------------
-        34.   BHS = Line.ByStartPointEndPoint(phs[k], phs[k+1]);
-        35.   BVS = Line.ByStartPointEndPoint(pvs[k], pvs[k+1]);
-        36.   //-----------------------------------------------------
-        37.   // Barras das Diagonais
-        38.   //-----------------------------------------------------
-        39.   DIA = Line.ByStartPointDirectionLength(phs,LVE<1>,DVE);
-        40.   //-----------------------------------------------------
-        41.   // Extração de resultados utilizando Dicionário
+        11.   alt = Math.Cos(60)*Math.Sqrt(2) * di;
+        12.   i   = 0..qi;
+        13.   j   = 0..qj;
+        14.   k   = 0..qk;
+        15.   l   = 0..ql;
+        16.   //-----------------------------------------------------
+        17.   // Vetores das Diagonais
+        18.   //-----------------------------------------------------
+        19.   V1  = Vector.ByCoordinates( dm ,  dm , -alt);
+        20.   V2  = Vector.ByCoordinates(-dm ,  dm , -alt);
+        21.   V3  = Vector.ByCoordinates(-dm , -dm , -alt);
+        22.   V4  = Vector.ByCoordinates( dm , -dm , -alt);
+        23.   LVE = [V1,V2,V3,V4];
+        24.   DVE = V1.Length;
+        25.   //-----------------------------------------------------
+        26.   // Posicionamento dos Pontos
+        27.   //-----------------------------------------------------
+        28.   cxi = 0..( di * qx )..di;
+        29.   cyi = 0..( di * qy )..di;
+        30.   cxs = List.DropItems      ( cxi , 1 ) - dm;
+        31.   cys = List.DropItems      ( cyi , 1 ) - dm;
+        32.   //-----------------------------------------------------
+        33.   phi = Point.ByCoordinates ( cxi<1> , cyi ,  0  );
+        34.   phs = Point.ByCoordinates ( cxs<1> , cys , alt );
+        35.   pvi = List.Transpose      ( phi                );
+        36.   pvs = List.Transpose      ( phs                );
+        37.   //-----------------------------------------------------
+        38.   // Barras do Banzo Inferior
+        39.   //-----------------------------------------------------
+        40.   BHI = Line.ByStartPointEndPoint( phi[i] , phi[i+1] );
+        41.   BVI = Line.ByStartPointEndPoint( pvi[j] , pvi[j+1] );
         42.   //-----------------------------------------------------
-        43.   Key = [ "Apoios", "QuaMod" , "PntosH" ];
-        44.   Val = [  ap     ,  q       ,  phi     ];
-        45.   DIC = Dictionary.ByKeysValues ( Key , Val );
+        43.   // Barras do Banzo Superior
+        44.   //-----------------------------------------------------
+        45.   BHS = Line.ByStartPointEndPoint( phs[k] , phs[k+1] );
+        46.   BVS = Line.ByStartPointEndPoint( pvs[l] , pvs[l+1] );
+        47.   //-----------------------------------------------------
+        48.   // Barras das Diagonais
+        49.   //-----------------------------------------------------
+        50.   DIA = Line.ByStartPointDirectionLength(phs,LVE<1>,DVE);
+        51.   //-----------------------------------------------------
+        52.   // Extração de resultados utilizando Dicionário
+        53.   //-----------------------------------------------------
+        54.   Key = [ "Apoios", "Quan-X", "Quan-Y", "PntosH"];
+        55.   Val = [  ap     ,  qx     ,  qy     ,  phi    ];
+        56.   DIC = Dictionary.ByKeysValues ( Key ,  Val ); 
 
 
 O dicionário preparado por esta função é passado para o segundo Code Block, cuja função é localizar a posição 
-dos futuros apóios. O esquema de índices indicados na figura seguinte, são declarados nas declarações 15. e 16. 
-para formar a lista LAP que será processada pela última declaração onde se coloca um círculo apenas como 
-indicador visual da posição.
+dos futuros apóios. O esquema de índices indicados na figura, são declarados nas declarações 16. e 17. Com eles
+é formada a lista LAP que será processada na última declaração que coloca um círculo apenas para visualizar 
+a posição.
 
 ![Trama_Apoio](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b9fa06c1-179d-4ba1-abcb-121f5a38cfe2)
 
          1.  Dados;
-         2.  q   = Dados["QuaMod"];
-         3.  ap  = Dados["Apoios"];
-         4.  phi = Dados["PntosH"];
-         5.  //-----------------------------------------
-         6.  // Índices de marcação
-         7.  //-----------------------------------------
-         8.  r   = 0.25;
-         9.  i   =   ap;
-        10.  j   = -1-i;
-        11.  k   =  q-i;
-        12.  //-----------------------------------------
-        13.  // Pontos dos Apóios
-        14.  //-----------------------------------------
-        15.  LAP = [ phi[i][k], phi[j][k],
-        16.          phi[i][i], phi[j][i]];
-        17.  AP1 = Circle.ByCenterPointRadius( LAP , r );
+         2.  ap  = Dados[ "Apoios" ];
+         3.  qx  = Dados[ "Quan-X" ];
+         4.  qy  = Dados[ "Quan-Y" ];
+         5.  phi = Dados[ "PntosH" ];
+         6.  //-----------------------------------------
+         7.  // Índices de marcação
+         8.  //-----------------------------------------
+         9.  r   = 0.25;
+        10.  i   =   ap;
+        11.  j   = -1-i;
+        12.  k   = qy-i;
+        13.  //-----------------------------------------
+        14.  // Pontos dos Apóios
+        15.  //-----------------------------------------
+        16.  LAP = [ phi[i][k], phi[j][k],
+        17.          phi[i][i], phi[j][i]];
+        18.  AP1 = Circle.ByCenterPointRadius( LAP , r );
 
