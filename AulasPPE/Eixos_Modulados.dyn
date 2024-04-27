@@ -1,0 +1,571 @@
+{
+  "Uuid": "6958de28-3669-44a8-adcf-58ba1e83e5b7",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Eixos_Modulados",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Grid": {
+        "Key": "Revit.Elements.Grid",
+        "Value": "RevitNodes.dll"
+      },
+      "Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      },
+      "FamilyInstance": {
+        "Key": "Revit.Elements.FamilyInstance",
+        "Value": "RevitNodes.dll"
+      },
+      "Dimension": {
+        "Key": "Revit.Elements.Dimension",
+        "Value": "RevitNodes.dll"
+      },
+      "Line": {
+        "Key": "Autodesk.DesignScript.Geometry.Line",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Revit.Element": {
+        "Key": "Revit.Elements.Element",
+        "Value": "RevitNodes.dll"
+      },
+      "Revit.Elements.Element": {
+        "Key": "Revit.Elements.Element",
+        "Value": "RevitNodes.dll"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
+      "NumberType": "Integer",
+      "MaximumValue": 30,
+      "MinimumValue": 2,
+      "StepValue": 1,
+      "Id": "40e8f9945b4b4387adb63bffbc6abc7b",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ee3efab199604c6ba1c0bc3324e4e121",
+          "Name": "",
+          "Description": "Int64",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces integer values",
+      "InputValue": 18
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "cd50caf4a1f4499a96fa477000dd0471",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [
+        {
+          "Id": "a32e23147b6942c89bb2d964db9216a6",
+          "Name": "vis",
+          "Description": "vis",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "341159883ed14bceaf3d2308ad97ae0c",
+          "Name": "qx",
+          "Description": "qx",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3b6b0fa3d21848aabab5499b475d6022",
+          "Name": "dx",
+          "Description": "dx",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "714bce5a171044d781a320603eb4c855",
+          "Name": "rx",
+          "Description": "rx",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9f14af5670424d68a98677af88ce15d3",
+          "Name": "mx",
+          "Description": "mx",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "802ce2d03961489f8d9360f3b2dfca62",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0ec507f14cb245758372308d8079847c",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7c405a4042194785838ab44e52f641a8",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a73a0c83753948abaae1dd690b092b2f",
+          "Name": "",
+          "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d3d72dd870d249a68c5d0862a5074232",
+          "Name": "",
+          "Description": "Value of expression at line 5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6299e2b3f02447d8b7f5a1e68c445d9a",
+          "Name": "",
+          "Description": "PAR",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d3df6faa74634ff38910fda5be4d1b2c",
+          "Name": "",
+          "Description": "ix",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0ad6753e423c4015ad517a2e1ca6844d",
+          "Name": "",
+          "Description": "dex",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bf441c941f894769adcbf60be919ead7",
+          "Name": "",
+          "Description": "Cx",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ac6d1a145c3a46d383396e63c138e99a",
+          "Name": "",
+          "Description": "PX1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e97c68815d7e4d94b752d0dc257eb728",
+          "Name": "",
+          "Description": "PX2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "403972ae7507469cb5b956913516a4f5",
+          "Name": "",
+          "Description": "PX3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "10268cc26cad4a48a9bdd8dfc9e8cbed",
+          "Name": "",
+          "Description": "nume",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b08d5e9fb026487a97513d2ad7783e26",
+          "Name": "",
+          "Description": "nome",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "eb01fbd8de4c4134acea615d8d7a8d51",
+          "Name": "",
+          "Description": "eix",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "83f64c6be4bd417fb690ede8954ca38d",
+          "Name": "",
+          "Description": "Value of expression at line 21",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e6060b992a1f4126a7deffc24878eab7",
+          "Name": "",
+          "Description": "ldi",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1fda58286f754b82a665dc419dda04f5",
+          "Name": "",
+          "Description": "ref",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4bb8581c62594f649e4c02303107b430",
+          "Name": "",
+          "Description": "dim",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "vis;\nqx;\ndx;\nrx;\nmx;\nPAR  = \"Name\";\n//--------------------------------------------------\nix   = 0..qx;\ndex  = dx * rx;\nCx   = dx * ix + (ix%mx ? dex : 0);\n//--------------------------------------------------\nPX1  = Point.ByCoordinates (Cx,  10, 0);\nPX2  = PX1.Translate       ( 0, -20, 0);\nPX3  = PX1.Translate       ( 0, -22, 0);\n//--------------------------------------------------\n// Colocação de eixos com cotas\n//--------------------------------------------------\nnume = ix+1;\nnome = \"\"+nume;\neix  = Grid.ByStartPointEndPoint ( PX1 , PX2 );\neix.SetParameterByName           ( PAR , nome);\n//--------------------------------------------------\nldi  = Line.ByStartPointEndPoint ( PX3[0], PX3[-1]);\nref  = eix.Curve;\ndim  = Dimension.ByElements ( vis,eix,ldi,\"\",\"\" );"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
+      "NumberType": "Integer",
+      "MaximumValue": 5,
+      "MinimumValue": 1,
+      "StepValue": 1,
+      "Id": "5306f21d759d4c87a2b866eb8db776de",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8a13732cd6914589adce734689a00f90",
+          "Name": "",
+          "Description": "Int64",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces integer values",
+      "InputValue": 4
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Views, DSRevitNodesUI",
+      "SelectedIndex": 6,
+      "SelectedString": "Nível 1",
+      "Id": "5e8aeba7bb524ec9b7edc521dc5e3b74",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "90e4cfd7208e484bbfd86329e10434cf",
+          "Name": "Views",
+          "Description": "The selected Views",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All views available in the current document."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 6.0,
+      "MinimumValue": 1.0,
+      "StepValue": 0.25,
+      "Id": "31cbc21bd72144c59a94ace4c9260411",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8fc78f2f70574348845417e670038797",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 1.0
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 0.75,
+      "MinimumValue": 0.25,
+      "StepValue": 0.125,
+      "Id": "84126d1fb9444b75b625bf0ce6fef028",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "bbc4160281294d78848539a67c41afed",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 0.5
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "ee3efab199604c6ba1c0bc3324e4e121",
+      "End": "341159883ed14bceaf3d2308ad97ae0c",
+      "Id": "760b15064b3749bfb514c151410a8b68",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8a13732cd6914589adce734689a00f90",
+      "End": "9f14af5670424d68a98677af88ce15d3",
+      "Id": "3149264d1a3d419bbdcea58652c09568",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "90e4cfd7208e484bbfd86329e10434cf",
+      "End": "a32e23147b6942c89bb2d964db9216a6",
+      "Id": "13b3a20f5ed8424896ca5039355843a9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8fc78f2f70574348845417e670038797",
+      "End": "3b6b0fa3d21848aabab5499b475d6022",
+      "Id": "bb0f40aa458240dbbd51b2669d5ec388",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "bbc4160281294d78848539a67c41afed",
+      "End": "714bce5a171044d781a320603eb4c855",
+      "Id": "fc3353356eda4b1998ed607d8a5d7f79",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.0",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "7.1",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.0.3.7597",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": 0.8332461447593988,
+      "EyeY": 0.9721516397044863,
+      "EyeZ": -1.1183257033337999,
+      "LookX": -0.8332461447593988,
+      "LookY": -0.9721516397044863,
+      "LookZ": 1.1183257033337999,
+      "UpX": -0.2286440134048462,
+      "UpY": 0.9238796830177307,
+      "UpZ": 0.3068687617778778
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "40e8f9945b4b4387adb63bffbc6abc7b",
+        "Name": "Quantidade Módulos X",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 156.32478362188272,
+        "Y": 329.73344012508795
+      },
+      {
+        "Id": "cd50caf4a1f4499a96fa477000dd0471",
+        "Name": "Eixos Modulados",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 597.8203701894269,
+        "Y": 381.603515522873
+      },
+      {
+        "Id": "5306f21d759d4c87a2b866eb8db776de",
+        "Name": "Valor Modular em X",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 156.32478362188272,
+        "Y": 685.4458110814489
+      },
+      {
+        "Id": "5e8aeba7bb524ec9b7edc521dc5e3b74",
+        "Name": "Views",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 286.3247836218827,
+        "Y": 211.16264980630092
+      },
+      {
+        "Id": "31cbc21bd72144c59a94ace4c9260411",
+        "Name": "Dimensão Módulo X",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 156.32478362188272,
+        "Y": 448.304230443875
+      },
+      {
+        "Id": "84126d1fb9444b75b625bf0ce6fef028",
+        "Name": "Razão Módulo X",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 156.32478362188272,
+        "Y": 566.875020762662
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "5c69ffcc4f7847fa99a0cad7e29cbd11",
+        "Title": "Cria Eixos Modulados e cotados",
+        "DescriptionText": "Prof: José Luis Menegoitto\r\nEscola Politécnica da UFRJ",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "40e8f9945b4b4387adb63bffbc6abc7b",
+          "cd50caf4a1f4499a96fa477000dd0471",
+          "5306f21d759d4c87a2b866eb8db776de",
+          "5e8aeba7bb524ec9b7edc521dc5e3b74",
+          "31cbc21bd72144c59a94ace4c9260411",
+          "84126d1fb9444b75b625bf0ce6fef028"
+        ],
+        "HasNestedGroups": false,
+        "Left": 146.32478362188272,
+        "Top": 129.16264980630092,
+        "Width": 991.495586567544,
+        "Height": 769.4408657165721,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 211.16264980630092,
+        "InitialHeight": 701.4408657165721,
+        "TextblockHeight": 72.0,
+        "Background": "#FF48B9FF"
+      }
+    ],
+    "X": -10.480358049768668,
+    "Y": 32.67105770397649,
+    "Zoom": 0.5429885813755772
+  }
+}
