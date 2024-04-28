@@ -1,0 +1,339 @@
+{
+  "Uuid": "ae0fa826-9541-443f-b3a0-ebf1360f7ff5",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Mover_Simbolo_Vista",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Transaction": {
+        "Key": "Revit.Transaction.Transaction",
+        "Value": "RevitNodes.dll"
+      },
+      "Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Revit.Element": {
+        "Key": "Revit.Elements.Element",
+        "Value": "RevitNodes.dll"
+      },
+      "Revit.Elements.Element": {
+        "Key": "Revit.Elements.Element",
+        "Value": "RevitNodes.dll"
+      },
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 222,
+      "SelectedString": "OST_Elev",
+      "Id": "a1a1b56df96d4c16849b9ffa79dce283",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "56881fdd016b4c6bbfa866614d6b08ae",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "147a919626804362b5d5c75eea214482",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [
+        {
+          "Id": "3274d87b0761432f8a13260c0c9384be",
+          "Name": "abre",
+          "Description": "abre",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "baa79a52118e43c3b19a802a45aa7538",
+          "Name": "simb",
+          "Description": "simb",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4b322dc6b02d4e828ebf3923ff0c8f9c",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "574b95fd4f664b98993603c2f2c2b8f2",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2517201288fb4531953775034888c590",
+          "Name": "",
+          "Description": "n",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1eee34b09b7540028dcd078b17dee64f",
+          "Name": "",
+          "Description": "LV",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f79af336592a48bd9d1dd1eff6c2e1c1",
+          "Name": "",
+          "Description": "tra",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d37b0c70657240f2a03fd03789c1c18f",
+          "Name": "",
+          "Description": "Value of expression at line 12",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "79434f9ed609467faa4e2a52625de97a",
+          "Name": "",
+          "Description": "Value of expression at line 13",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "abre;\nsimb;\nn  = abre? 1 : -1;\nLV = [\n      Vector.ByCoordinates(    0 , n*1, 0 ),\n      Vector.ByCoordinates( n* 1,    0, 0 ),\n      Vector.ByCoordinates( n*-1,    0, 0 ),\n      Vector.ByCoordinates(    0, n*-1, 0 )\n     ];\n//----------------------------------------\ntra = Transaction.Start ( simb );\ntra.MoveByVector( LV  );\nTransaction.End ( tra );"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "Id": "50388308f4974882be41f12120711b95",
+      "NodeType": "BooleanInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "705495b198d84f45a5a2d9c454ead23e",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Enables selection between True and False",
+      "InputValue": true
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "Id": "65e074e621ef42a783f5649c66953a37",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "c05422d57a7647dfba853a8d2c64c1f7",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "371f11a3df454965ba588cce3917e9f7",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "56881fdd016b4c6bbfa866614d6b08ae",
+      "End": "c05422d57a7647dfba853a8d2c64c1f7",
+      "Id": "c5e33806d3024ec1b4176f4faa6a0451",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "705495b198d84f45a5a2d9c454ead23e",
+      "End": "3274d87b0761432f8a13260c0c9384be",
+      "Id": "c286dd16112b40f0bece7888e44f66dc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "371f11a3df454965ba588cce3917e9f7",
+      "End": "baa79a52118e43c3b19a802a45aa7538",
+      "Id": "b6a44d1fe5954e0581bb64fccfd114ae",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.0",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "7.1",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.0.3.7597",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "a1a1b56df96d4c16849b9ffa79dce283",
+        "Name": "Categories",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 127.28803463563975,
+        "Y": 323.01562144706867
+      },
+      {
+        "Id": "147a919626804362b5d5c75eea214482",
+        "Name": "Ajustar Marcas de Vistas",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 695.2908636048512,
+        "Y": 234.10220643128653
+      },
+      {
+        "Id": "50388308f4974882be41f12120711b95",
+        "Name": "Abrir Espaço",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 457.61702596542693,
+        "Y": 182.66905432782482
+      },
+      {
+        "Id": "65e074e621ef42a783f5649c66953a37",
+        "Name": "All Elements of Category",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 392.73718594204286,
+        "Y": 322.92031076195565
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "f93071386bed4de7a2c82326f3ec5004",
+        "Title": "Modifica Posição Símbolos de Vista",
+        "DescriptionText": "Prof. José Luis Menegotto\r\nEscola Politécnica da UFRJ",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "a1a1b56df96d4c16849b9ffa79dce283",
+          "147a919626804362b5d5c75eea214482",
+          "50388308f4974882be41f12120711b95",
+          "65e074e621ef42a783f5649c66953a37"
+        ],
+        "HasNestedGroups": false,
+        "Left": 117.28803463563975,
+        "Top": 100.66905432782482,
+        "Width": 1065.0028289692114,
+        "Height": 454.4331521034617,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 182.66905432782482,
+        "InitialHeight": 381.0406150494042,
+        "TextblockHeight": 72.0,
+        "Background": "#FF48B9FF"
+      }
+    ],
+    "X": -123.32035092881563,
+    "Y": -63.62399698100046,
+    "Zoom": 0.7248725513775853
+  }
+}
