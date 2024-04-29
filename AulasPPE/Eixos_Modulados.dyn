@@ -346,7 +346,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces integer values",
-      "InputValue": 2
+      "InputValue": 5
     },
     {
       "ConcreteType": "DSRevitNodesUI.Views, DSRevitNodesUI",
@@ -398,7 +398,7 @@
       "NumberType": "Double",
       "MaximumValue": 0.75,
       "MinimumValue": 0.25,
-      "StepValue": 0.125,
+      "StepValue": 0.25,
       "Id": "84126d1fb9444b75b625bf0ce6fef028",
       "NodeType": "NumberInputNode",
       "Inputs": [],
@@ -415,7 +415,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces numeric values",
-      "InputValue": 0.25
+      "InputValue": 0.5
     },
     {
       "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
@@ -440,254 +440,6 @@
       "Replication": "Disabled",
       "Description": "Produces integer values",
       "InputValue": 10
-    },
-    {
-      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
-      "WatchWidth": 200.0,
-      "WatchHeight": 200.0,
-      "Id": "1c1292a7590e42ad90759012777270c8",
-      "NodeType": "ExtensionNode",
-      "Inputs": [
-        {
-          "Id": "efa77c182b6440a0ac15d6e6d066dbc1",
-          "Name": "",
-          "Description": "Node to show output from",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "eab99d7a5a024633a6beed98b36ce86a",
-          "Name": "",
-          "Description": "Node output",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Visualizes a node's output"
-    },
-    {
-      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
-      "SelectedIndex": 222,
-      "SelectedString": "OST_Elev",
-      "Id": "49e1aa24804f4b29adb1960db4355c5e",
-      "NodeType": "ExtensionNode",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "cdcaf5e779424e5d983be645c4798e21",
-          "Name": "Category",
-          "Description": "The selected Category.",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "All built-in categories."
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
-      "Id": "5940bfe5143e48ccbd14da11e6fd7b23",
-      "NodeType": "CodeBlockNode",
-      "Inputs": [
-        {
-          "Id": "3677c66b8d394dfbab5a82f42a9c22b6",
-          "Name": "simb",
-          "Description": "simb",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "a0d6a5b675a04a98992baabd74466284",
-          "Name": "abre",
-          "Description": "abre",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "f29d5a6836d04f95a58046ea7d902504",
-          "Name": "",
-          "Description": "Value of expression at line 1",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "2aa77369254448abb1a702e64d5619bc",
-          "Name": "",
-          "Description": "Value of expression at line 2",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "11f1a75894d34c82a253ae9488e44da4",
-          "Name": "",
-          "Description": "param",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "c635d4a2ed8b4079b41c465ce318b84a",
-          "Name": "",
-          "Description": "n",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "25375d83316d4293ba1b0107ffb7b90a",
-          "Name": "",
-          "Description": "SIM",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "d57b8134cf8f4cc4b79f96fdd16b1bf3",
-          "Name": "",
-          "Description": "lvi",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "a0a412a50f8c40768131ebe152f5ba45",
-          "Name": "",
-          "Description": "dex",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "de21d17e3e174ebda58e5383b694eb78",
-          "Name": "",
-          "Description": "dey",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "ce3c59a4cef64c6e82cee24404454b45",
-          "Name": "",
-          "Description": "i",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "84f43ccf3f5e427ca793094f7f891c57",
-          "Name": "",
-          "Description": "VEC",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "b353a522cfa341d7bb6b37ff20e24912",
-          "Name": "",
-          "Description": "tra",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "41d15f035f1b4dbe9b46c860e181372b",
-          "Name": "",
-          "Description": "Value of expression at line 19",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "f7e9390a8ae04a8b8c62bbbbbe09dc50",
-          "Name": "",
-          "Description": "Value of expression at line 20",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Allows for DesignScript code to be authored directly",
-      "Code": "simb;\nabre;\nparam = \"View Name\";\n//-------------------------------------------\nn   = abre ? 1 : -1;\nSIM = simb.GetParameterValueByName( param );\nlvi = [\n        \"Leste\",\"Norte\",\"Oeste\",\"Sul\",\n        \"Este\" ,\"Norte\",\"Oeste\",\"Sur\",\n        \"East\" ,\"North\",\"West\" ,\"South\"\n      ];\ndex = [ n*1, 0   , n*-1 , 0   ];\ndey = [ 0  , n*1 , 0    , n*-1];\ni   = List.IndexOf( SIM , lvi);\n//-------------------------------------------\nVEC = Vector.ByCoordinates ( dex[i], dey[i]);\n//-------------------------------------------\ntra = Transaction.Start ( simb );\ntra.MoveByVector( VEC  );\nTransaction.End ( tra );"
-    },
-    {
-      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
-      "Id": "ef1d0a73dafa4dc7a5c73d0597deb1bd",
-      "NodeType": "BooleanInputNode",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "4f6e4f1b593e4aa58c6acd2dc779183c",
-          "Name": "",
-          "Description": "Boolean",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Enables selection between True and False",
-      "InputValue": true
-    },
-    {
-      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
-      "Id": "5005f06140be48fc8de8d3c02c0d29de",
-      "NodeType": "ExtensionNode",
-      "Inputs": [
-        {
-          "Id": "3ef491b658eb4ed094d2602b4e87ec3f",
-          "Name": "Category",
-          "Description": "The Category",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "3addd7722d1c4ff6a0c850e9ad94cad1",
-          "Name": "Elements",
-          "Description": "An element class.",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Get all elements of the specified category from the model."
     }
   ],
   "Connectors": [
@@ -695,12 +447,6 @@
       "Start": "ee3efab199604c6ba1c0bc3324e4e121",
       "End": "211345eb886b4383b02d3d3bc89fd4ab",
       "Id": "5b79e49ab00c4fd285da8ba68204906b",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "c7d48f7bf287470ebaf8c10be0a3d304",
-      "End": "efa77c182b6440a0ac15d6e6d066dbc1",
-      "Id": "4b1209bb044946dc8382c0ba7e9e34d5",
       "IsHidden": "False"
     },
     {
@@ -731,24 +477,6 @@
       "Start": "482da473b45842bb93d5556383ef5f13",
       "End": "7f14141cc0094c45b78f4716fbbaf26d",
       "Id": "c23a352bfb864381ad584c2a10854557",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "cdcaf5e779424e5d983be645c4798e21",
-      "End": "3ef491b658eb4ed094d2602b4e87ec3f",
-      "Id": "4135bed422294d548dbcb61e8c44192f",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "4f6e4f1b593e4aa58c6acd2dc779183c",
-      "End": "a0d6a5b675a04a98992baabd74466284",
-      "Id": "7c650d7f70e2493f97663a11bc05357b",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "3addd7722d1c4ff6a0c850e9ad94cad1",
-      "End": "3677c66b8d394dfbab5a82f42a9c22b6",
-      "Id": "1990f4176d364a2492b12f10c54e038e",
       "IsHidden": "False"
     }
   ],
@@ -782,8 +510,8 @@
     {
       "NodeId": "cd50caf4-a1f4-499a-96fa-477000dd0471",
       "Binding": {
-        "ByStartPointEndPoint_InClassDecl-1_InFunctionScope-1_Instance19_cd50caf4-a1f4-499a-96fa-477000dd0471": "H4sIAAAAAAAACq3ToQ7DMAwE0H8xbiTXS5qkeKR4sCmIk24aKdjCqv77ttIZmp1Ousdu3mFb322t19wyjPMO9QywJ7i113N7TNcEYwJ0aLFSMESxGMuUTeZ7MBE9s/12mYtB7IPlYhN0CaatndveRaIBDzg6Fd0Jeq+mD4JOaroX9IuaHgTdqulR0J2angV9UNNZ0L2aXgQ9qOlV0KOavv7r/vfV5Vg+l5ofAhwEAAA=",
-        "ByElements_InClassDecl-1_InFunctionScope-1_Instance25_cd50caf4-a1f4-499a-96fa-477000dd0471": "H4sIAAAAAAAACh3LMQqAMAwF0Lv82UAaKrbOLs6OxiGpKC4O0k28u+L64M03VquGHrdiqtdx7uOg6BXccuRVEonkQtHFyHxLlLlzj5+ZF2IOKXrZFI1iPOt/Q5tFuvDgWV4yq/Q7XwAAAA=="
+        "ByStartPointEndPoint_InClassDecl-1_InFunctionScope-1_Instance19_cd50caf4-a1f4-499a-96fa-477000dd0471": "H4sIAAAAAAAACq3TsRKDIBAE0H+5WmYOBAVrG+uUYgGCmTQUCR3jv5vY5srrdnZmX7drg5I/Nac51ADT2iDdAZqHR32/ynOZPUwe0KDGpKxQyu1CRxVEiIcVDscY9bcLcReI0hq0u4fOw1LqvZXG9drqE86ORU+Ebtj0TOgDm34Q+silOyR0y6ZLQndsuvrXHbLpPaFLNl0TumLTDaH3bPpA6L+vbud2AfJPh8ccBAAA",
+        "ByElements_InClassDecl-1_InFunctionScope-1_Instance25_cd50caf4-a1f4-499a-96fa-477000dd0471": "H4sIAAAAAAAACh3LsQ5AQAwG4Hf5Z03q3MXVbDEb1dASYjHIbeLdifVLvunGasXQ4VaM5TrOfegVnYITR15DphBkoejByHzLJNy6x8/MF2Kuc2JpFZViOMt/6yRNlPTgmV/o5CQTXwAAAA=="
       }
     }
   ],
@@ -817,8 +545,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 156.32478362188272,
-        "Y": 329.73344012508795
+        "X": -683.5315871701025,
+        "Y": -241.08816007893535
       },
       {
         "Id": "cd50caf4a1f4499a96fa477000dd0471",
@@ -827,8 +555,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 685.5368048389607,
-        "Y": 409.3483387247853
+        "X": -154.3195659530245,
+        "Y": -161.47326147923798
       },
       {
         "Id": "5306f21d759d4c87a2b866eb8db776de",
@@ -837,8 +565,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 156.32478362188272,
-        "Y": 685.4458110814489
+        "X": -683.5315871701025,
+        "Y": 114.62421087742564
       },
       {
         "Id": "5e8aeba7bb524ec9b7edc521dc5e3b74",
@@ -847,28 +575,28 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 283.7480017455631,
-        "Y": 210.97477059594894
+        "X": -556.1083690464221,
+        "Y": -359.84682960807436
       },
       {
         "Id": "31cbc21bd72144c59a94ace4c9260411",
-        "Name": "Dimensão Módulo X",
+        "Name": "Dimensão Módulo Básico X",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 156.32478362188272,
-        "Y": 448.304230443875
+        "X": -683.5315871701025,
+        "Y": -122.51736976014831
       },
       {
         "Id": "84126d1fb9444b75b625bf0ce6fef028",
-        "Name": "Razão Módulo X",
+        "Name": "Razão Adit. Subst. Mod. X",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 156.32478362188272,
-        "Y": 566.875020762662
+        "X": -683.5315871701025,
+        "Y": -3.9465794413613366
       },
       {
         "Id": "320b13ef1bff4adaaa561e2c48c671c4",
@@ -877,58 +605,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 154.85325260251147,
-        "Y": 809.6777434059368
-      },
-      {
-        "Id": "1c1292a7590e42ad90759012777270c8",
-        "Name": "Watch",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": true,
-        "X": 1308.6448765902137,
-        "Y": 714.5288765888813
-      },
-      {
-        "Id": "49e1aa24804f4b29adb1960db4355c5e",
-        "Name": "Categories",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": true,
-        "X": 159.42329499460106,
-        "Y": -391.9233619838682
-      },
-      {
-        "Id": "5940bfe5143e48ccbd14da11e6fd7b23",
-        "Name": "Ajustar Marcas de Vistas",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": true,
-        "X": 716.9098302427226,
-        "Y": -352.40805890539275
-      },
-      {
-        "Id": "ef1d0a73dafa4dc7a5c73d0597deb1bd",
-        "Name": "Abrir Espaço",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": true,
-        "X": 484.6714055234845,
-        "Y": -267.1652498026447
-      },
-      {
-        "Id": "5005f06140be48fc8de8d3c02c0d29de",
-        "Name": "All Elements of Category",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": true,
-        "X": 422.14373019681193,
-        "Y": -390.91584318725074
+        "X": -685.0031181894738,
+        "Y": 238.85614320191348
       }
     ],
     "Annotations": [
@@ -949,45 +627,20 @@
           "320b13ef1bff4adaaa561e2c48c671c4"
         ],
         "HasNestedGroups": false,
-        "Left": 144.85325260251147,
-        "Top": 128.97477059594894,
+        "Left": -695.0031181894738,
+        "Top": -441.84682960807436,
         "Width": 1080.2835522364494,
         "Height": 813.7735681288364,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": 210.97477059594894,
+        "InitialTop": -359.84682960807436,
         "InitialHeight": 743.7029728099878,
-        "TextblockHeight": 72.0,
-        "Background": "#FF48B9FF"
-      },
-      {
-        "Id": "c830182eeb164ed1868684c75137bc85",
-        "Title": "Modifica Posição Símbolos de Vista",
-        "DescriptionText": "Prof. José Luis Menegotto\r\nEscola Politécnica da UFRJ",
-        "IsExpanded": true,
-        "WidthAdjustment": 0.0,
-        "HeightAdjustment": 0.0,
-        "Nodes": [
-          "49e1aa24804f4b29adb1960db4355c5e",
-          "5940bfe5143e48ccbd14da11e6fd7b23",
-          "ef1d0a73dafa4dc7a5c73d0597deb1bd",
-          "5005f06140be48fc8de8d3c02c0d29de"
-        ],
-        "HasNestedGroups": false,
-        "Left": 149.42329499460106,
-        "Top": -473.9233619838682,
-        "Width": 1062.2865352481215,
-        "Height": 557.3153030784754,
-        "FontSize": 36.0,
-        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": -391.9233619838682,
-        "InitialHeight": 505.3153030784754,
         "TextblockHeight": 72.0,
         "Background": "#FF48B9FF"
       }
     ],
-    "X": 184.09615859589863,
-    "Y": 324.70667042629555,
-    "Zoom": 0.43676115274134597
+    "X": 471.80268626754776,
+    "Y": 279.3513990063295,
+    "Zoom": 0.6119474199172023
   }
 }
