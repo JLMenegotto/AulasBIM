@@ -119,6 +119,11 @@ Finalmente, a linha 27 cria as lajes construtivas concretas.
 
 
 ## Treliças Planas. Função Aula_PPE_06b.dyn
+As seguintes funções têm como objetivo trabalhar com a manipulação de listas de coordenadas (X Y Z) para gerar 
+diversas configurações formais como treliças planas e espaciais, matrizes de colunas e vigas. As configurações
+podem usar a função Remainder (%) para gerar variação formal. 
+
+
 ![PPE_Aula06b_2024-04-23_09-20-58](https://github.com/JLMenegotto/AulasBIM/assets/9437020/a325ed82-a450-4283-bb6a-056971726325)
 ![Treliças](https://github.com/JLMenegotto/AulasBIM/assets/9437020/368b7c16-3297-4a82-a4af-7f49f6be83ad)
 
