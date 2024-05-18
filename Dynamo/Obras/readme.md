@@ -13,7 +13,8 @@ Tendo desenhado cada linha dos 22 perfis seccionais, o algoritmo Dynamo faz a le
 ![CatedralBrasilia_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/4a55d09c-9fad-4390-b4a6-9f0744708c22)
 
 ## Viaduto_Millau_2023.dyn
-Leia o trabalho Apresentado no XIV Congresso Brasileiro de Pontes e Estruturas CBPE 2023
+Leia o trabalho Apresentado no XIV Congresso Brasileiro de Pontes e Estruturas CBPE 2023.
+
 ***Modelagem do Viaduto Millau. Experiência didática orientada e introdutória ao projeto utilizando meios computacionais CAD BIM.*** 
 
 Link do artigo: http://abpe.org.br/trabalhos2023/trabalhos/ID_055.pdf
