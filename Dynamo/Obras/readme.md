@@ -1,6 +1,6 @@
 # Obras 
 
-Esta pasta tem funções com a parametrização de diversas obras existentes. 
+Esta pasta tem funções desarrolladas estudar a parametrização de diversas obras significativas existentes. 
 
 ## Catedral_Brasilia.dyn
 Modela a forma principal da Catedral. Para rodar a função deve ser utilizado o arquivo **Catedral_Brasilia.rvt**. A técnica utilizada consiste em realizar a leitura das linhas que representam em 2D as seções transversais de acordo à marcação do arquivo **Cat_Brasilia_Perfil.jpg**. 
@@ -23,9 +23,7 @@ Link do artigo: http://abpe.org.br/trabalhos2023/trabalhos/ID_055.pdf
 
 ![Viaduto_Millau_2023_2024-05-18_10-29-38](https://github.com/JLMenegotto/AulasBIM/assets/9437020/2683cc08-a720-45ba-9301-8304c19d13fe)
 
-
 ![ViadutoMillau](https://github.com/JLMenegotto/AulasBIM/assets/9437020/de4afc5b-c652-4fc6-93d8-1104f04c209f)
-
 
 ## Viaduto_Millau_Pilone_Forma_2023.dyn
 ### A forma do pilone do viaduto modelada com a técnica de Loft
@@ -33,7 +31,6 @@ Link do artigo: http://abpe.org.br/trabalhos2023/trabalhos/ID_055.pdf
 Colocar Dynamo para executar em modo Manual.
 
 ![Viaduto_Millau_Pilone_Forma_2023_2024-05-18_11-37-49](https://github.com/JLMenegotto/AulasBIM/assets/9437020/604ebf1a-746c-46ac-82f3-d04d2cceda1b)
-
 
 ![Pilone](https://github.com/JLMenegotto/AulasBIM/assets/9437020/331f5d88-5666-4a43-ae55-42e1fa6dafb6)
 
