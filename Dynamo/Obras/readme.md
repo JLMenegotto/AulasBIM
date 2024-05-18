@@ -32,7 +32,8 @@ Link do artigo: http://abpe.org.br/trabalhos2023/trabalhos/ID_055.pdf
 
 Colocar Dynamo para executar em modo Manual.
 
-![Viaduto_Millau_Pilone_Forma_2023_2024-05-18_11-34-41](https://github.com/JLMenegotto/AulasBIM/assets/9437020/9fb55717-4b60-4137-96dc-2bdd9d9c6ab8)
+![Viaduto_Millau_Pilone_Forma_2023_2024-05-18_11-37-49](https://github.com/JLMenegotto/AulasBIM/assets/9437020/604ebf1a-746c-46ac-82f3-d04d2cceda1b)
+
 
 ![Pilone](https://github.com/JLMenegotto/AulasBIM/assets/9437020/331f5d88-5666-4a43-ae55-42e1fa6dafb6)
 
