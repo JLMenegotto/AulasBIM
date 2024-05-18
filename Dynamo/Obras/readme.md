@@ -30,5 +30,9 @@ Link do artigo: http://abpe.org.br/trabalhos2023/trabalhos/ID_055.pdf
 ## Viaduto_Millau_Pilone_Forma_2023.dyn
 ### A forma do pilone do viaduto modelada com a técnica de Loft
 
+Colocar Dynamo para executar em modo Manual.
+
+![Viaduto_Millau_Pilone_Forma_2023_2024-05-18_11-34-41](https://github.com/JLMenegotto/AulasBIM/assets/9437020/9fb55717-4b60-4137-96dc-2bdd9d9c6ab8)
+
 ![Pilone](https://github.com/JLMenegotto/AulasBIM/assets/9437020/331f5d88-5666-4a43-ae55-42e1fa6dafb6)
 
