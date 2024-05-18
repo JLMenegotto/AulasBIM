@@ -21,6 +21,8 @@ Link do artigo: http://abpe.org.br/trabalhos2023/trabalhos/ID_055.pdf
 
 ### A estruturação da forma global do viaduto
 
+![Viaduto_Millau_2023_2024-05-18_10-11-31](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b24f8e33-ab9c-4e69-b4a3-756c8019ad8d)
+
 ![ViadutoMillau](https://github.com/JLMenegotto/AulasBIM/assets/9437020/de4afc5b-c652-4fc6-93d8-1104f04c209f)
 
 
