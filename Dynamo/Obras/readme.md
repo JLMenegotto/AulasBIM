@@ -13,6 +13,8 @@ Tendo desenhado cada linha dos 22 perfis seccionais, o algoritmo Dynamo faz a le
 ![CatedralBrasilia_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/4a55d09c-9fad-4390-b4a6-9f0744708c22)
 
 ## Viaduto_Millau_2023.dyn
+http://abpe.org.br/trabalhos2023/trabalhos/ID_055.pdf
+
 A forma global do viaduto
 
 ![ViadutoMillau](https://github.com/JLMenegotto/AulasBIM/assets/9437020/de4afc5b-c652-4fc6-93d8-1104f04c209f)
