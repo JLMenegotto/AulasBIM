@@ -60,12 +60,11 @@
   "Nodes": [
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
-      "NodeType": "CodeBlockNode",
-      "Code": "z1;\nlongi;\ncorda;\nAltMastro;\nAltPilone;\nes;\nei;\ndc;\nqe           = 11.0;\nAltCaixao    =  4.5;\nModulos      = 14.0;\nModulosX     = 210;\nqm           = ModulosX / Modulos;\nsegm         = 0..1..1/ModulosX;\nAltPista     = AltPilone + AltCaixao;\nV_Cai        = Vector.Scale(Vector.ZAxis(), -AltCaixao);\nV_Pil        = Vector.Scale(Vector.ZAxis(),  AltPilone);\nV_Mas        = Vector.Scale(Vector.ZAxis(),  AltMastro);\n// -------------------------------------------------------\n// Definição dos arcos da pista\n// -------------------------------------------------------\np1           = Point.ByCoordinates   ( 0        , 0     , z1 );\np2           = Point.ByCoordinates   ( longi/2  , corda , z1 );\np3           = Point.ByCoordinates   ( longi    , 0     , z1 );\nEixo         = Arc.ByThreePoints     ( p1 , p2  , p3         );\n// -------------------------------------------------------\n// Definição das seções do caixão\n// -------------------------------------------------------\nPto_CL       = Arc.PointAtParameter  ( Eixo   , segm ).Translate(0, 0, AltPista);\nV_Nor        = Arc.NormalAtParameter ( Eixo   , segm );\nPto_CE       = Point.Translate       ( Pto_CL , V_Nor , [ 16.02 , -16.02]<1>);\nPto_CI       = Point.Translate       ( Pto_CL , V_Nor , [  2.50 ,  -2.50]<1>);\nPto_IN       = Point.Translate       ( Pto_CI , V_Cai );\nL_PtoX       = List.Transpose        ( [Pto_CE[0], Pto_CE[1], Pto_IN[1], Pto_IN[0]]);\nPOL_CX       = PolyCurve.ByPoints    ( L_PtoX, true);\n// -------------------------------------------------------\n// Divisão do Arco da Pista em Segmentos entre Mastros\n// -------------------------------------------------------\nepe          = 0+(1/qm)..1..#qm;\nepd          = 1-(1/qm)..0..#qm;\nPista_Segmen = Arc.DivideEqually     ( Eixo    , Modulos );\nPista_EsqDir = List.TakeEveryNthItem ( Pista_Segmen , [2,2]  , [1,2] );\nCab_Esq      = Line.PointAtParameter ( Pista_EsqDir[0] , epe<1> );\nCab_Dir      = Line.PointAtParameter ( Pista_EsqDir[1] , epd<1> );\nPis_EstE     = Point.Translate       ( Cab_Esq, 0, 0 , AltPista);\nPis_EstD     = Point.Translate       ( Cab_Dir, 0, 0 , AltPista);\n// -------------------------------------------------------\n// Coloca Eixo do Pilone\n// -------------------------------------------------------\nPto_Pil      = Line.PointAtParameter(Pista_EsqDir[0], 1);\nPilones      = Line.ByStartPointDirectionLength(Pto_Pil, V_Pil, AltPilone);\n// -------------------------------------------------------\n// Coloca Eixo do Mastro\n// -------------------------------------------------------\nPto_Mas      = Point.Translate(Pto_Pil, 0, 0, AltPista);\nMastros      = Line.ByStartPointDirectionLength(Pto_Mas, V_Pil, AltMastro);\n// -------------------------------------------------------\n// Definição dos pontos dos Estais sobre os Mastros\n// -------------------------------------------------------\ni_Mastr      = List.TakeItems        ( ei..es..(es-ei)/(qe+2) , 11 );\nPto_EsE      = Transpose(Line.PointAtParameter ( Mastros<1> , List.Reverse(i_Mastr)));\nPto_EsD      = Transpose(Line.PointAtParameter ( Mastros<1> , List.Reverse(i_Mastr)));\n// ------------------------------------------------------\n// Traçado das Harpas\n// ------------------------------------------------------\nL_EstaE      = Line.ByStartPointEndPoint(Pto_EsE , Pis_EstE);\nL_EstaD      = Line.ByStartPointEndPoint(Pto_EsD , Pis_EstD);\n// ----------------------------------------------------\n// Colocação dos Levels\n// ----------------------------------------------------\n//Level.ByElevationAndName(AltPista , \"Viaduto_Pista\");\n//Level.ByElevationAndName(p1.Z     , \"Viaduto_Base\");",
       "Id": "ad66fbd74d1d48ab86e04a229419f92e",
+      "NodeType": "CodeBlockNode",
       "Inputs": [
         {
-          "Id": "bce1c98b87da443d81c2ec01696df0b9",
+          "Id": "d958145f7e73487a8367de9a0ca6e16c",
           "Name": "z1",
           "Description": "z1",
           "UsingDefaultValue": false,
@@ -74,7 +73,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "91b51063998e405c8e086288b8fbe06b",
+          "Id": "a0aa7b2c9f3f45f283e06ef5a1c19c48",
           "Name": "longi",
           "Description": "longi",
           "UsingDefaultValue": false,
@@ -83,7 +82,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "04a98afb70f34aebb073f6bd70d02e06",
+          "Id": "4e3e424a667c46b2910652f7f6508bcb",
           "Name": "corda",
           "Description": "corda",
           "UsingDefaultValue": false,
@@ -92,7 +91,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "a5266555b5e1478bab70b396e6af896e",
+          "Id": "363eb188095e43d99b99a1eca89dd843",
           "Name": "AltMastro",
           "Description": "AltMastro",
           "UsingDefaultValue": false,
@@ -101,7 +100,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "3b7c54ff13b2468ea2689daf51de6014",
+          "Id": "da20b339df1b4a5e80588e14814b5c3e",
           "Name": "AltPilone",
           "Description": "AltPilone",
           "UsingDefaultValue": false,
@@ -110,7 +109,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "9f42d5295e744908be859d5fb87a33d4",
+          "Id": "953ec98b24124e2782dcb0a495870271",
           "Name": "es",
           "Description": "es",
           "UsingDefaultValue": false,
@@ -119,18 +118,9 @@
           "KeepListStructure": false
         },
         {
-          "Id": "7f9157d9530f42c4bb6e03d2a849d559",
+          "Id": "2aa8b18d4ac8439d9ee808f62e697f7e",
           "Name": "ei",
           "Description": "ei",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "b19d0827c2d64534aeab0e55b17bbbad",
-          "Name": "dc",
-          "Description": "dc",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -139,7 +129,7 @@
       ],
       "Outputs": [
         {
-          "Id": "e224a9e3acdb4cfd9ca1c448b12b42da",
+          "Id": "c4346ddb41d04fc0b3b9f9c8cd988a76",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -148,7 +138,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "d437124573e74346833923864329e3ed",
+          "Id": "09b33afb284a4a75ad4364ac13294f1b",
           "Name": "",
           "Description": "Value of expression at line 2",
           "UsingDefaultValue": false,
@@ -157,7 +147,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "d671d997ecc44ee0a48339a55ac3c62e",
+          "Id": "4d575269fcae4e0fb356f57a3193990e",
           "Name": "",
           "Description": "Value of expression at line 3",
           "UsingDefaultValue": false,
@@ -166,7 +156,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "90809ae6230745baa7b5a73442d535eb",
+          "Id": "2e06af05563a4a768f0dc3104f3cb03c",
           "Name": "",
           "Description": "Value of expression at line 4",
           "UsingDefaultValue": false,
@@ -175,7 +165,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "025e3826b3734b228b460b5ff61576cc",
+          "Id": "6b083a4e2b2e4754ad6ef29c901eb8c2",
           "Name": "",
           "Description": "Value of expression at line 5",
           "UsingDefaultValue": false,
@@ -184,7 +174,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "fbb96203e00f4a15ba6fe47e244d0bcd",
+          "Id": "1d2d54f1fd6d4e679e71d28bbbc8ac47",
           "Name": "",
           "Description": "Value of expression at line 6",
           "UsingDefaultValue": false,
@@ -193,7 +183,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "b73ab8a630e74464992186d6fd0ee2e2",
+          "Id": "b77f3f9d439747da99404942eade3f88",
           "Name": "",
           "Description": "Value of expression at line 7",
           "UsingDefaultValue": false,
@@ -202,16 +192,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "f2433244cdfe43979e6f379d4bddfdc6",
-          "Name": "",
-          "Description": "Value of expression at line 8",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "798c268c752641f68da89001b0c2b5ac",
+          "Id": "30c8002968ae4221810bb241f3154e75",
           "Name": "",
           "Description": "qe",
           "UsingDefaultValue": false,
@@ -220,7 +201,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "263e82544d2d4ad6bdea2adb1e18ca30",
+          "Id": "760c057daeb643d68242463b9fea315c",
           "Name": "",
           "Description": "AltCaixao",
           "UsingDefaultValue": false,
@@ -229,7 +210,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "7742dddb7f8848a8b590dc43962c1fdc",
+          "Id": "21351743b80c490ca03c59b36a4b6e34",
           "Name": "",
           "Description": "Modulos",
           "UsingDefaultValue": false,
@@ -238,7 +219,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "25c0412e44c64038b3f1bce1645c205f",
+          "Id": "74962bec54d54ceea84bce8c0d5611a9",
           "Name": "",
           "Description": "ModulosX",
           "UsingDefaultValue": false,
@@ -247,7 +228,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "2e038e963dcd412aac955094de5e3be6",
+          "Id": "439de6b1ab394afc83fefff9f330651b",
           "Name": "",
           "Description": "qm",
           "UsingDefaultValue": false,
@@ -256,7 +237,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "3f8f166050b94d0783c1b485f16ae13d",
+          "Id": "2e82b61fef714d22aab64356ad89cde9",
           "Name": "",
           "Description": "segm",
           "UsingDefaultValue": false,
@@ -265,7 +246,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "56fe8412c4bf4fbc913b600b866dcf11",
+          "Id": "0961b9d3f34844ecb979aaf164689a41",
           "Name": "",
           "Description": "AltPista",
           "UsingDefaultValue": false,
@@ -274,7 +255,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "ef7661b888424b96a8be38f5a17ae00e",
+          "Id": "ce0688062d064b8aa3b2a0caab22bb84",
           "Name": "",
           "Description": "V_Cai",
           "UsingDefaultValue": false,
@@ -283,7 +264,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "cb81d388e9fd450d802d69801151304e",
+          "Id": "571b3ebb4bb84daea6e0d8ef823e6e8f",
           "Name": "",
           "Description": "V_Pil",
           "UsingDefaultValue": false,
@@ -292,7 +273,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "878b1b8f69e64f7487d26bebbfe8f2dd",
+          "Id": "98cccda7cd514c19965405fc1e353666",
           "Name": "",
           "Description": "V_Mas",
           "UsingDefaultValue": false,
@@ -301,7 +282,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "b9ece5646aa844d8be1de21add6fed65",
+          "Id": "0ec61b5775864f3f912341bbb95132ea",
           "Name": "",
           "Description": "p1",
           "UsingDefaultValue": false,
@@ -310,7 +291,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "b365dae8e75d4a4b9a98be159ad7eb5d",
+          "Id": "fc56a1db70b0455288d90d0dadedbdb6",
           "Name": "",
           "Description": "p2",
           "UsingDefaultValue": false,
@@ -319,7 +300,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "2fde27de6ed2418cbc5d839e0b87bce8",
+          "Id": "4663499b390745579df98e3f4c107e83",
           "Name": "",
           "Description": "p3",
           "UsingDefaultValue": false,
@@ -328,7 +309,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "3a80bf0001554de19103083f2bb8850d",
+          "Id": "6859f4e6e2f849758578c9973726181a",
           "Name": "",
           "Description": "Eixo",
           "UsingDefaultValue": false,
@@ -337,7 +318,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "8774b071b040440f910020d899710cd2",
+          "Id": "a010fdab2c00404ba8faf6eb615c3b46",
           "Name": "",
           "Description": "Pto_CL",
           "UsingDefaultValue": false,
@@ -346,7 +327,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "20ef7a38c92443289b2d44fc531c000d",
+          "Id": "e3b7a304703246ae8bd897b0edd5dbc8",
           "Name": "",
           "Description": "V_Nor",
           "UsingDefaultValue": false,
@@ -355,7 +336,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "2a7e0cdc8e9a47dea0a137998d72c173",
+          "Id": "27e9fce11d4c4345b2f1d7b19f8eacda",
           "Name": "",
           "Description": "Pto_CE",
           "UsingDefaultValue": false,
@@ -364,7 +345,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "629dbf0bb37d4170b34bd4215c9bb5e4",
+          "Id": "2168792d93784887beb79fe92b1f9a98",
           "Name": "",
           "Description": "Pto_CI",
           "UsingDefaultValue": false,
@@ -373,7 +354,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "a29d4f8861ac4afeada3dadfd84cf74c",
+          "Id": "f7d28064f65f41918c9ac50cf0fd18af",
           "Name": "",
           "Description": "Pto_IN",
           "UsingDefaultValue": false,
@@ -382,7 +363,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "c7500c3c03994d30a941a1c95c28edaf",
+          "Id": "3c101f9a001e4eacb4c65cf50be569ec",
           "Name": "",
           "Description": "L_PtoX",
           "UsingDefaultValue": false,
@@ -391,7 +372,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "103e341e4411443396f38f4278ec5b18",
+          "Id": "babcaf2e33444635ad5bfcc92f2b2e6a",
           "Name": "",
           "Description": "POL_CX",
           "UsingDefaultValue": false,
@@ -400,7 +381,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "cda643bacd76485caa77ef1ef6e8c680",
+          "Id": "dc9c957af69049d2a521c0844f9d3194",
           "Name": "",
           "Description": "epe",
           "UsingDefaultValue": false,
@@ -409,7 +390,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "2e94cff6b89b45e5bbb0d256d7459bc2",
+          "Id": "d89df7075f83429a817ca296abee9828",
           "Name": "",
           "Description": "epd",
           "UsingDefaultValue": false,
@@ -418,7 +399,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "0ac4e41f2bb941a6873808673f762fcd",
+          "Id": "5bf4788567d6440c8a795903dba70072",
           "Name": "",
           "Description": "Pista_Segmen",
           "UsingDefaultValue": false,
@@ -427,7 +408,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "9a644ee416c8461ca8e3da5964c82bce",
+          "Id": "2bb62ac3192e41da870a635bb1d980af",
           "Name": "",
           "Description": "Pista_EsqDir",
           "UsingDefaultValue": false,
@@ -436,7 +417,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "4d793d59820745129191149215e9c4ce",
+          "Id": "4ceb176a1400439b88914f74479ee729",
           "Name": "",
           "Description": "Cab_Esq",
           "UsingDefaultValue": false,
@@ -445,7 +426,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "c64928d8428b4fba874a85abe957a2b9",
+          "Id": "e626d30a26a14d9fa03b63e3d94c4bb3",
           "Name": "",
           "Description": "Cab_Dir",
           "UsingDefaultValue": false,
@@ -454,7 +435,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "6428290e33434425b763ea158f05ffe2",
+          "Id": "9e3d980176264de9ae8b6bc4a6ca3a4d",
           "Name": "",
           "Description": "Pis_EstE",
           "UsingDefaultValue": false,
@@ -463,7 +444,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "93cdb5b93d4b4fce9ac7ff9d9002469a",
+          "Id": "75f23a0fe1e541aba7b09c64791e3f21",
           "Name": "",
           "Description": "Pis_EstD",
           "UsingDefaultValue": false,
@@ -472,7 +453,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "ee084d620a704a0fbc87329f6c931d38",
+          "Id": "cd87a3c36783423c9d0f1213d2963fab",
           "Name": "",
           "Description": "Pto_Pil",
           "UsingDefaultValue": false,
@@ -481,7 +462,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "2310a1ec50c3498e8f73dc53dbedf738",
+          "Id": "1b2332df46304ca3adfb4e44fe22470d",
           "Name": "",
           "Description": "Pilones",
           "UsingDefaultValue": false,
@@ -490,7 +471,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "b2cfad07d30b476c8b461d2d1c4d3830",
+          "Id": "98215e90e16b49bbb2649bb91b21db5a",
           "Name": "",
           "Description": "Pto_Mas",
           "UsingDefaultValue": false,
@@ -499,7 +480,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "4ffac324e2194bfe950a45bc7afb95d2",
+          "Id": "1fc9b67eb6af4d619b2c88623c011aac",
           "Name": "",
           "Description": "Mastros",
           "UsingDefaultValue": false,
@@ -508,7 +489,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "f7176cac3aac448b92ff35f9da6c0e3f",
+          "Id": "d1536294ee7c492fb7415bbca4fe39bb",
           "Name": "",
           "Description": "i_Mastr",
           "UsingDefaultValue": false,
@@ -517,7 +498,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "cea457e7106c4738bdd528ef52cef772",
+          "Id": "918e20b15efb4f1d87501c792eec7dc8",
           "Name": "",
           "Description": "Pto_EsE",
           "UsingDefaultValue": false,
@@ -526,7 +507,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "dfcfd89a49884912b21d5149ef56f12a",
+          "Id": "a1212189dc8544699d18aa12167acf29",
           "Name": "",
           "Description": "Pto_EsD",
           "UsingDefaultValue": false,
@@ -535,7 +516,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "6b1fe490f44046b39fcfe721df4eecc2",
+          "Id": "346ccce42848468685f0060e8a83dc10",
           "Name": "",
           "Description": "L_EstaE",
           "UsingDefaultValue": false,
@@ -544,7 +525,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "b5f4e7b4d0e3485f88e0e28c4a5c64ac",
+          "Id": "0ed994e8fb0348eea74582c487d21d8f",
           "Name": "",
           "Description": "L_EstaD",
           "UsingDefaultValue": false,
@@ -554,17 +535,17 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "Allows for DesignScript code to be authored directly"
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "z1;\nlongi;\ncorda;\nAltMastro;\nAltPilone;\nes;\nei;\nqe           = 11.0;\nAltCaixao    =  4.5;\nModulos      = 14.0;\nModulosX     = 210;\nqm           = ModulosX / Modulos;\nsegm         = 0..1..1/ModulosX;\nAltPista     = AltPilone + AltCaixao;\nV_Cai        = Vector.Scale(Vector.ZAxis(), -AltCaixao);\nV_Pil        = Vector.Scale(Vector.ZAxis(),  AltPilone);\nV_Mas        = Vector.Scale(Vector.ZAxis(),  AltMastro);\n// -------------------------------------------------------\n// Definição dos arcos da pista\n// -------------------------------------------------------\np1           = Point.ByCoordinates   ( 0        , 0     , z1 );\np2           = Point.ByCoordinates   ( longi/2  , corda , z1 );\np3           = Point.ByCoordinates   ( longi    , 0     , z1 );\nEixo         = Arc.ByThreePoints     ( p1 , p2  , p3         );\n// -------------------------------------------------------\n// Definição das seções do caixão\n// -------------------------------------------------------\nPto_CL       = Arc.PointAtParameter  ( Eixo   , segm ).Translate(0, 0, AltPista);\nV_Nor        = Arc.NormalAtParameter ( Eixo   , segm );\nPto_CE       = Point.Translate       ( Pto_CL , V_Nor , [ 16.02 , -16.02]<1>);\nPto_CI       = Point.Translate       ( Pto_CL , V_Nor , [  2.50 ,  -2.50]<1>);\nPto_IN       = Point.Translate       ( Pto_CI , V_Cai );\nL_PtoX       = List.Transpose        ( [Pto_CE[0], Pto_CE[1], Pto_IN[1], Pto_IN[0]]);\nPOL_CX       = PolyCurve.ByPoints    ( L_PtoX, true);\n// -------------------------------------------------------\n// Divisão do Arco da Pista em Segmentos entre Mastros\n// -------------------------------------------------------\nepe          = 0+(1/qm)..1..#qm;\nepd          = 1-(1/qm)..0..#qm;\nPista_Segmen = Arc.DivideEqually     ( Eixo    , Modulos );\nPista_EsqDir = List.TakeEveryNthItem ( Pista_Segmen , [2,2]  , [1,2] );\nCab_Esq      = Line.PointAtParameter ( Pista_EsqDir[0] , epe<1> );\nCab_Dir      = Line.PointAtParameter ( Pista_EsqDir[1] , epd<1> );\nPis_EstE     = Point.Translate       ( Cab_Esq, 0, 0 , AltPista);\nPis_EstD     = Point.Translate       ( Cab_Dir, 0, 0 , AltPista);\n// -------------------------------------------------------\n// Coloca Eixo do Pilone\n// -------------------------------------------------------\nPto_Pil      = Line.PointAtParameter(Pista_EsqDir[0], 1);\nPilones      = Line.ByStartPointDirectionLength(Pto_Pil, V_Pil, AltPilone);\n// -------------------------------------------------------\n// Coloca Eixo do Mastro\n// -------------------------------------------------------\nPto_Mas      = Point.Translate(Pto_Pil, 0, 0, AltPista);\nMastros      = Line.ByStartPointDirectionLength(Pto_Mas, V_Pil, AltMastro);\n// -------------------------------------------------------\n// Definição dos pontos dos Estais sobre os Mastros\n// -------------------------------------------------------\ni_Mastr      = List.TakeItems        ( ei..es..(es-ei)/(qe+2) , 11 );\nPto_EsE      = Transpose(Line.PointAtParameter ( Mastros<1> , List.Reverse(i_Mastr)));\nPto_EsD      = Transpose(Line.PointAtParameter ( Mastros<1> , List.Reverse(i_Mastr)));\n// ------------------------------------------------------\n// Traçado dos Estais\n// ------------------------------------------------------\nL_EstaE      = Line.ByStartPointEndPoint(Pto_EsE , Pis_EstE);\nL_EstaD      = Line.ByStartPointEndPoint(Pto_EsD , Pis_EstD);\n// ----------------------------------------------------\n// Colocação dos Levels\n// ----------------------------------------------------\n//Level.ByElevationAndName(AltPista , \"Viaduto_Pista\");\n//Level.ByElevationAndName(p1.Z     , \"Viaduto_Base\");"
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
-      "NodeType": "NumberInputNode",
       "NumberType": "Double",
       "MaximumValue": 100.0,
       "MinimumValue": 0.0,
       "StepValue": 0.1,
-      "InputValue": 0.0,
       "Id": "b10a22b45b984168962303a64fb6cf42",
+      "NodeType": "NumberInputNode",
       "Inputs": [],
       "Outputs": [
         {
@@ -578,17 +559,17 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "A slider that produces numeric values."
+      "Description": "Produces numeric values",
+      "InputValue": 0.0
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
-      "NodeType": "NumberInputNode",
       "NumberType": "Double",
       "MaximumValue": 2500.0,
       "MinimumValue": 1000.0,
       "StepValue": 50.0,
-      "InputValue": 2350.0,
       "Id": "d09f0af883094a528ca0458b93f67d9e",
+      "NodeType": "NumberInputNode",
       "Inputs": [],
       "Outputs": [
         {
@@ -602,17 +583,17 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "A slider that produces numeric values."
+      "Description": "Produces numeric values",
+      "InputValue": 2400.0
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
-      "NodeType": "NumberInputNode",
       "NumberType": "Double",
       "MaximumValue": 150.0,
       "MinimumValue": 0.0,
       "StepValue": 0.1,
-      "InputValue": 96.100000000000009,
       "Id": "3dc0b94cc7464e3aabe38199484bb7f9",
+      "NodeType": "NumberInputNode",
       "Inputs": [],
       "Outputs": [
         {
@@ -626,17 +607,17 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "A slider that produces numeric values."
+      "Description": "Produces numeric values",
+      "InputValue": 8.3
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
-      "NodeType": "NumberInputNode",
       "NumberType": "Double",
       "MaximumValue": 260.0,
       "MinimumValue": 100.0,
       "StepValue": 1.5,
-      "InputValue": 244.0,
       "Id": "dc4af08979034d1d96a4c605df2a34db",
+      "NodeType": "NumberInputNode",
       "Inputs": [],
       "Outputs": [
         {
@@ -650,17 +631,17 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "A slider that produces numeric values."
+      "Description": "Produces numeric values",
+      "InputValue": 244.8
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
-      "NodeType": "NumberInputNode",
       "NumberType": "Double",
       "MaximumValue": 200.0,
       "MinimumValue": 80.0,
       "StepValue": 0.5,
-      "InputValue": 91.5,
       "Id": "6b24b45ceae44bf0ac75d80e02fcafaf",
+      "NodeType": "NumberInputNode",
       "Inputs": [],
       "Outputs": [
         {
@@ -674,17 +655,17 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "A slider that produces numeric values."
+      "Description": "Produces numeric values",
+      "InputValue": 87.0
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
-      "NodeType": "NumberInputNode",
       "NumberType": "Double",
       "MaximumValue": 0.65,
       "MinimumValue": 0.5,
       "StepValue": 0.01,
-      "InputValue": 0.62,
       "Id": "ed1ee717ff994bf89811239e2ce979e9",
+      "NodeType": "NumberInputNode",
       "Inputs": [],
       "Outputs": [
         {
@@ -698,17 +679,17 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "A slider that produces numeric values."
+      "Description": "Produces numeric values",
+      "InputValue": 0.59
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
-      "NodeType": "NumberInputNode",
       "NumberType": "Double",
       "MaximumValue": 0.99,
       "MinimumValue": 0.7,
       "StepValue": 0.01,
-      "InputValue": 0.99,
       "Id": "00fa1f269aac43ee9d77c579dfaa85b8",
+      "NodeType": "NumberInputNode",
       "Inputs": [],
       "Outputs": [
         {
@@ -722,80 +703,51 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "A slider that produces numeric values."
-    },
-    {
-      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
-      "NodeType": "NumberInputNode",
-      "NumberType": "Double",
-      "MaximumValue": 4.0,
-      "MinimumValue": 0.0,
-      "StepValue": 1.0,
-      "InputValue": 2.0,
-      "Id": "48a64db90b2444a2a3eb04de6aab3cf2",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "084962dacca3469fba4b5b570dc066f5",
-          "Name": "",
-          "Description": "Double",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "A slider that produces numeric values."
+      "Description": "Produces numeric values",
+      "InputValue": 0.99
     }
   ],
   "Connectors": [
     {
       "Start": "b06bab3ffd834289af2f603ac1b1a40d",
-      "End": "bce1c98b87da443d81c2ec01696df0b9",
-      "Id": "af06725afa8c4f43879371668d35e314",
+      "End": "d958145f7e73487a8367de9a0ca6e16c",
+      "Id": "09c3202dadbd451aadf552ca8f262537",
       "IsHidden": "False"
     },
     {
       "Start": "9e250c7b04554f8e8935452eb1ba701f",
-      "End": "91b51063998e405c8e086288b8fbe06b",
-      "Id": "2c7ce99ca529419685311c955c4ba29e",
+      "End": "a0aa7b2c9f3f45f283e06ef5a1c19c48",
+      "Id": "aa87712ba1cf448aa4c7b34f182f8a96",
       "IsHidden": "False"
     },
     {
       "Start": "724f610422704cc79b3b2e242f46a318",
-      "End": "04a98afb70f34aebb073f6bd70d02e06",
-      "Id": "e07aa3f5b24d479e97c09cf832a8b15e",
+      "End": "4e3e424a667c46b2910652f7f6508bcb",
+      "Id": "241d88e83e454da3850c7ec8db2e514d",
       "IsHidden": "False"
     },
     {
       "Start": "78491f24260a4b779d5a529599ac9036",
-      "End": "3b7c54ff13b2468ea2689daf51de6014",
-      "Id": "4be112630c204459bbb930d12b698938",
+      "End": "da20b339df1b4a5e80588e14814b5c3e",
+      "Id": "06acd1a3e5b04b9b9f973d33475c07a5",
       "IsHidden": "False"
     },
     {
       "Start": "58002578a84c483fa501b2141973be30",
-      "End": "a5266555b5e1478bab70b396e6af896e",
-      "Id": "513791040fb947e6a4a755fd9bd03d27",
+      "End": "363eb188095e43d99b99a1eca89dd843",
+      "Id": "b69cfd1599c04ba59dae7e8182164e0a",
       "IsHidden": "False"
     },
     {
       "Start": "28cf8d86a9ab4986b1f3073037ffa682",
-      "End": "7f9157d9530f42c4bb6e03d2a849d559",
-      "Id": "2032b5be099148218125dc2642789b51",
+      "End": "2aa8b18d4ac8439d9ee808f62e697f7e",
+      "Id": "2488114a62c64b569e7b4498cebf9f15",
       "IsHidden": "False"
     },
     {
       "Start": "afd56de1adf5469eb32481f2b94ee65f",
-      "End": "9f42d5295e744908be859d5fb87a33d4",
-      "Id": "bb37507dfce545baa6e0c523465ed78b",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "084962dacca3469fba4b5b570dc066f5",
-      "End": "b19d0827c2d64534aeab0e55b17bbbad",
-      "Id": "e4a2e1373fe6485a8449bd69c7b465e7",
+      "End": "953ec98b24124e2782dcb0a495870271",
+      "Id": "a68d63e0ee094536b981389fd1058c14",
       "IsHidden": "False"
     }
   ],
@@ -830,12 +782,12 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.16.1.2727",
+      "Version": "2.18.1.5096",
       "RunType": "Automatic",
       "RunPeriod": "1000"
     },
     "Camera": {
-      "Name": "Background Preview",
+      "Name": "_Background Preview",
       "EyeX": 1157.5096435546875,
       "EyeY": 161.73048400878906,
       "EyeZ": 1078.4896240234375,
@@ -849,101 +801,91 @@
     "ConnectorPins": [],
     "NodeViews": [
       {
-        "Name": "Viaduto Millau - Marcação da estrutura.",
-        "ShowGeometry": true,
         "Id": "ad66fbd74d1d48ab86e04a229419f92e",
+        "Name": "Viaduto Millau - Marcação da estrutura.",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -840.769661268011,
-        "Y": 1809.55100206598
+        "ShowGeometry": true,
+        "X": -938.68892825287628,
+        "Y": 1816.0789531983044
       },
       {
-        "Name": "Z1",
-        "ShowGeometry": true,
         "Id": "b10a22b45b984168962303a64fb6cf42",
+        "Name": "Z1",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
+        "ShowGeometry": true,
         "X": -1459.7684768931776,
         "Y": 1554.3840593696652
       },
       {
-        "Name": "Longitude",
-        "ShowGeometry": true,
         "Id": "d09f0af883094a528ca0458b93f67d9e",
+        "Name": "Longitude",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
+        "ShowGeometry": true,
         "X": -1459.7684768931776,
-        "Y": 1675.3228421485185
+        "Y": 1676.4407606259579
       },
       {
-        "Name": "Flecha",
-        "ShowGeometry": true,
         "Id": "3dc0b94cc7464e3aabe38199484bb7f9",
+        "Name": "Flecha",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
+        "ShowGeometry": true,
         "X": -1459.7684768931776,
-        "Y": 1796.2616249273717
+        "Y": 1798.4974618822505
       },
       {
-        "Name": "Altura do Pilone",
-        "ShowGeometry": true,
         "Id": "dc4af08979034d1d96a4c605df2a34db",
+        "Name": "Altura do Pilone",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
+        "ShowGeometry": true,
         "X": -1459.7684768931776,
-        "Y": 2038.1391904850782
+        "Y": 2042.6108643948357
       },
       {
-        "Name": "Altura do Mastro",
-        "ShowGeometry": true,
         "Id": "6b24b45ceae44bf0ac75d80e02fcafaf",
+        "Name": "Altura do Mastro",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
+        "ShowGeometry": true,
         "X": -1459.7684768931776,
-        "Y": 1917.200407706225
+        "Y": 1920.5541631385431
       },
       {
-        "Name": "Parâmetro Inferior dos Estais",
-        "ShowGeometry": true,
         "Id": "ed1ee717ff994bf89811239e2ce979e9",
+        "Name": "Parâmetro Inferior dos Estais",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -1467.7364818635281,
+        "ShowGeometry": true,
+        "X": -1459.7684768931776,
         "Y": 2286.7242669074212
       },
       {
-        "Name": "Parâmetro Superior dos Estais",
-        "ShowGeometry": true,
         "Id": "00fa1f269aac43ee9d77c579dfaa85b8",
+        "Name": "Parâmetro Superior dos Estais",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -1462.6474825568657,
-        "Y": 2159.31988352114
-      },
-      {
-        "Name": "Deslocar Estais do Centro",
         "ShowGeometry": true,
-        "Id": "48a64db90b2444a2a3eb04de6aab3cf2",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": -1472.2637139952578,
-        "Y": 2409.455492127192
+        "X": -1459.7684768931776,
+        "Y": 2164.6675656511284
       }
     ],
     "Annotations": [
       {
         "Id": "2240dba93be742c7b9a91522c03012ac",
         "Title": "Função comentada de marcação da estrutura do Viaduto Millau. Revit 2023.",
-        "DescriptionText": "Escola Politécnica da UFRJ. Departamento de Expressão Gráfica.\r\nDisciplina: Desenho Computacional \r\nAutor: Prof. José Luis Menegotto\r\n",
+        "DescriptionText": "Escola Politécnica da UFRJ. Departamento de Expressão Gráfica.\r\nDisciplina: Desenho Computacional / BIM \r\nAutor: Prof. José Luis Menegotto\r\n",
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
         "HeightAdjustment": 0.0,
@@ -956,22 +898,43 @@
           "6b24b45ceae44bf0ac75d80e02fcafaf",
           "ed1ee717ff994bf89811239e2ce979e9",
           "00fa1f269aac43ee9d77c579dfaa85b8",
-          "48a64db90b2444a2a3eb04de6aab3cf2"
+          "116b1f79d63c437ababf4d4e5a63434a"
         ],
         "HasNestedGroups": false,
-        "Left": -1482.2637139952578,
-        "Top": 1457.9840593696651,
-        "Width": 1467.494052727247,
-        "Height": 1654.5669426963148,
+        "Left": -1469.7684768931776,
+        "Top": 1457.3840593696652,
+        "Width": 1357.0795486403013,
+        "Height": 1644.6948938286394,
         "FontSize": 24.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 1554.3840593696652,
-        "InitialHeight": 1000.0714327575267,
-        "TextblockHeight": 86.4,
+        "InitialHeight": 877.340207537756,
+        "TextblockHeight": 87.0,
         "Background": "#FFFFAA45"
+      },
+      {
+        "Id": "116b1f79d63c437ababf4d4e5a63434a",
+        "Title": "Embora se trate de uma obra construída com suas dimensões já estão definidas, o exercício pretende \nexemplificar como um projeto pode ser estudado com ferramentas computacionais que permitam realizar um processo de ajuste e controle dimensional paramétrico.\n ",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -937.23515723226694,
+        "Top": 1656.8254820977988,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
       }
     ],
-    "X": 871.07893643892385,
-    "Y": -455.98094576258336,
-    "Zoom": 0.3192844603787135
+    "X": 521.86660925011279,
+    "Y": -210.54441610756226,
+    "Zoom": 0.22655066250505212
   }
 }
