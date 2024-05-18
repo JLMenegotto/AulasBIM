@@ -3,7 +3,8 @@
 Esta pasta tem funções com a parametrização de diversas obras existentes. 
 
 ## Catedral_Brasilia.dyn
-Modela a forma principal da Catedral. Para rodar a função deve ser utilizado o arquivo **Catedral_Brasilia.rvt**. A técnica utilizada para modelar as colunas da catedral, consiste em realizar a leitura das linhas que representam em 2D as seções transversais de acordo à marcação do arquivo **Cat_Brasilia_Perfil.jpg**. Tendo desenhado cada linha dos 22 perfis  seccionais, o algoritmo Dynamo faz a leitura ordenada desses elementos 2D e monta na posição espacial correspondente, cada uma das seções de uma das colunas. A partir dessas seções se procede a realizar o Loft.
+Modela a forma principal da Catedral. Para rodar a função deve ser utilizado o arquivo **Catedral_Brasilia.rvt**. A técnica utilizada consiste em realizar a leitura das linhas que representam em 2D as seções transversais de acordo à marcação do arquivo **Cat_Brasilia_Perfil.jpg**. 
+Tendo desenhado cada linha dos 22 perfis seccionais, o algoritmo Dynamo faz a leitura ordenada desses elementos 2D e monta cada uma das seções de uma das colunas na posição espacial correspondente. A partir dessas seções se procede a realizar o Loft.
 
 ![CatedralBrasilia_03](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b7e68e1a-02c1-4436-b5d3-4991547c987b)
 
