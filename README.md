@@ -1,8 +1,8 @@
 # AulasBIM POLI/UFRJ - Escola Politécnica da UFRJ 
-#### **Prof. José Luis Menegotto**  
-###### **DEG/POLI/UFRJ. Escola Politécnica da UFRJ** 
-###### **PEU Programa de Pós-graduação em Engenharia Urbana** 
-###### **PPE Programa de Pós-graduação em Estruturas** 
+<sub> **Prof. José Luis Menegotto.** </sub> 
++ <sub> **_DEG/POLI/UFRJ. Escola Politécnica da UFRJ._**</sub>
++ <sub> _PEU Programa de Pós-graduação em Engenharia Urbana_</sub>
++ <sub> _PPE Programa de Pós-graduação em Estruturas_</sub>
 
 Macros em Dynamo e AutoLISP para Revit e Advance Steel. Desenvolvidas pelo Prof. José Luis Menegotto como material didático aplicado nas disciplinas **BIM I- Modelagem Digital da Edificação,** **Customização de Sistemas Gráficos e Desenho de Montagem e Fabricação CAD CAM BIM.**
 As aulas são ministradas para os cursos de Graduação em engenharia, Pós-graduação em Engenharia Urbana (**PEU**), Pós-graduação em Estruturas (**PPE**) e para o **Curso de Especialização em Estruturas Metálicas.**
