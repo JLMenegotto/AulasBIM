@@ -11,7 +11,7 @@ As aulas são ministradas para os cursos de Graduação em engenharia, Pós-grad
 #### **Consulte outros projetos**
   
    1. [**OntologiaBIM:** Construtor de ontologias OWL](https://github.com/JLMenegotto/OntologiaBIM)
-   2. [**Acustica2024 e Parla:** Ingetração de Simulador acústico BRASS com Revit](https://github.com/JLMenegotto/Acustica_2024)
+   2. [**Acustica2024 e Parla:** Integração do Simulador Acústico BRASS com Revit](https://github.com/JLMenegotto/Acustica_2024)
    3. [**RIO:** Reformatação de acervos digitais](https://github.com/JLMenegotto/Rio)
    4. [**Promenade:** Sistema IoT para microlocalização](https://github.com/JLMenegotto/Promenade)
    5. [**Sistemas Projetivos:** Funções para o ensino de Geometria Descritiva em Revit](https://github.com/JLMenegotto/SistemasProjetivos)
