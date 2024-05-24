@@ -12,7 +12,7 @@ As aulas são ministradas para os cursos de Graduação em engenharia, Pós-grad
 
 ####**Consulte outros projetos em**
   
-   1. [**OntologiaBIM**](https://github.com/JLMenegotto/OntologiaBIM)
+   1. [**OntologiaBIM**] Construtor de ontologias OWL (https://github.com/JLMenegotto/OntologiaBIM)
    2. [**Acustica2024 e Parla**](https://github.com/JLMenegotto/Acustica_2024)
    3. [**RIO**](https://github.com/JLMenegotto/Rio)
    4. [**Promenade**](https://github.com/JLMenegotto/Promenade)
