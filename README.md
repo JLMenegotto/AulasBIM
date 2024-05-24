@@ -8,7 +8,7 @@
 Macros em Dynamo e AutoLISP para Revit e Advance Steel. Desenvolvidas pelo Prof. José Luis Menegotto como material didático aplicado nas disciplinas **BIM I- Modelagem Digital da Edificação,** **Customização de Sistemas Gráficos e Desenho de Montagem e Fabricação CAD CAM BIM.**
 As aulas são ministradas para os cursos de Graduação em engenharia, Pós-graduação em Engenharia Urbana (**PEU**), Pós-graduação em Estruturas (**PPE**) e para o **Curso de Especialização em Estruturas Metálicas.**
 
-[As explicações dos conteúdos e metodologias das funções estão em vídeos no **Canal YouTube**](https://www.youtube.com/channel/UCCN58u2BP38F09aswlJrILA)
+[**Canal YouTube:** Videos com explicação dos conteúdos e metodologias das funções](https://www.youtube.com/channel/UCCN58u2BP38F09aswlJrILA)
 
 ####**Consulte outros projetos em**
   
@@ -29,7 +29,8 @@ As aulas são ministradas para os cursos de Graduação em engenharia, Pós-grad
   15. [**Funções para Ambientes:** Funções Dynamo para automatizar o projeto a partir do objeto Room em Revit](https://github.com/JLMenegotto/AulasBIM/tree/master/Dynamo/Rooms)
   16. [**Funções para Advance Steel:** Funções para gerar perfis customizados em AdvanceSteel](https://github.com/JLMenegotto/AulasBIM/tree/master/AdvanceSteel)
       
-  17. [**Bibliografia e Material Complementar:**](https://jlmenegotto.wixsite.com/jlmenegotto-bim)
+  17. [**Bibliografia:**](https://jlmenegotto.wixsite.com/jlmenegotto-bim/pesquisa)
+  18. [**Publicações:**](https://jlmenegotto.wixsite.com/jlmenegotto-bim/jlm-public)
 
 ![capa](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b6f1b49d-24e5-4588-b52f-d93869d3784b)
 
