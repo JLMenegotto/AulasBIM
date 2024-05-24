@@ -12,13 +12,13 @@ As aulas são ministradas para os cursos de Graduação em engenharia, Pós-grad
 
 ####**Consulte outros projetos em**
   
-   1. [**OntologiaBIM**] Construtor de ontologias OWL (https://github.com/JLMenegotto/OntologiaBIM)
-   2. [**Acustica2024 e Parla**](https://github.com/JLMenegotto/Acustica_2024)
-   3. [**RIO**](https://github.com/JLMenegotto/Rio)
-   4. [**Promenade**](https://github.com/JLMenegotto/Promenade)
-   5. [**Sistemas Projetivos**](https://github.com/JLMenegotto/SistemasProjetivos)
-   6. [**Atratores**](https://github.com/JLMenegotto/Atratores)
-   7. [**EGC**](https://github.com/JLMenegotto/EGC)
+   1. [**OntologiaBIM** Construtor de ontologias OWL](https://github.com/JLMenegotto/OntologiaBIM)
+   2. [**Acustica2024 e Parla** Ingetração de Simulador acústico BRASS com Revit] (https://github.com/JLMenegotto/Acustica_2024)
+   3. [**RIO** Reformatação de acervos digitais] (https://github.com/JLMenegotto/Rio)
+   4. [**Promenade** Sistema IoT para microlocalização](https://github.com/JLMenegotto/Promenade)
+   5. [**Sistemas Projetivos** Funções para o ensino de Geometria Descritiva em Revit](https://github.com/JLMenegotto/SistemasProjetivos)
+   6. [**Atratores** Funções AutoLISP para geração de pontos](https://github.com/JLMenegotto/Atratores)
+   7. [**EGC** Funções em AutoLISP para representação e formalização do projeto](https://github.com/JLMenegotto/EGC)
    8. [**Funções Geométricas**](https://github.com/JLMenegotto/AulasBIM/tree/master/Dynamo/Geometricas)
    9. [**Funções de Análise de Lotes**](https://github.com/JLMenegotto/AulasBIM/tree/master/Dynamo/Lotes)
   10. [**Funções Obras Paradigmáticas**]( https://github.com/JLMenegotto/AulasBIM/tree/master/Dynamo/Obras)
