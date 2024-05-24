@@ -7,10 +7,8 @@
 Macros em Dynamo e AutoLISP para Revit e Advance Steel. Desenvolvidas pelo Prof. José Luis Menegotto como material didático aplicado nas disciplinas **BIM I- Modelagem Digital da Edificação,** **Customização de Sistemas Gráficos e Desenho de Montagem e Fabricação CAD CAM BIM.**
 As aulas são ministradas para os cursos de Graduação em engenharia, Pós-graduação em Engenharia Urbana (**PEU**), Pós-graduação em Estruturas (**PPE**) e para o **Curso de Especialização em Estruturas Metálicas.**
 ## 
-
 [**Canal YouTube:** Videos com explicação dos conteúdos e metodologias das funções](https://www.youtube.com/channel/UCCN58u2BP38F09aswlJrILA)
-
-#### **Consulte outros projetos em**
+#### **Consulte outros projetos**
   
    1. [**OntologiaBIM:** Construtor de ontologias OWL](https://github.com/JLMenegotto/OntologiaBIM)
    2. [**Acustica2024 e Parla:** Ingetração de Simulador acústico BRASS com Revit](https://github.com/JLMenegotto/Acustica_2024)
