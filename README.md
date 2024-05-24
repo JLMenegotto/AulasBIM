@@ -27,8 +27,8 @@ As aulas são ministradas para os cursos de Graduação em engenharia, Pós-grad
   15. [**Funções para Ambientes:** Funções Dynamo para automatizar o projeto a partir do objeto Room em Revit](https://github.com/JLMenegotto/AulasBIM/tree/master/Dynamo/Rooms)
   16. [**Funções para Advance Steel:** Funções para gerar perfis customizados em AdvanceSteel](https://github.com/JLMenegotto/AulasBIM/tree/master/AdvanceSteel)
       
-  17. [**Bibliografia:**](https://jlmenegotto.wixsite.com/jlmenegotto-bim/pesquisa)
-  18. [**Publicações:**](https://jlmenegotto.wixsite.com/jlmenegotto-bim/jlm-public)
+  17. [**Bibliografia**](https://jlmenegotto.wixsite.com/jlmenegotto-bim/pesquisa)
+  18. [**Publicações**](https://jlmenegotto.wixsite.com/jlmenegotto-bim/jlm-public)
 
 ![capa](https://github.com/JLMenegotto/AulasBIM/assets/9437020/b6f1b49d-24e5-4588-b52f-d93869d3784b)
 
