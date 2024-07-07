@@ -51,7 +51,7 @@
 
 ## Estrutura_Analitica_2023_A.dyn
 
-Na versão 2023 de Revit foi modificada a forma de realizar o modelo estrutural analítico do projeto. Até a versão 2022, os eixos e nodos analíticos eram elementos que estavam integrados às familias  de componentes estrururais (Structural_Columns, Structural_Framming, etc.) e que deviam ser incorporados ao criar as famílias. A partir da versão 2023, o modelo analítico pode ser lançado de modo **independente** dos elementos estruturais físicos, para logo depois ser associados a esses elementos, ou, de modo inverso, ser lançado aproveitando os elementos físicos já modelados. As duas funções a seguir ilustram esses processos.  
+Na versão 2023 de Revit foi modificada a forma de realizar o modelo estrutural analítico do projeto. Até a versão 2022, os elementos analíticos estavam integrados às familias dos componentes estruturais (Structural_Columns, Structural_Framming, etc.) e deviam ser incorporados ao criar as famílias. A partir da versão 2023, o modelo analítico pode ser lançado de modo **independente** dos elementos estruturais físicos, para logo depois ser associados a esses elementos, ou, de modo inverso, serem lançados aproveitando-se a posição e características dos elementos físicos já modelados. As duas funções a seguir ilustram esses processos.  
 
 A função **Galpao_Analitico_2023.dyn** exemplifica o lançamento e uso das categorias dos elementos analíticos.
 
