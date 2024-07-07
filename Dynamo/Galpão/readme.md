@@ -49,7 +49,7 @@
 ## Galpão_Tipo1.dyn
 ![Galpão_Tipo1](https://github.com/JLMenegotto/AulasBIM/assets/9437020/f3c9def8-91ff-434a-a64a-5a3d4ffd6a14)
 
-## Estrutura_Analitica_2023_A.dyn
+## Estrutura_Analítica_2023_A.dyn
 
 Na versão 2023 de Revit foi modificada a forma de realizar o modelo estrutural analítico do projeto. Até a versão 2022, os elementos analíticos estavam integrados às familias dos componentes estruturais (Structural_Columns, Structural_Framming, etc.) e deviam ser incorporados ao criar as famílias. A partir da versão 2023, o modelo analítico pode ser lançado de modo **independente** dos elementos estruturais físicos, para logo depois ser associados a esses elementos, ou, de modo inverso, serem lançados aproveitando-se a posição e características dos elementos físicos já modelados. As duas funções a seguir ilustram esses processos.  
 
