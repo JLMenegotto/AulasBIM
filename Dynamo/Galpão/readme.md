@@ -218,7 +218,7 @@ A função **Estrutura_Analitica_2023_B.dyn** exemplifica o process inverso, ou 
 Na versão C foi modificada a forma de realizar o modelo estrutural analítico do galpão escrevendo algumas funções com o objetivo de simplificar as ligações entre nodos
 e preparar o algoritmo para ir crescendo. A organização do Dicionário permite filtrar os elementos analíticos para modelar e definer os roles. 
 
-![Estrutura_Analitica_2023_C](https://github.com/JLMenegotto/AulasBIM/assets/9437020/7d8c4cda-2d27-4576-afbc-47c492204b85)
+![Estrutura_Analitica_2023_C](https://github.com/JLMenegotto/AulasBIM/assets/9437020/65381675-b70f-4b62-9328-7fd52db66339)
 
 ## Modulador Z 
 
