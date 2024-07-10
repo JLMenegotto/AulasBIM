@@ -29,6 +29,14 @@ Para gerar os perfis customizados:
      5. **AS_Perfis_Dados_Tub.TXT** de perfis tubulares de seção circular
      6. O usuário também pode criar os seus próprios arquivos TXT. Para isso, siga a estrutura dos arquivos de exemplo. 
 
+| Fabricante |Classe	|Perfil  |	d	 | tw    |	h  | tf  | bf	|R/ec | Mate |	Grau|
+| FAB-B	    |	CS	   | 200x29	| 200	 | 6.3	| 187	| 6.3	| 200	| 3	| A572 | 50  |
+| FAB-B   	 |	CS	   | 200x34	| 200	 | 6.3	| 184	| 8	| 200	| 5	| A572 | 50  |
+| FAB-B	    |	CS	   | 200x39	| 200	 | 6.3	| 181	| 9.5	| 200	| 5	| A572 | 50  |
+| FAB-B	    |	CS	   | 200x41	| 200	 | 8	   | 181	| 9.5	| 200	| 5	| A572 | 50  |
+| FAB-B	    |	CS	   | 200x50	| 200	 | 8	   | 175	| 12.5| 200	| 5	| A572 | 50  |
+| FAB-B	    |	CS	   | 200x61	| 200	 | 8	   | 168	| 16	| 200	| 6	| A572 | 50  |
+| FAB-B	    |	CS	   | 250x43	| 250	 | 6.3	| 234	| 8	| 250	| 5	| A572 | 50  |
 ![Dados](https://github.com/JLMenegotto/AulasBIM/assets/9437020/91f4e98f-6b04-498f-9baa-fddf7ba9eeb6)
 
 ## Observações:
