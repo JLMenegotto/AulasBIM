@@ -394,11 +394,7 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
     125.  Telefone
     126.  Helicóptero
     127.  Aplauso
-    128.  Disparo
-
-
-    <iframe style="width:640px;height:480px;border:0px;" src="https://cables.gl/view/nBeg_N"></iframe>
-    
+    128.  Disparo    
 ## 
 [**Canal YouTube:** Videos com explicação dos conteúdos e metodologias das funções](https://www.youtube.com/channel/UCCN58u2BP38F09aswlJrILA)
 #### **Consulte outros projetos**
