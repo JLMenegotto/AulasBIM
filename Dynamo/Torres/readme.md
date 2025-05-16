@@ -30,6 +30,12 @@ A função Remainder (%) e a condicional fazem esse trabalho.
        18.    BarV = Line.ByStartPointEndPoint( bav[j].StartPoint , bav[j+1].StartPoint );
        19.    Dia1 = Line.ByStartPointEndPoint( bav[j].StartPoint , bav[j+1].EndPoint   );
        20.    Dia2 = Line.ByStartPointEndPoint( bav[j].EndPoint   , bav[j+1].StartPoint );
+       
+## Torre2.dyn
+Esta função exemplifica o uso de dicionário. 
+
+![Torre2_2025-05-16_03-45-10](https://github.com/user-attachments/assets/05131189-4a4f-42db-a663-6e84e5558eb3)
+
 
 ## 
 [**Canal YouTube:** Videos com explicação dos conteúdos e metodologias das funções](https://www.youtube.com/channel/UCCN58u2BP38F09aswlJrILA)
