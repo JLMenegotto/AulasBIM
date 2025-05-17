@@ -34,7 +34,9 @@ A função Remainder (%) e a condicional fazem esse trabalho.
 ## Torre2.dyn
 Esta função exemplifica o uso de dicionário. 
 
-![Torre2_2025-05-16_03-45-10](https://github.com/user-attachments/assets/05131189-4a4f-42db-a663-6e84e5558eb3)
+![Torre2_2025-05-17_01-10-44](https://github.com/user-attachments/assets/18c39ed9-dc71-4cf2-8630-22032c070a92)
+
+![Torre_3L](https://github.com/user-attachments/assets/376bd211-b08f-481a-8b79-eb7a98535e84)       ![Torre_4l](https://github.com/user-attachments/assets/90438eda-de03-4153-907d-5ff6dc2a4a08)
 
 
 ## 
