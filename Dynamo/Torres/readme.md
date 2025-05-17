@@ -31,7 +31,7 @@ A função Remainder (%) e a condicional fazem esse trabalho.
        19.    Dia1 = Line.ByStartPointEndPoint( bav[j].StartPoint , bav[j+1].EndPoint   );
        20.    Dia2 = Line.ByStartPointEndPoint( bav[j].EndPoint   , bav[j+1].StartPoint );
        
-## Torre2.dyn
+## Torre2.dyn  (Tipologia de torre inclinada com segmento reto)
 Esta função exemplifica o uso de dicionário. Nas linhas 18 19 e 20 se define o momento da mudança da inclinação. A torre continua vertical se se atinge o limite de 1.20 m.
 O índice **r** define o raio que será utilizado para continuar em direção vertical. 
 O aluno pode continuar a construção utilizando as funções para colocar membros analíticos e atribuir os seus roles. 
