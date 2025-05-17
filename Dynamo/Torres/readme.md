@@ -1,4 +1,4 @@
-# Torres
+# Torres metálicas para telecomunicações.
 
 ## Torre.dyn
 Esta função exemplifica o uso de **coordenadas cilíndricas** em Dynamo (função **Point.ByCylindricalCoordinates**) aplicadas para construir torres a partir de polígonos regulares de n lados (limitados entre 3 e 12).
