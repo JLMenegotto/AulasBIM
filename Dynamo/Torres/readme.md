@@ -33,7 +33,11 @@ A função Remainder (%) e a condicional fazem esse trabalho.
        
 ## Torre2.dyn
 Esta função exemplifica o uso de dicionário. Nas linhas 18 19 e 20 se define o momento da mudança da inclinação. A torre continua vertical se se atinge o limite de 1.20 m.
-O índice **r** define o raio que será utilizado para continuar vertical. 
+O índice **r** define o raio que será utilizado para continuar em direção vertical. 
+O aluno pode continuar a construção utilizando as funções para colocar membros analíticos e atribuir os seus roles. 
+**AnalyticalMember.ByCurve**
+**AnalyticalMember.SetStructuralRole**
+ 
 
 ![Torre2_2025-05-17_01-10-44](https://github.com/user-attachments/assets/18c39ed9-dc71-4cf2-8630-22032c070a92)
 
