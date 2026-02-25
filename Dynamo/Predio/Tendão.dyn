@@ -1,5 +1,5 @@
 {
-  "Uuid": "294019bc-b766-4452-8a79-8d5f938e72bc",
+  "Uuid": "4a074155-6efc-4c78-8322-654d7e2c76b1",
   "IsCustomNode": false,
   "Description": "",
   "Name": "Tendão",
@@ -64,6 +64,10 @@
       "Geometry": {
         "Key": "Autodesk.DesignScript.Geometry.Geometry",
         "Value": "ProtoGeometry.dll"
+      },
+      "Solid.ID": {
+        "Key": "Autodesk.DesignScript.Geometry.Solid",
+        "Value": "ProtoGeometry.dll"
       }
     }
   },
@@ -72,20 +76,29 @@
   "Nodes": [
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
-      "Id": "641c642798e04dc8b7bd60565036f812",
+      "Id": "9db23fb473ce4bb9adf7e742ae5f06b6",
       "NodeType": "CodeBlockNode",
       "Inputs": [
         {
-          "Id": "e5a17cf33e8b41afb72c40e7d2329741",
-          "Name": "qx",
-          "Description": "qx",
+          "Id": "41d431891e1842b1bb531a789357c657",
+          "Name": "q",
+          "Description": "q",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
         },
         {
-          "Id": "60771ecfd94349e8a99462a1d7442313",
+          "Id": "4a59df158d17461cbb60b816eaa5305c",
+          "Name": "d",
+          "Description": "d",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5f46c4ce14be491ca00d3762cca19930",
           "Name": "f",
           "Description": "f",
           "UsingDefaultValue": false,
@@ -94,7 +107,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "4803de1c4e9d4ec3aa64ccd65eeb7bcf",
+          "Id": "ccb84a467c5d4b4eba158d6fcb4b9697",
           "Name": "r",
           "Description": "r",
           "UsingDefaultValue": false,
@@ -105,7 +118,7 @@
       ],
       "Outputs": [
         {
-          "Id": "585ccc3368294810a05f1c1393015edf",
+          "Id": "17c7414d0c124ec6a88294d0a4c17e89",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -114,7 +127,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "3d99db69a8ea497d8932d61e433d1d65",
+          "Id": "ef316be0ceaf465bad585709436a7f0e",
           "Name": "",
           "Description": "Value of expression at line 2",
           "UsingDefaultValue": false,
@@ -123,7 +136,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "9296cd1b972b4a089a1ec8ac16f61f7f",
+          "Id": "f9aa27da03d94c4fa19338a0ce3c7f2a",
           "Name": "",
           "Description": "Value of expression at line 3",
           "UsingDefaultValue": false,
@@ -132,7 +145,43 @@
           "KeepListStructure": false
         },
         {
-          "Id": "2c6b15f6d3ca415f9da8bab2504d38a0",
+          "Id": "80f732bdeb9041109e8a649c3636ab43",
+          "Name": "",
+          "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2a3b0dec55804be885d16a3c732d10ff",
+          "Name": "",
+          "Description": "i",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1081603980fc4bb38bed6ff39612c963",
+          "Name": "",
+          "Description": "m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b9771d7f3e2d46cbbd92d40bdc91c2f7",
+          "Name": "",
+          "Description": "n",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "eccb066dd02e4abf8ccb9102d8bee916",
           "Name": "",
           "Description": "x",
           "UsingDefaultValue": false,
@@ -141,7 +190,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "4de7dab15ad648aa84c41c2c76095fff",
+          "Id": "a379d7ff7d9e46fea271cd14d29ff40d",
           "Name": "",
           "Description": "y",
           "UsingDefaultValue": false,
@@ -150,7 +199,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "2cbfd26cf7874baab084914788e8ea73",
+          "Id": "f7e403cae192475ab0b330f113fd62cc",
           "Name": "",
           "Description": "LP",
           "UsingDefaultValue": false,
@@ -159,7 +208,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "bfb9046305c0429b854adb6f4254c205",
+          "Id": "3e80d9467b5747f199e4995250981f69",
           "Name": "",
           "Description": "PO",
           "UsingDefaultValue": false,
@@ -168,7 +217,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "8190cd38eeb54af88634d015673687d2",
+          "Id": "aa622ce7db564be88f3e5007d7dd643a",
           "Name": "",
           "Description": "CV",
           "UsingDefaultValue": false,
@@ -177,7 +226,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "fbc42e51c0074e7e826f5e210c2988df",
+          "Id": "bda1fdf9853746eca856e9df30cf3e7c",
           "Name": "",
           "Description": "P1",
           "UsingDefaultValue": false,
@@ -186,7 +235,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "58001ecc79814d2e860ae30e41e2eac1",
+          "Id": "5549b116f5ab44f898757b0b94918d85",
           "Name": "",
           "Description": "P2",
           "UsingDefaultValue": false,
@@ -195,7 +244,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "3f4f65664b104bb09dfc58a0726a2857",
+          "Id": "1731179a3ded4f21ac47ec10bdc5398a",
           "Name": "",
           "Description": "Di",
           "UsingDefaultValue": false,
@@ -204,7 +253,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "7b28756b067e41a89d951c2b2d6c1b01",
+          "Id": "b00898bba2ec43c8bdfbd993cdce2da7",
           "Name": "",
           "Description": "C1",
           "UsingDefaultValue": false,
@@ -213,7 +262,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "b041b741d7be475ea012ba43a613dbf9",
+          "Id": "6fda0463d4854f2094ac802b5dccd162",
           "Name": "",
           "Description": "D1",
           "UsingDefaultValue": false,
@@ -222,7 +271,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "d5abb2f617a84dc59a0ce968e4063154",
+          "Id": "5b55d408eb7c494f9863578c4340618e",
           "Name": "",
           "Description": "GE",
           "UsingDefaultValue": false,
@@ -231,7 +280,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "0d064f84d13b4198896b4c640ec29793",
+          "Id": "991362307635460db2740dc9edae715f",
           "Name": "",
           "Description": "st",
           "UsingDefaultValue": false,
@@ -240,7 +289,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "3ffe5ded42de450ca26d77d0b6a86567",
+          "Id": "f87f9d940df5445488a628acd2885cb8",
           "Name": "",
           "Description": "SO",
           "UsingDefaultValue": false,
@@ -249,7 +298,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "d0beaf1931bc4e2da2a360a9da821073",
+          "Id": "909f866366894d1486c56ce15c85c645",
           "Name": "",
           "Description": "ID",
           "UsingDefaultValue": false,
@@ -260,20 +309,20 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly",
-      "Code": "qx;\nf;\nr;\n//--------------------------------------------\nx  = -qx..qx..#qx;\ny  = Catenaria ( x , f );\n//--------------------------------------------\nLP = Point.ByCoordinates( x  , y    , 0 );\nPO = PolyCurve.ByPoints ( LP , false    );\nCV = PolyCurve.Curves   ( PO            );\nP1 = CV.StartPoint;\nP2 = CV.EndPoint;\nDi = CV.Direction;\nC1 = List.AddItemToEnd( P2[-1] , P1 );\nD1 = List.AddItemToEnd( Di[-1] , Di );\nGE = Circle.ByCenterPointRadiusNormal(C1,r,D1);\nst = String.Replace(\"\"+r, \"0\", \"\");\nSO = Solid.ByLoft     ( GE          );\nID = \"Cabo_\"+qx+\"_\"+Math.Floor(f)+\"_\"+st+\"_\";"
+      "Code": "q;\nd;\nf;\nr;\n//--------------------------------------------\ni = q/2;\nm = (d-(d/q));\nn = q-1;\nx  = (-i..i..#q) * (m/n);\ny  = Catenaria ( x , f );\n//--------------------------------------------\nLP = Point.ByCoordinates( x  , y    , 0 );\nPO = PolyCurve.ByPoints ( LP , false    );\nCV = PolyCurve.Curves   ( PO            );\nP1 = CV.StartPoint;\nP2 = CV.EndPoint;\nDi = CV.Direction;\nC1 = List.AddItemToEnd ( P2[-1] , P1 );\nD1 = List.AddItemToEnd ( Di[-1] , Di );\nGE = Circle.ByCenterPointRadiusNormal(C1,r,D1);\nst = String.Replace    ( \"\"+r, \"0\", \"\" );\nSO = Solid.ByLoft      ( GE            );\nID = \"Cabo_\"+q+\"_\"+Math.Floor(f)+\"_\"+st+\"_\";"
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
       "NumberType": "Double",
-      "MaximumValue": 100.0,
-      "MinimumValue": 10.0,
-      "StepValue": 1.0,
-      "Id": "1ece111444164dac8bfc839115686c04",
+      "MaximumValue": 0.5,
+      "MinimumValue": 0.0,
+      "StepValue": 0.01,
+      "Id": "fadec1d0c8c440d0b2b8bd703837d17f",
       "NodeType": "NumberInputNode",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "cc09d78772854c12adfc22bd813aaebc",
+          "Id": "c67057edd774467b9735fe895b85635e",
           "Name": "",
           "Description": "Double",
           "UsingDefaultValue": false,
@@ -284,20 +333,20 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces numeric values",
-      "InputValue": 33.0
+      "InputValue": 0.27
     },
     {
       "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
       "NumberType": "Integer",
-      "MaximumValue": 20,
+      "MaximumValue": 16,
       "MinimumValue": 2,
-      "StepValue": 1,
-      "Id": "be513e2c05ed4f71aa357e5ccc15744a",
+      "StepValue": 2,
+      "Id": "cc3d0b2e2f034b148531c69657f34b59",
       "NodeType": "NumberInputNode",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "d805668c4ac14173adb92688e1a4abad",
+          "Id": "b258cfd6c8f34ee4a08a99cc9ba0af74",
           "Name": "",
           "Description": "Int64",
           "UsingDefaultValue": false,
@@ -308,7 +357,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces integer values",
-      "InputValue": 20
+      "InputValue": 12
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -316,12 +365,12 @@
       "MaximumValue": 1.0,
       "MinimumValue": 0.1,
       "StepValue": 0.01,
-      "Id": "7a95f92d5f90493f88c01e2bdcb886ff",
+      "Id": "359249849f5848ca8bce4d2fc299ad01",
       "NodeType": "NumberInputNode",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "7598ce03e7ed40f998ae549237399c07",
+          "Id": "b0bacba3763c48eda6dfb671340f1092",
           "Name": "",
           "Description": "Double",
           "UsingDefaultValue": false,
@@ -332,28 +381,28 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces numeric values",
-      "InputValue": 0.19
+      "InputValue": 0.59
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
-      "Id": "f2b5a6e80d1f426cbfb4f6b3fea0bf5b",
+      "Id": "eef926e813b24bcc8a2a18f9cda1c11b",
       "NodeType": "CodeBlockNode",
       "Inputs": [],
       "Outputs": [],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly",
-      "Code": "// x número ou lista\n// a maior que 0\ndef Catenaria( x , a )\n{\n   return =  ( a * Math.Cosh(x/a)) - a;\n};"
+      "Code": "// x número ou lista\n// a maior que 0\ndef Catenaria( x , a )\n{\n  f = 1/a;\n  return =  ( a * Math.Cosh(x/f))-a;\n};"
     },
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
-      "Code": "import clr\r\nclr.AddReference('System')\r\nclr.AddReference(\"RevitAPI\")\r\nclr.AddReference(\"RevitServices\")\r\nclr.AddReference(\"RevitNodes\")\r\nfrom System                     import DateTime\r\nfrom RevitServices.Persistence  import DocumentManager\r\nfrom RevitServices.Transactions import TransactionManager\r\n\r\nimport Autodesk.Revit.DB as DB\r\n\r\n# RevitNodes – conversão Dynamo → Revit\r\n\r\nimport Revit\r\nclr.ImportExtensions(Revit.GeometryConversion)\r\n\r\nfrom System.Collections.Generic import List\r\n\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\n\r\n\r\ngeom  = IN[0] \r\niden  = IN[1] \r\nnow   = DateTime.Now\r\ndat   = iden+now.ToString(\"dd/MM/yyyy_HH:mm:ss:fff\")\r\nca    = DB.BuiltInCategory.OST_StructuralTendons\r\ncat   = DB.Category.GetCategory(doc, ca)\r\ncatId = cat.Id\r\n\r\n\r\n# 1) Garante que so é lista de geometrias\r\nif isinstance(geom, list):\r\n    geom_list = geom\r\nelse:\r\n    geom_list = [geom]\r\n\r\n# 2) Converte cada geometria para Revit\r\nrev_geom_list = []\r\nfor g in geom_list:\r\n    # Se vier elemento Revit, não tenta converter\r\n    try:\r\n        rg = g.ToRevitType()\r\n    except:\r\n        rg = None\r\n    if rg:\r\n        # Alguns retornam lista, outros um único objeto\r\n        if isinstance(rg, list):\r\n            rev_geom_list.extend(rg)\r\n        else:\r\n            rev_geom_list.append(rg)\r\n\r\n# 3) Montar List[GeometryObject] para o DirectShape\r\ngeo_list = List[DB.GeometryObject]()\r\nfor g in rev_geom_list:\r\n    geo_list.Add(g)\r\n\r\nTransactionManager.Instance.EnsureInTransaction(doc)\r\n\r\n# 4) Criar DirectShape\r\nds = DB.DirectShape.CreateElement(doc, catId)\r\nds.SetShape ( geo_list )\r\n\r\n# 5) Tentar seta Marca\r\np = ds.LookupParameter(\"Mark\")\r\nif p and not p.IsReadOnly:\r\n    p.Set(str(dat))\r\n\r\nTransactionManager.Instance.TransactionTaskDone()\r\n\r\nOUT = ds\r\n",
+      "Code": "import clr\r\nimport Revit\r\nimport Autodesk.Revit.DB as DB\r\n\r\nclr.AddReference('System')\r\nclr.AddReference(\"RevitAPI\")\r\nclr.AddReference(\"RevitServices\")\r\nclr.AddReference(\"RevitNodes\")\r\nfrom System                     import DateTime\r\nfrom RevitServices.Persistence  import DocumentManager\r\nfrom RevitServices.Transactions import TransactionManager\r\n\r\nclr.ImportExtensions(Revit.GeometryConversion)\r\n\r\nfrom System.Collections.Generic import List\r\n\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\n\r\n\r\ngeom  = IN[0] \r\niden  = IN[1] \r\nnow   = DateTime.Now\r\ndat   = iden+now.ToString(\"dd/MM/yyyy_HH:mm:ss:fff\")\r\nca    = DB.BuiltInCategory.OST_StructuralTendons\r\ncat   = DB.Category.GetCategory(doc, ca)\r\ncatId = cat.Id\r\n\r\n\r\nif isinstance(geom, list):\r\n    geom_list = geom\r\nelse:\r\n    geom_list = [geom]\r\n\r\nrev_geom_list = []\r\nfor g in geom_list:\r\n    try:\r\n        rg = g.ToRevitType()\r\n    except:\r\n        rg = None\r\n    if rg:\r\n        if isinstance(rg, list):\r\n            rev_geom_list.extend(rg)\r\n        else:\r\n            rev_geom_list.append(rg)\r\n\r\ngeo_list = List[DB.GeometryObject]()\r\nfor g in rev_geom_list:\r\n    geo_list.Add(g)\r\n\r\nTransactionManager.Instance.EnsureInTransaction(doc)\r\nforma = DB.DirectShape.CreateElement(doc, catId)\r\nforma.SetShape ( geo_list )\r\n\r\nmarca = forma.LookupParameter(\"Mark\")\r\nif marca and not marca.IsReadOnly:\r\n    marca.Set(str(dat))\r\n    \r\ncomme = forma.LookupParameter(\"Comments\")\r\nif comme and not comme.IsReadOnly:\r\n    comme.Set(str(round(geom.Volume, 2)))\r\n\r\nTransactionManager.Instance.TransactionTaskDone()\r\n\r\nOUT = forma\r\n",
       "Engine": "CPython3",
       "VariableInputPorts": true,
-      "Id": "bf4a68417db84279ab9e91138ab08da6",
+      "Id": "7f2b30a43b7142e495953d7992b1e795",
       "NodeType": "PythonScriptNode",
       "Inputs": [
         {
-          "Id": "fe967b5b956541c9a98f328e0d4d2a2f",
+          "Id": "7b6e28bbc76c4de891c5acbc90098946",
           "Name": "IN[0]",
           "Description": "Input #0",
           "UsingDefaultValue": false,
@@ -362,7 +411,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "049952e5b4d74f5891795eb8161ab386",
+          "Id": "0e50acf347844a5c983d2e5274634817",
           "Name": "IN[1]",
           "Description": "Input #1",
           "UsingDefaultValue": false,
@@ -373,7 +422,7 @@
       ],
       "Outputs": [
         {
-          "Id": "d1dd58172b474aaaaba68a200acbfc06",
+          "Id": "373a90f7f9e4498db5379e1b1f76c603",
           "Name": "OUT",
           "Description": "Result of the python script",
           "UsingDefaultValue": false,
@@ -384,37 +433,67 @@
       ],
       "Replication": "Disabled",
       "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 15.0,
+      "MinimumValue": 0.5,
+      "StepValue": 0.5,
+      "Id": "9f42a9acb9f2401bb6f899806069ed68",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "201a7b0d13a8416981e036e572b59881",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 3.5
     }
   ],
   "Connectors": [
     {
-      "Start": "3ffe5ded42de450ca26d77d0b6a86567",
-      "End": "fe967b5b956541c9a98f328e0d4d2a2f",
-      "Id": "54bc809738904bb697ffcdb2cf443ddc",
+      "Start": "f87f9d940df5445488a628acd2885cb8",
+      "End": "7b6e28bbc76c4de891c5acbc90098946",
+      "Id": "e8dc56d879ba44d6880fb4f51f1d6e8f",
       "IsHidden": "False"
     },
     {
-      "Start": "d0beaf1931bc4e2da2a360a9da821073",
-      "End": "049952e5b4d74f5891795eb8161ab386",
-      "Id": "9516339f442c43cdbb8fe1d7665a5566",
+      "Start": "909f866366894d1486c56ce15c85c645",
+      "End": "0e50acf347844a5c983d2e5274634817",
+      "Id": "2bff709f591c4822b3fa146fecce41dc",
       "IsHidden": "False"
     },
     {
-      "Start": "cc09d78772854c12adfc22bd813aaebc",
-      "End": "60771ecfd94349e8a99462a1d7442313",
-      "Id": "aabd2454aac24bd8825efe813d4cbd11",
+      "Start": "c67057edd774467b9735fe895b85635e",
+      "End": "5f46c4ce14be491ca00d3762cca19930",
+      "Id": "e7a31bf5a2594e18bbd8c17df5587d65",
       "IsHidden": "False"
     },
     {
-      "Start": "d805668c4ac14173adb92688e1a4abad",
-      "End": "e5a17cf33e8b41afb72c40e7d2329741",
-      "Id": "5239181b70784de89270b9bc53cacfbc",
+      "Start": "b258cfd6c8f34ee4a08a99cc9ba0af74",
+      "End": "41d431891e1842b1bb531a789357c657",
+      "Id": "b50c3328e9c042ae89d412f38b09c11e",
       "IsHidden": "False"
     },
     {
-      "Start": "7598ce03e7ed40f998ae549237399c07",
-      "End": "4803de1c4e9d4ec3aa64ccd65eeb7bcf",
-      "Id": "1583be33556e45ddbafab790a5f4c97c",
+      "Start": "b0bacba3763c48eda6dfb671340f1092",
+      "End": "ccb84a467c5d4b4eba158d6fcb4b9697",
+      "Id": "8ac670cced3a4cef81e9d62eb7722a9f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "201a7b0d13a8416981e036e572b59881",
+      "End": "4a59df158d17461cbb60b816eaa5305c",
+      "Id": "8827ebc5f66e45fda44751867c1753b8",
       "IsHidden": "False"
     }
   ],
@@ -451,7 +530,7 @@
       "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
       "Version": "3.3.0.6316",
-      "RunType": "Manual",
+      "RunType": "Automatic",
       "RunPeriod": "1000"
     },
     "Camera": {
@@ -469,97 +548,108 @@
     "ConnectorPins": [],
     "NodeViews": [
       {
-        "Id": "641c642798e04dc8b7bd60565036f812",
+        "Id": "9db23fb473ce4bb9adf7e742ae5f06b6",
         "Name": "Forma cilíndrica",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 139.04052478727237,
-        "Y": 224.24603200526974
+        "X": 179.16309514338622,
+        "Y": 294.90725599486603
       },
       {
-        "Id": "1ece111444164dac8bfc839115686c04",
-        "Name": "Fator",
+        "Id": "fadec1d0c8c440d0b2b8bd703837d17f",
+        "Name": "Fator de Curvatura",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -286.7973101445408,
-        "Y": 257.93194053321844
+        "X": -273.16655141483136,
+        "Y": 411.6080362085519
       },
       {
-        "Id": "be513e2c05ed4f71aa357e5ccc15744a",
-        "Name": "Quantidade",
+        "Id": "cc3d0b2e2f034b148531c69657f34b59",
+        "Name": "Módulos",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -288.76959464806794,
-        "Y": 134.60510742061626
+        "X": -266.9993156002374,
+        "Y": 162.6321080122019
       },
       {
-        "Id": "7a95f92d5f90493f88c01e2bdcb886ff",
+        "Id": "359249849f5848ca8bce4d2fc299ad01",
         "Name": "Raio",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -291.1232725359972,
-        "Y": 386.3935102272433
+        "X": -272.80794276856193,
+        "Y": 536.8383612633078
       },
       {
-        "Id": "f2b5a6e80d1f426cbfb4f6b3fea0bf5b",
+        "Id": "eef926e813b24bcc8a2a18f9cda1c11b",
         "Name": "Funções",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 670.3484354642782,
-        "Y": 282.93276841312877
+        "X": 182.69161151999458,
+        "Y": 83.96397247704493
       },
       {
-        "Id": "bf4a68417db84279ab9e91138ab08da6",
-        "Name": "Faz o Elemento e define Mark",
+        "Id": "7f2b30a43b7142e495953d7992b1e795",
+        "Name": "Faz o Elemento ",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 667.7386849005501,
-        "Y": 489.64821307166744
+        "X": 685.6292969895692,
+        "Y": 631.5785374609356
+      },
+      {
+        "Id": "9f42a9acb9f2401bb6f899806069ed68",
+        "Name": "Dimensão Flecha",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -268.7853336203216,
+        "Y": 287.558302240284
       }
     ],
     "Annotations": [
       {
-        "Id": "0d82342231f345d8a1e1de9b87448a9a",
+        "Id": "f638b1a7908a4df9869f19e21f63565b",
         "Title": "Cria elemento cilíndrico con formato de catenária",
         "DescriptionText": "Autor: Prof. José Luis Menegotto.\r\nEscola Politécnica da UFRJ\r\nDisciplinas BIM, Descomp",
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
         "HeightAdjustment": 0.0,
         "Nodes": [
-          "641c642798e04dc8b7bd60565036f812",
-          "1ece111444164dac8bfc839115686c04",
-          "be513e2c05ed4f71aa357e5ccc15744a",
-          "7a95f92d5f90493f88c01e2bdcb886ff",
-          "f2b5a6e80d1f426cbfb4f6b3fea0bf5b",
-          "bf4a68417db84279ab9e91138ab08da6"
+          "9db23fb473ce4bb9adf7e742ae5f06b6",
+          "fadec1d0c8c440d0b2b8bd703837d17f",
+          "cc3d0b2e2f034b148531c69657f34b59",
+          "359249849f5848ca8bce4d2fc299ad01",
+          "eef926e813b24bcc8a2a18f9cda1c11b",
+          "7f2b30a43b7142e495953d7992b1e795",
+          "9f42a9acb9f2401bb6f899806069ed68"
         ],
         "HasNestedGroups": false,
-        "Left": -301.1232725359972,
-        "Top": 37.7479645634734,
-        "Width": 1343.185993714561,
-        "Height": 614.3288199367655,
+        "Left": -283.16655141483136,
+        "Top": -12.893170380097928,
+        "Width": 1168.5101341186864,
+        "Height": 806.900279269605,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": 134.60510742061626,
-        "InitialHeight": 594.82908624131,
+        "InitialTop": 83.96397247704493,
+        "InitialHeight": 500.0431056510512,
         "TextblockHeight": 86.85714285714286,
         "Background": "#FFA4E1FF"
       }
     ],
-    "X": 305.8858803747025,
-    "Y": 98.34713432016527,
-    "Zoom": 0.37923236869671684
+    "X": 165.41400815779735,
+    "Y": 71.30786077712713,
+    "Zoom": 0.2638842585453165
   }
 }
