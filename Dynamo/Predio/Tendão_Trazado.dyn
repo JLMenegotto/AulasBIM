@@ -1,0 +1,743 @@
+{
+  "Uuid": "ee736143-512b-4de9-b204-dfb8b5f7be83",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Tendão_Trazado",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      },
+      "PolyCurve": {
+        "Key": "Autodesk.DesignScript.Geometry.PolyCurve",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Circle": {
+        "Key": "Autodesk.DesignScript.Geometry.Circle",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Solid": {
+        "Key": "Autodesk.DesignScript.Geometry.Solid",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Material": {
+        "Key": "Revit.Elements.Material",
+        "Value": "RevitNodes.dll"
+      },
+      "DirectShape": {
+        "Key": "Revit.Elements.DirectShape",
+        "Value": "RevitNodes.dll"
+      },
+      "String": {
+        "Key": "DSCore.String",
+        "Value": "DSCoreNodes.dll"
+      },
+      "DateTime": {
+        "Key": "DSCore.DateTime",
+        "Value": "DSCoreNodes.dll"
+      },
+      "DateTime.Now": {
+        "Key": "DSCore.DateTime",
+        "Value": "DSCoreNodes.dll"
+      },
+      "FamilyInstance": {
+        "Key": "Revit.Elements.FamilyInstance",
+        "Value": "RevitNodes.dll"
+      },
+      "Revit.Element": {
+        "Key": "Revit.Elements.Element",
+        "Value": "RevitNodes.dll"
+      },
+      "Revit.Elements.Element": {
+        "Key": "Revit.Elements.Element",
+        "Value": "RevitNodes.dll"
+      },
+      "DirectShape.GetGeometry": {
+        "Key": "Revit.Elements.DirectShape",
+        "Value": "RevitNodes.dll"
+      },
+      "Geometry": {
+        "Key": "Autodesk.DesignScript.Geometry.Geometry",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Solid.ID": {
+        "Key": "Autodesk.DesignScript.Geometry.Solid",
+        "Value": "ProtoGeometry.dll"
+      },
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "eba6d750ea6b41a9b24a36872e6b4455",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [
+        {
+          "Id": "822751d30df3419abcffb482d2c887a0",
+          "Name": "l",
+          "Description": "l",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "35f71c56e2884d91998ab5364d2bad3a",
+          "Name": "d",
+          "Description": "d",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9dd3620788ea4336b478cae7c77e552e",
+          "Name": "fa",
+          "Description": "fa",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0c40946d962748e498153b1de7f267c1",
+          "Name": "fc",
+          "Description": "fc",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5218c441d636459bb70c2da5c000d2ce",
+          "Name": "r",
+          "Description": "r",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2be9a77e55d148a1816a6bed74ceb447",
+          "Name": "OK",
+          "Description": "OK",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "53b9431d9880487891345e297822fbf0",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "16d7db82f8974d9faebed3b2dd875643",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "899db13d08ee46498390811836a69e08",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3c91fff2fc3f4deea1d998fdc73c5ff7",
+          "Name": "",
+          "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2279e33733b64ce1944df2eea5777f36",
+          "Name": "",
+          "Description": "Value of expression at line 5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "58db6505c2514312af32f75ed9857756",
+          "Name": "",
+          "Description": "Value of expression at line 6",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "607bb6baba3f4883b7a02e60a1c277da",
+          "Name": "",
+          "Description": "LP",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0fc6cc4c87b34f53a7a9c4a8631372e9",
+          "Name": "",
+          "Description": "PO",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6495083d78704e3ea3b9f35daf182373",
+          "Name": "",
+          "Description": "CV",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "12fb4d5d3ec243f7b7342b7594a61b6e",
+          "Name": "",
+          "Description": "P1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f1872d6356ad4589bbca2f0c23ac9a4a",
+          "Name": "",
+          "Description": "P2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "164c165ead2740e384199deeb8fbb54a",
+          "Name": "",
+          "Description": "Di",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e6565aadc225483cb3199d9f00eeb4b1",
+          "Name": "",
+          "Description": "C1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d2aad93adbe64d15bd41926348a59802",
+          "Name": "",
+          "Description": "D1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b0705e2555794523804961d062fc6bc5",
+          "Name": "",
+          "Description": "GE",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5a9c764fde754b528f40a8ed4b4ba8b3",
+          "Name": "",
+          "Description": "SO",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6f0e235835944e9ca95329f3a510ec43",
+          "Name": "",
+          "Description": "ID",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bee1d0c56fc7470391aa277b608ccb42",
+          "Name": "",
+          "Description": "Value of expression at line 20",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "l;\nd;\nfa;\nfc;\nr;\nOK;\n//--------------------------------------------\nLP  = Trazado ( l, d ,fa, fc);\n//--------------------------------------------\nPO = PolyCurve.ByPoints ( LP , false    );\nCV = PolyCurve.Curves   ( PO            );\nP1 = CV.StartPoint;\nP2 = CV.EndPoint;\nDi = CV.Direction;\nC1 = List.AddItemToEnd ( P2[-1] , P1 );\nD1 = List.AddItemToEnd ( Di[-1] , Di );\nGE = Circle.ByCenterPointRadiusNormal(C1,r,D1);\nSO = Solid.ByLoft      ( GE            );\nID = \"Tensor-\"+l+\"-\"+fa+\"-\"+fc+\"-\"+d;\nOK;"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 0.01,
+      "MinimumValue": 0.0,
+      "StepValue": 0.0025,
+      "Id": "efa20d9a2a894c2fa0e3076f9140103d",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2a38e1a8da934cedb3b092b72f7b6a7a",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 0.005
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 0.03,
+      "MinimumValue": 0.005,
+      "StepValue": 0.001,
+      "Id": "94a075043e5141afbcc4bd26b623a229",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9cf4c083e39a47a9ba0c3c130a7d3cc4",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 0.027
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "f1490e5135be463585b9c6c8ee5c241b",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "def Trazado ( l , e , fa, fc)\n{\n    m  = 10;\n    o  = l/2;\n\n    a  = l/m;\n    b  = l/(m*2);\n    c  = l-a;\n    d  = l-b;\n    x  =  0..l..#(l*m);\n    xc = -o..o..#(l*m);\n    z = Altura( xc , fa , fc);\n    p = Desvio( x  ,z,a,b,c,d,e);\n    return = p;\n};\n\ndef Desvio( x,z,a,b,c,d,e )\n{\n    y = (x >= 0 && x <= a) ?  0 :\n        (x >  a && x <  b) ? -e :\n        (x >  b && x <  c) ? -e : 0;\n    p = Point.ByCoordinates(x,y,z);\n    return = p;\n};\n\ndef Altura( x , fa, fc)\n{\n    de = ( (fa/x) / fc );\n    z  = Math.Cosh( x / de );\n   return = z;\n};"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "Code": "import clr\r\nimport Revit\r\nimport Autodesk.Revit.DB as DB\r\n\r\nclr.AddReference('System')\r\nclr.AddReference(\"RevitAPI\")\r\nclr.AddReference(\"RevitServices\")\r\nclr.AddReference(\"RevitNodes\")\r\nfrom System                     import DateTime\r\nfrom RevitServices.Persistence  import DocumentManager\r\nfrom RevitServices.Transactions import TransactionManager\r\n\r\nclr.ImportExtensions(Revit.GeometryConversion)\r\n\r\nfrom System.Collections.Generic import List\r\n\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\n\r\ngeom  = IN[0] \r\niden  = IN[1] \r\ndese  = IN[2]\r\n\r\nnow   = DateTime.Now\r\ndat   = now.ToString(\"dd/MM/yyyy_HH:mm:ss:fff\")\r\nca    = DB.BuiltInCategory.OST_StructuralTendons\r\ncat   = DB.Category.GetCategory(doc, ca)\r\ncatId = cat.Id\r\n\r\nif isinstance(geom, list):\r\n    geom_list = geom\r\nelse:\r\n    geom_list = [geom]\r\n\r\nrev_geom_list = []\r\nfor g in geom_list:\r\n    try:\r\n        rg = g.ToRevitType()\r\n    except:\r\n        rg = None\r\n    if rg:\r\n        if isinstance(rg, list):\r\n            rev_geom_list.extend(rg)\r\n        else:\r\n            rev_geom_list.append(rg)\r\n\r\ngeo_list = List[DB.GeometryObject]()\r\nfor g in rev_geom_list:\r\n    geo_list.Add(g)\r\n\r\nif dese == True:\r\n    TransactionManager.Instance.EnsureInTransaction(doc)\r\n    forma = DB.DirectShape.CreateElement(doc, catId)\r\n    forma.SetShape(geo_list)\r\n    marca = forma.LookupParameter(\"Mark\")\r\n    idmar = iden.replace(\"0\", \"\").replace(\".\", \"\")\r\n\r\n    if marca and not marca.IsReadOnly:\r\n        marca.Set(str( idmar+\"_\"+dat ))\r\n    comme = forma.LookupParameter(\"Comments\")\r\n    if comme and not comme.IsReadOnly:\r\n        comme.Set(\"Volume:\" + str( round(geom.Volume, 2)))\r\n    TransactionManager.Instance.TransactionTaskDone()\r\nelse:\r\n    forma = \"\"\r\n\r\nOUT = forma\r\n",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "463e125d57e347c1a1328d231a314309",
+      "NodeType": "PythonScriptNode",
+      "Inputs": [
+        {
+          "Id": "1ec5a54da6e1459b977d5ea68d245f78",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3134dba21d484d65acbfece81c3ac1b5",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b32527ff76514862949b128f423a2eaf",
+          "Name": "IN[2]",
+          "Description": "Input #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6c73bab1900c4f1882db661f7409ed8a",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 0.05,
+      "MinimumValue": 0.0,
+      "StepValue": 0.01,
+      "Id": "4951e170e9954344877007102d88ae85",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "252ca73370cf495789e40459d55a295a",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 0.03
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 20.0,
+      "MinimumValue": 5.0,
+      "StepValue": 1.0,
+      "Id": "74408784c8df4f8390dcecb42910bae7",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "777fb0b3d1d4496e9f0fa26ae6808e6c",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 15.0
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 0.5,
+      "MinimumValue": 0.1,
+      "StepValue": 0.01,
+      "Id": "f1c8c14ae49748b4bf0e95ad73c9b2a3",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "466d28c6dd41481b85904b17c3f16b53",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 0.26
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "Id": "b53b08428c344e2e89559ba69aa284be",
+      "NodeType": "BooleanInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d9fcf782cbe343ca9e4d58857ee37889",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Enables selection between True and False",
+      "InputValue": false
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "5a9c764fde754b528f40a8ed4b4ba8b3",
+      "End": "1ec5a54da6e1459b977d5ea68d245f78",
+      "Id": "16006d0d29c0491cbb27b1f29feb1bc7",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6f0e235835944e9ca95329f3a510ec43",
+      "End": "3134dba21d484d65acbfece81c3ac1b5",
+      "Id": "36838703b1e6437eb670f2489151e4f7",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "bee1d0c56fc7470391aa277b608ccb42",
+      "End": "b32527ff76514862949b128f423a2eaf",
+      "Id": "bbfddef7e75e4c1a848a4a77ce2c31a7",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2a38e1a8da934cedb3b092b72f7b6a7a",
+      "End": "0c40946d962748e498153b1de7f267c1",
+      "Id": "ba92e08725d54ff58ef43a6d80ea1e34",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9cf4c083e39a47a9ba0c3c130a7d3cc4",
+      "End": "5218c441d636459bb70c2da5c000d2ce",
+      "Id": "4bfef552e11a4c3cb045da19e393eee1",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "252ca73370cf495789e40459d55a295a",
+      "End": "35f71c56e2884d91998ab5364d2bad3a",
+      "Id": "0d1857d369a44906913ecfaf1b57d8a1",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "777fb0b3d1d4496e9f0fa26ae6808e6c",
+      "End": "822751d30df3419abcffb482d2c887a0",
+      "Id": "01ec956afd1e4eabbe492a5ed5eaf660",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "466d28c6dd41481b85904b17c3f16b53",
+      "End": "9dd3620788ea4336b478cae7c77e552e",
+      "Id": "d509697409fa4abca15115c74711df20",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d9fcf782cbe343ca9e4d58857ee37889",
+      "End": "2be9a77e55d148a1816a6bed74ceb447",
+      "Id": "28976a8ee3dc460ba05b4558126a99bb",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.3",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "8.2",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.3.0.6316",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -3.2368996143341064,
+      "EyeY": 42.60356521606445,
+      "EyeZ": 7.660150527954102,
+      "LookX": 0.06469464302062988,
+      "LookY": -36.38356399536133,
+      "LookZ": -14.210626602172852,
+      "UpX": 0.0037864153273403645,
+      "UpY": 0.555051863193512,
+      "UpZ": -0.8318071961402893
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "eba6d750ea6b41a9b24a36872e6b4455",
+        "Name": "Forma cilíndrica",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 273.2760395533709,
+        "Y": 363.06283929603785
+      },
+      {
+        "Id": "efa20d9a2a894c2fa0e3076f9140103d",
+        "Name": "Fator de Curvatura",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -205.91571536399465,
+        "Y": 555.5800755447189
+      },
+      {
+        "Id": "94a075043e5141afbcc4bd26b623a229",
+        "Name": "Raio",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -207.9187428705784,
+        "Y": 678.8506926781729
+      },
+      {
+        "Id": "f1490e5135be463585b9c6c8ee5c241b",
+        "Name": "Funções",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1015.0182715885326,
+        "Y": 244.30526887798567
+      },
+      {
+        "Id": "463e125d57e347c1a1328d231a314309",
+        "Name": "Faz o Elemento ",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 797.772526094732,
+        "Y": 621.921812944078
+      },
+      {
+        "Id": "4951e170e9954344877007102d88ae85",
+        "Name": "Deslocamento do centro",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -206.40046314878396,
+        "Y": 303.53045707923616
+      },
+      {
+        "Id": "74408784c8df4f8390dcecb42910bae7",
+        "Name": "Luz do vão",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -206.40046314878396,
+        "Y": 182.29507710825328
+      },
+      {
+        "Id": "f1c8c14ae49748b4bf0e95ad73c9b2a3",
+        "Name": "Fator de Altura",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -202.58152646137773,
+        "Y": 429.0248854412147
+      },
+      {
+        "Id": "b53b08428c344e2e89559ba69aa284be",
+        "Name": "Modelar",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -51.722749441026735,
+        "Y": 802.7276152127479
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "c45329c6797a4566b4ec4d0f9e00ce09",
+        "Title": "Cria elemento cilíndrico para cordoalhas",
+        "DescriptionText": "Autor: Prof. José Luis Menegotto.\r\nEscola Politécnica da UFRJ\r\nDisciplinas BIM, Descomp",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "eba6d750ea6b41a9b24a36872e6b4455",
+          "efa20d9a2a894c2fa0e3076f9140103d",
+          "94a075043e5141afbcc4bd26b623a229",
+          "f1490e5135be463585b9c6c8ee5c241b",
+          "463e125d57e347c1a1328d231a314309",
+          "4951e170e9954344877007102d88ae85",
+          "74408784c8df4f8390dcecb42910bae7",
+          "f1c8c14ae49748b4bf0e95ad73c9b2a3",
+          "b53b08428c344e2e89559ba69aa284be"
+        ],
+        "HasNestedGroups": false,
+        "Left": -217.9187428705784,
+        "Top": 85.43793425111042,
+        "Width": 1581.7941573162539,
+        "Height": 850.0039666759232,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 182.29507710825328,
+        "InitialHeight": 776.7452351119093,
+        "TextblockHeight": 86.85714285714286,
+        "Background": "#FFA4E1FF"
+      }
+    ],
+    "X": 261.2582858366246,
+    "Y": 40.29563476542501,
+    "Zoom": 0.6956164413011147
+  }
+}
