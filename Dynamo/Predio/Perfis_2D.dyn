@@ -1,0 +1,518 @@
+{
+  "Uuid": "6f852119-ae83-4d96-9bb3-1438ba1914b7",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Perfis_2D",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      },
+      "PolyCurve": {
+        "Key": "Autodesk.DesignScript.Geometry.PolyCurve",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Circle": {
+        "Key": "Autodesk.DesignScript.Geometry.Circle",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Solid": {
+        "Key": "Autodesk.DesignScript.Geometry.Solid",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Material": {
+        "Key": "Revit.Elements.Material",
+        "Value": "RevitNodes.dll"
+      },
+      "DirectShape": {
+        "Key": "Revit.Elements.DirectShape",
+        "Value": "RevitNodes.dll"
+      },
+      "String": {
+        "Key": "DSCore.String",
+        "Value": "DSCoreNodes.dll"
+      },
+      "DateTime": {
+        "Key": "DSCore.DateTime",
+        "Value": "DSCoreNodes.dll"
+      },
+      "DateTime.Now": {
+        "Key": "DSCore.DateTime",
+        "Value": "DSCoreNodes.dll"
+      },
+      "FamilyInstance": {
+        "Key": "Revit.Elements.FamilyInstance",
+        "Value": "RevitNodes.dll"
+      },
+      "Revit.Element": {
+        "Key": "Revit.Elements.Element",
+        "Value": "RevitNodes.dll"
+      },
+      "Revit.Elements.Element": {
+        "Key": "Revit.Elements.Element",
+        "Value": "RevitNodes.dll"
+      },
+      "DirectShape.GetGeometry": {
+        "Key": "Revit.Elements.DirectShape",
+        "Value": "RevitNodes.dll"
+      },
+      "Geometry": {
+        "Key": "Autodesk.DesignScript.Geometry.Geometry",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Solid.ID": {
+        "Key": "Autodesk.DesignScript.Geometry.Solid",
+        "Value": "ProtoGeometry.dll"
+      },
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      },
+      "Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Arc": {
+        "Key": "Autodesk.DesignScript.Geometry.Arc",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "98db4b399b9b440c9e40907a470ea5ca",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "def Perfil ( h , hc, b , lc, p )\n{\n    x   =   0;\n    y   = [ 0, lc,                   1-lc, 1 ] *  b;\n    z   = [ 0, 0.1, 0.1+hc , 0.90-hc, 0.90, 1 ] * -h;\n//---------------------------------------------------------------\n    p00 = [0,3,23,20                                           ];\n    p01 = [0,3,23,20                                           ];\n    p02 = [4,1,2,7,19,22,21,16                                 ];\n    p03 = [0,3,7,10,14,19,23,20,16,13,9,4                      ];\n    p04 = [0,1,17,19,23,20                                     ];\n    p05 = [0,3,7,10,14, 19,23, 20                              ];\n    p06 = [0,3,7,10,9,13,14,       19,23,20                    ];\n    p07 = [0,3,7,6,10,9,13,14,  18,19,23,20                    ];\n    p08 = [4,1,3,7,6,10,9,13,14,18,19,23,   21,16              ];\n    p09 = [0,3,7,6,10,18,19,23,20,16,17,5,4                    ];\n    p10 = [0,3,23,20                                           ];\n    p11 = [0,1,19,23,20                                        ];\n    p12 = [0,1,5,19,23,20                                      ];\n    p13 = [1,2,18,19,23,20,16,17                               ];\n    p14 = [1,2,14,19,23,20,16,13                               ];\n    p15 = [4,5,1,2,6,7,11,10,14,19,23,20,16,13,9,8             ];\n    p16 = [4,5,1,2,6,7,11,10,14,15,19,18,22,21,17,16,12,13,9,8 ];\n    p17 = [4,  1,2,  7,11,10,14,15,19,   22,21,   16,12,13,9,8 ];\n    p18 = [1,2,14,15,19,                 22,21,   16,12,13     ];\n    p19 = [0,2,7,19,22,20                                      ];\n    p20 = [0,1,7,19,21,20                                      ];\n    p21 = [0,3,7,6,10,11,15,14,18,19,23,20                     ];\n    p22 = [0,3,7,6,10,11,15,14,18,19,23,20,16,17,13,12,8,9,5,4 ];\n    p23 = [0,3,7,6,            18,19,23,20,16,17,          5,4 ];\n//---------------------------------------------------------------\n    ip  = [ p00,p01,p02,p03,p04,p05,p06,p07,p08,p09,\n            p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,\n            p20,p21,p22,p23\n          ];\n    i   = ip[p%List.Count(ip)];\n//---------------------------------------------------------------\n    ps = List.Flatten( Point.ByCoordinates ( x , y, z<1>), 2);\n    sv = PolyCurve.ByPoints  ( ps[i] , true );\n    return = [ sv ];\n};"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 10.0,
+      "MinimumValue": 5.0,
+      "StepValue": 0.25,
+      "Id": "db20e5ccf7014ca689a8fd9d50bcfbef",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e44486df57684e8dabf646f5c69ca774",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 5.0
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "bb8ba1a5e05c4c2aa1d3fdfa17a55800",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [
+        {
+          "Id": "0cf6fd3c50aa430bbe54aac33f8b3716",
+          "Name": "a",
+          "Description": "a",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cd21de1f2179443697a708c3604f45d2",
+          "Name": "ac",
+          "Description": "ac",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fc2c45fff5b24f0a9127f56b922e3930",
+          "Name": "l",
+          "Description": "l",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f76895ba2e854cfcb31ae9efe640d467",
+          "Name": "lc",
+          "Description": "lc",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "90b5bb425aaf4e80b1c6502aaf994751",
+          "Name": "p",
+          "Description": "p",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c3183ccd533b4838865cad794790d649",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b269259f4ce34ce483acfe1154194653",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "07fbc567162a4fb1bfe88c4cd5691257",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d02793fa83d44a4aa8540fb228bd2792",
+          "Name": "",
+          "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "74d9dac02b2c4107907172d3ac84dde7",
+          "Name": "",
+          "Description": "Value of expression at line 5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1d02112cdef44c4099d2492c7c4480ba",
+          "Name": "",
+          "Description": "PE",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "a;\nac;\nl;\nlc;\np;\nPE = Perfil (a ,ac, l, lc, p );"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 30.0,
+      "MinimumValue": 0.0,
+      "StepValue": 1.0,
+      "Id": "102e48bf3b2748278f9b732135a666a2",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8b7861e195934387b435ecdba4e3f66b",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 11.0
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 10.0,
+      "MinimumValue": 1.0,
+      "StepValue": 0.25,
+      "Id": "376eeb2b8c4a4509b9b981bdabba5593",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "935f396f1aed43ee92c6c82eebe79922",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 2.25
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 0.45,
+      "MinimumValue": 0.025,
+      "StepValue": 0.025,
+      "Id": "d33333f31fb34ee2a4408a13aa030bf1",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0fddfcbbc5814a96b6d215c1ea116f4a",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 0.05
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 0.35,
+      "MinimumValue": 0.025,
+      "StepValue": 0.025,
+      "Id": "09b95c2adfcd45c88d29ad6b22aee9f8",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "423760916dac4fe484cac3a4065b594b",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 0.15
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "e44486df57684e8dabf646f5c69ca774",
+      "End": "0cf6fd3c50aa430bbe54aac33f8b3716",
+      "Id": "f30f58c978a94ad789bd735b78069d80",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8b7861e195934387b435ecdba4e3f66b",
+      "End": "90b5bb425aaf4e80b1c6502aaf994751",
+      "Id": "78e2435313f241fb81a1a9f31e4fb1c3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "935f396f1aed43ee92c6c82eebe79922",
+      "End": "fc2c45fff5b24f0a9127f56b922e3930",
+      "Id": "5df8b7c653f04e7a9533b4800b043d6b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0fddfcbbc5814a96b6d215c1ea116f4a",
+      "End": "f76895ba2e854cfcb31ae9efe640d467",
+      "Id": "1bc8139ade7e4369abb20b5ef4ae02ab",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "423760916dac4fe484cac3a4065b594b",
+      "End": "cd21de1f2179443697a708c3604f45d2",
+      "Id": "ec1efccef4b54a75a7d881c2f6f5c526",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.3",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "8.2",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.3.0.6316",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -3.2368996143341064,
+      "EyeY": 42.60356521606445,
+      "EyeZ": 7.660150527954102,
+      "LookX": 0.06469464302062988,
+      "LookY": -36.38356399536133,
+      "LookZ": -14.210626602172852,
+      "UpX": 0.0037864153273403645,
+      "UpY": 0.555051863193512,
+      "UpZ": -0.8318071961402893
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "98db4b399b9b440c9e40907a470ea5ca",
+        "Name": "Definição de Perfil 2D",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1276.3513622624137,
+        "Y": -983.397570736802
+      },
+      {
+        "Id": "db20e5ccf7014ca689a8fd9d50bcfbef",
+        "Name": "Altura",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -697.598462043281,
+        "Y": -906.3790728147565
+      },
+      {
+        "Id": "bb8ba1a5e05c4c2aa1d3fdfa17a55800",
+        "Name": "Função Inicial",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -215.24696443765401,
+        "Y": -719.5937931926925
+      },
+      {
+        "Id": "102e48bf3b2748278f9b732135a666a2",
+        "Name": "Perfil",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -693.9092493472215,
+        "Y": -413.3311103349945
+      },
+      {
+        "Id": "376eeb2b8c4a4509b9b981bdabba5593",
+        "Name": "Largura",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -692.8569403966993,
+        "Y": -660.093421442337
+      },
+      {
+        "Id": "d33333f31fb34ee2a4408a13aa030bf1",
+        "Name": "Parametro Largura",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -692.5734474060035,
+        "Y": -539.3338431099089
+      },
+      {
+        "Id": "09b95c2adfcd45c88d29ad6b22aee9f8",
+        "Name": "Parametro Altura",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -697.5580704728052,
+        "Y": -783.1438268055277
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "6d46242f456c43d9821f09f4c52f6a2b",
+        "Title": "Configurador de perfil 2D",
+        "DescriptionText": "Autor: Prof. José Luis Menegotto.\r\nEscola Politécnica da UFRJ\r\nDisciplinas BIM, Descomp - Configurador de perfil 2D.",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "bb8ba1a5e05c4c2aa1d3fdfa17a55800",
+          "db20e5ccf7014ca689a8fd9d50bcfbef",
+          "98db4b399b9b440c9e40907a470ea5ca",
+          "102e48bf3b2748278f9b732135a666a2",
+          "376eeb2b8c4a4509b9b981bdabba5593",
+          "d33333f31fb34ee2a4408a13aa030bf1",
+          "09b95c2adfcd45c88d29ad6b22aee9f8"
+        ],
+        "HasNestedGroups": false,
+        "Left": -1286.3513622624137,
+        "Top": -1094.397570736802,
+        "Width": 1443.1043978247596,
+        "Height": 890.0,
+        "FontSize": 48.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": -983.397570736802,
+        "InitialHeight": 771.8227571219327,
+        "TextblockHeight": 101.0,
+        "Background": "#FF48B9FF"
+      }
+    ],
+    "X": 884.9240405689372,
+    "Y": 739.9099598535042,
+    "Zoom": 0.6070398603949024
+  }
+}
