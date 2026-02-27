@@ -169,6 +169,8 @@ Função de criação de Andares (Levels). Repare que a função tem extensão *
 
 ## Viga_Tendão.dyn
 
+Esquema dimensional paramétrico e lista dos pontos **(i)** para trazado do perfil da viga.
+
 <img width="390" height="800" alt="seção" src="https://github.com/user-attachments/assets/049e0fde-2fca-4763-8513-f70a1ff4875c" />
 
 <img width="1306" height="1274" alt="Viga_Tendão" src="https://github.com/user-attachments/assets/42093c9c-cb83-4bd4-aa2d-c5ed13570815" />
