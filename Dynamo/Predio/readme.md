@@ -177,11 +177,10 @@ A lista **z** contem os valores paramétricos das alturas do perfil que são mul
 <img width="390" height="800" alt="seção" src="https://github.com/user-attachments/assets/049e0fde-2fca-4763-8513-f70a1ff4875c" />
 
 ## Perfis_2D.dyn
-<img width="1514" height="1550" alt="Perfis_2D" src="https://github.com/user-attachments/assets/dfc81d7f-6f40-4142-a00c-60ceac297681" />
 A função faz a marcação de poligonais fechadas com diversas configurações formais. As listas **(p00 a p23)** contem os valores de cada 
 forma que será passada à função **PolyCurve.ByPoints**.
+<img width="1514" height="1550" alt="Perfis_2D" src="https://github.com/user-attachments/assets/dfc81d7f-6f40-4142-a00c-60ceac297681" />
 
-## 
 [**Canal YouTube:** Videos com explicação dos conteúdos e metodologias das funções](https://www.youtube.com/channel/UCCN58u2BP38F09aswlJrILA)
 #### **Consulte outros projetos**
   
