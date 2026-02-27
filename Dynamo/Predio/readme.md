@@ -165,8 +165,6 @@ Função de criação de Andares (Levels). Repare que a função tem extensão *
        16.    Val = [ CRI   , CRI.Name ,  CRI.Elevation ];
        17.    DIC = Dictionary.ByKeysValues ( Key , Val );
 
-
-
 ## Viga_Tendão.dyn
 
 <img width="1306" height="1274" alt="Viga_Tendão" src="https://github.com/user-attachments/assets/42093c9c-cb83-4bd4-aa2d-c5ed13570815" />
@@ -177,6 +175,13 @@ A lista **y** contem os valores paramétricos que são multiplicados pelo valor 
 A lista **z** contem os valores paramétricos das alturas do perfil que são multiplicados pelo valor **-h** que é a altura da viga (predimensionada com l/f).
 
 <img width="390" height="800" alt="seção" src="https://github.com/user-attachments/assets/049e0fde-2fca-4763-8513-f70a1ff4875c" />
+
+## Perfil_2D.dyn
+
+<img width="1514" height="1550" alt="Perfis_2D" src="https://github.com/user-attachments/assets/fa8c1e0a-f221-4b25-a272-cdc03038dfac" />
+
+A função faz a marcação de poligonais fechadas com diversas configurações formais. As listas **(p01 a p23)** contem os valores de cada
+forma que será passada à função **PolyCurve.ByPoints**.     
 
 ## 
 [**Canal YouTube:** Videos com explicação dos conteúdos e metodologias das funções](https://www.youtube.com/channel/UCCN58u2BP38F09aswlJrILA)
