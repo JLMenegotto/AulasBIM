@@ -164,6 +164,20 @@ Função de criação de Andares (Levels). Repare que a função tem extensão *
        15.    Key = ["Andar", "Nome"   , "Cota"         ];
        16.    Val = [ CRI   , CRI.Name ,  CRI.Elevation ];
        17.    DIC = Dictionary.ByKeysValues ( Key , Val );
+
+
+
+## Viga_Tendão.dyn
+
+<img width="390" height="800" alt="seção" src="https://github.com/user-attachments/assets/049e0fde-2fca-4763-8513-f70a1ff4875c" />
+
+<img width="1306" height="1274" alt="Viga_Tendão" src="https://github.com/user-attachments/assets/42093c9c-cb83-4bd4-aa2d-c5ed13570815" />
+
+
+
+
+
+
 ## 
 [**Canal YouTube:** Videos com explicação dos conteúdos e metodologias das funções](https://www.youtube.com/channel/UCCN58u2BP38F09aswlJrILA)
 #### **Consulte outros projetos**
