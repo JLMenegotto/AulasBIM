@@ -169,19 +169,13 @@ Função de criação de Andares (Levels). Repare que a função tem extensão *
 
 ## Viga_Tendão.dyn
 
+<img width="1306" height="1274" alt="Viga_Tendão" src="https://github.com/user-attachments/assets/42093c9c-cb83-4bd4-aa2d-c5ed13570815" />
+
 A lista **(i)** contem o esquema dos pontos usados traçar a forma do eerfil da viga. Alterando essa lista podem ser obtidos diversos perfis. Por exemplo, a lista [0, 3, 23, 20] define o perfil de uma viga retangular.     
 A lista **y** contem os valores paramétricos que são multiplicados pelo valor **b** que representa a largura da viga.
 A lista **z** contem os valores paramétricos das alturas do perfil que são multiplicados pelo valor **-h** que é a altura da viga (predimensionada com l/f).
 
-
 <img width="390" height="800" alt="seção" src="https://github.com/user-attachments/assets/049e0fde-2fca-4763-8513-f70a1ff4875c" />
-
-<img width="1306" height="1274" alt="Viga_Tendão" src="https://github.com/user-attachments/assets/42093c9c-cb83-4bd4-aa2d-c5ed13570815" />
-
-
-
-
-
 
 ## 
 [**Canal YouTube:** Videos com explicação dos conteúdos e metodologias das funções](https://www.youtube.com/channel/UCCN58u2BP38F09aswlJrILA)
