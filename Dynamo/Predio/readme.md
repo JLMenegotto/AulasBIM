@@ -169,7 +169,7 @@ Função de criação de Andares (Levels). Repare que a função tem extensão *
 
 ## Viga_Tendão.dyn
 
-A lista **(i)** contem o esquema dos pontos usados traçar a forma do eerfil da viga. Alterando essa lista podem ser obtidos diversos perfis, por exemplo, a lista [0,3, 23, 20] pode ser usada para uma viga retangular.     
+A lista **(i)** contem o esquema dos pontos usados traçar a forma do eerfil da viga. Alterando essa lista podem ser obtidos diversos perfis. Por exemplo, a lista [0, 3, 23, 20] define o perfil de uma viga retangular.     
 A lista **y** contem os valores paramétricos que são multiplicados pelo valor **b** que representa a largura da viga.
 A lista **z** contem os valores paramétricos das alturas do perfil que são multiplicados pelo valor **-h** que é a altura da viga (predimensionada com l/f).
 
