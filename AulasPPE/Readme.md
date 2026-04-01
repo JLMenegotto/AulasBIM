@@ -1,5 +1,9 @@
 ## Aulas PPE
 
+## Barras de reforço: Função Barra.dyn
+
+<img width="1080" height="928" alt="Barras" src="https://github.com/user-attachments/assets/6f540c1a-c489-4758-b4ae-b55b8f7bdd0d" />
+
 
 ## Lotes: Função Aula_PPE_05.dyn
 No código da função **Aula_PPE_04b.dyn** não foi utilizada a Massa Inplace como prédio. Nesta função, para formar o predio é criado o volume a partir da linha do limite do lote escalada com o fator correspondente à
