@@ -1,0 +1,460 @@
+{
+  "Uuid": "d3cb7ae3-0aef-486c-936f-9c5e32b62300",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Barra",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "be911ad2a91b4585ac4fd91bed93df46",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [
+        {
+          "Id": "3a6ed60fca9f4ec8bca464fba4e88533",
+          "Name": "c",
+          "Description": "c",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cd7f3abe86994829b706c4074e5a9eee",
+          "Name": "a",
+          "Description": "a",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e271a37e137a44ba87da78103ec5e427",
+          "Name": "b",
+          "Description": "b",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5d5685531f1f4b6c9df93f4f7ec6f276",
+          "Name": "g",
+          "Description": "g",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "95e5815d25b0494da38d39c8760733e3",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "69bcb5cb05f3400a8655345ef8faabc9",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c5f901a2acc343a28a72475bb595df5c",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8abd548d20db4e0790ee88760bb70e02",
+          "Name": "",
+          "Description": "p",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "374cf2824aba41e9a3e789880c7110e4",
+          "Name": "",
+          "Description": "d",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "24984ab238684f83820019bcd0189dd1",
+          "Name": "",
+          "Description": "x",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0750969029d14f6097dc62f1c0dc76b2",
+          "Name": "",
+          "Description": "y",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3cb030b16f144a919f8bdc75432289de",
+          "Name": "",
+          "Description": "b1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ba6dac1d121348998fab98fcbbf05384",
+          "Name": "",
+          "Description": "b2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "63e02af6d6cc45ab8027f3bb51ccf987",
+          "Name": "",
+          "Description": "b3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "03e2d4d2e7484496a076f23729707834",
+          "Name": "",
+          "Description": "b4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c9591a990ecc4166a09427bd1e44b4ab",
+          "Name": "",
+          "Description": "b5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8795bbe7587448b7a63cadac735dc754",
+          "Name": "",
+          "Description": "LP",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d812046fda534c879afdf6fd971412be",
+          "Name": "",
+          "Description": "LPF",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6cce08fef2cc4f7480dea298ea5488de",
+          "Name": "",
+          "Description": "BAR",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "c;\na;\nb;\np = a+b;\n//------------------------------------------------\n// A lista d tem os valores paramétricos\n// para distribuir os pontos em X si o parâmetro b\n// é = 0 o gancho é reto\n//------------------------------------------------\nd   = [0 , a , p , 1-p , 1-a , 1];\nx   =  c * d;\ny   =  (0..1) * g;\n//------------------------------------------------\n// Listas com o perfil das barras\n//------------------------------------------------\nb1  = [0,10];\nb2  = [1,0,10];\nb3  = [0,10,11];\nb4  = [1,0,10,11];\nb5  = [1,3,4,6,9,11];\n//------------------------------------------------\n// Traçado da barra\n//------------------------------------------------\nLP  = Point.ByCoordinates ( x<1> , y, 0 );\nLPF = List.Flatten        ( LP      , 1 );\nBAR = PolyCurve.ByPoints  ( LPF[b5] , 0 );"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 12.0,
+      "MinimumValue": 1.0,
+      "StepValue": 0.1,
+      "Id": "8a6aaf8359e34ca7ac1b70ffef2bd7f6",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2adb77db56dc49a88f32bccd1b2ecaab",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 8.6
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 0.2,
+      "MinimumValue": 0.05,
+      "StepValue": 0.01,
+      "Id": "f0c17160fcc44bdd89519fda88ae5402",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c97df75ad93c4e06ba3978a27239411b",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 0.05
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 0.1,
+      "MinimumValue": 0.0,
+      "StepValue": 0.01,
+      "Id": "f41c7eb17ca14f9ab30381c1ce2095fe",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ab386042440d4c0cad6b2d3ff91da58a",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 0.05
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 0.4,
+      "MinimumValue": 0.3,
+      "StepValue": 0.025,
+      "Id": "f6a675b9dff54f72a86eada690c07d04",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "03a62bb13b9f49c7b1d3b31052355400",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 0.3
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "2adb77db56dc49a88f32bccd1b2ecaab",
+      "End": "3a6ed60fca9f4ec8bca464fba4e88533",
+      "Id": "9149777a03bf4f51b73e21bfae7bdbcc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c97df75ad93c4e06ba3978a27239411b",
+      "End": "cd7f3abe86994829b706c4074e5a9eee",
+      "Id": "443c1202477a4c5fb4db30015a91c8a0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ab386042440d4c0cad6b2d3ff91da58a",
+      "End": "e271a37e137a44ba87da78103ec5e427",
+      "Id": "79c09d98edb54785a6936ec39b8c795b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "03a62bb13b9f49c7b1d3b31052355400",
+      "End": "5d5685531f1f4b6c9df93f4f7ec6f276",
+      "Id": "6a9cf15a57804a3f8a38511e653c1862",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "EnableLegacyPolyCurveBehavior": null,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.5",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "9.1",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.5.0.8297",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "be911ad2a91b4585ac4fd91bed93df46",
+        "Name": "Marca a Barra",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 312.98480527530205,
+        "Y": 359.679414439139
+      },
+      {
+        "Id": "8a6aaf8359e34ca7ac1b70ffef2bd7f6",
+        "Name": "Comprimento Total",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -118.0487794284652,
+        "Y": 238.52693218455408
+      },
+      {
+        "Id": "f0c17160fcc44bdd89519fda88ae5402",
+        "Name": "Parametro a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -121.52486049101026,
+        "Y": 362.05519227624717
+      },
+      {
+        "Id": "f41c7eb17ca14f9ab30381c1ce2095fe",
+        "Name": "Parametro b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -119.24381712383888,
+        "Y": 483.83737611928365
+      },
+      {
+        "Id": "f6a675b9dff54f72a86eada690c07d04",
+        "Name": "Altura do gancho",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -120.74568563225921,
+        "Y": 608.7456014129561
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "22647d48f41c4f849771321f2799ab6e",
+        "Title": "Define o eixo de uma barra de reforço",
+        "DescriptionText": "Prof. José Luis Menegotto / Escola Politécnica\r\nPrograma de Mestrado em Estruturas",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "be911ad2a91b4585ac4fd91bed93df46",
+          "8a6aaf8359e34ca7ac1b70ffef2bd7f6",
+          "f0c17160fcc44bdd89519fda88ae5402",
+          "f41c7eb17ca14f9ab30381c1ce2095fe",
+          "f6a675b9dff54f72a86eada690c07d04"
+        ],
+        "HasNestedGroups": false,
+        "Left": -131.52486049101026,
+        "Top": 156.52693218455408,
+        "Width": 958.5096657663123,
+        "Height": 737.1524822545849,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 238.52693218455408,
+        "InitialHeight": 685.1524822545848,
+        "TextblockHeight": 72.0,
+        "Background": "#FF48B9FF"
+      }
+    ],
+    "X": 165.81442847203266,
+    "Y": -127.57122205096175,
+    "Zoom": 0.7680352988772177
+  }
+}
