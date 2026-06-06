@@ -76,6 +76,10 @@
       "Line.Length": {
         "Key": "Autodesk.DesignScript.Geometry.Line",
         "Value": "ProtoGeometry.dll"
+      },
+      "Plane": {
+        "Key": "Autodesk.DesignScript.Geometry.Plane",
+        "Value": "ProtoGeometry.dll"
       }
     }
   },
@@ -88,7 +92,7 @@
       "NodeType": "CodeBlockNode",
       "Inputs": [
         {
-          "Id": "dac0ba8ee31b40939ebe06a5fd9c5967",
+          "Id": "610815f220a6478fb4fbb0611142b08c",
           "Name": "l",
           "Description": "l",
           "UsingDefaultValue": false,
@@ -97,7 +101,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "67e529dfacb64165a37aa4ebc6702075",
+          "Id": "150d45de212e424dbca1b7e10a7f93cd",
           "Name": "p",
           "Description": "p",
           "UsingDefaultValue": false,
@@ -106,7 +110,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "cacdc6145e804197ab218808b6f3e2d4",
+          "Id": "5cc227a37ff34aec8f98b3d38fa8ddcd",
           "Name": "h",
           "Description": "h",
           "UsingDefaultValue": false,
@@ -115,7 +119,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "bc514bed464c42bdaea18b427ee9549a",
+          "Id": "c829716976f841b99e95a61632ef9537",
           "Name": "c1",
           "Description": "c1",
           "UsingDefaultValue": false,
@@ -124,7 +128,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "058ef0ae0bfb4262817c19b38a5f1dbc",
+          "Id": "06ec9259f2024d888650d145ab2e4465",
           "Name": "c2",
           "Description": "c2",
           "UsingDefaultValue": false,
@@ -133,7 +137,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "49d87f4a8f164b428d1c9276d92a3aa1",
+          "Id": "8330ff0e0c9c495bb5e475b5f6496b1d",
           "Name": "k",
           "Description": "k",
           "UsingDefaultValue": false,
@@ -142,7 +146,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "0c27fdbab2af4146b27fbba88abd0d3e",
+          "Id": "8e590f15e1ba42009fae4f89d11f01b8",
           "Name": "j",
           "Description": "j",
           "UsingDefaultValue": false,
@@ -151,7 +155,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "4f4e0cffaf42459aae847ad588d1470d",
+          "Id": "9eaea885ad9c4bbeae49bdbf1deaa7e5",
           "Name": "e",
           "Description": "e",
           "UsingDefaultValue": false,
@@ -160,7 +164,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "bd9ec43d2bfa4eeeb4e9ef69dc9c7c2b",
+          "Id": "bd2225a338b34cae99928de325b0d836",
           "Name": "and",
           "Description": "and",
           "UsingDefaultValue": false,
@@ -171,7 +175,7 @@
       ],
       "Outputs": [
         {
-          "Id": "6e0fa4f5aa97419e966270ac7f08a214",
+          "Id": "e25e36bc636a4725b7e80444b515d8ff",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -180,7 +184,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "0837a9511468429ead922a6e057465e4",
+          "Id": "340ede708a5644a8953f443847e75019",
           "Name": "",
           "Description": "Value of expression at line 2",
           "UsingDefaultValue": false,
@@ -189,7 +193,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "889a52f6a41d4827854819ec2b528f7b",
+          "Id": "a9b5d408d1fd450f93876f4deb115397",
           "Name": "",
           "Description": "Value of expression at line 3",
           "UsingDefaultValue": false,
@@ -198,7 +202,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "4e1fc612ae464332b973994ca1eb8d1e",
+          "Id": "85205743a10f4782ad4781644e98c0da",
           "Name": "",
           "Description": "m",
           "UsingDefaultValue": false,
@@ -207,7 +211,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "373571e358064753aa4d7f2e34df1316",
+          "Id": "c4d560a99d0c4210b7180bd428bb32f3",
           "Name": "",
           "Description": "Value of expression at line 5",
           "UsingDefaultValue": false,
@@ -216,7 +220,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "67b9b996d5d647529838a168b9addf5e",
+          "Id": "d53a9697e2ec4697abc9b764b9063dfb",
           "Name": "",
           "Description": "Value of expression at line 6",
           "UsingDefaultValue": false,
@@ -225,7 +229,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "541c18d55cc846f18de18877bf3db8ef",
+          "Id": "cd9171fa64fc46b7b1a8987fb02c0681",
           "Name": "",
           "Description": "Value of expression at line 7",
           "UsingDefaultValue": false,
@@ -234,7 +238,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "21c20904e5824c87b23007f77b939c60",
+          "Id": "9f63856ff80f4c4a8fb0c9b3d7cfb010",
           "Name": "",
           "Description": "Value of expression at line 8",
           "UsingDefaultValue": false,
@@ -243,7 +247,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "2fbddd7172d74deb9e45577cd118c52a",
+          "Id": "42ee9585d28b4fb8877aa41d0ee4f689",
           "Name": "",
           "Description": "Value of expression at line 9",
           "UsingDefaultValue": false,
@@ -252,7 +256,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "8804f7805ed342e683f1166f168ee595",
+          "Id": "698e290c72d44b4085dd5764da1d6d39",
           "Name": "",
           "Description": "Value of expression at line 10",
           "UsingDefaultValue": false,
@@ -261,7 +265,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "d7ea98b78a6d4c998222063c3a021543",
+          "Id": "6777a6c3d270467bbac92f93aa45af0e",
           "Name": "",
           "Description": "par",
           "UsingDefaultValue": false,
@@ -270,7 +274,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "5dd7aad5ac25454b87d44bd656d3f558",
+          "Id": "f83905c4e45e4876bbbfce308994114d",
           "Name": "",
           "Description": "i",
           "UsingDefaultValue": false,
@@ -279,7 +283,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "c5054eb951be4884b62ca6b073fb0dc9",
+          "Id": "7af408ba2ed34df68d3bcc34fb354e09",
           "Name": "",
           "Description": "Value of expression at line 13",
           "UsingDefaultValue": false,
@@ -288,7 +292,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "6aca1f0ae05242948d11d458ca27b86c",
+          "Id": "76998d709a1c46cfb40af8b35cd06225",
           "Name": "",
           "Description": "x",
           "UsingDefaultValue": false,
@@ -297,7 +301,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "9d49cf7dbf1e40048177d63fcd91c3e8",
+          "Id": "46471c6f0bae4fd484c2891686c3c256",
           "Name": "",
           "Description": "y",
           "UsingDefaultValue": false,
@@ -306,7 +310,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "04e54e2fa89d467587167fb6d890f0f2",
+          "Id": "26a8414707fd4d70b0428b18aabb6449",
           "Name": "",
           "Description": "LP",
           "UsingDefaultValue": false,
@@ -315,7 +319,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "83767f90c17849cca049151cc4408350",
+          "Id": "9884be05bb8449978dda66a36d5c6241",
           "Name": "",
           "Description": "LF",
           "UsingDefaultValue": false,
@@ -324,7 +328,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "1dcd481144a44ac0aeeabaee13ab985b",
+          "Id": "30fdebd2661e406d9f28ec11dbe24384",
           "Name": "",
           "Description": "LV",
           "UsingDefaultValue": false,
@@ -333,16 +337,16 @@
           "KeepListStructure": false
         },
         {
-          "Id": "f278e6c722c645849937f7a8e0981ea7",
+          "Id": "782c29222c00448482e2a0d6b2f5bb83",
           "Name": "",
-          "Description": "Ex",
+          "Description": "Eii",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
         },
         {
-          "Id": "f8bc84ce6ec947239c661e6bf754227d",
+          "Id": "de9e8b8860644f1a8268c53f2688da4a",
           "Name": "",
           "Description": "Pin",
           "UsingDefaultValue": false,
@@ -351,7 +355,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "8bd876c027dd4158b369602c159ec150",
+          "Id": "74de85907f6240b3881387e014848375",
           "Name": "",
           "Description": "Pio",
           "UsingDefaultValue": false,
@@ -360,7 +364,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "7b6dfd843fd4458ebc50b8baac84aeec",
+          "Id": "32abed387753468ca64a0381917fd654",
           "Name": "",
           "Description": "ke",
           "UsingDefaultValue": false,
@@ -369,7 +373,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "48c9c2d390ea4cb99b816197bbf8f020",
+          "Id": "901df2dfd5354794a600b21a1016edfc",
           "Name": "",
           "Description": "va",
           "UsingDefaultValue": false,
@@ -378,7 +382,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "3ffaeb0d66ec42bdb59990553749ced7",
+          "Id": "2827c8c66acd405aba9347dee062496d",
           "Name": "",
           "Description": "Dic",
           "UsingDefaultValue": false,
@@ -389,7 +393,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly",
-      "Code": "l;\np;\nh;\nm = 0.50;\nc1;\nc2;\nk;\nj;\ne;\nand;\npar = \"Elevation\";\ni  = [1,2,3,9,14,19,-2,-3,-4,15,10,5];\nFamilyInstance.SetParameterByName(and, par, h);\n//------------------------------------\nx   = l * [ -m,-c1  ,0,c1*k,m ];\ny   = p * [ -m,-c2*j,0,c2*j,m ];\n//------------------------------------\nLP  = Point.ByCoordinates (x<1>, y, 0);\nLF  = List.Flatten ( LP , 1 );\nLV  = LF[i];\nEx  = Line.ByBestFitThroughPoints(LV);\nPin = PolyCurve.ByPoints (LV, 1);\nPio = Pin.Offset(-e);\nke  = [\"L\",\"P\",\"H\",\"e\",\"Pin\",\"Pio\"];\nva  = [ l , p , h , e , Pin , Pio ];\nDic = Dictionary.ByKeysValues(ke, va);"
+      "Code": "l;\np;\nh;\nm = 0.50;\nc1;\nc2;\nk;\nj;\ne;\nand;\npar = \"Elevation\";\ni   = [1,2,3,9,14,19,-2,-3,-4,15,10,5];\nFamilyInstance.SetParameterByName(and, par, h);\n//------------------------------------\nx   = l * [ -m,-c1  ,0,c1*k,m ];\ny   = p * [ -m,-c2*j,0,c2*j,m ];\n//------------------------------------\nLP  = Point.ByCoordinates (x<1>, y, 0);\nLF  = List.Flatten ( LP , 1 );\nLV  = LF[i];\nEii = Line.ByBestFitThroughPoints(LV);\nPin = PolyCurve.ByPoints (LV, 1);\nPio = Pin.Offset(-e);\nke  = [\"L\",\"P\",\"H\",\"e\",\"Pin\",\"Pio\", \"Eii\" ];\nva  = [ l , p , h , e , Pin , Pio ,  Eii  ];\nDic = Dictionary.ByKeysValues(ke, va);"
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -442,7 +446,7 @@
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
       "NumberType": "Double",
-      "MaximumValue": 30.0,
+      "MaximumValue": 40.0,
       "MinimumValue": 3.0,
       "StepValue": 0.25,
       "Id": "2393c3c855114b39852868852662e17e",
@@ -461,7 +465,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces numeric values",
-      "InputValue": 26.5
+      "InputValue": 19.25
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -485,7 +489,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces numeric values",
-      "InputValue": 0.37
+      "InputValue": 0.33
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -509,7 +513,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces numeric values",
-      "InputValue": 0.1475
+      "InputValue": 0.45
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -533,7 +537,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces numeric values",
-      "InputValue": 0.52
+      "InputValue": 0.05
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -557,7 +561,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces numeric values",
-      "InputValue": 0.6875
+      "InputValue": 0.4325
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -581,7 +585,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces numeric values",
-      "InputValue": 3.1
+      "InputValue": 2.15
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -605,7 +609,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces numeric values",
-      "InputValue": 0.5
+      "InputValue": 0.2
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -613,7 +617,7 @@
       "NodeType": "CodeBlockNode",
       "Inputs": [
         {
-          "Id": "d2bf755dbe4e44148403ec1333325aef",
+          "Id": "4d3f4051bf24471e8364efef99a97abe",
           "Name": "Dic",
           "Description": "Dic",
           "UsingDefaultValue": false,
@@ -622,7 +626,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "af6604eef9e549dfa805128ba0425ca2",
+          "Id": "d2939dcabcca40fc883a2acd1bc2d453",
           "Name": "esc",
           "Description": "esc",
           "UsingDefaultValue": false,
@@ -631,7 +635,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "ddef63f7aabd439a9adfb5c58430f694",
+          "Id": "d5b3b36131ac4786ae373db3e180dca8",
           "Name": "des",
           "Description": "des",
           "UsingDefaultValue": false,
@@ -640,7 +644,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "86bad58b60824bf391e81ad8d3e78a3b",
+          "Id": "8e21db42e9de46eaaacef888409f39be",
           "Name": "cat",
           "Description": "cat",
           "UsingDefaultValue": false,
@@ -649,7 +653,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "b8ede8848e114164825976ac2513c7de",
+          "Id": "6fc8cad8cffa4c0bb1f72f5e5f2f5169",
           "Name": "mod",
           "Description": "mod",
           "UsingDefaultValue": false,
@@ -658,9 +662,36 @@
           "KeepListStructure": false
         },
         {
-          "Id": "219488e038304171b46d25c1fab5f889",
+          "Id": "d9100a6436214f8cb6223ef0db608e9c",
           "Name": "qes",
           "Description": "qes",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "28c9092c60924f69acaa07fa9d67dd12",
+          "Name": "lt",
+          "Description": "lt",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "86d7a57c98504e75b23fd58ac271e638",
+          "Name": "ht",
+          "Description": "ht",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4846d8b1393f4eb1add82e10b50fc466",
+          "Name": "et",
+          "Description": "et",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -669,7 +700,7 @@
       ],
       "Outputs": [
         {
-          "Id": "84e9c8ee82574af08b6f035029b440a1",
+          "Id": "479a6986da5d4bfc8f9b28b1b2d37488",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -678,7 +709,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "1944491d6c644551b856891142592122",
+          "Id": "82462a03eb5b4ee29b8f1188576500d3",
           "Name": "",
           "Description": "Value of expression at line 2",
           "UsingDefaultValue": false,
@@ -687,7 +718,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "8d441c89f3564fd29bb2cad7a528c4e5",
+          "Id": "e74e45a65d3e4d09bdd78caa24f55f35",
           "Name": "",
           "Description": "Value of expression at line 3",
           "UsingDefaultValue": false,
@@ -696,7 +727,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "6d00ccffd48d4dc7a0049eefee690524",
+          "Id": "92ba83e152444dceb8c82f1c75d8872e",
           "Name": "",
           "Description": "Value of expression at line 4",
           "UsingDefaultValue": false,
@@ -705,7 +736,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "259a5efa642a4369966cbf6aed2b16ee",
+          "Id": "9588918754ff4557bb5dd4bfdbdea59a",
           "Name": "",
           "Description": "Value of expression at line 5",
           "UsingDefaultValue": false,
@@ -714,7 +745,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "f79a5a1f5dbc46c09b6a9d06576701f9",
+          "Id": "89008490e3a749889adcd12f900b9ddd",
           "Name": "",
           "Description": "Value of expression at line 6",
           "UsingDefaultValue": false,
@@ -723,7 +754,34 @@
           "KeepListStructure": false
         },
         {
-          "Id": "22b66c234b9a49348a4e544442fb4f48",
+          "Id": "64d42400161540fab6fe76fe5301bd15",
+          "Name": "",
+          "Description": "Value of expression at line 7",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b8fbc2f050c446f8b24be5c68671ff91",
+          "Name": "",
+          "Description": "Value of expression at line 8",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2e85bb3c6fb04509bdf7bd0286ff8661",
+          "Name": "",
+          "Description": "Value of expression at line 9",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a231a164c32645228bcf2a3d21f756bf",
           "Name": "",
           "Description": "Pin",
           "UsingDefaultValue": false,
@@ -732,7 +790,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "43da28a19c2345a19c8247a85693644d",
+          "Id": "4aeef0662ee84dd1a67704030f071f2d",
           "Name": "",
           "Description": "L",
           "UsingDefaultValue": false,
@@ -741,7 +799,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "c70c899e79c740e6a67f17832a5825c6",
+          "Id": "6ccabaf7f12746819b3f62b00dc87e61",
           "Name": "",
           "Description": "H",
           "UsingDefaultValue": false,
@@ -750,7 +808,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "3d200049ddaa4eb6a70c96cd912b7dd9",
+          "Id": "9617a5740178496c89bc4a99a0bdf76b",
           "Name": "",
           "Description": "e",
           "UsingDefaultValue": false,
@@ -759,7 +817,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "ad12d39f785042fda8d79436809ad014",
+          "Id": "5d9822e3097248fa82da3658117ab652",
           "Name": "",
           "Description": "m",
           "UsingDefaultValue": false,
@@ -768,7 +826,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "dbb9997655534334ad5dd0a90d158d05",
+          "Id": "1a3a1fdd02ae448dbfcb206c49c409cd",
           "Name": "",
           "Description": "Psu",
           "UsingDefaultValue": false,
@@ -777,7 +835,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "8f2b4f4dc13f4abda25b838246012e3e",
+          "Id": "9396d6d38266421cb69cc2181d24fbf9",
           "Name": "",
           "Description": "Ps2",
           "UsingDefaultValue": false,
@@ -786,7 +844,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "a76c0dcf0d1a499f80c89171e7726641",
+          "Id": "b5f0ca5482184390a3e6982c2e81a96d",
           "Name": "",
           "Description": "Po2",
           "UsingDefaultValue": false,
@@ -795,7 +853,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "ca40674f7a66489b99a4bf4a760e7fdb",
+          "Id": "22c910815c6a454399edf45f9821cb2e",
           "Name": "",
           "Description": "sol",
           "UsingDefaultValue": false,
@@ -804,18 +862,36 @@
           "KeepListStructure": false
         },
         {
-          "Id": "4e62d632ad7447068a539d9c50ba4a6b",
+          "Id": "2eab4f8ee7a64c668a30717265350b78",
           "Name": "",
-          "Description": "Value of expression at line 18",
+          "Description": "mas",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
         },
         {
-          "Id": "11a4ef6aca8d44a8a5a08a0ebd8d2256",
+          "Id": "02557a320f714682b549fbb28a4cab28",
           "Name": "",
-          "Description": "Value of expression at line 19",
+          "Description": "cab",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5f1e6851dfb04bd5b8a8dd893d71365a",
+          "Name": "",
+          "Description": "ptc",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "33b920c56bfe4da6b583c1eefa2c34ac",
+          "Name": "",
+          "Description": "Value of expression at line 24",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -824,7 +900,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly",
-      "Code": "Dic;\nesc;\ndes;\ncat;\nmod;\nqes;\nPin = Dic[\"Pin\"];\nL   = Dic[\"L\"  ];\nH   = Dic[\"H\"  ];\ne   = Dic[\"e\"  ];\nm   = L * -des;\n//------------------------------------\nPsu = Geometry.Scale ( Pin  , esc  );\nPs2 = Psu.Translate  ( m , 0 , H   );\nPo2 = Ps2.Offset     ( -e          );\nsol = Solid.ByLoft   ( [Pin , Ps2] );\n//------------------------------------\nMastro ( mod , sol , cat );\nEstais ( Pin , Ps2 , qes );"
+      "Code": "Dic;\nesc;\ndes;\ncat;\nmod;\nqes;\nlt;\nht;\net;\nPin = Dic[\"Pin\"];\nL   = Dic[\"L\"  ];\nH   = Dic[\"H\"  ];\ne   = Dic[\"e\"  ];\nm   = L * -des;\n//------------------------------------\nPsu = Geometry.Scale ( Pin  , esc  );\nPs2 = Psu.Translate  ( m , 0 , H   );\nPo2 = Ps2.Offset     ( -e          );\nsol = Solid.ByLoft   ( [Pin , Ps2] );\n//------------------------------------\nmas = Mastro ( mod , sol , cat );\ncab = Estais ( Pin , Ps2 , qes );\nptc = List.Flatten(cab[3], 2);\nPista ( lt, ht , et , ptc );"
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -848,7 +924,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces numeric values",
-      "InputValue": 0.05
+      "InputValue": 0.15
     },
     {
       "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
@@ -879,7 +955,7 @@
       "Outputs": [],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly",
-      "Code": "//------------------------------------------------------\n//  Verificar que o material exista\n//------------------------------------------------------\ndef Mastro(f,g,c)\n{\n    m = Material.ByName(\"Concreto\");\n    n = \"Mastro\";\n    d = f?DirectShape.ByGeometry(g,c,m,n):0;\n    return d;\n};"
+      "Code": "//------------------------------------------------------\n//  Verificar que o material \"Concreto\" exista\n//------------------------------------------------------\ndef Mastro(f,g,c)\n{\n    m = Material.ByName(\"Concreto\");\n    n = \"Mastro\";\n    d = f ? DirectShape.ByGeometry(g,c,m,n) : 0;\n    return d;\n};"
     },
     {
       "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
@@ -899,7 +975,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Enables selection between True and False",
-      "InputValue": false
+      "InputValue": true
     },
     {
       "ConcreteType": "DSRevitNodesUI.Levels, DSRevitNodesUI",
@@ -925,7 +1001,7 @@
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
       "NumberType": "Double",
-      "MaximumValue": 20.0,
+      "MaximumValue": 15.0,
       "MinimumValue": 5.0,
       "StepValue": 1.0,
       "Id": "ddf133b354b54ab8bc6e877c15e2e7fa",
@@ -944,7 +1020,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces numeric values",
-      "InputValue": 20.0
+      "InputValue": 15.0
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -954,232 +1030,17 @@
       "Outputs": [],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly",
-      "Code": "//------------------------------------------------------\n//  Harpa de estai\n//------------------------------------------------------\ndef Estais( p , q , n)\n{\n    p1 = PolyCurve.Points( p )[7];\n    p2 = PolyCurve.Points( q )[7];\n    p3 = Point.Translate ( p1 , di*2 , 0 , 0 );\n    p4 = Point.Translate ( p3 , di*5 , 0 , 0 );\n//------------------------------------------------------\n// Posicionamento do eixo dos cabos no mastro\n//------------------------------------------------------\n    ex  = Line.ByStartPointEndPoint ( p1 , p2 );\n    di  = ex.Length / 2.4;\n    ta  = ex.TangentAtParameter ( 0.0);\n    pm  = ex.PointAtParameter   ( 0.5);\n//------------------------------------------------------\n// Posicionamento da Harpa\n//------------------------------------------------------\n    ha1 = Line.ByStartPointDirectionLength ( pm,ta,di);\n    ha2 = Line.ByStartPointEndPoint        ( p3,p4   );\n    ph1 = Line.PointAtParameter(ha1 , 0..1..#n);\n    ph2 = Line.PointAtParameter(ha2 , 0..1..#n);\n    est = Line.ByStartPointEndPoint( ph1 , ph2);\n\n    return [ ha1, ha2 , ph1, ph2, est];\n};"
+      "Code": "//-----------------------------------------------------\n//  Harpa de estai\n//-----------------------------------------------------\ndef Estais( p , q , n)\n{\n    p1  = PolyCurve.Points( p )[7];\n    p2  = PolyCurve.Points( q )[7];\n    p3  = Point.Translate ( p1 , di*1 , 0 , 0 );\n    p4  = Point.Translate ( p3 , di*3 , 0 , 0 );\n//-----------------------------------------------------\n// Posicionamento do eixo dos cabos no mastro\n//-----------------------------------------------------\n    ex  = Line.ByStartPointEndPoint ( p1 , p2 );\n    di  = ex.Length / 2.1;\n    ta  = ex.TangentAtParameter ( 0.0);\n    pm  = ex.PointAtParameter   ( 0.5);\n//-----------------------------------------------------\n// Posicionamento da Harpa\n//-----------------------------------------------------\n    ha1 = Line.ByStartPointDirectionLength ( pm,ta,di);\n    ha2 = Line.ByStartPointEndPoint        ( p3,p4   );\n    ph1 = Line.PointAtParameter(ha1 , 0..1..#n);\n    ph2 = Line.PointAtParameter(ha2 , 0..1..#n);\n    est = Line.ByStartPointEndPoint( ph1 , ph2);\n\n\n    return [ ha1, ha2 , ph1, ph2, est];\n};"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
-      "Id": "87e1292a710d4af89ee03cbe933f7464",
+      "Id": "4c544310e46d4c8d9752b1cf35055876",
       "NodeType": "CodeBlockNode",
-      "Inputs": [
-        {
-          "Id": "65596ec20bac44caa379504fd2754e4f",
-          "Name": "l",
-          "Description": "l",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "0027fbf9d0f54ba389daca20c76fb468",
-          "Name": "h",
-          "Description": "h",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "4be0b6e31f8044f78bb5e1d94e49dc8e",
-          "Name": "e",
-          "Description": "e",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "72bf11d5d9fb459eae33688c8b01e174",
-          "Name": "pt",
-          "Description": "pt",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "f3bde7af6e6d4560a7498a36bcce2cc6",
-          "Name": "",
-          "Description": "Value of expression at line 1",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "1e9b9679dd1345b48e7d6210c22e5c03",
-          "Name": "",
-          "Description": "Value of expression at line 2",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "c4ec7dfd7fce4fc586345ed13fb1f568",
-          "Name": "",
-          "Description": "Value of expression at line 3",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "7ca4438bd8d74627b4d317861e1f32db",
-          "Name": "",
-          "Description": "Value of expression at line 4",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "b8e20f2419c143b3b1a9f0bf0374d65a",
-          "Name": "",
-          "Description": "f",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "6ff9a5d738234814b77ca0947f388182",
-          "Name": "",
-          "Description": "a",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "b5db5f462a95490586bdf51eec3a40eb",
-          "Name": "",
-          "Description": "m",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "16e3aaa00d7447f8bcf306f3d556c8a1",
-          "Name": "",
-          "Description": "i",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "503a130422f14e5ab5a1632433b9186e",
-          "Name": "",
-          "Description": "y",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "5c593fcc7c1e47689b33fe89731b00ba",
-          "Name": "",
-          "Description": "z",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "f38733f3714a4b0c9a894f354513499f",
-          "Name": "",
-          "Description": "LP",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "8b192bcce0224ac99f8946772a4854f0",
-          "Name": "",
-          "Description": "LF",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "4ac69dcf0ab44ab7952c3ce0af0493f6",
-          "Name": "",
-          "Description": "LV",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "a7578c22987449dab6a791296345dace",
-          "Name": "",
-          "Description": "TB",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "5887999f6c4f4f909380879d30fe7bd2",
-          "Name": "",
-          "Description": "TI",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "0e6d65cf24f4409dbfa246de2c3cd2ad",
-          "Name": "",
-          "Description": "ET",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "f419940a0cc94342b4b18c89eb734f54",
-          "Name": "",
-          "Description": "TA",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
+      "Inputs": [],
+      "Outputs": [],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly",
-      "Code": "l;\nh;\ne;\npt;\nf  =  0.050;\na  =  0.500;\nm  =  0.500;\ni  = [1,2,7,11,15,18,17,12,8,4];\n//------------------------------------\ny  = l * [ -m,     -f,   0    ,f   , m ];\nz  = h * [  0, -0.1*a, -0.8*a , -2*a   ];\n//------------------------------------\nLP  = Point.ByCoordinates (0, y<1>, z);\nLF  = List.Flatten ( LP , 1 );\nLV  = LF[i];\nTB  = PolyCurve.ByPoints(LV, 1);\nTI  = TB.Offset(-e);\nET  = Line.ByStartPointEndPoint(LV[3], LV[8]);\nTA  = Geometry.Translate(TB, Point.AsVector(pt[3]));"
-    },
-    {
-      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
-      "NumberType": "Double",
-      "MaximumValue": 5.0,
-      "MinimumValue": 1.5,
-      "StepValue": 0.25,
-      "Id": "5455d8d1974c4ef8a0d1267e286ed41b",
-      "NodeType": "NumberInputNode",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "9ad0e78680884f738ccb2c4423d6217a",
-          "Name": "",
-          "Description": "Double",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Produces numeric values",
-      "InputValue": 1.5
+      "Code": "//-------------------------------------------\n//  Pista\n//-------------------------------------------\ndef Pista ( l , h , et , pt )\n{\n\n    f   = 0.050;\n    m   = 0.500;\n    i   = [1,2,7,11,8,4];\n    o   = Point.Origin( );\n    v   = Vector.YAxis( );\n    PM  = Plane.ByOriginNormal ( o , v );\n    //---------------------------------------\n    y   = l * [-m,   -f  ,  0 ,  f   , m];\n    z   = h * [ 0, -0.25*m, -m , -2*m   ];\n    //---------------------------------------\n    LP  = Point.ByCoordinates ( 0, y<1>, z );\n    LF  = List.Flatten        ( LP , 1     );\n    LV  = LF[i];\n    TD  = PolyCurve.ByPoints  ( LV , 1     );\n    TE  = TD.Mirror   (  PM  );\n    TID = TD.Offset   ( -et  );\n    TIE = TE.Offset   ( -et  );\n    PE  = TE.Translate( pt.AsVector( ));\n    PD  = TD.Translate( pt.AsVector( ));\n\n    return [ TD, TE, TID, TIE, PE, PD ];\n};"
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -1187,12 +1048,12 @@
       "MaximumValue": 15.0,
       "MinimumValue": 10.0,
       "StepValue": 0.25,
-      "Id": "61c200c8ef3044738e7d97f23f993eaa",
+      "Id": "1f46244af69a4e92a0a526246ac59d05",
       "NodeType": "NumberInputNode",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "0694d61bfe3f41e6afe67f2a11ce0fa7",
+          "Id": "12cfc1fb2a124523b0e19468107db007",
           "Name": "",
           "Description": "Double",
           "UsingDefaultValue": false,
@@ -1203,7 +1064,31 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces numeric values",
-      "InputValue": 10.25
+      "InputValue": 10.0
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NumberType": "Double",
+      "MaximumValue": 2.0,
+      "MinimumValue": 1.0,
+      "StepValue": 0.25,
+      "Id": "e9208fc0fc85419aa76a6b6f111fdaa7",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "713aa81dd0a44238809795fed30788ac",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces numeric values",
+      "InputValue": 1.0
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
@@ -1211,12 +1096,12 @@
       "MaximumValue": 0.6,
       "MinimumValue": 0.25,
       "StepValue": 0.05,
-      "Id": "c42fa5acbb2e42ba8e88cc1f4f1d29dc",
+      "Id": "86c1f6a1cdfa45b0bf6913587a5cacf5",
       "NodeType": "NumberInputNode",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "456d061ca8874568a2166d8f52111d48",
+          "Id": "e5626628caa048608d0c99b391c16154",
           "Name": "",
           "Description": "Double",
           "UsingDefaultValue": false,
@@ -1227,122 +1112,116 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces numeric values",
-      "InputValue": 0.3
+      "InputValue": 0.25
     }
   ],
   "Connectors": [
     {
-      "Start": "3ffaeb0d66ec42bdb59990553749ced7",
-      "End": "d2bf755dbe4e44148403ec1333325aef",
-      "Id": "870484fd81b5483995d098a4ac2bfccd",
+      "Start": "2827c8c66acd405aba9347dee062496d",
+      "End": "4d3f4051bf24471e8364efef99a97abe",
+      "Id": "57e306a87e0742c785c141deca7a75bb",
       "IsHidden": "False"
     },
     {
       "Start": "4c3dffc823c64d4a93928a320191f479",
-      "End": "67e529dfacb64165a37aa4ebc6702075",
-      "Id": "5147f136baff4cf2b6a6bd05be859aa4",
+      "End": "150d45de212e424dbca1b7e10a7f93cd",
+      "Id": "26cda52e2bd54d9a863ab90b1696e2b3",
       "IsHidden": "False"
     },
     {
       "Start": "dd3319b962114979a2425fba9feb101b",
-      "End": "dac0ba8ee31b40939ebe06a5fd9c5967",
-      "Id": "8c50820e2a8044f4b387a4d1a9ea3e00",
+      "End": "610815f220a6478fb4fbb0611142b08c",
+      "Id": "fc8f8c51dd9b493c8a6467a80118f0bc",
       "IsHidden": "False"
     },
     {
       "Start": "8ef402ce4a7d480d9d03fc8313fe2329",
-      "End": "cacdc6145e804197ab218808b6f3e2d4",
-      "Id": "7be3f67e2ca440999a0e29daa08dc1a4",
+      "End": "5cc227a37ff34aec8f98b3d38fa8ddcd",
+      "Id": "b74ed4574da547d4b6b6cb6796ada213",
       "IsHidden": "False"
     },
     {
       "Start": "3a76a733e5be472495408a1e79e5a542",
-      "End": "bc514bed464c42bdaea18b427ee9549a",
-      "Id": "7dd521241e00459bbc9d118738a31303",
+      "End": "c829716976f841b99e95a61632ef9537",
+      "Id": "cda347a42fbb48a98dbcfb60d570a9e6",
       "IsHidden": "False"
     },
     {
       "Start": "fae378f8e3514e3c9eab82eae8fd5859",
-      "End": "058ef0ae0bfb4262817c19b38a5f1dbc",
-      "Id": "6b71ee5afe7b43739619741c1c033947",
+      "End": "06ec9259f2024d888650d145ab2e4465",
+      "Id": "ba4320323f394021a327598403b1a6f1",
       "IsHidden": "False"
     },
     {
       "Start": "c65ff6ba5faa456984e595df76e399fb",
-      "End": "49d87f4a8f164b428d1c9276d92a3aa1",
-      "Id": "1a3ead25e2514648868ba9fbb15f0c47",
+      "End": "8330ff0e0c9c495bb5e475b5f6496b1d",
+      "Id": "73696d0a843b4f2c85f762a87b1d273c",
       "IsHidden": "False"
     },
     {
       "Start": "9934eecb0c22462c99fb71ec4d0e7ed6",
-      "End": "0c27fdbab2af4146b27fbba88abd0d3e",
-      "Id": "d2bdc95083ab447eae19c23eeed431f3",
+      "End": "8e590f15e1ba42009fae4f89d11f01b8",
+      "Id": "b19288563aac4325b16740871ce21bae",
       "IsHidden": "False"
     },
     {
       "Start": "d8a5ad4840704ad68175a681841a390e",
-      "End": "ddef63f7aabd439a9adfb5c58430f694",
-      "Id": "4315786e018f41f0aa7e3223abb32d04",
+      "End": "d5b3b36131ac4786ae373db3e180dca8",
+      "Id": "2a3e533f8a394f7ba5e06f11491a4aaa",
       "IsHidden": "False"
     },
     {
       "Start": "835b57ac81c0477590170aae6aabe255",
-      "End": "af6604eef9e549dfa805128ba0425ca2",
-      "Id": "04d7c69cb2724a419e1bf2990493891d",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "11a4ef6aca8d44a8a5a08a0ebd8d2256",
-      "End": "72bf11d5d9fb459eae33688c8b01e174",
-      "Id": "8f76f775c1c14bf08a9154136b1d79b7",
+      "End": "d2939dcabcca40fc883a2acd1bc2d453",
+      "Id": "1772bfb4c50d424eb5c2804909e98b1c",
       "IsHidden": "False"
     },
     {
       "Start": "e1e92fa186c243bbb53eade2f071cc52",
-      "End": "4f4e0cffaf42459aae847ad588d1470d",
-      "Id": "f7fb447c52cc43a6b547284a0145895b",
+      "End": "9eaea885ad9c4bbeae49bdbf1deaa7e5",
+      "Id": "d3f587e0a3014d288f27ed5d33ba2ff1",
       "IsHidden": "False"
     },
     {
       "Start": "d4402f44be3a46979bcf7e358cb82e95",
-      "End": "86bad58b60824bf391e81ad8d3e78a3b",
-      "Id": "2407773232a54dabbc8ef6badf091a39",
+      "End": "8e21db42e9de46eaaacef888409f39be",
+      "Id": "364422aee216443db4d616339e35a3c1",
       "IsHidden": "False"
     },
     {
       "Start": "39d0e80a459a4ff99b356047c6beb999",
-      "End": "b8ede8848e114164825976ac2513c7de",
-      "Id": "a923552187dc4213a39fb2f7dd06b205",
+      "End": "6fc8cad8cffa4c0bb1f72f5e5f2f5169",
+      "Id": "4b64be9805414e41bcfe422fa9e22040",
       "IsHidden": "False"
     },
     {
       "Start": "c9cf1abe869f4d209eacebd5ad8038d0",
-      "End": "bd9ec43d2bfa4eeeb4e9ef69dc9c7c2b",
-      "Id": "2b77acb8e3334197a229861228065de8",
+      "End": "bd2225a338b34cae99928de325b0d836",
+      "Id": "f4b98be0d2b4416d8167d8f20ade54ff",
       "IsHidden": "False"
     },
     {
       "Start": "9fb9f2e4de2447c9b24faf550e9df9a3",
-      "End": "219488e038304171b46d25c1fab5f889",
-      "Id": "281439ad22a643c2bc25c31601094e3b",
+      "End": "d9100a6436214f8cb6223ef0db608e9c",
+      "Id": "b93af9353de74655a89ebba04e638dff",
       "IsHidden": "False"
     },
     {
-      "Start": "9ad0e78680884f738ccb2c4423d6217a",
-      "End": "0027fbf9d0f54ba389daca20c76fb468",
-      "Id": "abe34baf7aac4db5ae6ee35d018acede",
+      "Start": "12cfc1fb2a124523b0e19468107db007",
+      "End": "28c9092c60924f69acaa07fa9d67dd12",
+      "Id": "7d3f212d001943eb8118f1c1b41bc108",
       "IsHidden": "False"
     },
     {
-      "Start": "0694d61bfe3f41e6afe67f2a11ce0fa7",
-      "End": "65596ec20bac44caa379504fd2754e4f",
-      "Id": "c075e4d2a3ab4f6088c464a5aa25c767",
+      "Start": "713aa81dd0a44238809795fed30788ac",
+      "End": "86d7a57c98504e75b23fd58ac271e638",
+      "Id": "ada6e13b1dff47289895c50d52c51437",
       "IsHidden": "False"
     },
     {
-      "Start": "456d061ca8874568a2166d8f52111d48",
-      "End": "4be0b6e31f8044f78bb5e1d94e49dc8e",
-      "Id": "baac8e649de84853bee35b288f3ead11",
+      "Start": "e5626628caa048608d0c99b391c16154",
+      "End": "4846d8b1393f4eb1add82e10b50fc466",
+      "Id": "75c184f6de3f4ead9181bf42f5f5da30",
       "IsHidden": "False"
     }
   ],
@@ -1376,7 +1255,11 @@
     {
       "NodeId": "e47ddb4f-ac4f-4734-8b4c-d7fa004a9349",
       "Binding": {
-        "Mastro_InClassDecl-1_InFunctionScope-1_Instance11_e47ddb4f-ac4f-4734-8b4c-d7fa004a9349;ByGeometry_InClassDecl-1_InFunctionScope109_Instance21_00000000-0000-0000-0000-000000000000": "H4sIAAAAAAAACh3Muw7CMAxA0X/xjCUnTeKkM0tnRsLgvFAl6FCyoKr/Dsp6pXPvBxTpAjMcET7fLS8lwhwhcA611oAtFIOmOsLkyaFqqbA4m61qES4R3tLrvsprOKunf7r1fd2ey3WMknHJp+AwifdoVMsYDAdkp1krL5q8RSKyiTON47L1YSc2rOmE8/EDwHXf3KUAAAA="
+        "Mastro_InClassDecl-1_InFunctionScope-1_Instance11_e47ddb4f-ac4f-4734-8b4c-d7fa004a9349;ByGeometry_InClassDecl-1_InFunctionScope110_Instance47_00000000-0000-0000-0000-000000000000": "H4sIAAAAAAAACh3MOQ7CMBBA0btMzUhexrGdmsY1JaYYbygSpAhuUJS7E9x+6f37DoU7wwx7hM93zaFEmCMoksaqVpCzcEikJDquhNn7STSyWWYf4RLhzb1uC7+GM0qf6da3ZX2G6xgJbxJZp1ElRUgnx5RqxZamVrJz9f8XQphkWI5jWPuw2pK09oDj8QPvxpjxpQAAAA==",
+        "Mastro_InClassDecl-1_InFunctionScope-1_Instance11_e47ddb4f-ac4f-4734-8b4c-d7fa004a9349;ByGeometry_InClassDecl-1_InFunctionScope143_Instance1_00000000-0000-0000-0000-000000000000": "H4sIAAAAAAAACh2MsQ7CMAwF/8Uzltw4TRxmls6MhCFuElQJOpQsqOq/U0VvO727xw45tQRX2CN8f+s85QjXCF5KzdVXNEIGrQ6MgR2jN+IyhTown8dLhE9qZVvSu3uj4RPd27asr+nWQxRGtV4YjRqLNgSHqqVgVVfzLFJmEiSiUc/14rS27rK3Q/AHHM8/6lDNrKUAAAA=",
+        "Mastro_InClassDecl-1_InFunctionScope-1_Instance11_e47ddb4f-ac4f-4734-8b4c-d7fa004a9349;ByGeometry_InClassDecl-1_InFunctionScope150_Instance1_00000000-0000-0000-0000-000000000000": "H4sIAAAAAAAACh3Muw7CMAxA0X/xjCU3zrMzS2ZGwhCnCaoEHUoWVPXfQVmvdO79gCX3DDMcCT7frcQlwZxAWjXE5LB4N6HmklGqNORgyAZWmkgSXBK8c6/7ml/DGcX/dOv7uj3jdYwoGNHOMypRGnUIFkVqxSa2LcX7WsgjERmxzo1j3Pqw7DSH6YTz8QPeMGgEpQAAAA==",
+        "Mastro_InClassDecl-1_InFunctionScope-1_Instance11_e47ddb4f-ac4f-4734-8b4c-d7fa004a9349;ByGeometry_InClassDecl-1_InFunctionScope151_Instance1_00000000-0000-0000-0000-000000000000": "H4sIAAAAAAAACh3Muw7DIAxA0X/xXEsEQ8CZu2TuWDpgHlWkNkPCUkX590asV7rneUCOLcIER4D9t6Y5B5gCVDeQzSVj1NqhYS3IiQxaLmUwmX0VHeAW4Btb2Zb46Z/VdKVH25b1Pd87pNiKcZ5QizYXxCOKlIJVxpqT9yUpj0opK6PjLs5r6y85Q0wnnK8//kl4a6UAAAA=",
+        "Mastro_InClassDecl-1_InFunctionScope-1_Instance11_e47ddb4f-ac4f-4734-8b4c-d7fa004a9349;ByGeometry_InClassDecl-1_InFunctionScope152_Instance1_00000000-0000-0000-0000-000000000000": "H4sIAAAAAAAACh3Muw7CMAxA0X/xjCWTR+N0ZunMSBji1EGVoEPJgqr+O1XWK93z2GHOLcMIe4Lvby3TnGBM4AyH6qtFq5HRxWvBmCsjk9pKVQ0xJbgk+OSm25Lf/fPGnunetmV9TbcOUfTiAls0YtwJxQFFVLHKUOfCrIUYichLcNLFaW39tcENZA84nn91ZWc/pQAAAA=="
       }
     }
   ],
@@ -1410,8 +1293,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 673.9118018848619,
-        "Y": 481.0450511235664
+        "X": 523.3942965823805,
+        "Y": -2473.4500313247127
       },
       {
         "Id": "52001ba0bda34ab5a70cf9201018d877",
@@ -1420,8 +1303,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 123.0125206065768,
-        "Y": 262.2061632157659
+        "X": -145.88556613495984,
+        "Y": -2690.774145015451
       },
       {
         "Id": "1f2d2345ed0441c890d29c9f8b770fc9",
@@ -1430,8 +1313,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 123.0125206065768,
-        "Y": 143.8654825209303
+        "X": -145.88556613495984,
+        "Y": -2809.1148257102864
       },
       {
         "Id": "2393c3c855114b39852868852662e17e",
@@ -1440,28 +1323,28 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 123.0125206065768,
-        "Y": 380.54684391060124
+        "X": -145.88556613495984,
+        "Y": -2572.4334643206153
       },
       {
         "Id": "8fe1cbbd51b4475bbeb20e70866f93c1",
-        "Name": "C1",
+        "Name": "C1 (em X)",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 123.0125206065768,
-        "Y": 498.8875246054366
+        "X": -145.88556613495984,
+        "Y": -2454.0927836257797
       },
       {
         "Id": "6063196c854e4cf0b2487a432714435c",
-        "Name": "C2",
+        "Name": "C2 (em Y)",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 123.0125206065768,
-        "Y": 617.228205300272
+        "X": -145.88556613495984,
+        "Y": -2335.7521029309446
       },
       {
         "Id": "a0938f517bef471ca073092e197fb1df",
@@ -1470,8 +1353,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 123.0125206065768,
-        "Y": 735.5688859951073
+        "X": -145.88556613495984,
+        "Y": -2217.411422236109
       },
       {
         "Id": "3651d873f45746199ba58d3fa37a477c",
@@ -1480,28 +1363,28 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 123.0125206065768,
-        "Y": 853.9095666899426
+        "X": -145.88556613495984,
+        "Y": -2099.070741541274
       },
       {
         "Id": "56fd528ce34e4cc880d42e683e4627ab",
-        "Name": "Deslocamento",
+        "Name": "Deslocar (Inclinação 0 = vertical)",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 819.8894832047017,
-        "Y": 1124.3721810938148
+        "X": 669.3719779022204,
+        "Y": -1830.1229013544644
       },
       {
         "Id": "e597254c5dd14c7fa6d523d7193c5d0a",
-        "Name": "Escalar",
+        "Name": "Escalar Topo (1 = Seção reta)",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 819.8894832047017,
-        "Y": 1005.1531816313475
+        "X": 669.3719779022204,
+        "Y": -1949.3419008169317
       },
       {
         "Id": "e47ddb4fac4f47348b4cd7fa004a9349",
@@ -1510,8 +1393,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1331.5714326275324,
-        "Y": 1055.9054239312215
+        "X": 1322.009541501476,
+        "Y": -1721.545487497045
       },
       {
         "Id": "90a9f43b061c482aa903c04eb4110207",
@@ -1520,8 +1403,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 123.0125206065768,
-        "Y": 972.250247384778
+        "X": -145.88556613495984,
+        "Y": -1980.7300608464384
       },
       {
         "Id": "d20f1f82d58042c0af2f8f8c067884de",
@@ -1530,18 +1413,18 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 932.4609117761302,
-        "Y": 1243.5911805562826
+        "X": 781.9434064736488,
+        "Y": -1710.9039018919966
       },
       {
         "Id": "a8f80a09fc80464297f2ef2c8a3b2591",
-        "Name": "Faz a marcação do mastro",
+        "Name": "Solidifica o mastro",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 673.7428222898541,
-        "Y": 150.81946076361373
+        "X": 525.7313058624718,
+        "Y": -2747.894860090735
       },
       {
         "Id": "f462293ebeb4435a82ec38d212e07eb2",
@@ -1550,8 +1433,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 973.0323403475586,
-        "Y": 1362.8101800187499
+        "X": 822.5148350450772,
+        "Y": -1591.6849024295293
       },
       {
         "Id": "618a1bd4377f4d449b45303376b589af",
@@ -1560,8 +1443,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 247.92967143793635,
-        "Y": 1095.9933613260625
+        "X": -20.968415303600295,
+        "Y": -1856.9869469051541
       },
       {
         "Id": "ddf133b354b54ab8bc6e877c15e2e7fa",
@@ -1570,58 +1453,58 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 823.7433019327182,
-        "Y": 1484.4083886980804
+        "X": 673.2257966302368,
+        "Y": -1470.0866937501987
       },
       {
         "Id": "a30a279de5764b47afd8d73c4708b2d0",
-        "Name": "Faz a marcação dos cabos",
+        "Name": "Marcação de estai",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1195.541276096212,
-        "Y": 148.71524138236146
+        "X": 1044.631752124036,
+        "Y": -2748.2655130255685
       },
       {
-        "Id": "87e1292a710d4af89ee03cbe933f7464",
-        "Name": "Seção Inferior do Mastro",
+        "Id": "4c544310e46d4c8d9752b1cf35055876",
+        "Name": "Code Block",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2276.13477153791,
-        "Y": 1194.2707903585722
+        "X": 1564.1036536798777,
+        "Y": -2750.946472205158
       },
       {
-        "Id": "5455d8d1974c4ef8a0d1267e286ed41b",
-        "Name": "Altura do Tabuleiro",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": true,
-        "X": 1800.2723957476421,
-        "Y": 1097.8306176003214
-      },
-      {
-        "Id": "61c200c8ef3044738e7d97f23f993eaa",
+        "Id": "1f46244af69a4e92a0a526246ac59d05",
         "Name": "Largura Total Tabuleiro",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1803.4345270361398,
-        "Y": 969.2915539201265
+        "X": 674.7188287265662,
+        "Y": -1347.0908794211937
       },
       {
-        "Id": "c42fa5acbb2e42ba8e88cc1f4f1d29dc",
+        "Id": "e9208fc0fc85419aa76a6b6f111fdaa7",
+        "Name": "Altura do Tabuleiro",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 674.7188287265662,
+        "Y": -1227.564327107103
+      },
+      {
+        "Id": "86c1f6a1cdfa45b0bf6913587a5cacf5",
         "Name": "Espessura do Tabuleiro",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1800.0449580088662,
-        "Y": 1225.2930745767922
+        "X": 674.0100659295736,
+        "Y": -1111.8595853683937
       }
     ],
     "Annotations": [
@@ -1650,48 +1533,27 @@
           "f462293ebeb4435a82ec38d212e07eb2",
           "618a1bd4377f4d449b45303376b589af",
           "ddf133b354b54ab8bc6e877c15e2e7fa",
-          "a30a279de5764b47afd8d73c4708b2d0"
+          "a30a279de5764b47afd8d73c4708b2d0",
+          "1f46244af69a4e92a0a526246ac59d05",
+          "e9208fc0fc85419aa76a6b6f111fdaa7",
+          "4c544310e46d4c8d9752b1cf35055876",
+          "86c1f6a1cdfa45b0bf6913587a5cacf5"
         ],
         "HasNestedGroups": false,
-        "Left": 113.0125206065768,
-        "Top": 61.8654825209303,
-        "Width": 1656.5589120209556,
-        "Height": 1555.257191891436,
+        "Left": -155.88556613495984,
+        "Top": -2891.1148257102864,
+        "Width": 2138.560648386266,
+        "Height": 1911.9695260561784,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": 143.8654825209303,
-        "InitialHeight": 1485.5429061771501,
+        "InitialTop": -2809.1148257102864,
+        "InitialHeight": 1728.065272820246,
         "TextblockHeight": 72.0,
         "Background": "#FF48B9FF"
-      },
-      {
-        "Id": "8117e97e57224d68b6bc7f3a47d68b33",
-        "Title": "Marcação do tabuleiro",
-        "DescriptionText": "Autor: Prof. José Luis Menegotto\r\nEscola Politécnica da UFRJ",
-        "IsExpanded": true,
-        "WidthAdjustment": 0.0,
-        "HeightAdjustment": 0.0,
-        "Nodes": [
-          "87e1292a710d4af89ee03cbe933f7464",
-          "5455d8d1974c4ef8a0d1267e286ed41b",
-          "61c200c8ef3044738e7d97f23f993eaa",
-          "c42fa5acbb2e42ba8e88cc1f4f1d29dc"
-        ],
-        "HasNestedGroups": false,
-        "Left": 1790.0449580088662,
-        "Top": 887.2915539201265,
-        "Width": 1020.089813529044,
-        "Height": 727.6935221527315,
-        "FontSize": 36.0,
-        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": 969.2915539201265,
-        "InitialHeight": 401.00152065666566,
-        "TextblockHeight": 72.0,
-        "Background": "#FFB5B5B5"
       }
     ],
-    "X": 6.91653016008371,
-    "Y": 275.6739943954858,
-    "Zoom": 0.1443971073414519
+    "X": -651.1383506464048,
+    "Y": 2034.4263528008798,
+    "Zoom": 1.2092347561564112
   }
 }
