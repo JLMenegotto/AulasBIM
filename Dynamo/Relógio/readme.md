@@ -248,11 +248,11 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
       25.  toca3 = MidiMessage.RawData(MidiMessage.StartNote   ( nota + s2 , 20+segs , 1));
       26.  MidiOut.Send ( mio , segs% 3==0? toca1 : segs% 5==0? toca2 : toca3);
 
-![Mandala_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/faea2783-41ec-4bb7-b7eb-2db0b22e7c4c)
+ - [Mandala_01](https://github.com/JLMenegotto/AulasBIM/assets/9437020/faea2783-41ec-4bb7-b7eb-2db0b22e7c4c)
 
-![Mandala_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/3376e867-e1cb-41a5-b556-3f4560663d84)
+ - [Mandala_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/3376e867-e1cb-41a5-b556-3f4560663d84)
 
-![Exemplo Em Cables - Utilizando arquivo Ifc] https://cables.gl/view/tgPFuN 
+ - [Exemplo Em Cables - Utilizando arquivo Ifc](https://cables.gl/view/tgPFuN) 
 
 
 ## LISTA DOS NÚMEROS CORRESPONDENTES AOS INSTRUMENTOS MIDI
