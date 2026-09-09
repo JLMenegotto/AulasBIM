@@ -252,7 +252,7 @@ Neste exemplo, utilizamos a interface MIDI da Biblioteca de **NAUDIO** para inco
 
 ![Mandala_02](https://github.com/JLMenegotto/AulasBIM/assets/9437020/3376e867-e1cb-41a5-b556-3f4560663d84)
 
-![Exemplo Em Cables - Utilizando arquivo Ifc](https://cables.gl/edit/nBeg_N)
+![Exemplo Em Cables - Utilizando arquivo Ifc](https://cables.gl/view/tgPFuN)
 
 ## LISTA DOS NÚMEROS CORRESPONDENTES AOS INSTRUMENTOS MIDI
 ### Teclados
