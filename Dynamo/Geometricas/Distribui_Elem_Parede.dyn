@@ -84,7 +84,7 @@
       "NodeType": "CodeBlockNode",
       "Inputs": [
         {
-          "Id": "82a95df097a749fdac6654d10c3c228e",
+          "Id": "7ab5dfe8a5db40bba72f675c6b5822fb",
           "Name": "ele",
           "Description": "ele",
           "UsingDefaultValue": false,
@@ -93,7 +93,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "b22b52fdb1d5495a86e1c8d4facafa6e",
+          "Id": "40cb4731e9f648ea9a58fd3b5e37bb22",
           "Name": "i",
           "Description": "i",
           "UsingDefaultValue": false,
@@ -104,7 +104,7 @@
       ],
       "Outputs": [
         {
-          "Id": "71189799b43041f8aa81d62f8f071237",
+          "Id": "a01452880580420dbf7bae03bd290c88",
           "Name": "ele",
           "Description": "ele",
           "UsingDefaultValue": false,
@@ -113,7 +113,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "26ffbab0a6d14379bc151c2667e8be88",
+          "Id": "2a63b2be29554f4bb671ae2e2ad49ee1",
           "Name": "i",
           "Description": "i",
           "UsingDefaultValue": false,
@@ -122,7 +122,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "e0e209110fdf44ea8b2819a85ddb3ec4",
+          "Id": "ad9c56395cc04316b32d8605830bfb31",
           "Name": "pared",
           "Description": "pared = Revit.Elements.FamilyInstance.GetHost(ele)",
           "UsingDefaultValue": false,
@@ -131,7 +131,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "ce60cd6e18544aae9717b406b6105d37",
+          "Id": "6d6f42fe22f94cf6a5f083bfbd6e72f0",
           "Name": "grupo",
           "Description": "grupo = List.GroupByKey(ele, pared)",
           "UsingDefaultValue": false,
@@ -140,7 +140,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "261eb087c97e4f75af89deb35956a726",
+          "Id": "7c6d9ab1dca840829656bf71e8ce1c7d",
           "Name": "wal",
           "Description": "wal = DesignScript.Builtin.Get.ValueAtIndex(DesignScript.Builtin.Get.ValueAtIndex(grupo, \"unique keys\"), i)",
           "UsingDefaultValue": false,
@@ -149,7 +149,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "18f48aa66a114333bd8f054a8dad7181",
+          "Id": "0461dbed9f2b4aa4aadda732c5d9040c",
           "Name": "grp",
           "Description": "grp = DesignScript.Builtin.Get.ValueAtIndex(DesignScript.Builtin.Get.ValueAtIndex(grupo, \"groups\"), i)",
           "UsingDefaultValue": false,
@@ -158,25 +158,25 @@
           "KeepListStructure": false
         },
         {
-          "Id": "3f39119a748e4fd0973f322aed18d648",
+          "Id": "46a823596caa411b9aa1b502b7d5eaf7",
           "Name": "q",
-          "Description": "q = List.Count(grp)",
+          "Description": "q = (List.Count(grp)) + 1",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
         },
         {
-          "Id": "67a8c5052e8d454a9f596c6b4572c429",
-          "Name": "eix",
-          "Description": "eix = wal.GetLocation()",
+          "Id": "c2732ac924294d35a740195bbef394c9",
+          "Name": "lin",
+          "Description": "lin = wal.GetLocation()",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
         },
         {
-          "Id": "95dda5f0836c45babbd19476fb93864f",
+          "Id": "953b745d10d64910a2edb041dabe9a78",
           "Name": "tba",
           "Description": "tba = grp.GetLocation()",
           "UsingDefaultValue": false,
@@ -185,34 +185,34 @@
           "KeepListStructure": false
         },
         {
-          "Id": "0ee92476711e45838afdb8ccabcf6aa6",
+          "Id": "4d0ac580abef4638a1a936065d0aaf44",
           "Name": "dim",
-          "Description": "dim = eix.Length",
+          "Description": "dim = lin.Length",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
         },
         {
-          "Id": "e1447f0d7f1f4e7ea2b4e37979263272",
+          "Id": "84f5ebdd882445e6a4ac30fe4271ff69",
           "Name": "dis",
-          "Description": "dis = DSCore.Math.Round(dim / (q + 1), 2)",
+          "Description": "dis = DSCore.Math.Round(dim / q, 2)",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
         },
         {
-          "Id": "762233fd8ba34090bbff8c114d953106",
+          "Id": "982bdf7bce154e21a75424f8bc8d79b9",
           "Name": "pin",
-          "Description": "pin = eix.PointsAtEqualSegmentLength(q + 1)",
+          "Description": "pin = lin.PointsAtEqualSegmentLength(q)",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
         },
         {
-          "Id": "11d5f68b4841425ab9c8451f22d28593",
+          "Id": "0c855d2d51174df2a4e771dbba2471af",
           "Name": "pfi",
           "Description": "pfi = List.Flatten(pin, 1)",
           "UsingDefaultValue": false,
@@ -221,7 +221,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "c328bf6caf154598940637aae6dca2b7",
+          "Id": "85166bb6dc704d35bf4b0015b55f5d92",
           "Name": "function",
           "Description": "grp.SetLocation(pfi)",
           "UsingDefaultValue": false,
@@ -232,7 +232,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly",
-      "Code": "ele;\ni;\n//----------------------------------------------\n// Agrupa tomadas por parede que a hospeda\n//----------------------------------------------\npared = FamilyInstance.GetHost( ele   );\ngrupo = List.GroupByKey ( ele , pared );\nwal   = grupo[\"unique keys\"][i];\ngrp   = grupo[\"groups\"     ][i];\n//---------------------------------------------\n// Processa os itens do grupo de índice i\n//---------------------------------------------\nq     = List.Count(grp);\neix   = wal.GetLocation();\ntba   = grp.GetLocation();\ndim   = eix.Length;\ndis   = Math.Round (dim / (q+1), 2);\npin   = eix.PointsAtEqualSegmentLength(q+1);\npfi   = List.Flatten ( pin , 1 );\n//---------------------------------------------\n// Reposiciona os elementos equidistantes\n//---------------------------------------------\ngrp.SetLocation ( pfi );"
+      "Code": "ele;\ni;\n//----------------------------------------------\n// Agrupa elementos pela parede que os hospedam\n// Podem ser portas, janelas, tomadas, etc.\n//----------------------------------------------\npared = FamilyInstance.GetHost(  ele  );\ngrupo = List.GroupByKey ( ele , pared );\nwal   = grupo[\"unique keys\"][i];\ngrp   = grupo[\"groups\"     ][i];\n//---------------------------------------------\n// Processa os itens do grupo de índice i\n//---------------------------------------------\nq     = List.Count(grp)+1;\nlin   = wal.GetLocation();\ntba   = grp.GetLocation();\ndim   = lin.Length;\ndis   = Math.Round (dim / q, 2);\npin   = lin.PointsAtEqualSegmentLength(q);\npfi   = List.Flatten ( pin , 1 );\n//---------------------------------------------\n// Reposiciona os elementos equidistantes\n//---------------------------------------------\ngrp.SetLocation ( pfi );"
     },
     {
       "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
@@ -318,7 +318,7 @@
     {
       "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
       "NumberType": "Integer",
-      "MaximumValue": 4,
+      "MaximumValue": 5,
       "MinimumValue": 0,
       "StepValue": 1,
       "Id": "6125179683044088baee9612ed3e357b",
@@ -337,14 +337,14 @@
       ],
       "Replication": "Disabled",
       "Description": "Produces integer values",
-      "InputValue": 2
+      "InputValue": 0
     }
   ],
   "Connectors": [
     {
-      "Start": "ce60cd6e18544aae9717b406b6105d37",
+      "Start": "ad9c56395cc04316b32d8605830bfb31",
       "End": "137a31c3ca6445a3b40560f5d1c6f224",
-      "Id": "beaa8b75080d401e835fe457e706083c",
+      "Id": "6de34bce7199497c9d406e0fa494abc2",
       "IsHidden": "False"
     },
     {
@@ -355,14 +355,14 @@
     },
     {
       "Start": "77e0f45d73aa413fb578bcaec559fc51",
-      "End": "82a95df097a749fdac6654d10c3c228e",
-      "Id": "af90afe5455440eb8252f180b75da641",
+      "End": "7ab5dfe8a5db40bba72f675c6b5822fb",
+      "Id": "ddfcc84ac78242128d05f9ecf2bd355c",
       "IsHidden": "False"
     },
     {
       "Start": "a4e388643ef2477b8a39f203cd2a7d0e",
-      "End": "b22b52fdb1d5495a86e1c8d4facafa6e",
-      "Id": "de1ecbad1596430d924b08b09fa4e047",
+      "End": "40cb4731e9f648ea9a58fd3b5e37bb22",
+      "Id": "8e51e356063d4a8dacca9cc47df7f400",
       "IsHidden": "False"
     }
   ],
@@ -423,8 +423,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 648.1765357247402,
-        "Y": 1204.9367923925477
+        "X": 649.2612917531716,
+        "Y": 1184.1129270940094
       },
       {
         "Id": "eba39222ec0c436eb64f68c1d6b1d449",
@@ -433,8 +433,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 62.811348868922096,
-        "Y": 1162.9889465793783
+        "X": 77.13445582384935,
+        "Y": 1143.3914417834987
       },
       {
         "Id": "67dec957282f43cf8e84021cfc109034",
@@ -443,8 +443,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 338.4568027772665,
-        "Y": 1163.0579717485323
+        "X": 339.54155880569783,
+        "Y": 1142.234106449994
       },
       {
         "Id": "1ac6a7a504b948a88ccedc4f0d9eb316",
@@ -453,8 +453,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1246.7541223341375,
-        "Y": 1303.0868851860496
+        "X": 1211.0551975250535,
+        "Y": 1281.4567964023897
       },
       {
         "Id": "6125179683044088baee9612ed3e357b",
@@ -463,8 +463,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 248.66625670994551,
-        "Y": 1289.3030804859459
+        "X": 249.75101273837686,
+        "Y": 1268.4792151874076
       }
     ],
     "Annotations": [
@@ -482,16 +482,17 @@
           "eba39222ec0c436eb64f68c1d6b1d449",
           "67dec957282f43cf8e84021cfc109034",
           "6125179683044088baee9612ed3e357b",
-          "849c40c58f5945bb89a46b702a1df674"
+          "849c40c58f5945bb89a46b702a1df674",
+          "1ac6a7a504b948a88ccedc4f0d9eb316"
         ],
         "HasNestedGroups": false,
-        "Left": 52.811348868922096,
-        "Top": 1101.9889465793783,
-        "Width": 1129.3651868558181,
-        "Height": 587.9478458131694,
+        "Left": 67.13445582384935,
+        "Top": 1081.234106449994,
+        "Width": 1430.9207417012042,
+        "Height": 603.8788206440154,
         "FontSize": 18.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": 1162.9889465793783,
+        "InitialTop": 1142.234106449994,
         "InitialHeight": 415.41673362238316,
         "TextblockHeight": 51.0,
         "IsOptionalInPortsCollapsed": false,
@@ -511,8 +512,8 @@
         "UserSetHeight": 0.0,
         "Nodes": [],
         "HasNestedGroups": false,
-        "Left": 315.5463627698897,
-        "Top": 1441.4056802017615,
+        "Left": 403.0381006819965,
+        "Top": 1405.9341441317151,
         "Width": 0.0,
         "Height": 0.0,
         "FontSize": 36.0,
@@ -527,8 +528,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": -98.80946704329926,
-    "Y": -891.8868321867552,
-    "Zoom": 0.8297084862212534
+    "X": -16.72704799801437,
+    "Y": -343.52387393672,
+    "Zoom": 0.4029612784470534
   }
 }
