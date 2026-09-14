@@ -1,0 +1,455 @@
+{
+  "Uuid": "8944d6ef-67f0-4e74-8a41-690b6784eeea",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Selecionar_Paredes",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Line": {
+        "Key": "Autodesk.DesignScript.Geometry.Line",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Plane": {
+        "Key": "Autodesk.DesignScript.Geometry.Plane",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Circle": {
+        "Key": "Autodesk.DesignScript.Geometry.Circle",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Geometry": {
+        "Key": "Autodesk.DesignScript.Geometry.Geometry",
+        "Value": "ProtoGeometry.dll"
+      },
+      "CoordinateSystem": {
+        "Key": "Autodesk.DesignScript.Geometry.CoordinateSystem",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Arc": {
+        "Key": "Autodesk.DesignScript.Geometry.Arc",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Line.Li": {
+        "Key": "Autodesk.DesignScript.Geometry.Line",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      },
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      },
+      "FamilyInstance": {
+        "Key": "Revit.Elements.FamilyInstance",
+        "Value": "RevitNodes.dll"
+      },
+      "FamilyInstance.Geometry": {
+        "Key": "Revit.Elements.FamilyInstance",
+        "Value": "RevitNodes.dll"
+      },
+      "Transaction": {
+        "Key": "Revit.Transaction.Transaction",
+        "Value": "RevitNodes.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 746,
+      "SelectedString": "OST_Walls",
+      "Id": "89f21ffcdd3444c7ac65f1dbe8db91c1",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "466dea3636d84848aaa26ddb3729e04b",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "Id": "c54dcfc0a64549168acfe7b152734412",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "123b4ce607a143a9b0e497b1c098e84d",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a05b1a4260ba4a70a389cb7d123d939b",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "a8287ed5a18246c9a21d5550fe748c71",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [
+        {
+          "Id": "2d309efe317b4fa49e6adfe65f22d861",
+          "Name": "par",
+          "Description": "par",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "41d7ba1f382d4d8b9bc5b62bac9e7465",
+          "Name": "ele",
+          "Description": "ele",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a004c03ccc1d432fb105a238569e8c9f",
+          "Name": "par",
+          "Description": "par",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "51db44c18f6a48c4806a63010ca5abe1",
+          "Name": "ele",
+          "Description": "ele",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d6d72075e1f440919cdbfe979f739d83",
+          "Name": "q",
+          "Description": "q = List.Count(ele)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d86479602eac4439896cc1483964795b",
+          "Name": "eix",
+          "Description": "eix = par.GetLocation()",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "91c4fb7da93047b88fea328e3505e758",
+          "Name": "tom",
+          "Description": "tom = ele.GetLocation()",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "54f79a9e7d564778ad48f51527dbe0d6",
+          "Name": "dim",
+          "Description": "dim = eix.Length",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2e9f54c05e634dfa92dda099f1212aff",
+          "Name": "dis",
+          "Description": "dis = DSCore.Math.Round(dim / (q + 1), 2)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b7773450cda846939576a9849f3fa60f",
+          "Name": "pin",
+          "Description": "pin = eix.PointsAtEqualSegmentLength(q + 1)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "051f5a3a9dba4f7ab4db8b2ff41bfc67",
+          "Name": "pfi",
+          "Description": "pfi = List.Flatten(pin, 1)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2ae9f28004244379869eed9e6a616c6e",
+          "Name": "function",
+          "Description": "ele.SetLocation(pfi)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "par;\nele;\nq   = List.Count(ele);\neix = par.GetLocation();\ntom = ele.GetLocation();\ndim = eix.Length;\ndis = Math.Round (dim / (q+1), 2);\npin = eix.PointsAtEqualSegmentLength(q+1);\npfi = List.Flatten ( pin , 1 );\n//------------------------------------------------\nele.SetLocation ( pfi );"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 216,
+      "SelectedString": "OST_ElectricalFixtures",
+      "Id": "64f6747bc4124291aebcbdf44b1c7309",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ed742b3dedc1490aa5aea1bd1ca705c2",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "Id": "b880a8e136224099bda97e9333d2c143",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "763718703e1948eda4ff25ded1f63368",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "024dca9a2e7945fab9361f4fec6042ee",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "466dea3636d84848aaa26ddb3729e04b",
+      "End": "123b4ce607a143a9b0e497b1c098e84d",
+      "Id": "6040f7fd509a481c9c5206378cfac726",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a05b1a4260ba4a70a389cb7d123d939b",
+      "End": "2d309efe317b4fa49e6adfe65f22d861",
+      "Id": "75b022683a3449b381f002e7f124b20c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ed742b3dedc1490aa5aea1bd1ca705c2",
+      "End": "763718703e1948eda4ff25ded1f63368",
+      "Id": "3c3ccd5a232f4c5faff8efc4c6ad688a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "024dca9a2e7945fab9361f4fec6042ee",
+      "End": "41d7ba1f382d4d8b9bc5b62bac9e7465",
+      "Id": "5a5d102ad82344bea64cbb54609c9dd2",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "4.0",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "10.3",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "4.0.2.3852",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "89f21ffcdd3444c7ac65f1dbe8db91c1",
+        "Name": "Categories",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -7.968852956191256,
+        "Y": 1102.3076054148098
+      },
+      {
+        "Id": "c54dcfc0a64549168acfe7b152734412",
+        "Name": "All Elements of Category",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 256.3873611828221,
+        "Y": 1101.7273993919675
+      },
+      {
+        "Id": "a8287ed5a18246c9a21d5550fe748c71",
+        "Name": "Distribui Elemento em parede",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 566.141028832517,
+        "Y": 1148.6195154255345
+      },
+      {
+        "Id": "64f6747bc4124291aebcbdf44b1c7309",
+        "Name": "Categories",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -20.011897735917046,
+        "Y": 1219.6259188861995
+      },
+      {
+        "Id": "b880a8e136224099bda97e9333d2c143",
+        "Name": "All Elements of Category",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 255.6335561724273,
+        "Y": 1219.6949440553535
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "ceb0b4d4fd9f4d9b96e0b75c6a8c6020",
+        "Title": "Distribui Elemento em parede",
+        "DescriptionText": "Disciplina BIM - Prof. José Luis Menegotto\r\nDEG/POLI/UFRJ",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [
+          "89f21ffcdd3444c7ac65f1dbe8db91c1",
+          "c54dcfc0a64549168acfe7b152734412",
+          "a8287ed5a18246c9a21d5550fe748c71",
+          "64f6747bc4124291aebcbdf44b1c7309",
+          "b880a8e136224099bda97e9333d2c143"
+        ],
+        "HasNestedGroups": false,
+        "Left": -30.011897735917046,
+        "Top": 1040.7273993919675,
+        "Width": 1148.152926568434,
+        "Height": 396.89211603356694,
+        "FontSize": 18.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 1101.7273993919675,
+        "InitialHeight": 365.89211603356694,
+        "TextblockHeight": 51.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FF48B9FF"
+      }
+    ],
+    "X": 46.56508467162246,
+    "Y": 76.59157482797275,
+    "Zoom": 0.2459289251023533
+  }
+}
