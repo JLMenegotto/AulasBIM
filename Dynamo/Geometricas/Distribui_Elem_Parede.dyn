@@ -1,8 +1,8 @@
 {
-  "Uuid": "8944d6ef-67f0-4e74-8a41-690b6784eeea",
+  "Uuid": "2aea21b1-f69d-4945-9b84-7285daeb37ec",
   "IsCustomNode": false,
   "Description": "",
-  "Name": "Selecionar_Paredes",
+  "Name": "Distribui_Elem_Parede",
   "ElementResolver": {
     "ResolutionMap": {
       "Line": {
@@ -60,6 +60,18 @@
       "Transaction": {
         "Key": "Revit.Transaction.Transaction",
         "Value": "RevitNodes.dll"
+      },
+      "Group": {
+        "Key": "Revit.Elements.Group",
+        "Value": "RevitNodes.dll"
+      },
+      "Revit.Elements.Element": {
+        "Key": "Revit.Elements.Element",
+        "Value": "RevitNodes.dll"
+      },
+      "Elements.Element": {
+        "Key": "Revit.Elements.Element",
+        "Value": "RevitNodes.dll"
       }
     }
   },
@@ -67,73 +79,23 @@
   "Outputs": [],
   "Nodes": [
     {
-      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
-      "SelectedIndex": 746,
-      "SelectedString": "OST_Walls",
-      "Id": "89f21ffcdd3444c7ac65f1dbe8db91c1",
-      "NodeType": "ExtensionNode",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "466dea3636d84848aaa26ddb3729e04b",
-          "Name": "Category",
-          "Description": "The selected Category.",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "All built-in categories."
-    },
-    {
-      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
-      "Id": "c54dcfc0a64549168acfe7b152734412",
-      "NodeType": "ExtensionNode",
-      "Inputs": [
-        {
-          "Id": "123b4ce607a143a9b0e497b1c098e84d",
-          "Name": "Category",
-          "Description": "The Category",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "a05b1a4260ba4a70a389cb7d123d939b",
-          "Name": "Elements",
-          "Description": "An element class.",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Get all elements of the specified category from the model."
-    },
-    {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
-      "Id": "a8287ed5a18246c9a21d5550fe748c71",
+      "Id": "09e16d46765744358c392d75e0c03d18",
       "NodeType": "CodeBlockNode",
       "Inputs": [
         {
-          "Id": "2d309efe317b4fa49e6adfe65f22d861",
-          "Name": "par",
-          "Description": "par",
+          "Id": "82a95df097a749fdac6654d10c3c228e",
+          "Name": "ele",
+          "Description": "ele",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
         },
         {
-          "Id": "41d7ba1f382d4d8b9bc5b62bac9e7465",
-          "Name": "ele",
-          "Description": "ele",
+          "Id": "b22b52fdb1d5495a86e1c8d4facafa6e",
+          "Name": "i",
+          "Description": "i",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -142,16 +104,7 @@
       ],
       "Outputs": [
         {
-          "Id": "a004c03ccc1d432fb105a238569e8c9f",
-          "Name": "par",
-          "Description": "par",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "51db44c18f6a48c4806a63010ca5abe1",
+          "Id": "71189799b43041f8aa81d62f8f071237",
           "Name": "ele",
           "Description": "ele",
           "UsingDefaultValue": false,
@@ -160,34 +113,79 @@
           "KeepListStructure": false
         },
         {
-          "Id": "d6d72075e1f440919cdbfe979f739d83",
+          "Id": "26ffbab0a6d14379bc151c2667e8be88",
+          "Name": "i",
+          "Description": "i",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e0e209110fdf44ea8b2819a85ddb3ec4",
+          "Name": "pared",
+          "Description": "pared = Revit.Elements.FamilyInstance.GetHost(ele)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ce60cd6e18544aae9717b406b6105d37",
+          "Name": "grupo",
+          "Description": "grupo = List.GroupByKey(ele, pared)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "261eb087c97e4f75af89deb35956a726",
+          "Name": "wal",
+          "Description": "wal = DesignScript.Builtin.Get.ValueAtIndex(DesignScript.Builtin.Get.ValueAtIndex(grupo, \"unique keys\"), i)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "18f48aa66a114333bd8f054a8dad7181",
+          "Name": "grp",
+          "Description": "grp = DesignScript.Builtin.Get.ValueAtIndex(DesignScript.Builtin.Get.ValueAtIndex(grupo, \"groups\"), i)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3f39119a748e4fd0973f322aed18d648",
           "Name": "q",
-          "Description": "q = List.Count(ele)",
+          "Description": "q = List.Count(grp)",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
         },
         {
-          "Id": "d86479602eac4439896cc1483964795b",
+          "Id": "67a8c5052e8d454a9f596c6b4572c429",
           "Name": "eix",
-          "Description": "eix = par.GetLocation()",
+          "Description": "eix = wal.GetLocation()",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
         },
         {
-          "Id": "91c4fb7da93047b88fea328e3505e758",
-          "Name": "tom",
-          "Description": "tom = ele.GetLocation()",
+          "Id": "95dda5f0836c45babbd19476fb93864f",
+          "Name": "tba",
+          "Description": "tba = grp.GetLocation()",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
         },
         {
-          "Id": "54f79a9e7d564778ad48f51527dbe0d6",
+          "Id": "0ee92476711e45838afdb8ccabcf6aa6",
           "Name": "dim",
           "Description": "dim = eix.Length",
           "UsingDefaultValue": false,
@@ -196,7 +194,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "2e9f54c05e634dfa92dda099f1212aff",
+          "Id": "e1447f0d7f1f4e7ea2b4e37979263272",
           "Name": "dis",
           "Description": "dis = DSCore.Math.Round(dim / (q + 1), 2)",
           "UsingDefaultValue": false,
@@ -205,7 +203,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "b7773450cda846939576a9849f3fa60f",
+          "Id": "762233fd8ba34090bbff8c114d953106",
           "Name": "pin",
           "Description": "pin = eix.PointsAtEqualSegmentLength(q + 1)",
           "UsingDefaultValue": false,
@@ -214,7 +212,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "051f5a3a9dba4f7ab4db8b2ff41bfc67",
+          "Id": "11d5f68b4841425ab9c8451f22d28593",
           "Name": "pfi",
           "Description": "pfi = List.Flatten(pin, 1)",
           "UsingDefaultValue": false,
@@ -223,9 +221,9 @@
           "KeepListStructure": false
         },
         {
-          "Id": "2ae9f28004244379869eed9e6a616c6e",
+          "Id": "c328bf6caf154598940637aae6dca2b7",
           "Name": "function",
-          "Description": "ele.SetLocation(pfi)",
+          "Description": "grp.SetLocation(pfi)",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -234,18 +232,18 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly",
-      "Code": "par;\nele;\nq   = List.Count(ele);\neix = par.GetLocation();\ntom = ele.GetLocation();\ndim = eix.Length;\ndis = Math.Round (dim / (q+1), 2);\npin = eix.PointsAtEqualSegmentLength(q+1);\npfi = List.Flatten ( pin , 1 );\n//------------------------------------------------\nele.SetLocation ( pfi );"
+      "Code": "ele;\ni;\n//----------------------------------------------\n// Agrupa tomadas por parede que a hospeda\n//----------------------------------------------\npared = FamilyInstance.GetHost( ele   );\ngrupo = List.GroupByKey ( ele , pared );\nwal   = grupo[\"unique keys\"][i];\ngrp   = grupo[\"groups\"     ][i];\n//---------------------------------------------\n// Processa os itens do grupo de índice i\n//---------------------------------------------\nq     = List.Count(grp);\neix   = wal.GetLocation();\ntba   = grp.GetLocation();\ndim   = eix.Length;\ndis   = Math.Round (dim / (q+1), 2);\npin   = eix.PointsAtEqualSegmentLength(q+1);\npfi   = List.Flatten ( pin , 1 );\n//---------------------------------------------\n// Reposiciona os elementos equidistantes\n//---------------------------------------------\ngrp.SetLocation ( pfi );"
     },
     {
       "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
       "SelectedIndex": 216,
       "SelectedString": "OST_ElectricalFixtures",
-      "Id": "64f6747bc4124291aebcbdf44b1c7309",
+      "Id": "eba39222ec0c436eb64f68c1d6b1d449",
       "NodeType": "ExtensionNode",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "ed742b3dedc1490aa5aea1bd1ca705c2",
+          "Id": "69c60f5e5ad4427dad94ff014f38cdb5",
           "Name": "Category",
           "Description": "The selected Category.",
           "UsingDefaultValue": false,
@@ -259,11 +257,11 @@
     },
     {
       "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
-      "Id": "b880a8e136224099bda97e9333d2c143",
+      "Id": "67dec957282f43cf8e84021cfc109034",
       "NodeType": "ExtensionNode",
       "Inputs": [
         {
-          "Id": "763718703e1948eda4ff25ded1f63368",
+          "Id": "b97c195142924cc387e7c999f8da9231",
           "Name": "Category",
           "Description": "The Category",
           "UsingDefaultValue": false,
@@ -274,7 +272,7 @@
       ],
       "Outputs": [
         {
-          "Id": "024dca9a2e7945fab9361f4fec6042ee",
+          "Id": "77e0f45d73aa413fb578bcaec559fc51",
           "Name": "Elements",
           "Description": "An element class.",
           "UsingDefaultValue": false,
@@ -285,31 +283,86 @@
       ],
       "Replication": "Disabled",
       "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "WatchWidth": 200.0,
+      "WatchHeight": 200.0,
+      "Id": "1ac6a7a504b948a88ccedc4f0d9eb316",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "137a31c3ca6445a3b40560f5d1c6f224",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "786ea69f0734434e9b1b800af1f74aa3",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualizes a node's output"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
+      "NumberType": "Integer",
+      "MaximumValue": 4,
+      "MinimumValue": 0,
+      "StepValue": 1,
+      "Id": "6125179683044088baee9612ed3e357b",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a4e388643ef2477b8a39f203cd2a7d0e",
+          "Name": "",
+          "Description": "Int64",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces integer values",
+      "InputValue": 2
     }
   ],
   "Connectors": [
     {
-      "Start": "466dea3636d84848aaa26ddb3729e04b",
-      "End": "123b4ce607a143a9b0e497b1c098e84d",
-      "Id": "6040f7fd509a481c9c5206378cfac726",
+      "Start": "ce60cd6e18544aae9717b406b6105d37",
+      "End": "137a31c3ca6445a3b40560f5d1c6f224",
+      "Id": "beaa8b75080d401e835fe457e706083c",
       "IsHidden": "False"
     },
     {
-      "Start": "a05b1a4260ba4a70a389cb7d123d939b",
-      "End": "2d309efe317b4fa49e6adfe65f22d861",
-      "Id": "75b022683a3449b381f002e7f124b20c",
+      "Start": "69c60f5e5ad4427dad94ff014f38cdb5",
+      "End": "b97c195142924cc387e7c999f8da9231",
+      "Id": "01da030f6e1f4012ad051f1e8b262707",
       "IsHidden": "False"
     },
     {
-      "Start": "ed742b3dedc1490aa5aea1bd1ca705c2",
-      "End": "763718703e1948eda4ff25ded1f63368",
-      "Id": "3c3ccd5a232f4c5faff8efc4c6ad688a",
+      "Start": "77e0f45d73aa413fb578bcaec559fc51",
+      "End": "82a95df097a749fdac6654d10c3c228e",
+      "Id": "af90afe5455440eb8252f180b75da641",
       "IsHidden": "False"
     },
     {
-      "Start": "024dca9a2e7945fab9361f4fec6042ee",
-      "End": "41d7ba1f382d4d8b9bc5b62bac9e7465",
-      "Id": "5a5d102ad82344bea64cbb54609c9dd2",
+      "Start": "a4e388643ef2477b8a39f203cd2a7d0e",
+      "End": "b22b52fdb1d5495a86e1c8d4facafa6e",
+      "Id": "de1ecbad1596430d924b08b09fa4e047",
       "IsHidden": "False"
     }
   ],
@@ -364,60 +417,60 @@
     "ConnectorPins": [],
     "NodeViews": [
       {
-        "Id": "89f21ffcdd3444c7ac65f1dbe8db91c1",
-        "Name": "Categories",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": true,
-        "X": -7.968852956191256,
-        "Y": 1102.3076054148098
-      },
-      {
-        "Id": "c54dcfc0a64549168acfe7b152734412",
-        "Name": "All Elements of Category",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": true,
-        "X": 256.3873611828221,
-        "Y": 1101.7273993919675
-      },
-      {
-        "Id": "a8287ed5a18246c9a21d5550fe748c71",
+        "Id": "09e16d46765744358c392d75e0c03d18",
         "Name": "Distribui Elemento em parede",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 566.141028832517,
-        "Y": 1148.6195154255345
+        "X": 648.1765357247402,
+        "Y": 1204.9367923925477
       },
       {
-        "Id": "64f6747bc4124291aebcbdf44b1c7309",
+        "Id": "eba39222ec0c436eb64f68c1d6b1d449",
         "Name": "Categories",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -20.011897735917046,
-        "Y": 1219.6259188861995
+        "X": 62.811348868922096,
+        "Y": 1162.9889465793783
       },
       {
-        "Id": "b880a8e136224099bda97e9333d2c143",
+        "Id": "67dec957282f43cf8e84021cfc109034",
         "Name": "All Elements of Category",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 255.6335561724273,
-        "Y": 1219.6949440553535
+        "X": 338.4568027772665,
+        "Y": 1163.0579717485323
+      },
+      {
+        "Id": "1ac6a7a504b948a88ccedc4f0d9eb316",
+        "Name": "Watch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1246.7541223341375,
+        "Y": 1303.0868851860496
+      },
+      {
+        "Id": "6125179683044088baee9612ed3e357b",
+        "Name": "Indice da parede",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 248.66625670994551,
+        "Y": 1289.3030804859459
       }
     ],
     "Annotations": [
       {
-        "Id": "ceb0b4d4fd9f4d9b96e0b75c6a8c6020",
-        "Title": "Distribui Elemento em parede",
+        "Id": "f5df79f2d1744b45aa128a16532a817c",
+        "Title": "Distribui elementos equidistantes em paredes",
         "DescriptionText": "Disciplina BIM - Prof. José Luis Menegotto\r\nDEG/POLI/UFRJ",
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
@@ -425,31 +478,57 @@
         "UserSetWidth": 0.0,
         "UserSetHeight": 0.0,
         "Nodes": [
-          "89f21ffcdd3444c7ac65f1dbe8db91c1",
-          "c54dcfc0a64549168acfe7b152734412",
-          "a8287ed5a18246c9a21d5550fe748c71",
-          "64f6747bc4124291aebcbdf44b1c7309",
-          "b880a8e136224099bda97e9333d2c143"
+          "09e16d46765744358c392d75e0c03d18",
+          "eba39222ec0c436eb64f68c1d6b1d449",
+          "67dec957282f43cf8e84021cfc109034",
+          "6125179683044088baee9612ed3e357b",
+          "849c40c58f5945bb89a46b702a1df674"
         ],
         "HasNestedGroups": false,
-        "Left": -30.011897735917046,
-        "Top": 1040.7273993919675,
-        "Width": 1148.152926568434,
-        "Height": 396.89211603356694,
+        "Left": 52.811348868922096,
+        "Top": 1101.9889465793783,
+        "Width": 1129.3651868558181,
+        "Height": 587.9478458131694,
         "FontSize": 18.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": 1101.7273993919675,
-        "InitialHeight": 365.89211603356694,
+        "InitialTop": 1162.9889465793783,
+        "InitialHeight": 415.41673362238316,
         "TextblockHeight": 51.0,
         "IsOptionalInPortsCollapsed": false,
         "IsUnconnectedOutPortsCollapsed": false,
         "HasToggledOptionalInPorts": false,
         "HasToggledUnconnectedOutPorts": false,
         "Background": "#FF48B9FF"
+      },
+      {
+        "Id": "849c40c58f5945bb89a46b702a1df674",
+        "Title": "Uso de: \nAgrupamentos por hospedeiros \nDiccionários\n",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 315.5463627698897,
+        "Top": 1441.4056802017615,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
       }
     ],
-    "X": 46.56508467162246,
-    "Y": 76.59157482797275,
-    "Zoom": 0.2459289251023533
+    "X": -98.80946704329926,
+    "Y": -891.8868321867552,
+    "Zoom": 0.8297084862212534
   }
 }
