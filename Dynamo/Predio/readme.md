@@ -4,7 +4,7 @@ Nesta pasta as funções definem elementos predias distribuidos em matrizes reta
 
 ## Distribui_Elem_Forro.dyn
 
-<img width="1572" height="1008" alt="Distribui_Elem_Forro_2026-09-15_06-50-48" src="https://github.com/user-attachments/assets/071d20fd-c45a-4c5a-b823-5c773eb1e640" />
+<img width="1572" height="1008" alt="Distribui_Elem_Forro_2026-09-15_06-50-48" src="https://github.com/user-attachments/assets/64af3171-5191-449b-9bd9-8337072ac3a9" />
 
 
 ## Matriz_XY.dyn
