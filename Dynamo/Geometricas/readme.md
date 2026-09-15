@@ -9,6 +9,11 @@ As funções geométricas exemplificam usos de traçados geométricos para o pro
 
 Sugere-se que os alunos modifiquem as funções incorporando-lhes novas possibilidades formais.
 
+## Plano_Circulo_Senoide.dyn
+
+<img width="2120" height="712" alt="Plano_Circulo_Senoide_2026-09-15_07-58-48" src="https://github.com/user-attachments/assets/0121869f-6338-4c9a-b5c3-caae674f359c" />
+
+
 ## Oval4Centros.dyn
 Esta função exemplifica o uso formal de uma figura plana como a Oval de 4 Centros para iniciar o processo de busca formal de um 
 projeto. A oval de 4 centros é construída a partir de losangos dimétricos ou isométricos que permitem a construção com compasso
