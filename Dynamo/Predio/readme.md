@@ -2,6 +2,13 @@
 
 Nesta pasta as funções definem elementos predias distribuidos em matrizes retangulares. É explicado o uso de **replicadores de DesignScript <n>** como forma alternativa à função de transposição **(Transpose)**.
 
+
+<img width="1572" height="1008" alt="Distribui_Elem_Forro_2026-09-15_06-50-48" src="https://github.com/user-attachments/assets/fed85b55-8986-4441-aa69-9fa6a69c1aa5" />
+
+
+
+
+
 ## Matriz_XY.dyn
 Define uma matriz bidimensional XY com a quantidade de módulos estruturais em direções XY. Na função há duas macros
 com Watch Image para compreender os índices i j utilizados. Podem ser utilizados os arquivos de imagem 
