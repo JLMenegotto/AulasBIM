@@ -8,6 +8,7 @@ Nesta pasta as funções definem elementos predias distribuidos em matrizes reta
 
 ## Distribui_Elem_Parede.dyn
 
+<img width="1570" height="654" alt="Distribui_Elem_Parede_2026-09-15_07-50-35" src="https://github.com/user-attachments/assets/c3640b74-2f3e-49e6-8a9e-ffda8a45cbfd" />
 
 ## Matriz_XY.dyn
 Define uma matriz bidimensional XY com a quantidade de módulos estruturais em direções XY. Na função há duas macros
