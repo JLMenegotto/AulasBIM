@@ -1,5 +1,5 @@
 {
-  "Uuid": "e47a2a6b-eca2-40c1-8951-e7045df7b689",
+  "Uuid": "01af0372-b8f1-4aad-9fc1-3f7bfb26fd83",
   "IsCustomNode": false,
   "Description": "",
   "Name": "Plano_Circulo_Senoide",
@@ -48,12 +48,12 @@
       "MaximumValue": 30.0,
       "MinimumValue": 0.0,
       "StepValue": 1.0,
-      "Id": "2290b5fa05834c3999859c257ea8797b",
+      "Id": "8b440154fbfb45cc9e335d4bf73ee1e9",
       "NodeType": "NumberInputNode",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "12eaf56a7977481997cdc7b585c74d27",
+          "Id": "ce432547b0814a67bd8c0697e1d272e6",
           "Name": "",
           "Description": "Double",
           "UsingDefaultValue": false,
@@ -72,12 +72,12 @@
       "MaximumValue": 100.0,
       "MinimumValue": 0.0,
       "StepValue": 1.0,
-      "Id": "3ebed7918baf491586609e9ad3b8388a",
+      "Id": "8f5a3726c2df44588f282583b7451478",
       "NodeType": "NumberInputNode",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "a648c41b3f234fec9c37696a674cdbe0",
+          "Id": "f702285f45d64fa7ae669da88ef8711d",
           "Name": "",
           "Description": "Double",
           "UsingDefaultValue": false,
@@ -96,12 +96,12 @@
       "MaximumValue": 30.0,
       "MinimumValue": 0.0,
       "StepValue": 1.0,
-      "Id": "d5b6a4b3634044d6b20cf0c8b3c3f70b",
+      "Id": "7e919062d8414996b7c44246ff004c7f",
       "NodeType": "NumberInputNode",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "9fddd3c3035648d5ad253d8ba62e311d",
+          "Id": "f3fa49a6edae46d9add05a337a276272",
           "Name": "",
           "Description": "Double",
           "UsingDefaultValue": false,
@@ -120,12 +120,12 @@
       "MaximumValue": 30.0,
       "MinimumValue": 0.0,
       "StepValue": 1.0,
-      "Id": "34c312d276a9456f8f5f906e6b5e2f5f",
+      "Id": "7a2e1ad07db644c18ec297404d6a72cc",
       "NodeType": "NumberInputNode",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "96db4d1e84b54179a457f9521b2459ed",
+          "Id": "37866aa5ddac477193b865764553ffe5",
           "Name": "",
           "Description": "Double",
           "UsingDefaultValue": false,
@@ -140,11 +140,11 @@
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
-      "Id": "c1126dc703324aa29bb59436399d39f8",
+      "Id": "115b791539674c09b5c623d44ee3e21d",
       "NodeType": "CodeBlockNode",
       "Inputs": [
         {
-          "Id": "3def1d5e2aa242958fa900eb3c88e161",
+          "Id": "90b12d592d954394b4df0209667421c9",
           "Name": "amp",
           "Description": "amp",
           "UsingDefaultValue": false,
@@ -153,7 +153,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "f4c004fe15e34a4187a13160c7841a6c",
+          "Id": "84d459b141974756b89b0e3f5a4d4b0e",
           "Name": "r",
           "Description": "r",
           "UsingDefaultValue": false,
@@ -162,7 +162,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "eee4628614184455b008fa0bfd081da0",
+          "Id": "c03b74e890694ba9b1b5f186e86fbd87",
           "Name": "m",
           "Description": "m",
           "UsingDefaultValue": false,
@@ -173,7 +173,7 @@
       ],
       "Outputs": [
         {
-          "Id": "a7f283128a284d288f878fae2d9dd2d4",
+          "Id": "46d56adae70e4270ac1464be1a8665d3",
           "Name": "amp",
           "Description": "amp",
           "UsingDefaultValue": false,
@@ -182,7 +182,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "5d3bbb0e874a4c259e32727d336809a8",
+          "Id": "c2c0c502042f4abd8c220c0609599d12",
           "Name": "r",
           "Description": "r",
           "UsingDefaultValue": false,
@@ -191,7 +191,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "42a2417c6b6949d9be72cd8f58acadd0",
+          "Id": "0e6407c96b704593a74e1a2ff6275310",
           "Name": "m",
           "Description": "m",
           "UsingDefaultValue": false,
@@ -200,7 +200,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "2d6c085cc0974df1aa71909ba9d7fdce",
+          "Id": "0c3ab124d91345a39b417bbb0617f464",
           "Name": "qpo",
           "Description": "qpo = 360 * 2",
           "UsingDefaultValue": false,
@@ -209,7 +209,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "c522ecbb05944013a3c601b574c7c384",
+          "Id": "b17cd37d6d2f4415bb443bfffee28b48",
           "Name": "x",
           "Description": "x = (0..qpo)",
           "UsingDefaultValue": false,
@@ -218,7 +218,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "c66bdcdaef6c46009703e8b4e73127bc",
+          "Id": "aeae12df71504ca79c3ebeb8c823107c",
           "Name": "i",
           "Description": "i = (0..qpo - 1)",
           "UsingDefaultValue": false,
@@ -227,7 +227,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "475b5bffd3294b14ab36b8efe14f9d34",
+          "Id": "cfa601ae9d0d4140aedda6bf2c6eb132",
           "Name": "j",
           "Description": "j = i + 1",
           "UsingDefaultValue": false,
@@ -236,7 +236,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "e7d26ea33f004ed996aebb0701806bfc",
+          "Id": "7f187c068fa54b1ea43b456a80dee7b6",
           "Name": "s",
           "Description": "s = DSCore.Math.Sin(x)",
           "UsingDefaultValue": false,
@@ -245,7 +245,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "8d8040023c1a43738e5289f60b843627",
+          "Id": "73361905b6b34e34bc18318abe412c3a",
           "Name": "y",
           "Description": "y = (DSCore.Math.RadiansToDegrees(s)) * amp",
           "UsingDefaultValue": false,
@@ -254,7 +254,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "ff50e3a7c3e7475fb100ad341be2c135",
+          "Id": "d29e850d2ce84e6a9bf30efbef95abd7",
           "Name": "Pt",
           "Description": "Pt = Autodesk.DesignScript.Geometry.Point.ByCoordinates(x, y, 0)",
           "UsingDefaultValue": false,
@@ -263,7 +263,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "409107edf3c94d7cbbc7eec9fb23a76e",
+          "Id": "397d38eadcb840dd94894e95ec400471",
           "Name": "ci",
           "Description": "ci = FazCirculo(DesignScript.Builtin.Get.ValueAtIndex(Pt, i), DesignScript.Builtin.Get.ValueAtIndex(Pt, j), (i + 1) * r, i, m)",
           "UsingDefaultValue": false,
@@ -282,12 +282,12 @@
       "MaximumValue": 10.0,
       "MinimumValue": -2.0,
       "StepValue": 0.2,
-      "Id": "8b3f8aebbbca4e58be0c64b353314c9b",
+      "Id": "fc1ada51e8a34595b9bce6e3ba76522c",
       "NodeType": "NumberInputNode",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "ee75121e0b8e4b85b2af1254bc54f9f4",
+          "Id": "07c172bed1c24d9e99be9f8726aaf8dd",
           "Name": "",
           "Description": "Double",
           "UsingDefaultValue": false,
@@ -302,7 +302,7 @@
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
-      "Id": "99e8bcfda69b4fefb091ff99325b24db",
+      "Id": "28787fb255c74119bb47a2243ed7c2bf",
       "NodeType": "CodeBlockNode",
       "Inputs": [],
       "Outputs": [],
@@ -316,12 +316,12 @@
       "MaximumValue": 0.05,
       "MinimumValue": 0.01,
       "StepValue": 0.001,
-      "Id": "2332e2c5df2d4681a899734cc0712bcd",
+      "Id": "6aa637e5f1994d8383181ddf4fe43bbc",
       "NodeType": "NumberInputNode",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "cab4d7621c614302aba08cbfb3365d1b",
+          "Id": "3ec75159b2fb4e0a9611f5b71c7395e9",
           "Name": "",
           "Description": "Double",
           "UsingDefaultValue": false,
@@ -340,12 +340,12 @@
       "MaximumValue": 20.0,
       "MinimumValue": 1.0,
       "StepValue": 1.0,
-      "Id": "ace226ca60524ba4b0e127801a766bd8",
+      "Id": "64b756f711c94790a0e3fc516a7abf46",
       "NodeType": "NumberInputNode",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "25254fdafbac4a7ba84e9febfbcf3818",
+          "Id": "2d7ea6cc771d4eb1bad457bd7190b75c",
           "Name": "",
           "Description": "Double",
           "UsingDefaultValue": false,
@@ -360,11 +360,11 @@
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
-      "Id": "e4bbbd396c1040929395aca9a81a75a3",
+      "Id": "e8e5bbc863b54c93b7a5e6a3d5ccebc8",
       "NodeType": "CodeBlockNode",
       "Inputs": [
         {
-          "Id": "8666c141414d41de96e6abe5f2ca6d8f",
+          "Id": "c2600921882a4983b51567cf60d1927e",
           "Name": "x1",
           "Description": "x1",
           "UsingDefaultValue": false,
@@ -373,7 +373,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "60cc8435b05e4cff8ed0627daad30143",
+          "Id": "5f3333acbe984eb3ad91a4facdda6686",
           "Name": "y1",
           "Description": "y1",
           "UsingDefaultValue": false,
@@ -382,7 +382,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "9b897dee8c8548ba83222dce50a7ca0b",
+          "Id": "1aa31da4e30e4822b7fc65e1a45035d2",
           "Name": "z1",
           "Description": "z1",
           "UsingDefaultValue": false,
@@ -391,7 +391,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "d43c8e0eb44b4743ac90546e4b367fca",
+          "Id": "7e80d26575b043dd981b216adf2966f7",
           "Name": "x2",
           "Description": "x2",
           "UsingDefaultValue": false,
@@ -402,7 +402,7 @@
       ],
       "Outputs": [
         {
-          "Id": "c6931d8d941843359883efe892709d26",
+          "Id": "d58ff035b0764f1f95e6759d57f279b7",
           "Name": "pa",
           "Description": "pa = Autodesk.DesignScript.Geometry.Point.ByCoordinates(x1, y1, z1)",
           "UsingDefaultValue": false,
@@ -411,7 +411,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "e158bfe25825410f9b90f7242610cdb5",
+          "Id": "092c1f2044d140b79952ed1c4d3f7a07",
           "Name": "pb",
           "Description": "pb = Autodesk.DesignScript.Geometry.Point.ByCoordinates(x2, 0, 0)",
           "UsingDefaultValue": false,
@@ -420,7 +420,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "87df07571a674930b3816d998259e0da",
+          "Id": "2f61c54cffa14f6d8140ddf251623884",
           "Name": "di",
           "Description": "di = Autodesk.DesignScript.Geometry.Vector.ByTwoPoints(pa, pb)",
           "UsingDefaultValue": false,
@@ -429,7 +429,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "c3c9d58cf01b457a95b7b52735045019",
+          "Id": "bb40f86a1f114266887c3cb3be0a1ea1",
           "Name": "pl",
           "Description": "pl = Autodesk.DesignScript.Geometry.Plane.ByOriginNormal(pa, di)",
           "UsingDefaultValue": false,
@@ -438,7 +438,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "008071d33f474f69b6d3e432d6ebcba5",
+          "Id": "873669f9d9654389b4b2a6a0f94b2b32",
           "Name": "Li",
           "Description": "Li = Autodesk.DesignScript.Geometry.Line.ByStartPointEndPoint(pa, pb)",
           "UsingDefaultValue": false,
@@ -447,7 +447,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "71217fe155bd47119f72a934f29eea82",
+          "Id": "e04fb633954046afa3bd4a7e8569b64f",
           "Name": "Ci",
           "Description": "Ci = Autodesk.DesignScript.Geometry.Circle.ByPlaneRadius(pl, 10)",
           "UsingDefaultValue": false,
@@ -463,45 +463,45 @@
   ],
   "Connectors": [
     {
-      "Start": "12eaf56a7977481997cdc7b585c74d27",
-      "End": "8666c141414d41de96e6abe5f2ca6d8f",
-      "Id": "6c385e27ab074a1a9a334fdc6c49185e",
+      "Start": "ce432547b0814a67bd8c0697e1d272e6",
+      "End": "c2600921882a4983b51567cf60d1927e",
+      "Id": "74be715863f64b34aa10bf387c6dcb30",
       "IsHidden": "False"
     },
     {
-      "Start": "a648c41b3f234fec9c37696a674cdbe0",
-      "End": "60cc8435b05e4cff8ed0627daad30143",
-      "Id": "bbb541505dff49ff85510fe193fc4321",
+      "Start": "f702285f45d64fa7ae669da88ef8711d",
+      "End": "5f3333acbe984eb3ad91a4facdda6686",
+      "Id": "bb35ca076a4b482497d2c072ba37e4a2",
       "IsHidden": "False"
     },
     {
-      "Start": "9fddd3c3035648d5ad253d8ba62e311d",
-      "End": "9b897dee8c8548ba83222dce50a7ca0b",
-      "Id": "20c7917221ca4bf4a8a7a4e030a30446",
+      "Start": "f3fa49a6edae46d9add05a337a276272",
+      "End": "1aa31da4e30e4822b7fc65e1a45035d2",
+      "Id": "a02cfbaeb8a94214a057ab3dbfc3f2b9",
       "IsHidden": "False"
     },
     {
-      "Start": "96db4d1e84b54179a457f9521b2459ed",
-      "End": "d43c8e0eb44b4743ac90546e4b367fca",
-      "Id": "4a5666a8675245e5b0b46c58bb9dc886",
+      "Start": "37866aa5ddac477193b865764553ffe5",
+      "End": "7e80d26575b043dd981b216adf2966f7",
+      "Id": "b5f1723f800540ddbac95b9d49e3a3b8",
       "IsHidden": "False"
     },
     {
-      "Start": "ee75121e0b8e4b85b2af1254bc54f9f4",
-      "End": "3def1d5e2aa242958fa900eb3c88e161",
-      "Id": "9e44ea800768445588dbfc2cc89b6f8b",
+      "Start": "07c172bed1c24d9e99be9f8726aaf8dd",
+      "End": "90b12d592d954394b4df0209667421c9",
+      "Id": "de711eb806c947c7a5fe44407711a579",
       "IsHidden": "False"
     },
     {
-      "Start": "cab4d7621c614302aba08cbfb3365d1b",
-      "End": "f4c004fe15e34a4187a13160c7841a6c",
-      "Id": "995a161568354dc6ac61f7e36b7aa0ff",
+      "Start": "3ec75159b2fb4e0a9611f5b71c7395e9",
+      "End": "84d459b141974756b89b0e3f5a4d4b0e",
+      "Id": "f7776976860b4776a1bfccafad045279",
       "IsHidden": "False"
     },
     {
-      "Start": "25254fdafbac4a7ba84e9febfbcf3818",
-      "End": "eee4628614184455b008fa0bfd081da0",
-      "Id": "e145e3bfaa7c437aacef5a817f8b0999",
+      "Start": "2d7ea6cc771d4eb1bad457bd7190b75c",
+      "End": "c03b74e890694ba9b1b5f186e86fbd87",
+      "Id": "8fd17459ce6a469489e24368af3c962f",
       "IsHidden": "False"
     }
   ],
@@ -556,7 +556,7 @@
     "ConnectorPins": [],
     "NodeViews": [
       {
-        "Id": "2290b5fa05834c3999859c257ea8797b",
+        "Id": "8b440154fbfb45cc9e335d4bf73ee1e9",
         "Name": "X1",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
@@ -566,7 +566,7 @@
         "Y": -375.59203347693074
       },
       {
-        "Id": "3ebed7918baf491586609e9ad3b8388a",
+        "Id": "8f5a3726c2df44588f282583b7451478",
         "Name": "Y1",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
@@ -576,7 +576,7 @@
         "Y": -253.76771873057828
       },
       {
-        "Id": "d5b6a4b3634044d6b20cf0c8b3c3f70b",
+        "Id": "7e919062d8414996b7c44246ff004c7f",
         "Name": "Z1",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
@@ -586,7 +586,7 @@
         "Y": -132.59588638254365
       },
       {
-        "Id": "34c312d276a9456f8f5f906e6b5e2f5f",
+        "Id": "7a2e1ad07db644c18ec297404d6a72cc",
         "Name": "X2",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
@@ -596,7 +596,7 @@
         "Y": -11.51436665157604
       },
       {
-        "Id": "c1126dc703324aa29bb59436399d39f8",
+        "Id": "115b791539674c09b5c623d44ee3e21d",
         "Name": "Senoide",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
@@ -606,7 +606,7 @@
         "Y": -61.46982510182545
       },
       {
-        "Id": "8b3f8aebbbca4e58be0c64b353314c9b",
+        "Id": "fc1ada51e8a34595b9bce6e3ba76522c",
         "Name": "Fator de Amplitude",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
@@ -616,7 +616,7 @@
         "Y": -148.55056822181524
       },
       {
-        "Id": "99e8bcfda69b4fefb091ff99325b24db",
+        "Id": "28787fb255c74119bb47a2243ed7c2bf",
         "Name": "Modela o Círculo",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
@@ -626,7 +626,7 @@
         "Y": -380.9316806229672
       },
       {
-        "Id": "2332e2c5df2d4681a899734cc0712bcd",
+        "Id": "6aa637e5f1994d8383181ddf4fe43bbc",
         "Name": "Raio",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
@@ -636,7 +636,7 @@
         "Y": -26.360364293229736
       },
       {
-        "Id": "ace226ca60524ba4b0e127801a766bd8",
+        "Id": "64b756f711c94790a0e3fc516a7abf46",
         "Name": "Modular",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
@@ -646,7 +646,7 @@
         "Y": 101.24360442296882
       },
       {
-        "Id": "e4bbbd396c1040929395aca9a81a75a3",
+        "Id": "e8e5bbc863b54c93b7a5e6a3d5ccebc8",
         "Name": "Plano Diretor de Circulo",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
@@ -658,20 +658,20 @@
     ],
     "Annotations": [
       {
-        "Id": "7a80a69dda4e40c19f4417c54aaabf86",
+        "Id": "029b617749744636a4ea7ca324eaa40b",
         "Title": "Cria Plano diretor e círculo",
-        "DescriptionText": "Aula BIM: Prof. José Luis Menegotto\r\nDEG/POLI/UFRJ",
+        "DescriptionText": "Aula BIM: DEG/POLI/UFRJ\r\nAutor: Prof. José Luis Menegotto",
         "IsExpanded": true,
         "WidthAdjustment": 6.607991184108414,
         "HeightAdjustment": 115.67048998630128,
         "UserSetWidth": 960.2699552443041,
         "UserSetHeight": 621.748156811656,
         "Nodes": [
-          "2290b5fa05834c3999859c257ea8797b",
-          "3ebed7918baf491586609e9ad3b8388a",
-          "d5b6a4b3634044d6b20cf0c8b3c3f70b",
-          "34c312d276a9456f8f5f906e6b5e2f5f",
-          "e4bbbd396c1040929395aca9a81a75a3"
+          "8b440154fbfb45cc9e335d4bf73ee1e9",
+          "8f5a3726c2df44588f282583b7451478",
+          "7e919062d8414996b7c44246ff004c7f",
+          "7a2e1ad07db644c18ec297404d6a72cc",
+          "e8e5bbc863b54c93b7a5e6a3d5ccebc8"
         ],
         "HasNestedGroups": false,
         "Left": -1610.2441522576432,
@@ -690,21 +690,21 @@
         "Background": "#FF48B9FF"
       },
       {
-        "Id": "39c33087755f4bf9bc9bacc6b7705c53",
+        "Id": "ba52d4c985484cafa088aef3ea425f9e",
         "Title": "Cria círculos ordenados numa senoide",
-        "DescriptionText": "Aula BIM: Prof. José Luis Menegotto\r\nDEG/POLI/UFRJ",
+        "DescriptionText": "Aula BIM: DEG/POLI/UFRJ\r\nAutor: Prof. José Luis Menegotto",
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
         "HeightAdjustment": 0.0,
         "UserSetWidth": 0.0,
         "UserSetHeight": 0.0,
         "Nodes": [
-          "c1126dc703324aa29bb59436399d39f8",
-          "8b3f8aebbbca4e58be0c64b353314c9b",
-          "99e8bcfda69b4fefb091ff99325b24db",
-          "2332e2c5df2d4681a899734cc0712bcd",
-          "ace226ca60524ba4b0e127801a766bd8",
-          "287a13e27c5e4de6b3fd4ac916ec6e37"
+          "115b791539674c09b5c623d44ee3e21d",
+          "fc1ada51e8a34595b9bce6e3ba76522c",
+          "28787fb255c74119bb47a2243ed7c2bf",
+          "6aa637e5f1994d8383181ddf4fe43bbc",
+          "64b756f711c94790a0e3fc516a7abf46",
+          "ccaf0f78c67b400f87424bbeaa81d7b2"
         ],
         "HasNestedGroups": false,
         "Left": -588.383371922673,
@@ -714,7 +714,7 @@
         "FontSize": 18.0,
         "GroupStyleId": "4d68be4a-a04d-4945-9dd5-cdf61079d790",
         "InitialTop": -380.9316806229672,
-        "InitialHeight": 627.1752850459361,
+        "InitialHeight": 627.175285045936,
         "TextblockHeight": 51.0,
         "IsOptionalInPortsCollapsed": false,
         "IsUnconnectedOutPortsCollapsed": false,
@@ -723,7 +723,7 @@
         "Background": "#FF48B9FF"
       },
       {
-        "Id": "287a13e27c5e4de6b3fd4ac916ec6e37",
+        "Id": "ccaf0f78c67b400f87424bbeaa81d7b2",
         "Title": "Usa uma função condicional para alterar o raio do círculo ao lonfo do percurso. A sintaxe de uma condicional é a seguinte:\r\n\nval = condição ? verdadeiro : falso\r\n\nNa função o valor do raio varia se o índice i \né modular ao valor do parâmetro m.\nIsso se faz utilizando o operador Remainder (%)\nSe i é modular de m então utilize r senão divida r por m\n\r\nrai = i % m  ? r   :   r/m;\n\nUsa a FazCirculo",
         "DescriptionText": null,
         "IsExpanded": true,
@@ -749,8 +749,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": 347.3418302740265,
-    "Y": 170.86024355782118,
-    "Zoom": 0.14545511528297697
+    "X": 555.346280537212,
+    "Y": 303.97377355450783,
+    "Zoom": 0.3021092012058956
   }
 }
