@@ -1,0 +1,535 @@
+{
+  "Uuid": "2aea21b1-f69d-4945-9b84-7285daeb37ec",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Distribui_Elem_Parede",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Line": {
+        "Key": "Autodesk.DesignScript.Geometry.Line",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Plane": {
+        "Key": "Autodesk.DesignScript.Geometry.Plane",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Circle": {
+        "Key": "Autodesk.DesignScript.Geometry.Circle",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Geometry": {
+        "Key": "Autodesk.DesignScript.Geometry.Geometry",
+        "Value": "ProtoGeometry.dll"
+      },
+      "CoordinateSystem": {
+        "Key": "Autodesk.DesignScript.Geometry.CoordinateSystem",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Arc": {
+        "Key": "Autodesk.DesignScript.Geometry.Arc",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Line.Li": {
+        "Key": "Autodesk.DesignScript.Geometry.Line",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      },
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      },
+      "FamilyInstance": {
+        "Key": "Revit.Elements.FamilyInstance",
+        "Value": "RevitNodes.dll"
+      },
+      "FamilyInstance.Geometry": {
+        "Key": "Revit.Elements.FamilyInstance",
+        "Value": "RevitNodes.dll"
+      },
+      "Transaction": {
+        "Key": "Revit.Transaction.Transaction",
+        "Value": "RevitNodes.dll"
+      },
+      "Group": {
+        "Key": "Revit.Elements.Group",
+        "Value": "RevitNodes.dll"
+      },
+      "Revit.Elements.Element": {
+        "Key": "Revit.Elements.Element",
+        "Value": "RevitNodes.dll"
+      },
+      "Elements.Element": {
+        "Key": "Revit.Elements.Element",
+        "Value": "RevitNodes.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "09e16d46765744358c392d75e0c03d18",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [
+        {
+          "Id": "ec88cdcdf25f483290dd3cdaea4b7138",
+          "Name": "ele",
+          "Description": "ele",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "aac78bdf6c9c476fbdb523d465097b44",
+          "Name": "ip",
+          "Description": "ip",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7e63f20470124879aa84e9e86821bc4d",
+          "Name": "ele",
+          "Description": "ele",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ec420f2417ec42bbb43173db4d7adaa8",
+          "Name": "ip",
+          "Description": "ip",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a35e74b971394841a566dc6607799912",
+          "Name": "pared",
+          "Description": "pared = Revit.Elements.FamilyInstance.GetHost(ele)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b035a1a518884fe3be0023ded388ba74",
+          "Name": "grupo",
+          "Description": "grupo = List.GroupByKey(ele, pared)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6f279c7948634cfbab83ae60f2ea1962",
+          "Name": "wal",
+          "Description": "wal = DesignScript.Builtin.Get.ValueAtIndex(DesignScript.Builtin.Get.ValueAtIndex(grupo, \"unique keys\"), ip)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "96f439cabcc547eb810deef3a2f5c3b6",
+          "Name": "grp",
+          "Description": "grp = DesignScript.Builtin.Get.ValueAtIndex(DesignScript.Builtin.Get.ValueAtIndex(grupo, \"groups\"), ip)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a375185a94bc45b3b5405dd309772be0",
+          "Name": "q",
+          "Description": "q = (List.Count(grp)) + 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "97b35af07f3d4fedb0b68c7a7c7c78d5",
+          "Name": "lin",
+          "Description": "lin = wal.GetLocation()",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5051eb71efa14613816258301248480c",
+          "Name": "tba",
+          "Description": "tba = grp.GetLocation()",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "59ccd206a16246a1bde68a195a5567e5",
+          "Name": "dim",
+          "Description": "dim = lin.Length",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "156ab15c531f4fc8916ff9e0160fd505",
+          "Name": "dis",
+          "Description": "dis = DSCore.Math.Round(dim / q, 2)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "71e4eebf6974439d84def7b4346caae2",
+          "Name": "pin",
+          "Description": "pin = lin.PointsAtEqualSegmentLength(q)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a2da4aafc3b74647b63bc0a4e64d2da7",
+          "Name": "pfi",
+          "Description": "pfi = List.Flatten(pin, 1)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c7445fe5cc7e4bedaaf8a170fb708e29",
+          "Name": "function",
+          "Description": "grp.SetLocation(pfi)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "ele;\nip;\n//----------------------------------------------\n// Agrupa elementos pela parede que os hospedam\n// Podem ser portas, janelas, tomadas, etc.\n//----------------------------------------------\npared = FamilyInstance.GetHost(  ele  );\ngrupo = List.GroupByKey ( ele , pared );\nwal   = grupo[\"unique keys\"][ip];\ngrp   = grupo[\"groups\"     ][ip];\n//---------------------------------------------\n// Processa os itens do grupo de índice i\n//---------------------------------------------\nq     = List.Count(grp)+1;\nlin   = wal.GetLocation();\ntba   = grp.GetLocation();\ndim   = lin.Length;\ndis   = Math.Round (dim / q, 2);\npin   = lin.PointsAtEqualSegmentLength(q);\npfi   = List.Flatten ( pin , 1 );\n//---------------------------------------------\n// Reposiciona os elementos equidistantes\n//---------------------------------------------\ngrp.SetLocation ( pfi );"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 216,
+      "SelectedString": "OST_ElectricalFixtures",
+      "Id": "eba39222ec0c436eb64f68c1d6b1d449",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "69c60f5e5ad4427dad94ff014f38cdb5",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "Id": "67dec957282f43cf8e84021cfc109034",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "b97c195142924cc387e7c999f8da9231",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "77e0f45d73aa413fb578bcaec559fc51",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "WatchWidth": 200.0,
+      "WatchHeight": 200.0,
+      "Id": "1ac6a7a504b948a88ccedc4f0d9eb316",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "137a31c3ca6445a3b40560f5d1c6f224",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "786ea69f0734434e9b1b800af1f74aa3",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualizes a node's output"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
+      "NumberType": "Integer",
+      "MaximumValue": 5,
+      "MinimumValue": 0,
+      "StepValue": 1,
+      "Id": "6125179683044088baee9612ed3e357b",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a4e388643ef2477b8a39f203cd2a7d0e",
+          "Name": "",
+          "Description": "Int64",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Produces integer values",
+      "InputValue": 3
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "a35e74b971394841a566dc6607799912",
+      "End": "137a31c3ca6445a3b40560f5d1c6f224",
+      "Id": "e008a1469ce4488d952bf396c1cb4512",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "69c60f5e5ad4427dad94ff014f38cdb5",
+      "End": "b97c195142924cc387e7c999f8da9231",
+      "Id": "01da030f6e1f4012ad051f1e8b262707",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "77e0f45d73aa413fb578bcaec559fc51",
+      "End": "ec88cdcdf25f483290dd3cdaea4b7138",
+      "Id": "e30da8bde4bb4b238b024a8b0c9f8d39",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a4e388643ef2477b8a39f203cd2a7d0e",
+      "End": "aac78bdf6c9c476fbdb523d465097b44",
+      "Id": "907bdf18190d422481389b6db2984163",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "4.0",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "10.3",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "4.0.2.3852",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "09e16d46765744358c392d75e0c03d18",
+        "Name": "Distribui Elemento em parede",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 649.2612917531716,
+        "Y": 1184.1129270940094
+      },
+      {
+        "Id": "eba39222ec0c436eb64f68c1d6b1d449",
+        "Name": "Categories",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 77.1344558238493,
+        "Y": 1143.3914417834987
+      },
+      {
+        "Id": "67dec957282f43cf8e84021cfc109034",
+        "Name": "All Elements of Category",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 339.54155880569783,
+        "Y": 1142.234106449994
+      },
+      {
+        "Id": "1ac6a7a504b948a88ccedc4f0d9eb316",
+        "Name": "Watch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1211.0551975250535,
+        "Y": 1281.4567964023897
+      },
+      {
+        "Id": "6125179683044088baee9612ed3e357b",
+        "Name": "Indice de processamento",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 249.75101273837686,
+        "Y": 1268.4792151874076
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "f5df79f2d1744b45aa128a16532a817c",
+        "Title": "Distribui elementos equidistantes em paredes",
+        "DescriptionText": "Disciplina BIM - DEG/POLI/UFRJ\r\n Autor: Prof. José Luis Menegotto",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [
+          "09e16d46765744358c392d75e0c03d18",
+          "eba39222ec0c436eb64f68c1d6b1d449",
+          "67dec957282f43cf8e84021cfc109034",
+          "6125179683044088baee9612ed3e357b",
+          "1ac6a7a504b948a88ccedc4f0d9eb316",
+          "849c40c58f5945bb89a46b702a1df674"
+        ],
+        "HasNestedGroups": false,
+        "Left": 67.1344558238493,
+        "Top": 1081.234106449994,
+        "Width": 1430.9207417012042,
+        "Height": 603.8788206440154,
+        "FontSize": 18.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 1142.234106449994,
+        "InitialHeight": 400.70003768172114,
+        "TextblockHeight": 51.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FF48B9FF"
+      },
+      {
+        "Id": "849c40c58f5945bb89a46b702a1df674",
+        "Title": "Uso de função  FamilyInstance.GetHost\n\nAgrupamentos por hospedeiros e\nDicionários\n",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 332.45196080278515,
+        "Top": 1420.6395899398842,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": -125.04447549234169,
+    "Y": -655.5023255687,
+    "Zoom": 0.727233817883125
+  }
+}
